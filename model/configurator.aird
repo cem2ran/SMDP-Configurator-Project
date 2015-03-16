@@ -71,7 +71,7 @@
               <styles xmi:type="notation:FilteringStyle" xmi:id="_sy2BocsAEeSLrqnFzcwoDA"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_sy0MccsAEeSLrqnFzcwoDA" fontName=".Helvetica Neue DeskInterface" fontHeight="8"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sy0McssAEeSLrqnFzcwoDA" x="243" y="-63" width="120" height="67"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sy0McssAEeSLrqnFzcwoDA" x="243" y="-81" width="120" height="67"/>
           </children>
           <children xmi:type="notation:Shape" xmi:id="_Zp1pEMsDEeSLrqnFzcwoDA" type="Note" fontName=".Helvetica Neue DeskInterface" description="Terminal Parameters can be replaced with an enum" fillColor="13369343" transparency="0" lineColor="6737151" lineWidth="1">
             <children xmi:type="notation:BasicDecorationNode" xmi:id="_Zp56gMsDEeSLrqnFzcwoDA" type="DiagramName">
@@ -105,6 +105,30 @@
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_Sj3nwcsKEeSLrqnFzcwoDA" fontName=".Helvetica Neue DeskInterface" fontHeight="8"/>
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Sj3nwssKEeSLrqnFzcwoDA" x="-63" y="198" width="120" height="100"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_LaN4EMwIEeS3xPW-jXXh_A" type="Note" fontName=".Helvetica Neue DeskInterface" description="Missing the ability to capture constraint rules in the model" fillColor="13369343" transparency="0" lineColor="6737151" lineWidth="1">
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_LaPGMMwIEeS3xPW-jXXh_A" type="DiagramName">
+              <element xsi:nil="true"/>
+            </children>
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_LaPGMcwIEeS3xPW-jXXh_A" type="Description">
+              <element xsi:nil="true"/>
+            </children>
+            <styles xmi:type="notation:TextStyle" xmi:id="_LaN4EcwIEeS3xPW-jXXh_A"/>
+            <styles xmi:type="notation:LineTypeStyle" xmi:id="_LaN4EswIEeS3xPW-jXXh_A"/>
+            <element xsi:nil="true"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LaN4E8wIEeS3xPW-jXXh_A" x="288" y="324"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_RCwN4MwIEeS3xPW-jXXh_A" type="Note" fontName=".Helvetica Neue DeskInterface" description="Product reference parameter probably not neccessary" fillColor="13369343" transparency="0" lineColor="6737151" lineWidth="1">
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_RCw08MwIEeS3xPW-jXXh_A" type="DiagramName">
+              <element xsi:nil="true"/>
+            </children>
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_RCw08cwIEeS3xPW-jXXh_A" type="Description">
+              <element xsi:nil="true"/>
+            </children>
+            <styles xmi:type="notation:TextStyle" xmi:id="_RCwN4cwIEeS3xPW-jXXh_A"/>
+            <styles xmi:type="notation:LineTypeStyle" xmi:id="_RCwN4swIEeS3xPW-jXXh_A"/>
+            <element xsi:nil="true"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RCwN48wIEeS3xPW-jXXh_A" x="504" y="81"/>
           </children>
           <styles xmi:type="notation:DiagramStyle" xmi:id="_Fjgw0sr_EeSLrqnFzcwoDA"/>
           <edges xmi:type="notation:Edge" xmi:id="_qsZ5kMsAEeSLrqnFzcwoDA" type="4001" element="_qr6KUMsAEeSLrqnFzcwoDA" source="_kd1T8Mr_EeSLrqnFzcwoDA" target="_ITaFkMr_EeSLrqnFzcwoDA">
