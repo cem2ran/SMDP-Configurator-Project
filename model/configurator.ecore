@@ -1,30 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="configurator" nsURI="http://www.example.org/configurator" nsPrefix="configurator">
-  <eClassifiers xsi:type="ecore:EClass" name="Parameter" abstract="true" eSuperTypes="#//NamedElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mandatory" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Model">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contains" upperBound="-1"
+        eType="#//Feature" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="newEReference" upperBound="-1"
+        eType="#//Constraint" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="NumericParameter" eSuperTypes="#//Parameter">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BooleanParameter" eSuperTypes="#//Parameter">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ProductReferenceParameter" eSuperTypes="#//Parameter">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1" eType="#//Product"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Feature" abstract="true" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasSubfeatureOfType" upperBound="-1"
+        eType="#//RelationType" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="has" upperBound="-1" eType="#//Group"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Product" eSuperTypes="#//NamedElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="hasASetOf" lowerBound="1"
-        upperBound="-1" eType="#//Parameter" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Grouped" eSuperTypes="#//Feature"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Root" eSuperTypes="#//Feature"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Solitary" eSuperTypes="#//Feature"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Group" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasGroupedFeature" lowerBound="2"
+        upperBound="-1" eType="#//Grouped" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Model">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="contains" upperBound="-1"
-        eType="#//Product" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OR" eSuperTypes="#//Group"/>
+  <eClassifiers xsi:type="ecore:EClass" name="XOR" eSuperTypes="#//Group"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Constraint" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RelationType" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasRelationType" eType="#//Solitary"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="StringParameter" eSuperTypes="#//Parameter">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Mandatory" eSuperTypes="#//RelationType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Optional" eSuperTypes="#//RelationType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Unary" eSuperTypes="#//Constraint"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Binary" eSuperTypes="#//Constraint">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="leftExpr" upperBound="-1"
+        eType="#//Constraint" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rightExpr" upperBound="-1"
+        eType="#//Constraint" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

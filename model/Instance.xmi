@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="ASCII"?>
+<configurator:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:configurator="http://www.example.org/configurator" xsi:schemaLocation="http://www.example.org/configurator configurator.ecore">
+  <contains xsi:type="configurator:Root" name="car"/>
+</configurator:Model>
