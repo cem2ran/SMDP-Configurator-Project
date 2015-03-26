@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="modelMDD2" nsURI="http://www.example.org/modelMDD2" nsPrefix="modelMDD2">
+  <eClassifiers xsi:type="ecore:EClass" name="Model" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="root" lowerBound="1" eType="#//Feature"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Feature" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subfeature" upperBound="-1"
+        eType="#//Solitary" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="constrains" upperBound="-1"
+        eType="#//Constrain" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Solitary" abstract="true" eSuperTypes="#//Feature">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="groups" upperBound="-1"
+        eType="#//Group" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Grouped" eSuperTypes="#//Feature">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gruoped" lowerBound="1"
+        eType="#//Group"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Mandatory" eSuperTypes="#//Solitary"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Optional" eSuperTypes="#//Solitary"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Constrain" abstract="true" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="constrainFeatures" upperBound="-1"
+        eType="#//Feature"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Binary" eSuperTypes="#//Constrain">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rightExp" lowerBound="1"
+        eType="#//Constrain" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="leftExp" lowerBound="1"
+        eType="#//Constrain" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Operator" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Unary" eSuperTypes="#//Constrain">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exp" lowerBound="1" eType="#//Constrain"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Operator" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Or" eSuperTypes="#//Group"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Xor" eSuperTypes="#//Group"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Group" abstract="true" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="grouped" upperBound="-1"
+        eType="#//Grouped" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>
