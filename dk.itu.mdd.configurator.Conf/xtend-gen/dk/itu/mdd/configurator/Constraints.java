@@ -9,6 +9,7 @@ import modelMDD2.Group;
 import modelMDD2.Grouped;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.xtext.xbase.lib.Conversions;
 import org.eclipse.xtext.xbase.lib.Functions.Function1;
 import org.eclipse.xtext.xbase.lib.Functions.Function2;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
@@ -63,5 +64,21 @@ public class Constraints {
     int _indexOf = path.indexOf(".");
     int _plus = (_indexOf + 1);
     return path.substring(_plus);
+  }
+  
+  public static boolean featureNameAreDistinct(final Group it) {
+    EList<Grouped> _grouped = it.getGrouped();
+    final Function1<Grouped, Boolean> _function = (Grouped f1) -> {
+      EList<Grouped> _grouped_1 = it.getGrouped();
+      final Function1<Grouped, Boolean> _function_1 = (Grouped f2) -> {
+        String _name = f1.getName();
+        String _name_1 = f2.getName();
+        return Boolean.valueOf(_name.equalsIgnoreCase(_name_1));
+      };
+      Iterable<Grouped> _filter = IterableExtensions.<Grouped>filter(_grouped_1, _function_1);
+      int _length = ((Object[])Conversions.unwrapArray(_filter, Object.class)).length;
+      return Boolean.valueOf((_length == 1));
+    };
+    return IterableExtensions.<Grouped>forall(_grouped, _function);
   }
 }

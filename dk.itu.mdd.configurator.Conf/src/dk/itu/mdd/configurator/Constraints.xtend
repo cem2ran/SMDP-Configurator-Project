@@ -25,4 +25,9 @@ class Constraints {
 		var path = exp.constrainFeatures.map[name + (if(eContainer instanceof Group) '.'+(eContainer as Group).name else '')].reduce[iterator, accumulator| accumulator + '.'+iterator];
 		return path.substring(path.indexOf('.') +1 );
 	}
+	
+	def static featureNameAreDistinct(Group it) {
+		return grouped.forall[f1 | grouped.filter[f2 | f1.name.equalsIgnoreCase(f2.name)].length == 1]
+	}
+	
 }

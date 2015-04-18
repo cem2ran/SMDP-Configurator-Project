@@ -20,7 +20,7 @@ class ConfValidator extends AbstractConfValidator {
   public static val INVALID_NAME = 'invalidName'
 
 	@Check
-	def checkGreetingStartsWithCapital(Feature feature) {
+	def featureStartsWithCapital(Feature feature) {
 		if (!Constraints.featureStartsWithCapital(feature)) {
 			warning('Name should start with a capital', 
 					ModelMDD2Package.Literals.NAMED_ELEMENT__NAME,
@@ -36,6 +36,14 @@ class ConfValidator extends AbstractConfValidator {
 					INVALID_NAME)
 	}
 	
+	@Check
+	def featureNamesAreDistinct(Group it){
+		if(!Constraints.featureNameAreDistinct(it))
+		error('Duplicate feature names', 
+					ModelMDD2Package.Literals.NAMED_ELEMENT__NAME,
+					INVALID_NAME)
+	}
+
 	@Check
 	def typeCheck(Binary exp){
 		if(!Constraints.typeCheck(exp))

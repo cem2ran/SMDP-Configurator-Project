@@ -21,7 +21,7 @@ public class ConfValidator extends AbstractConfValidator {
   public final static String INVALID_NAME = "invalidName";
   
   @Check
-  public void checkGreetingStartsWithCapital(final Feature feature) {
+  public void featureStartsWithCapital(final Feature feature) {
     boolean _featureStartsWithCapital = Constraints.featureStartsWithCapital(feature);
     boolean _not = (!_featureStartsWithCapital);
     if (_not) {
@@ -37,6 +37,17 @@ public class ConfValidator extends AbstractConfValidator {
     boolean _not = (!_featureNameDifferentFromGroupName);
     if (_not) {
       this.error("Your group contains a feature with the same name as the group itself", 
+        ModelMDD2Package.Literals.NAMED_ELEMENT__NAME, 
+        ConfValidator.INVALID_NAME);
+    }
+  }
+  
+  @Check
+  public void featureNamesAreDistinct(final Group it) {
+    boolean _featureNameAreDistinct = Constraints.featureNameAreDistinct(it);
+    boolean _not = (!_featureNameAreDistinct);
+    if (_not) {
+      this.error("Duplicate feature names", 
         ModelMDD2Package.Literals.NAMED_ELEMENT__NAME, 
         ConfValidator.INVALID_NAME);
     }
