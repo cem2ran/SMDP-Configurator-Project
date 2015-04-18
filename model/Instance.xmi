@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="ASCII"?>
-<modelMDD2:Model
-    xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:modelMDD2="http://www.example.org/modelMDD2"
-    xsi:schemaLocation="http://www.example.org/modelMDD2 modelMDD2.ecore"/>

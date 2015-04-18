@@ -1,0 +1,28 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: dk.itu.mdd.configurator.Conf
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: dk.itu.mdd.configurator.Conf; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext;visibility:=reexport,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ ConfiguratorDSL,
+ org.eclipse.xtext.util,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.common,
+ org.eclipse.xtext.xbase.lib,
+ org.antlr.runtime,
+ org.eclipse.xtext.common.types,
+ org.objectweb.asm;bundle-version="[5.0.1,6.0.0)";resolution:=optional
+Import-Package: org.apache.log4j
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: dk.itu.mdd.configurator,
+ dk.itu.mdd.configurator.services,
+ dk.itu.mdd.configurator.serializer,
+ dk.itu.mdd.configurator.parser.antlr,
+ dk.itu.mdd.configurator.parser.antlr.internal,
+ dk.itu.mdd.configurator.parser.antlr.lexer,
+ dk.itu.mdd.configurator.validation,
+ dk.itu.mdd.configurator.scoping,
+ dk.itu.mdd.configurator.generator
