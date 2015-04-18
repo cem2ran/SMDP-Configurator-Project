@@ -85,8 +85,18 @@ public class Constraints {
   }
   
   public static boolean isEmpty(final Mandatory feature) {
+    boolean _and = false;
     EList<Solitary> _subfeature = feature.getSubfeature();
     int _size = _subfeature.size();
-    return (_size == 0);
+    boolean _equals = (_size == 0);
+    if (!_equals) {
+      _and = false;
+    } else {
+      EList<Group> _groups = feature.getGroups();
+      int _size_1 = _groups.size();
+      boolean _equals_1 = (_size_1 == 0);
+      _and = _equals_1;
+    }
+    return _and;
   }
 }

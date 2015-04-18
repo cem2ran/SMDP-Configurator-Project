@@ -32,6 +32,6 @@ class Constraints {
 	}
 	
 	def static isEmpty(Mandatory feature){
-		return (feature.subfeature.size == 0)
+		return (feature.subfeature.size == 0) && (feature.groups.size == 0)
 	}
 }
