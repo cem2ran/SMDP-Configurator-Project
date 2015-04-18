@@ -9,6 +9,7 @@ import modelMDD2.ModelMDD2Package
 import modelMDD2.Group
 import dk.itu.mdd.configurator.Constraints
 import modelMDD2.Binary
+import modelMDD2.Mandatory
 
 /**
  * This class contains custom validation rules. 
@@ -51,5 +52,14 @@ class ConfValidator extends AbstractConfValidator {
 					ModelMDD2Package.Literals.NAMED_ELEMENT__NAME,
 					INVALID_NAME)
 	}
+	/*
+	@Check
+	def isEmpty(Mandatory feature){
+		if(Constraints.isEmpty(feature))
+			error('Mandatory feature is incomplete', 
+					ModelMDD2Package.Literals.NAMED_ELEMENT__NAME,
+					INVALID_NAME)
+	}
+	*/
 	
 }

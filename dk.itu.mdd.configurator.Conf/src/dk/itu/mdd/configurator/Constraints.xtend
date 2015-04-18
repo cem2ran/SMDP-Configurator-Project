@@ -4,6 +4,7 @@ import modelMDD2.Feature
 import modelMDD2.Group
 import modelMDD2.Binary
 import modelMDD2.Constrain
+import modelMDD2.Mandatory
 
 class Constraints {
 	def static featureStartsWithCapital(Feature feature) {
@@ -30,4 +31,7 @@ class Constraints {
 		return grouped.forall[f1 | grouped.filter[f2 | f1.name.equalsIgnoreCase(f2.name)].length == 1]
 	}
 	
+	def static isEmpty(Mandatory feature){
+		return (feature.subfeature.size == 0)
+	}
 }

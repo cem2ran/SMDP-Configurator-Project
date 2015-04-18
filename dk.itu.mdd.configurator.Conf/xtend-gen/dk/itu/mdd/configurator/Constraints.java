@@ -7,6 +7,8 @@ import modelMDD2.Constrain;
 import modelMDD2.Feature;
 import modelMDD2.Group;
 import modelMDD2.Grouped;
+import modelMDD2.Mandatory;
+import modelMDD2.Solitary;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.xbase.lib.Conversions;
@@ -80,5 +82,11 @@ public class Constraints {
       return Boolean.valueOf((_length == 1));
     };
     return IterableExtensions.<Grouped>forall(_grouped, _function);
+  }
+  
+  public static boolean isEmpty(final Mandatory feature) {
+    EList<Solitary> _subfeature = feature.getSubfeature();
+    int _size = _subfeature.size();
+    return (_size == 0);
   }
 }
