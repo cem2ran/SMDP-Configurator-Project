@@ -23,11 +23,10 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cRootAssignment = (Assignment)rule.eContents().get(1);
 		private final RuleCall cRootFeature_ImplParserRuleCall_0 = (RuleCall)cRootAssignment.eContents().get(0);
 		
-		//Model: //name=EString
+		//Model:
 		//	root=Feature_Impl;
 		@Override public ParserRule getRule() { return rule; }
 
-		////name=EString
 		//root=Feature_Impl
 		public Assignment getRootAssignment() { return cRootAssignment; }
 
@@ -94,21 +93,7 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cRightExpAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
 		private final RuleCall cRightExpConjunctionParserRuleCall_1_2_0 = (RuleCall)cRightExpAssignment_1_2.eContents().get(0);
 		
-		/// *
-		//Constrain returns Constrain: //Binary | Unary;
-		//	Conjunction ( {Binary.leftExp=current}  Operator='||' constrainFeatures+=[Feature|EString] rightExp=Conjunction )* ;
-		//Conjunction returns Constrain: 
-		//	Comparison ( {Binary.leftExp=current} Operator='&&' constrainFeatures+=[Feature|EString] rightExp=Comparison )* ;
-		//Comparison returns Constrain: 
-		//	Binary ( {Binary.leftExp=current} Operator=('=='|'!='|'<='|'<'|'>='|'>') constrainFeatures+=[Feature|EString] rightExp=Binary )* ;
-		//Binary returns Constrain:
-		//	Primary ({Binary.leftExp=current} '.' constrainFeatures+=[Feature|EString] rightExp=Primary )* ;	
-		//Unary returns Constrain:
-		//	{Unary} Operator=("!"|"-") constrainFeatures+=[Feature|EString] exp=Primary  
-		//;
-		//Primary	returns Constrain: 
-		//	name=ID | Unary | '('Constrain')';
-		// * / //Binary | Unary;
+		////Binary | Unary;
 		//Constrain:
 		//	Conjunction ({Binary.leftExp=current} Operator="||" rightExp=Conjunction)*;
 		@Override public ParserRule getRule() { return rule; }
@@ -1004,7 +989,7 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	
-	//Model: //name=EString
+	//Model:
 	//	root=Feature_Impl;
 	public ModelElements getModelAccess() {
 		return pModel;
@@ -1040,21 +1025,7 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 		return getSolitaryAccess().getRule();
 	}
 
-	/// *
-	//Constrain returns Constrain: //Binary | Unary;
-	//	Conjunction ( {Binary.leftExp=current}  Operator='||' constrainFeatures+=[Feature|EString] rightExp=Conjunction )* ;
-	//Conjunction returns Constrain: 
-	//	Comparison ( {Binary.leftExp=current} Operator='&&' constrainFeatures+=[Feature|EString] rightExp=Comparison )* ;
-	//Comparison returns Constrain: 
-	//	Binary ( {Binary.leftExp=current} Operator=('=='|'!='|'<='|'<'|'>='|'>') constrainFeatures+=[Feature|EString] rightExp=Binary )* ;
-	//Binary returns Constrain:
-	//	Primary ({Binary.leftExp=current} '.' constrainFeatures+=[Feature|EString] rightExp=Primary )* ;	
-	//Unary returns Constrain:
-	//	{Unary} Operator=("!"|"-") constrainFeatures+=[Feature|EString] exp=Primary  
-	//;
-	//Primary	returns Constrain: 
-	//	name=ID | Unary | '('Constrain')';
-	// * / //Binary | Unary;
+	////Binary | Unary;
 	//Constrain:
 	//	Conjunction ({Binary.leftExp=current} Operator="||" rightExp=Conjunction)*;
 	public ConstrainElements getConstrainAccess() {
