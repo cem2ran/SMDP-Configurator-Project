@@ -270,11 +270,10 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cGroupsAssignment_0_2 = (Assignment)cGroup_0.eContents().get(2);
 		private final CrossReference cGroupsGroupCrossReference_0_2_0 = (CrossReference)cGroupsAssignment_0_2.eContents().get(0);
 		private final RuleCall cGroupsGroupEStringParserRuleCall_0_2_0_1 = (RuleCall)cGroupsGroupCrossReference_0_2_0.eContents().get(1);
-		private final Group cGroup_0_3 = (Group)cGroup_0.eContents().get(3);
-		private final Keyword cFullStopKeyword_0_3_0 = (Keyword)cGroup_0_3.eContents().get(0);
-		private final Assignment cConstrainFeaturesAssignment_0_3_1 = (Assignment)cGroup_0_3.eContents().get(1);
-		private final CrossReference cConstrainFeaturesFeatureCrossReference_0_3_1_0 = (CrossReference)cConstrainFeaturesAssignment_0_3_1.eContents().get(0);
-		private final RuleCall cConstrainFeaturesFeatureEStringParserRuleCall_0_3_1_0_1 = (RuleCall)cConstrainFeaturesFeatureCrossReference_0_3_1_0.eContents().get(1);
+		private final Keyword cFullStopKeyword_0_3 = (Keyword)cGroup_0.eContents().get(3);
+		private final Assignment cConstrainFeaturesAssignment_0_4 = (Assignment)cGroup_0.eContents().get(4);
+		private final CrossReference cConstrainFeaturesFeatureCrossReference_0_4_0 = (CrossReference)cConstrainFeaturesAssignment_0_4.eContents().get(0);
+		private final RuleCall cConstrainFeaturesFeatureEStringParserRuleCall_0_4_0_1 = (RuleCall)cConstrainFeaturesFeatureCrossReference_0_4_0.eContents().get(1);
 		private final RuleCall cUnaryParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final Group cGroup_2 = (Group)cAlternatives.eContents().get(2);
 		private final Keyword cLeftParenthesisKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
@@ -282,15 +281,15 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightParenthesisKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
 		
 		//Primary returns Constrain:
-		//	constrainFeatures+=[Solitary|EString] "." groups=[Group|EString] ("." constrainFeatures+=[Feature|EString])* | Unary |
+		//	constrainFeatures+=[Solitary|EString] "." groups=[Group|EString] "." constrainFeatures+=[Feature|EString] | Unary |
 		//	"(" Constrain ")";
 		@Override public ParserRule getRule() { return rule; }
 
-		//constrainFeatures+=[Solitary|EString] "." groups=[Group|EString] ("." constrainFeatures+=[Feature|EString])* | Unary |
-		//"(" Constrain ")"
+		//constrainFeatures+=[Solitary|EString] "." groups=[Group|EString] "." constrainFeatures+=[Feature|EString] | Unary | "("
+		//Constrain ")"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//constrainFeatures+=[Solitary|EString] "." groups=[Group|EString] ("." constrainFeatures+=[Feature|EString])*
+		//constrainFeatures+=[Solitary|EString] "." groups=[Group|EString] "." constrainFeatures+=[Feature|EString]
 		public Group getGroup_0() { return cGroup_0; }
 
 		//constrainFeatures+=[Solitary|EString]
@@ -314,20 +313,17 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getGroupsGroupEStringParserRuleCall_0_2_0_1() { return cGroupsGroupEStringParserRuleCall_0_2_0_1; }
 
-		//("." constrainFeatures+=[Feature|EString])*
-		public Group getGroup_0_3() { return cGroup_0_3; }
-
 		//"."
-		public Keyword getFullStopKeyword_0_3_0() { return cFullStopKeyword_0_3_0; }
+		public Keyword getFullStopKeyword_0_3() { return cFullStopKeyword_0_3; }
 
 		//constrainFeatures+=[Feature|EString]
-		public Assignment getConstrainFeaturesAssignment_0_3_1() { return cConstrainFeaturesAssignment_0_3_1; }
+		public Assignment getConstrainFeaturesAssignment_0_4() { return cConstrainFeaturesAssignment_0_4; }
 
 		//[Feature|EString]
-		public CrossReference getConstrainFeaturesFeatureCrossReference_0_3_1_0() { return cConstrainFeaturesFeatureCrossReference_0_3_1_0; }
+		public CrossReference getConstrainFeaturesFeatureCrossReference_0_4_0() { return cConstrainFeaturesFeatureCrossReference_0_4_0; }
 
 		//EString
-		public RuleCall getConstrainFeaturesFeatureEStringParserRuleCall_0_3_1_0_1() { return cConstrainFeaturesFeatureEStringParserRuleCall_0_3_1_0_1; }
+		public RuleCall getConstrainFeaturesFeatureEStringParserRuleCall_0_4_0_1() { return cConstrainFeaturesFeatureEStringParserRuleCall_0_4_0_1; }
 
 		//Unary
 		public RuleCall getUnaryParserRuleCall_1() { return cUnaryParserRuleCall_1; }
@@ -405,18 +401,52 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getXorParserRuleCall_1() { return cXorParserRuleCall_1; }
 	}
 
+	public class RangeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Range");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameEStringParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final RuleCall cINTTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Keyword cFullStopFullStopKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final RuleCall cINTTerminalRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
+		
+		////maybe this should return a constrain? just syntactic sugar, desugaring to leftExp > value < rightExp
+		//Range:
+		//	name=EString INT ".." INT;
+		@Override public ParserRule getRule() { return rule; }
+
+		//name=EString INT ".." INT
+		public Group getGroup() { return cGroup; }
+
+		//name=EString
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//EString
+		public RuleCall getNameEStringParserRuleCall_0_0() { return cNameEStringParserRuleCall_0_0; }
+
+		//INT
+		public RuleCall getINTTerminalRuleCall_1() { return cINTTerminalRuleCall_1; }
+
+		//".."
+		public Keyword getFullStopFullStopKeyword_2() { return cFullStopFullStopKeyword_2; }
+
+		//INT
+		public RuleCall getINTTerminalRuleCall_3() { return cINTTerminalRuleCall_3; }
+	}
+
 	public class EStringElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "EString");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cSTRINGTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cIDTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cNULLTerminalRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cINTTerminalRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cNULLTerminalRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		
 		//EString returns ecore::EString:
-		//	STRING | ID | NULL;
+		//	STRING | ID | INT | NULL;
 		@Override public ParserRule getRule() { return rule; }
 
-		//STRING | ID | NULL
+		//STRING | ID | INT | NULL
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//STRING
@@ -425,8 +455,11 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getIDTerminalRuleCall_1() { return cIDTerminalRuleCall_1; }
 
+		//INT
+		public RuleCall getINTTerminalRuleCall_2() { return cINTTerminalRuleCall_2; }
+
 		//NULL
-		public RuleCall getNULLTerminalRuleCall_2() { return cNULLTerminalRuleCall_2; }
+		public RuleCall getNULLTerminalRuleCall_3() { return cNULLTerminalRuleCall_3; }
 	}
 
 	public class Feature_ImplElements extends AbstractParserRuleElementFinder {
@@ -524,21 +557,23 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cNameEStringParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
-		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Keyword cLeftSquareBracketKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final Assignment cConstrainsAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cConstrainsConstrainParserRuleCall_1_1_0 = (RuleCall)cConstrainsAssignment_1_1.eContents().get(0);
-		private final Group cGroup_1_2 = (Group)cGroup_1.eContents().get(2);
-		private final Keyword cCommaKeyword_1_2_0 = (Keyword)cGroup_1_2.eContents().get(0);
-		private final Assignment cConstrainsAssignment_1_2_1 = (Assignment)cGroup_1_2.eContents().get(1);
-		private final RuleCall cConstrainsConstrainParserRuleCall_1_2_1_0 = (RuleCall)cConstrainsAssignment_1_2_1.eContents().get(0);
-		private final Keyword cRightSquareBracketKeyword_1_3 = (Keyword)cGroup_1.eContents().get(3);
+		private final Assignment cRangeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cRangeRangeParserRuleCall_1_0 = (RuleCall)cRangeAssignment_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cLeftSquareBracketKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cConstrainsAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cConstrainsConstrainParserRuleCall_2_1_0 = (RuleCall)cConstrainsAssignment_2_1.eContents().get(0);
+		private final Group cGroup_2_2 = (Group)cGroup_2.eContents().get(2);
+		private final Keyword cCommaKeyword_2_2_0 = (Keyword)cGroup_2_2.eContents().get(0);
+		private final Assignment cConstrainsAssignment_2_2_1 = (Assignment)cGroup_2_2.eContents().get(1);
+		private final RuleCall cConstrainsConstrainParserRuleCall_2_2_1_0 = (RuleCall)cConstrainsAssignment_2_2_1.eContents().get(0);
+		private final Keyword cRightSquareBracketKeyword_2_3 = (Keyword)cGroup_2.eContents().get(3);
 		
 		//Grouped:
-		//	name=EString ("[" constrains+=Constrain ("," constrains+=Constrain)* "]")?;
+		//	name=EString range=Range? ("[" constrains+=Constrain ("," constrains+=Constrain)* "]")?;
 		@Override public ParserRule getRule() { return rule; }
 
-		//name=EString ("[" constrains+=Constrain ("," constrains+=Constrain)* "]")?
+		//name=EString range=Range? ("[" constrains+=Constrain ("," constrains+=Constrain)* "]")?
 		public Group getGroup() { return cGroup; }
 
 		//name=EString
@@ -547,32 +582,38 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getNameEStringParserRuleCall_0_0() { return cNameEStringParserRuleCall_0_0; }
 
+		//range=Range?
+		public Assignment getRangeAssignment_1() { return cRangeAssignment_1; }
+
+		//Range
+		public RuleCall getRangeRangeParserRuleCall_1_0() { return cRangeRangeParserRuleCall_1_0; }
+
 		//("[" constrains+=Constrain ("," constrains+=Constrain)* "]")?
-		public Group getGroup_1() { return cGroup_1; }
+		public Group getGroup_2() { return cGroup_2; }
 
 		//"["
-		public Keyword getLeftSquareBracketKeyword_1_0() { return cLeftSquareBracketKeyword_1_0; }
+		public Keyword getLeftSquareBracketKeyword_2_0() { return cLeftSquareBracketKeyword_2_0; }
 
 		//constrains+=Constrain
-		public Assignment getConstrainsAssignment_1_1() { return cConstrainsAssignment_1_1; }
+		public Assignment getConstrainsAssignment_2_1() { return cConstrainsAssignment_2_1; }
 
 		//Constrain
-		public RuleCall getConstrainsConstrainParserRuleCall_1_1_0() { return cConstrainsConstrainParserRuleCall_1_1_0; }
+		public RuleCall getConstrainsConstrainParserRuleCall_2_1_0() { return cConstrainsConstrainParserRuleCall_2_1_0; }
 
 		//("," constrains+=Constrain)*
-		public Group getGroup_1_2() { return cGroup_1_2; }
+		public Group getGroup_2_2() { return cGroup_2_2; }
 
 		//","
-		public Keyword getCommaKeyword_1_2_0() { return cCommaKeyword_1_2_0; }
+		public Keyword getCommaKeyword_2_2_0() { return cCommaKeyword_2_2_0; }
 
 		//constrains+=Constrain
-		public Assignment getConstrainsAssignment_1_2_1() { return cConstrainsAssignment_1_2_1; }
+		public Assignment getConstrainsAssignment_2_2_1() { return cConstrainsAssignment_2_2_1; }
 
 		//Constrain
-		public RuleCall getConstrainsConstrainParserRuleCall_1_2_1_0() { return cConstrainsConstrainParserRuleCall_1_2_1_0; }
+		public RuleCall getConstrainsConstrainParserRuleCall_2_2_1_0() { return cConstrainsConstrainParserRuleCall_2_2_1_0; }
 
 		//"]"
-		public Keyword getRightSquareBracketKeyword_1_3() { return cRightSquareBracketKeyword_1_3; }
+		public Keyword getRightSquareBracketKeyword_2_3() { return cRightSquareBracketKeyword_2_3; }
 	}
 
 	public class MandatoryElements extends AbstractParserRuleElementFinder {
@@ -929,7 +970,6 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 	
 	
 	private final ModelElements pModel;
-	private final TerminalRule tNULL;
 	private final FeatureElements pFeature;
 	private final SolitaryElements pSolitary;
 	private final ConstrainElements pConstrain;
@@ -939,6 +979,7 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 	private final PrimaryElements pPrimary;
 	private final UnaryElements pUnary;
 	private final GroupElements pGroup;
+	private final RangeElements pRange;
 	private final EStringElements pEString;
 	private final Feature_ImplElements pFeature_Impl;
 	private final GroupedElements pGrouped;
@@ -946,6 +987,7 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 	private final OptionalElements pOptional;
 	private final OrElements pOr;
 	private final XorElements pXor;
+	private final TerminalRule tNULL;
 	private final TerminalRule tBEGIN;
 	private final TerminalRule tEND;
 	
@@ -959,7 +1001,6 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
 		this.pModel = new ModelElements();
-		this.tNULL = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "NULL");
 		this.pFeature = new FeatureElements();
 		this.pSolitary = new SolitaryElements();
 		this.pConstrain = new ConstrainElements();
@@ -969,6 +1010,7 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 		this.pPrimary = new PrimaryElements();
 		this.pUnary = new UnaryElements();
 		this.pGroup = new GroupElements();
+		this.pRange = new RangeElements();
 		this.pEString = new EStringElements();
 		this.pFeature_Impl = new Feature_ImplElements();
 		this.pGrouped = new GroupedElements();
@@ -976,6 +1018,7 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 		this.pOptional = new OptionalElements();
 		this.pOr = new OrElements();
 		this.pXor = new XorElements();
+		this.tNULL = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "NULL");
 		this.tBEGIN = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "BEGIN");
 		this.tEND = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "END");
 	}
@@ -1016,12 +1059,6 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 	public ParserRule getModelRule() {
 		return getModelAccess().getRule();
 	}
-
-	//terminal NULL:
-	//	"null";
-	public TerminalRule getNULLRule() {
-		return tNULL;
-	} 
 
 	//Feature:
 	//	Feature_Impl | Grouped | Mandatory | Optional;
@@ -1085,7 +1122,7 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Primary returns Constrain:
-	//	constrainFeatures+=[Solitary|EString] "." groups=[Group|EString] ("." constrainFeatures+=[Feature|EString])* | Unary |
+	//	constrainFeatures+=[Solitary|EString] "." groups=[Group|EString] "." constrainFeatures+=[Feature|EString] | Unary |
 	//	"(" Constrain ")";
 	public PrimaryElements getPrimaryAccess() {
 		return pPrimary;
@@ -1115,8 +1152,19 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 		return getGroupAccess().getRule();
 	}
 
+	////maybe this should return a constrain? just syntactic sugar, desugaring to leftExp > value < rightExp
+	//Range:
+	//	name=EString INT ".." INT;
+	public RangeElements getRangeAccess() {
+		return pRange;
+	}
+	
+	public ParserRule getRangeRule() {
+		return getRangeAccess().getRule();
+	}
+
 	//EString returns ecore::EString:
-	//	STRING | ID | NULL;
+	//	STRING | ID | INT | NULL;
 	public EStringElements getEStringAccess() {
 		return pEString;
 	}
@@ -1137,7 +1185,7 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Grouped:
-	//	name=EString ("[" constrains+=Constrain ("," constrains+=Constrain)* "]")?;
+	//	name=EString range=Range? ("[" constrains+=Constrain ("," constrains+=Constrain)* "]")?;
 	public GroupedElements getGroupedAccess() {
 		return pGrouped;
 	}
@@ -1187,6 +1235,12 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 	public ParserRule getXorRule() {
 		return getXorAccess().getRule();
 	}
+
+	//terminal NULL:
+	//	"null";
+	public TerminalRule getNULLRule() {
+		return tNULL;
+	} 
 
 	//// The following synthetic tokens are used for the indentation-aware blocks
 	//// increase indentation

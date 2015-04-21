@@ -296,13 +296,22 @@ public interface ModelMDD2Package extends EPackage {
 	int GROUPED__CONSTRAINS = FEATURE__CONSTRAINS;
 
 	/**
+	 * The feature id for the '<em><b>Range</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GROUPED__RANGE = FEATURE_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Grouped</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GROUPED_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 0;
+	int GROUPED_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Grouped</em>' class.
@@ -791,6 +800,44 @@ public interface ModelMDD2Package extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link modelMDD2.impl.RangeImpl <em>Range</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see modelMDD2.impl.RangeImpl
+	 * @see modelMDD2.impl.ModelMDD2PackageImpl#getRange()
+	 * @generated
+	 */
+	int RANGE = 13;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RANGE__NAME = NAMED_ELEMENT__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Range</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RANGE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Range</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RANGE_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link modelMDD2.Model <em>Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -873,6 +920,17 @@ public interface ModelMDD2Package extends EPackage {
 	 * @generated
 	 */
 	EClass getGrouped();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link modelMDD2.Grouped#getRange <em>Range</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Range</em>'.
+	 * @see modelMDD2.Grouped#getRange()
+	 * @see #getGrouped()
+	 * @generated
+	 */
+	EReference getGrouped_Range();
 
 	/**
 	 * Returns the meta object for class '{@link modelMDD2.Mandatory <em>Mandatory</em>}'.
@@ -1064,6 +1122,16 @@ public interface ModelMDD2Package extends EPackage {
 	EAttribute getNamedElement_Name();
 
 	/**
+	 * Returns the meta object for class '{@link modelMDD2.Range <em>Range</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Range</em>'.
+	 * @see modelMDD2.Range
+	 * @generated
+	 */
+	EClass getRange();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1157,6 +1225,14 @@ public interface ModelMDD2Package extends EPackage {
 		 * @generated
 		 */
 		EClass GROUPED = eINSTANCE.getGrouped();
+
+		/**
+		 * The meta object literal for the '<em><b>Range</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GROUPED__RANGE = eINSTANCE.getGrouped_Range();
 
 		/**
 		 * The meta object literal for the '{@link modelMDD2.impl.MandatoryImpl <em>Mandatory</em>}' class.
@@ -1319,6 +1395,16 @@ public interface ModelMDD2Package extends EPackage {
 		 * @generated
 		 */
 		EAttribute NAMED_ELEMENT__NAME = eINSTANCE.getNamedElement_Name();
+
+		/**
+		 * The meta object literal for the '{@link modelMDD2.impl.RangeImpl <em>Range</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see modelMDD2.impl.RangeImpl
+		 * @see modelMDD2.impl.ModelMDD2PackageImpl#getRange()
+		 * @generated
+		 */
+		EClass RANGE = eINSTANCE.getRange();
 
 	}
 

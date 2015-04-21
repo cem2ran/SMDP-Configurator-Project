@@ -8,8 +8,6 @@ Model returns Model:
 		 root=Feature_Impl
 	;
 	
-terminal NULL: 'null';
-
 Feature returns Feature:
 	Feature_Impl | Grouped | Mandatory | Optional;
 
@@ -25,7 +23,7 @@ Comparison returns Constrain:
 Binary returns Constrain:
 	Primary ({Binary.leftExp=current} rightExp=Primary )* ;	
 Primary	returns Constrain: 
-	  constrainFeatures+=[Solitary|EString] '.' groups=[Group|EString] ('.' constrainFeatures+=[Feature|EString])* | Unary | '(' Constrain ')';
+	  constrainFeatures+=[Solitary|EString] '.' groups=[Group|EString] '.' constrainFeatures+=[Feature|EString] | Unary | '(' Constrain ')';
 Unary returns Constrain:
 	{Unary} Operator=("!"|"-") exp=Primary
 	;
@@ -35,8 +33,13 @@ Group returns Group:
 	;
 
 
+Range: //maybe this should return a constrain? just syntactic sugar, desugaring to leftExp > value < rightExp
+	name=EString
+	INT'..'INT 
+;
+
 EString returns ecore::EString:
-	STRING | ID | NULL;
+	STRING | ID | INT | NULL;
 
 Feature_Impl returns Feature:
 	'Feature'
@@ -47,6 +50,7 @@ Feature_Impl returns Feature:
 
 Grouped:
 		name=EString
+		range=Range?
 		( '['  constrains+=Constrain ( "," constrains+=Constrain)* ']' )? 
 	;
 
@@ -74,6 +78,8 @@ Xor:
 	'Xor' name=EString
 		(BEGIN grouped+=Grouped ((',')* grouped+=Grouped)* END)?
 		;
+	
+terminal NULL: 'null';	
 	
 // The following synthetic tokens are used for the indentation-aware blocks
 terminal BEGIN: 'synthetic:BEGIN';  // increase indentation

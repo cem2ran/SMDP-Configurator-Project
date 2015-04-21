@@ -40,6 +40,8 @@ public class ConfSyntacticSequencer extends AbstractSyntacticSequencer {
 			return getBEGINToken(semanticObject, ruleCall, node);
 		else if(ruleCall.getRule() == grammarAccess.getENDRule())
 			return getENDToken(semanticObject, ruleCall, node);
+		else if(ruleCall.getRule() == grammarAccess.getINTRule())
+			return getINTToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
@@ -54,6 +56,15 @@ public class ConfSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Defaults to the empty string.
 	 */
 	protected String getENDToken(EObject semanticObject, RuleCall ruleCall, INode node) { return ""; }
+	
+	/**
+	 * terminal INT returns ecore::EInt: ('0'..'9')+;
+	 */
+	protected String getINTToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "";
+	}
 	
 	@Override
 	protected void emitUnassignedTokens(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {

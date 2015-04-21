@@ -166,6 +166,13 @@ public class ModelMDD2Switch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ModelMDD2Package.RANGE: {
+				Range range = (Range)theEObject;
+				T result = caseRange(range);
+				if (result == null) result = caseNamedElement(range);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -362,6 +369,21 @@ public class ModelMDD2Switch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseNamedElement(NamedElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Range</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Range</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRange(Range object) {
 		return null;
 	}
 

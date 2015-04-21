@@ -3,13 +3,7 @@
  */
 package dk.itu.mdd.configurator.validation;
 
-import dk.itu.mdd.configurator.Constraints;
 import dk.itu.mdd.configurator.validation.AbstractConfValidator;
-import modelMDD2.Binary;
-import modelMDD2.Feature;
-import modelMDD2.Group;
-import modelMDD2.ModelMDD2Package;
-import org.eclipse.xtext.validation.Check;
 
 /**
  * This class contains custom validation rules.
@@ -20,47 +14,43 @@ import org.eclipse.xtext.validation.Check;
 public class ConfValidator extends AbstractConfValidator {
   public final static String INVALID_NAME = "invalidName";
   
-  @Check
-  public void featureStartsWithCapital(final Feature feature) {
-    boolean _featureStartsWithCapital = Constraints.featureStartsWithCapital(feature);
-    boolean _not = (!_featureStartsWithCapital);
-    if (_not) {
-      this.warning("Name should start with a capital", 
-        ModelMDD2Package.Literals.NAMED_ELEMENT__NAME, 
-        ConfValidator.INVALID_NAME);
-    }
+  /* @Check
+   */public Object featureStartsWithCapital(final /* Feature */Object feature) {
+    throw new Error("Unresolved compilation problems:"
+      + "\n! cannot be resolved."
+      + "\nThe method warning is undefined for the type ConfValidator"
+      + "\nThe method or field ModelMDD2Package is undefined for the type ConfValidator"
+      + "\nLiterals cannot be resolved"
+      + "\nNAMED_ELEMENT__NAME cannot be resolved");
   }
   
-  @Check
-  public void featureNameDifferentFromGroupName(final Group it) {
-    boolean _featureNameDifferentFromGroupName = Constraints.featureNameDifferentFromGroupName(it);
-    boolean _not = (!_featureNameDifferentFromGroupName);
-    if (_not) {
-      this.error("Your group contains a feature with the same name as the group itself", 
-        ModelMDD2Package.Literals.NAMED_ELEMENT__NAME, 
-        ConfValidator.INVALID_NAME);
-    }
+  /* @Check
+   */public Object featureNameDifferentFromGroupName(final /* Group */Object it) {
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method error is undefined for the type ConfValidator"
+      + "\nThe method or field ModelMDD2Package is undefined for the type ConfValidator"
+      + "\n! cannot be resolved"
+      + "\nLiterals cannot be resolved"
+      + "\nNAMED_ELEMENT__NAME cannot be resolved");
   }
   
-  @Check
-  public void featureNamesAreDistinct(final Group it) {
-    boolean _featureNameAreDistinct = Constraints.featureNameAreDistinct(it);
-    boolean _not = (!_featureNameAreDistinct);
-    if (_not) {
-      this.error("Duplicate feature names", 
-        ModelMDD2Package.Literals.NAMED_ELEMENT__NAME, 
-        ConfValidator.INVALID_NAME);
-    }
+  /* @Check
+   */public Object featureNamesAreDistinct(final /* Group */Object it) {
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method error is undefined for the type ConfValidator"
+      + "\nThe method or field ModelMDD2Package is undefined for the type ConfValidator"
+      + "\n! cannot be resolved"
+      + "\nLiterals cannot be resolved"
+      + "\nNAMED_ELEMENT__NAME cannot be resolved");
   }
   
-  @Check
-  public void typeCheck(final Binary exp) {
-    boolean _typeCheck = Constraints.typeCheck(exp);
-    boolean _not = (!_typeCheck);
-    if (_not) {
-      this.error("Invalid Type comparison", 
-        ModelMDD2Package.Literals.NAMED_ELEMENT__NAME, 
-        ConfValidator.INVALID_NAME);
-    }
+  /* @Check
+   */public Object typeCheck(final /* Binary */Object exp) {
+    throw new Error("Unresolved compilation problems:"
+      + "\n! cannot be resolved."
+      + "\nThe method error is undefined for the type ConfValidator"
+      + "\nThe method or field ModelMDD2Package is undefined for the type ConfValidator"
+      + "\nLiterals cannot be resolved"
+      + "\nNAMED_ELEMENT__NAME cannot be resolved");
   }
 }

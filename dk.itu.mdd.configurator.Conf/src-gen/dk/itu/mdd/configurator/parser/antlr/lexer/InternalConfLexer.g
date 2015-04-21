@@ -24,6 +24,8 @@ ExclamationMarkEqualsSign : '!=';
 
 AmpersandAmpersand : '&&';
 
+FullStopFullStop : '..';
+
 LessThanSignEqualsSign : '<=';
 
 EqualsSignEqualsSign : '==';

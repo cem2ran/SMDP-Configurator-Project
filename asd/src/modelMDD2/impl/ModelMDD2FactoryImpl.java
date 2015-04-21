@@ -67,6 +67,7 @@ public class ModelMDD2FactoryImpl extends EFactoryImpl implements ModelMDD2Facto
 			case ModelMDD2Package.OR: return createOr();
 			case ModelMDD2Package.XOR: return createXor();
 			case ModelMDD2Package.NAMED_ELEMENT: return createNamedElement();
+			case ModelMDD2Package.RANGE: return createRange();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -180,6 +181,16 @@ public class ModelMDD2FactoryImpl extends EFactoryImpl implements ModelMDD2Facto
 	public NamedElement createNamedElement() {
 		NamedElementImpl namedElement = new NamedElementImpl();
 		return namedElement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Range createRange() {
+		RangeImpl range = new RangeImpl();
+		return range;
 	}
 
 	/**

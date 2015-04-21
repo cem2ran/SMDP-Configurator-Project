@@ -21,40 +21,41 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalConfParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "Feature", "Xor", "ExclamationMarkEqualsSign", "AmpersandAmpersand", "LessThanSignEqualsSign", "EqualsSignEqualsSign", "GreaterThanSignEqualsSign", "Or", "VerticalLineVerticalLine", "ExclamationMark", "LeftParenthesis", "RightParenthesis", "Comma", "HyphenMinus", "FullStop", "LessThanSign", "GreaterThanSign", "QuestionMark", "LeftSquareBracket", "RightSquareBracket", "LeftCurlyBracket", "RightCurlyBracket", "RULE_NULL", "RULE_BEGIN", "RULE_END", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "Feature", "Xor", "ExclamationMarkEqualsSign", "AmpersandAmpersand", "FullStopFullStop", "LessThanSignEqualsSign", "EqualsSignEqualsSign", "GreaterThanSignEqualsSign", "Or", "VerticalLineVerticalLine", "ExclamationMark", "LeftParenthesis", "RightParenthesis", "Comma", "HyphenMinus", "FullStop", "LessThanSign", "GreaterThanSign", "QuestionMark", "LeftSquareBracket", "RightSquareBracket", "LeftCurlyBracket", "RightCurlyBracket", "RULE_NULL", "RULE_BEGIN", "RULE_END", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER"
     };
-    public static final int RULE_END=28;
-    public static final int Or=11;
-    public static final int RULE_BEGIN=27;
-    public static final int VerticalLineVerticalLine=12;
-    public static final int RULE_STRING=31;
-    public static final int RULE_NULL=26;
+    public static final int RULE_END=29;
+    public static final int Or=12;
+    public static final int RULE_BEGIN=28;
+    public static final int VerticalLineVerticalLine=13;
+    public static final int RULE_STRING=32;
+    public static final int RULE_NULL=27;
     public static final int Feature=4;
-    public static final int LessThanSign=19;
-    public static final int RULE_SL_COMMENT=33;
-    public static final int Comma=16;
-    public static final int HyphenMinus=17;
-    public static final int LeftParenthesis=14;
+    public static final int LessThanSign=20;
+    public static final int RULE_SL_COMMENT=34;
+    public static final int Comma=17;
+    public static final int HyphenMinus=18;
+    public static final int LeftParenthesis=15;
     public static final int AmpersandAmpersand=7;
-    public static final int LessThanSignEqualsSign=8;
-    public static final int RightCurlyBracket=25;
+    public static final int FullStopFullStop=8;
+    public static final int LessThanSignEqualsSign=9;
+    public static final int RightCurlyBracket=26;
     public static final int EOF=-1;
-    public static final int RightSquareBracket=23;
-    public static final int ExclamationMark=13;
-    public static final int FullStop=18;
-    public static final int GreaterThanSign=20;
-    public static final int RULE_ID=29;
-    public static final int RULE_WS=34;
-    public static final int RightParenthesis=15;
-    public static final int LeftCurlyBracket=24;
-    public static final int RULE_ANY_OTHER=35;
-    public static final int GreaterThanSignEqualsSign=10;
-    public static final int EqualsSignEqualsSign=9;
-    public static final int QuestionMark=21;
-    public static final int RULE_INT=30;
-    public static final int RULE_ML_COMMENT=32;
+    public static final int RightSquareBracket=24;
+    public static final int ExclamationMark=14;
+    public static final int FullStop=19;
+    public static final int GreaterThanSign=21;
+    public static final int RULE_ID=30;
+    public static final int RULE_WS=35;
+    public static final int RightParenthesis=16;
+    public static final int LeftCurlyBracket=25;
+    public static final int RULE_ANY_OTHER=36;
+    public static final int GreaterThanSignEqualsSign=11;
+    public static final int EqualsSignEqualsSign=10;
+    public static final int QuestionMark=22;
+    public static final int RULE_INT=31;
+    public static final int RULE_ML_COMMENT=33;
     public static final int Xor=5;
-    public static final int LeftSquareBracket=22;
+    public static final int LeftSquareBracket=23;
     public static final int ExclamationMarkEqualsSign=6;
 
     // delegates
@@ -250,7 +251,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
             int alt1=2;
             int LA1_0 = input.LA(1);
 
-            if ( (LA1_0==RULE_NULL||LA1_0==RULE_ID||LA1_0==RULE_STRING) ) {
+            if ( (LA1_0==RULE_NULL||(LA1_0>=RULE_ID && LA1_0<=RULE_STRING)) ) {
                 alt1=1;
             }
             else if ( (LA1_0==QuestionMark) ) {
@@ -1055,7 +1056,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
                 int alt6=2;
                 int LA6_0 = input.LA(1);
 
-                if ( ((LA6_0>=ExclamationMark && LA6_0<=LeftParenthesis)||LA6_0==HyphenMinus||LA6_0==RULE_NULL||LA6_0==RULE_ID||LA6_0==RULE_STRING) ) {
+                if ( ((LA6_0>=ExclamationMark && LA6_0<=LeftParenthesis)||LA6_0==HyphenMinus||LA6_0==RULE_NULL||(LA6_0>=RULE_ID && LA6_0<=RULE_STRING)) ) {
                     alt6=1;
                 }
 
@@ -1172,7 +1173,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePrimary"
-    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:483:1: rulePrimary returns [EObject current=null] : ( ( ( ( ruleEString ) ) otherlv_1= FullStop ( ( ruleEString ) ) (otherlv_3= FullStop ( ( ruleEString ) ) )* ) | this_Unary_5= ruleUnary | (otherlv_6= LeftParenthesis this_Constrain_7= ruleConstrain otherlv_8= RightParenthesis ) ) ;
+    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:483:1: rulePrimary returns [EObject current=null] : ( ( ( ( ruleEString ) ) otherlv_1= FullStop ( ( ruleEString ) ) otherlv_3= FullStop ( ( ruleEString ) ) ) | this_Unary_5= ruleUnary | (otherlv_6= LeftParenthesis this_Constrain_7= ruleConstrain otherlv_8= RightParenthesis ) ) ;
     public final EObject rulePrimary() throws RecognitionException {
         EObject current = null;
 
@@ -1188,43 +1189,44 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:486:28: ( ( ( ( ( ruleEString ) ) otherlv_1= FullStop ( ( ruleEString ) ) (otherlv_3= FullStop ( ( ruleEString ) ) )* ) | this_Unary_5= ruleUnary | (otherlv_6= LeftParenthesis this_Constrain_7= ruleConstrain otherlv_8= RightParenthesis ) ) )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:487:1: ( ( ( ( ruleEString ) ) otherlv_1= FullStop ( ( ruleEString ) ) (otherlv_3= FullStop ( ( ruleEString ) ) )* ) | this_Unary_5= ruleUnary | (otherlv_6= LeftParenthesis this_Constrain_7= ruleConstrain otherlv_8= RightParenthesis ) )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:486:28: ( ( ( ( ( ruleEString ) ) otherlv_1= FullStop ( ( ruleEString ) ) otherlv_3= FullStop ( ( ruleEString ) ) ) | this_Unary_5= ruleUnary | (otherlv_6= LeftParenthesis this_Constrain_7= ruleConstrain otherlv_8= RightParenthesis ) ) )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:487:1: ( ( ( ( ruleEString ) ) otherlv_1= FullStop ( ( ruleEString ) ) otherlv_3= FullStop ( ( ruleEString ) ) ) | this_Unary_5= ruleUnary | (otherlv_6= LeftParenthesis this_Constrain_7= ruleConstrain otherlv_8= RightParenthesis ) )
             {
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:487:1: ( ( ( ( ruleEString ) ) otherlv_1= FullStop ( ( ruleEString ) ) (otherlv_3= FullStop ( ( ruleEString ) ) )* ) | this_Unary_5= ruleUnary | (otherlv_6= LeftParenthesis this_Constrain_7= ruleConstrain otherlv_8= RightParenthesis ) )
-            int alt8=3;
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:487:1: ( ( ( ( ruleEString ) ) otherlv_1= FullStop ( ( ruleEString ) ) otherlv_3= FullStop ( ( ruleEString ) ) ) | this_Unary_5= ruleUnary | (otherlv_6= LeftParenthesis this_Constrain_7= ruleConstrain otherlv_8= RightParenthesis ) )
+            int alt7=3;
             switch ( input.LA(1) ) {
             case RULE_NULL:
             case RULE_ID:
+            case RULE_INT:
             case RULE_STRING:
                 {
-                alt8=1;
+                alt7=1;
                 }
                 break;
             case ExclamationMark:
             case HyphenMinus:
                 {
-                alt8=2;
+                alt7=2;
                 }
                 break;
             case LeftParenthesis:
                 {
-                alt8=3;
+                alt7=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 8, 0, input);
+                    new NoViableAltException("", 7, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt8) {
+            switch (alt7) {
                 case 1 :
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:487:2: ( ( ( ruleEString ) ) otherlv_1= FullStop ( ( ruleEString ) ) (otherlv_3= FullStop ( ( ruleEString ) ) )* )
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:487:2: ( ( ( ruleEString ) ) otherlv_1= FullStop ( ( ruleEString ) ) otherlv_3= FullStop ( ( ruleEString ) ) )
                     {
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:487:2: ( ( ( ruleEString ) ) otherlv_1= FullStop ( ( ruleEString ) ) (otherlv_3= FullStop ( ( ruleEString ) ) )* )
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:487:3: ( ( ruleEString ) ) otherlv_1= FullStop ( ( ruleEString ) ) (otherlv_3= FullStop ( ( ruleEString ) ) )*
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:487:2: ( ( ( ruleEString ) ) otherlv_1= FullStop ( ( ruleEString ) ) otherlv_3= FullStop ( ( ruleEString ) ) )
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:487:3: ( ( ruleEString ) ) otherlv_1= FullStop ( ( ruleEString ) ) otherlv_3= FullStop ( ( ruleEString ) )
                     {
                     // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:487:3: ( ( ruleEString ) )
                     // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:488:1: ( ruleEString )
@@ -1286,61 +1288,37 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:522:2: (otherlv_3= FullStop ( ( ruleEString ) ) )*
-                    loop7:
-                    do {
-                        int alt7=2;
-                        int LA7_0 = input.LA(1);
+                    otherlv_3=(Token)match(input,FullStop,FOLLOW_FullStop_in_rulePrimary1114); 
 
-                        if ( (LA7_0==FullStop) ) {
-                            alt7=1;
-                        }
+                        	newLeafNode(otherlv_3, grammarAccess.getPrimaryAccess().getFullStopKeyword_0_3());
+                        
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:527:1: ( ( ruleEString ) )
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:528:1: ( ruleEString )
+                    {
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:528:1: ( ruleEString )
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:529:3: ruleEString
+                    {
 
+                    			if (current==null) {
+                    	            current = createModelElement(grammarAccess.getPrimaryRule());
+                    	        }
+                            
+                     
+                    	        newCompositeNode(grammarAccess.getPrimaryAccess().getConstrainFeaturesFeatureCrossReference_0_4_0()); 
+                    	    
+                    pushFollow(FOLLOW_ruleEString_in_rulePrimary1136);
+                    ruleEString();
 
-                        switch (alt7) {
-                    	case 1 :
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:523:2: otherlv_3= FullStop ( ( ruleEString ) )
-                    	    {
-                    	    otherlv_3=(Token)match(input,FullStop,FOLLOW_FullStop_in_rulePrimary1115); 
+                    state._fsp--;
 
-                    	        	newLeafNode(otherlv_3, grammarAccess.getPrimaryAccess().getFullStopKeyword_0_3_0());
-                    	        
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:527:1: ( ( ruleEString ) )
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:528:1: ( ruleEString )
-                    	    {
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:528:1: ( ruleEString )
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:529:3: ruleEString
-                    	    {
+                     
+                    	        afterParserOrEnumRuleCall();
+                    	    
 
-                    	    			if (current==null) {
-                    	    	            current = createModelElement(grammarAccess.getPrimaryRule());
-                    	    	        }
-                    	            
-                    	     
-                    	    	        newCompositeNode(grammarAccess.getPrimaryAccess().getConstrainFeaturesFeatureCrossReference_0_3_1_0()); 
-                    	    	    
-                    	    pushFollow(FOLLOW_ruleEString_in_rulePrimary1137);
-                    	    ruleEString();
-
-                    	    state._fsp--;
-
-                    	     
-                    	    	        afterParserOrEnumRuleCall();
-                    	    	    
-
-                    	    }
+                    }
 
 
-                    	    }
-
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop7;
-                        }
-                    } while (true);
+                    }
 
 
                     }
@@ -1354,7 +1332,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
                      
                             newCompositeNode(grammarAccess.getPrimaryAccess().getUnaryParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleUnary_in_rulePrimary1168);
+                    pushFollow(FOLLOW_ruleUnary_in_rulePrimary1165);
                     this_Unary_5=ruleUnary();
 
                     state._fsp--;
@@ -1372,14 +1350,14 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
                     // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:553:6: (otherlv_6= LeftParenthesis this_Constrain_7= ruleConstrain otherlv_8= RightParenthesis )
                     // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:554:2: otherlv_6= LeftParenthesis this_Constrain_7= ruleConstrain otherlv_8= RightParenthesis
                     {
-                    otherlv_6=(Token)match(input,LeftParenthesis,FOLLOW_LeftParenthesis_in_rulePrimary1187); 
+                    otherlv_6=(Token)match(input,LeftParenthesis,FOLLOW_LeftParenthesis_in_rulePrimary1184); 
 
                         	newLeafNode(otherlv_6, grammarAccess.getPrimaryAccess().getLeftParenthesisKeyword_2_0());
                         
                      
                             newCompositeNode(grammarAccess.getPrimaryAccess().getConstrainParserRuleCall_2_1()); 
                         
-                    pushFollow(FOLLOW_ruleConstrain_in_rulePrimary1208);
+                    pushFollow(FOLLOW_ruleConstrain_in_rulePrimary1205);
                     this_Constrain_7=ruleConstrain();
 
                     state._fsp--;
@@ -1388,7 +1366,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
                             current = this_Constrain_7;
                             afterParserOrEnumRuleCall();
                         
-                    otherlv_8=(Token)match(input,RightParenthesis,FOLLOW_RightParenthesis_in_rulePrimary1220); 
+                    otherlv_8=(Token)match(input,RightParenthesis,FOLLOW_RightParenthesis_in_rulePrimary1217); 
 
                         	newLeafNode(otherlv_8, grammarAccess.getPrimaryAccess().getRightParenthesisKeyword_2_2());
                         
@@ -1431,13 +1409,13 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
             // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:582:2: iv_ruleUnary= ruleUnary EOF
             {
              newCompositeNode(grammarAccess.getUnaryRule()); 
-            pushFollow(FOLLOW_ruleUnary_in_entryRuleUnary1255);
+            pushFollow(FOLLOW_ruleUnary_in_entryRuleUnary1252);
             iv_ruleUnary=ruleUnary();
 
             state._fsp--;
 
              current =iv_ruleUnary; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleUnary1265); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleUnary1262); 
 
             }
 
@@ -1491,26 +1469,26 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
             // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:601:1: (lv_Operator_1_1= ExclamationMark | lv_Operator_1_2= HyphenMinus )
             {
             // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:601:1: (lv_Operator_1_1= ExclamationMark | lv_Operator_1_2= HyphenMinus )
-            int alt9=2;
-            int LA9_0 = input.LA(1);
+            int alt8=2;
+            int LA8_0 = input.LA(1);
 
-            if ( (LA9_0==ExclamationMark) ) {
-                alt9=1;
+            if ( (LA8_0==ExclamationMark) ) {
+                alt8=1;
             }
-            else if ( (LA9_0==HyphenMinus) ) {
-                alt9=2;
+            else if ( (LA8_0==HyphenMinus) ) {
+                alt8=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 9, 0, input);
+                    new NoViableAltException("", 8, 0, input);
 
                 throw nvae;
             }
-            switch (alt9) {
+            switch (alt8) {
                 case 1 :
                     // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:602:3: lv_Operator_1_1= ExclamationMark
                     {
-                    lv_Operator_1_1=(Token)match(input,ExclamationMark,FOLLOW_ExclamationMark_in_ruleUnary1320); 
+                    lv_Operator_1_1=(Token)match(input,ExclamationMark,FOLLOW_ExclamationMark_in_ruleUnary1317); 
 
                             newLeafNode(lv_Operator_1_1, grammarAccess.getUnaryAccess().getOperatorExclamationMarkKeyword_1_0_0());
                         
@@ -1526,7 +1504,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
                 case 2 :
                     // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:615:8: lv_Operator_1_2= HyphenMinus
                     {
-                    lv_Operator_1_2=(Token)match(input,HyphenMinus,FOLLOW_HyphenMinus_in_ruleUnary1348); 
+                    lv_Operator_1_2=(Token)match(input,HyphenMinus,FOLLOW_HyphenMinus_in_ruleUnary1345); 
 
                             newLeafNode(lv_Operator_1_2, grammarAccess.getUnaryAccess().getOperatorHyphenMinusKeyword_1_0_1());
                         
@@ -1557,7 +1535,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
              
             	        newCompositeNode(grammarAccess.getUnaryAccess().getExpPrimaryParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_rulePrimary_in_ruleUnary1383);
+            pushFollow(FOLLOW_rulePrimary_in_ruleUnary1380);
             lv_exp_2_0=rulePrimary();
 
             state._fsp--;
@@ -1612,13 +1590,13 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
             // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:659:2: iv_ruleGroup= ruleGroup EOF
             {
              newCompositeNode(grammarAccess.getGroupRule()); 
-            pushFollow(FOLLOW_ruleGroup_in_entryRuleGroup1418);
+            pushFollow(FOLLOW_ruleGroup_in_entryRuleGroup1415);
             iv_ruleGroup=ruleGroup();
 
             state._fsp--;
 
              current =iv_ruleGroup; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleGroup1428); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleGroup1425); 
 
             }
 
@@ -1652,29 +1630,29 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
             // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:670:1: (this_Or_0= ruleOr | this_Xor_1= ruleXor )
             {
             // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:670:1: (this_Or_0= ruleOr | this_Xor_1= ruleXor )
-            int alt10=2;
-            int LA10_0 = input.LA(1);
+            int alt9=2;
+            int LA9_0 = input.LA(1);
 
-            if ( (LA10_0==Or) ) {
-                alt10=1;
+            if ( (LA9_0==Or) ) {
+                alt9=1;
             }
-            else if ( (LA10_0==Xor) ) {
-                alt10=2;
+            else if ( (LA9_0==Xor) ) {
+                alt9=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 10, 0, input);
+                    new NoViableAltException("", 9, 0, input);
 
                 throw nvae;
             }
-            switch (alt10) {
+            switch (alt9) {
                 case 1 :
                     // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:671:5: this_Or_0= ruleOr
                     {
                      
                             newCompositeNode(grammarAccess.getGroupAccess().getOrParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleOr_in_ruleGroup1475);
+                    pushFollow(FOLLOW_ruleOr_in_ruleGroup1472);
                     this_Or_0=ruleOr();
 
                     state._fsp--;
@@ -1692,7 +1670,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
                      
                             newCompositeNode(grammarAccess.getGroupAccess().getXorParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleXor_in_ruleGroup1502);
+                    pushFollow(FOLLOW_ruleXor_in_ruleGroup1499);
                     this_Xor_1=ruleXor();
 
                     state._fsp--;
@@ -1724,8 +1702,127 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleGroup"
 
 
+    // $ANTLR start "entryRuleRange"
+    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:697:1: entryRuleRange returns [EObject current=null] : iv_ruleRange= ruleRange EOF ;
+    public final EObject entryRuleRange() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleRange = null;
+
+
+        try {
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:698:2: (iv_ruleRange= ruleRange EOF )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:699:2: iv_ruleRange= ruleRange EOF
+            {
+             newCompositeNode(grammarAccess.getRangeRule()); 
+            pushFollow(FOLLOW_ruleRange_in_entryRuleRange1533);
+            iv_ruleRange=ruleRange();
+
+            state._fsp--;
+
+             current =iv_ruleRange; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleRange1543); 
+
+            }
+
+        }
+         
+        	catch (RecognitionException re) { 
+        	    recover(input,re); 
+        	    appendSkippedTokens();
+        	}
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleRange"
+
+
+    // $ANTLR start "ruleRange"
+    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:706:1: ruleRange returns [EObject current=null] : ( ( (lv_name_0_0= ruleEString ) ) this_INT_1= RULE_INT otherlv_2= FullStopFullStop this_INT_3= RULE_INT ) ;
+    public final EObject ruleRange() throws RecognitionException {
+        EObject current = null;
+
+        Token this_INT_1=null;
+        Token otherlv_2=null;
+        Token this_INT_3=null;
+        AntlrDatatypeRuleToken lv_name_0_0 = null;
+
+
+         enterRule(); 
+            
+        try {
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:709:28: ( ( ( (lv_name_0_0= ruleEString ) ) this_INT_1= RULE_INT otherlv_2= FullStopFullStop this_INT_3= RULE_INT ) )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:710:1: ( ( (lv_name_0_0= ruleEString ) ) this_INT_1= RULE_INT otherlv_2= FullStopFullStop this_INT_3= RULE_INT )
+            {
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:710:1: ( ( (lv_name_0_0= ruleEString ) ) this_INT_1= RULE_INT otherlv_2= FullStopFullStop this_INT_3= RULE_INT )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:710:2: ( (lv_name_0_0= ruleEString ) ) this_INT_1= RULE_INT otherlv_2= FullStopFullStop this_INT_3= RULE_INT
+            {
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:710:2: ( (lv_name_0_0= ruleEString ) )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:711:1: (lv_name_0_0= ruleEString )
+            {
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:711:1: (lv_name_0_0= ruleEString )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:712:3: lv_name_0_0= ruleEString
+            {
+             
+            	        newCompositeNode(grammarAccess.getRangeAccess().getNameEStringParserRuleCall_0_0()); 
+            	    
+            pushFollow(FOLLOW_ruleEString_in_ruleRange1589);
+            lv_name_0_0=ruleEString();
+
+            state._fsp--;
+
+
+            	        if (current==null) {
+            	            current = createModelElementForParent(grammarAccess.getRangeRule());
+            	        }
+                   		set(
+                   			current, 
+                   			"name",
+                    		lv_name_0_0, 
+                    		"EString");
+            	        afterParserOrEnumRuleCall();
+            	    
+
+            }
+
+
+            }
+
+            this_INT_1=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleRange1600); 
+             
+                newLeafNode(this_INT_1, grammarAccess.getRangeAccess().getINTTerminalRuleCall_1()); 
+                
+            otherlv_2=(Token)match(input,FullStopFullStop,FOLLOW_FullStopFullStop_in_ruleRange1612); 
+
+                	newLeafNode(otherlv_2, grammarAccess.getRangeAccess().getFullStopFullStopKeyword_2());
+                
+            this_INT_3=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleRange1622); 
+             
+                newLeafNode(this_INT_3, grammarAccess.getRangeAccess().getINTTerminalRuleCall_3()); 
+                
+
+            }
+
+
+            }
+
+             leaveRule(); 
+        }
+         
+        	catch (RecognitionException re) { 
+        	    recover(input,re); 
+        	    appendSkippedTokens();
+        	}
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleRange"
+
+
     // $ANTLR start "entryRuleEString"
-    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:697:1: entryRuleEString returns [String current=null] : iv_ruleEString= ruleEString EOF ;
+    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:749:1: entryRuleEString returns [String current=null] : iv_ruleEString= ruleEString EOF ;
     public final String entryRuleEString() throws RecognitionException {
         String current = null;
 
@@ -1733,17 +1830,17 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:698:1: (iv_ruleEString= ruleEString EOF )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:699:2: iv_ruleEString= ruleEString EOF
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:750:1: (iv_ruleEString= ruleEString EOF )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:751:2: iv_ruleEString= ruleEString EOF
             {
              newCompositeNode(grammarAccess.getEStringRule()); 
-            pushFollow(FOLLOW_ruleEString_in_entryRuleEString1537);
+            pushFollow(FOLLOW_ruleEString_in_entryRuleEString1657);
             iv_ruleEString=ruleEString();
 
             state._fsp--;
 
              current =iv_ruleEString.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEString1548); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEString1668); 
 
             }
 
@@ -1761,50 +1858,56 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEString"
-    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:706:1: ruleEString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID | this_NULL_2= RULE_NULL ) ;
+    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:758:1: ruleEString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID | this_INT_2= RULE_INT | this_NULL_3= RULE_NULL ) ;
     public final AntlrDatatypeRuleToken ruleEString() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
         Token this_STRING_0=null;
         Token this_ID_1=null;
-        Token this_NULL_2=null;
+        Token this_INT_2=null;
+        Token this_NULL_3=null;
 
          enterRule(); 
             
         try {
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:710:6: ( (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID | this_NULL_2= RULE_NULL ) )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:711:1: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID | this_NULL_2= RULE_NULL )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:762:6: ( (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID | this_INT_2= RULE_INT | this_NULL_3= RULE_NULL ) )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:763:1: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID | this_INT_2= RULE_INT | this_NULL_3= RULE_NULL )
             {
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:711:1: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID | this_NULL_2= RULE_NULL )
-            int alt11=3;
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:763:1: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID | this_INT_2= RULE_INT | this_NULL_3= RULE_NULL )
+            int alt10=4;
             switch ( input.LA(1) ) {
             case RULE_STRING:
                 {
-                alt11=1;
+                alt10=1;
                 }
                 break;
             case RULE_ID:
                 {
-                alt11=2;
+                alt10=2;
+                }
+                break;
+            case RULE_INT:
+                {
+                alt10=3;
                 }
                 break;
             case RULE_NULL:
                 {
-                alt11=3;
+                alt10=4;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 11, 0, input);
+                    new NoViableAltException("", 10, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt11) {
+            switch (alt10) {
                 case 1 :
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:711:6: this_STRING_0= RULE_STRING
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:763:6: this_STRING_0= RULE_STRING
                     {
-                    this_STRING_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleEString1588); 
+                    this_STRING_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleEString1708); 
 
                     		current.merge(this_STRING_0);
                         
@@ -1815,9 +1918,9 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:719:10: this_ID_1= RULE_ID
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:771:10: this_ID_1= RULE_ID
                     {
-                    this_ID_1=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleEString1614); 
+                    this_ID_1=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleEString1734); 
 
                     		current.merge(this_ID_1);
                         
@@ -1828,14 +1931,27 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:727:10: this_NULL_2= RULE_NULL
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:779:10: this_INT_2= RULE_INT
                     {
-                    this_NULL_2=(Token)match(input,RULE_NULL,FOLLOW_RULE_NULL_in_ruleEString1640); 
+                    this_INT_2=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleEString1760); 
 
-                    		current.merge(this_NULL_2);
+                    		current.merge(this_INT_2);
                         
                      
-                        newLeafNode(this_NULL_2, grammarAccess.getEStringAccess().getNULLTerminalRuleCall_2()); 
+                        newLeafNode(this_INT_2, grammarAccess.getEStringAccess().getINTTerminalRuleCall_2()); 
+                        
+
+                    }
+                    break;
+                case 4 :
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:787:10: this_NULL_3= RULE_NULL
+                    {
+                    this_NULL_3=(Token)match(input,RULE_NULL,FOLLOW_RULE_NULL_in_ruleEString1786); 
+
+                    		current.merge(this_NULL_3);
+                        
+                     
+                        newLeafNode(this_NULL_3, grammarAccess.getEStringAccess().getNULLTerminalRuleCall_3()); 
                         
 
                     }
@@ -1862,7 +1978,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFeature_Impl"
-    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:742:1: entryRuleFeature_Impl returns [EObject current=null] : iv_ruleFeature_Impl= ruleFeature_Impl EOF ;
+    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:802:1: entryRuleFeature_Impl returns [EObject current=null] : iv_ruleFeature_Impl= ruleFeature_Impl EOF ;
     public final EObject entryRuleFeature_Impl() throws RecognitionException {
         EObject current = null;
 
@@ -1870,17 +1986,17 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:743:2: (iv_ruleFeature_Impl= ruleFeature_Impl EOF )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:744:2: iv_ruleFeature_Impl= ruleFeature_Impl EOF
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:803:2: (iv_ruleFeature_Impl= ruleFeature_Impl EOF )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:804:2: iv_ruleFeature_Impl= ruleFeature_Impl EOF
             {
              newCompositeNode(grammarAccess.getFeature_ImplRule()); 
-            pushFollow(FOLLOW_ruleFeature_Impl_in_entryRuleFeature_Impl1684);
+            pushFollow(FOLLOW_ruleFeature_Impl_in_entryRuleFeature_Impl1830);
             iv_ruleFeature_Impl=ruleFeature_Impl();
 
             state._fsp--;
 
              current =iv_ruleFeature_Impl; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFeature_Impl1694); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFeature_Impl1840); 
 
             }
 
@@ -1898,7 +2014,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFeature_Impl"
-    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:751:1: ruleFeature_Impl returns [EObject current=null] : (otherlv_0= Feature ( (lv_name_1_0= ruleEString ) ) (this_BEGIN_2= RULE_BEGIN ( (lv_subfeature_3_0= ruleSolitary ) ) ( (lv_subfeature_4_0= ruleSolitary ) )* this_END_5= RULE_END )? (otherlv_6= LeftSquareBracket ( (lv_constrains_7_0= ruleConstrain ) ) (otherlv_8= Comma ( (lv_constrains_9_0= ruleConstrain ) ) )* otherlv_10= RightSquareBracket )? ) ;
+    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:811:1: ruleFeature_Impl returns [EObject current=null] : (otherlv_0= Feature ( (lv_name_1_0= ruleEString ) ) (this_BEGIN_2= RULE_BEGIN ( (lv_subfeature_3_0= ruleSolitary ) ) ( (lv_subfeature_4_0= ruleSolitary ) )* this_END_5= RULE_END )? (otherlv_6= LeftSquareBracket ( (lv_constrains_7_0= ruleConstrain ) ) (otherlv_8= Comma ( (lv_constrains_9_0= ruleConstrain ) ) )* otherlv_10= RightSquareBracket )? ) ;
     public final EObject ruleFeature_Impl() throws RecognitionException {
         EObject current = null;
 
@@ -1922,26 +2038,26 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:754:28: ( (otherlv_0= Feature ( (lv_name_1_0= ruleEString ) ) (this_BEGIN_2= RULE_BEGIN ( (lv_subfeature_3_0= ruleSolitary ) ) ( (lv_subfeature_4_0= ruleSolitary ) )* this_END_5= RULE_END )? (otherlv_6= LeftSquareBracket ( (lv_constrains_7_0= ruleConstrain ) ) (otherlv_8= Comma ( (lv_constrains_9_0= ruleConstrain ) ) )* otherlv_10= RightSquareBracket )? ) )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:755:1: (otherlv_0= Feature ( (lv_name_1_0= ruleEString ) ) (this_BEGIN_2= RULE_BEGIN ( (lv_subfeature_3_0= ruleSolitary ) ) ( (lv_subfeature_4_0= ruleSolitary ) )* this_END_5= RULE_END )? (otherlv_6= LeftSquareBracket ( (lv_constrains_7_0= ruleConstrain ) ) (otherlv_8= Comma ( (lv_constrains_9_0= ruleConstrain ) ) )* otherlv_10= RightSquareBracket )? )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:814:28: ( (otherlv_0= Feature ( (lv_name_1_0= ruleEString ) ) (this_BEGIN_2= RULE_BEGIN ( (lv_subfeature_3_0= ruleSolitary ) ) ( (lv_subfeature_4_0= ruleSolitary ) )* this_END_5= RULE_END )? (otherlv_6= LeftSquareBracket ( (lv_constrains_7_0= ruleConstrain ) ) (otherlv_8= Comma ( (lv_constrains_9_0= ruleConstrain ) ) )* otherlv_10= RightSquareBracket )? ) )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:815:1: (otherlv_0= Feature ( (lv_name_1_0= ruleEString ) ) (this_BEGIN_2= RULE_BEGIN ( (lv_subfeature_3_0= ruleSolitary ) ) ( (lv_subfeature_4_0= ruleSolitary ) )* this_END_5= RULE_END )? (otherlv_6= LeftSquareBracket ( (lv_constrains_7_0= ruleConstrain ) ) (otherlv_8= Comma ( (lv_constrains_9_0= ruleConstrain ) ) )* otherlv_10= RightSquareBracket )? )
             {
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:755:1: (otherlv_0= Feature ( (lv_name_1_0= ruleEString ) ) (this_BEGIN_2= RULE_BEGIN ( (lv_subfeature_3_0= ruleSolitary ) ) ( (lv_subfeature_4_0= ruleSolitary ) )* this_END_5= RULE_END )? (otherlv_6= LeftSquareBracket ( (lv_constrains_7_0= ruleConstrain ) ) (otherlv_8= Comma ( (lv_constrains_9_0= ruleConstrain ) ) )* otherlv_10= RightSquareBracket )? )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:756:2: otherlv_0= Feature ( (lv_name_1_0= ruleEString ) ) (this_BEGIN_2= RULE_BEGIN ( (lv_subfeature_3_0= ruleSolitary ) ) ( (lv_subfeature_4_0= ruleSolitary ) )* this_END_5= RULE_END )? (otherlv_6= LeftSquareBracket ( (lv_constrains_7_0= ruleConstrain ) ) (otherlv_8= Comma ( (lv_constrains_9_0= ruleConstrain ) ) )* otherlv_10= RightSquareBracket )?
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:815:1: (otherlv_0= Feature ( (lv_name_1_0= ruleEString ) ) (this_BEGIN_2= RULE_BEGIN ( (lv_subfeature_3_0= ruleSolitary ) ) ( (lv_subfeature_4_0= ruleSolitary ) )* this_END_5= RULE_END )? (otherlv_6= LeftSquareBracket ( (lv_constrains_7_0= ruleConstrain ) ) (otherlv_8= Comma ( (lv_constrains_9_0= ruleConstrain ) ) )* otherlv_10= RightSquareBracket )? )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:816:2: otherlv_0= Feature ( (lv_name_1_0= ruleEString ) ) (this_BEGIN_2= RULE_BEGIN ( (lv_subfeature_3_0= ruleSolitary ) ) ( (lv_subfeature_4_0= ruleSolitary ) )* this_END_5= RULE_END )? (otherlv_6= LeftSquareBracket ( (lv_constrains_7_0= ruleConstrain ) ) (otherlv_8= Comma ( (lv_constrains_9_0= ruleConstrain ) ) )* otherlv_10= RightSquareBracket )?
             {
-            otherlv_0=(Token)match(input,Feature,FOLLOW_Feature_in_ruleFeature_Impl1732); 
+            otherlv_0=(Token)match(input,Feature,FOLLOW_Feature_in_ruleFeature_Impl1878); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getFeature_ImplAccess().getFeatureKeyword_0());
                 
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:760:1: ( (lv_name_1_0= ruleEString ) )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:761:1: (lv_name_1_0= ruleEString )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:820:1: ( (lv_name_1_0= ruleEString ) )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:821:1: (lv_name_1_0= ruleEString )
             {
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:761:1: (lv_name_1_0= ruleEString )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:762:3: lv_name_1_0= ruleEString
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:821:1: (lv_name_1_0= ruleEString )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:822:3: lv_name_1_0= ruleEString
             {
              
             	        newCompositeNode(grammarAccess.getFeature_ImplAccess().getNameEStringParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleEString_in_ruleFeature_Impl1752);
+            pushFollow(FOLLOW_ruleEString_in_ruleFeature_Impl1898);
             lv_name_1_0=ruleEString();
 
             state._fsp--;
@@ -1963,31 +2079,31 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:778:2: (this_BEGIN_2= RULE_BEGIN ( (lv_subfeature_3_0= ruleSolitary ) ) ( (lv_subfeature_4_0= ruleSolitary ) )* this_END_5= RULE_END )?
-            int alt13=2;
-            int LA13_0 = input.LA(1);
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:838:2: (this_BEGIN_2= RULE_BEGIN ( (lv_subfeature_3_0= ruleSolitary ) ) ( (lv_subfeature_4_0= ruleSolitary ) )* this_END_5= RULE_END )?
+            int alt12=2;
+            int LA12_0 = input.LA(1);
 
-            if ( (LA13_0==RULE_BEGIN) ) {
-                alt13=1;
+            if ( (LA12_0==RULE_BEGIN) ) {
+                alt12=1;
             }
-            switch (alt13) {
+            switch (alt12) {
                 case 1 :
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:778:3: this_BEGIN_2= RULE_BEGIN ( (lv_subfeature_3_0= ruleSolitary ) ) ( (lv_subfeature_4_0= ruleSolitary ) )* this_END_5= RULE_END
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:838:3: this_BEGIN_2= RULE_BEGIN ( (lv_subfeature_3_0= ruleSolitary ) ) ( (lv_subfeature_4_0= ruleSolitary ) )* this_END_5= RULE_END
                     {
-                    this_BEGIN_2=(Token)match(input,RULE_BEGIN,FOLLOW_RULE_BEGIN_in_ruleFeature_Impl1764); 
+                    this_BEGIN_2=(Token)match(input,RULE_BEGIN,FOLLOW_RULE_BEGIN_in_ruleFeature_Impl1910); 
                      
                         newLeafNode(this_BEGIN_2, grammarAccess.getFeature_ImplAccess().getBEGINTerminalRuleCall_2_0()); 
                         
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:782:1: ( (lv_subfeature_3_0= ruleSolitary ) )
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:783:1: (lv_subfeature_3_0= ruleSolitary )
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:842:1: ( (lv_subfeature_3_0= ruleSolitary ) )
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:843:1: (lv_subfeature_3_0= ruleSolitary )
                     {
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:783:1: (lv_subfeature_3_0= ruleSolitary )
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:784:3: lv_subfeature_3_0= ruleSolitary
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:843:1: (lv_subfeature_3_0= ruleSolitary )
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:844:3: lv_subfeature_3_0= ruleSolitary
                     {
                      
                     	        newCompositeNode(grammarAccess.getFeature_ImplAccess().getSubfeatureSolitaryParserRuleCall_2_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleSolitary_in_ruleFeature_Impl1784);
+                    pushFollow(FOLLOW_ruleSolitary_in_ruleFeature_Impl1930);
                     lv_subfeature_3_0=ruleSolitary();
 
                     state._fsp--;
@@ -2009,28 +2125,28 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:800:2: ( (lv_subfeature_4_0= ruleSolitary ) )*
-                    loop12:
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:860:2: ( (lv_subfeature_4_0= ruleSolitary ) )*
+                    loop11:
                     do {
-                        int alt12=2;
-                        int LA12_0 = input.LA(1);
+                        int alt11=2;
+                        int LA11_0 = input.LA(1);
 
-                        if ( (LA12_0==QuestionMark||LA12_0==RULE_NULL||LA12_0==RULE_ID||LA12_0==RULE_STRING) ) {
-                            alt12=1;
+                        if ( (LA11_0==QuestionMark||LA11_0==RULE_NULL||(LA11_0>=RULE_ID && LA11_0<=RULE_STRING)) ) {
+                            alt11=1;
                         }
 
 
-                        switch (alt12) {
+                        switch (alt11) {
                     	case 1 :
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:801:1: (lv_subfeature_4_0= ruleSolitary )
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:861:1: (lv_subfeature_4_0= ruleSolitary )
                     	    {
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:801:1: (lv_subfeature_4_0= ruleSolitary )
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:802:3: lv_subfeature_4_0= ruleSolitary
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:861:1: (lv_subfeature_4_0= ruleSolitary )
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:862:3: lv_subfeature_4_0= ruleSolitary
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getFeature_ImplAccess().getSubfeatureSolitaryParserRuleCall_2_2_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleSolitary_in_ruleFeature_Impl1805);
+                    	    pushFollow(FOLLOW_ruleSolitary_in_ruleFeature_Impl1951);
                     	    lv_subfeature_4_0=ruleSolitary();
 
                     	    state._fsp--;
@@ -2054,11 +2170,11 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop12;
+                    	    break loop11;
                         }
                     } while (true);
 
-                    this_END_5=(Token)match(input,RULE_END,FOLLOW_RULE_END_in_ruleFeature_Impl1817); 
+                    this_END_5=(Token)match(input,RULE_END,FOLLOW_RULE_END_in_ruleFeature_Impl1963); 
                      
                         newLeafNode(this_END_5, grammarAccess.getFeature_ImplAccess().getENDTerminalRuleCall_2_3()); 
                         
@@ -2068,31 +2184,31 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:822:3: (otherlv_6= LeftSquareBracket ( (lv_constrains_7_0= ruleConstrain ) ) (otherlv_8= Comma ( (lv_constrains_9_0= ruleConstrain ) ) )* otherlv_10= RightSquareBracket )?
-            int alt15=2;
-            int LA15_0 = input.LA(1);
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:882:3: (otherlv_6= LeftSquareBracket ( (lv_constrains_7_0= ruleConstrain ) ) (otherlv_8= Comma ( (lv_constrains_9_0= ruleConstrain ) ) )* otherlv_10= RightSquareBracket )?
+            int alt14=2;
+            int LA14_0 = input.LA(1);
 
-            if ( (LA15_0==LeftSquareBracket) ) {
-                alt15=1;
+            if ( (LA14_0==LeftSquareBracket) ) {
+                alt14=1;
             }
-            switch (alt15) {
+            switch (alt14) {
                 case 1 :
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:823:2: otherlv_6= LeftSquareBracket ( (lv_constrains_7_0= ruleConstrain ) ) (otherlv_8= Comma ( (lv_constrains_9_0= ruleConstrain ) ) )* otherlv_10= RightSquareBracket
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:883:2: otherlv_6= LeftSquareBracket ( (lv_constrains_7_0= ruleConstrain ) ) (otherlv_8= Comma ( (lv_constrains_9_0= ruleConstrain ) ) )* otherlv_10= RightSquareBracket
                     {
-                    otherlv_6=(Token)match(input,LeftSquareBracket,FOLLOW_LeftSquareBracket_in_ruleFeature_Impl1832); 
+                    otherlv_6=(Token)match(input,LeftSquareBracket,FOLLOW_LeftSquareBracket_in_ruleFeature_Impl1978); 
 
                         	newLeafNode(otherlv_6, grammarAccess.getFeature_ImplAccess().getLeftSquareBracketKeyword_3_0());
                         
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:827:1: ( (lv_constrains_7_0= ruleConstrain ) )
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:828:1: (lv_constrains_7_0= ruleConstrain )
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:887:1: ( (lv_constrains_7_0= ruleConstrain ) )
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:888:1: (lv_constrains_7_0= ruleConstrain )
                     {
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:828:1: (lv_constrains_7_0= ruleConstrain )
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:829:3: lv_constrains_7_0= ruleConstrain
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:888:1: (lv_constrains_7_0= ruleConstrain )
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:889:3: lv_constrains_7_0= ruleConstrain
                     {
                      
                     	        newCompositeNode(grammarAccess.getFeature_ImplAccess().getConstrainsConstrainParserRuleCall_3_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleConstrain_in_ruleFeature_Impl1852);
+                    pushFollow(FOLLOW_ruleConstrain_in_ruleFeature_Impl1998);
                     lv_constrains_7_0=ruleConstrain();
 
                     state._fsp--;
@@ -2114,35 +2230,35 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:845:2: (otherlv_8= Comma ( (lv_constrains_9_0= ruleConstrain ) ) )*
-                    loop14:
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:905:2: (otherlv_8= Comma ( (lv_constrains_9_0= ruleConstrain ) ) )*
+                    loop13:
                     do {
-                        int alt14=2;
-                        int LA14_0 = input.LA(1);
+                        int alt13=2;
+                        int LA13_0 = input.LA(1);
 
-                        if ( (LA14_0==Comma) ) {
-                            alt14=1;
+                        if ( (LA13_0==Comma) ) {
+                            alt13=1;
                         }
 
 
-                        switch (alt14) {
+                        switch (alt13) {
                     	case 1 :
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:846:2: otherlv_8= Comma ( (lv_constrains_9_0= ruleConstrain ) )
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:906:2: otherlv_8= Comma ( (lv_constrains_9_0= ruleConstrain ) )
                     	    {
-                    	    otherlv_8=(Token)match(input,Comma,FOLLOW_Comma_in_ruleFeature_Impl1866); 
+                    	    otherlv_8=(Token)match(input,Comma,FOLLOW_Comma_in_ruleFeature_Impl2012); 
 
                     	        	newLeafNode(otherlv_8, grammarAccess.getFeature_ImplAccess().getCommaKeyword_3_2_0());
                     	        
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:850:1: ( (lv_constrains_9_0= ruleConstrain ) )
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:851:1: (lv_constrains_9_0= ruleConstrain )
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:910:1: ( (lv_constrains_9_0= ruleConstrain ) )
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:911:1: (lv_constrains_9_0= ruleConstrain )
                     	    {
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:851:1: (lv_constrains_9_0= ruleConstrain )
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:852:3: lv_constrains_9_0= ruleConstrain
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:911:1: (lv_constrains_9_0= ruleConstrain )
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:912:3: lv_constrains_9_0= ruleConstrain
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getFeature_ImplAccess().getConstrainsConstrainParserRuleCall_3_2_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleConstrain_in_ruleFeature_Impl1886);
+                    	    pushFollow(FOLLOW_ruleConstrain_in_ruleFeature_Impl2032);
                     	    lv_constrains_9_0=ruleConstrain();
 
                     	    state._fsp--;
@@ -2169,11 +2285,11 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop14;
+                    	    break loop13;
                         }
                     } while (true);
 
-                    otherlv_10=(Token)match(input,RightSquareBracket,FOLLOW_RightSquareBracket_in_ruleFeature_Impl1901); 
+                    otherlv_10=(Token)match(input,RightSquareBracket,FOLLOW_RightSquareBracket_in_ruleFeature_Impl2047); 
 
                         	newLeafNode(otherlv_10, grammarAccess.getFeature_ImplAccess().getRightSquareBracketKeyword_3_3());
                         
@@ -2204,7 +2320,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGrouped"
-    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:881:1: entryRuleGrouped returns [EObject current=null] : iv_ruleGrouped= ruleGrouped EOF ;
+    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:941:1: entryRuleGrouped returns [EObject current=null] : iv_ruleGrouped= ruleGrouped EOF ;
     public final EObject entryRuleGrouped() throws RecognitionException {
         EObject current = null;
 
@@ -2212,17 +2328,17 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:882:2: (iv_ruleGrouped= ruleGrouped EOF )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:883:2: iv_ruleGrouped= ruleGrouped EOF
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:942:2: (iv_ruleGrouped= ruleGrouped EOF )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:943:2: iv_ruleGrouped= ruleGrouped EOF
             {
              newCompositeNode(grammarAccess.getGroupedRule()); 
-            pushFollow(FOLLOW_ruleGrouped_in_entryRuleGrouped1937);
+            pushFollow(FOLLOW_ruleGrouped_in_entryRuleGrouped2083);
             iv_ruleGrouped=ruleGrouped();
 
             state._fsp--;
 
              current =iv_ruleGrouped; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleGrouped1947); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleGrouped2093); 
 
             }
 
@@ -2240,39 +2356,41 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGrouped"
-    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:890:1: ruleGrouped returns [EObject current=null] : ( ( (lv_name_0_0= ruleEString ) ) (otherlv_1= LeftSquareBracket ( (lv_constrains_2_0= ruleConstrain ) ) (otherlv_3= Comma ( (lv_constrains_4_0= ruleConstrain ) ) )* otherlv_5= RightSquareBracket )? ) ;
+    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:950:1: ruleGrouped returns [EObject current=null] : ( ( (lv_name_0_0= ruleEString ) ) ( (lv_range_1_0= ruleRange ) )? (otherlv_2= LeftSquareBracket ( (lv_constrains_3_0= ruleConstrain ) ) (otherlv_4= Comma ( (lv_constrains_5_0= ruleConstrain ) ) )* otherlv_6= RightSquareBracket )? ) ;
     public final EObject ruleGrouped() throws RecognitionException {
         EObject current = null;
 
-        Token otherlv_1=null;
-        Token otherlv_3=null;
-        Token otherlv_5=null;
+        Token otherlv_2=null;
+        Token otherlv_4=null;
+        Token otherlv_6=null;
         AntlrDatatypeRuleToken lv_name_0_0 = null;
 
-        EObject lv_constrains_2_0 = null;
+        EObject lv_range_1_0 = null;
 
-        EObject lv_constrains_4_0 = null;
+        EObject lv_constrains_3_0 = null;
+
+        EObject lv_constrains_5_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:893:28: ( ( ( (lv_name_0_0= ruleEString ) ) (otherlv_1= LeftSquareBracket ( (lv_constrains_2_0= ruleConstrain ) ) (otherlv_3= Comma ( (lv_constrains_4_0= ruleConstrain ) ) )* otherlv_5= RightSquareBracket )? ) )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:894:1: ( ( (lv_name_0_0= ruleEString ) ) (otherlv_1= LeftSquareBracket ( (lv_constrains_2_0= ruleConstrain ) ) (otherlv_3= Comma ( (lv_constrains_4_0= ruleConstrain ) ) )* otherlv_5= RightSquareBracket )? )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:953:28: ( ( ( (lv_name_0_0= ruleEString ) ) ( (lv_range_1_0= ruleRange ) )? (otherlv_2= LeftSquareBracket ( (lv_constrains_3_0= ruleConstrain ) ) (otherlv_4= Comma ( (lv_constrains_5_0= ruleConstrain ) ) )* otherlv_6= RightSquareBracket )? ) )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:954:1: ( ( (lv_name_0_0= ruleEString ) ) ( (lv_range_1_0= ruleRange ) )? (otherlv_2= LeftSquareBracket ( (lv_constrains_3_0= ruleConstrain ) ) (otherlv_4= Comma ( (lv_constrains_5_0= ruleConstrain ) ) )* otherlv_6= RightSquareBracket )? )
             {
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:894:1: ( ( (lv_name_0_0= ruleEString ) ) (otherlv_1= LeftSquareBracket ( (lv_constrains_2_0= ruleConstrain ) ) (otherlv_3= Comma ( (lv_constrains_4_0= ruleConstrain ) ) )* otherlv_5= RightSquareBracket )? )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:894:2: ( (lv_name_0_0= ruleEString ) ) (otherlv_1= LeftSquareBracket ( (lv_constrains_2_0= ruleConstrain ) ) (otherlv_3= Comma ( (lv_constrains_4_0= ruleConstrain ) ) )* otherlv_5= RightSquareBracket )?
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:954:1: ( ( (lv_name_0_0= ruleEString ) ) ( (lv_range_1_0= ruleRange ) )? (otherlv_2= LeftSquareBracket ( (lv_constrains_3_0= ruleConstrain ) ) (otherlv_4= Comma ( (lv_constrains_5_0= ruleConstrain ) ) )* otherlv_6= RightSquareBracket )? )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:954:2: ( (lv_name_0_0= ruleEString ) ) ( (lv_range_1_0= ruleRange ) )? (otherlv_2= LeftSquareBracket ( (lv_constrains_3_0= ruleConstrain ) ) (otherlv_4= Comma ( (lv_constrains_5_0= ruleConstrain ) ) )* otherlv_6= RightSquareBracket )?
             {
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:894:2: ( (lv_name_0_0= ruleEString ) )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:895:1: (lv_name_0_0= ruleEString )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:954:2: ( (lv_name_0_0= ruleEString ) )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:955:1: (lv_name_0_0= ruleEString )
             {
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:895:1: (lv_name_0_0= ruleEString )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:896:3: lv_name_0_0= ruleEString
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:955:1: (lv_name_0_0= ruleEString )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:956:3: lv_name_0_0= ruleEString
             {
              
             	        newCompositeNode(grammarAccess.getGroupedAccess().getNameEStringParserRuleCall_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleEString_in_ruleGrouped1993);
+            pushFollow(FOLLOW_ruleEString_in_ruleGrouped2139);
             lv_name_0_0=ruleEString();
 
             state._fsp--;
@@ -2294,7 +2412,99 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:912:2: (otherlv_1= LeftSquareBracket ( (lv_constrains_2_0= ruleConstrain ) ) (otherlv_3= Comma ( (lv_constrains_4_0= ruleConstrain ) ) )* otherlv_5= RightSquareBracket )?
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:972:2: ( (lv_range_1_0= ruleRange ) )?
+            int alt15=2;
+            switch ( input.LA(1) ) {
+                case RULE_STRING:
+                    {
+                    int LA15_1 = input.LA(2);
+
+                    if ( (LA15_1==RULE_INT) ) {
+                        int LA15_6 = input.LA(3);
+
+                        if ( (LA15_6==FullStopFullStop) ) {
+                            alt15=1;
+                        }
+                    }
+                    }
+                    break;
+                case RULE_ID:
+                    {
+                    int LA15_2 = input.LA(2);
+
+                    if ( (LA15_2==RULE_INT) ) {
+                        int LA15_6 = input.LA(3);
+
+                        if ( (LA15_6==FullStopFullStop) ) {
+                            alt15=1;
+                        }
+                    }
+                    }
+                    break;
+                case RULE_INT:
+                    {
+                    int LA15_3 = input.LA(2);
+
+                    if ( (LA15_3==RULE_INT) ) {
+                        int LA15_6 = input.LA(3);
+
+                        if ( (LA15_6==FullStopFullStop) ) {
+                            alt15=1;
+                        }
+                    }
+                    }
+                    break;
+                case RULE_NULL:
+                    {
+                    int LA15_4 = input.LA(2);
+
+                    if ( (LA15_4==RULE_INT) ) {
+                        int LA15_6 = input.LA(3);
+
+                        if ( (LA15_6==FullStopFullStop) ) {
+                            alt15=1;
+                        }
+                    }
+                    }
+                    break;
+            }
+
+            switch (alt15) {
+                case 1 :
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:973:1: (lv_range_1_0= ruleRange )
+                    {
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:973:1: (lv_range_1_0= ruleRange )
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:974:3: lv_range_1_0= ruleRange
+                    {
+                     
+                    	        newCompositeNode(grammarAccess.getGroupedAccess().getRangeRangeParserRuleCall_1_0()); 
+                    	    
+                    pushFollow(FOLLOW_ruleRange_in_ruleGrouped2160);
+                    lv_range_1_0=ruleRange();
+
+                    state._fsp--;
+
+
+                    	        if (current==null) {
+                    	            current = createModelElementForParent(grammarAccess.getGroupedRule());
+                    	        }
+                           		set(
+                           			current, 
+                           			"range",
+                            		lv_range_1_0, 
+                            		"Range");
+                    	        afterParserOrEnumRuleCall();
+                    	    
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:990:3: (otherlv_2= LeftSquareBracket ( (lv_constrains_3_0= ruleConstrain ) ) (otherlv_4= Comma ( (lv_constrains_5_0= ruleConstrain ) ) )* otherlv_6= RightSquareBracket )?
             int alt17=2;
             int LA17_0 = input.LA(1);
 
@@ -2303,23 +2513,23 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
             }
             switch (alt17) {
                 case 1 :
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:913:2: otherlv_1= LeftSquareBracket ( (lv_constrains_2_0= ruleConstrain ) ) (otherlv_3= Comma ( (lv_constrains_4_0= ruleConstrain ) ) )* otherlv_5= RightSquareBracket
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:991:2: otherlv_2= LeftSquareBracket ( (lv_constrains_3_0= ruleConstrain ) ) (otherlv_4= Comma ( (lv_constrains_5_0= ruleConstrain ) ) )* otherlv_6= RightSquareBracket
                     {
-                    otherlv_1=(Token)match(input,LeftSquareBracket,FOLLOW_LeftSquareBracket_in_ruleGrouped2007); 
+                    otherlv_2=(Token)match(input,LeftSquareBracket,FOLLOW_LeftSquareBracket_in_ruleGrouped2175); 
 
-                        	newLeafNode(otherlv_1, grammarAccess.getGroupedAccess().getLeftSquareBracketKeyword_1_0());
+                        	newLeafNode(otherlv_2, grammarAccess.getGroupedAccess().getLeftSquareBracketKeyword_2_0());
                         
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:917:1: ( (lv_constrains_2_0= ruleConstrain ) )
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:918:1: (lv_constrains_2_0= ruleConstrain )
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:995:1: ( (lv_constrains_3_0= ruleConstrain ) )
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:996:1: (lv_constrains_3_0= ruleConstrain )
                     {
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:918:1: (lv_constrains_2_0= ruleConstrain )
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:919:3: lv_constrains_2_0= ruleConstrain
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:996:1: (lv_constrains_3_0= ruleConstrain )
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:997:3: lv_constrains_3_0= ruleConstrain
                     {
                      
-                    	        newCompositeNode(grammarAccess.getGroupedAccess().getConstrainsConstrainParserRuleCall_1_1_0()); 
+                    	        newCompositeNode(grammarAccess.getGroupedAccess().getConstrainsConstrainParserRuleCall_2_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleConstrain_in_ruleGrouped2027);
-                    lv_constrains_2_0=ruleConstrain();
+                    pushFollow(FOLLOW_ruleConstrain_in_ruleGrouped2195);
+                    lv_constrains_3_0=ruleConstrain();
 
                     state._fsp--;
 
@@ -2330,7 +2540,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
                            		add(
                            			current, 
                            			"constrains",
-                            		lv_constrains_2_0, 
+                            		lv_constrains_3_0, 
                             		"Constrain");
                     	        afterParserOrEnumRuleCall();
                     	    
@@ -2340,7 +2550,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:935:2: (otherlv_3= Comma ( (lv_constrains_4_0= ruleConstrain ) ) )*
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1013:2: (otherlv_4= Comma ( (lv_constrains_5_0= ruleConstrain ) ) )*
                     loop16:
                     do {
                         int alt16=2;
@@ -2353,23 +2563,23 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
                         switch (alt16) {
                     	case 1 :
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:936:2: otherlv_3= Comma ( (lv_constrains_4_0= ruleConstrain ) )
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1014:2: otherlv_4= Comma ( (lv_constrains_5_0= ruleConstrain ) )
                     	    {
-                    	    otherlv_3=(Token)match(input,Comma,FOLLOW_Comma_in_ruleGrouped2041); 
+                    	    otherlv_4=(Token)match(input,Comma,FOLLOW_Comma_in_ruleGrouped2209); 
 
-                    	        	newLeafNode(otherlv_3, grammarAccess.getGroupedAccess().getCommaKeyword_1_2_0());
+                    	        	newLeafNode(otherlv_4, grammarAccess.getGroupedAccess().getCommaKeyword_2_2_0());
                     	        
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:940:1: ( (lv_constrains_4_0= ruleConstrain ) )
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:941:1: (lv_constrains_4_0= ruleConstrain )
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1018:1: ( (lv_constrains_5_0= ruleConstrain ) )
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1019:1: (lv_constrains_5_0= ruleConstrain )
                     	    {
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:941:1: (lv_constrains_4_0= ruleConstrain )
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:942:3: lv_constrains_4_0= ruleConstrain
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1019:1: (lv_constrains_5_0= ruleConstrain )
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1020:3: lv_constrains_5_0= ruleConstrain
                     	    {
                     	     
-                    	    	        newCompositeNode(grammarAccess.getGroupedAccess().getConstrainsConstrainParserRuleCall_1_2_1_0()); 
+                    	    	        newCompositeNode(grammarAccess.getGroupedAccess().getConstrainsConstrainParserRuleCall_2_2_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleConstrain_in_ruleGrouped2061);
-                    	    lv_constrains_4_0=ruleConstrain();
+                    	    pushFollow(FOLLOW_ruleConstrain_in_ruleGrouped2229);
+                    	    lv_constrains_5_0=ruleConstrain();
 
                     	    state._fsp--;
 
@@ -2380,7 +2590,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
                     	           		add(
                     	           			current, 
                     	           			"constrains",
-                    	            		lv_constrains_4_0, 
+                    	            		lv_constrains_5_0, 
                     	            		"Constrain");
                     	    	        afterParserOrEnumRuleCall();
                     	    	    
@@ -2399,9 +2609,9 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_5=(Token)match(input,RightSquareBracket,FOLLOW_RightSquareBracket_in_ruleGrouped2076); 
+                    otherlv_6=(Token)match(input,RightSquareBracket,FOLLOW_RightSquareBracket_in_ruleGrouped2244); 
 
-                        	newLeafNode(otherlv_5, grammarAccess.getGroupedAccess().getRightSquareBracketKeyword_1_3());
+                        	newLeafNode(otherlv_6, grammarAccess.getGroupedAccess().getRightSquareBracketKeyword_2_3());
                         
 
                     }
@@ -2430,7 +2640,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMandatory"
-    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:971:1: entryRuleMandatory returns [EObject current=null] : iv_ruleMandatory= ruleMandatory EOF ;
+    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1049:1: entryRuleMandatory returns [EObject current=null] : iv_ruleMandatory= ruleMandatory EOF ;
     public final EObject entryRuleMandatory() throws RecognitionException {
         EObject current = null;
 
@@ -2438,17 +2648,17 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:972:2: (iv_ruleMandatory= ruleMandatory EOF )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:973:2: iv_ruleMandatory= ruleMandatory EOF
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1050:2: (iv_ruleMandatory= ruleMandatory EOF )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1051:2: iv_ruleMandatory= ruleMandatory EOF
             {
              newCompositeNode(grammarAccess.getMandatoryRule()); 
-            pushFollow(FOLLOW_ruleMandatory_in_entryRuleMandatory2112);
+            pushFollow(FOLLOW_ruleMandatory_in_entryRuleMandatory2280);
             iv_ruleMandatory=ruleMandatory();
 
             state._fsp--;
 
              current =iv_ruleMandatory; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMandatory2122); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMandatory2290); 
 
             }
 
@@ -2466,7 +2676,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMandatory"
-    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:980:1: ruleMandatory returns [EObject current=null] : ( ( (lv_name_0_0= ruleEString ) ) (otherlv_1= LeftCurlyBracket ( (lv_subfeature_2_0= ruleSolitary ) ) (otherlv_3= Comma ( (lv_subfeature_4_0= ruleSolitary ) ) )* otherlv_5= RightCurlyBracket )? (otherlv_6= LeftSquareBracket ( (lv_constrains_7_0= ruleConstrain ) ) (otherlv_8= Comma ( (lv_constrains_9_0= ruleConstrain ) ) )* otherlv_10= RightSquareBracket )? ( ( (lv_groups_11_0= ruleGroup ) ) ( (lv_groups_12_0= ruleGroup ) )* )? ) ;
+    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1058:1: ruleMandatory returns [EObject current=null] : ( ( (lv_name_0_0= ruleEString ) ) (otherlv_1= LeftCurlyBracket ( (lv_subfeature_2_0= ruleSolitary ) ) (otherlv_3= Comma ( (lv_subfeature_4_0= ruleSolitary ) ) )* otherlv_5= RightCurlyBracket )? (otherlv_6= LeftSquareBracket ( (lv_constrains_7_0= ruleConstrain ) ) (otherlv_8= Comma ( (lv_constrains_9_0= ruleConstrain ) ) )* otherlv_10= RightSquareBracket )? ( ( (lv_groups_11_0= ruleGroup ) ) ( (lv_groups_12_0= ruleGroup ) )* )? ) ;
     public final EObject ruleMandatory() throws RecognitionException {
         EObject current = null;
 
@@ -2494,22 +2704,22 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:983:28: ( ( ( (lv_name_0_0= ruleEString ) ) (otherlv_1= LeftCurlyBracket ( (lv_subfeature_2_0= ruleSolitary ) ) (otherlv_3= Comma ( (lv_subfeature_4_0= ruleSolitary ) ) )* otherlv_5= RightCurlyBracket )? (otherlv_6= LeftSquareBracket ( (lv_constrains_7_0= ruleConstrain ) ) (otherlv_8= Comma ( (lv_constrains_9_0= ruleConstrain ) ) )* otherlv_10= RightSquareBracket )? ( ( (lv_groups_11_0= ruleGroup ) ) ( (lv_groups_12_0= ruleGroup ) )* )? ) )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:984:1: ( ( (lv_name_0_0= ruleEString ) ) (otherlv_1= LeftCurlyBracket ( (lv_subfeature_2_0= ruleSolitary ) ) (otherlv_3= Comma ( (lv_subfeature_4_0= ruleSolitary ) ) )* otherlv_5= RightCurlyBracket )? (otherlv_6= LeftSquareBracket ( (lv_constrains_7_0= ruleConstrain ) ) (otherlv_8= Comma ( (lv_constrains_9_0= ruleConstrain ) ) )* otherlv_10= RightSquareBracket )? ( ( (lv_groups_11_0= ruleGroup ) ) ( (lv_groups_12_0= ruleGroup ) )* )? )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1061:28: ( ( ( (lv_name_0_0= ruleEString ) ) (otherlv_1= LeftCurlyBracket ( (lv_subfeature_2_0= ruleSolitary ) ) (otherlv_3= Comma ( (lv_subfeature_4_0= ruleSolitary ) ) )* otherlv_5= RightCurlyBracket )? (otherlv_6= LeftSquareBracket ( (lv_constrains_7_0= ruleConstrain ) ) (otherlv_8= Comma ( (lv_constrains_9_0= ruleConstrain ) ) )* otherlv_10= RightSquareBracket )? ( ( (lv_groups_11_0= ruleGroup ) ) ( (lv_groups_12_0= ruleGroup ) )* )? ) )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1062:1: ( ( (lv_name_0_0= ruleEString ) ) (otherlv_1= LeftCurlyBracket ( (lv_subfeature_2_0= ruleSolitary ) ) (otherlv_3= Comma ( (lv_subfeature_4_0= ruleSolitary ) ) )* otherlv_5= RightCurlyBracket )? (otherlv_6= LeftSquareBracket ( (lv_constrains_7_0= ruleConstrain ) ) (otherlv_8= Comma ( (lv_constrains_9_0= ruleConstrain ) ) )* otherlv_10= RightSquareBracket )? ( ( (lv_groups_11_0= ruleGroup ) ) ( (lv_groups_12_0= ruleGroup ) )* )? )
             {
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:984:1: ( ( (lv_name_0_0= ruleEString ) ) (otherlv_1= LeftCurlyBracket ( (lv_subfeature_2_0= ruleSolitary ) ) (otherlv_3= Comma ( (lv_subfeature_4_0= ruleSolitary ) ) )* otherlv_5= RightCurlyBracket )? (otherlv_6= LeftSquareBracket ( (lv_constrains_7_0= ruleConstrain ) ) (otherlv_8= Comma ( (lv_constrains_9_0= ruleConstrain ) ) )* otherlv_10= RightSquareBracket )? ( ( (lv_groups_11_0= ruleGroup ) ) ( (lv_groups_12_0= ruleGroup ) )* )? )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:984:2: ( (lv_name_0_0= ruleEString ) ) (otherlv_1= LeftCurlyBracket ( (lv_subfeature_2_0= ruleSolitary ) ) (otherlv_3= Comma ( (lv_subfeature_4_0= ruleSolitary ) ) )* otherlv_5= RightCurlyBracket )? (otherlv_6= LeftSquareBracket ( (lv_constrains_7_0= ruleConstrain ) ) (otherlv_8= Comma ( (lv_constrains_9_0= ruleConstrain ) ) )* otherlv_10= RightSquareBracket )? ( ( (lv_groups_11_0= ruleGroup ) ) ( (lv_groups_12_0= ruleGroup ) )* )?
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1062:1: ( ( (lv_name_0_0= ruleEString ) ) (otherlv_1= LeftCurlyBracket ( (lv_subfeature_2_0= ruleSolitary ) ) (otherlv_3= Comma ( (lv_subfeature_4_0= ruleSolitary ) ) )* otherlv_5= RightCurlyBracket )? (otherlv_6= LeftSquareBracket ( (lv_constrains_7_0= ruleConstrain ) ) (otherlv_8= Comma ( (lv_constrains_9_0= ruleConstrain ) ) )* otherlv_10= RightSquareBracket )? ( ( (lv_groups_11_0= ruleGroup ) ) ( (lv_groups_12_0= ruleGroup ) )* )? )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1062:2: ( (lv_name_0_0= ruleEString ) ) (otherlv_1= LeftCurlyBracket ( (lv_subfeature_2_0= ruleSolitary ) ) (otherlv_3= Comma ( (lv_subfeature_4_0= ruleSolitary ) ) )* otherlv_5= RightCurlyBracket )? (otherlv_6= LeftSquareBracket ( (lv_constrains_7_0= ruleConstrain ) ) (otherlv_8= Comma ( (lv_constrains_9_0= ruleConstrain ) ) )* otherlv_10= RightSquareBracket )? ( ( (lv_groups_11_0= ruleGroup ) ) ( (lv_groups_12_0= ruleGroup ) )* )?
             {
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:984:2: ( (lv_name_0_0= ruleEString ) )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:985:1: (lv_name_0_0= ruleEString )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1062:2: ( (lv_name_0_0= ruleEString ) )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1063:1: (lv_name_0_0= ruleEString )
             {
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:985:1: (lv_name_0_0= ruleEString )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:986:3: lv_name_0_0= ruleEString
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1063:1: (lv_name_0_0= ruleEString )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1064:3: lv_name_0_0= ruleEString
             {
              
             	        newCompositeNode(grammarAccess.getMandatoryAccess().getNameEStringParserRuleCall_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleEString_in_ruleMandatory2168);
+            pushFollow(FOLLOW_ruleEString_in_ruleMandatory2336);
             lv_name_0_0=ruleEString();
 
             state._fsp--;
@@ -2531,7 +2741,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1002:2: (otherlv_1= LeftCurlyBracket ( (lv_subfeature_2_0= ruleSolitary ) ) (otherlv_3= Comma ( (lv_subfeature_4_0= ruleSolitary ) ) )* otherlv_5= RightCurlyBracket )?
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1080:2: (otherlv_1= LeftCurlyBracket ( (lv_subfeature_2_0= ruleSolitary ) ) (otherlv_3= Comma ( (lv_subfeature_4_0= ruleSolitary ) ) )* otherlv_5= RightCurlyBracket )?
             int alt19=2;
             int LA19_0 = input.LA(1);
 
@@ -2540,22 +2750,22 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
             }
             switch (alt19) {
                 case 1 :
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1003:2: otherlv_1= LeftCurlyBracket ( (lv_subfeature_2_0= ruleSolitary ) ) (otherlv_3= Comma ( (lv_subfeature_4_0= ruleSolitary ) ) )* otherlv_5= RightCurlyBracket
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1081:2: otherlv_1= LeftCurlyBracket ( (lv_subfeature_2_0= ruleSolitary ) ) (otherlv_3= Comma ( (lv_subfeature_4_0= ruleSolitary ) ) )* otherlv_5= RightCurlyBracket
                     {
-                    otherlv_1=(Token)match(input,LeftCurlyBracket,FOLLOW_LeftCurlyBracket_in_ruleMandatory2182); 
+                    otherlv_1=(Token)match(input,LeftCurlyBracket,FOLLOW_LeftCurlyBracket_in_ruleMandatory2350); 
 
                         	newLeafNode(otherlv_1, grammarAccess.getMandatoryAccess().getLeftCurlyBracketKeyword_1_0());
                         
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1007:1: ( (lv_subfeature_2_0= ruleSolitary ) )
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1008:1: (lv_subfeature_2_0= ruleSolitary )
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1085:1: ( (lv_subfeature_2_0= ruleSolitary ) )
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1086:1: (lv_subfeature_2_0= ruleSolitary )
                     {
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1008:1: (lv_subfeature_2_0= ruleSolitary )
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1009:3: lv_subfeature_2_0= ruleSolitary
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1086:1: (lv_subfeature_2_0= ruleSolitary )
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1087:3: lv_subfeature_2_0= ruleSolitary
                     {
                      
                     	        newCompositeNode(grammarAccess.getMandatoryAccess().getSubfeatureSolitaryParserRuleCall_1_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleSolitary_in_ruleMandatory2202);
+                    pushFollow(FOLLOW_ruleSolitary_in_ruleMandatory2370);
                     lv_subfeature_2_0=ruleSolitary();
 
                     state._fsp--;
@@ -2577,7 +2787,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1025:2: (otherlv_3= Comma ( (lv_subfeature_4_0= ruleSolitary ) ) )*
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1103:2: (otherlv_3= Comma ( (lv_subfeature_4_0= ruleSolitary ) ) )*
                     loop18:
                     do {
                         int alt18=2;
@@ -2590,22 +2800,22 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
                         switch (alt18) {
                     	case 1 :
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1026:2: otherlv_3= Comma ( (lv_subfeature_4_0= ruleSolitary ) )
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1104:2: otherlv_3= Comma ( (lv_subfeature_4_0= ruleSolitary ) )
                     	    {
-                    	    otherlv_3=(Token)match(input,Comma,FOLLOW_Comma_in_ruleMandatory2216); 
+                    	    otherlv_3=(Token)match(input,Comma,FOLLOW_Comma_in_ruleMandatory2384); 
 
                     	        	newLeafNode(otherlv_3, grammarAccess.getMandatoryAccess().getCommaKeyword_1_2_0());
                     	        
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1030:1: ( (lv_subfeature_4_0= ruleSolitary ) )
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1031:1: (lv_subfeature_4_0= ruleSolitary )
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1108:1: ( (lv_subfeature_4_0= ruleSolitary ) )
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1109:1: (lv_subfeature_4_0= ruleSolitary )
                     	    {
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1031:1: (lv_subfeature_4_0= ruleSolitary )
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1032:3: lv_subfeature_4_0= ruleSolitary
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1109:1: (lv_subfeature_4_0= ruleSolitary )
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1110:3: lv_subfeature_4_0= ruleSolitary
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getMandatoryAccess().getSubfeatureSolitaryParserRuleCall_1_2_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleSolitary_in_ruleMandatory2236);
+                    	    pushFollow(FOLLOW_ruleSolitary_in_ruleMandatory2404);
                     	    lv_subfeature_4_0=ruleSolitary();
 
                     	    state._fsp--;
@@ -2636,7 +2846,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_5=(Token)match(input,RightCurlyBracket,FOLLOW_RightCurlyBracket_in_ruleMandatory2251); 
+                    otherlv_5=(Token)match(input,RightCurlyBracket,FOLLOW_RightCurlyBracket_in_ruleMandatory2419); 
 
                         	newLeafNode(otherlv_5, grammarAccess.getMandatoryAccess().getRightCurlyBracketKeyword_1_3());
                         
@@ -2646,7 +2856,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1053:3: (otherlv_6= LeftSquareBracket ( (lv_constrains_7_0= ruleConstrain ) ) (otherlv_8= Comma ( (lv_constrains_9_0= ruleConstrain ) ) )* otherlv_10= RightSquareBracket )?
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1131:3: (otherlv_6= LeftSquareBracket ( (lv_constrains_7_0= ruleConstrain ) ) (otherlv_8= Comma ( (lv_constrains_9_0= ruleConstrain ) ) )* otherlv_10= RightSquareBracket )?
             int alt21=2;
             int LA21_0 = input.LA(1);
 
@@ -2655,22 +2865,22 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
             }
             switch (alt21) {
                 case 1 :
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1054:2: otherlv_6= LeftSquareBracket ( (lv_constrains_7_0= ruleConstrain ) ) (otherlv_8= Comma ( (lv_constrains_9_0= ruleConstrain ) ) )* otherlv_10= RightSquareBracket
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1132:2: otherlv_6= LeftSquareBracket ( (lv_constrains_7_0= ruleConstrain ) ) (otherlv_8= Comma ( (lv_constrains_9_0= ruleConstrain ) ) )* otherlv_10= RightSquareBracket
                     {
-                    otherlv_6=(Token)match(input,LeftSquareBracket,FOLLOW_LeftSquareBracket_in_ruleMandatory2266); 
+                    otherlv_6=(Token)match(input,LeftSquareBracket,FOLLOW_LeftSquareBracket_in_ruleMandatory2434); 
 
                         	newLeafNode(otherlv_6, grammarAccess.getMandatoryAccess().getLeftSquareBracketKeyword_2_0());
                         
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1058:1: ( (lv_constrains_7_0= ruleConstrain ) )
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1059:1: (lv_constrains_7_0= ruleConstrain )
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1136:1: ( (lv_constrains_7_0= ruleConstrain ) )
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1137:1: (lv_constrains_7_0= ruleConstrain )
                     {
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1059:1: (lv_constrains_7_0= ruleConstrain )
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1060:3: lv_constrains_7_0= ruleConstrain
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1137:1: (lv_constrains_7_0= ruleConstrain )
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1138:3: lv_constrains_7_0= ruleConstrain
                     {
                      
                     	        newCompositeNode(grammarAccess.getMandatoryAccess().getConstrainsConstrainParserRuleCall_2_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleConstrain_in_ruleMandatory2286);
+                    pushFollow(FOLLOW_ruleConstrain_in_ruleMandatory2454);
                     lv_constrains_7_0=ruleConstrain();
 
                     state._fsp--;
@@ -2692,7 +2902,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1076:2: (otherlv_8= Comma ( (lv_constrains_9_0= ruleConstrain ) ) )*
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1154:2: (otherlv_8= Comma ( (lv_constrains_9_0= ruleConstrain ) ) )*
                     loop20:
                     do {
                         int alt20=2;
@@ -2705,22 +2915,22 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
                         switch (alt20) {
                     	case 1 :
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1077:2: otherlv_8= Comma ( (lv_constrains_9_0= ruleConstrain ) )
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1155:2: otherlv_8= Comma ( (lv_constrains_9_0= ruleConstrain ) )
                     	    {
-                    	    otherlv_8=(Token)match(input,Comma,FOLLOW_Comma_in_ruleMandatory2300); 
+                    	    otherlv_8=(Token)match(input,Comma,FOLLOW_Comma_in_ruleMandatory2468); 
 
                     	        	newLeafNode(otherlv_8, grammarAccess.getMandatoryAccess().getCommaKeyword_2_2_0());
                     	        
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1081:1: ( (lv_constrains_9_0= ruleConstrain ) )
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1082:1: (lv_constrains_9_0= ruleConstrain )
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1159:1: ( (lv_constrains_9_0= ruleConstrain ) )
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1160:1: (lv_constrains_9_0= ruleConstrain )
                     	    {
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1082:1: (lv_constrains_9_0= ruleConstrain )
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1083:3: lv_constrains_9_0= ruleConstrain
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1160:1: (lv_constrains_9_0= ruleConstrain )
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1161:3: lv_constrains_9_0= ruleConstrain
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getMandatoryAccess().getConstrainsConstrainParserRuleCall_2_2_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleConstrain_in_ruleMandatory2320);
+                    	    pushFollow(FOLLOW_ruleConstrain_in_ruleMandatory2488);
                     	    lv_constrains_9_0=ruleConstrain();
 
                     	    state._fsp--;
@@ -2751,7 +2961,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_10=(Token)match(input,RightSquareBracket,FOLLOW_RightSquareBracket_in_ruleMandatory2335); 
+                    otherlv_10=(Token)match(input,RightSquareBracket,FOLLOW_RightSquareBracket_in_ruleMandatory2503); 
 
                         	newLeafNode(otherlv_10, grammarAccess.getMandatoryAccess().getRightSquareBracketKeyword_2_3());
                         
@@ -2761,7 +2971,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1104:3: ( ( (lv_groups_11_0= ruleGroup ) ) ( (lv_groups_12_0= ruleGroup ) )* )?
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1182:3: ( ( (lv_groups_11_0= ruleGroup ) ) ( (lv_groups_12_0= ruleGroup ) )* )?
             int alt23=2;
             int LA23_0 = input.LA(1);
 
@@ -2770,18 +2980,18 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
             }
             switch (alt23) {
                 case 1 :
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1104:4: ( (lv_groups_11_0= ruleGroup ) ) ( (lv_groups_12_0= ruleGroup ) )*
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1182:4: ( (lv_groups_11_0= ruleGroup ) ) ( (lv_groups_12_0= ruleGroup ) )*
                     {
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1104:4: ( (lv_groups_11_0= ruleGroup ) )
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1105:1: (lv_groups_11_0= ruleGroup )
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1182:4: ( (lv_groups_11_0= ruleGroup ) )
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1183:1: (lv_groups_11_0= ruleGroup )
                     {
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1105:1: (lv_groups_11_0= ruleGroup )
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1106:3: lv_groups_11_0= ruleGroup
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1183:1: (lv_groups_11_0= ruleGroup )
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1184:3: lv_groups_11_0= ruleGroup
                     {
                      
                     	        newCompositeNode(grammarAccess.getMandatoryAccess().getGroupsGroupParserRuleCall_3_0_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleGroup_in_ruleMandatory2358);
+                    pushFollow(FOLLOW_ruleGroup_in_ruleMandatory2526);
                     lv_groups_11_0=ruleGroup();
 
                     state._fsp--;
@@ -2803,7 +3013,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1122:2: ( (lv_groups_12_0= ruleGroup ) )*
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1200:2: ( (lv_groups_12_0= ruleGroup ) )*
                     loop22:
                     do {
                         int alt22=2;
@@ -2816,15 +3026,15 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
                         switch (alt22) {
                     	case 1 :
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1123:1: (lv_groups_12_0= ruleGroup )
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1201:1: (lv_groups_12_0= ruleGroup )
                     	    {
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1123:1: (lv_groups_12_0= ruleGroup )
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1124:3: lv_groups_12_0= ruleGroup
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1201:1: (lv_groups_12_0= ruleGroup )
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1202:3: lv_groups_12_0= ruleGroup
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getMandatoryAccess().getGroupsGroupParserRuleCall_3_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleGroup_in_ruleMandatory2379);
+                    	    pushFollow(FOLLOW_ruleGroup_in_ruleMandatory2547);
                     	    lv_groups_12_0=ruleGroup();
 
                     	    state._fsp--;
@@ -2879,7 +3089,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOptional"
-    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1148:1: entryRuleOptional returns [EObject current=null] : iv_ruleOptional= ruleOptional EOF ;
+    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1226:1: entryRuleOptional returns [EObject current=null] : iv_ruleOptional= ruleOptional EOF ;
     public final EObject entryRuleOptional() throws RecognitionException {
         EObject current = null;
 
@@ -2887,17 +3097,17 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1149:2: (iv_ruleOptional= ruleOptional EOF )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1150:2: iv_ruleOptional= ruleOptional EOF
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1227:2: (iv_ruleOptional= ruleOptional EOF )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1228:2: iv_ruleOptional= ruleOptional EOF
             {
              newCompositeNode(grammarAccess.getOptionalRule()); 
-            pushFollow(FOLLOW_ruleOptional_in_entryRuleOptional2417);
+            pushFollow(FOLLOW_ruleOptional_in_entryRuleOptional2585);
             iv_ruleOptional=ruleOptional();
 
             state._fsp--;
 
              current =iv_ruleOptional; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleOptional2427); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleOptional2595); 
 
             }
 
@@ -2915,7 +3125,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOptional"
-    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1157:1: ruleOptional returns [EObject current=null] : (otherlv_0= QuestionMark ( (lv_name_1_0= ruleEString ) ) (otherlv_2= LeftCurlyBracket ( (lv_subfeature_3_0= ruleSolitary ) ) (otherlv_4= Comma ( (lv_subfeature_5_0= ruleSolitary ) ) )* otherlv_6= RightCurlyBracket )? (otherlv_7= LeftSquareBracket ( (lv_constrains_8_0= ruleConstrain ) ) (otherlv_9= Comma ( (lv_constrains_10_0= ruleConstrain ) ) )* otherlv_11= RightSquareBracket )? ( ( (lv_groups_12_0= ruleGroup ) ) ( (lv_groups_13_0= ruleGroup ) )* )? ) ;
+    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1235:1: ruleOptional returns [EObject current=null] : (otherlv_0= QuestionMark ( (lv_name_1_0= ruleEString ) ) (otherlv_2= LeftCurlyBracket ( (lv_subfeature_3_0= ruleSolitary ) ) (otherlv_4= Comma ( (lv_subfeature_5_0= ruleSolitary ) ) )* otherlv_6= RightCurlyBracket )? (otherlv_7= LeftSquareBracket ( (lv_constrains_8_0= ruleConstrain ) ) (otherlv_9= Comma ( (lv_constrains_10_0= ruleConstrain ) ) )* otherlv_11= RightSquareBracket )? ( ( (lv_groups_12_0= ruleGroup ) ) ( (lv_groups_13_0= ruleGroup ) )* )? ) ;
     public final EObject ruleOptional() throws RecognitionException {
         EObject current = null;
 
@@ -2944,26 +3154,26 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1160:28: ( (otherlv_0= QuestionMark ( (lv_name_1_0= ruleEString ) ) (otherlv_2= LeftCurlyBracket ( (lv_subfeature_3_0= ruleSolitary ) ) (otherlv_4= Comma ( (lv_subfeature_5_0= ruleSolitary ) ) )* otherlv_6= RightCurlyBracket )? (otherlv_7= LeftSquareBracket ( (lv_constrains_8_0= ruleConstrain ) ) (otherlv_9= Comma ( (lv_constrains_10_0= ruleConstrain ) ) )* otherlv_11= RightSquareBracket )? ( ( (lv_groups_12_0= ruleGroup ) ) ( (lv_groups_13_0= ruleGroup ) )* )? ) )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1161:1: (otherlv_0= QuestionMark ( (lv_name_1_0= ruleEString ) ) (otherlv_2= LeftCurlyBracket ( (lv_subfeature_3_0= ruleSolitary ) ) (otherlv_4= Comma ( (lv_subfeature_5_0= ruleSolitary ) ) )* otherlv_6= RightCurlyBracket )? (otherlv_7= LeftSquareBracket ( (lv_constrains_8_0= ruleConstrain ) ) (otherlv_9= Comma ( (lv_constrains_10_0= ruleConstrain ) ) )* otherlv_11= RightSquareBracket )? ( ( (lv_groups_12_0= ruleGroup ) ) ( (lv_groups_13_0= ruleGroup ) )* )? )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1238:28: ( (otherlv_0= QuestionMark ( (lv_name_1_0= ruleEString ) ) (otherlv_2= LeftCurlyBracket ( (lv_subfeature_3_0= ruleSolitary ) ) (otherlv_4= Comma ( (lv_subfeature_5_0= ruleSolitary ) ) )* otherlv_6= RightCurlyBracket )? (otherlv_7= LeftSquareBracket ( (lv_constrains_8_0= ruleConstrain ) ) (otherlv_9= Comma ( (lv_constrains_10_0= ruleConstrain ) ) )* otherlv_11= RightSquareBracket )? ( ( (lv_groups_12_0= ruleGroup ) ) ( (lv_groups_13_0= ruleGroup ) )* )? ) )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1239:1: (otherlv_0= QuestionMark ( (lv_name_1_0= ruleEString ) ) (otherlv_2= LeftCurlyBracket ( (lv_subfeature_3_0= ruleSolitary ) ) (otherlv_4= Comma ( (lv_subfeature_5_0= ruleSolitary ) ) )* otherlv_6= RightCurlyBracket )? (otherlv_7= LeftSquareBracket ( (lv_constrains_8_0= ruleConstrain ) ) (otherlv_9= Comma ( (lv_constrains_10_0= ruleConstrain ) ) )* otherlv_11= RightSquareBracket )? ( ( (lv_groups_12_0= ruleGroup ) ) ( (lv_groups_13_0= ruleGroup ) )* )? )
             {
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1161:1: (otherlv_0= QuestionMark ( (lv_name_1_0= ruleEString ) ) (otherlv_2= LeftCurlyBracket ( (lv_subfeature_3_0= ruleSolitary ) ) (otherlv_4= Comma ( (lv_subfeature_5_0= ruleSolitary ) ) )* otherlv_6= RightCurlyBracket )? (otherlv_7= LeftSquareBracket ( (lv_constrains_8_0= ruleConstrain ) ) (otherlv_9= Comma ( (lv_constrains_10_0= ruleConstrain ) ) )* otherlv_11= RightSquareBracket )? ( ( (lv_groups_12_0= ruleGroup ) ) ( (lv_groups_13_0= ruleGroup ) )* )? )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1162:2: otherlv_0= QuestionMark ( (lv_name_1_0= ruleEString ) ) (otherlv_2= LeftCurlyBracket ( (lv_subfeature_3_0= ruleSolitary ) ) (otherlv_4= Comma ( (lv_subfeature_5_0= ruleSolitary ) ) )* otherlv_6= RightCurlyBracket )? (otherlv_7= LeftSquareBracket ( (lv_constrains_8_0= ruleConstrain ) ) (otherlv_9= Comma ( (lv_constrains_10_0= ruleConstrain ) ) )* otherlv_11= RightSquareBracket )? ( ( (lv_groups_12_0= ruleGroup ) ) ( (lv_groups_13_0= ruleGroup ) )* )?
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1239:1: (otherlv_0= QuestionMark ( (lv_name_1_0= ruleEString ) ) (otherlv_2= LeftCurlyBracket ( (lv_subfeature_3_0= ruleSolitary ) ) (otherlv_4= Comma ( (lv_subfeature_5_0= ruleSolitary ) ) )* otherlv_6= RightCurlyBracket )? (otherlv_7= LeftSquareBracket ( (lv_constrains_8_0= ruleConstrain ) ) (otherlv_9= Comma ( (lv_constrains_10_0= ruleConstrain ) ) )* otherlv_11= RightSquareBracket )? ( ( (lv_groups_12_0= ruleGroup ) ) ( (lv_groups_13_0= ruleGroup ) )* )? )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1240:2: otherlv_0= QuestionMark ( (lv_name_1_0= ruleEString ) ) (otherlv_2= LeftCurlyBracket ( (lv_subfeature_3_0= ruleSolitary ) ) (otherlv_4= Comma ( (lv_subfeature_5_0= ruleSolitary ) ) )* otherlv_6= RightCurlyBracket )? (otherlv_7= LeftSquareBracket ( (lv_constrains_8_0= ruleConstrain ) ) (otherlv_9= Comma ( (lv_constrains_10_0= ruleConstrain ) ) )* otherlv_11= RightSquareBracket )? ( ( (lv_groups_12_0= ruleGroup ) ) ( (lv_groups_13_0= ruleGroup ) )* )?
             {
-            otherlv_0=(Token)match(input,QuestionMark,FOLLOW_QuestionMark_in_ruleOptional2465); 
+            otherlv_0=(Token)match(input,QuestionMark,FOLLOW_QuestionMark_in_ruleOptional2633); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getOptionalAccess().getQuestionMarkKeyword_0());
                 
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1166:1: ( (lv_name_1_0= ruleEString ) )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1167:1: (lv_name_1_0= ruleEString )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1244:1: ( (lv_name_1_0= ruleEString ) )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1245:1: (lv_name_1_0= ruleEString )
             {
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1167:1: (lv_name_1_0= ruleEString )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1168:3: lv_name_1_0= ruleEString
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1245:1: (lv_name_1_0= ruleEString )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1246:3: lv_name_1_0= ruleEString
             {
              
             	        newCompositeNode(grammarAccess.getOptionalAccess().getNameEStringParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleEString_in_ruleOptional2485);
+            pushFollow(FOLLOW_ruleEString_in_ruleOptional2653);
             lv_name_1_0=ruleEString();
 
             state._fsp--;
@@ -2985,7 +3195,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1184:2: (otherlv_2= LeftCurlyBracket ( (lv_subfeature_3_0= ruleSolitary ) ) (otherlv_4= Comma ( (lv_subfeature_5_0= ruleSolitary ) ) )* otherlv_6= RightCurlyBracket )?
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1262:2: (otherlv_2= LeftCurlyBracket ( (lv_subfeature_3_0= ruleSolitary ) ) (otherlv_4= Comma ( (lv_subfeature_5_0= ruleSolitary ) ) )* otherlv_6= RightCurlyBracket )?
             int alt25=2;
             int LA25_0 = input.LA(1);
 
@@ -2994,22 +3204,22 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
             }
             switch (alt25) {
                 case 1 :
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1185:2: otherlv_2= LeftCurlyBracket ( (lv_subfeature_3_0= ruleSolitary ) ) (otherlv_4= Comma ( (lv_subfeature_5_0= ruleSolitary ) ) )* otherlv_6= RightCurlyBracket
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1263:2: otherlv_2= LeftCurlyBracket ( (lv_subfeature_3_0= ruleSolitary ) ) (otherlv_4= Comma ( (lv_subfeature_5_0= ruleSolitary ) ) )* otherlv_6= RightCurlyBracket
                     {
-                    otherlv_2=(Token)match(input,LeftCurlyBracket,FOLLOW_LeftCurlyBracket_in_ruleOptional2499); 
+                    otherlv_2=(Token)match(input,LeftCurlyBracket,FOLLOW_LeftCurlyBracket_in_ruleOptional2667); 
 
                         	newLeafNode(otherlv_2, grammarAccess.getOptionalAccess().getLeftCurlyBracketKeyword_2_0());
                         
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1189:1: ( (lv_subfeature_3_0= ruleSolitary ) )
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1190:1: (lv_subfeature_3_0= ruleSolitary )
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1267:1: ( (lv_subfeature_3_0= ruleSolitary ) )
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1268:1: (lv_subfeature_3_0= ruleSolitary )
                     {
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1190:1: (lv_subfeature_3_0= ruleSolitary )
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1191:3: lv_subfeature_3_0= ruleSolitary
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1268:1: (lv_subfeature_3_0= ruleSolitary )
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1269:3: lv_subfeature_3_0= ruleSolitary
                     {
                      
                     	        newCompositeNode(grammarAccess.getOptionalAccess().getSubfeatureSolitaryParserRuleCall_2_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleSolitary_in_ruleOptional2519);
+                    pushFollow(FOLLOW_ruleSolitary_in_ruleOptional2687);
                     lv_subfeature_3_0=ruleSolitary();
 
                     state._fsp--;
@@ -3031,7 +3241,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1207:2: (otherlv_4= Comma ( (lv_subfeature_5_0= ruleSolitary ) ) )*
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1285:2: (otherlv_4= Comma ( (lv_subfeature_5_0= ruleSolitary ) ) )*
                     loop24:
                     do {
                         int alt24=2;
@@ -3044,22 +3254,22 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
                         switch (alt24) {
                     	case 1 :
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1208:2: otherlv_4= Comma ( (lv_subfeature_5_0= ruleSolitary ) )
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1286:2: otherlv_4= Comma ( (lv_subfeature_5_0= ruleSolitary ) )
                     	    {
-                    	    otherlv_4=(Token)match(input,Comma,FOLLOW_Comma_in_ruleOptional2533); 
+                    	    otherlv_4=(Token)match(input,Comma,FOLLOW_Comma_in_ruleOptional2701); 
 
                     	        	newLeafNode(otherlv_4, grammarAccess.getOptionalAccess().getCommaKeyword_2_2_0());
                     	        
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1212:1: ( (lv_subfeature_5_0= ruleSolitary ) )
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1213:1: (lv_subfeature_5_0= ruleSolitary )
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1290:1: ( (lv_subfeature_5_0= ruleSolitary ) )
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1291:1: (lv_subfeature_5_0= ruleSolitary )
                     	    {
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1213:1: (lv_subfeature_5_0= ruleSolitary )
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1214:3: lv_subfeature_5_0= ruleSolitary
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1291:1: (lv_subfeature_5_0= ruleSolitary )
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1292:3: lv_subfeature_5_0= ruleSolitary
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getOptionalAccess().getSubfeatureSolitaryParserRuleCall_2_2_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleSolitary_in_ruleOptional2553);
+                    	    pushFollow(FOLLOW_ruleSolitary_in_ruleOptional2721);
                     	    lv_subfeature_5_0=ruleSolitary();
 
                     	    state._fsp--;
@@ -3090,7 +3300,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_6=(Token)match(input,RightCurlyBracket,FOLLOW_RightCurlyBracket_in_ruleOptional2568); 
+                    otherlv_6=(Token)match(input,RightCurlyBracket,FOLLOW_RightCurlyBracket_in_ruleOptional2736); 
 
                         	newLeafNode(otherlv_6, grammarAccess.getOptionalAccess().getRightCurlyBracketKeyword_2_3());
                         
@@ -3100,7 +3310,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1235:3: (otherlv_7= LeftSquareBracket ( (lv_constrains_8_0= ruleConstrain ) ) (otherlv_9= Comma ( (lv_constrains_10_0= ruleConstrain ) ) )* otherlv_11= RightSquareBracket )?
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1313:3: (otherlv_7= LeftSquareBracket ( (lv_constrains_8_0= ruleConstrain ) ) (otherlv_9= Comma ( (lv_constrains_10_0= ruleConstrain ) ) )* otherlv_11= RightSquareBracket )?
             int alt27=2;
             int LA27_0 = input.LA(1);
 
@@ -3109,22 +3319,22 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
             }
             switch (alt27) {
                 case 1 :
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1236:2: otherlv_7= LeftSquareBracket ( (lv_constrains_8_0= ruleConstrain ) ) (otherlv_9= Comma ( (lv_constrains_10_0= ruleConstrain ) ) )* otherlv_11= RightSquareBracket
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1314:2: otherlv_7= LeftSquareBracket ( (lv_constrains_8_0= ruleConstrain ) ) (otherlv_9= Comma ( (lv_constrains_10_0= ruleConstrain ) ) )* otherlv_11= RightSquareBracket
                     {
-                    otherlv_7=(Token)match(input,LeftSquareBracket,FOLLOW_LeftSquareBracket_in_ruleOptional2583); 
+                    otherlv_7=(Token)match(input,LeftSquareBracket,FOLLOW_LeftSquareBracket_in_ruleOptional2751); 
 
                         	newLeafNode(otherlv_7, grammarAccess.getOptionalAccess().getLeftSquareBracketKeyword_3_0());
                         
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1240:1: ( (lv_constrains_8_0= ruleConstrain ) )
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1241:1: (lv_constrains_8_0= ruleConstrain )
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1318:1: ( (lv_constrains_8_0= ruleConstrain ) )
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1319:1: (lv_constrains_8_0= ruleConstrain )
                     {
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1241:1: (lv_constrains_8_0= ruleConstrain )
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1242:3: lv_constrains_8_0= ruleConstrain
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1319:1: (lv_constrains_8_0= ruleConstrain )
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1320:3: lv_constrains_8_0= ruleConstrain
                     {
                      
                     	        newCompositeNode(grammarAccess.getOptionalAccess().getConstrainsConstrainParserRuleCall_3_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleConstrain_in_ruleOptional2603);
+                    pushFollow(FOLLOW_ruleConstrain_in_ruleOptional2771);
                     lv_constrains_8_0=ruleConstrain();
 
                     state._fsp--;
@@ -3146,7 +3356,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1258:2: (otherlv_9= Comma ( (lv_constrains_10_0= ruleConstrain ) ) )*
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1336:2: (otherlv_9= Comma ( (lv_constrains_10_0= ruleConstrain ) ) )*
                     loop26:
                     do {
                         int alt26=2;
@@ -3159,22 +3369,22 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
                         switch (alt26) {
                     	case 1 :
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1259:2: otherlv_9= Comma ( (lv_constrains_10_0= ruleConstrain ) )
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1337:2: otherlv_9= Comma ( (lv_constrains_10_0= ruleConstrain ) )
                     	    {
-                    	    otherlv_9=(Token)match(input,Comma,FOLLOW_Comma_in_ruleOptional2617); 
+                    	    otherlv_9=(Token)match(input,Comma,FOLLOW_Comma_in_ruleOptional2785); 
 
                     	        	newLeafNode(otherlv_9, grammarAccess.getOptionalAccess().getCommaKeyword_3_2_0());
                     	        
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1263:1: ( (lv_constrains_10_0= ruleConstrain ) )
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1264:1: (lv_constrains_10_0= ruleConstrain )
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1341:1: ( (lv_constrains_10_0= ruleConstrain ) )
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1342:1: (lv_constrains_10_0= ruleConstrain )
                     	    {
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1264:1: (lv_constrains_10_0= ruleConstrain )
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1265:3: lv_constrains_10_0= ruleConstrain
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1342:1: (lv_constrains_10_0= ruleConstrain )
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1343:3: lv_constrains_10_0= ruleConstrain
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getOptionalAccess().getConstrainsConstrainParserRuleCall_3_2_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleConstrain_in_ruleOptional2637);
+                    	    pushFollow(FOLLOW_ruleConstrain_in_ruleOptional2805);
                     	    lv_constrains_10_0=ruleConstrain();
 
                     	    state._fsp--;
@@ -3205,7 +3415,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_11=(Token)match(input,RightSquareBracket,FOLLOW_RightSquareBracket_in_ruleOptional2652); 
+                    otherlv_11=(Token)match(input,RightSquareBracket,FOLLOW_RightSquareBracket_in_ruleOptional2820); 
 
                         	newLeafNode(otherlv_11, grammarAccess.getOptionalAccess().getRightSquareBracketKeyword_3_3());
                         
@@ -3215,7 +3425,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1286:3: ( ( (lv_groups_12_0= ruleGroup ) ) ( (lv_groups_13_0= ruleGroup ) )* )?
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1364:3: ( ( (lv_groups_12_0= ruleGroup ) ) ( (lv_groups_13_0= ruleGroup ) )* )?
             int alt29=2;
             int LA29_0 = input.LA(1);
 
@@ -3224,18 +3434,18 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
             }
             switch (alt29) {
                 case 1 :
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1286:4: ( (lv_groups_12_0= ruleGroup ) ) ( (lv_groups_13_0= ruleGroup ) )*
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1364:4: ( (lv_groups_12_0= ruleGroup ) ) ( (lv_groups_13_0= ruleGroup ) )*
                     {
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1286:4: ( (lv_groups_12_0= ruleGroup ) )
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1287:1: (lv_groups_12_0= ruleGroup )
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1364:4: ( (lv_groups_12_0= ruleGroup ) )
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1365:1: (lv_groups_12_0= ruleGroup )
                     {
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1287:1: (lv_groups_12_0= ruleGroup )
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1288:3: lv_groups_12_0= ruleGroup
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1365:1: (lv_groups_12_0= ruleGroup )
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1366:3: lv_groups_12_0= ruleGroup
                     {
                      
                     	        newCompositeNode(grammarAccess.getOptionalAccess().getGroupsGroupParserRuleCall_4_0_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleGroup_in_ruleOptional2675);
+                    pushFollow(FOLLOW_ruleGroup_in_ruleOptional2843);
                     lv_groups_12_0=ruleGroup();
 
                     state._fsp--;
@@ -3257,7 +3467,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1304:2: ( (lv_groups_13_0= ruleGroup ) )*
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1382:2: ( (lv_groups_13_0= ruleGroup ) )*
                     loop28:
                     do {
                         int alt28=2;
@@ -3270,15 +3480,15 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
                         switch (alt28) {
                     	case 1 :
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1305:1: (lv_groups_13_0= ruleGroup )
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1383:1: (lv_groups_13_0= ruleGroup )
                     	    {
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1305:1: (lv_groups_13_0= ruleGroup )
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1306:3: lv_groups_13_0= ruleGroup
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1383:1: (lv_groups_13_0= ruleGroup )
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1384:3: lv_groups_13_0= ruleGroup
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getOptionalAccess().getGroupsGroupParserRuleCall_4_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleGroup_in_ruleOptional2696);
+                    	    pushFollow(FOLLOW_ruleGroup_in_ruleOptional2864);
                     	    lv_groups_13_0=ruleGroup();
 
                     	    state._fsp--;
@@ -3333,7 +3543,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOr"
-    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1330:1: entryRuleOr returns [EObject current=null] : iv_ruleOr= ruleOr EOF ;
+    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1408:1: entryRuleOr returns [EObject current=null] : iv_ruleOr= ruleOr EOF ;
     public final EObject entryRuleOr() throws RecognitionException {
         EObject current = null;
 
@@ -3341,17 +3551,17 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1331:2: (iv_ruleOr= ruleOr EOF )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1332:2: iv_ruleOr= ruleOr EOF
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1409:2: (iv_ruleOr= ruleOr EOF )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1410:2: iv_ruleOr= ruleOr EOF
             {
              newCompositeNode(grammarAccess.getOrRule()); 
-            pushFollow(FOLLOW_ruleOr_in_entryRuleOr2734);
+            pushFollow(FOLLOW_ruleOr_in_entryRuleOr2902);
             iv_ruleOr=ruleOr();
 
             state._fsp--;
 
              current =iv_ruleOr; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleOr2744); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleOr2912); 
 
             }
 
@@ -3369,7 +3579,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOr"
-    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1339:1: ruleOr returns [EObject current=null] : (otherlv_0= Or ( (lv_name_1_0= ruleEString ) ) (this_BEGIN_2= RULE_BEGIN ( (lv_grouped_3_0= ruleGrouped ) ) ( (otherlv_4= Comma )* ( (lv_grouped_5_0= ruleGrouped ) ) )* this_END_6= RULE_END )? ) ;
+    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1417:1: ruleOr returns [EObject current=null] : (otherlv_0= Or ( (lv_name_1_0= ruleEString ) ) (this_BEGIN_2= RULE_BEGIN ( (lv_grouped_3_0= ruleGrouped ) ) ( (otherlv_4= Comma )* ( (lv_grouped_5_0= ruleGrouped ) ) )* this_END_6= RULE_END )? ) ;
     public final EObject ruleOr() throws RecognitionException {
         EObject current = null;
 
@@ -3387,26 +3597,26 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1342:28: ( (otherlv_0= Or ( (lv_name_1_0= ruleEString ) ) (this_BEGIN_2= RULE_BEGIN ( (lv_grouped_3_0= ruleGrouped ) ) ( (otherlv_4= Comma )* ( (lv_grouped_5_0= ruleGrouped ) ) )* this_END_6= RULE_END )? ) )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1343:1: (otherlv_0= Or ( (lv_name_1_0= ruleEString ) ) (this_BEGIN_2= RULE_BEGIN ( (lv_grouped_3_0= ruleGrouped ) ) ( (otherlv_4= Comma )* ( (lv_grouped_5_0= ruleGrouped ) ) )* this_END_6= RULE_END )? )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1420:28: ( (otherlv_0= Or ( (lv_name_1_0= ruleEString ) ) (this_BEGIN_2= RULE_BEGIN ( (lv_grouped_3_0= ruleGrouped ) ) ( (otherlv_4= Comma )* ( (lv_grouped_5_0= ruleGrouped ) ) )* this_END_6= RULE_END )? ) )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1421:1: (otherlv_0= Or ( (lv_name_1_0= ruleEString ) ) (this_BEGIN_2= RULE_BEGIN ( (lv_grouped_3_0= ruleGrouped ) ) ( (otherlv_4= Comma )* ( (lv_grouped_5_0= ruleGrouped ) ) )* this_END_6= RULE_END )? )
             {
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1343:1: (otherlv_0= Or ( (lv_name_1_0= ruleEString ) ) (this_BEGIN_2= RULE_BEGIN ( (lv_grouped_3_0= ruleGrouped ) ) ( (otherlv_4= Comma )* ( (lv_grouped_5_0= ruleGrouped ) ) )* this_END_6= RULE_END )? )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1344:2: otherlv_0= Or ( (lv_name_1_0= ruleEString ) ) (this_BEGIN_2= RULE_BEGIN ( (lv_grouped_3_0= ruleGrouped ) ) ( (otherlv_4= Comma )* ( (lv_grouped_5_0= ruleGrouped ) ) )* this_END_6= RULE_END )?
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1421:1: (otherlv_0= Or ( (lv_name_1_0= ruleEString ) ) (this_BEGIN_2= RULE_BEGIN ( (lv_grouped_3_0= ruleGrouped ) ) ( (otherlv_4= Comma )* ( (lv_grouped_5_0= ruleGrouped ) ) )* this_END_6= RULE_END )? )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1422:2: otherlv_0= Or ( (lv_name_1_0= ruleEString ) ) (this_BEGIN_2= RULE_BEGIN ( (lv_grouped_3_0= ruleGrouped ) ) ( (otherlv_4= Comma )* ( (lv_grouped_5_0= ruleGrouped ) ) )* this_END_6= RULE_END )?
             {
-            otherlv_0=(Token)match(input,Or,FOLLOW_Or_in_ruleOr2782); 
+            otherlv_0=(Token)match(input,Or,FOLLOW_Or_in_ruleOr2950); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getOrAccess().getOrKeyword_0());
                 
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1348:1: ( (lv_name_1_0= ruleEString ) )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1349:1: (lv_name_1_0= ruleEString )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1426:1: ( (lv_name_1_0= ruleEString ) )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1427:1: (lv_name_1_0= ruleEString )
             {
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1349:1: (lv_name_1_0= ruleEString )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1350:3: lv_name_1_0= ruleEString
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1427:1: (lv_name_1_0= ruleEString )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1428:3: lv_name_1_0= ruleEString
             {
              
             	        newCompositeNode(grammarAccess.getOrAccess().getNameEStringParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleEString_in_ruleOr2802);
+            pushFollow(FOLLOW_ruleEString_in_ruleOr2970);
             lv_name_1_0=ruleEString();
 
             state._fsp--;
@@ -3428,7 +3638,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1366:2: (this_BEGIN_2= RULE_BEGIN ( (lv_grouped_3_0= ruleGrouped ) ) ( (otherlv_4= Comma )* ( (lv_grouped_5_0= ruleGrouped ) ) )* this_END_6= RULE_END )?
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1444:2: (this_BEGIN_2= RULE_BEGIN ( (lv_grouped_3_0= ruleGrouped ) ) ( (otherlv_4= Comma )* ( (lv_grouped_5_0= ruleGrouped ) ) )* this_END_6= RULE_END )?
             int alt32=2;
             int LA32_0 = input.LA(1);
 
@@ -3437,22 +3647,22 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
             }
             switch (alt32) {
                 case 1 :
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1366:3: this_BEGIN_2= RULE_BEGIN ( (lv_grouped_3_0= ruleGrouped ) ) ( (otherlv_4= Comma )* ( (lv_grouped_5_0= ruleGrouped ) ) )* this_END_6= RULE_END
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1444:3: this_BEGIN_2= RULE_BEGIN ( (lv_grouped_3_0= ruleGrouped ) ) ( (otherlv_4= Comma )* ( (lv_grouped_5_0= ruleGrouped ) ) )* this_END_6= RULE_END
                     {
-                    this_BEGIN_2=(Token)match(input,RULE_BEGIN,FOLLOW_RULE_BEGIN_in_ruleOr2814); 
+                    this_BEGIN_2=(Token)match(input,RULE_BEGIN,FOLLOW_RULE_BEGIN_in_ruleOr2982); 
                      
                         newLeafNode(this_BEGIN_2, grammarAccess.getOrAccess().getBEGINTerminalRuleCall_2_0()); 
                         
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1370:1: ( (lv_grouped_3_0= ruleGrouped ) )
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1371:1: (lv_grouped_3_0= ruleGrouped )
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1448:1: ( (lv_grouped_3_0= ruleGrouped ) )
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1449:1: (lv_grouped_3_0= ruleGrouped )
                     {
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1371:1: (lv_grouped_3_0= ruleGrouped )
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1372:3: lv_grouped_3_0= ruleGrouped
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1449:1: (lv_grouped_3_0= ruleGrouped )
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1450:3: lv_grouped_3_0= ruleGrouped
                     {
                      
                     	        newCompositeNode(grammarAccess.getOrAccess().getGroupedGroupedParserRuleCall_2_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleGrouped_in_ruleOr2834);
+                    pushFollow(FOLLOW_ruleGrouped_in_ruleOr3002);
                     lv_grouped_3_0=ruleGrouped();
 
                     state._fsp--;
@@ -3474,22 +3684,22 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1388:2: ( (otherlv_4= Comma )* ( (lv_grouped_5_0= ruleGrouped ) ) )*
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1466:2: ( (otherlv_4= Comma )* ( (lv_grouped_5_0= ruleGrouped ) ) )*
                     loop31:
                     do {
                         int alt31=2;
                         int LA31_0 = input.LA(1);
 
-                        if ( (LA31_0==Comma||LA31_0==RULE_NULL||LA31_0==RULE_ID||LA31_0==RULE_STRING) ) {
+                        if ( (LA31_0==Comma||LA31_0==RULE_NULL||(LA31_0>=RULE_ID && LA31_0<=RULE_STRING)) ) {
                             alt31=1;
                         }
 
 
                         switch (alt31) {
                     	case 1 :
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1388:3: (otherlv_4= Comma )* ( (lv_grouped_5_0= ruleGrouped ) )
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1466:3: (otherlv_4= Comma )* ( (lv_grouped_5_0= ruleGrouped ) )
                     	    {
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1388:3: (otherlv_4= Comma )*
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1466:3: (otherlv_4= Comma )*
                     	    loop30:
                     	    do {
                     	        int alt30=2;
@@ -3502,9 +3712,9 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
                     	        switch (alt30) {
                     	    	case 1 :
-                    	    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1389:2: otherlv_4= Comma
+                    	    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1467:2: otherlv_4= Comma
                     	    	    {
-                    	    	    otherlv_4=(Token)match(input,Comma,FOLLOW_Comma_in_ruleOr2849); 
+                    	    	    otherlv_4=(Token)match(input,Comma,FOLLOW_Comma_in_ruleOr3017); 
 
                     	    	        	newLeafNode(otherlv_4, grammarAccess.getOrAccess().getCommaKeyword_2_2_0());
                     	    	        
@@ -3517,16 +3727,16 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
                     	        }
                     	    } while (true);
 
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1393:3: ( (lv_grouped_5_0= ruleGrouped ) )
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1394:1: (lv_grouped_5_0= ruleGrouped )
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1471:3: ( (lv_grouped_5_0= ruleGrouped ) )
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1472:1: (lv_grouped_5_0= ruleGrouped )
                     	    {
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1394:1: (lv_grouped_5_0= ruleGrouped )
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1395:3: lv_grouped_5_0= ruleGrouped
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1472:1: (lv_grouped_5_0= ruleGrouped )
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1473:3: lv_grouped_5_0= ruleGrouped
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getOrAccess().getGroupedGroupedParserRuleCall_2_2_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleGrouped_in_ruleOr2871);
+                    	    pushFollow(FOLLOW_ruleGrouped_in_ruleOr3039);
                     	    lv_grouped_5_0=ruleGrouped();
 
                     	    state._fsp--;
@@ -3557,7 +3767,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    this_END_6=(Token)match(input,RULE_END,FOLLOW_RULE_END_in_ruleOr2884); 
+                    this_END_6=(Token)match(input,RULE_END,FOLLOW_RULE_END_in_ruleOr3052); 
                      
                         newLeafNode(this_END_6, grammarAccess.getOrAccess().getENDTerminalRuleCall_2_3()); 
                         
@@ -3588,7 +3798,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXor"
-    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1423:1: entryRuleXor returns [EObject current=null] : iv_ruleXor= ruleXor EOF ;
+    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1501:1: entryRuleXor returns [EObject current=null] : iv_ruleXor= ruleXor EOF ;
     public final EObject entryRuleXor() throws RecognitionException {
         EObject current = null;
 
@@ -3596,17 +3806,17 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1424:2: (iv_ruleXor= ruleXor EOF )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1425:2: iv_ruleXor= ruleXor EOF
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1502:2: (iv_ruleXor= ruleXor EOF )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1503:2: iv_ruleXor= ruleXor EOF
             {
              newCompositeNode(grammarAccess.getXorRule()); 
-            pushFollow(FOLLOW_ruleXor_in_entryRuleXor2920);
+            pushFollow(FOLLOW_ruleXor_in_entryRuleXor3088);
             iv_ruleXor=ruleXor();
 
             state._fsp--;
 
              current =iv_ruleXor; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleXor2930); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleXor3098); 
 
             }
 
@@ -3624,7 +3834,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXor"
-    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1432:1: ruleXor returns [EObject current=null] : (otherlv_0= Xor ( (lv_name_1_0= ruleEString ) ) (this_BEGIN_2= RULE_BEGIN ( (lv_grouped_3_0= ruleGrouped ) ) ( (otherlv_4= Comma )* ( (lv_grouped_5_0= ruleGrouped ) ) )* this_END_6= RULE_END )? ) ;
+    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1510:1: ruleXor returns [EObject current=null] : (otherlv_0= Xor ( (lv_name_1_0= ruleEString ) ) (this_BEGIN_2= RULE_BEGIN ( (lv_grouped_3_0= ruleGrouped ) ) ( (otherlv_4= Comma )* ( (lv_grouped_5_0= ruleGrouped ) ) )* this_END_6= RULE_END )? ) ;
     public final EObject ruleXor() throws RecognitionException {
         EObject current = null;
 
@@ -3642,26 +3852,26 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1435:28: ( (otherlv_0= Xor ( (lv_name_1_0= ruleEString ) ) (this_BEGIN_2= RULE_BEGIN ( (lv_grouped_3_0= ruleGrouped ) ) ( (otherlv_4= Comma )* ( (lv_grouped_5_0= ruleGrouped ) ) )* this_END_6= RULE_END )? ) )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1436:1: (otherlv_0= Xor ( (lv_name_1_0= ruleEString ) ) (this_BEGIN_2= RULE_BEGIN ( (lv_grouped_3_0= ruleGrouped ) ) ( (otherlv_4= Comma )* ( (lv_grouped_5_0= ruleGrouped ) ) )* this_END_6= RULE_END )? )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1513:28: ( (otherlv_0= Xor ( (lv_name_1_0= ruleEString ) ) (this_BEGIN_2= RULE_BEGIN ( (lv_grouped_3_0= ruleGrouped ) ) ( (otherlv_4= Comma )* ( (lv_grouped_5_0= ruleGrouped ) ) )* this_END_6= RULE_END )? ) )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1514:1: (otherlv_0= Xor ( (lv_name_1_0= ruleEString ) ) (this_BEGIN_2= RULE_BEGIN ( (lv_grouped_3_0= ruleGrouped ) ) ( (otherlv_4= Comma )* ( (lv_grouped_5_0= ruleGrouped ) ) )* this_END_6= RULE_END )? )
             {
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1436:1: (otherlv_0= Xor ( (lv_name_1_0= ruleEString ) ) (this_BEGIN_2= RULE_BEGIN ( (lv_grouped_3_0= ruleGrouped ) ) ( (otherlv_4= Comma )* ( (lv_grouped_5_0= ruleGrouped ) ) )* this_END_6= RULE_END )? )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1437:2: otherlv_0= Xor ( (lv_name_1_0= ruleEString ) ) (this_BEGIN_2= RULE_BEGIN ( (lv_grouped_3_0= ruleGrouped ) ) ( (otherlv_4= Comma )* ( (lv_grouped_5_0= ruleGrouped ) ) )* this_END_6= RULE_END )?
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1514:1: (otherlv_0= Xor ( (lv_name_1_0= ruleEString ) ) (this_BEGIN_2= RULE_BEGIN ( (lv_grouped_3_0= ruleGrouped ) ) ( (otherlv_4= Comma )* ( (lv_grouped_5_0= ruleGrouped ) ) )* this_END_6= RULE_END )? )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1515:2: otherlv_0= Xor ( (lv_name_1_0= ruleEString ) ) (this_BEGIN_2= RULE_BEGIN ( (lv_grouped_3_0= ruleGrouped ) ) ( (otherlv_4= Comma )* ( (lv_grouped_5_0= ruleGrouped ) ) )* this_END_6= RULE_END )?
             {
-            otherlv_0=(Token)match(input,Xor,FOLLOW_Xor_in_ruleXor2968); 
+            otherlv_0=(Token)match(input,Xor,FOLLOW_Xor_in_ruleXor3136); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getXorAccess().getXorKeyword_0());
                 
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1441:1: ( (lv_name_1_0= ruleEString ) )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1442:1: (lv_name_1_0= ruleEString )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1519:1: ( (lv_name_1_0= ruleEString ) )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1520:1: (lv_name_1_0= ruleEString )
             {
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1442:1: (lv_name_1_0= ruleEString )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1443:3: lv_name_1_0= ruleEString
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1520:1: (lv_name_1_0= ruleEString )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1521:3: lv_name_1_0= ruleEString
             {
              
             	        newCompositeNode(grammarAccess.getXorAccess().getNameEStringParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleEString_in_ruleXor2988);
+            pushFollow(FOLLOW_ruleEString_in_ruleXor3156);
             lv_name_1_0=ruleEString();
 
             state._fsp--;
@@ -3683,7 +3893,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1459:2: (this_BEGIN_2= RULE_BEGIN ( (lv_grouped_3_0= ruleGrouped ) ) ( (otherlv_4= Comma )* ( (lv_grouped_5_0= ruleGrouped ) ) )* this_END_6= RULE_END )?
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1537:2: (this_BEGIN_2= RULE_BEGIN ( (lv_grouped_3_0= ruleGrouped ) ) ( (otherlv_4= Comma )* ( (lv_grouped_5_0= ruleGrouped ) ) )* this_END_6= RULE_END )?
             int alt35=2;
             int LA35_0 = input.LA(1);
 
@@ -3692,22 +3902,22 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
             }
             switch (alt35) {
                 case 1 :
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1459:3: this_BEGIN_2= RULE_BEGIN ( (lv_grouped_3_0= ruleGrouped ) ) ( (otherlv_4= Comma )* ( (lv_grouped_5_0= ruleGrouped ) ) )* this_END_6= RULE_END
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1537:3: this_BEGIN_2= RULE_BEGIN ( (lv_grouped_3_0= ruleGrouped ) ) ( (otherlv_4= Comma )* ( (lv_grouped_5_0= ruleGrouped ) ) )* this_END_6= RULE_END
                     {
-                    this_BEGIN_2=(Token)match(input,RULE_BEGIN,FOLLOW_RULE_BEGIN_in_ruleXor3000); 
+                    this_BEGIN_2=(Token)match(input,RULE_BEGIN,FOLLOW_RULE_BEGIN_in_ruleXor3168); 
                      
                         newLeafNode(this_BEGIN_2, grammarAccess.getXorAccess().getBEGINTerminalRuleCall_2_0()); 
                         
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1463:1: ( (lv_grouped_3_0= ruleGrouped ) )
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1464:1: (lv_grouped_3_0= ruleGrouped )
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1541:1: ( (lv_grouped_3_0= ruleGrouped ) )
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1542:1: (lv_grouped_3_0= ruleGrouped )
                     {
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1464:1: (lv_grouped_3_0= ruleGrouped )
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1465:3: lv_grouped_3_0= ruleGrouped
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1542:1: (lv_grouped_3_0= ruleGrouped )
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1543:3: lv_grouped_3_0= ruleGrouped
                     {
                      
                     	        newCompositeNode(grammarAccess.getXorAccess().getGroupedGroupedParserRuleCall_2_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleGrouped_in_ruleXor3020);
+                    pushFollow(FOLLOW_ruleGrouped_in_ruleXor3188);
                     lv_grouped_3_0=ruleGrouped();
 
                     state._fsp--;
@@ -3729,22 +3939,22 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1481:2: ( (otherlv_4= Comma )* ( (lv_grouped_5_0= ruleGrouped ) ) )*
+                    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1559:2: ( (otherlv_4= Comma )* ( (lv_grouped_5_0= ruleGrouped ) ) )*
                     loop34:
                     do {
                         int alt34=2;
                         int LA34_0 = input.LA(1);
 
-                        if ( (LA34_0==Comma||LA34_0==RULE_NULL||LA34_0==RULE_ID||LA34_0==RULE_STRING) ) {
+                        if ( (LA34_0==Comma||LA34_0==RULE_NULL||(LA34_0>=RULE_ID && LA34_0<=RULE_STRING)) ) {
                             alt34=1;
                         }
 
 
                         switch (alt34) {
                     	case 1 :
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1481:3: (otherlv_4= Comma )* ( (lv_grouped_5_0= ruleGrouped ) )
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1559:3: (otherlv_4= Comma )* ( (lv_grouped_5_0= ruleGrouped ) )
                     	    {
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1481:3: (otherlv_4= Comma )*
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1559:3: (otherlv_4= Comma )*
                     	    loop33:
                     	    do {
                     	        int alt33=2;
@@ -3757,9 +3967,9 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
 
                     	        switch (alt33) {
                     	    	case 1 :
-                    	    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1482:2: otherlv_4= Comma
+                    	    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1560:2: otherlv_4= Comma
                     	    	    {
-                    	    	    otherlv_4=(Token)match(input,Comma,FOLLOW_Comma_in_ruleXor3035); 
+                    	    	    otherlv_4=(Token)match(input,Comma,FOLLOW_Comma_in_ruleXor3203); 
 
                     	    	        	newLeafNode(otherlv_4, grammarAccess.getXorAccess().getCommaKeyword_2_2_0());
                     	    	        
@@ -3772,16 +3982,16 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
                     	        }
                     	    } while (true);
 
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1486:3: ( (lv_grouped_5_0= ruleGrouped ) )
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1487:1: (lv_grouped_5_0= ruleGrouped )
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1564:3: ( (lv_grouped_5_0= ruleGrouped ) )
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1565:1: (lv_grouped_5_0= ruleGrouped )
                     	    {
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1487:1: (lv_grouped_5_0= ruleGrouped )
-                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1488:3: lv_grouped_5_0= ruleGrouped
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1565:1: (lv_grouped_5_0= ruleGrouped )
+                    	    // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/internal/InternalConfParser.g:1566:3: lv_grouped_5_0= ruleGrouped
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getXorAccess().getGroupedGroupedParserRuleCall_2_2_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleGrouped_in_ruleXor3057);
+                    	    pushFollow(FOLLOW_ruleGrouped_in_ruleXor3225);
                     	    lv_grouped_5_0=ruleGrouped();
 
                     	    state._fsp--;
@@ -3812,7 +4022,7 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    this_END_6=(Token)match(input,RULE_END,FOLLOW_RULE_END_in_ruleXor3070); 
+                    this_END_6=(Token)match(input,RULE_END,FOLLOW_RULE_END_in_ruleXor3238); 
                      
                         newLeafNode(this_END_6, grammarAccess.getXorAccess().getENDTerminalRuleCall_2_3()); 
                         
@@ -3855,122 +4065,130 @@ public class InternalConfParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleOptional_in_ruleSolitary242 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleConstrain_in_entryRuleConstrain276 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleConstrain286 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConjunction_in_ruleConstrain333 = new BitSet(new long[]{0x0000000000001002L});
-    public static final BitSet FOLLOW_VerticalLineVerticalLine_in_ruleConstrain361 = new BitSet(new long[]{0x00000000A4026000L});
-    public static final BitSet FOLLOW_ruleConjunction_in_ruleConstrain393 = new BitSet(new long[]{0x0000000000001002L});
+    public static final BitSet FOLLOW_ruleConjunction_in_ruleConstrain333 = new BitSet(new long[]{0x0000000000002002L});
+    public static final BitSet FOLLOW_VerticalLineVerticalLine_in_ruleConstrain361 = new BitSet(new long[]{0x00000001C804C000L});
+    public static final BitSet FOLLOW_ruleConjunction_in_ruleConstrain393 = new BitSet(new long[]{0x0000000000002002L});
     public static final BitSet FOLLOW_ruleConjunction_in_entryRuleConjunction430 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleConjunction440 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleComparison_in_ruleConjunction487 = new BitSet(new long[]{0x0000000000000082L});
-    public static final BitSet FOLLOW_AmpersandAmpersand_in_ruleConjunction515 = new BitSet(new long[]{0x00000000A4026000L});
+    public static final BitSet FOLLOW_AmpersandAmpersand_in_ruleConjunction515 = new BitSet(new long[]{0x00000001C804C000L});
     public static final BitSet FOLLOW_ruleComparison_in_ruleConjunction547 = new BitSet(new long[]{0x0000000000000082L});
     public static final BitSet FOLLOW_ruleComparison_in_entryRuleComparison584 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleComparison594 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBinary_in_ruleComparison641 = new BitSet(new long[]{0x0000000000180742L});
-    public static final BitSet FOLLOW_EqualsSignEqualsSign_in_ruleComparison671 = new BitSet(new long[]{0x00000000A4026000L});
-    public static final BitSet FOLLOW_ExclamationMarkEqualsSign_in_ruleComparison699 = new BitSet(new long[]{0x00000000A4026000L});
-    public static final BitSet FOLLOW_LessThanSignEqualsSign_in_ruleComparison727 = new BitSet(new long[]{0x00000000A4026000L});
-    public static final BitSet FOLLOW_LessThanSign_in_ruleComparison755 = new BitSet(new long[]{0x00000000A4026000L});
-    public static final BitSet FOLLOW_GreaterThanSignEqualsSign_in_ruleComparison783 = new BitSet(new long[]{0x00000000A4026000L});
-    public static final BitSet FOLLOW_GreaterThanSign_in_ruleComparison811 = new BitSet(new long[]{0x00000000A4026000L});
-    public static final BitSet FOLLOW_ruleBinary_in_ruleComparison846 = new BitSet(new long[]{0x0000000000180742L});
+    public static final BitSet FOLLOW_ruleBinary_in_ruleComparison641 = new BitSet(new long[]{0x0000000000300E42L});
+    public static final BitSet FOLLOW_EqualsSignEqualsSign_in_ruleComparison671 = new BitSet(new long[]{0x00000001C804C000L});
+    public static final BitSet FOLLOW_ExclamationMarkEqualsSign_in_ruleComparison699 = new BitSet(new long[]{0x00000001C804C000L});
+    public static final BitSet FOLLOW_LessThanSignEqualsSign_in_ruleComparison727 = new BitSet(new long[]{0x00000001C804C000L});
+    public static final BitSet FOLLOW_LessThanSign_in_ruleComparison755 = new BitSet(new long[]{0x00000001C804C000L});
+    public static final BitSet FOLLOW_GreaterThanSignEqualsSign_in_ruleComparison783 = new BitSet(new long[]{0x00000001C804C000L});
+    public static final BitSet FOLLOW_GreaterThanSign_in_ruleComparison811 = new BitSet(new long[]{0x00000001C804C000L});
+    public static final BitSet FOLLOW_ruleBinary_in_ruleComparison846 = new BitSet(new long[]{0x0000000000300E42L});
     public static final BitSet FOLLOW_ruleBinary_in_entryRuleBinary883 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleBinary893 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePrimary_in_ruleBinary940 = new BitSet(new long[]{0x00000000A4026002L});
-    public static final BitSet FOLLOW_rulePrimary_in_ruleBinary970 = new BitSet(new long[]{0x00000000A4026002L});
+    public static final BitSet FOLLOW_rulePrimary_in_ruleBinary940 = new BitSet(new long[]{0x00000001C804C002L});
+    public static final BitSet FOLLOW_rulePrimary_in_ruleBinary970 = new BitSet(new long[]{0x00000001C804C002L});
     public static final BitSet FOLLOW_rulePrimary_in_entryRulePrimary1007 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRulePrimary1017 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEString_in_rulePrimary1066 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_FullStop_in_rulePrimary1079 = new BitSet(new long[]{0x00000000A4000000L});
-    public static final BitSet FOLLOW_ruleEString_in_rulePrimary1101 = new BitSet(new long[]{0x0000000000040002L});
-    public static final BitSet FOLLOW_FullStop_in_rulePrimary1115 = new BitSet(new long[]{0x00000000A4000000L});
-    public static final BitSet FOLLOW_ruleEString_in_rulePrimary1137 = new BitSet(new long[]{0x0000000000040002L});
-    public static final BitSet FOLLOW_ruleUnary_in_rulePrimary1168 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_LeftParenthesis_in_rulePrimary1187 = new BitSet(new long[]{0x00000000A4026000L});
-    public static final BitSet FOLLOW_ruleConstrain_in_rulePrimary1208 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_RightParenthesis_in_rulePrimary1220 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUnary_in_entryRuleUnary1255 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleUnary1265 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ExclamationMark_in_ruleUnary1320 = new BitSet(new long[]{0x00000000A4026000L});
-    public static final BitSet FOLLOW_HyphenMinus_in_ruleUnary1348 = new BitSet(new long[]{0x00000000A4026000L});
-    public static final BitSet FOLLOW_rulePrimary_in_ruleUnary1383 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGroup_in_entryRuleGroup1418 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleGroup1428 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOr_in_ruleGroup1475 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleXor_in_ruleGroup1502 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEString_in_entryRuleEString1537 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEString1548 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleEString1588 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleEString1614 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_NULL_in_ruleEString1640 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFeature_Impl_in_entryRuleFeature_Impl1684 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFeature_Impl1694 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Feature_in_ruleFeature_Impl1732 = new BitSet(new long[]{0x00000000A4000000L});
-    public static final BitSet FOLLOW_ruleEString_in_ruleFeature_Impl1752 = new BitSet(new long[]{0x0000000008400002L});
-    public static final BitSet FOLLOW_RULE_BEGIN_in_ruleFeature_Impl1764 = new BitSet(new long[]{0x00000000A4200000L});
-    public static final BitSet FOLLOW_ruleSolitary_in_ruleFeature_Impl1784 = new BitSet(new long[]{0x00000000B4200000L});
-    public static final BitSet FOLLOW_ruleSolitary_in_ruleFeature_Impl1805 = new BitSet(new long[]{0x00000000B4200000L});
-    public static final BitSet FOLLOW_RULE_END_in_ruleFeature_Impl1817 = new BitSet(new long[]{0x0000000000400002L});
-    public static final BitSet FOLLOW_LeftSquareBracket_in_ruleFeature_Impl1832 = new BitSet(new long[]{0x00000000A4026000L});
-    public static final BitSet FOLLOW_ruleConstrain_in_ruleFeature_Impl1852 = new BitSet(new long[]{0x0000000000810000L});
-    public static final BitSet FOLLOW_Comma_in_ruleFeature_Impl1866 = new BitSet(new long[]{0x00000000A4026000L});
-    public static final BitSet FOLLOW_ruleConstrain_in_ruleFeature_Impl1886 = new BitSet(new long[]{0x0000000000810000L});
-    public static final BitSet FOLLOW_RightSquareBracket_in_ruleFeature_Impl1901 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGrouped_in_entryRuleGrouped1937 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleGrouped1947 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEString_in_ruleGrouped1993 = new BitSet(new long[]{0x0000000000400002L});
-    public static final BitSet FOLLOW_LeftSquareBracket_in_ruleGrouped2007 = new BitSet(new long[]{0x00000000A4026000L});
-    public static final BitSet FOLLOW_ruleConstrain_in_ruleGrouped2027 = new BitSet(new long[]{0x0000000000810000L});
-    public static final BitSet FOLLOW_Comma_in_ruleGrouped2041 = new BitSet(new long[]{0x00000000A4026000L});
-    public static final BitSet FOLLOW_ruleConstrain_in_ruleGrouped2061 = new BitSet(new long[]{0x0000000000810000L});
-    public static final BitSet FOLLOW_RightSquareBracket_in_ruleGrouped2076 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMandatory_in_entryRuleMandatory2112 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMandatory2122 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEString_in_ruleMandatory2168 = new BitSet(new long[]{0x0000000001400822L});
-    public static final BitSet FOLLOW_LeftCurlyBracket_in_ruleMandatory2182 = new BitSet(new long[]{0x00000000A4200000L});
-    public static final BitSet FOLLOW_ruleSolitary_in_ruleMandatory2202 = new BitSet(new long[]{0x0000000002010000L});
-    public static final BitSet FOLLOW_Comma_in_ruleMandatory2216 = new BitSet(new long[]{0x00000000A4200000L});
-    public static final BitSet FOLLOW_ruleSolitary_in_ruleMandatory2236 = new BitSet(new long[]{0x0000000002010000L});
-    public static final BitSet FOLLOW_RightCurlyBracket_in_ruleMandatory2251 = new BitSet(new long[]{0x0000000000400822L});
-    public static final BitSet FOLLOW_LeftSquareBracket_in_ruleMandatory2266 = new BitSet(new long[]{0x00000000A4026000L});
-    public static final BitSet FOLLOW_ruleConstrain_in_ruleMandatory2286 = new BitSet(new long[]{0x0000000000810000L});
-    public static final BitSet FOLLOW_Comma_in_ruleMandatory2300 = new BitSet(new long[]{0x00000000A4026000L});
-    public static final BitSet FOLLOW_ruleConstrain_in_ruleMandatory2320 = new BitSet(new long[]{0x0000000000810000L});
-    public static final BitSet FOLLOW_RightSquareBracket_in_ruleMandatory2335 = new BitSet(new long[]{0x0000000000000822L});
-    public static final BitSet FOLLOW_ruleGroup_in_ruleMandatory2358 = new BitSet(new long[]{0x0000000000000822L});
-    public static final BitSet FOLLOW_ruleGroup_in_ruleMandatory2379 = new BitSet(new long[]{0x0000000000000822L});
-    public static final BitSet FOLLOW_ruleOptional_in_entryRuleOptional2417 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleOptional2427 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_QuestionMark_in_ruleOptional2465 = new BitSet(new long[]{0x00000000A4000000L});
-    public static final BitSet FOLLOW_ruleEString_in_ruleOptional2485 = new BitSet(new long[]{0x0000000001400822L});
-    public static final BitSet FOLLOW_LeftCurlyBracket_in_ruleOptional2499 = new BitSet(new long[]{0x00000000A4200000L});
-    public static final BitSet FOLLOW_ruleSolitary_in_ruleOptional2519 = new BitSet(new long[]{0x0000000002010000L});
-    public static final BitSet FOLLOW_Comma_in_ruleOptional2533 = new BitSet(new long[]{0x00000000A4200000L});
-    public static final BitSet FOLLOW_ruleSolitary_in_ruleOptional2553 = new BitSet(new long[]{0x0000000002010000L});
-    public static final BitSet FOLLOW_RightCurlyBracket_in_ruleOptional2568 = new BitSet(new long[]{0x0000000000400822L});
-    public static final BitSet FOLLOW_LeftSquareBracket_in_ruleOptional2583 = new BitSet(new long[]{0x00000000A4026000L});
-    public static final BitSet FOLLOW_ruleConstrain_in_ruleOptional2603 = new BitSet(new long[]{0x0000000000810000L});
-    public static final BitSet FOLLOW_Comma_in_ruleOptional2617 = new BitSet(new long[]{0x00000000A4026000L});
-    public static final BitSet FOLLOW_ruleConstrain_in_ruleOptional2637 = new BitSet(new long[]{0x0000000000810000L});
-    public static final BitSet FOLLOW_RightSquareBracket_in_ruleOptional2652 = new BitSet(new long[]{0x0000000000000822L});
-    public static final BitSet FOLLOW_ruleGroup_in_ruleOptional2675 = new BitSet(new long[]{0x0000000000000822L});
-    public static final BitSet FOLLOW_ruleGroup_in_ruleOptional2696 = new BitSet(new long[]{0x0000000000000822L});
-    public static final BitSet FOLLOW_ruleOr_in_entryRuleOr2734 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleOr2744 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Or_in_ruleOr2782 = new BitSet(new long[]{0x00000000A4000000L});
-    public static final BitSet FOLLOW_ruleEString_in_ruleOr2802 = new BitSet(new long[]{0x0000000008000002L});
-    public static final BitSet FOLLOW_RULE_BEGIN_in_ruleOr2814 = new BitSet(new long[]{0x00000000A4000000L});
-    public static final BitSet FOLLOW_ruleGrouped_in_ruleOr2834 = new BitSet(new long[]{0x00000000B4010000L});
-    public static final BitSet FOLLOW_Comma_in_ruleOr2849 = new BitSet(new long[]{0x00000000A4010000L});
-    public static final BitSet FOLLOW_ruleGrouped_in_ruleOr2871 = new BitSet(new long[]{0x00000000B4010000L});
-    public static final BitSet FOLLOW_RULE_END_in_ruleOr2884 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleXor_in_entryRuleXor2920 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleXor2930 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Xor_in_ruleXor2968 = new BitSet(new long[]{0x00000000A4000000L});
-    public static final BitSet FOLLOW_ruleEString_in_ruleXor2988 = new BitSet(new long[]{0x0000000008000002L});
-    public static final BitSet FOLLOW_RULE_BEGIN_in_ruleXor3000 = new BitSet(new long[]{0x00000000A4000000L});
-    public static final BitSet FOLLOW_ruleGrouped_in_ruleXor3020 = new BitSet(new long[]{0x00000000B4010000L});
-    public static final BitSet FOLLOW_Comma_in_ruleXor3035 = new BitSet(new long[]{0x00000000A4010000L});
-    public static final BitSet FOLLOW_ruleGrouped_in_ruleXor3057 = new BitSet(new long[]{0x00000000B4010000L});
-    public static final BitSet FOLLOW_RULE_END_in_ruleXor3070 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEString_in_rulePrimary1066 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_FullStop_in_rulePrimary1079 = new BitSet(new long[]{0x00000001C8000000L});
+    public static final BitSet FOLLOW_ruleEString_in_rulePrimary1101 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_FullStop_in_rulePrimary1114 = new BitSet(new long[]{0x00000001C8000000L});
+    public static final BitSet FOLLOW_ruleEString_in_rulePrimary1136 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUnary_in_rulePrimary1165 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_LeftParenthesis_in_rulePrimary1184 = new BitSet(new long[]{0x00000001C804C000L});
+    public static final BitSet FOLLOW_ruleConstrain_in_rulePrimary1205 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_RightParenthesis_in_rulePrimary1217 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUnary_in_entryRuleUnary1252 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleUnary1262 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ExclamationMark_in_ruleUnary1317 = new BitSet(new long[]{0x00000001C804C000L});
+    public static final BitSet FOLLOW_HyphenMinus_in_ruleUnary1345 = new BitSet(new long[]{0x00000001C804C000L});
+    public static final BitSet FOLLOW_rulePrimary_in_ruleUnary1380 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGroup_in_entryRuleGroup1415 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleGroup1425 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOr_in_ruleGroup1472 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleXor_in_ruleGroup1499 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRange_in_entryRuleRange1533 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleRange1543 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEString_in_ruleRange1589 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleRange1600 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_FullStopFullStop_in_ruleRange1612 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleRange1622 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEString_in_entryRuleEString1657 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEString1668 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleEString1708 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleEString1734 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleEString1760 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_NULL_in_ruleEString1786 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFeature_Impl_in_entryRuleFeature_Impl1830 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFeature_Impl1840 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Feature_in_ruleFeature_Impl1878 = new BitSet(new long[]{0x00000001C8000000L});
+    public static final BitSet FOLLOW_ruleEString_in_ruleFeature_Impl1898 = new BitSet(new long[]{0x0000000010800002L});
+    public static final BitSet FOLLOW_RULE_BEGIN_in_ruleFeature_Impl1910 = new BitSet(new long[]{0x00000001C8400000L});
+    public static final BitSet FOLLOW_ruleSolitary_in_ruleFeature_Impl1930 = new BitSet(new long[]{0x00000001E8400000L});
+    public static final BitSet FOLLOW_ruleSolitary_in_ruleFeature_Impl1951 = new BitSet(new long[]{0x00000001E8400000L});
+    public static final BitSet FOLLOW_RULE_END_in_ruleFeature_Impl1963 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_LeftSquareBracket_in_ruleFeature_Impl1978 = new BitSet(new long[]{0x00000001C804C000L});
+    public static final BitSet FOLLOW_ruleConstrain_in_ruleFeature_Impl1998 = new BitSet(new long[]{0x0000000001020000L});
+    public static final BitSet FOLLOW_Comma_in_ruleFeature_Impl2012 = new BitSet(new long[]{0x00000001C804C000L});
+    public static final BitSet FOLLOW_ruleConstrain_in_ruleFeature_Impl2032 = new BitSet(new long[]{0x0000000001020000L});
+    public static final BitSet FOLLOW_RightSquareBracket_in_ruleFeature_Impl2047 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGrouped_in_entryRuleGrouped2083 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleGrouped2093 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEString_in_ruleGrouped2139 = new BitSet(new long[]{0x00000001C8800002L});
+    public static final BitSet FOLLOW_ruleRange_in_ruleGrouped2160 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_LeftSquareBracket_in_ruleGrouped2175 = new BitSet(new long[]{0x00000001C804C000L});
+    public static final BitSet FOLLOW_ruleConstrain_in_ruleGrouped2195 = new BitSet(new long[]{0x0000000001020000L});
+    public static final BitSet FOLLOW_Comma_in_ruleGrouped2209 = new BitSet(new long[]{0x00000001C804C000L});
+    public static final BitSet FOLLOW_ruleConstrain_in_ruleGrouped2229 = new BitSet(new long[]{0x0000000001020000L});
+    public static final BitSet FOLLOW_RightSquareBracket_in_ruleGrouped2244 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMandatory_in_entryRuleMandatory2280 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMandatory2290 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEString_in_ruleMandatory2336 = new BitSet(new long[]{0x0000000002801022L});
+    public static final BitSet FOLLOW_LeftCurlyBracket_in_ruleMandatory2350 = new BitSet(new long[]{0x00000001C8400000L});
+    public static final BitSet FOLLOW_ruleSolitary_in_ruleMandatory2370 = new BitSet(new long[]{0x0000000004020000L});
+    public static final BitSet FOLLOW_Comma_in_ruleMandatory2384 = new BitSet(new long[]{0x00000001C8400000L});
+    public static final BitSet FOLLOW_ruleSolitary_in_ruleMandatory2404 = new BitSet(new long[]{0x0000000004020000L});
+    public static final BitSet FOLLOW_RightCurlyBracket_in_ruleMandatory2419 = new BitSet(new long[]{0x0000000000801022L});
+    public static final BitSet FOLLOW_LeftSquareBracket_in_ruleMandatory2434 = new BitSet(new long[]{0x00000001C804C000L});
+    public static final BitSet FOLLOW_ruleConstrain_in_ruleMandatory2454 = new BitSet(new long[]{0x0000000001020000L});
+    public static final BitSet FOLLOW_Comma_in_ruleMandatory2468 = new BitSet(new long[]{0x00000001C804C000L});
+    public static final BitSet FOLLOW_ruleConstrain_in_ruleMandatory2488 = new BitSet(new long[]{0x0000000001020000L});
+    public static final BitSet FOLLOW_RightSquareBracket_in_ruleMandatory2503 = new BitSet(new long[]{0x0000000000001022L});
+    public static final BitSet FOLLOW_ruleGroup_in_ruleMandatory2526 = new BitSet(new long[]{0x0000000000001022L});
+    public static final BitSet FOLLOW_ruleGroup_in_ruleMandatory2547 = new BitSet(new long[]{0x0000000000001022L});
+    public static final BitSet FOLLOW_ruleOptional_in_entryRuleOptional2585 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleOptional2595 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_QuestionMark_in_ruleOptional2633 = new BitSet(new long[]{0x00000001C8000000L});
+    public static final BitSet FOLLOW_ruleEString_in_ruleOptional2653 = new BitSet(new long[]{0x0000000002801022L});
+    public static final BitSet FOLLOW_LeftCurlyBracket_in_ruleOptional2667 = new BitSet(new long[]{0x00000001C8400000L});
+    public static final BitSet FOLLOW_ruleSolitary_in_ruleOptional2687 = new BitSet(new long[]{0x0000000004020000L});
+    public static final BitSet FOLLOW_Comma_in_ruleOptional2701 = new BitSet(new long[]{0x00000001C8400000L});
+    public static final BitSet FOLLOW_ruleSolitary_in_ruleOptional2721 = new BitSet(new long[]{0x0000000004020000L});
+    public static final BitSet FOLLOW_RightCurlyBracket_in_ruleOptional2736 = new BitSet(new long[]{0x0000000000801022L});
+    public static final BitSet FOLLOW_LeftSquareBracket_in_ruleOptional2751 = new BitSet(new long[]{0x00000001C804C000L});
+    public static final BitSet FOLLOW_ruleConstrain_in_ruleOptional2771 = new BitSet(new long[]{0x0000000001020000L});
+    public static final BitSet FOLLOW_Comma_in_ruleOptional2785 = new BitSet(new long[]{0x00000001C804C000L});
+    public static final BitSet FOLLOW_ruleConstrain_in_ruleOptional2805 = new BitSet(new long[]{0x0000000001020000L});
+    public static final BitSet FOLLOW_RightSquareBracket_in_ruleOptional2820 = new BitSet(new long[]{0x0000000000001022L});
+    public static final BitSet FOLLOW_ruleGroup_in_ruleOptional2843 = new BitSet(new long[]{0x0000000000001022L});
+    public static final BitSet FOLLOW_ruleGroup_in_ruleOptional2864 = new BitSet(new long[]{0x0000000000001022L});
+    public static final BitSet FOLLOW_ruleOr_in_entryRuleOr2902 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleOr2912 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Or_in_ruleOr2950 = new BitSet(new long[]{0x00000001C8000000L});
+    public static final BitSet FOLLOW_ruleEString_in_ruleOr2970 = new BitSet(new long[]{0x0000000010000002L});
+    public static final BitSet FOLLOW_RULE_BEGIN_in_ruleOr2982 = new BitSet(new long[]{0x00000001C8000000L});
+    public static final BitSet FOLLOW_ruleGrouped_in_ruleOr3002 = new BitSet(new long[]{0x00000001E8020000L});
+    public static final BitSet FOLLOW_Comma_in_ruleOr3017 = new BitSet(new long[]{0x00000001C8020000L});
+    public static final BitSet FOLLOW_ruleGrouped_in_ruleOr3039 = new BitSet(new long[]{0x00000001E8020000L});
+    public static final BitSet FOLLOW_RULE_END_in_ruleOr3052 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleXor_in_entryRuleXor3088 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleXor3098 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Xor_in_ruleXor3136 = new BitSet(new long[]{0x00000001C8000000L});
+    public static final BitSet FOLLOW_ruleEString_in_ruleXor3156 = new BitSet(new long[]{0x0000000010000002L});
+    public static final BitSet FOLLOW_RULE_BEGIN_in_ruleXor3168 = new BitSet(new long[]{0x00000001C8000000L});
+    public static final BitSet FOLLOW_ruleGrouped_in_ruleXor3188 = new BitSet(new long[]{0x00000001E8020000L});
+    public static final BitSet FOLLOW_Comma_in_ruleXor3203 = new BitSet(new long[]{0x00000001C8020000L});
+    public static final BitSet FOLLOW_ruleGrouped_in_ruleXor3225 = new BitSet(new long[]{0x00000001E8020000L});
+    public static final BitSet FOLLOW_RULE_END_in_ruleXor3238 = new BitSet(new long[]{0x0000000000000002L});
 
 }

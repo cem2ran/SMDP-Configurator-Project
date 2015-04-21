@@ -14,6 +14,7 @@ import modelMDD2.ModelMDD2Package;
 import modelMDD2.NamedElement;
 import modelMDD2.Optional;
 import modelMDD2.Or;
+import modelMDD2.Range;
 import modelMDD2.Solitary;
 import modelMDD2.Unary;
 import modelMDD2.Xor;
@@ -122,6 +123,13 @@ public class ModelMDD2PackageImpl extends EPackageImpl implements ModelMDD2Packa
 	 * @generated
 	 */
 	private EClass namedElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass rangeEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -254,6 +262,15 @@ public class ModelMDD2PackageImpl extends EPackageImpl implements ModelMDD2Packa
 	 */
 	public EClass getGrouped() {
 		return groupedEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGrouped_Range() {
+		return (EReference)groupedEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -423,6 +440,15 @@ public class ModelMDD2PackageImpl extends EPackageImpl implements ModelMDD2Packa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getRange() {
+		return rangeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ModelMDD2Factory getModelMDD2Factory() {
 		return (ModelMDD2Factory)getEFactoryInstance();
 	}
@@ -457,6 +483,7 @@ public class ModelMDD2PackageImpl extends EPackageImpl implements ModelMDD2Packa
 		createEReference(solitaryEClass, SOLITARY__GROUPS);
 
 		groupedEClass = createEClass(GROUPED);
+		createEReference(groupedEClass, GROUPED__RANGE);
 
 		mandatoryEClass = createEClass(MANDATORY);
 
@@ -484,6 +511,8 @@ public class ModelMDD2PackageImpl extends EPackageImpl implements ModelMDD2Packa
 
 		namedElementEClass = createEClass(NAMED_ELEMENT);
 		createEAttribute(namedElementEClass, NAMED_ELEMENT__NAME);
+
+		rangeEClass = createEClass(RANGE);
 	}
 
 	/**
@@ -526,6 +555,7 @@ public class ModelMDD2PackageImpl extends EPackageImpl implements ModelMDD2Packa
 		orEClass.getESuperTypes().add(this.getGroup());
 		xorEClass.getESuperTypes().add(this.getGroup());
 		groupEClass.getESuperTypes().add(this.getNamedElement());
+		rangeEClass.getESuperTypes().add(this.getNamedElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -539,6 +569,7 @@ public class ModelMDD2PackageImpl extends EPackageImpl implements ModelMDD2Packa
 		initEReference(getSolitary_Groups(), this.getGroup(), null, "groups", null, 0, -1, Solitary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(groupedEClass, Grouped.class, "Grouped", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getGrouped_Range(), this.getRange(), null, "range", null, 0, 1, Grouped.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mandatoryEClass, Mandatory.class, "Mandatory", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -566,6 +597,8 @@ public class ModelMDD2PackageImpl extends EPackageImpl implements ModelMDD2Packa
 
 		initEClass(namedElementEClass, NamedElement.class, "NamedElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getNamedElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, NamedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(rangeEClass, Range.class, "Range", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

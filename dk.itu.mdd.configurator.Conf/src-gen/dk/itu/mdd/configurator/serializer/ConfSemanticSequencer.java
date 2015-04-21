@@ -15,16 +15,20 @@ import modelMDD2.Model;
 import modelMDD2.ModelMDD2Package;
 import modelMDD2.Optional;
 import modelMDD2.Or;
+import modelMDD2.Range;
 import modelMDD2.Unary;
 import modelMDD2.Xor;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.serializer.acceptor.ISemanticSequenceAcceptor;
+import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.diagnostic.ISemanticSequencerDiagnosticProvider;
 import org.eclipse.xtext.serializer.diagnostic.ISerializationDiagnostic.Acceptor;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.GenericSequencer;
+import org.eclipse.xtext.serializer.sequencer.ISemanticNodeProvider.INodesForEObjectProvider;
 import org.eclipse.xtext.serializer.sequencer.ISemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService;
+import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 
 @SuppressWarnings("all")
 public class ConfSemanticSequencer extends AbstractDelegatingSemanticSequencer {
@@ -58,6 +62,9 @@ public class ConfSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				return; 
 			case ModelMDD2Package.OR:
 				sequence_Or(context, (Or) semanticObject); 
+				return; 
+			case ModelMDD2Package.RANGE:
+				sequence_Range(context, (Range) semanticObject); 
 				return; 
 			case ModelMDD2Package.UNARY:
 				sequence_Unary(context, (Unary) semanticObject); 
@@ -105,7 +112,7 @@ public class ConfSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=EString (constrains+=Constrain constrains+=Constrain*)?)
+	 *     (name=EString range=Range? (constrains+=Constrain constrains+=Constrain*)?)
 	 */
 	protected void sequence_Grouped(EObject context, Grouped semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -150,10 +157,26 @@ public class ConfSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (constrainFeatures+=[Solitary|EString] groups=[Group|EString] constrainFeatures+=[Feature|EString]*)
+	 *     (constrainFeatures+=[Solitary|EString] groups=[Group|EString] constrainFeatures+=[Feature|EString])
 	 */
 	protected void sequence_Primary(EObject context, Constrain semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     name=EString
+	 */
+	protected void sequence_Range(EObject context, Range semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, ModelMDD2Package.Literals.NAMED_ELEMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ModelMDD2Package.Literals.NAMED_ELEMENT__NAME));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getRangeAccess().getNameEStringParserRuleCall_0_0(), semanticObject.getName());
+		feeder.finish();
 	}
 	
 	

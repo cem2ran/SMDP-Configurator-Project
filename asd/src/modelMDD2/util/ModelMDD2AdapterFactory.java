@@ -120,6 +120,10 @@ public class ModelMDD2AdapterFactory extends AdapterFactoryImpl {
 				return createNamedElementAdapter();
 			}
 			@Override
+			public Adapter caseRange(Range object) {
+				return createRangeAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -318,6 +322,20 @@ public class ModelMDD2AdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createNamedElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link modelMDD2.Range <em>Range</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see modelMDD2.Range
+	 * @generated
+	 */
+	public Adapter createRangeAdapter() {
 		return null;
 	}
 
