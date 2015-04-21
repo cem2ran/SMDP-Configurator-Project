@@ -3,6 +3,8 @@
  */
 package dk.itu.mdd.configurator.scoping;
 
+import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider;
+
 /**
  * This class contains custom scoping description.
  * 
@@ -10,5 +12,5 @@ package dk.itu.mdd.configurator.scoping;
  * on how and when to use it.
  */
 @SuppressWarnings("all")
-public class ConfScopeProvider /* implements org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider  */{
+public class ConfScopeProvider extends AbstractDeclarativeScopeProvider {
 }
