@@ -3629,17 +3629,22 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Primary__Group_0__1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1340:1: rule__Primary__Group_0__1 : rule__Primary__Group_0__1__Impl ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1340:1: rule__Primary__Group_0__1 : rule__Primary__Group_0__1__Impl rule__Primary__Group_0__2 ;
     public final void rule__Primary__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1344:1: ( rule__Primary__Group_0__1__Impl )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1345:2: rule__Primary__Group_0__1__Impl
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1344:1: ( rule__Primary__Group_0__1__Impl rule__Primary__Group_0__2 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1345:2: rule__Primary__Group_0__1__Impl rule__Primary__Group_0__2
             {
             pushFollow(FOLLOW_rule__Primary__Group_0__1__Impl_in_rule__Primary__Group_0__12728);
             rule__Primary__Group_0__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Primary__Group_0__2_in_rule__Primary__Group_0__12731);
+            rule__Primary__Group_0__2();
 
             state._fsp--;
 
@@ -3662,49 +3667,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Primary__Group_0__1__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1351:1: rule__Primary__Group_0__1__Impl : ( ( rule__Primary__Group_0_1__0 )* ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1352:1: rule__Primary__Group_0__1__Impl : ( FullStop ) ;
     public final void rule__Primary__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1355:1: ( ( ( rule__Primary__Group_0_1__0 )* ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1356:1: ( ( rule__Primary__Group_0_1__0 )* )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1356:1: ( ( FullStop ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1357:1: ( FullStop )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1356:1: ( ( rule__Primary__Group_0_1__0 )* )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1357:1: ( rule__Primary__Group_0_1__0 )*
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1357:1: ( FullStop )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1358:1: FullStop
             {
-             before(grammarAccess.getPrimaryAccess().getGroup_0_1()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1358:1: ( rule__Primary__Group_0_1__0 )*
-            loop11:
-            do {
-                int alt11=2;
-                int LA11_0 = input.LA(1);
-
-                if ( (LA11_0==FullStop) ) {
-                    alt11=1;
-                }
-
-
-                switch (alt11) {
-            	case 1 :
-            	    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1358:2: rule__Primary__Group_0_1__0
-            	    {
-            	    pushFollow(FOLLOW_rule__Primary__Group_0_1__0_in_rule__Primary__Group_0__1__Impl2755);
-            	    rule__Primary__Group_0_1__0();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop11;
-                }
-            } while (true);
-
-             after(grammarAccess.getPrimaryAccess().getGroup_0_1()); 
+             before(grammarAccess.getPrimaryAccess().getFullStopKeyword_0_1()); 
+            match(input,FullStop,FOLLOW_FullStop_in_rule__Primary__Group_0__1__Impl2759); 
+             after(grammarAccess.getPrimaryAccess().getFullStopKeyword_0_1()); 
 
             }
 
@@ -3726,93 +3703,23 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Primary__Group_0__1__Impl"
 
 
-    // $ANTLR start "rule__Primary__Group_0_1__0"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1372:1: rule__Primary__Group_0_1__0 : rule__Primary__Group_0_1__0__Impl rule__Primary__Group_0_1__1 ;
-    public final void rule__Primary__Group_0_1__0() throws RecognitionException {
+    // $ANTLR start "rule__Primary__Group_0__2"
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1371:1: rule__Primary__Group_0__2 : rule__Primary__Group_0__2__Impl rule__Primary__Group_0__3 ;
+    public final void rule__Primary__Group_0__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1376:1: ( rule__Primary__Group_0_1__0__Impl rule__Primary__Group_0_1__1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1377:2: rule__Primary__Group_0_1__0__Impl rule__Primary__Group_0_1__1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1375:1: ( rule__Primary__Group_0__2__Impl rule__Primary__Group_0__3 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1376:2: rule__Primary__Group_0__2__Impl rule__Primary__Group_0__3
             {
-            pushFollow(FOLLOW_rule__Primary__Group_0_1__0__Impl_in_rule__Primary__Group_0_1__02790);
-            rule__Primary__Group_0_1__0__Impl();
+            pushFollow(FOLLOW_rule__Primary__Group_0__2__Impl_in_rule__Primary__Group_0__22790);
+            rule__Primary__Group_0__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Primary__Group_0_1__1_in_rule__Primary__Group_0_1__02793);
-            rule__Primary__Group_0_1__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Primary__Group_0_1__0"
-
-
-    // $ANTLR start "rule__Primary__Group_0_1__0__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1384:1: rule__Primary__Group_0_1__0__Impl : ( FullStop ) ;
-    public final void rule__Primary__Group_0_1__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1388:1: ( ( FullStop ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1389:1: ( FullStop )
-            {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1389:1: ( FullStop )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1390:1: FullStop
-            {
-             before(grammarAccess.getPrimaryAccess().getFullStopKeyword_0_1_0()); 
-            match(input,FullStop,FOLLOW_FullStop_in_rule__Primary__Group_0_1__0__Impl2821); 
-             after(grammarAccess.getPrimaryAccess().getFullStopKeyword_0_1_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Primary__Group_0_1__0__Impl"
-
-
-    // $ANTLR start "rule__Primary__Group_0_1__1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1403:1: rule__Primary__Group_0_1__1 : rule__Primary__Group_0_1__1__Impl ;
-    public final void rule__Primary__Group_0_1__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1407:1: ( rule__Primary__Group_0_1__1__Impl )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1408:2: rule__Primary__Group_0_1__1__Impl
-            {
-            pushFollow(FOLLOW_rule__Primary__Group_0_1__1__Impl_in_rule__Primary__Group_0_1__12852);
-            rule__Primary__Group_0_1__1__Impl();
+            pushFollow(FOLLOW_rule__Primary__Group_0__3_in_rule__Primary__Group_0__22793);
+            rule__Primary__Group_0__3();
 
             state._fsp--;
 
@@ -3831,35 +3738,35 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Primary__Group_0_1__1"
+    // $ANTLR end "rule__Primary__Group_0__2"
 
 
-    // $ANTLR start "rule__Primary__Group_0_1__1__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1414:1: rule__Primary__Group_0_1__1__Impl : ( ( rule__Primary__ConstrainFeaturesAssignment_0_1_1 ) ) ;
-    public final void rule__Primary__Group_0_1__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Primary__Group_0__2__Impl"
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1383:1: rule__Primary__Group_0__2__Impl : ( ( rule__Primary__GroupsAssignment_0_2 ) ) ;
+    public final void rule__Primary__Group_0__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1418:1: ( ( ( rule__Primary__ConstrainFeaturesAssignment_0_1_1 ) ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1419:1: ( ( rule__Primary__ConstrainFeaturesAssignment_0_1_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1387:1: ( ( ( rule__Primary__GroupsAssignment_0_2 ) ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1388:1: ( ( rule__Primary__GroupsAssignment_0_2 ) )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1419:1: ( ( rule__Primary__ConstrainFeaturesAssignment_0_1_1 ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1420:1: ( rule__Primary__ConstrainFeaturesAssignment_0_1_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1388:1: ( ( rule__Primary__GroupsAssignment_0_2 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1389:1: ( rule__Primary__GroupsAssignment_0_2 )
             {
-             before(grammarAccess.getPrimaryAccess().getConstrainFeaturesAssignment_0_1_1()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1421:1: ( rule__Primary__ConstrainFeaturesAssignment_0_1_1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1421:2: rule__Primary__ConstrainFeaturesAssignment_0_1_1
+             before(grammarAccess.getPrimaryAccess().getGroupsAssignment_0_2()); 
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1390:1: ( rule__Primary__GroupsAssignment_0_2 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1390:2: rule__Primary__GroupsAssignment_0_2
             {
-            pushFollow(FOLLOW_rule__Primary__ConstrainFeaturesAssignment_0_1_1_in_rule__Primary__Group_0_1__1__Impl2879);
-            rule__Primary__ConstrainFeaturesAssignment_0_1_1();
+            pushFollow(FOLLOW_rule__Primary__GroupsAssignment_0_2_in_rule__Primary__Group_0__2__Impl2820);
+            rule__Primary__GroupsAssignment_0_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getPrimaryAccess().getConstrainFeaturesAssignment_0_1_1()); 
+             after(grammarAccess.getPrimaryAccess().getGroupsAssignment_0_2()); 
 
             }
 
@@ -3878,25 +3785,278 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Primary__Group_0_1__1__Impl"
+    // $ANTLR end "rule__Primary__Group_0__2__Impl"
+
+
+    // $ANTLR start "rule__Primary__Group_0__3"
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1400:1: rule__Primary__Group_0__3 : rule__Primary__Group_0__3__Impl ;
+    public final void rule__Primary__Group_0__3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1404:1: ( rule__Primary__Group_0__3__Impl )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1405:2: rule__Primary__Group_0__3__Impl
+            {
+            pushFollow(FOLLOW_rule__Primary__Group_0__3__Impl_in_rule__Primary__Group_0__32850);
+            rule__Primary__Group_0__3__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Primary__Group_0__3"
+
+
+    // $ANTLR start "rule__Primary__Group_0__3__Impl"
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1411:1: rule__Primary__Group_0__3__Impl : ( ( rule__Primary__Group_0_3__0 )* ) ;
+    public final void rule__Primary__Group_0__3__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1415:1: ( ( ( rule__Primary__Group_0_3__0 )* ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1416:1: ( ( rule__Primary__Group_0_3__0 )* )
+            {
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1416:1: ( ( rule__Primary__Group_0_3__0 )* )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1417:1: ( rule__Primary__Group_0_3__0 )*
+            {
+             before(grammarAccess.getPrimaryAccess().getGroup_0_3()); 
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1418:1: ( rule__Primary__Group_0_3__0 )*
+            loop11:
+            do {
+                int alt11=2;
+                int LA11_0 = input.LA(1);
+
+                if ( (LA11_0==FullStop) ) {
+                    alt11=1;
+                }
+
+
+                switch (alt11) {
+            	case 1 :
+            	    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1418:2: rule__Primary__Group_0_3__0
+            	    {
+            	    pushFollow(FOLLOW_rule__Primary__Group_0_3__0_in_rule__Primary__Group_0__3__Impl2877);
+            	    rule__Primary__Group_0_3__0();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop11;
+                }
+            } while (true);
+
+             after(grammarAccess.getPrimaryAccess().getGroup_0_3()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Primary__Group_0__3__Impl"
+
+
+    // $ANTLR start "rule__Primary__Group_0_3__0"
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1436:1: rule__Primary__Group_0_3__0 : rule__Primary__Group_0_3__0__Impl rule__Primary__Group_0_3__1 ;
+    public final void rule__Primary__Group_0_3__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1440:1: ( rule__Primary__Group_0_3__0__Impl rule__Primary__Group_0_3__1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1441:2: rule__Primary__Group_0_3__0__Impl rule__Primary__Group_0_3__1
+            {
+            pushFollow(FOLLOW_rule__Primary__Group_0_3__0__Impl_in_rule__Primary__Group_0_3__02916);
+            rule__Primary__Group_0_3__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Primary__Group_0_3__1_in_rule__Primary__Group_0_3__02919);
+            rule__Primary__Group_0_3__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Primary__Group_0_3__0"
+
+
+    // $ANTLR start "rule__Primary__Group_0_3__0__Impl"
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1448:1: rule__Primary__Group_0_3__0__Impl : ( FullStop ) ;
+    public final void rule__Primary__Group_0_3__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1452:1: ( ( FullStop ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1453:1: ( FullStop )
+            {
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1453:1: ( FullStop )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1454:1: FullStop
+            {
+             before(grammarAccess.getPrimaryAccess().getFullStopKeyword_0_3_0()); 
+            match(input,FullStop,FOLLOW_FullStop_in_rule__Primary__Group_0_3__0__Impl2947); 
+             after(grammarAccess.getPrimaryAccess().getFullStopKeyword_0_3_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Primary__Group_0_3__0__Impl"
+
+
+    // $ANTLR start "rule__Primary__Group_0_3__1"
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1467:1: rule__Primary__Group_0_3__1 : rule__Primary__Group_0_3__1__Impl ;
+    public final void rule__Primary__Group_0_3__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1471:1: ( rule__Primary__Group_0_3__1__Impl )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1472:2: rule__Primary__Group_0_3__1__Impl
+            {
+            pushFollow(FOLLOW_rule__Primary__Group_0_3__1__Impl_in_rule__Primary__Group_0_3__12978);
+            rule__Primary__Group_0_3__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Primary__Group_0_3__1"
+
+
+    // $ANTLR start "rule__Primary__Group_0_3__1__Impl"
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1478:1: rule__Primary__Group_0_3__1__Impl : ( ( rule__Primary__ConstrainFeaturesAssignment_0_3_1 ) ) ;
+    public final void rule__Primary__Group_0_3__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1482:1: ( ( ( rule__Primary__ConstrainFeaturesAssignment_0_3_1 ) ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1483:1: ( ( rule__Primary__ConstrainFeaturesAssignment_0_3_1 ) )
+            {
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1483:1: ( ( rule__Primary__ConstrainFeaturesAssignment_0_3_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1484:1: ( rule__Primary__ConstrainFeaturesAssignment_0_3_1 )
+            {
+             before(grammarAccess.getPrimaryAccess().getConstrainFeaturesAssignment_0_3_1()); 
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1485:1: ( rule__Primary__ConstrainFeaturesAssignment_0_3_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1485:2: rule__Primary__ConstrainFeaturesAssignment_0_3_1
+            {
+            pushFollow(FOLLOW_rule__Primary__ConstrainFeaturesAssignment_0_3_1_in_rule__Primary__Group_0_3__1__Impl3005);
+            rule__Primary__ConstrainFeaturesAssignment_0_3_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getPrimaryAccess().getConstrainFeaturesAssignment_0_3_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Primary__Group_0_3__1__Impl"
 
 
     // $ANTLR start "rule__Primary__Group_2__0"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1435:1: rule__Primary__Group_2__0 : rule__Primary__Group_2__0__Impl rule__Primary__Group_2__1 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1499:1: rule__Primary__Group_2__0 : rule__Primary__Group_2__0__Impl rule__Primary__Group_2__1 ;
     public final void rule__Primary__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1439:1: ( rule__Primary__Group_2__0__Impl rule__Primary__Group_2__1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1440:2: rule__Primary__Group_2__0__Impl rule__Primary__Group_2__1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1503:1: ( rule__Primary__Group_2__0__Impl rule__Primary__Group_2__1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1504:2: rule__Primary__Group_2__0__Impl rule__Primary__Group_2__1
             {
-            pushFollow(FOLLOW_rule__Primary__Group_2__0__Impl_in_rule__Primary__Group_2__02913);
+            pushFollow(FOLLOW_rule__Primary__Group_2__0__Impl_in_rule__Primary__Group_2__03039);
             rule__Primary__Group_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Primary__Group_2__1_in_rule__Primary__Group_2__02916);
+            pushFollow(FOLLOW_rule__Primary__Group_2__1_in_rule__Primary__Group_2__03042);
             rule__Primary__Group_2__1();
 
             state._fsp--;
@@ -3920,20 +4080,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Primary__Group_2__0__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1447:1: rule__Primary__Group_2__0__Impl : ( LeftParenthesis ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1511:1: rule__Primary__Group_2__0__Impl : ( LeftParenthesis ) ;
     public final void rule__Primary__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1451:1: ( ( LeftParenthesis ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1452:1: ( LeftParenthesis )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1515:1: ( ( LeftParenthesis ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1516:1: ( LeftParenthesis )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1452:1: ( LeftParenthesis )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1453:1: LeftParenthesis
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1516:1: ( LeftParenthesis )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1517:1: LeftParenthesis
             {
              before(grammarAccess.getPrimaryAccess().getLeftParenthesisKeyword_2_0()); 
-            match(input,LeftParenthesis,FOLLOW_LeftParenthesis_in_rule__Primary__Group_2__0__Impl2944); 
+            match(input,LeftParenthesis,FOLLOW_LeftParenthesis_in_rule__Primary__Group_2__0__Impl3070); 
              after(grammarAccess.getPrimaryAccess().getLeftParenthesisKeyword_2_0()); 
 
             }
@@ -3957,21 +4117,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Primary__Group_2__1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1466:1: rule__Primary__Group_2__1 : rule__Primary__Group_2__1__Impl rule__Primary__Group_2__2 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1530:1: rule__Primary__Group_2__1 : rule__Primary__Group_2__1__Impl rule__Primary__Group_2__2 ;
     public final void rule__Primary__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1470:1: ( rule__Primary__Group_2__1__Impl rule__Primary__Group_2__2 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1471:2: rule__Primary__Group_2__1__Impl rule__Primary__Group_2__2
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1534:1: ( rule__Primary__Group_2__1__Impl rule__Primary__Group_2__2 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1535:2: rule__Primary__Group_2__1__Impl rule__Primary__Group_2__2
             {
-            pushFollow(FOLLOW_rule__Primary__Group_2__1__Impl_in_rule__Primary__Group_2__12975);
+            pushFollow(FOLLOW_rule__Primary__Group_2__1__Impl_in_rule__Primary__Group_2__13101);
             rule__Primary__Group_2__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Primary__Group_2__2_in_rule__Primary__Group_2__12978);
+            pushFollow(FOLLOW_rule__Primary__Group_2__2_in_rule__Primary__Group_2__13104);
             rule__Primary__Group_2__2();
 
             state._fsp--;
@@ -3995,20 +4155,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Primary__Group_2__1__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1478:1: rule__Primary__Group_2__1__Impl : ( ruleConstrain ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1542:1: rule__Primary__Group_2__1__Impl : ( ruleConstrain ) ;
     public final void rule__Primary__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1482:1: ( ( ruleConstrain ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1483:1: ( ruleConstrain )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1546:1: ( ( ruleConstrain ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1547:1: ( ruleConstrain )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1483:1: ( ruleConstrain )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1484:1: ruleConstrain
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1547:1: ( ruleConstrain )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1548:1: ruleConstrain
             {
              before(grammarAccess.getPrimaryAccess().getConstrainParserRuleCall_2_1()); 
-            pushFollow(FOLLOW_ruleConstrain_in_rule__Primary__Group_2__1__Impl3005);
+            pushFollow(FOLLOW_ruleConstrain_in_rule__Primary__Group_2__1__Impl3131);
             ruleConstrain();
 
             state._fsp--;
@@ -4036,16 +4196,16 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Primary__Group_2__2"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1495:1: rule__Primary__Group_2__2 : rule__Primary__Group_2__2__Impl ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1559:1: rule__Primary__Group_2__2 : rule__Primary__Group_2__2__Impl ;
     public final void rule__Primary__Group_2__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1499:1: ( rule__Primary__Group_2__2__Impl )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1500:2: rule__Primary__Group_2__2__Impl
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1563:1: ( rule__Primary__Group_2__2__Impl )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1564:2: rule__Primary__Group_2__2__Impl
             {
-            pushFollow(FOLLOW_rule__Primary__Group_2__2__Impl_in_rule__Primary__Group_2__23034);
+            pushFollow(FOLLOW_rule__Primary__Group_2__2__Impl_in_rule__Primary__Group_2__23160);
             rule__Primary__Group_2__2__Impl();
 
             state._fsp--;
@@ -4069,20 +4229,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Primary__Group_2__2__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1506:1: rule__Primary__Group_2__2__Impl : ( RightParenthesis ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1570:1: rule__Primary__Group_2__2__Impl : ( RightParenthesis ) ;
     public final void rule__Primary__Group_2__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1510:1: ( ( RightParenthesis ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1511:1: ( RightParenthesis )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1574:1: ( ( RightParenthesis ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1575:1: ( RightParenthesis )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1511:1: ( RightParenthesis )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1512:1: RightParenthesis
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1575:1: ( RightParenthesis )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1576:1: RightParenthesis
             {
              before(grammarAccess.getPrimaryAccess().getRightParenthesisKeyword_2_2()); 
-            match(input,RightParenthesis,FOLLOW_RightParenthesis_in_rule__Primary__Group_2__2__Impl3062); 
+            match(input,RightParenthesis,FOLLOW_RightParenthesis_in_rule__Primary__Group_2__2__Impl3188); 
              after(grammarAccess.getPrimaryAccess().getRightParenthesisKeyword_2_2()); 
 
             }
@@ -4106,21 +4266,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Unary__Group__0"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1531:1: rule__Unary__Group__0 : rule__Unary__Group__0__Impl rule__Unary__Group__1 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1595:1: rule__Unary__Group__0 : rule__Unary__Group__0__Impl rule__Unary__Group__1 ;
     public final void rule__Unary__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1535:1: ( rule__Unary__Group__0__Impl rule__Unary__Group__1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1536:2: rule__Unary__Group__0__Impl rule__Unary__Group__1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1599:1: ( rule__Unary__Group__0__Impl rule__Unary__Group__1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1600:2: rule__Unary__Group__0__Impl rule__Unary__Group__1
             {
-            pushFollow(FOLLOW_rule__Unary__Group__0__Impl_in_rule__Unary__Group__03099);
+            pushFollow(FOLLOW_rule__Unary__Group__0__Impl_in_rule__Unary__Group__03225);
             rule__Unary__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Unary__Group__1_in_rule__Unary__Group__03102);
+            pushFollow(FOLLOW_rule__Unary__Group__1_in_rule__Unary__Group__03228);
             rule__Unary__Group__1();
 
             state._fsp--;
@@ -4144,21 +4304,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Unary__Group__0__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1543:1: rule__Unary__Group__0__Impl : ( () ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1607:1: rule__Unary__Group__0__Impl : ( () ) ;
     public final void rule__Unary__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1547:1: ( ( () ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1548:1: ( () )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1611:1: ( ( () ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1612:1: ( () )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1548:1: ( () )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1549:1: ()
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1612:1: ( () )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1613:1: ()
             {
              before(grammarAccess.getUnaryAccess().getUnaryAction_0()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1550:1: ()
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1552:1: 
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1614:1: ()
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1616:1: 
             {
             }
 
@@ -4181,21 +4341,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Unary__Group__1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1562:1: rule__Unary__Group__1 : rule__Unary__Group__1__Impl rule__Unary__Group__2 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1626:1: rule__Unary__Group__1 : rule__Unary__Group__1__Impl rule__Unary__Group__2 ;
     public final void rule__Unary__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1566:1: ( rule__Unary__Group__1__Impl rule__Unary__Group__2 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1567:2: rule__Unary__Group__1__Impl rule__Unary__Group__2
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1630:1: ( rule__Unary__Group__1__Impl rule__Unary__Group__2 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1631:2: rule__Unary__Group__1__Impl rule__Unary__Group__2
             {
-            pushFollow(FOLLOW_rule__Unary__Group__1__Impl_in_rule__Unary__Group__13160);
+            pushFollow(FOLLOW_rule__Unary__Group__1__Impl_in_rule__Unary__Group__13286);
             rule__Unary__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Unary__Group__2_in_rule__Unary__Group__13163);
+            pushFollow(FOLLOW_rule__Unary__Group__2_in_rule__Unary__Group__13289);
             rule__Unary__Group__2();
 
             state._fsp--;
@@ -4219,23 +4379,23 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Unary__Group__1__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1574:1: rule__Unary__Group__1__Impl : ( ( rule__Unary__OperatorAssignment_1 ) ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1638:1: rule__Unary__Group__1__Impl : ( ( rule__Unary__OperatorAssignment_1 ) ) ;
     public final void rule__Unary__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1578:1: ( ( ( rule__Unary__OperatorAssignment_1 ) ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1579:1: ( ( rule__Unary__OperatorAssignment_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1642:1: ( ( ( rule__Unary__OperatorAssignment_1 ) ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1643:1: ( ( rule__Unary__OperatorAssignment_1 ) )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1579:1: ( ( rule__Unary__OperatorAssignment_1 ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1580:1: ( rule__Unary__OperatorAssignment_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1643:1: ( ( rule__Unary__OperatorAssignment_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1644:1: ( rule__Unary__OperatorAssignment_1 )
             {
              before(grammarAccess.getUnaryAccess().getOperatorAssignment_1()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1581:1: ( rule__Unary__OperatorAssignment_1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1581:2: rule__Unary__OperatorAssignment_1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1645:1: ( rule__Unary__OperatorAssignment_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1645:2: rule__Unary__OperatorAssignment_1
             {
-            pushFollow(FOLLOW_rule__Unary__OperatorAssignment_1_in_rule__Unary__Group__1__Impl3190);
+            pushFollow(FOLLOW_rule__Unary__OperatorAssignment_1_in_rule__Unary__Group__1__Impl3316);
             rule__Unary__OperatorAssignment_1();
 
             state._fsp--;
@@ -4266,16 +4426,16 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Unary__Group__2"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1591:1: rule__Unary__Group__2 : rule__Unary__Group__2__Impl ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1655:1: rule__Unary__Group__2 : rule__Unary__Group__2__Impl ;
     public final void rule__Unary__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1595:1: ( rule__Unary__Group__2__Impl )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1596:2: rule__Unary__Group__2__Impl
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1659:1: ( rule__Unary__Group__2__Impl )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1660:2: rule__Unary__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Unary__Group__2__Impl_in_rule__Unary__Group__23220);
+            pushFollow(FOLLOW_rule__Unary__Group__2__Impl_in_rule__Unary__Group__23346);
             rule__Unary__Group__2__Impl();
 
             state._fsp--;
@@ -4299,23 +4459,23 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Unary__Group__2__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1602:1: rule__Unary__Group__2__Impl : ( ( rule__Unary__ExpAssignment_2 ) ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1666:1: rule__Unary__Group__2__Impl : ( ( rule__Unary__ExpAssignment_2 ) ) ;
     public final void rule__Unary__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1606:1: ( ( ( rule__Unary__ExpAssignment_2 ) ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1607:1: ( ( rule__Unary__ExpAssignment_2 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1670:1: ( ( ( rule__Unary__ExpAssignment_2 ) ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1671:1: ( ( rule__Unary__ExpAssignment_2 ) )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1607:1: ( ( rule__Unary__ExpAssignment_2 ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1608:1: ( rule__Unary__ExpAssignment_2 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1671:1: ( ( rule__Unary__ExpAssignment_2 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1672:1: ( rule__Unary__ExpAssignment_2 )
             {
              before(grammarAccess.getUnaryAccess().getExpAssignment_2()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1609:1: ( rule__Unary__ExpAssignment_2 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1609:2: rule__Unary__ExpAssignment_2
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1673:1: ( rule__Unary__ExpAssignment_2 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1673:2: rule__Unary__ExpAssignment_2
             {
-            pushFollow(FOLLOW_rule__Unary__ExpAssignment_2_in_rule__Unary__Group__2__Impl3247);
+            pushFollow(FOLLOW_rule__Unary__ExpAssignment_2_in_rule__Unary__Group__2__Impl3373);
             rule__Unary__ExpAssignment_2();
 
             state._fsp--;
@@ -4346,21 +4506,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature_Impl__Group__0"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1625:1: rule__Feature_Impl__Group__0 : rule__Feature_Impl__Group__0__Impl rule__Feature_Impl__Group__1 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1689:1: rule__Feature_Impl__Group__0 : rule__Feature_Impl__Group__0__Impl rule__Feature_Impl__Group__1 ;
     public final void rule__Feature_Impl__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1629:1: ( rule__Feature_Impl__Group__0__Impl rule__Feature_Impl__Group__1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1630:2: rule__Feature_Impl__Group__0__Impl rule__Feature_Impl__Group__1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1693:1: ( rule__Feature_Impl__Group__0__Impl rule__Feature_Impl__Group__1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1694:2: rule__Feature_Impl__Group__0__Impl rule__Feature_Impl__Group__1
             {
-            pushFollow(FOLLOW_rule__Feature_Impl__Group__0__Impl_in_rule__Feature_Impl__Group__03283);
+            pushFollow(FOLLOW_rule__Feature_Impl__Group__0__Impl_in_rule__Feature_Impl__Group__03409);
             rule__Feature_Impl__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Feature_Impl__Group__1_in_rule__Feature_Impl__Group__03286);
+            pushFollow(FOLLOW_rule__Feature_Impl__Group__1_in_rule__Feature_Impl__Group__03412);
             rule__Feature_Impl__Group__1();
 
             state._fsp--;
@@ -4384,20 +4544,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature_Impl__Group__0__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1637:1: rule__Feature_Impl__Group__0__Impl : ( Feature ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1701:1: rule__Feature_Impl__Group__0__Impl : ( Feature ) ;
     public final void rule__Feature_Impl__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1641:1: ( ( Feature ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1642:1: ( Feature )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1705:1: ( ( Feature ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1706:1: ( Feature )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1642:1: ( Feature )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1643:1: Feature
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1706:1: ( Feature )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1707:1: Feature
             {
              before(grammarAccess.getFeature_ImplAccess().getFeatureKeyword_0()); 
-            match(input,Feature,FOLLOW_Feature_in_rule__Feature_Impl__Group__0__Impl3314); 
+            match(input,Feature,FOLLOW_Feature_in_rule__Feature_Impl__Group__0__Impl3440); 
              after(grammarAccess.getFeature_ImplAccess().getFeatureKeyword_0()); 
 
             }
@@ -4421,21 +4581,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature_Impl__Group__1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1656:1: rule__Feature_Impl__Group__1 : rule__Feature_Impl__Group__1__Impl rule__Feature_Impl__Group__2 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1720:1: rule__Feature_Impl__Group__1 : rule__Feature_Impl__Group__1__Impl rule__Feature_Impl__Group__2 ;
     public final void rule__Feature_Impl__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1660:1: ( rule__Feature_Impl__Group__1__Impl rule__Feature_Impl__Group__2 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1661:2: rule__Feature_Impl__Group__1__Impl rule__Feature_Impl__Group__2
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1724:1: ( rule__Feature_Impl__Group__1__Impl rule__Feature_Impl__Group__2 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1725:2: rule__Feature_Impl__Group__1__Impl rule__Feature_Impl__Group__2
             {
-            pushFollow(FOLLOW_rule__Feature_Impl__Group__1__Impl_in_rule__Feature_Impl__Group__13345);
+            pushFollow(FOLLOW_rule__Feature_Impl__Group__1__Impl_in_rule__Feature_Impl__Group__13471);
             rule__Feature_Impl__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Feature_Impl__Group__2_in_rule__Feature_Impl__Group__13348);
+            pushFollow(FOLLOW_rule__Feature_Impl__Group__2_in_rule__Feature_Impl__Group__13474);
             rule__Feature_Impl__Group__2();
 
             state._fsp--;
@@ -4459,23 +4619,23 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature_Impl__Group__1__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1668:1: rule__Feature_Impl__Group__1__Impl : ( ( rule__Feature_Impl__NameAssignment_1 ) ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1732:1: rule__Feature_Impl__Group__1__Impl : ( ( rule__Feature_Impl__NameAssignment_1 ) ) ;
     public final void rule__Feature_Impl__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1672:1: ( ( ( rule__Feature_Impl__NameAssignment_1 ) ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1673:1: ( ( rule__Feature_Impl__NameAssignment_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1736:1: ( ( ( rule__Feature_Impl__NameAssignment_1 ) ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1737:1: ( ( rule__Feature_Impl__NameAssignment_1 ) )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1673:1: ( ( rule__Feature_Impl__NameAssignment_1 ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1674:1: ( rule__Feature_Impl__NameAssignment_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1737:1: ( ( rule__Feature_Impl__NameAssignment_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1738:1: ( rule__Feature_Impl__NameAssignment_1 )
             {
              before(grammarAccess.getFeature_ImplAccess().getNameAssignment_1()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1675:1: ( rule__Feature_Impl__NameAssignment_1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1675:2: rule__Feature_Impl__NameAssignment_1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1739:1: ( rule__Feature_Impl__NameAssignment_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1739:2: rule__Feature_Impl__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Feature_Impl__NameAssignment_1_in_rule__Feature_Impl__Group__1__Impl3375);
+            pushFollow(FOLLOW_rule__Feature_Impl__NameAssignment_1_in_rule__Feature_Impl__Group__1__Impl3501);
             rule__Feature_Impl__NameAssignment_1();
 
             state._fsp--;
@@ -4506,21 +4666,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature_Impl__Group__2"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1685:1: rule__Feature_Impl__Group__2 : rule__Feature_Impl__Group__2__Impl rule__Feature_Impl__Group__3 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1749:1: rule__Feature_Impl__Group__2 : rule__Feature_Impl__Group__2__Impl rule__Feature_Impl__Group__3 ;
     public final void rule__Feature_Impl__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1689:1: ( rule__Feature_Impl__Group__2__Impl rule__Feature_Impl__Group__3 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1690:2: rule__Feature_Impl__Group__2__Impl rule__Feature_Impl__Group__3
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1753:1: ( rule__Feature_Impl__Group__2__Impl rule__Feature_Impl__Group__3 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1754:2: rule__Feature_Impl__Group__2__Impl rule__Feature_Impl__Group__3
             {
-            pushFollow(FOLLOW_rule__Feature_Impl__Group__2__Impl_in_rule__Feature_Impl__Group__23405);
+            pushFollow(FOLLOW_rule__Feature_Impl__Group__2__Impl_in_rule__Feature_Impl__Group__23531);
             rule__Feature_Impl__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Feature_Impl__Group__3_in_rule__Feature_Impl__Group__23408);
+            pushFollow(FOLLOW_rule__Feature_Impl__Group__3_in_rule__Feature_Impl__Group__23534);
             rule__Feature_Impl__Group__3();
 
             state._fsp--;
@@ -4544,20 +4704,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature_Impl__Group__2__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1697:1: rule__Feature_Impl__Group__2__Impl : ( ( rule__Feature_Impl__Group_2__0 )? ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1761:1: rule__Feature_Impl__Group__2__Impl : ( ( rule__Feature_Impl__Group_2__0 )? ) ;
     public final void rule__Feature_Impl__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1701:1: ( ( ( rule__Feature_Impl__Group_2__0 )? ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1702:1: ( ( rule__Feature_Impl__Group_2__0 )? )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1765:1: ( ( ( rule__Feature_Impl__Group_2__0 )? ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1766:1: ( ( rule__Feature_Impl__Group_2__0 )? )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1702:1: ( ( rule__Feature_Impl__Group_2__0 )? )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1703:1: ( rule__Feature_Impl__Group_2__0 )?
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1766:1: ( ( rule__Feature_Impl__Group_2__0 )? )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1767:1: ( rule__Feature_Impl__Group_2__0 )?
             {
              before(grammarAccess.getFeature_ImplAccess().getGroup_2()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1704:1: ( rule__Feature_Impl__Group_2__0 )?
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1768:1: ( rule__Feature_Impl__Group_2__0 )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -4566,9 +4726,9 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
             }
             switch (alt12) {
                 case 1 :
-                    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1704:2: rule__Feature_Impl__Group_2__0
+                    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1768:2: rule__Feature_Impl__Group_2__0
                     {
-                    pushFollow(FOLLOW_rule__Feature_Impl__Group_2__0_in_rule__Feature_Impl__Group__2__Impl3435);
+                    pushFollow(FOLLOW_rule__Feature_Impl__Group_2__0_in_rule__Feature_Impl__Group__2__Impl3561);
                     rule__Feature_Impl__Group_2__0();
 
                     state._fsp--;
@@ -4602,16 +4762,16 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature_Impl__Group__3"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1714:1: rule__Feature_Impl__Group__3 : rule__Feature_Impl__Group__3__Impl ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1778:1: rule__Feature_Impl__Group__3 : rule__Feature_Impl__Group__3__Impl ;
     public final void rule__Feature_Impl__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1718:1: ( rule__Feature_Impl__Group__3__Impl )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1719:2: rule__Feature_Impl__Group__3__Impl
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1782:1: ( rule__Feature_Impl__Group__3__Impl )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1783:2: rule__Feature_Impl__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__Feature_Impl__Group__3__Impl_in_rule__Feature_Impl__Group__33466);
+            pushFollow(FOLLOW_rule__Feature_Impl__Group__3__Impl_in_rule__Feature_Impl__Group__33592);
             rule__Feature_Impl__Group__3__Impl();
 
             state._fsp--;
@@ -4635,20 +4795,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature_Impl__Group__3__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1725:1: rule__Feature_Impl__Group__3__Impl : ( ( rule__Feature_Impl__Group_3__0 )? ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1789:1: rule__Feature_Impl__Group__3__Impl : ( ( rule__Feature_Impl__Group_3__0 )? ) ;
     public final void rule__Feature_Impl__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1729:1: ( ( ( rule__Feature_Impl__Group_3__0 )? ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1730:1: ( ( rule__Feature_Impl__Group_3__0 )? )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1793:1: ( ( ( rule__Feature_Impl__Group_3__0 )? ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1794:1: ( ( rule__Feature_Impl__Group_3__0 )? )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1730:1: ( ( rule__Feature_Impl__Group_3__0 )? )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1731:1: ( rule__Feature_Impl__Group_3__0 )?
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1794:1: ( ( rule__Feature_Impl__Group_3__0 )? )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1795:1: ( rule__Feature_Impl__Group_3__0 )?
             {
              before(grammarAccess.getFeature_ImplAccess().getGroup_3()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1732:1: ( rule__Feature_Impl__Group_3__0 )?
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1796:1: ( rule__Feature_Impl__Group_3__0 )?
             int alt13=2;
             int LA13_0 = input.LA(1);
 
@@ -4657,9 +4817,9 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
             }
             switch (alt13) {
                 case 1 :
-                    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1732:2: rule__Feature_Impl__Group_3__0
+                    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1796:2: rule__Feature_Impl__Group_3__0
                     {
-                    pushFollow(FOLLOW_rule__Feature_Impl__Group_3__0_in_rule__Feature_Impl__Group__3__Impl3493);
+                    pushFollow(FOLLOW_rule__Feature_Impl__Group_3__0_in_rule__Feature_Impl__Group__3__Impl3619);
                     rule__Feature_Impl__Group_3__0();
 
                     state._fsp--;
@@ -4693,21 +4853,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature_Impl__Group_2__0"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1750:1: rule__Feature_Impl__Group_2__0 : rule__Feature_Impl__Group_2__0__Impl rule__Feature_Impl__Group_2__1 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1814:1: rule__Feature_Impl__Group_2__0 : rule__Feature_Impl__Group_2__0__Impl rule__Feature_Impl__Group_2__1 ;
     public final void rule__Feature_Impl__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1754:1: ( rule__Feature_Impl__Group_2__0__Impl rule__Feature_Impl__Group_2__1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1755:2: rule__Feature_Impl__Group_2__0__Impl rule__Feature_Impl__Group_2__1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1818:1: ( rule__Feature_Impl__Group_2__0__Impl rule__Feature_Impl__Group_2__1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1819:2: rule__Feature_Impl__Group_2__0__Impl rule__Feature_Impl__Group_2__1
             {
-            pushFollow(FOLLOW_rule__Feature_Impl__Group_2__0__Impl_in_rule__Feature_Impl__Group_2__03532);
+            pushFollow(FOLLOW_rule__Feature_Impl__Group_2__0__Impl_in_rule__Feature_Impl__Group_2__03658);
             rule__Feature_Impl__Group_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Feature_Impl__Group_2__1_in_rule__Feature_Impl__Group_2__03535);
+            pushFollow(FOLLOW_rule__Feature_Impl__Group_2__1_in_rule__Feature_Impl__Group_2__03661);
             rule__Feature_Impl__Group_2__1();
 
             state._fsp--;
@@ -4731,20 +4891,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature_Impl__Group_2__0__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1762:1: rule__Feature_Impl__Group_2__0__Impl : ( RULE_BEGIN ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1826:1: rule__Feature_Impl__Group_2__0__Impl : ( RULE_BEGIN ) ;
     public final void rule__Feature_Impl__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1766:1: ( ( RULE_BEGIN ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1767:1: ( RULE_BEGIN )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1830:1: ( ( RULE_BEGIN ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1831:1: ( RULE_BEGIN )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1767:1: ( RULE_BEGIN )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1768:1: RULE_BEGIN
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1831:1: ( RULE_BEGIN )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1832:1: RULE_BEGIN
             {
              before(grammarAccess.getFeature_ImplAccess().getBEGINTerminalRuleCall_2_0()); 
-            match(input,RULE_BEGIN,FOLLOW_RULE_BEGIN_in_rule__Feature_Impl__Group_2__0__Impl3562); 
+            match(input,RULE_BEGIN,FOLLOW_RULE_BEGIN_in_rule__Feature_Impl__Group_2__0__Impl3688); 
              after(grammarAccess.getFeature_ImplAccess().getBEGINTerminalRuleCall_2_0()); 
 
             }
@@ -4768,21 +4928,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature_Impl__Group_2__1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1779:1: rule__Feature_Impl__Group_2__1 : rule__Feature_Impl__Group_2__1__Impl rule__Feature_Impl__Group_2__2 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1843:1: rule__Feature_Impl__Group_2__1 : rule__Feature_Impl__Group_2__1__Impl rule__Feature_Impl__Group_2__2 ;
     public final void rule__Feature_Impl__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1783:1: ( rule__Feature_Impl__Group_2__1__Impl rule__Feature_Impl__Group_2__2 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1784:2: rule__Feature_Impl__Group_2__1__Impl rule__Feature_Impl__Group_2__2
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1847:1: ( rule__Feature_Impl__Group_2__1__Impl rule__Feature_Impl__Group_2__2 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1848:2: rule__Feature_Impl__Group_2__1__Impl rule__Feature_Impl__Group_2__2
             {
-            pushFollow(FOLLOW_rule__Feature_Impl__Group_2__1__Impl_in_rule__Feature_Impl__Group_2__13591);
+            pushFollow(FOLLOW_rule__Feature_Impl__Group_2__1__Impl_in_rule__Feature_Impl__Group_2__13717);
             rule__Feature_Impl__Group_2__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Feature_Impl__Group_2__2_in_rule__Feature_Impl__Group_2__13594);
+            pushFollow(FOLLOW_rule__Feature_Impl__Group_2__2_in_rule__Feature_Impl__Group_2__13720);
             rule__Feature_Impl__Group_2__2();
 
             state._fsp--;
@@ -4806,23 +4966,23 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature_Impl__Group_2__1__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1791:1: rule__Feature_Impl__Group_2__1__Impl : ( ( rule__Feature_Impl__SubfeatureAssignment_2_1 ) ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1855:1: rule__Feature_Impl__Group_2__1__Impl : ( ( rule__Feature_Impl__SubfeatureAssignment_2_1 ) ) ;
     public final void rule__Feature_Impl__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1795:1: ( ( ( rule__Feature_Impl__SubfeatureAssignment_2_1 ) ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1796:1: ( ( rule__Feature_Impl__SubfeatureAssignment_2_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1859:1: ( ( ( rule__Feature_Impl__SubfeatureAssignment_2_1 ) ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1860:1: ( ( rule__Feature_Impl__SubfeatureAssignment_2_1 ) )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1796:1: ( ( rule__Feature_Impl__SubfeatureAssignment_2_1 ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1797:1: ( rule__Feature_Impl__SubfeatureAssignment_2_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1860:1: ( ( rule__Feature_Impl__SubfeatureAssignment_2_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1861:1: ( rule__Feature_Impl__SubfeatureAssignment_2_1 )
             {
              before(grammarAccess.getFeature_ImplAccess().getSubfeatureAssignment_2_1()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1798:1: ( rule__Feature_Impl__SubfeatureAssignment_2_1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1798:2: rule__Feature_Impl__SubfeatureAssignment_2_1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1862:1: ( rule__Feature_Impl__SubfeatureAssignment_2_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1862:2: rule__Feature_Impl__SubfeatureAssignment_2_1
             {
-            pushFollow(FOLLOW_rule__Feature_Impl__SubfeatureAssignment_2_1_in_rule__Feature_Impl__Group_2__1__Impl3621);
+            pushFollow(FOLLOW_rule__Feature_Impl__SubfeatureAssignment_2_1_in_rule__Feature_Impl__Group_2__1__Impl3747);
             rule__Feature_Impl__SubfeatureAssignment_2_1();
 
             state._fsp--;
@@ -4853,21 +5013,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature_Impl__Group_2__2"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1808:1: rule__Feature_Impl__Group_2__2 : rule__Feature_Impl__Group_2__2__Impl rule__Feature_Impl__Group_2__3 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1872:1: rule__Feature_Impl__Group_2__2 : rule__Feature_Impl__Group_2__2__Impl rule__Feature_Impl__Group_2__3 ;
     public final void rule__Feature_Impl__Group_2__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1812:1: ( rule__Feature_Impl__Group_2__2__Impl rule__Feature_Impl__Group_2__3 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1813:2: rule__Feature_Impl__Group_2__2__Impl rule__Feature_Impl__Group_2__3
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1876:1: ( rule__Feature_Impl__Group_2__2__Impl rule__Feature_Impl__Group_2__3 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1877:2: rule__Feature_Impl__Group_2__2__Impl rule__Feature_Impl__Group_2__3
             {
-            pushFollow(FOLLOW_rule__Feature_Impl__Group_2__2__Impl_in_rule__Feature_Impl__Group_2__23651);
+            pushFollow(FOLLOW_rule__Feature_Impl__Group_2__2__Impl_in_rule__Feature_Impl__Group_2__23777);
             rule__Feature_Impl__Group_2__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Feature_Impl__Group_2__3_in_rule__Feature_Impl__Group_2__23654);
+            pushFollow(FOLLOW_rule__Feature_Impl__Group_2__3_in_rule__Feature_Impl__Group_2__23780);
             rule__Feature_Impl__Group_2__3();
 
             state._fsp--;
@@ -4891,20 +5051,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature_Impl__Group_2__2__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1820:1: rule__Feature_Impl__Group_2__2__Impl : ( ( rule__Feature_Impl__SubfeatureAssignment_2_2 )* ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1884:1: rule__Feature_Impl__Group_2__2__Impl : ( ( rule__Feature_Impl__SubfeatureAssignment_2_2 )* ) ;
     public final void rule__Feature_Impl__Group_2__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1824:1: ( ( ( rule__Feature_Impl__SubfeatureAssignment_2_2 )* ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1825:1: ( ( rule__Feature_Impl__SubfeatureAssignment_2_2 )* )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1888:1: ( ( ( rule__Feature_Impl__SubfeatureAssignment_2_2 )* ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1889:1: ( ( rule__Feature_Impl__SubfeatureAssignment_2_2 )* )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1825:1: ( ( rule__Feature_Impl__SubfeatureAssignment_2_2 )* )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1826:1: ( rule__Feature_Impl__SubfeatureAssignment_2_2 )*
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1889:1: ( ( rule__Feature_Impl__SubfeatureAssignment_2_2 )* )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1890:1: ( rule__Feature_Impl__SubfeatureAssignment_2_2 )*
             {
              before(grammarAccess.getFeature_ImplAccess().getSubfeatureAssignment_2_2()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1827:1: ( rule__Feature_Impl__SubfeatureAssignment_2_2 )*
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1891:1: ( rule__Feature_Impl__SubfeatureAssignment_2_2 )*
             loop14:
             do {
                 int alt14=2;
@@ -4917,9 +5077,9 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
                 switch (alt14) {
             	case 1 :
-            	    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1827:2: rule__Feature_Impl__SubfeatureAssignment_2_2
+            	    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1891:2: rule__Feature_Impl__SubfeatureAssignment_2_2
             	    {
-            	    pushFollow(FOLLOW_rule__Feature_Impl__SubfeatureAssignment_2_2_in_rule__Feature_Impl__Group_2__2__Impl3681);
+            	    pushFollow(FOLLOW_rule__Feature_Impl__SubfeatureAssignment_2_2_in_rule__Feature_Impl__Group_2__2__Impl3807);
             	    rule__Feature_Impl__SubfeatureAssignment_2_2();
 
             	    state._fsp--;
@@ -4956,16 +5116,16 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature_Impl__Group_2__3"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1837:1: rule__Feature_Impl__Group_2__3 : rule__Feature_Impl__Group_2__3__Impl ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1901:1: rule__Feature_Impl__Group_2__3 : rule__Feature_Impl__Group_2__3__Impl ;
     public final void rule__Feature_Impl__Group_2__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1841:1: ( rule__Feature_Impl__Group_2__3__Impl )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1842:2: rule__Feature_Impl__Group_2__3__Impl
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1905:1: ( rule__Feature_Impl__Group_2__3__Impl )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1906:2: rule__Feature_Impl__Group_2__3__Impl
             {
-            pushFollow(FOLLOW_rule__Feature_Impl__Group_2__3__Impl_in_rule__Feature_Impl__Group_2__33712);
+            pushFollow(FOLLOW_rule__Feature_Impl__Group_2__3__Impl_in_rule__Feature_Impl__Group_2__33838);
             rule__Feature_Impl__Group_2__3__Impl();
 
             state._fsp--;
@@ -4989,20 +5149,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature_Impl__Group_2__3__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1848:1: rule__Feature_Impl__Group_2__3__Impl : ( RULE_END ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1912:1: rule__Feature_Impl__Group_2__3__Impl : ( RULE_END ) ;
     public final void rule__Feature_Impl__Group_2__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1852:1: ( ( RULE_END ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1853:1: ( RULE_END )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1916:1: ( ( RULE_END ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1917:1: ( RULE_END )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1853:1: ( RULE_END )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1854:1: RULE_END
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1917:1: ( RULE_END )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1918:1: RULE_END
             {
              before(grammarAccess.getFeature_ImplAccess().getENDTerminalRuleCall_2_3()); 
-            match(input,RULE_END,FOLLOW_RULE_END_in_rule__Feature_Impl__Group_2__3__Impl3739); 
+            match(input,RULE_END,FOLLOW_RULE_END_in_rule__Feature_Impl__Group_2__3__Impl3865); 
              after(grammarAccess.getFeature_ImplAccess().getENDTerminalRuleCall_2_3()); 
 
             }
@@ -5026,21 +5186,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature_Impl__Group_3__0"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1873:1: rule__Feature_Impl__Group_3__0 : rule__Feature_Impl__Group_3__0__Impl rule__Feature_Impl__Group_3__1 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1937:1: rule__Feature_Impl__Group_3__0 : rule__Feature_Impl__Group_3__0__Impl rule__Feature_Impl__Group_3__1 ;
     public final void rule__Feature_Impl__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1877:1: ( rule__Feature_Impl__Group_3__0__Impl rule__Feature_Impl__Group_3__1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1878:2: rule__Feature_Impl__Group_3__0__Impl rule__Feature_Impl__Group_3__1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1941:1: ( rule__Feature_Impl__Group_3__0__Impl rule__Feature_Impl__Group_3__1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1942:2: rule__Feature_Impl__Group_3__0__Impl rule__Feature_Impl__Group_3__1
             {
-            pushFollow(FOLLOW_rule__Feature_Impl__Group_3__0__Impl_in_rule__Feature_Impl__Group_3__03776);
+            pushFollow(FOLLOW_rule__Feature_Impl__Group_3__0__Impl_in_rule__Feature_Impl__Group_3__03902);
             rule__Feature_Impl__Group_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Feature_Impl__Group_3__1_in_rule__Feature_Impl__Group_3__03779);
+            pushFollow(FOLLOW_rule__Feature_Impl__Group_3__1_in_rule__Feature_Impl__Group_3__03905);
             rule__Feature_Impl__Group_3__1();
 
             state._fsp--;
@@ -5064,20 +5224,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature_Impl__Group_3__0__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1885:1: rule__Feature_Impl__Group_3__0__Impl : ( LeftSquareBracket ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1949:1: rule__Feature_Impl__Group_3__0__Impl : ( LeftSquareBracket ) ;
     public final void rule__Feature_Impl__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1889:1: ( ( LeftSquareBracket ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1890:1: ( LeftSquareBracket )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1953:1: ( ( LeftSquareBracket ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1954:1: ( LeftSquareBracket )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1890:1: ( LeftSquareBracket )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1891:1: LeftSquareBracket
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1954:1: ( LeftSquareBracket )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1955:1: LeftSquareBracket
             {
              before(grammarAccess.getFeature_ImplAccess().getLeftSquareBracketKeyword_3_0()); 
-            match(input,LeftSquareBracket,FOLLOW_LeftSquareBracket_in_rule__Feature_Impl__Group_3__0__Impl3807); 
+            match(input,LeftSquareBracket,FOLLOW_LeftSquareBracket_in_rule__Feature_Impl__Group_3__0__Impl3933); 
              after(grammarAccess.getFeature_ImplAccess().getLeftSquareBracketKeyword_3_0()); 
 
             }
@@ -5101,21 +5261,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature_Impl__Group_3__1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1904:1: rule__Feature_Impl__Group_3__1 : rule__Feature_Impl__Group_3__1__Impl rule__Feature_Impl__Group_3__2 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1968:1: rule__Feature_Impl__Group_3__1 : rule__Feature_Impl__Group_3__1__Impl rule__Feature_Impl__Group_3__2 ;
     public final void rule__Feature_Impl__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1908:1: ( rule__Feature_Impl__Group_3__1__Impl rule__Feature_Impl__Group_3__2 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1909:2: rule__Feature_Impl__Group_3__1__Impl rule__Feature_Impl__Group_3__2
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1972:1: ( rule__Feature_Impl__Group_3__1__Impl rule__Feature_Impl__Group_3__2 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1973:2: rule__Feature_Impl__Group_3__1__Impl rule__Feature_Impl__Group_3__2
             {
-            pushFollow(FOLLOW_rule__Feature_Impl__Group_3__1__Impl_in_rule__Feature_Impl__Group_3__13838);
+            pushFollow(FOLLOW_rule__Feature_Impl__Group_3__1__Impl_in_rule__Feature_Impl__Group_3__13964);
             rule__Feature_Impl__Group_3__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Feature_Impl__Group_3__2_in_rule__Feature_Impl__Group_3__13841);
+            pushFollow(FOLLOW_rule__Feature_Impl__Group_3__2_in_rule__Feature_Impl__Group_3__13967);
             rule__Feature_Impl__Group_3__2();
 
             state._fsp--;
@@ -5139,23 +5299,23 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature_Impl__Group_3__1__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1916:1: rule__Feature_Impl__Group_3__1__Impl : ( ( rule__Feature_Impl__ConstrainsAssignment_3_1 ) ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1980:1: rule__Feature_Impl__Group_3__1__Impl : ( ( rule__Feature_Impl__ConstrainsAssignment_3_1 ) ) ;
     public final void rule__Feature_Impl__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1920:1: ( ( ( rule__Feature_Impl__ConstrainsAssignment_3_1 ) ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1921:1: ( ( rule__Feature_Impl__ConstrainsAssignment_3_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1984:1: ( ( ( rule__Feature_Impl__ConstrainsAssignment_3_1 ) ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1985:1: ( ( rule__Feature_Impl__ConstrainsAssignment_3_1 ) )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1921:1: ( ( rule__Feature_Impl__ConstrainsAssignment_3_1 ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1922:1: ( rule__Feature_Impl__ConstrainsAssignment_3_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1985:1: ( ( rule__Feature_Impl__ConstrainsAssignment_3_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1986:1: ( rule__Feature_Impl__ConstrainsAssignment_3_1 )
             {
              before(grammarAccess.getFeature_ImplAccess().getConstrainsAssignment_3_1()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1923:1: ( rule__Feature_Impl__ConstrainsAssignment_3_1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1923:2: rule__Feature_Impl__ConstrainsAssignment_3_1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1987:1: ( rule__Feature_Impl__ConstrainsAssignment_3_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1987:2: rule__Feature_Impl__ConstrainsAssignment_3_1
             {
-            pushFollow(FOLLOW_rule__Feature_Impl__ConstrainsAssignment_3_1_in_rule__Feature_Impl__Group_3__1__Impl3868);
+            pushFollow(FOLLOW_rule__Feature_Impl__ConstrainsAssignment_3_1_in_rule__Feature_Impl__Group_3__1__Impl3994);
             rule__Feature_Impl__ConstrainsAssignment_3_1();
 
             state._fsp--;
@@ -5186,21 +5346,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature_Impl__Group_3__2"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1933:1: rule__Feature_Impl__Group_3__2 : rule__Feature_Impl__Group_3__2__Impl rule__Feature_Impl__Group_3__3 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1997:1: rule__Feature_Impl__Group_3__2 : rule__Feature_Impl__Group_3__2__Impl rule__Feature_Impl__Group_3__3 ;
     public final void rule__Feature_Impl__Group_3__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1937:1: ( rule__Feature_Impl__Group_3__2__Impl rule__Feature_Impl__Group_3__3 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1938:2: rule__Feature_Impl__Group_3__2__Impl rule__Feature_Impl__Group_3__3
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2001:1: ( rule__Feature_Impl__Group_3__2__Impl rule__Feature_Impl__Group_3__3 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2002:2: rule__Feature_Impl__Group_3__2__Impl rule__Feature_Impl__Group_3__3
             {
-            pushFollow(FOLLOW_rule__Feature_Impl__Group_3__2__Impl_in_rule__Feature_Impl__Group_3__23898);
+            pushFollow(FOLLOW_rule__Feature_Impl__Group_3__2__Impl_in_rule__Feature_Impl__Group_3__24024);
             rule__Feature_Impl__Group_3__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Feature_Impl__Group_3__3_in_rule__Feature_Impl__Group_3__23901);
+            pushFollow(FOLLOW_rule__Feature_Impl__Group_3__3_in_rule__Feature_Impl__Group_3__24027);
             rule__Feature_Impl__Group_3__3();
 
             state._fsp--;
@@ -5224,20 +5384,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature_Impl__Group_3__2__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1945:1: rule__Feature_Impl__Group_3__2__Impl : ( ( rule__Feature_Impl__Group_3_2__0 )* ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2009:1: rule__Feature_Impl__Group_3__2__Impl : ( ( rule__Feature_Impl__Group_3_2__0 )* ) ;
     public final void rule__Feature_Impl__Group_3__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1949:1: ( ( ( rule__Feature_Impl__Group_3_2__0 )* ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1950:1: ( ( rule__Feature_Impl__Group_3_2__0 )* )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2013:1: ( ( ( rule__Feature_Impl__Group_3_2__0 )* ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2014:1: ( ( rule__Feature_Impl__Group_3_2__0 )* )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1950:1: ( ( rule__Feature_Impl__Group_3_2__0 )* )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1951:1: ( rule__Feature_Impl__Group_3_2__0 )*
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2014:1: ( ( rule__Feature_Impl__Group_3_2__0 )* )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2015:1: ( rule__Feature_Impl__Group_3_2__0 )*
             {
              before(grammarAccess.getFeature_ImplAccess().getGroup_3_2()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1952:1: ( rule__Feature_Impl__Group_3_2__0 )*
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2016:1: ( rule__Feature_Impl__Group_3_2__0 )*
             loop15:
             do {
                 int alt15=2;
@@ -5250,9 +5410,9 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
                 switch (alt15) {
             	case 1 :
-            	    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1952:2: rule__Feature_Impl__Group_3_2__0
+            	    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2016:2: rule__Feature_Impl__Group_3_2__0
             	    {
-            	    pushFollow(FOLLOW_rule__Feature_Impl__Group_3_2__0_in_rule__Feature_Impl__Group_3__2__Impl3928);
+            	    pushFollow(FOLLOW_rule__Feature_Impl__Group_3_2__0_in_rule__Feature_Impl__Group_3__2__Impl4054);
             	    rule__Feature_Impl__Group_3_2__0();
 
             	    state._fsp--;
@@ -5289,16 +5449,16 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature_Impl__Group_3__3"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1962:1: rule__Feature_Impl__Group_3__3 : rule__Feature_Impl__Group_3__3__Impl ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2026:1: rule__Feature_Impl__Group_3__3 : rule__Feature_Impl__Group_3__3__Impl ;
     public final void rule__Feature_Impl__Group_3__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1966:1: ( rule__Feature_Impl__Group_3__3__Impl )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1967:2: rule__Feature_Impl__Group_3__3__Impl
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2030:1: ( rule__Feature_Impl__Group_3__3__Impl )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2031:2: rule__Feature_Impl__Group_3__3__Impl
             {
-            pushFollow(FOLLOW_rule__Feature_Impl__Group_3__3__Impl_in_rule__Feature_Impl__Group_3__33959);
+            pushFollow(FOLLOW_rule__Feature_Impl__Group_3__3__Impl_in_rule__Feature_Impl__Group_3__34085);
             rule__Feature_Impl__Group_3__3__Impl();
 
             state._fsp--;
@@ -5322,20 +5482,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature_Impl__Group_3__3__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1973:1: rule__Feature_Impl__Group_3__3__Impl : ( RightSquareBracket ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2037:1: rule__Feature_Impl__Group_3__3__Impl : ( RightSquareBracket ) ;
     public final void rule__Feature_Impl__Group_3__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1977:1: ( ( RightSquareBracket ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1978:1: ( RightSquareBracket )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2041:1: ( ( RightSquareBracket ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2042:1: ( RightSquareBracket )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1978:1: ( RightSquareBracket )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:1979:1: RightSquareBracket
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2042:1: ( RightSquareBracket )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2043:1: RightSquareBracket
             {
              before(grammarAccess.getFeature_ImplAccess().getRightSquareBracketKeyword_3_3()); 
-            match(input,RightSquareBracket,FOLLOW_RightSquareBracket_in_rule__Feature_Impl__Group_3__3__Impl3987); 
+            match(input,RightSquareBracket,FOLLOW_RightSquareBracket_in_rule__Feature_Impl__Group_3__3__Impl4113); 
              after(grammarAccess.getFeature_ImplAccess().getRightSquareBracketKeyword_3_3()); 
 
             }
@@ -5359,21 +5519,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature_Impl__Group_3_2__0"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2000:1: rule__Feature_Impl__Group_3_2__0 : rule__Feature_Impl__Group_3_2__0__Impl rule__Feature_Impl__Group_3_2__1 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2064:1: rule__Feature_Impl__Group_3_2__0 : rule__Feature_Impl__Group_3_2__0__Impl rule__Feature_Impl__Group_3_2__1 ;
     public final void rule__Feature_Impl__Group_3_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2004:1: ( rule__Feature_Impl__Group_3_2__0__Impl rule__Feature_Impl__Group_3_2__1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2005:2: rule__Feature_Impl__Group_3_2__0__Impl rule__Feature_Impl__Group_3_2__1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2068:1: ( rule__Feature_Impl__Group_3_2__0__Impl rule__Feature_Impl__Group_3_2__1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2069:2: rule__Feature_Impl__Group_3_2__0__Impl rule__Feature_Impl__Group_3_2__1
             {
-            pushFollow(FOLLOW_rule__Feature_Impl__Group_3_2__0__Impl_in_rule__Feature_Impl__Group_3_2__04026);
+            pushFollow(FOLLOW_rule__Feature_Impl__Group_3_2__0__Impl_in_rule__Feature_Impl__Group_3_2__04152);
             rule__Feature_Impl__Group_3_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Feature_Impl__Group_3_2__1_in_rule__Feature_Impl__Group_3_2__04029);
+            pushFollow(FOLLOW_rule__Feature_Impl__Group_3_2__1_in_rule__Feature_Impl__Group_3_2__04155);
             rule__Feature_Impl__Group_3_2__1();
 
             state._fsp--;
@@ -5397,20 +5557,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature_Impl__Group_3_2__0__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2012:1: rule__Feature_Impl__Group_3_2__0__Impl : ( Comma ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2076:1: rule__Feature_Impl__Group_3_2__0__Impl : ( Comma ) ;
     public final void rule__Feature_Impl__Group_3_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2016:1: ( ( Comma ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2017:1: ( Comma )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2080:1: ( ( Comma ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2081:1: ( Comma )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2017:1: ( Comma )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2018:1: Comma
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2081:1: ( Comma )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2082:1: Comma
             {
              before(grammarAccess.getFeature_ImplAccess().getCommaKeyword_3_2_0()); 
-            match(input,Comma,FOLLOW_Comma_in_rule__Feature_Impl__Group_3_2__0__Impl4057); 
+            match(input,Comma,FOLLOW_Comma_in_rule__Feature_Impl__Group_3_2__0__Impl4183); 
              after(grammarAccess.getFeature_ImplAccess().getCommaKeyword_3_2_0()); 
 
             }
@@ -5434,16 +5594,16 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature_Impl__Group_3_2__1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2031:1: rule__Feature_Impl__Group_3_2__1 : rule__Feature_Impl__Group_3_2__1__Impl ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2095:1: rule__Feature_Impl__Group_3_2__1 : rule__Feature_Impl__Group_3_2__1__Impl ;
     public final void rule__Feature_Impl__Group_3_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2035:1: ( rule__Feature_Impl__Group_3_2__1__Impl )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2036:2: rule__Feature_Impl__Group_3_2__1__Impl
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2099:1: ( rule__Feature_Impl__Group_3_2__1__Impl )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2100:2: rule__Feature_Impl__Group_3_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__Feature_Impl__Group_3_2__1__Impl_in_rule__Feature_Impl__Group_3_2__14088);
+            pushFollow(FOLLOW_rule__Feature_Impl__Group_3_2__1__Impl_in_rule__Feature_Impl__Group_3_2__14214);
             rule__Feature_Impl__Group_3_2__1__Impl();
 
             state._fsp--;
@@ -5467,23 +5627,23 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature_Impl__Group_3_2__1__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2042:1: rule__Feature_Impl__Group_3_2__1__Impl : ( ( rule__Feature_Impl__ConstrainsAssignment_3_2_1 ) ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2106:1: rule__Feature_Impl__Group_3_2__1__Impl : ( ( rule__Feature_Impl__ConstrainsAssignment_3_2_1 ) ) ;
     public final void rule__Feature_Impl__Group_3_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2046:1: ( ( ( rule__Feature_Impl__ConstrainsAssignment_3_2_1 ) ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2047:1: ( ( rule__Feature_Impl__ConstrainsAssignment_3_2_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2110:1: ( ( ( rule__Feature_Impl__ConstrainsAssignment_3_2_1 ) ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2111:1: ( ( rule__Feature_Impl__ConstrainsAssignment_3_2_1 ) )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2047:1: ( ( rule__Feature_Impl__ConstrainsAssignment_3_2_1 ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2048:1: ( rule__Feature_Impl__ConstrainsAssignment_3_2_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2111:1: ( ( rule__Feature_Impl__ConstrainsAssignment_3_2_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2112:1: ( rule__Feature_Impl__ConstrainsAssignment_3_2_1 )
             {
              before(grammarAccess.getFeature_ImplAccess().getConstrainsAssignment_3_2_1()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2049:1: ( rule__Feature_Impl__ConstrainsAssignment_3_2_1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2049:2: rule__Feature_Impl__ConstrainsAssignment_3_2_1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2113:1: ( rule__Feature_Impl__ConstrainsAssignment_3_2_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2113:2: rule__Feature_Impl__ConstrainsAssignment_3_2_1
             {
-            pushFollow(FOLLOW_rule__Feature_Impl__ConstrainsAssignment_3_2_1_in_rule__Feature_Impl__Group_3_2__1__Impl4115);
+            pushFollow(FOLLOW_rule__Feature_Impl__ConstrainsAssignment_3_2_1_in_rule__Feature_Impl__Group_3_2__1__Impl4241);
             rule__Feature_Impl__ConstrainsAssignment_3_2_1();
 
             state._fsp--;
@@ -5514,21 +5674,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Grouped__Group__0"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2063:1: rule__Grouped__Group__0 : rule__Grouped__Group__0__Impl rule__Grouped__Group__1 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2127:1: rule__Grouped__Group__0 : rule__Grouped__Group__0__Impl rule__Grouped__Group__1 ;
     public final void rule__Grouped__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2067:1: ( rule__Grouped__Group__0__Impl rule__Grouped__Group__1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2068:2: rule__Grouped__Group__0__Impl rule__Grouped__Group__1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2131:1: ( rule__Grouped__Group__0__Impl rule__Grouped__Group__1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2132:2: rule__Grouped__Group__0__Impl rule__Grouped__Group__1
             {
-            pushFollow(FOLLOW_rule__Grouped__Group__0__Impl_in_rule__Grouped__Group__04149);
+            pushFollow(FOLLOW_rule__Grouped__Group__0__Impl_in_rule__Grouped__Group__04275);
             rule__Grouped__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Grouped__Group__1_in_rule__Grouped__Group__04152);
+            pushFollow(FOLLOW_rule__Grouped__Group__1_in_rule__Grouped__Group__04278);
             rule__Grouped__Group__1();
 
             state._fsp--;
@@ -5552,23 +5712,23 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Grouped__Group__0__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2075:1: rule__Grouped__Group__0__Impl : ( ( rule__Grouped__NameAssignment_0 ) ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2139:1: rule__Grouped__Group__0__Impl : ( ( rule__Grouped__NameAssignment_0 ) ) ;
     public final void rule__Grouped__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2079:1: ( ( ( rule__Grouped__NameAssignment_0 ) ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2080:1: ( ( rule__Grouped__NameAssignment_0 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2143:1: ( ( ( rule__Grouped__NameAssignment_0 ) ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2144:1: ( ( rule__Grouped__NameAssignment_0 ) )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2080:1: ( ( rule__Grouped__NameAssignment_0 ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2081:1: ( rule__Grouped__NameAssignment_0 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2144:1: ( ( rule__Grouped__NameAssignment_0 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2145:1: ( rule__Grouped__NameAssignment_0 )
             {
              before(grammarAccess.getGroupedAccess().getNameAssignment_0()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2082:1: ( rule__Grouped__NameAssignment_0 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2082:2: rule__Grouped__NameAssignment_0
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2146:1: ( rule__Grouped__NameAssignment_0 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2146:2: rule__Grouped__NameAssignment_0
             {
-            pushFollow(FOLLOW_rule__Grouped__NameAssignment_0_in_rule__Grouped__Group__0__Impl4179);
+            pushFollow(FOLLOW_rule__Grouped__NameAssignment_0_in_rule__Grouped__Group__0__Impl4305);
             rule__Grouped__NameAssignment_0();
 
             state._fsp--;
@@ -5599,16 +5759,16 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Grouped__Group__1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2092:1: rule__Grouped__Group__1 : rule__Grouped__Group__1__Impl ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2156:1: rule__Grouped__Group__1 : rule__Grouped__Group__1__Impl ;
     public final void rule__Grouped__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2096:1: ( rule__Grouped__Group__1__Impl )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2097:2: rule__Grouped__Group__1__Impl
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2160:1: ( rule__Grouped__Group__1__Impl )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2161:2: rule__Grouped__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Grouped__Group__1__Impl_in_rule__Grouped__Group__14209);
+            pushFollow(FOLLOW_rule__Grouped__Group__1__Impl_in_rule__Grouped__Group__14335);
             rule__Grouped__Group__1__Impl();
 
             state._fsp--;
@@ -5632,20 +5792,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Grouped__Group__1__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2103:1: rule__Grouped__Group__1__Impl : ( ( rule__Grouped__Group_1__0 )? ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2167:1: rule__Grouped__Group__1__Impl : ( ( rule__Grouped__Group_1__0 )? ) ;
     public final void rule__Grouped__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2107:1: ( ( ( rule__Grouped__Group_1__0 )? ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2108:1: ( ( rule__Grouped__Group_1__0 )? )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2171:1: ( ( ( rule__Grouped__Group_1__0 )? ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2172:1: ( ( rule__Grouped__Group_1__0 )? )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2108:1: ( ( rule__Grouped__Group_1__0 )? )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2109:1: ( rule__Grouped__Group_1__0 )?
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2172:1: ( ( rule__Grouped__Group_1__0 )? )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2173:1: ( rule__Grouped__Group_1__0 )?
             {
              before(grammarAccess.getGroupedAccess().getGroup_1()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2110:1: ( rule__Grouped__Group_1__0 )?
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2174:1: ( rule__Grouped__Group_1__0 )?
             int alt16=2;
             int LA16_0 = input.LA(1);
 
@@ -5654,9 +5814,9 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
             }
             switch (alt16) {
                 case 1 :
-                    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2110:2: rule__Grouped__Group_1__0
+                    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2174:2: rule__Grouped__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__Grouped__Group_1__0_in_rule__Grouped__Group__1__Impl4236);
+                    pushFollow(FOLLOW_rule__Grouped__Group_1__0_in_rule__Grouped__Group__1__Impl4362);
                     rule__Grouped__Group_1__0();
 
                     state._fsp--;
@@ -5690,21 +5850,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Grouped__Group_1__0"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2124:1: rule__Grouped__Group_1__0 : rule__Grouped__Group_1__0__Impl rule__Grouped__Group_1__1 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2188:1: rule__Grouped__Group_1__0 : rule__Grouped__Group_1__0__Impl rule__Grouped__Group_1__1 ;
     public final void rule__Grouped__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2128:1: ( rule__Grouped__Group_1__0__Impl rule__Grouped__Group_1__1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2129:2: rule__Grouped__Group_1__0__Impl rule__Grouped__Group_1__1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2192:1: ( rule__Grouped__Group_1__0__Impl rule__Grouped__Group_1__1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2193:2: rule__Grouped__Group_1__0__Impl rule__Grouped__Group_1__1
             {
-            pushFollow(FOLLOW_rule__Grouped__Group_1__0__Impl_in_rule__Grouped__Group_1__04271);
+            pushFollow(FOLLOW_rule__Grouped__Group_1__0__Impl_in_rule__Grouped__Group_1__04397);
             rule__Grouped__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Grouped__Group_1__1_in_rule__Grouped__Group_1__04274);
+            pushFollow(FOLLOW_rule__Grouped__Group_1__1_in_rule__Grouped__Group_1__04400);
             rule__Grouped__Group_1__1();
 
             state._fsp--;
@@ -5728,20 +5888,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Grouped__Group_1__0__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2136:1: rule__Grouped__Group_1__0__Impl : ( LeftSquareBracket ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2200:1: rule__Grouped__Group_1__0__Impl : ( LeftSquareBracket ) ;
     public final void rule__Grouped__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2140:1: ( ( LeftSquareBracket ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2141:1: ( LeftSquareBracket )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2204:1: ( ( LeftSquareBracket ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2205:1: ( LeftSquareBracket )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2141:1: ( LeftSquareBracket )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2142:1: LeftSquareBracket
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2205:1: ( LeftSquareBracket )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2206:1: LeftSquareBracket
             {
              before(grammarAccess.getGroupedAccess().getLeftSquareBracketKeyword_1_0()); 
-            match(input,LeftSquareBracket,FOLLOW_LeftSquareBracket_in_rule__Grouped__Group_1__0__Impl4302); 
+            match(input,LeftSquareBracket,FOLLOW_LeftSquareBracket_in_rule__Grouped__Group_1__0__Impl4428); 
              after(grammarAccess.getGroupedAccess().getLeftSquareBracketKeyword_1_0()); 
 
             }
@@ -5765,21 +5925,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Grouped__Group_1__1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2155:1: rule__Grouped__Group_1__1 : rule__Grouped__Group_1__1__Impl rule__Grouped__Group_1__2 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2219:1: rule__Grouped__Group_1__1 : rule__Grouped__Group_1__1__Impl rule__Grouped__Group_1__2 ;
     public final void rule__Grouped__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2159:1: ( rule__Grouped__Group_1__1__Impl rule__Grouped__Group_1__2 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2160:2: rule__Grouped__Group_1__1__Impl rule__Grouped__Group_1__2
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2223:1: ( rule__Grouped__Group_1__1__Impl rule__Grouped__Group_1__2 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2224:2: rule__Grouped__Group_1__1__Impl rule__Grouped__Group_1__2
             {
-            pushFollow(FOLLOW_rule__Grouped__Group_1__1__Impl_in_rule__Grouped__Group_1__14333);
+            pushFollow(FOLLOW_rule__Grouped__Group_1__1__Impl_in_rule__Grouped__Group_1__14459);
             rule__Grouped__Group_1__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Grouped__Group_1__2_in_rule__Grouped__Group_1__14336);
+            pushFollow(FOLLOW_rule__Grouped__Group_1__2_in_rule__Grouped__Group_1__14462);
             rule__Grouped__Group_1__2();
 
             state._fsp--;
@@ -5803,23 +5963,23 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Grouped__Group_1__1__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2167:1: rule__Grouped__Group_1__1__Impl : ( ( rule__Grouped__ConstrainsAssignment_1_1 ) ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2231:1: rule__Grouped__Group_1__1__Impl : ( ( rule__Grouped__ConstrainsAssignment_1_1 ) ) ;
     public final void rule__Grouped__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2171:1: ( ( ( rule__Grouped__ConstrainsAssignment_1_1 ) ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2172:1: ( ( rule__Grouped__ConstrainsAssignment_1_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2235:1: ( ( ( rule__Grouped__ConstrainsAssignment_1_1 ) ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2236:1: ( ( rule__Grouped__ConstrainsAssignment_1_1 ) )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2172:1: ( ( rule__Grouped__ConstrainsAssignment_1_1 ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2173:1: ( rule__Grouped__ConstrainsAssignment_1_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2236:1: ( ( rule__Grouped__ConstrainsAssignment_1_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2237:1: ( rule__Grouped__ConstrainsAssignment_1_1 )
             {
              before(grammarAccess.getGroupedAccess().getConstrainsAssignment_1_1()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2174:1: ( rule__Grouped__ConstrainsAssignment_1_1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2174:2: rule__Grouped__ConstrainsAssignment_1_1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2238:1: ( rule__Grouped__ConstrainsAssignment_1_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2238:2: rule__Grouped__ConstrainsAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__Grouped__ConstrainsAssignment_1_1_in_rule__Grouped__Group_1__1__Impl4363);
+            pushFollow(FOLLOW_rule__Grouped__ConstrainsAssignment_1_1_in_rule__Grouped__Group_1__1__Impl4489);
             rule__Grouped__ConstrainsAssignment_1_1();
 
             state._fsp--;
@@ -5850,21 +6010,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Grouped__Group_1__2"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2184:1: rule__Grouped__Group_1__2 : rule__Grouped__Group_1__2__Impl rule__Grouped__Group_1__3 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2248:1: rule__Grouped__Group_1__2 : rule__Grouped__Group_1__2__Impl rule__Grouped__Group_1__3 ;
     public final void rule__Grouped__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2188:1: ( rule__Grouped__Group_1__2__Impl rule__Grouped__Group_1__3 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2189:2: rule__Grouped__Group_1__2__Impl rule__Grouped__Group_1__3
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2252:1: ( rule__Grouped__Group_1__2__Impl rule__Grouped__Group_1__3 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2253:2: rule__Grouped__Group_1__2__Impl rule__Grouped__Group_1__3
             {
-            pushFollow(FOLLOW_rule__Grouped__Group_1__2__Impl_in_rule__Grouped__Group_1__24393);
+            pushFollow(FOLLOW_rule__Grouped__Group_1__2__Impl_in_rule__Grouped__Group_1__24519);
             rule__Grouped__Group_1__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Grouped__Group_1__3_in_rule__Grouped__Group_1__24396);
+            pushFollow(FOLLOW_rule__Grouped__Group_1__3_in_rule__Grouped__Group_1__24522);
             rule__Grouped__Group_1__3();
 
             state._fsp--;
@@ -5888,20 +6048,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Grouped__Group_1__2__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2196:1: rule__Grouped__Group_1__2__Impl : ( ( rule__Grouped__Group_1_2__0 )* ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2260:1: rule__Grouped__Group_1__2__Impl : ( ( rule__Grouped__Group_1_2__0 )* ) ;
     public final void rule__Grouped__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2200:1: ( ( ( rule__Grouped__Group_1_2__0 )* ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2201:1: ( ( rule__Grouped__Group_1_2__0 )* )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2264:1: ( ( ( rule__Grouped__Group_1_2__0 )* ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2265:1: ( ( rule__Grouped__Group_1_2__0 )* )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2201:1: ( ( rule__Grouped__Group_1_2__0 )* )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2202:1: ( rule__Grouped__Group_1_2__0 )*
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2265:1: ( ( rule__Grouped__Group_1_2__0 )* )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2266:1: ( rule__Grouped__Group_1_2__0 )*
             {
              before(grammarAccess.getGroupedAccess().getGroup_1_2()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2203:1: ( rule__Grouped__Group_1_2__0 )*
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2267:1: ( rule__Grouped__Group_1_2__0 )*
             loop17:
             do {
                 int alt17=2;
@@ -5914,9 +6074,9 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
                 switch (alt17) {
             	case 1 :
-            	    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2203:2: rule__Grouped__Group_1_2__0
+            	    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2267:2: rule__Grouped__Group_1_2__0
             	    {
-            	    pushFollow(FOLLOW_rule__Grouped__Group_1_2__0_in_rule__Grouped__Group_1__2__Impl4423);
+            	    pushFollow(FOLLOW_rule__Grouped__Group_1_2__0_in_rule__Grouped__Group_1__2__Impl4549);
             	    rule__Grouped__Group_1_2__0();
 
             	    state._fsp--;
@@ -5953,16 +6113,16 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Grouped__Group_1__3"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2213:1: rule__Grouped__Group_1__3 : rule__Grouped__Group_1__3__Impl ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2277:1: rule__Grouped__Group_1__3 : rule__Grouped__Group_1__3__Impl ;
     public final void rule__Grouped__Group_1__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2217:1: ( rule__Grouped__Group_1__3__Impl )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2218:2: rule__Grouped__Group_1__3__Impl
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2281:1: ( rule__Grouped__Group_1__3__Impl )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2282:2: rule__Grouped__Group_1__3__Impl
             {
-            pushFollow(FOLLOW_rule__Grouped__Group_1__3__Impl_in_rule__Grouped__Group_1__34454);
+            pushFollow(FOLLOW_rule__Grouped__Group_1__3__Impl_in_rule__Grouped__Group_1__34580);
             rule__Grouped__Group_1__3__Impl();
 
             state._fsp--;
@@ -5986,20 +6146,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Grouped__Group_1__3__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2224:1: rule__Grouped__Group_1__3__Impl : ( RightSquareBracket ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2288:1: rule__Grouped__Group_1__3__Impl : ( RightSquareBracket ) ;
     public final void rule__Grouped__Group_1__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2228:1: ( ( RightSquareBracket ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2229:1: ( RightSquareBracket )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2292:1: ( ( RightSquareBracket ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2293:1: ( RightSquareBracket )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2229:1: ( RightSquareBracket )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2230:1: RightSquareBracket
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2293:1: ( RightSquareBracket )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2294:1: RightSquareBracket
             {
              before(grammarAccess.getGroupedAccess().getRightSquareBracketKeyword_1_3()); 
-            match(input,RightSquareBracket,FOLLOW_RightSquareBracket_in_rule__Grouped__Group_1__3__Impl4482); 
+            match(input,RightSquareBracket,FOLLOW_RightSquareBracket_in_rule__Grouped__Group_1__3__Impl4608); 
              after(grammarAccess.getGroupedAccess().getRightSquareBracketKeyword_1_3()); 
 
             }
@@ -6023,21 +6183,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Grouped__Group_1_2__0"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2251:1: rule__Grouped__Group_1_2__0 : rule__Grouped__Group_1_2__0__Impl rule__Grouped__Group_1_2__1 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2315:1: rule__Grouped__Group_1_2__0 : rule__Grouped__Group_1_2__0__Impl rule__Grouped__Group_1_2__1 ;
     public final void rule__Grouped__Group_1_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2255:1: ( rule__Grouped__Group_1_2__0__Impl rule__Grouped__Group_1_2__1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2256:2: rule__Grouped__Group_1_2__0__Impl rule__Grouped__Group_1_2__1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2319:1: ( rule__Grouped__Group_1_2__0__Impl rule__Grouped__Group_1_2__1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2320:2: rule__Grouped__Group_1_2__0__Impl rule__Grouped__Group_1_2__1
             {
-            pushFollow(FOLLOW_rule__Grouped__Group_1_2__0__Impl_in_rule__Grouped__Group_1_2__04521);
+            pushFollow(FOLLOW_rule__Grouped__Group_1_2__0__Impl_in_rule__Grouped__Group_1_2__04647);
             rule__Grouped__Group_1_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Grouped__Group_1_2__1_in_rule__Grouped__Group_1_2__04524);
+            pushFollow(FOLLOW_rule__Grouped__Group_1_2__1_in_rule__Grouped__Group_1_2__04650);
             rule__Grouped__Group_1_2__1();
 
             state._fsp--;
@@ -6061,20 +6221,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Grouped__Group_1_2__0__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2263:1: rule__Grouped__Group_1_2__0__Impl : ( Comma ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2327:1: rule__Grouped__Group_1_2__0__Impl : ( Comma ) ;
     public final void rule__Grouped__Group_1_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2267:1: ( ( Comma ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2268:1: ( Comma )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2331:1: ( ( Comma ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2332:1: ( Comma )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2268:1: ( Comma )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2269:1: Comma
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2332:1: ( Comma )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2333:1: Comma
             {
              before(grammarAccess.getGroupedAccess().getCommaKeyword_1_2_0()); 
-            match(input,Comma,FOLLOW_Comma_in_rule__Grouped__Group_1_2__0__Impl4552); 
+            match(input,Comma,FOLLOW_Comma_in_rule__Grouped__Group_1_2__0__Impl4678); 
              after(grammarAccess.getGroupedAccess().getCommaKeyword_1_2_0()); 
 
             }
@@ -6098,16 +6258,16 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Grouped__Group_1_2__1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2282:1: rule__Grouped__Group_1_2__1 : rule__Grouped__Group_1_2__1__Impl ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2346:1: rule__Grouped__Group_1_2__1 : rule__Grouped__Group_1_2__1__Impl ;
     public final void rule__Grouped__Group_1_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2286:1: ( rule__Grouped__Group_1_2__1__Impl )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2287:2: rule__Grouped__Group_1_2__1__Impl
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2350:1: ( rule__Grouped__Group_1_2__1__Impl )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2351:2: rule__Grouped__Group_1_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__Grouped__Group_1_2__1__Impl_in_rule__Grouped__Group_1_2__14583);
+            pushFollow(FOLLOW_rule__Grouped__Group_1_2__1__Impl_in_rule__Grouped__Group_1_2__14709);
             rule__Grouped__Group_1_2__1__Impl();
 
             state._fsp--;
@@ -6131,23 +6291,23 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Grouped__Group_1_2__1__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2293:1: rule__Grouped__Group_1_2__1__Impl : ( ( rule__Grouped__ConstrainsAssignment_1_2_1 ) ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2357:1: rule__Grouped__Group_1_2__1__Impl : ( ( rule__Grouped__ConstrainsAssignment_1_2_1 ) ) ;
     public final void rule__Grouped__Group_1_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2297:1: ( ( ( rule__Grouped__ConstrainsAssignment_1_2_1 ) ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2298:1: ( ( rule__Grouped__ConstrainsAssignment_1_2_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2361:1: ( ( ( rule__Grouped__ConstrainsAssignment_1_2_1 ) ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2362:1: ( ( rule__Grouped__ConstrainsAssignment_1_2_1 ) )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2298:1: ( ( rule__Grouped__ConstrainsAssignment_1_2_1 ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2299:1: ( rule__Grouped__ConstrainsAssignment_1_2_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2362:1: ( ( rule__Grouped__ConstrainsAssignment_1_2_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2363:1: ( rule__Grouped__ConstrainsAssignment_1_2_1 )
             {
              before(grammarAccess.getGroupedAccess().getConstrainsAssignment_1_2_1()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2300:1: ( rule__Grouped__ConstrainsAssignment_1_2_1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2300:2: rule__Grouped__ConstrainsAssignment_1_2_1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2364:1: ( rule__Grouped__ConstrainsAssignment_1_2_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2364:2: rule__Grouped__ConstrainsAssignment_1_2_1
             {
-            pushFollow(FOLLOW_rule__Grouped__ConstrainsAssignment_1_2_1_in_rule__Grouped__Group_1_2__1__Impl4610);
+            pushFollow(FOLLOW_rule__Grouped__ConstrainsAssignment_1_2_1_in_rule__Grouped__Group_1_2__1__Impl4736);
             rule__Grouped__ConstrainsAssignment_1_2_1();
 
             state._fsp--;
@@ -6178,21 +6338,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__Group__0"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2314:1: rule__Mandatory__Group__0 : rule__Mandatory__Group__0__Impl rule__Mandatory__Group__1 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2378:1: rule__Mandatory__Group__0 : rule__Mandatory__Group__0__Impl rule__Mandatory__Group__1 ;
     public final void rule__Mandatory__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2318:1: ( rule__Mandatory__Group__0__Impl rule__Mandatory__Group__1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2319:2: rule__Mandatory__Group__0__Impl rule__Mandatory__Group__1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2382:1: ( rule__Mandatory__Group__0__Impl rule__Mandatory__Group__1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2383:2: rule__Mandatory__Group__0__Impl rule__Mandatory__Group__1
             {
-            pushFollow(FOLLOW_rule__Mandatory__Group__0__Impl_in_rule__Mandatory__Group__04644);
+            pushFollow(FOLLOW_rule__Mandatory__Group__0__Impl_in_rule__Mandatory__Group__04770);
             rule__Mandatory__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Mandatory__Group__1_in_rule__Mandatory__Group__04647);
+            pushFollow(FOLLOW_rule__Mandatory__Group__1_in_rule__Mandatory__Group__04773);
             rule__Mandatory__Group__1();
 
             state._fsp--;
@@ -6216,23 +6376,23 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__Group__0__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2326:1: rule__Mandatory__Group__0__Impl : ( ( rule__Mandatory__NameAssignment_0 ) ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2390:1: rule__Mandatory__Group__0__Impl : ( ( rule__Mandatory__NameAssignment_0 ) ) ;
     public final void rule__Mandatory__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2330:1: ( ( ( rule__Mandatory__NameAssignment_0 ) ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2331:1: ( ( rule__Mandatory__NameAssignment_0 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2394:1: ( ( ( rule__Mandatory__NameAssignment_0 ) ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2395:1: ( ( rule__Mandatory__NameAssignment_0 ) )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2331:1: ( ( rule__Mandatory__NameAssignment_0 ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2332:1: ( rule__Mandatory__NameAssignment_0 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2395:1: ( ( rule__Mandatory__NameAssignment_0 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2396:1: ( rule__Mandatory__NameAssignment_0 )
             {
              before(grammarAccess.getMandatoryAccess().getNameAssignment_0()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2333:1: ( rule__Mandatory__NameAssignment_0 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2333:2: rule__Mandatory__NameAssignment_0
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2397:1: ( rule__Mandatory__NameAssignment_0 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2397:2: rule__Mandatory__NameAssignment_0
             {
-            pushFollow(FOLLOW_rule__Mandatory__NameAssignment_0_in_rule__Mandatory__Group__0__Impl4674);
+            pushFollow(FOLLOW_rule__Mandatory__NameAssignment_0_in_rule__Mandatory__Group__0__Impl4800);
             rule__Mandatory__NameAssignment_0();
 
             state._fsp--;
@@ -6263,21 +6423,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__Group__1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2343:1: rule__Mandatory__Group__1 : rule__Mandatory__Group__1__Impl rule__Mandatory__Group__2 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2407:1: rule__Mandatory__Group__1 : rule__Mandatory__Group__1__Impl rule__Mandatory__Group__2 ;
     public final void rule__Mandatory__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2347:1: ( rule__Mandatory__Group__1__Impl rule__Mandatory__Group__2 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2348:2: rule__Mandatory__Group__1__Impl rule__Mandatory__Group__2
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2411:1: ( rule__Mandatory__Group__1__Impl rule__Mandatory__Group__2 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2412:2: rule__Mandatory__Group__1__Impl rule__Mandatory__Group__2
             {
-            pushFollow(FOLLOW_rule__Mandatory__Group__1__Impl_in_rule__Mandatory__Group__14704);
+            pushFollow(FOLLOW_rule__Mandatory__Group__1__Impl_in_rule__Mandatory__Group__14830);
             rule__Mandatory__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Mandatory__Group__2_in_rule__Mandatory__Group__14707);
+            pushFollow(FOLLOW_rule__Mandatory__Group__2_in_rule__Mandatory__Group__14833);
             rule__Mandatory__Group__2();
 
             state._fsp--;
@@ -6301,20 +6461,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__Group__1__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2355:1: rule__Mandatory__Group__1__Impl : ( ( rule__Mandatory__Group_1__0 )? ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2419:1: rule__Mandatory__Group__1__Impl : ( ( rule__Mandatory__Group_1__0 )? ) ;
     public final void rule__Mandatory__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2359:1: ( ( ( rule__Mandatory__Group_1__0 )? ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2360:1: ( ( rule__Mandatory__Group_1__0 )? )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2423:1: ( ( ( rule__Mandatory__Group_1__0 )? ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2424:1: ( ( rule__Mandatory__Group_1__0 )? )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2360:1: ( ( rule__Mandatory__Group_1__0 )? )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2361:1: ( rule__Mandatory__Group_1__0 )?
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2424:1: ( ( rule__Mandatory__Group_1__0 )? )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2425:1: ( rule__Mandatory__Group_1__0 )?
             {
              before(grammarAccess.getMandatoryAccess().getGroup_1()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2362:1: ( rule__Mandatory__Group_1__0 )?
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2426:1: ( rule__Mandatory__Group_1__0 )?
             int alt18=2;
             int LA18_0 = input.LA(1);
 
@@ -6323,9 +6483,9 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
             }
             switch (alt18) {
                 case 1 :
-                    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2362:2: rule__Mandatory__Group_1__0
+                    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2426:2: rule__Mandatory__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__Mandatory__Group_1__0_in_rule__Mandatory__Group__1__Impl4734);
+                    pushFollow(FOLLOW_rule__Mandatory__Group_1__0_in_rule__Mandatory__Group__1__Impl4860);
                     rule__Mandatory__Group_1__0();
 
                     state._fsp--;
@@ -6359,21 +6519,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__Group__2"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2372:1: rule__Mandatory__Group__2 : rule__Mandatory__Group__2__Impl rule__Mandatory__Group__3 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2436:1: rule__Mandatory__Group__2 : rule__Mandatory__Group__2__Impl rule__Mandatory__Group__3 ;
     public final void rule__Mandatory__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2376:1: ( rule__Mandatory__Group__2__Impl rule__Mandatory__Group__3 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2377:2: rule__Mandatory__Group__2__Impl rule__Mandatory__Group__3
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2440:1: ( rule__Mandatory__Group__2__Impl rule__Mandatory__Group__3 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2441:2: rule__Mandatory__Group__2__Impl rule__Mandatory__Group__3
             {
-            pushFollow(FOLLOW_rule__Mandatory__Group__2__Impl_in_rule__Mandatory__Group__24765);
+            pushFollow(FOLLOW_rule__Mandatory__Group__2__Impl_in_rule__Mandatory__Group__24891);
             rule__Mandatory__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Mandatory__Group__3_in_rule__Mandatory__Group__24768);
+            pushFollow(FOLLOW_rule__Mandatory__Group__3_in_rule__Mandatory__Group__24894);
             rule__Mandatory__Group__3();
 
             state._fsp--;
@@ -6397,20 +6557,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__Group__2__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2384:1: rule__Mandatory__Group__2__Impl : ( ( rule__Mandatory__Group_2__0 )? ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2448:1: rule__Mandatory__Group__2__Impl : ( ( rule__Mandatory__Group_2__0 )? ) ;
     public final void rule__Mandatory__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2388:1: ( ( ( rule__Mandatory__Group_2__0 )? ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2389:1: ( ( rule__Mandatory__Group_2__0 )? )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2452:1: ( ( ( rule__Mandatory__Group_2__0 )? ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2453:1: ( ( rule__Mandatory__Group_2__0 )? )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2389:1: ( ( rule__Mandatory__Group_2__0 )? )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2390:1: ( rule__Mandatory__Group_2__0 )?
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2453:1: ( ( rule__Mandatory__Group_2__0 )? )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2454:1: ( rule__Mandatory__Group_2__0 )?
             {
              before(grammarAccess.getMandatoryAccess().getGroup_2()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2391:1: ( rule__Mandatory__Group_2__0 )?
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2455:1: ( rule__Mandatory__Group_2__0 )?
             int alt19=2;
             int LA19_0 = input.LA(1);
 
@@ -6419,9 +6579,9 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
             }
             switch (alt19) {
                 case 1 :
-                    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2391:2: rule__Mandatory__Group_2__0
+                    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2455:2: rule__Mandatory__Group_2__0
                     {
-                    pushFollow(FOLLOW_rule__Mandatory__Group_2__0_in_rule__Mandatory__Group__2__Impl4795);
+                    pushFollow(FOLLOW_rule__Mandatory__Group_2__0_in_rule__Mandatory__Group__2__Impl4921);
                     rule__Mandatory__Group_2__0();
 
                     state._fsp--;
@@ -6455,16 +6615,16 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__Group__3"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2401:1: rule__Mandatory__Group__3 : rule__Mandatory__Group__3__Impl ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2465:1: rule__Mandatory__Group__3 : rule__Mandatory__Group__3__Impl ;
     public final void rule__Mandatory__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2405:1: ( rule__Mandatory__Group__3__Impl )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2406:2: rule__Mandatory__Group__3__Impl
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2469:1: ( rule__Mandatory__Group__3__Impl )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2470:2: rule__Mandatory__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__Mandatory__Group__3__Impl_in_rule__Mandatory__Group__34826);
+            pushFollow(FOLLOW_rule__Mandatory__Group__3__Impl_in_rule__Mandatory__Group__34952);
             rule__Mandatory__Group__3__Impl();
 
             state._fsp--;
@@ -6488,20 +6648,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__Group__3__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2412:1: rule__Mandatory__Group__3__Impl : ( ( rule__Mandatory__Group_3__0 )? ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2476:1: rule__Mandatory__Group__3__Impl : ( ( rule__Mandatory__Group_3__0 )? ) ;
     public final void rule__Mandatory__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2416:1: ( ( ( rule__Mandatory__Group_3__0 )? ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2417:1: ( ( rule__Mandatory__Group_3__0 )? )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2480:1: ( ( ( rule__Mandatory__Group_3__0 )? ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2481:1: ( ( rule__Mandatory__Group_3__0 )? )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2417:1: ( ( rule__Mandatory__Group_3__0 )? )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2418:1: ( rule__Mandatory__Group_3__0 )?
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2481:1: ( ( rule__Mandatory__Group_3__0 )? )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2482:1: ( rule__Mandatory__Group_3__0 )?
             {
              before(grammarAccess.getMandatoryAccess().getGroup_3()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2419:1: ( rule__Mandatory__Group_3__0 )?
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2483:1: ( rule__Mandatory__Group_3__0 )?
             int alt20=2;
             int LA20_0 = input.LA(1);
 
@@ -6510,9 +6670,9 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
             }
             switch (alt20) {
                 case 1 :
-                    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2419:2: rule__Mandatory__Group_3__0
+                    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2483:2: rule__Mandatory__Group_3__0
                     {
-                    pushFollow(FOLLOW_rule__Mandatory__Group_3__0_in_rule__Mandatory__Group__3__Impl4853);
+                    pushFollow(FOLLOW_rule__Mandatory__Group_3__0_in_rule__Mandatory__Group__3__Impl4979);
                     rule__Mandatory__Group_3__0();
 
                     state._fsp--;
@@ -6546,21 +6706,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__Group_1__0"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2437:1: rule__Mandatory__Group_1__0 : rule__Mandatory__Group_1__0__Impl rule__Mandatory__Group_1__1 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2501:1: rule__Mandatory__Group_1__0 : rule__Mandatory__Group_1__0__Impl rule__Mandatory__Group_1__1 ;
     public final void rule__Mandatory__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2441:1: ( rule__Mandatory__Group_1__0__Impl rule__Mandatory__Group_1__1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2442:2: rule__Mandatory__Group_1__0__Impl rule__Mandatory__Group_1__1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2505:1: ( rule__Mandatory__Group_1__0__Impl rule__Mandatory__Group_1__1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2506:2: rule__Mandatory__Group_1__0__Impl rule__Mandatory__Group_1__1
             {
-            pushFollow(FOLLOW_rule__Mandatory__Group_1__0__Impl_in_rule__Mandatory__Group_1__04892);
+            pushFollow(FOLLOW_rule__Mandatory__Group_1__0__Impl_in_rule__Mandatory__Group_1__05018);
             rule__Mandatory__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Mandatory__Group_1__1_in_rule__Mandatory__Group_1__04895);
+            pushFollow(FOLLOW_rule__Mandatory__Group_1__1_in_rule__Mandatory__Group_1__05021);
             rule__Mandatory__Group_1__1();
 
             state._fsp--;
@@ -6584,20 +6744,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__Group_1__0__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2449:1: rule__Mandatory__Group_1__0__Impl : ( LeftCurlyBracket ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2513:1: rule__Mandatory__Group_1__0__Impl : ( LeftCurlyBracket ) ;
     public final void rule__Mandatory__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2453:1: ( ( LeftCurlyBracket ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2454:1: ( LeftCurlyBracket )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2517:1: ( ( LeftCurlyBracket ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2518:1: ( LeftCurlyBracket )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2454:1: ( LeftCurlyBracket )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2455:1: LeftCurlyBracket
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2518:1: ( LeftCurlyBracket )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2519:1: LeftCurlyBracket
             {
              before(grammarAccess.getMandatoryAccess().getLeftCurlyBracketKeyword_1_0()); 
-            match(input,LeftCurlyBracket,FOLLOW_LeftCurlyBracket_in_rule__Mandatory__Group_1__0__Impl4923); 
+            match(input,LeftCurlyBracket,FOLLOW_LeftCurlyBracket_in_rule__Mandatory__Group_1__0__Impl5049); 
              after(grammarAccess.getMandatoryAccess().getLeftCurlyBracketKeyword_1_0()); 
 
             }
@@ -6621,21 +6781,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__Group_1__1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2468:1: rule__Mandatory__Group_1__1 : rule__Mandatory__Group_1__1__Impl rule__Mandatory__Group_1__2 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2532:1: rule__Mandatory__Group_1__1 : rule__Mandatory__Group_1__1__Impl rule__Mandatory__Group_1__2 ;
     public final void rule__Mandatory__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2472:1: ( rule__Mandatory__Group_1__1__Impl rule__Mandatory__Group_1__2 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2473:2: rule__Mandatory__Group_1__1__Impl rule__Mandatory__Group_1__2
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2536:1: ( rule__Mandatory__Group_1__1__Impl rule__Mandatory__Group_1__2 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2537:2: rule__Mandatory__Group_1__1__Impl rule__Mandatory__Group_1__2
             {
-            pushFollow(FOLLOW_rule__Mandatory__Group_1__1__Impl_in_rule__Mandatory__Group_1__14954);
+            pushFollow(FOLLOW_rule__Mandatory__Group_1__1__Impl_in_rule__Mandatory__Group_1__15080);
             rule__Mandatory__Group_1__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Mandatory__Group_1__2_in_rule__Mandatory__Group_1__14957);
+            pushFollow(FOLLOW_rule__Mandatory__Group_1__2_in_rule__Mandatory__Group_1__15083);
             rule__Mandatory__Group_1__2();
 
             state._fsp--;
@@ -6659,23 +6819,23 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__Group_1__1__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2480:1: rule__Mandatory__Group_1__1__Impl : ( ( rule__Mandatory__SubfeatureAssignment_1_1 ) ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2544:1: rule__Mandatory__Group_1__1__Impl : ( ( rule__Mandatory__SubfeatureAssignment_1_1 ) ) ;
     public final void rule__Mandatory__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2484:1: ( ( ( rule__Mandatory__SubfeatureAssignment_1_1 ) ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2485:1: ( ( rule__Mandatory__SubfeatureAssignment_1_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2548:1: ( ( ( rule__Mandatory__SubfeatureAssignment_1_1 ) ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2549:1: ( ( rule__Mandatory__SubfeatureAssignment_1_1 ) )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2485:1: ( ( rule__Mandatory__SubfeatureAssignment_1_1 ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2486:1: ( rule__Mandatory__SubfeatureAssignment_1_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2549:1: ( ( rule__Mandatory__SubfeatureAssignment_1_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2550:1: ( rule__Mandatory__SubfeatureAssignment_1_1 )
             {
              before(grammarAccess.getMandatoryAccess().getSubfeatureAssignment_1_1()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2487:1: ( rule__Mandatory__SubfeatureAssignment_1_1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2487:2: rule__Mandatory__SubfeatureAssignment_1_1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2551:1: ( rule__Mandatory__SubfeatureAssignment_1_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2551:2: rule__Mandatory__SubfeatureAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__Mandatory__SubfeatureAssignment_1_1_in_rule__Mandatory__Group_1__1__Impl4984);
+            pushFollow(FOLLOW_rule__Mandatory__SubfeatureAssignment_1_1_in_rule__Mandatory__Group_1__1__Impl5110);
             rule__Mandatory__SubfeatureAssignment_1_1();
 
             state._fsp--;
@@ -6706,21 +6866,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__Group_1__2"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2497:1: rule__Mandatory__Group_1__2 : rule__Mandatory__Group_1__2__Impl rule__Mandatory__Group_1__3 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2561:1: rule__Mandatory__Group_1__2 : rule__Mandatory__Group_1__2__Impl rule__Mandatory__Group_1__3 ;
     public final void rule__Mandatory__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2501:1: ( rule__Mandatory__Group_1__2__Impl rule__Mandatory__Group_1__3 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2502:2: rule__Mandatory__Group_1__2__Impl rule__Mandatory__Group_1__3
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2565:1: ( rule__Mandatory__Group_1__2__Impl rule__Mandatory__Group_1__3 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2566:2: rule__Mandatory__Group_1__2__Impl rule__Mandatory__Group_1__3
             {
-            pushFollow(FOLLOW_rule__Mandatory__Group_1__2__Impl_in_rule__Mandatory__Group_1__25014);
+            pushFollow(FOLLOW_rule__Mandatory__Group_1__2__Impl_in_rule__Mandatory__Group_1__25140);
             rule__Mandatory__Group_1__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Mandatory__Group_1__3_in_rule__Mandatory__Group_1__25017);
+            pushFollow(FOLLOW_rule__Mandatory__Group_1__3_in_rule__Mandatory__Group_1__25143);
             rule__Mandatory__Group_1__3();
 
             state._fsp--;
@@ -6744,20 +6904,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__Group_1__2__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2509:1: rule__Mandatory__Group_1__2__Impl : ( ( rule__Mandatory__Group_1_2__0 )* ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2573:1: rule__Mandatory__Group_1__2__Impl : ( ( rule__Mandatory__Group_1_2__0 )* ) ;
     public final void rule__Mandatory__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2513:1: ( ( ( rule__Mandatory__Group_1_2__0 )* ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2514:1: ( ( rule__Mandatory__Group_1_2__0 )* )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2577:1: ( ( ( rule__Mandatory__Group_1_2__0 )* ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2578:1: ( ( rule__Mandatory__Group_1_2__0 )* )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2514:1: ( ( rule__Mandatory__Group_1_2__0 )* )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2515:1: ( rule__Mandatory__Group_1_2__0 )*
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2578:1: ( ( rule__Mandatory__Group_1_2__0 )* )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2579:1: ( rule__Mandatory__Group_1_2__0 )*
             {
              before(grammarAccess.getMandatoryAccess().getGroup_1_2()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2516:1: ( rule__Mandatory__Group_1_2__0 )*
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2580:1: ( rule__Mandatory__Group_1_2__0 )*
             loop21:
             do {
                 int alt21=2;
@@ -6770,9 +6930,9 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
                 switch (alt21) {
             	case 1 :
-            	    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2516:2: rule__Mandatory__Group_1_2__0
+            	    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2580:2: rule__Mandatory__Group_1_2__0
             	    {
-            	    pushFollow(FOLLOW_rule__Mandatory__Group_1_2__0_in_rule__Mandatory__Group_1__2__Impl5044);
+            	    pushFollow(FOLLOW_rule__Mandatory__Group_1_2__0_in_rule__Mandatory__Group_1__2__Impl5170);
             	    rule__Mandatory__Group_1_2__0();
 
             	    state._fsp--;
@@ -6809,16 +6969,16 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__Group_1__3"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2526:1: rule__Mandatory__Group_1__3 : rule__Mandatory__Group_1__3__Impl ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2590:1: rule__Mandatory__Group_1__3 : rule__Mandatory__Group_1__3__Impl ;
     public final void rule__Mandatory__Group_1__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2530:1: ( rule__Mandatory__Group_1__3__Impl )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2531:2: rule__Mandatory__Group_1__3__Impl
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2594:1: ( rule__Mandatory__Group_1__3__Impl )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2595:2: rule__Mandatory__Group_1__3__Impl
             {
-            pushFollow(FOLLOW_rule__Mandatory__Group_1__3__Impl_in_rule__Mandatory__Group_1__35075);
+            pushFollow(FOLLOW_rule__Mandatory__Group_1__3__Impl_in_rule__Mandatory__Group_1__35201);
             rule__Mandatory__Group_1__3__Impl();
 
             state._fsp--;
@@ -6842,20 +7002,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__Group_1__3__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2537:1: rule__Mandatory__Group_1__3__Impl : ( RightCurlyBracket ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2601:1: rule__Mandatory__Group_1__3__Impl : ( RightCurlyBracket ) ;
     public final void rule__Mandatory__Group_1__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2541:1: ( ( RightCurlyBracket ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2542:1: ( RightCurlyBracket )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2605:1: ( ( RightCurlyBracket ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2606:1: ( RightCurlyBracket )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2542:1: ( RightCurlyBracket )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2543:1: RightCurlyBracket
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2606:1: ( RightCurlyBracket )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2607:1: RightCurlyBracket
             {
              before(grammarAccess.getMandatoryAccess().getRightCurlyBracketKeyword_1_3()); 
-            match(input,RightCurlyBracket,FOLLOW_RightCurlyBracket_in_rule__Mandatory__Group_1__3__Impl5103); 
+            match(input,RightCurlyBracket,FOLLOW_RightCurlyBracket_in_rule__Mandatory__Group_1__3__Impl5229); 
              after(grammarAccess.getMandatoryAccess().getRightCurlyBracketKeyword_1_3()); 
 
             }
@@ -6879,21 +7039,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__Group_1_2__0"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2564:1: rule__Mandatory__Group_1_2__0 : rule__Mandatory__Group_1_2__0__Impl rule__Mandatory__Group_1_2__1 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2628:1: rule__Mandatory__Group_1_2__0 : rule__Mandatory__Group_1_2__0__Impl rule__Mandatory__Group_1_2__1 ;
     public final void rule__Mandatory__Group_1_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2568:1: ( rule__Mandatory__Group_1_2__0__Impl rule__Mandatory__Group_1_2__1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2569:2: rule__Mandatory__Group_1_2__0__Impl rule__Mandatory__Group_1_2__1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2632:1: ( rule__Mandatory__Group_1_2__0__Impl rule__Mandatory__Group_1_2__1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2633:2: rule__Mandatory__Group_1_2__0__Impl rule__Mandatory__Group_1_2__1
             {
-            pushFollow(FOLLOW_rule__Mandatory__Group_1_2__0__Impl_in_rule__Mandatory__Group_1_2__05142);
+            pushFollow(FOLLOW_rule__Mandatory__Group_1_2__0__Impl_in_rule__Mandatory__Group_1_2__05268);
             rule__Mandatory__Group_1_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Mandatory__Group_1_2__1_in_rule__Mandatory__Group_1_2__05145);
+            pushFollow(FOLLOW_rule__Mandatory__Group_1_2__1_in_rule__Mandatory__Group_1_2__05271);
             rule__Mandatory__Group_1_2__1();
 
             state._fsp--;
@@ -6917,20 +7077,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__Group_1_2__0__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2576:1: rule__Mandatory__Group_1_2__0__Impl : ( Comma ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2640:1: rule__Mandatory__Group_1_2__0__Impl : ( Comma ) ;
     public final void rule__Mandatory__Group_1_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2580:1: ( ( Comma ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2581:1: ( Comma )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2644:1: ( ( Comma ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2645:1: ( Comma )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2581:1: ( Comma )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2582:1: Comma
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2645:1: ( Comma )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2646:1: Comma
             {
              before(grammarAccess.getMandatoryAccess().getCommaKeyword_1_2_0()); 
-            match(input,Comma,FOLLOW_Comma_in_rule__Mandatory__Group_1_2__0__Impl5173); 
+            match(input,Comma,FOLLOW_Comma_in_rule__Mandatory__Group_1_2__0__Impl5299); 
              after(grammarAccess.getMandatoryAccess().getCommaKeyword_1_2_0()); 
 
             }
@@ -6954,16 +7114,16 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__Group_1_2__1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2595:1: rule__Mandatory__Group_1_2__1 : rule__Mandatory__Group_1_2__1__Impl ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2659:1: rule__Mandatory__Group_1_2__1 : rule__Mandatory__Group_1_2__1__Impl ;
     public final void rule__Mandatory__Group_1_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2599:1: ( rule__Mandatory__Group_1_2__1__Impl )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2600:2: rule__Mandatory__Group_1_2__1__Impl
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2663:1: ( rule__Mandatory__Group_1_2__1__Impl )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2664:2: rule__Mandatory__Group_1_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__Mandatory__Group_1_2__1__Impl_in_rule__Mandatory__Group_1_2__15204);
+            pushFollow(FOLLOW_rule__Mandatory__Group_1_2__1__Impl_in_rule__Mandatory__Group_1_2__15330);
             rule__Mandatory__Group_1_2__1__Impl();
 
             state._fsp--;
@@ -6987,23 +7147,23 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__Group_1_2__1__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2606:1: rule__Mandatory__Group_1_2__1__Impl : ( ( rule__Mandatory__SubfeatureAssignment_1_2_1 ) ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2670:1: rule__Mandatory__Group_1_2__1__Impl : ( ( rule__Mandatory__SubfeatureAssignment_1_2_1 ) ) ;
     public final void rule__Mandatory__Group_1_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2610:1: ( ( ( rule__Mandatory__SubfeatureAssignment_1_2_1 ) ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2611:1: ( ( rule__Mandatory__SubfeatureAssignment_1_2_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2674:1: ( ( ( rule__Mandatory__SubfeatureAssignment_1_2_1 ) ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2675:1: ( ( rule__Mandatory__SubfeatureAssignment_1_2_1 ) )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2611:1: ( ( rule__Mandatory__SubfeatureAssignment_1_2_1 ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2612:1: ( rule__Mandatory__SubfeatureAssignment_1_2_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2675:1: ( ( rule__Mandatory__SubfeatureAssignment_1_2_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2676:1: ( rule__Mandatory__SubfeatureAssignment_1_2_1 )
             {
              before(grammarAccess.getMandatoryAccess().getSubfeatureAssignment_1_2_1()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2613:1: ( rule__Mandatory__SubfeatureAssignment_1_2_1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2613:2: rule__Mandatory__SubfeatureAssignment_1_2_1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2677:1: ( rule__Mandatory__SubfeatureAssignment_1_2_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2677:2: rule__Mandatory__SubfeatureAssignment_1_2_1
             {
-            pushFollow(FOLLOW_rule__Mandatory__SubfeatureAssignment_1_2_1_in_rule__Mandatory__Group_1_2__1__Impl5231);
+            pushFollow(FOLLOW_rule__Mandatory__SubfeatureAssignment_1_2_1_in_rule__Mandatory__Group_1_2__1__Impl5357);
             rule__Mandatory__SubfeatureAssignment_1_2_1();
 
             state._fsp--;
@@ -7034,21 +7194,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__Group_2__0"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2627:1: rule__Mandatory__Group_2__0 : rule__Mandatory__Group_2__0__Impl rule__Mandatory__Group_2__1 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2691:1: rule__Mandatory__Group_2__0 : rule__Mandatory__Group_2__0__Impl rule__Mandatory__Group_2__1 ;
     public final void rule__Mandatory__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2631:1: ( rule__Mandatory__Group_2__0__Impl rule__Mandatory__Group_2__1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2632:2: rule__Mandatory__Group_2__0__Impl rule__Mandatory__Group_2__1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2695:1: ( rule__Mandatory__Group_2__0__Impl rule__Mandatory__Group_2__1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2696:2: rule__Mandatory__Group_2__0__Impl rule__Mandatory__Group_2__1
             {
-            pushFollow(FOLLOW_rule__Mandatory__Group_2__0__Impl_in_rule__Mandatory__Group_2__05265);
+            pushFollow(FOLLOW_rule__Mandatory__Group_2__0__Impl_in_rule__Mandatory__Group_2__05391);
             rule__Mandatory__Group_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Mandatory__Group_2__1_in_rule__Mandatory__Group_2__05268);
+            pushFollow(FOLLOW_rule__Mandatory__Group_2__1_in_rule__Mandatory__Group_2__05394);
             rule__Mandatory__Group_2__1();
 
             state._fsp--;
@@ -7072,20 +7232,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__Group_2__0__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2639:1: rule__Mandatory__Group_2__0__Impl : ( LeftSquareBracket ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2703:1: rule__Mandatory__Group_2__0__Impl : ( LeftSquareBracket ) ;
     public final void rule__Mandatory__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2643:1: ( ( LeftSquareBracket ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2644:1: ( LeftSquareBracket )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2707:1: ( ( LeftSquareBracket ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2708:1: ( LeftSquareBracket )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2644:1: ( LeftSquareBracket )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2645:1: LeftSquareBracket
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2708:1: ( LeftSquareBracket )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2709:1: LeftSquareBracket
             {
              before(grammarAccess.getMandatoryAccess().getLeftSquareBracketKeyword_2_0()); 
-            match(input,LeftSquareBracket,FOLLOW_LeftSquareBracket_in_rule__Mandatory__Group_2__0__Impl5296); 
+            match(input,LeftSquareBracket,FOLLOW_LeftSquareBracket_in_rule__Mandatory__Group_2__0__Impl5422); 
              after(grammarAccess.getMandatoryAccess().getLeftSquareBracketKeyword_2_0()); 
 
             }
@@ -7109,21 +7269,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__Group_2__1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2658:1: rule__Mandatory__Group_2__1 : rule__Mandatory__Group_2__1__Impl rule__Mandatory__Group_2__2 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2722:1: rule__Mandatory__Group_2__1 : rule__Mandatory__Group_2__1__Impl rule__Mandatory__Group_2__2 ;
     public final void rule__Mandatory__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2662:1: ( rule__Mandatory__Group_2__1__Impl rule__Mandatory__Group_2__2 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2663:2: rule__Mandatory__Group_2__1__Impl rule__Mandatory__Group_2__2
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2726:1: ( rule__Mandatory__Group_2__1__Impl rule__Mandatory__Group_2__2 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2727:2: rule__Mandatory__Group_2__1__Impl rule__Mandatory__Group_2__2
             {
-            pushFollow(FOLLOW_rule__Mandatory__Group_2__1__Impl_in_rule__Mandatory__Group_2__15327);
+            pushFollow(FOLLOW_rule__Mandatory__Group_2__1__Impl_in_rule__Mandatory__Group_2__15453);
             rule__Mandatory__Group_2__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Mandatory__Group_2__2_in_rule__Mandatory__Group_2__15330);
+            pushFollow(FOLLOW_rule__Mandatory__Group_2__2_in_rule__Mandatory__Group_2__15456);
             rule__Mandatory__Group_2__2();
 
             state._fsp--;
@@ -7147,23 +7307,23 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__Group_2__1__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2670:1: rule__Mandatory__Group_2__1__Impl : ( ( rule__Mandatory__ConstrainsAssignment_2_1 ) ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2734:1: rule__Mandatory__Group_2__1__Impl : ( ( rule__Mandatory__ConstrainsAssignment_2_1 ) ) ;
     public final void rule__Mandatory__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2674:1: ( ( ( rule__Mandatory__ConstrainsAssignment_2_1 ) ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2675:1: ( ( rule__Mandatory__ConstrainsAssignment_2_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2738:1: ( ( ( rule__Mandatory__ConstrainsAssignment_2_1 ) ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2739:1: ( ( rule__Mandatory__ConstrainsAssignment_2_1 ) )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2675:1: ( ( rule__Mandatory__ConstrainsAssignment_2_1 ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2676:1: ( rule__Mandatory__ConstrainsAssignment_2_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2739:1: ( ( rule__Mandatory__ConstrainsAssignment_2_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2740:1: ( rule__Mandatory__ConstrainsAssignment_2_1 )
             {
              before(grammarAccess.getMandatoryAccess().getConstrainsAssignment_2_1()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2677:1: ( rule__Mandatory__ConstrainsAssignment_2_1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2677:2: rule__Mandatory__ConstrainsAssignment_2_1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2741:1: ( rule__Mandatory__ConstrainsAssignment_2_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2741:2: rule__Mandatory__ConstrainsAssignment_2_1
             {
-            pushFollow(FOLLOW_rule__Mandatory__ConstrainsAssignment_2_1_in_rule__Mandatory__Group_2__1__Impl5357);
+            pushFollow(FOLLOW_rule__Mandatory__ConstrainsAssignment_2_1_in_rule__Mandatory__Group_2__1__Impl5483);
             rule__Mandatory__ConstrainsAssignment_2_1();
 
             state._fsp--;
@@ -7194,21 +7354,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__Group_2__2"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2687:1: rule__Mandatory__Group_2__2 : rule__Mandatory__Group_2__2__Impl rule__Mandatory__Group_2__3 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2751:1: rule__Mandatory__Group_2__2 : rule__Mandatory__Group_2__2__Impl rule__Mandatory__Group_2__3 ;
     public final void rule__Mandatory__Group_2__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2691:1: ( rule__Mandatory__Group_2__2__Impl rule__Mandatory__Group_2__3 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2692:2: rule__Mandatory__Group_2__2__Impl rule__Mandatory__Group_2__3
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2755:1: ( rule__Mandatory__Group_2__2__Impl rule__Mandatory__Group_2__3 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2756:2: rule__Mandatory__Group_2__2__Impl rule__Mandatory__Group_2__3
             {
-            pushFollow(FOLLOW_rule__Mandatory__Group_2__2__Impl_in_rule__Mandatory__Group_2__25387);
+            pushFollow(FOLLOW_rule__Mandatory__Group_2__2__Impl_in_rule__Mandatory__Group_2__25513);
             rule__Mandatory__Group_2__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Mandatory__Group_2__3_in_rule__Mandatory__Group_2__25390);
+            pushFollow(FOLLOW_rule__Mandatory__Group_2__3_in_rule__Mandatory__Group_2__25516);
             rule__Mandatory__Group_2__3();
 
             state._fsp--;
@@ -7232,20 +7392,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__Group_2__2__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2699:1: rule__Mandatory__Group_2__2__Impl : ( ( rule__Mandatory__Group_2_2__0 )* ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2763:1: rule__Mandatory__Group_2__2__Impl : ( ( rule__Mandatory__Group_2_2__0 )* ) ;
     public final void rule__Mandatory__Group_2__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2703:1: ( ( ( rule__Mandatory__Group_2_2__0 )* ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2704:1: ( ( rule__Mandatory__Group_2_2__0 )* )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2767:1: ( ( ( rule__Mandatory__Group_2_2__0 )* ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2768:1: ( ( rule__Mandatory__Group_2_2__0 )* )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2704:1: ( ( rule__Mandatory__Group_2_2__0 )* )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2705:1: ( rule__Mandatory__Group_2_2__0 )*
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2768:1: ( ( rule__Mandatory__Group_2_2__0 )* )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2769:1: ( rule__Mandatory__Group_2_2__0 )*
             {
              before(grammarAccess.getMandatoryAccess().getGroup_2_2()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2706:1: ( rule__Mandatory__Group_2_2__0 )*
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2770:1: ( rule__Mandatory__Group_2_2__0 )*
             loop22:
             do {
                 int alt22=2;
@@ -7258,9 +7418,9 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
                 switch (alt22) {
             	case 1 :
-            	    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2706:2: rule__Mandatory__Group_2_2__0
+            	    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2770:2: rule__Mandatory__Group_2_2__0
             	    {
-            	    pushFollow(FOLLOW_rule__Mandatory__Group_2_2__0_in_rule__Mandatory__Group_2__2__Impl5417);
+            	    pushFollow(FOLLOW_rule__Mandatory__Group_2_2__0_in_rule__Mandatory__Group_2__2__Impl5543);
             	    rule__Mandatory__Group_2_2__0();
 
             	    state._fsp--;
@@ -7297,16 +7457,16 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__Group_2__3"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2716:1: rule__Mandatory__Group_2__3 : rule__Mandatory__Group_2__3__Impl ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2780:1: rule__Mandatory__Group_2__3 : rule__Mandatory__Group_2__3__Impl ;
     public final void rule__Mandatory__Group_2__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2720:1: ( rule__Mandatory__Group_2__3__Impl )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2721:2: rule__Mandatory__Group_2__3__Impl
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2784:1: ( rule__Mandatory__Group_2__3__Impl )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2785:2: rule__Mandatory__Group_2__3__Impl
             {
-            pushFollow(FOLLOW_rule__Mandatory__Group_2__3__Impl_in_rule__Mandatory__Group_2__35448);
+            pushFollow(FOLLOW_rule__Mandatory__Group_2__3__Impl_in_rule__Mandatory__Group_2__35574);
             rule__Mandatory__Group_2__3__Impl();
 
             state._fsp--;
@@ -7330,20 +7490,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__Group_2__3__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2727:1: rule__Mandatory__Group_2__3__Impl : ( RightSquareBracket ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2791:1: rule__Mandatory__Group_2__3__Impl : ( RightSquareBracket ) ;
     public final void rule__Mandatory__Group_2__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2731:1: ( ( RightSquareBracket ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2732:1: ( RightSquareBracket )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2795:1: ( ( RightSquareBracket ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2796:1: ( RightSquareBracket )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2732:1: ( RightSquareBracket )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2733:1: RightSquareBracket
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2796:1: ( RightSquareBracket )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2797:1: RightSquareBracket
             {
              before(grammarAccess.getMandatoryAccess().getRightSquareBracketKeyword_2_3()); 
-            match(input,RightSquareBracket,FOLLOW_RightSquareBracket_in_rule__Mandatory__Group_2__3__Impl5476); 
+            match(input,RightSquareBracket,FOLLOW_RightSquareBracket_in_rule__Mandatory__Group_2__3__Impl5602); 
              after(grammarAccess.getMandatoryAccess().getRightSquareBracketKeyword_2_3()); 
 
             }
@@ -7367,21 +7527,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__Group_2_2__0"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2754:1: rule__Mandatory__Group_2_2__0 : rule__Mandatory__Group_2_2__0__Impl rule__Mandatory__Group_2_2__1 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2818:1: rule__Mandatory__Group_2_2__0 : rule__Mandatory__Group_2_2__0__Impl rule__Mandatory__Group_2_2__1 ;
     public final void rule__Mandatory__Group_2_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2758:1: ( rule__Mandatory__Group_2_2__0__Impl rule__Mandatory__Group_2_2__1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2759:2: rule__Mandatory__Group_2_2__0__Impl rule__Mandatory__Group_2_2__1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2822:1: ( rule__Mandatory__Group_2_2__0__Impl rule__Mandatory__Group_2_2__1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2823:2: rule__Mandatory__Group_2_2__0__Impl rule__Mandatory__Group_2_2__1
             {
-            pushFollow(FOLLOW_rule__Mandatory__Group_2_2__0__Impl_in_rule__Mandatory__Group_2_2__05515);
+            pushFollow(FOLLOW_rule__Mandatory__Group_2_2__0__Impl_in_rule__Mandatory__Group_2_2__05641);
             rule__Mandatory__Group_2_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Mandatory__Group_2_2__1_in_rule__Mandatory__Group_2_2__05518);
+            pushFollow(FOLLOW_rule__Mandatory__Group_2_2__1_in_rule__Mandatory__Group_2_2__05644);
             rule__Mandatory__Group_2_2__1();
 
             state._fsp--;
@@ -7405,20 +7565,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__Group_2_2__0__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2766:1: rule__Mandatory__Group_2_2__0__Impl : ( Comma ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2830:1: rule__Mandatory__Group_2_2__0__Impl : ( Comma ) ;
     public final void rule__Mandatory__Group_2_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2770:1: ( ( Comma ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2771:1: ( Comma )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2834:1: ( ( Comma ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2835:1: ( Comma )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2771:1: ( Comma )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2772:1: Comma
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2835:1: ( Comma )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2836:1: Comma
             {
              before(grammarAccess.getMandatoryAccess().getCommaKeyword_2_2_0()); 
-            match(input,Comma,FOLLOW_Comma_in_rule__Mandatory__Group_2_2__0__Impl5546); 
+            match(input,Comma,FOLLOW_Comma_in_rule__Mandatory__Group_2_2__0__Impl5672); 
              after(grammarAccess.getMandatoryAccess().getCommaKeyword_2_2_0()); 
 
             }
@@ -7442,16 +7602,16 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__Group_2_2__1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2785:1: rule__Mandatory__Group_2_2__1 : rule__Mandatory__Group_2_2__1__Impl ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2849:1: rule__Mandatory__Group_2_2__1 : rule__Mandatory__Group_2_2__1__Impl ;
     public final void rule__Mandatory__Group_2_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2789:1: ( rule__Mandatory__Group_2_2__1__Impl )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2790:2: rule__Mandatory__Group_2_2__1__Impl
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2853:1: ( rule__Mandatory__Group_2_2__1__Impl )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2854:2: rule__Mandatory__Group_2_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__Mandatory__Group_2_2__1__Impl_in_rule__Mandatory__Group_2_2__15577);
+            pushFollow(FOLLOW_rule__Mandatory__Group_2_2__1__Impl_in_rule__Mandatory__Group_2_2__15703);
             rule__Mandatory__Group_2_2__1__Impl();
 
             state._fsp--;
@@ -7475,23 +7635,23 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__Group_2_2__1__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2796:1: rule__Mandatory__Group_2_2__1__Impl : ( ( rule__Mandatory__ConstrainsAssignment_2_2_1 ) ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2860:1: rule__Mandatory__Group_2_2__1__Impl : ( ( rule__Mandatory__ConstrainsAssignment_2_2_1 ) ) ;
     public final void rule__Mandatory__Group_2_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2800:1: ( ( ( rule__Mandatory__ConstrainsAssignment_2_2_1 ) ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2801:1: ( ( rule__Mandatory__ConstrainsAssignment_2_2_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2864:1: ( ( ( rule__Mandatory__ConstrainsAssignment_2_2_1 ) ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2865:1: ( ( rule__Mandatory__ConstrainsAssignment_2_2_1 ) )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2801:1: ( ( rule__Mandatory__ConstrainsAssignment_2_2_1 ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2802:1: ( rule__Mandatory__ConstrainsAssignment_2_2_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2865:1: ( ( rule__Mandatory__ConstrainsAssignment_2_2_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2866:1: ( rule__Mandatory__ConstrainsAssignment_2_2_1 )
             {
              before(grammarAccess.getMandatoryAccess().getConstrainsAssignment_2_2_1()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2803:1: ( rule__Mandatory__ConstrainsAssignment_2_2_1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2803:2: rule__Mandatory__ConstrainsAssignment_2_2_1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2867:1: ( rule__Mandatory__ConstrainsAssignment_2_2_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2867:2: rule__Mandatory__ConstrainsAssignment_2_2_1
             {
-            pushFollow(FOLLOW_rule__Mandatory__ConstrainsAssignment_2_2_1_in_rule__Mandatory__Group_2_2__1__Impl5604);
+            pushFollow(FOLLOW_rule__Mandatory__ConstrainsAssignment_2_2_1_in_rule__Mandatory__Group_2_2__1__Impl5730);
             rule__Mandatory__ConstrainsAssignment_2_2_1();
 
             state._fsp--;
@@ -7522,21 +7682,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__Group_3__0"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2817:1: rule__Mandatory__Group_3__0 : rule__Mandatory__Group_3__0__Impl rule__Mandatory__Group_3__1 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2881:1: rule__Mandatory__Group_3__0 : rule__Mandatory__Group_3__0__Impl rule__Mandatory__Group_3__1 ;
     public final void rule__Mandatory__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2821:1: ( rule__Mandatory__Group_3__0__Impl rule__Mandatory__Group_3__1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2822:2: rule__Mandatory__Group_3__0__Impl rule__Mandatory__Group_3__1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2885:1: ( rule__Mandatory__Group_3__0__Impl rule__Mandatory__Group_3__1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2886:2: rule__Mandatory__Group_3__0__Impl rule__Mandatory__Group_3__1
             {
-            pushFollow(FOLLOW_rule__Mandatory__Group_3__0__Impl_in_rule__Mandatory__Group_3__05638);
+            pushFollow(FOLLOW_rule__Mandatory__Group_3__0__Impl_in_rule__Mandatory__Group_3__05764);
             rule__Mandatory__Group_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Mandatory__Group_3__1_in_rule__Mandatory__Group_3__05641);
+            pushFollow(FOLLOW_rule__Mandatory__Group_3__1_in_rule__Mandatory__Group_3__05767);
             rule__Mandatory__Group_3__1();
 
             state._fsp--;
@@ -7560,23 +7720,23 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__Group_3__0__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2829:1: rule__Mandatory__Group_3__0__Impl : ( ( rule__Mandatory__GroupsAssignment_3_0 ) ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2893:1: rule__Mandatory__Group_3__0__Impl : ( ( rule__Mandatory__GroupsAssignment_3_0 ) ) ;
     public final void rule__Mandatory__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2833:1: ( ( ( rule__Mandatory__GroupsAssignment_3_0 ) ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2834:1: ( ( rule__Mandatory__GroupsAssignment_3_0 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2897:1: ( ( ( rule__Mandatory__GroupsAssignment_3_0 ) ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2898:1: ( ( rule__Mandatory__GroupsAssignment_3_0 ) )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2834:1: ( ( rule__Mandatory__GroupsAssignment_3_0 ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2835:1: ( rule__Mandatory__GroupsAssignment_3_0 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2898:1: ( ( rule__Mandatory__GroupsAssignment_3_0 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2899:1: ( rule__Mandatory__GroupsAssignment_3_0 )
             {
              before(grammarAccess.getMandatoryAccess().getGroupsAssignment_3_0()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2836:1: ( rule__Mandatory__GroupsAssignment_3_0 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2836:2: rule__Mandatory__GroupsAssignment_3_0
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2900:1: ( rule__Mandatory__GroupsAssignment_3_0 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2900:2: rule__Mandatory__GroupsAssignment_3_0
             {
-            pushFollow(FOLLOW_rule__Mandatory__GroupsAssignment_3_0_in_rule__Mandatory__Group_3__0__Impl5668);
+            pushFollow(FOLLOW_rule__Mandatory__GroupsAssignment_3_0_in_rule__Mandatory__Group_3__0__Impl5794);
             rule__Mandatory__GroupsAssignment_3_0();
 
             state._fsp--;
@@ -7607,16 +7767,16 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__Group_3__1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2846:1: rule__Mandatory__Group_3__1 : rule__Mandatory__Group_3__1__Impl ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2910:1: rule__Mandatory__Group_3__1 : rule__Mandatory__Group_3__1__Impl ;
     public final void rule__Mandatory__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2850:1: ( rule__Mandatory__Group_3__1__Impl )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2851:2: rule__Mandatory__Group_3__1__Impl
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2914:1: ( rule__Mandatory__Group_3__1__Impl )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2915:2: rule__Mandatory__Group_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__Mandatory__Group_3__1__Impl_in_rule__Mandatory__Group_3__15698);
+            pushFollow(FOLLOW_rule__Mandatory__Group_3__1__Impl_in_rule__Mandatory__Group_3__15824);
             rule__Mandatory__Group_3__1__Impl();
 
             state._fsp--;
@@ -7640,20 +7800,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__Group_3__1__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2857:1: rule__Mandatory__Group_3__1__Impl : ( ( rule__Mandatory__GroupsAssignment_3_1 )* ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2921:1: rule__Mandatory__Group_3__1__Impl : ( ( rule__Mandatory__GroupsAssignment_3_1 )* ) ;
     public final void rule__Mandatory__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2861:1: ( ( ( rule__Mandatory__GroupsAssignment_3_1 )* ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2862:1: ( ( rule__Mandatory__GroupsAssignment_3_1 )* )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2925:1: ( ( ( rule__Mandatory__GroupsAssignment_3_1 )* ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2926:1: ( ( rule__Mandatory__GroupsAssignment_3_1 )* )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2862:1: ( ( rule__Mandatory__GroupsAssignment_3_1 )* )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2863:1: ( rule__Mandatory__GroupsAssignment_3_1 )*
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2926:1: ( ( rule__Mandatory__GroupsAssignment_3_1 )* )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2927:1: ( rule__Mandatory__GroupsAssignment_3_1 )*
             {
              before(grammarAccess.getMandatoryAccess().getGroupsAssignment_3_1()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2864:1: ( rule__Mandatory__GroupsAssignment_3_1 )*
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2928:1: ( rule__Mandatory__GroupsAssignment_3_1 )*
             loop23:
             do {
                 int alt23=2;
@@ -7666,9 +7826,9 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
                 switch (alt23) {
             	case 1 :
-            	    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2864:2: rule__Mandatory__GroupsAssignment_3_1
+            	    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2928:2: rule__Mandatory__GroupsAssignment_3_1
             	    {
-            	    pushFollow(FOLLOW_rule__Mandatory__GroupsAssignment_3_1_in_rule__Mandatory__Group_3__1__Impl5725);
+            	    pushFollow(FOLLOW_rule__Mandatory__GroupsAssignment_3_1_in_rule__Mandatory__Group_3__1__Impl5851);
             	    rule__Mandatory__GroupsAssignment_3_1();
 
             	    state._fsp--;
@@ -7705,21 +7865,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__Group__0"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2878:1: rule__Optional__Group__0 : rule__Optional__Group__0__Impl rule__Optional__Group__1 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2942:1: rule__Optional__Group__0 : rule__Optional__Group__0__Impl rule__Optional__Group__1 ;
     public final void rule__Optional__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2882:1: ( rule__Optional__Group__0__Impl rule__Optional__Group__1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2883:2: rule__Optional__Group__0__Impl rule__Optional__Group__1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2946:1: ( rule__Optional__Group__0__Impl rule__Optional__Group__1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2947:2: rule__Optional__Group__0__Impl rule__Optional__Group__1
             {
-            pushFollow(FOLLOW_rule__Optional__Group__0__Impl_in_rule__Optional__Group__05760);
+            pushFollow(FOLLOW_rule__Optional__Group__0__Impl_in_rule__Optional__Group__05886);
             rule__Optional__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Optional__Group__1_in_rule__Optional__Group__05763);
+            pushFollow(FOLLOW_rule__Optional__Group__1_in_rule__Optional__Group__05889);
             rule__Optional__Group__1();
 
             state._fsp--;
@@ -7743,20 +7903,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__Group__0__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2890:1: rule__Optional__Group__0__Impl : ( QuestionMark ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2954:1: rule__Optional__Group__0__Impl : ( QuestionMark ) ;
     public final void rule__Optional__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2894:1: ( ( QuestionMark ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2895:1: ( QuestionMark )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2958:1: ( ( QuestionMark ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2959:1: ( QuestionMark )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2895:1: ( QuestionMark )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2896:1: QuestionMark
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2959:1: ( QuestionMark )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2960:1: QuestionMark
             {
              before(grammarAccess.getOptionalAccess().getQuestionMarkKeyword_0()); 
-            match(input,QuestionMark,FOLLOW_QuestionMark_in_rule__Optional__Group__0__Impl5791); 
+            match(input,QuestionMark,FOLLOW_QuestionMark_in_rule__Optional__Group__0__Impl5917); 
              after(grammarAccess.getOptionalAccess().getQuestionMarkKeyword_0()); 
 
             }
@@ -7780,21 +7940,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__Group__1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2909:1: rule__Optional__Group__1 : rule__Optional__Group__1__Impl rule__Optional__Group__2 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2973:1: rule__Optional__Group__1 : rule__Optional__Group__1__Impl rule__Optional__Group__2 ;
     public final void rule__Optional__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2913:1: ( rule__Optional__Group__1__Impl rule__Optional__Group__2 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2914:2: rule__Optional__Group__1__Impl rule__Optional__Group__2
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2977:1: ( rule__Optional__Group__1__Impl rule__Optional__Group__2 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2978:2: rule__Optional__Group__1__Impl rule__Optional__Group__2
             {
-            pushFollow(FOLLOW_rule__Optional__Group__1__Impl_in_rule__Optional__Group__15822);
+            pushFollow(FOLLOW_rule__Optional__Group__1__Impl_in_rule__Optional__Group__15948);
             rule__Optional__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Optional__Group__2_in_rule__Optional__Group__15825);
+            pushFollow(FOLLOW_rule__Optional__Group__2_in_rule__Optional__Group__15951);
             rule__Optional__Group__2();
 
             state._fsp--;
@@ -7818,23 +7978,23 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__Group__1__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2921:1: rule__Optional__Group__1__Impl : ( ( rule__Optional__NameAssignment_1 ) ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2985:1: rule__Optional__Group__1__Impl : ( ( rule__Optional__NameAssignment_1 ) ) ;
     public final void rule__Optional__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2925:1: ( ( ( rule__Optional__NameAssignment_1 ) ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2926:1: ( ( rule__Optional__NameAssignment_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2989:1: ( ( ( rule__Optional__NameAssignment_1 ) ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2990:1: ( ( rule__Optional__NameAssignment_1 ) )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2926:1: ( ( rule__Optional__NameAssignment_1 ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2927:1: ( rule__Optional__NameAssignment_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2990:1: ( ( rule__Optional__NameAssignment_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2991:1: ( rule__Optional__NameAssignment_1 )
             {
              before(grammarAccess.getOptionalAccess().getNameAssignment_1()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2928:1: ( rule__Optional__NameAssignment_1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2928:2: rule__Optional__NameAssignment_1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2992:1: ( rule__Optional__NameAssignment_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2992:2: rule__Optional__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Optional__NameAssignment_1_in_rule__Optional__Group__1__Impl5852);
+            pushFollow(FOLLOW_rule__Optional__NameAssignment_1_in_rule__Optional__Group__1__Impl5978);
             rule__Optional__NameAssignment_1();
 
             state._fsp--;
@@ -7865,21 +8025,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__Group__2"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2938:1: rule__Optional__Group__2 : rule__Optional__Group__2__Impl rule__Optional__Group__3 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3002:1: rule__Optional__Group__2 : rule__Optional__Group__2__Impl rule__Optional__Group__3 ;
     public final void rule__Optional__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2942:1: ( rule__Optional__Group__2__Impl rule__Optional__Group__3 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2943:2: rule__Optional__Group__2__Impl rule__Optional__Group__3
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3006:1: ( rule__Optional__Group__2__Impl rule__Optional__Group__3 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3007:2: rule__Optional__Group__2__Impl rule__Optional__Group__3
             {
-            pushFollow(FOLLOW_rule__Optional__Group__2__Impl_in_rule__Optional__Group__25882);
+            pushFollow(FOLLOW_rule__Optional__Group__2__Impl_in_rule__Optional__Group__26008);
             rule__Optional__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Optional__Group__3_in_rule__Optional__Group__25885);
+            pushFollow(FOLLOW_rule__Optional__Group__3_in_rule__Optional__Group__26011);
             rule__Optional__Group__3();
 
             state._fsp--;
@@ -7903,20 +8063,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__Group__2__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2950:1: rule__Optional__Group__2__Impl : ( ( rule__Optional__Group_2__0 )? ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3014:1: rule__Optional__Group__2__Impl : ( ( rule__Optional__Group_2__0 )? ) ;
     public final void rule__Optional__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2954:1: ( ( ( rule__Optional__Group_2__0 )? ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2955:1: ( ( rule__Optional__Group_2__0 )? )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3018:1: ( ( ( rule__Optional__Group_2__0 )? ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3019:1: ( ( rule__Optional__Group_2__0 )? )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2955:1: ( ( rule__Optional__Group_2__0 )? )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2956:1: ( rule__Optional__Group_2__0 )?
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3019:1: ( ( rule__Optional__Group_2__0 )? )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3020:1: ( rule__Optional__Group_2__0 )?
             {
              before(grammarAccess.getOptionalAccess().getGroup_2()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2957:1: ( rule__Optional__Group_2__0 )?
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3021:1: ( rule__Optional__Group_2__0 )?
             int alt24=2;
             int LA24_0 = input.LA(1);
 
@@ -7925,9 +8085,9 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
             }
             switch (alt24) {
                 case 1 :
-                    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2957:2: rule__Optional__Group_2__0
+                    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3021:2: rule__Optional__Group_2__0
                     {
-                    pushFollow(FOLLOW_rule__Optional__Group_2__0_in_rule__Optional__Group__2__Impl5912);
+                    pushFollow(FOLLOW_rule__Optional__Group_2__0_in_rule__Optional__Group__2__Impl6038);
                     rule__Optional__Group_2__0();
 
                     state._fsp--;
@@ -7961,21 +8121,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__Group__3"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2967:1: rule__Optional__Group__3 : rule__Optional__Group__3__Impl rule__Optional__Group__4 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3031:1: rule__Optional__Group__3 : rule__Optional__Group__3__Impl rule__Optional__Group__4 ;
     public final void rule__Optional__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2971:1: ( rule__Optional__Group__3__Impl rule__Optional__Group__4 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2972:2: rule__Optional__Group__3__Impl rule__Optional__Group__4
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3035:1: ( rule__Optional__Group__3__Impl rule__Optional__Group__4 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3036:2: rule__Optional__Group__3__Impl rule__Optional__Group__4
             {
-            pushFollow(FOLLOW_rule__Optional__Group__3__Impl_in_rule__Optional__Group__35943);
+            pushFollow(FOLLOW_rule__Optional__Group__3__Impl_in_rule__Optional__Group__36069);
             rule__Optional__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Optional__Group__4_in_rule__Optional__Group__35946);
+            pushFollow(FOLLOW_rule__Optional__Group__4_in_rule__Optional__Group__36072);
             rule__Optional__Group__4();
 
             state._fsp--;
@@ -7999,20 +8159,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__Group__3__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2979:1: rule__Optional__Group__3__Impl : ( ( rule__Optional__Group_3__0 )? ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3043:1: rule__Optional__Group__3__Impl : ( ( rule__Optional__Group_3__0 )? ) ;
     public final void rule__Optional__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2983:1: ( ( ( rule__Optional__Group_3__0 )? ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2984:1: ( ( rule__Optional__Group_3__0 )? )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3047:1: ( ( ( rule__Optional__Group_3__0 )? ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3048:1: ( ( rule__Optional__Group_3__0 )? )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2984:1: ( ( rule__Optional__Group_3__0 )? )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2985:1: ( rule__Optional__Group_3__0 )?
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3048:1: ( ( rule__Optional__Group_3__0 )? )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3049:1: ( rule__Optional__Group_3__0 )?
             {
              before(grammarAccess.getOptionalAccess().getGroup_3()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2986:1: ( rule__Optional__Group_3__0 )?
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3050:1: ( rule__Optional__Group_3__0 )?
             int alt25=2;
             int LA25_0 = input.LA(1);
 
@@ -8021,9 +8181,9 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
             }
             switch (alt25) {
                 case 1 :
-                    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2986:2: rule__Optional__Group_3__0
+                    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3050:2: rule__Optional__Group_3__0
                     {
-                    pushFollow(FOLLOW_rule__Optional__Group_3__0_in_rule__Optional__Group__3__Impl5973);
+                    pushFollow(FOLLOW_rule__Optional__Group_3__0_in_rule__Optional__Group__3__Impl6099);
                     rule__Optional__Group_3__0();
 
                     state._fsp--;
@@ -8057,16 +8217,16 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__Group__4"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:2996:1: rule__Optional__Group__4 : rule__Optional__Group__4__Impl ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3060:1: rule__Optional__Group__4 : rule__Optional__Group__4__Impl ;
     public final void rule__Optional__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3000:1: ( rule__Optional__Group__4__Impl )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3001:2: rule__Optional__Group__4__Impl
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3064:1: ( rule__Optional__Group__4__Impl )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3065:2: rule__Optional__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__Optional__Group__4__Impl_in_rule__Optional__Group__46004);
+            pushFollow(FOLLOW_rule__Optional__Group__4__Impl_in_rule__Optional__Group__46130);
             rule__Optional__Group__4__Impl();
 
             state._fsp--;
@@ -8090,20 +8250,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__Group__4__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3007:1: rule__Optional__Group__4__Impl : ( ( rule__Optional__Group_4__0 )? ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3071:1: rule__Optional__Group__4__Impl : ( ( rule__Optional__Group_4__0 )? ) ;
     public final void rule__Optional__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3011:1: ( ( ( rule__Optional__Group_4__0 )? ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3012:1: ( ( rule__Optional__Group_4__0 )? )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3075:1: ( ( ( rule__Optional__Group_4__0 )? ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3076:1: ( ( rule__Optional__Group_4__0 )? )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3012:1: ( ( rule__Optional__Group_4__0 )? )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3013:1: ( rule__Optional__Group_4__0 )?
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3076:1: ( ( rule__Optional__Group_4__0 )? )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3077:1: ( rule__Optional__Group_4__0 )?
             {
              before(grammarAccess.getOptionalAccess().getGroup_4()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3014:1: ( rule__Optional__Group_4__0 )?
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3078:1: ( rule__Optional__Group_4__0 )?
             int alt26=2;
             int LA26_0 = input.LA(1);
 
@@ -8112,9 +8272,9 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
             }
             switch (alt26) {
                 case 1 :
-                    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3014:2: rule__Optional__Group_4__0
+                    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3078:2: rule__Optional__Group_4__0
                     {
-                    pushFollow(FOLLOW_rule__Optional__Group_4__0_in_rule__Optional__Group__4__Impl6031);
+                    pushFollow(FOLLOW_rule__Optional__Group_4__0_in_rule__Optional__Group__4__Impl6157);
                     rule__Optional__Group_4__0();
 
                     state._fsp--;
@@ -8148,21 +8308,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__Group_2__0"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3034:1: rule__Optional__Group_2__0 : rule__Optional__Group_2__0__Impl rule__Optional__Group_2__1 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3098:1: rule__Optional__Group_2__0 : rule__Optional__Group_2__0__Impl rule__Optional__Group_2__1 ;
     public final void rule__Optional__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3038:1: ( rule__Optional__Group_2__0__Impl rule__Optional__Group_2__1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3039:2: rule__Optional__Group_2__0__Impl rule__Optional__Group_2__1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3102:1: ( rule__Optional__Group_2__0__Impl rule__Optional__Group_2__1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3103:2: rule__Optional__Group_2__0__Impl rule__Optional__Group_2__1
             {
-            pushFollow(FOLLOW_rule__Optional__Group_2__0__Impl_in_rule__Optional__Group_2__06072);
+            pushFollow(FOLLOW_rule__Optional__Group_2__0__Impl_in_rule__Optional__Group_2__06198);
             rule__Optional__Group_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Optional__Group_2__1_in_rule__Optional__Group_2__06075);
+            pushFollow(FOLLOW_rule__Optional__Group_2__1_in_rule__Optional__Group_2__06201);
             rule__Optional__Group_2__1();
 
             state._fsp--;
@@ -8186,20 +8346,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__Group_2__0__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3046:1: rule__Optional__Group_2__0__Impl : ( LeftCurlyBracket ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3110:1: rule__Optional__Group_2__0__Impl : ( LeftCurlyBracket ) ;
     public final void rule__Optional__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3050:1: ( ( LeftCurlyBracket ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3051:1: ( LeftCurlyBracket )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3114:1: ( ( LeftCurlyBracket ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3115:1: ( LeftCurlyBracket )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3051:1: ( LeftCurlyBracket )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3052:1: LeftCurlyBracket
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3115:1: ( LeftCurlyBracket )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3116:1: LeftCurlyBracket
             {
              before(grammarAccess.getOptionalAccess().getLeftCurlyBracketKeyword_2_0()); 
-            match(input,LeftCurlyBracket,FOLLOW_LeftCurlyBracket_in_rule__Optional__Group_2__0__Impl6103); 
+            match(input,LeftCurlyBracket,FOLLOW_LeftCurlyBracket_in_rule__Optional__Group_2__0__Impl6229); 
              after(grammarAccess.getOptionalAccess().getLeftCurlyBracketKeyword_2_0()); 
 
             }
@@ -8223,21 +8383,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__Group_2__1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3065:1: rule__Optional__Group_2__1 : rule__Optional__Group_2__1__Impl rule__Optional__Group_2__2 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3129:1: rule__Optional__Group_2__1 : rule__Optional__Group_2__1__Impl rule__Optional__Group_2__2 ;
     public final void rule__Optional__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3069:1: ( rule__Optional__Group_2__1__Impl rule__Optional__Group_2__2 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3070:2: rule__Optional__Group_2__1__Impl rule__Optional__Group_2__2
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3133:1: ( rule__Optional__Group_2__1__Impl rule__Optional__Group_2__2 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3134:2: rule__Optional__Group_2__1__Impl rule__Optional__Group_2__2
             {
-            pushFollow(FOLLOW_rule__Optional__Group_2__1__Impl_in_rule__Optional__Group_2__16134);
+            pushFollow(FOLLOW_rule__Optional__Group_2__1__Impl_in_rule__Optional__Group_2__16260);
             rule__Optional__Group_2__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Optional__Group_2__2_in_rule__Optional__Group_2__16137);
+            pushFollow(FOLLOW_rule__Optional__Group_2__2_in_rule__Optional__Group_2__16263);
             rule__Optional__Group_2__2();
 
             state._fsp--;
@@ -8261,23 +8421,23 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__Group_2__1__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3077:1: rule__Optional__Group_2__1__Impl : ( ( rule__Optional__SubfeatureAssignment_2_1 ) ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3141:1: rule__Optional__Group_2__1__Impl : ( ( rule__Optional__SubfeatureAssignment_2_1 ) ) ;
     public final void rule__Optional__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3081:1: ( ( ( rule__Optional__SubfeatureAssignment_2_1 ) ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3082:1: ( ( rule__Optional__SubfeatureAssignment_2_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3145:1: ( ( ( rule__Optional__SubfeatureAssignment_2_1 ) ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3146:1: ( ( rule__Optional__SubfeatureAssignment_2_1 ) )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3082:1: ( ( rule__Optional__SubfeatureAssignment_2_1 ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3083:1: ( rule__Optional__SubfeatureAssignment_2_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3146:1: ( ( rule__Optional__SubfeatureAssignment_2_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3147:1: ( rule__Optional__SubfeatureAssignment_2_1 )
             {
              before(grammarAccess.getOptionalAccess().getSubfeatureAssignment_2_1()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3084:1: ( rule__Optional__SubfeatureAssignment_2_1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3084:2: rule__Optional__SubfeatureAssignment_2_1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3148:1: ( rule__Optional__SubfeatureAssignment_2_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3148:2: rule__Optional__SubfeatureAssignment_2_1
             {
-            pushFollow(FOLLOW_rule__Optional__SubfeatureAssignment_2_1_in_rule__Optional__Group_2__1__Impl6164);
+            pushFollow(FOLLOW_rule__Optional__SubfeatureAssignment_2_1_in_rule__Optional__Group_2__1__Impl6290);
             rule__Optional__SubfeatureAssignment_2_1();
 
             state._fsp--;
@@ -8308,21 +8468,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__Group_2__2"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3094:1: rule__Optional__Group_2__2 : rule__Optional__Group_2__2__Impl rule__Optional__Group_2__3 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3158:1: rule__Optional__Group_2__2 : rule__Optional__Group_2__2__Impl rule__Optional__Group_2__3 ;
     public final void rule__Optional__Group_2__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3098:1: ( rule__Optional__Group_2__2__Impl rule__Optional__Group_2__3 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3099:2: rule__Optional__Group_2__2__Impl rule__Optional__Group_2__3
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3162:1: ( rule__Optional__Group_2__2__Impl rule__Optional__Group_2__3 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3163:2: rule__Optional__Group_2__2__Impl rule__Optional__Group_2__3
             {
-            pushFollow(FOLLOW_rule__Optional__Group_2__2__Impl_in_rule__Optional__Group_2__26194);
+            pushFollow(FOLLOW_rule__Optional__Group_2__2__Impl_in_rule__Optional__Group_2__26320);
             rule__Optional__Group_2__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Optional__Group_2__3_in_rule__Optional__Group_2__26197);
+            pushFollow(FOLLOW_rule__Optional__Group_2__3_in_rule__Optional__Group_2__26323);
             rule__Optional__Group_2__3();
 
             state._fsp--;
@@ -8346,20 +8506,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__Group_2__2__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3106:1: rule__Optional__Group_2__2__Impl : ( ( rule__Optional__Group_2_2__0 )* ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3170:1: rule__Optional__Group_2__2__Impl : ( ( rule__Optional__Group_2_2__0 )* ) ;
     public final void rule__Optional__Group_2__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3110:1: ( ( ( rule__Optional__Group_2_2__0 )* ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3111:1: ( ( rule__Optional__Group_2_2__0 )* )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3174:1: ( ( ( rule__Optional__Group_2_2__0 )* ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3175:1: ( ( rule__Optional__Group_2_2__0 )* )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3111:1: ( ( rule__Optional__Group_2_2__0 )* )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3112:1: ( rule__Optional__Group_2_2__0 )*
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3175:1: ( ( rule__Optional__Group_2_2__0 )* )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3176:1: ( rule__Optional__Group_2_2__0 )*
             {
              before(grammarAccess.getOptionalAccess().getGroup_2_2()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3113:1: ( rule__Optional__Group_2_2__0 )*
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3177:1: ( rule__Optional__Group_2_2__0 )*
             loop27:
             do {
                 int alt27=2;
@@ -8372,9 +8532,9 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
                 switch (alt27) {
             	case 1 :
-            	    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3113:2: rule__Optional__Group_2_2__0
+            	    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3177:2: rule__Optional__Group_2_2__0
             	    {
-            	    pushFollow(FOLLOW_rule__Optional__Group_2_2__0_in_rule__Optional__Group_2__2__Impl6224);
+            	    pushFollow(FOLLOW_rule__Optional__Group_2_2__0_in_rule__Optional__Group_2__2__Impl6350);
             	    rule__Optional__Group_2_2__0();
 
             	    state._fsp--;
@@ -8411,16 +8571,16 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__Group_2__3"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3123:1: rule__Optional__Group_2__3 : rule__Optional__Group_2__3__Impl ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3187:1: rule__Optional__Group_2__3 : rule__Optional__Group_2__3__Impl ;
     public final void rule__Optional__Group_2__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3127:1: ( rule__Optional__Group_2__3__Impl )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3128:2: rule__Optional__Group_2__3__Impl
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3191:1: ( rule__Optional__Group_2__3__Impl )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3192:2: rule__Optional__Group_2__3__Impl
             {
-            pushFollow(FOLLOW_rule__Optional__Group_2__3__Impl_in_rule__Optional__Group_2__36255);
+            pushFollow(FOLLOW_rule__Optional__Group_2__3__Impl_in_rule__Optional__Group_2__36381);
             rule__Optional__Group_2__3__Impl();
 
             state._fsp--;
@@ -8444,20 +8604,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__Group_2__3__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3134:1: rule__Optional__Group_2__3__Impl : ( RightCurlyBracket ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3198:1: rule__Optional__Group_2__3__Impl : ( RightCurlyBracket ) ;
     public final void rule__Optional__Group_2__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3138:1: ( ( RightCurlyBracket ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3139:1: ( RightCurlyBracket )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3202:1: ( ( RightCurlyBracket ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3203:1: ( RightCurlyBracket )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3139:1: ( RightCurlyBracket )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3140:1: RightCurlyBracket
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3203:1: ( RightCurlyBracket )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3204:1: RightCurlyBracket
             {
              before(grammarAccess.getOptionalAccess().getRightCurlyBracketKeyword_2_3()); 
-            match(input,RightCurlyBracket,FOLLOW_RightCurlyBracket_in_rule__Optional__Group_2__3__Impl6283); 
+            match(input,RightCurlyBracket,FOLLOW_RightCurlyBracket_in_rule__Optional__Group_2__3__Impl6409); 
              after(grammarAccess.getOptionalAccess().getRightCurlyBracketKeyword_2_3()); 
 
             }
@@ -8481,21 +8641,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__Group_2_2__0"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3161:1: rule__Optional__Group_2_2__0 : rule__Optional__Group_2_2__0__Impl rule__Optional__Group_2_2__1 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3225:1: rule__Optional__Group_2_2__0 : rule__Optional__Group_2_2__0__Impl rule__Optional__Group_2_2__1 ;
     public final void rule__Optional__Group_2_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3165:1: ( rule__Optional__Group_2_2__0__Impl rule__Optional__Group_2_2__1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3166:2: rule__Optional__Group_2_2__0__Impl rule__Optional__Group_2_2__1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3229:1: ( rule__Optional__Group_2_2__0__Impl rule__Optional__Group_2_2__1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3230:2: rule__Optional__Group_2_2__0__Impl rule__Optional__Group_2_2__1
             {
-            pushFollow(FOLLOW_rule__Optional__Group_2_2__0__Impl_in_rule__Optional__Group_2_2__06322);
+            pushFollow(FOLLOW_rule__Optional__Group_2_2__0__Impl_in_rule__Optional__Group_2_2__06448);
             rule__Optional__Group_2_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Optional__Group_2_2__1_in_rule__Optional__Group_2_2__06325);
+            pushFollow(FOLLOW_rule__Optional__Group_2_2__1_in_rule__Optional__Group_2_2__06451);
             rule__Optional__Group_2_2__1();
 
             state._fsp--;
@@ -8519,20 +8679,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__Group_2_2__0__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3173:1: rule__Optional__Group_2_2__0__Impl : ( Comma ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3237:1: rule__Optional__Group_2_2__0__Impl : ( Comma ) ;
     public final void rule__Optional__Group_2_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3177:1: ( ( Comma ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3178:1: ( Comma )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3241:1: ( ( Comma ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3242:1: ( Comma )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3178:1: ( Comma )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3179:1: Comma
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3242:1: ( Comma )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3243:1: Comma
             {
              before(grammarAccess.getOptionalAccess().getCommaKeyword_2_2_0()); 
-            match(input,Comma,FOLLOW_Comma_in_rule__Optional__Group_2_2__0__Impl6353); 
+            match(input,Comma,FOLLOW_Comma_in_rule__Optional__Group_2_2__0__Impl6479); 
              after(grammarAccess.getOptionalAccess().getCommaKeyword_2_2_0()); 
 
             }
@@ -8556,16 +8716,16 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__Group_2_2__1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3192:1: rule__Optional__Group_2_2__1 : rule__Optional__Group_2_2__1__Impl ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3256:1: rule__Optional__Group_2_2__1 : rule__Optional__Group_2_2__1__Impl ;
     public final void rule__Optional__Group_2_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3196:1: ( rule__Optional__Group_2_2__1__Impl )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3197:2: rule__Optional__Group_2_2__1__Impl
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3260:1: ( rule__Optional__Group_2_2__1__Impl )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3261:2: rule__Optional__Group_2_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__Optional__Group_2_2__1__Impl_in_rule__Optional__Group_2_2__16384);
+            pushFollow(FOLLOW_rule__Optional__Group_2_2__1__Impl_in_rule__Optional__Group_2_2__16510);
             rule__Optional__Group_2_2__1__Impl();
 
             state._fsp--;
@@ -8589,23 +8749,23 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__Group_2_2__1__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3203:1: rule__Optional__Group_2_2__1__Impl : ( ( rule__Optional__SubfeatureAssignment_2_2_1 ) ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3267:1: rule__Optional__Group_2_2__1__Impl : ( ( rule__Optional__SubfeatureAssignment_2_2_1 ) ) ;
     public final void rule__Optional__Group_2_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3207:1: ( ( ( rule__Optional__SubfeatureAssignment_2_2_1 ) ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3208:1: ( ( rule__Optional__SubfeatureAssignment_2_2_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3271:1: ( ( ( rule__Optional__SubfeatureAssignment_2_2_1 ) ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3272:1: ( ( rule__Optional__SubfeatureAssignment_2_2_1 ) )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3208:1: ( ( rule__Optional__SubfeatureAssignment_2_2_1 ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3209:1: ( rule__Optional__SubfeatureAssignment_2_2_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3272:1: ( ( rule__Optional__SubfeatureAssignment_2_2_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3273:1: ( rule__Optional__SubfeatureAssignment_2_2_1 )
             {
              before(grammarAccess.getOptionalAccess().getSubfeatureAssignment_2_2_1()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3210:1: ( rule__Optional__SubfeatureAssignment_2_2_1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3210:2: rule__Optional__SubfeatureAssignment_2_2_1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3274:1: ( rule__Optional__SubfeatureAssignment_2_2_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3274:2: rule__Optional__SubfeatureAssignment_2_2_1
             {
-            pushFollow(FOLLOW_rule__Optional__SubfeatureAssignment_2_2_1_in_rule__Optional__Group_2_2__1__Impl6411);
+            pushFollow(FOLLOW_rule__Optional__SubfeatureAssignment_2_2_1_in_rule__Optional__Group_2_2__1__Impl6537);
             rule__Optional__SubfeatureAssignment_2_2_1();
 
             state._fsp--;
@@ -8636,21 +8796,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__Group_3__0"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3224:1: rule__Optional__Group_3__0 : rule__Optional__Group_3__0__Impl rule__Optional__Group_3__1 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3288:1: rule__Optional__Group_3__0 : rule__Optional__Group_3__0__Impl rule__Optional__Group_3__1 ;
     public final void rule__Optional__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3228:1: ( rule__Optional__Group_3__0__Impl rule__Optional__Group_3__1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3229:2: rule__Optional__Group_3__0__Impl rule__Optional__Group_3__1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3292:1: ( rule__Optional__Group_3__0__Impl rule__Optional__Group_3__1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3293:2: rule__Optional__Group_3__0__Impl rule__Optional__Group_3__1
             {
-            pushFollow(FOLLOW_rule__Optional__Group_3__0__Impl_in_rule__Optional__Group_3__06445);
+            pushFollow(FOLLOW_rule__Optional__Group_3__0__Impl_in_rule__Optional__Group_3__06571);
             rule__Optional__Group_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Optional__Group_3__1_in_rule__Optional__Group_3__06448);
+            pushFollow(FOLLOW_rule__Optional__Group_3__1_in_rule__Optional__Group_3__06574);
             rule__Optional__Group_3__1();
 
             state._fsp--;
@@ -8674,20 +8834,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__Group_3__0__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3236:1: rule__Optional__Group_3__0__Impl : ( LeftSquareBracket ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3300:1: rule__Optional__Group_3__0__Impl : ( LeftSquareBracket ) ;
     public final void rule__Optional__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3240:1: ( ( LeftSquareBracket ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3241:1: ( LeftSquareBracket )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3304:1: ( ( LeftSquareBracket ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3305:1: ( LeftSquareBracket )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3241:1: ( LeftSquareBracket )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3242:1: LeftSquareBracket
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3305:1: ( LeftSquareBracket )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3306:1: LeftSquareBracket
             {
              before(grammarAccess.getOptionalAccess().getLeftSquareBracketKeyword_3_0()); 
-            match(input,LeftSquareBracket,FOLLOW_LeftSquareBracket_in_rule__Optional__Group_3__0__Impl6476); 
+            match(input,LeftSquareBracket,FOLLOW_LeftSquareBracket_in_rule__Optional__Group_3__0__Impl6602); 
              after(grammarAccess.getOptionalAccess().getLeftSquareBracketKeyword_3_0()); 
 
             }
@@ -8711,21 +8871,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__Group_3__1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3255:1: rule__Optional__Group_3__1 : rule__Optional__Group_3__1__Impl rule__Optional__Group_3__2 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3319:1: rule__Optional__Group_3__1 : rule__Optional__Group_3__1__Impl rule__Optional__Group_3__2 ;
     public final void rule__Optional__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3259:1: ( rule__Optional__Group_3__1__Impl rule__Optional__Group_3__2 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3260:2: rule__Optional__Group_3__1__Impl rule__Optional__Group_3__2
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3323:1: ( rule__Optional__Group_3__1__Impl rule__Optional__Group_3__2 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3324:2: rule__Optional__Group_3__1__Impl rule__Optional__Group_3__2
             {
-            pushFollow(FOLLOW_rule__Optional__Group_3__1__Impl_in_rule__Optional__Group_3__16507);
+            pushFollow(FOLLOW_rule__Optional__Group_3__1__Impl_in_rule__Optional__Group_3__16633);
             rule__Optional__Group_3__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Optional__Group_3__2_in_rule__Optional__Group_3__16510);
+            pushFollow(FOLLOW_rule__Optional__Group_3__2_in_rule__Optional__Group_3__16636);
             rule__Optional__Group_3__2();
 
             state._fsp--;
@@ -8749,23 +8909,23 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__Group_3__1__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3267:1: rule__Optional__Group_3__1__Impl : ( ( rule__Optional__ConstrainsAssignment_3_1 ) ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3331:1: rule__Optional__Group_3__1__Impl : ( ( rule__Optional__ConstrainsAssignment_3_1 ) ) ;
     public final void rule__Optional__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3271:1: ( ( ( rule__Optional__ConstrainsAssignment_3_1 ) ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3272:1: ( ( rule__Optional__ConstrainsAssignment_3_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3335:1: ( ( ( rule__Optional__ConstrainsAssignment_3_1 ) ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3336:1: ( ( rule__Optional__ConstrainsAssignment_3_1 ) )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3272:1: ( ( rule__Optional__ConstrainsAssignment_3_1 ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3273:1: ( rule__Optional__ConstrainsAssignment_3_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3336:1: ( ( rule__Optional__ConstrainsAssignment_3_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3337:1: ( rule__Optional__ConstrainsAssignment_3_1 )
             {
              before(grammarAccess.getOptionalAccess().getConstrainsAssignment_3_1()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3274:1: ( rule__Optional__ConstrainsAssignment_3_1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3274:2: rule__Optional__ConstrainsAssignment_3_1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3338:1: ( rule__Optional__ConstrainsAssignment_3_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3338:2: rule__Optional__ConstrainsAssignment_3_1
             {
-            pushFollow(FOLLOW_rule__Optional__ConstrainsAssignment_3_1_in_rule__Optional__Group_3__1__Impl6537);
+            pushFollow(FOLLOW_rule__Optional__ConstrainsAssignment_3_1_in_rule__Optional__Group_3__1__Impl6663);
             rule__Optional__ConstrainsAssignment_3_1();
 
             state._fsp--;
@@ -8796,21 +8956,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__Group_3__2"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3284:1: rule__Optional__Group_3__2 : rule__Optional__Group_3__2__Impl rule__Optional__Group_3__3 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3348:1: rule__Optional__Group_3__2 : rule__Optional__Group_3__2__Impl rule__Optional__Group_3__3 ;
     public final void rule__Optional__Group_3__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3288:1: ( rule__Optional__Group_3__2__Impl rule__Optional__Group_3__3 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3289:2: rule__Optional__Group_3__2__Impl rule__Optional__Group_3__3
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3352:1: ( rule__Optional__Group_3__2__Impl rule__Optional__Group_3__3 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3353:2: rule__Optional__Group_3__2__Impl rule__Optional__Group_3__3
             {
-            pushFollow(FOLLOW_rule__Optional__Group_3__2__Impl_in_rule__Optional__Group_3__26567);
+            pushFollow(FOLLOW_rule__Optional__Group_3__2__Impl_in_rule__Optional__Group_3__26693);
             rule__Optional__Group_3__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Optional__Group_3__3_in_rule__Optional__Group_3__26570);
+            pushFollow(FOLLOW_rule__Optional__Group_3__3_in_rule__Optional__Group_3__26696);
             rule__Optional__Group_3__3();
 
             state._fsp--;
@@ -8834,20 +8994,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__Group_3__2__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3296:1: rule__Optional__Group_3__2__Impl : ( ( rule__Optional__Group_3_2__0 )* ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3360:1: rule__Optional__Group_3__2__Impl : ( ( rule__Optional__Group_3_2__0 )* ) ;
     public final void rule__Optional__Group_3__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3300:1: ( ( ( rule__Optional__Group_3_2__0 )* ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3301:1: ( ( rule__Optional__Group_3_2__0 )* )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3364:1: ( ( ( rule__Optional__Group_3_2__0 )* ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3365:1: ( ( rule__Optional__Group_3_2__0 )* )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3301:1: ( ( rule__Optional__Group_3_2__0 )* )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3302:1: ( rule__Optional__Group_3_2__0 )*
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3365:1: ( ( rule__Optional__Group_3_2__0 )* )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3366:1: ( rule__Optional__Group_3_2__0 )*
             {
              before(grammarAccess.getOptionalAccess().getGroup_3_2()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3303:1: ( rule__Optional__Group_3_2__0 )*
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3367:1: ( rule__Optional__Group_3_2__0 )*
             loop28:
             do {
                 int alt28=2;
@@ -8860,9 +9020,9 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
                 switch (alt28) {
             	case 1 :
-            	    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3303:2: rule__Optional__Group_3_2__0
+            	    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3367:2: rule__Optional__Group_3_2__0
             	    {
-            	    pushFollow(FOLLOW_rule__Optional__Group_3_2__0_in_rule__Optional__Group_3__2__Impl6597);
+            	    pushFollow(FOLLOW_rule__Optional__Group_3_2__0_in_rule__Optional__Group_3__2__Impl6723);
             	    rule__Optional__Group_3_2__0();
 
             	    state._fsp--;
@@ -8899,16 +9059,16 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__Group_3__3"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3313:1: rule__Optional__Group_3__3 : rule__Optional__Group_3__3__Impl ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3377:1: rule__Optional__Group_3__3 : rule__Optional__Group_3__3__Impl ;
     public final void rule__Optional__Group_3__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3317:1: ( rule__Optional__Group_3__3__Impl )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3318:2: rule__Optional__Group_3__3__Impl
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3381:1: ( rule__Optional__Group_3__3__Impl )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3382:2: rule__Optional__Group_3__3__Impl
             {
-            pushFollow(FOLLOW_rule__Optional__Group_3__3__Impl_in_rule__Optional__Group_3__36628);
+            pushFollow(FOLLOW_rule__Optional__Group_3__3__Impl_in_rule__Optional__Group_3__36754);
             rule__Optional__Group_3__3__Impl();
 
             state._fsp--;
@@ -8932,20 +9092,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__Group_3__3__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3324:1: rule__Optional__Group_3__3__Impl : ( RightSquareBracket ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3388:1: rule__Optional__Group_3__3__Impl : ( RightSquareBracket ) ;
     public final void rule__Optional__Group_3__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3328:1: ( ( RightSquareBracket ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3329:1: ( RightSquareBracket )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3392:1: ( ( RightSquareBracket ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3393:1: ( RightSquareBracket )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3329:1: ( RightSquareBracket )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3330:1: RightSquareBracket
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3393:1: ( RightSquareBracket )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3394:1: RightSquareBracket
             {
              before(grammarAccess.getOptionalAccess().getRightSquareBracketKeyword_3_3()); 
-            match(input,RightSquareBracket,FOLLOW_RightSquareBracket_in_rule__Optional__Group_3__3__Impl6656); 
+            match(input,RightSquareBracket,FOLLOW_RightSquareBracket_in_rule__Optional__Group_3__3__Impl6782); 
              after(grammarAccess.getOptionalAccess().getRightSquareBracketKeyword_3_3()); 
 
             }
@@ -8969,21 +9129,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__Group_3_2__0"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3351:1: rule__Optional__Group_3_2__0 : rule__Optional__Group_3_2__0__Impl rule__Optional__Group_3_2__1 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3415:1: rule__Optional__Group_3_2__0 : rule__Optional__Group_3_2__0__Impl rule__Optional__Group_3_2__1 ;
     public final void rule__Optional__Group_3_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3355:1: ( rule__Optional__Group_3_2__0__Impl rule__Optional__Group_3_2__1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3356:2: rule__Optional__Group_3_2__0__Impl rule__Optional__Group_3_2__1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3419:1: ( rule__Optional__Group_3_2__0__Impl rule__Optional__Group_3_2__1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3420:2: rule__Optional__Group_3_2__0__Impl rule__Optional__Group_3_2__1
             {
-            pushFollow(FOLLOW_rule__Optional__Group_3_2__0__Impl_in_rule__Optional__Group_3_2__06695);
+            pushFollow(FOLLOW_rule__Optional__Group_3_2__0__Impl_in_rule__Optional__Group_3_2__06821);
             rule__Optional__Group_3_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Optional__Group_3_2__1_in_rule__Optional__Group_3_2__06698);
+            pushFollow(FOLLOW_rule__Optional__Group_3_2__1_in_rule__Optional__Group_3_2__06824);
             rule__Optional__Group_3_2__1();
 
             state._fsp--;
@@ -9007,20 +9167,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__Group_3_2__0__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3363:1: rule__Optional__Group_3_2__0__Impl : ( Comma ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3427:1: rule__Optional__Group_3_2__0__Impl : ( Comma ) ;
     public final void rule__Optional__Group_3_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3367:1: ( ( Comma ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3368:1: ( Comma )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3431:1: ( ( Comma ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3432:1: ( Comma )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3368:1: ( Comma )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3369:1: Comma
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3432:1: ( Comma )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3433:1: Comma
             {
              before(grammarAccess.getOptionalAccess().getCommaKeyword_3_2_0()); 
-            match(input,Comma,FOLLOW_Comma_in_rule__Optional__Group_3_2__0__Impl6726); 
+            match(input,Comma,FOLLOW_Comma_in_rule__Optional__Group_3_2__0__Impl6852); 
              after(grammarAccess.getOptionalAccess().getCommaKeyword_3_2_0()); 
 
             }
@@ -9044,16 +9204,16 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__Group_3_2__1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3382:1: rule__Optional__Group_3_2__1 : rule__Optional__Group_3_2__1__Impl ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3446:1: rule__Optional__Group_3_2__1 : rule__Optional__Group_3_2__1__Impl ;
     public final void rule__Optional__Group_3_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3386:1: ( rule__Optional__Group_3_2__1__Impl )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3387:2: rule__Optional__Group_3_2__1__Impl
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3450:1: ( rule__Optional__Group_3_2__1__Impl )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3451:2: rule__Optional__Group_3_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__Optional__Group_3_2__1__Impl_in_rule__Optional__Group_3_2__16757);
+            pushFollow(FOLLOW_rule__Optional__Group_3_2__1__Impl_in_rule__Optional__Group_3_2__16883);
             rule__Optional__Group_3_2__1__Impl();
 
             state._fsp--;
@@ -9077,23 +9237,23 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__Group_3_2__1__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3393:1: rule__Optional__Group_3_2__1__Impl : ( ( rule__Optional__ConstrainsAssignment_3_2_1 ) ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3457:1: rule__Optional__Group_3_2__1__Impl : ( ( rule__Optional__ConstrainsAssignment_3_2_1 ) ) ;
     public final void rule__Optional__Group_3_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3397:1: ( ( ( rule__Optional__ConstrainsAssignment_3_2_1 ) ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3398:1: ( ( rule__Optional__ConstrainsAssignment_3_2_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3461:1: ( ( ( rule__Optional__ConstrainsAssignment_3_2_1 ) ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3462:1: ( ( rule__Optional__ConstrainsAssignment_3_2_1 ) )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3398:1: ( ( rule__Optional__ConstrainsAssignment_3_2_1 ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3399:1: ( rule__Optional__ConstrainsAssignment_3_2_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3462:1: ( ( rule__Optional__ConstrainsAssignment_3_2_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3463:1: ( rule__Optional__ConstrainsAssignment_3_2_1 )
             {
              before(grammarAccess.getOptionalAccess().getConstrainsAssignment_3_2_1()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3400:1: ( rule__Optional__ConstrainsAssignment_3_2_1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3400:2: rule__Optional__ConstrainsAssignment_3_2_1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3464:1: ( rule__Optional__ConstrainsAssignment_3_2_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3464:2: rule__Optional__ConstrainsAssignment_3_2_1
             {
-            pushFollow(FOLLOW_rule__Optional__ConstrainsAssignment_3_2_1_in_rule__Optional__Group_3_2__1__Impl6784);
+            pushFollow(FOLLOW_rule__Optional__ConstrainsAssignment_3_2_1_in_rule__Optional__Group_3_2__1__Impl6910);
             rule__Optional__ConstrainsAssignment_3_2_1();
 
             state._fsp--;
@@ -9124,21 +9284,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__Group_4__0"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3414:1: rule__Optional__Group_4__0 : rule__Optional__Group_4__0__Impl rule__Optional__Group_4__1 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3478:1: rule__Optional__Group_4__0 : rule__Optional__Group_4__0__Impl rule__Optional__Group_4__1 ;
     public final void rule__Optional__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3418:1: ( rule__Optional__Group_4__0__Impl rule__Optional__Group_4__1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3419:2: rule__Optional__Group_4__0__Impl rule__Optional__Group_4__1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3482:1: ( rule__Optional__Group_4__0__Impl rule__Optional__Group_4__1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3483:2: rule__Optional__Group_4__0__Impl rule__Optional__Group_4__1
             {
-            pushFollow(FOLLOW_rule__Optional__Group_4__0__Impl_in_rule__Optional__Group_4__06818);
+            pushFollow(FOLLOW_rule__Optional__Group_4__0__Impl_in_rule__Optional__Group_4__06944);
             rule__Optional__Group_4__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Optional__Group_4__1_in_rule__Optional__Group_4__06821);
+            pushFollow(FOLLOW_rule__Optional__Group_4__1_in_rule__Optional__Group_4__06947);
             rule__Optional__Group_4__1();
 
             state._fsp--;
@@ -9162,23 +9322,23 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__Group_4__0__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3426:1: rule__Optional__Group_4__0__Impl : ( ( rule__Optional__GroupsAssignment_4_0 ) ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3490:1: rule__Optional__Group_4__0__Impl : ( ( rule__Optional__GroupsAssignment_4_0 ) ) ;
     public final void rule__Optional__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3430:1: ( ( ( rule__Optional__GroupsAssignment_4_0 ) ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3431:1: ( ( rule__Optional__GroupsAssignment_4_0 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3494:1: ( ( ( rule__Optional__GroupsAssignment_4_0 ) ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3495:1: ( ( rule__Optional__GroupsAssignment_4_0 ) )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3431:1: ( ( rule__Optional__GroupsAssignment_4_0 ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3432:1: ( rule__Optional__GroupsAssignment_4_0 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3495:1: ( ( rule__Optional__GroupsAssignment_4_0 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3496:1: ( rule__Optional__GroupsAssignment_4_0 )
             {
              before(grammarAccess.getOptionalAccess().getGroupsAssignment_4_0()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3433:1: ( rule__Optional__GroupsAssignment_4_0 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3433:2: rule__Optional__GroupsAssignment_4_0
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3497:1: ( rule__Optional__GroupsAssignment_4_0 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3497:2: rule__Optional__GroupsAssignment_4_0
             {
-            pushFollow(FOLLOW_rule__Optional__GroupsAssignment_4_0_in_rule__Optional__Group_4__0__Impl6848);
+            pushFollow(FOLLOW_rule__Optional__GroupsAssignment_4_0_in_rule__Optional__Group_4__0__Impl6974);
             rule__Optional__GroupsAssignment_4_0();
 
             state._fsp--;
@@ -9209,16 +9369,16 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__Group_4__1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3443:1: rule__Optional__Group_4__1 : rule__Optional__Group_4__1__Impl ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3507:1: rule__Optional__Group_4__1 : rule__Optional__Group_4__1__Impl ;
     public final void rule__Optional__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3447:1: ( rule__Optional__Group_4__1__Impl )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3448:2: rule__Optional__Group_4__1__Impl
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3511:1: ( rule__Optional__Group_4__1__Impl )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3512:2: rule__Optional__Group_4__1__Impl
             {
-            pushFollow(FOLLOW_rule__Optional__Group_4__1__Impl_in_rule__Optional__Group_4__16878);
+            pushFollow(FOLLOW_rule__Optional__Group_4__1__Impl_in_rule__Optional__Group_4__17004);
             rule__Optional__Group_4__1__Impl();
 
             state._fsp--;
@@ -9242,20 +9402,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__Group_4__1__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3454:1: rule__Optional__Group_4__1__Impl : ( ( rule__Optional__GroupsAssignment_4_1 )* ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3518:1: rule__Optional__Group_4__1__Impl : ( ( rule__Optional__GroupsAssignment_4_1 )* ) ;
     public final void rule__Optional__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3458:1: ( ( ( rule__Optional__GroupsAssignment_4_1 )* ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3459:1: ( ( rule__Optional__GroupsAssignment_4_1 )* )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3522:1: ( ( ( rule__Optional__GroupsAssignment_4_1 )* ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3523:1: ( ( rule__Optional__GroupsAssignment_4_1 )* )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3459:1: ( ( rule__Optional__GroupsAssignment_4_1 )* )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3460:1: ( rule__Optional__GroupsAssignment_4_1 )*
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3523:1: ( ( rule__Optional__GroupsAssignment_4_1 )* )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3524:1: ( rule__Optional__GroupsAssignment_4_1 )*
             {
              before(grammarAccess.getOptionalAccess().getGroupsAssignment_4_1()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3461:1: ( rule__Optional__GroupsAssignment_4_1 )*
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3525:1: ( rule__Optional__GroupsAssignment_4_1 )*
             loop29:
             do {
                 int alt29=2;
@@ -9268,9 +9428,9 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
                 switch (alt29) {
             	case 1 :
-            	    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3461:2: rule__Optional__GroupsAssignment_4_1
+            	    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3525:2: rule__Optional__GroupsAssignment_4_1
             	    {
-            	    pushFollow(FOLLOW_rule__Optional__GroupsAssignment_4_1_in_rule__Optional__Group_4__1__Impl6905);
+            	    pushFollow(FOLLOW_rule__Optional__GroupsAssignment_4_1_in_rule__Optional__Group_4__1__Impl7031);
             	    rule__Optional__GroupsAssignment_4_1();
 
             	    state._fsp--;
@@ -9307,21 +9467,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or__Group__0"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3475:1: rule__Or__Group__0 : rule__Or__Group__0__Impl rule__Or__Group__1 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3539:1: rule__Or__Group__0 : rule__Or__Group__0__Impl rule__Or__Group__1 ;
     public final void rule__Or__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3479:1: ( rule__Or__Group__0__Impl rule__Or__Group__1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3480:2: rule__Or__Group__0__Impl rule__Or__Group__1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3543:1: ( rule__Or__Group__0__Impl rule__Or__Group__1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3544:2: rule__Or__Group__0__Impl rule__Or__Group__1
             {
-            pushFollow(FOLLOW_rule__Or__Group__0__Impl_in_rule__Or__Group__06940);
+            pushFollow(FOLLOW_rule__Or__Group__0__Impl_in_rule__Or__Group__07066);
             rule__Or__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Or__Group__1_in_rule__Or__Group__06943);
+            pushFollow(FOLLOW_rule__Or__Group__1_in_rule__Or__Group__07069);
             rule__Or__Group__1();
 
             state._fsp--;
@@ -9345,20 +9505,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or__Group__0__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3487:1: rule__Or__Group__0__Impl : ( Or ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3551:1: rule__Or__Group__0__Impl : ( Or ) ;
     public final void rule__Or__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3491:1: ( ( Or ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3492:1: ( Or )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3555:1: ( ( Or ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3556:1: ( Or )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3492:1: ( Or )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3493:1: Or
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3556:1: ( Or )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3557:1: Or
             {
              before(grammarAccess.getOrAccess().getOrKeyword_0()); 
-            match(input,Or,FOLLOW_Or_in_rule__Or__Group__0__Impl6971); 
+            match(input,Or,FOLLOW_Or_in_rule__Or__Group__0__Impl7097); 
              after(grammarAccess.getOrAccess().getOrKeyword_0()); 
 
             }
@@ -9382,21 +9542,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or__Group__1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3506:1: rule__Or__Group__1 : rule__Or__Group__1__Impl rule__Or__Group__2 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3570:1: rule__Or__Group__1 : rule__Or__Group__1__Impl rule__Or__Group__2 ;
     public final void rule__Or__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3510:1: ( rule__Or__Group__1__Impl rule__Or__Group__2 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3511:2: rule__Or__Group__1__Impl rule__Or__Group__2
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3574:1: ( rule__Or__Group__1__Impl rule__Or__Group__2 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3575:2: rule__Or__Group__1__Impl rule__Or__Group__2
             {
-            pushFollow(FOLLOW_rule__Or__Group__1__Impl_in_rule__Or__Group__17002);
+            pushFollow(FOLLOW_rule__Or__Group__1__Impl_in_rule__Or__Group__17128);
             rule__Or__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Or__Group__2_in_rule__Or__Group__17005);
+            pushFollow(FOLLOW_rule__Or__Group__2_in_rule__Or__Group__17131);
             rule__Or__Group__2();
 
             state._fsp--;
@@ -9420,23 +9580,23 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or__Group__1__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3518:1: rule__Or__Group__1__Impl : ( ( rule__Or__NameAssignment_1 ) ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3582:1: rule__Or__Group__1__Impl : ( ( rule__Or__NameAssignment_1 ) ) ;
     public final void rule__Or__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3522:1: ( ( ( rule__Or__NameAssignment_1 ) ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3523:1: ( ( rule__Or__NameAssignment_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3586:1: ( ( ( rule__Or__NameAssignment_1 ) ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3587:1: ( ( rule__Or__NameAssignment_1 ) )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3523:1: ( ( rule__Or__NameAssignment_1 ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3524:1: ( rule__Or__NameAssignment_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3587:1: ( ( rule__Or__NameAssignment_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3588:1: ( rule__Or__NameAssignment_1 )
             {
              before(grammarAccess.getOrAccess().getNameAssignment_1()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3525:1: ( rule__Or__NameAssignment_1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3525:2: rule__Or__NameAssignment_1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3589:1: ( rule__Or__NameAssignment_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3589:2: rule__Or__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Or__NameAssignment_1_in_rule__Or__Group__1__Impl7032);
+            pushFollow(FOLLOW_rule__Or__NameAssignment_1_in_rule__Or__Group__1__Impl7158);
             rule__Or__NameAssignment_1();
 
             state._fsp--;
@@ -9467,16 +9627,16 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or__Group__2"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3535:1: rule__Or__Group__2 : rule__Or__Group__2__Impl ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3599:1: rule__Or__Group__2 : rule__Or__Group__2__Impl ;
     public final void rule__Or__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3539:1: ( rule__Or__Group__2__Impl )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3540:2: rule__Or__Group__2__Impl
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3603:1: ( rule__Or__Group__2__Impl )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3604:2: rule__Or__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Or__Group__2__Impl_in_rule__Or__Group__27062);
+            pushFollow(FOLLOW_rule__Or__Group__2__Impl_in_rule__Or__Group__27188);
             rule__Or__Group__2__Impl();
 
             state._fsp--;
@@ -9500,20 +9660,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or__Group__2__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3546:1: rule__Or__Group__2__Impl : ( ( rule__Or__Group_2__0 )? ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3610:1: rule__Or__Group__2__Impl : ( ( rule__Or__Group_2__0 )? ) ;
     public final void rule__Or__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3550:1: ( ( ( rule__Or__Group_2__0 )? ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3551:1: ( ( rule__Or__Group_2__0 )? )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3614:1: ( ( ( rule__Or__Group_2__0 )? ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3615:1: ( ( rule__Or__Group_2__0 )? )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3551:1: ( ( rule__Or__Group_2__0 )? )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3552:1: ( rule__Or__Group_2__0 )?
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3615:1: ( ( rule__Or__Group_2__0 )? )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3616:1: ( rule__Or__Group_2__0 )?
             {
              before(grammarAccess.getOrAccess().getGroup_2()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3553:1: ( rule__Or__Group_2__0 )?
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3617:1: ( rule__Or__Group_2__0 )?
             int alt30=2;
             int LA30_0 = input.LA(1);
 
@@ -9522,9 +9682,9 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
             }
             switch (alt30) {
                 case 1 :
-                    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3553:2: rule__Or__Group_2__0
+                    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3617:2: rule__Or__Group_2__0
                     {
-                    pushFollow(FOLLOW_rule__Or__Group_2__0_in_rule__Or__Group__2__Impl7089);
+                    pushFollow(FOLLOW_rule__Or__Group_2__0_in_rule__Or__Group__2__Impl7215);
                     rule__Or__Group_2__0();
 
                     state._fsp--;
@@ -9558,21 +9718,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or__Group_2__0"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3569:1: rule__Or__Group_2__0 : rule__Or__Group_2__0__Impl rule__Or__Group_2__1 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3633:1: rule__Or__Group_2__0 : rule__Or__Group_2__0__Impl rule__Or__Group_2__1 ;
     public final void rule__Or__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3573:1: ( rule__Or__Group_2__0__Impl rule__Or__Group_2__1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3574:2: rule__Or__Group_2__0__Impl rule__Or__Group_2__1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3637:1: ( rule__Or__Group_2__0__Impl rule__Or__Group_2__1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3638:2: rule__Or__Group_2__0__Impl rule__Or__Group_2__1
             {
-            pushFollow(FOLLOW_rule__Or__Group_2__0__Impl_in_rule__Or__Group_2__07126);
+            pushFollow(FOLLOW_rule__Or__Group_2__0__Impl_in_rule__Or__Group_2__07252);
             rule__Or__Group_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Or__Group_2__1_in_rule__Or__Group_2__07129);
+            pushFollow(FOLLOW_rule__Or__Group_2__1_in_rule__Or__Group_2__07255);
             rule__Or__Group_2__1();
 
             state._fsp--;
@@ -9596,20 +9756,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or__Group_2__0__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3581:1: rule__Or__Group_2__0__Impl : ( RULE_BEGIN ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3645:1: rule__Or__Group_2__0__Impl : ( RULE_BEGIN ) ;
     public final void rule__Or__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3585:1: ( ( RULE_BEGIN ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3586:1: ( RULE_BEGIN )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3649:1: ( ( RULE_BEGIN ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3650:1: ( RULE_BEGIN )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3586:1: ( RULE_BEGIN )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3587:1: RULE_BEGIN
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3650:1: ( RULE_BEGIN )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3651:1: RULE_BEGIN
             {
              before(grammarAccess.getOrAccess().getBEGINTerminalRuleCall_2_0()); 
-            match(input,RULE_BEGIN,FOLLOW_RULE_BEGIN_in_rule__Or__Group_2__0__Impl7156); 
+            match(input,RULE_BEGIN,FOLLOW_RULE_BEGIN_in_rule__Or__Group_2__0__Impl7282); 
              after(grammarAccess.getOrAccess().getBEGINTerminalRuleCall_2_0()); 
 
             }
@@ -9633,21 +9793,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or__Group_2__1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3598:1: rule__Or__Group_2__1 : rule__Or__Group_2__1__Impl rule__Or__Group_2__2 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3662:1: rule__Or__Group_2__1 : rule__Or__Group_2__1__Impl rule__Or__Group_2__2 ;
     public final void rule__Or__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3602:1: ( rule__Or__Group_2__1__Impl rule__Or__Group_2__2 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3603:2: rule__Or__Group_2__1__Impl rule__Or__Group_2__2
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3666:1: ( rule__Or__Group_2__1__Impl rule__Or__Group_2__2 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3667:2: rule__Or__Group_2__1__Impl rule__Or__Group_2__2
             {
-            pushFollow(FOLLOW_rule__Or__Group_2__1__Impl_in_rule__Or__Group_2__17185);
+            pushFollow(FOLLOW_rule__Or__Group_2__1__Impl_in_rule__Or__Group_2__17311);
             rule__Or__Group_2__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Or__Group_2__2_in_rule__Or__Group_2__17188);
+            pushFollow(FOLLOW_rule__Or__Group_2__2_in_rule__Or__Group_2__17314);
             rule__Or__Group_2__2();
 
             state._fsp--;
@@ -9671,23 +9831,23 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or__Group_2__1__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3610:1: rule__Or__Group_2__1__Impl : ( ( rule__Or__GroupedAssignment_2_1 ) ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3674:1: rule__Or__Group_2__1__Impl : ( ( rule__Or__GroupedAssignment_2_1 ) ) ;
     public final void rule__Or__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3614:1: ( ( ( rule__Or__GroupedAssignment_2_1 ) ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3615:1: ( ( rule__Or__GroupedAssignment_2_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3678:1: ( ( ( rule__Or__GroupedAssignment_2_1 ) ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3679:1: ( ( rule__Or__GroupedAssignment_2_1 ) )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3615:1: ( ( rule__Or__GroupedAssignment_2_1 ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3616:1: ( rule__Or__GroupedAssignment_2_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3679:1: ( ( rule__Or__GroupedAssignment_2_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3680:1: ( rule__Or__GroupedAssignment_2_1 )
             {
              before(grammarAccess.getOrAccess().getGroupedAssignment_2_1()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3617:1: ( rule__Or__GroupedAssignment_2_1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3617:2: rule__Or__GroupedAssignment_2_1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3681:1: ( rule__Or__GroupedAssignment_2_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3681:2: rule__Or__GroupedAssignment_2_1
             {
-            pushFollow(FOLLOW_rule__Or__GroupedAssignment_2_1_in_rule__Or__Group_2__1__Impl7215);
+            pushFollow(FOLLOW_rule__Or__GroupedAssignment_2_1_in_rule__Or__Group_2__1__Impl7341);
             rule__Or__GroupedAssignment_2_1();
 
             state._fsp--;
@@ -9718,21 +9878,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or__Group_2__2"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3627:1: rule__Or__Group_2__2 : rule__Or__Group_2__2__Impl rule__Or__Group_2__3 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3691:1: rule__Or__Group_2__2 : rule__Or__Group_2__2__Impl rule__Or__Group_2__3 ;
     public final void rule__Or__Group_2__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3631:1: ( rule__Or__Group_2__2__Impl rule__Or__Group_2__3 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3632:2: rule__Or__Group_2__2__Impl rule__Or__Group_2__3
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3695:1: ( rule__Or__Group_2__2__Impl rule__Or__Group_2__3 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3696:2: rule__Or__Group_2__2__Impl rule__Or__Group_2__3
             {
-            pushFollow(FOLLOW_rule__Or__Group_2__2__Impl_in_rule__Or__Group_2__27245);
+            pushFollow(FOLLOW_rule__Or__Group_2__2__Impl_in_rule__Or__Group_2__27371);
             rule__Or__Group_2__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Or__Group_2__3_in_rule__Or__Group_2__27248);
+            pushFollow(FOLLOW_rule__Or__Group_2__3_in_rule__Or__Group_2__27374);
             rule__Or__Group_2__3();
 
             state._fsp--;
@@ -9756,20 +9916,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or__Group_2__2__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3639:1: rule__Or__Group_2__2__Impl : ( ( rule__Or__Group_2_2__0 )* ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3703:1: rule__Or__Group_2__2__Impl : ( ( rule__Or__Group_2_2__0 )* ) ;
     public final void rule__Or__Group_2__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3643:1: ( ( ( rule__Or__Group_2_2__0 )* ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3644:1: ( ( rule__Or__Group_2_2__0 )* )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3707:1: ( ( ( rule__Or__Group_2_2__0 )* ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3708:1: ( ( rule__Or__Group_2_2__0 )* )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3644:1: ( ( rule__Or__Group_2_2__0 )* )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3645:1: ( rule__Or__Group_2_2__0 )*
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3708:1: ( ( rule__Or__Group_2_2__0 )* )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3709:1: ( rule__Or__Group_2_2__0 )*
             {
              before(grammarAccess.getOrAccess().getGroup_2_2()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3646:1: ( rule__Or__Group_2_2__0 )*
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3710:1: ( rule__Or__Group_2_2__0 )*
             loop31:
             do {
                 int alt31=2;
@@ -9782,9 +9942,9 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
                 switch (alt31) {
             	case 1 :
-            	    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3646:2: rule__Or__Group_2_2__0
+            	    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3710:2: rule__Or__Group_2_2__0
             	    {
-            	    pushFollow(FOLLOW_rule__Or__Group_2_2__0_in_rule__Or__Group_2__2__Impl7275);
+            	    pushFollow(FOLLOW_rule__Or__Group_2_2__0_in_rule__Or__Group_2__2__Impl7401);
             	    rule__Or__Group_2_2__0();
 
             	    state._fsp--;
@@ -9821,16 +9981,16 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or__Group_2__3"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3656:1: rule__Or__Group_2__3 : rule__Or__Group_2__3__Impl ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3720:1: rule__Or__Group_2__3 : rule__Or__Group_2__3__Impl ;
     public final void rule__Or__Group_2__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3660:1: ( rule__Or__Group_2__3__Impl )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3661:2: rule__Or__Group_2__3__Impl
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3724:1: ( rule__Or__Group_2__3__Impl )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3725:2: rule__Or__Group_2__3__Impl
             {
-            pushFollow(FOLLOW_rule__Or__Group_2__3__Impl_in_rule__Or__Group_2__37306);
+            pushFollow(FOLLOW_rule__Or__Group_2__3__Impl_in_rule__Or__Group_2__37432);
             rule__Or__Group_2__3__Impl();
 
             state._fsp--;
@@ -9854,20 +10014,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or__Group_2__3__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3667:1: rule__Or__Group_2__3__Impl : ( RULE_END ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3731:1: rule__Or__Group_2__3__Impl : ( RULE_END ) ;
     public final void rule__Or__Group_2__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3671:1: ( ( RULE_END ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3672:1: ( RULE_END )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3735:1: ( ( RULE_END ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3736:1: ( RULE_END )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3672:1: ( RULE_END )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3673:1: RULE_END
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3736:1: ( RULE_END )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3737:1: RULE_END
             {
              before(grammarAccess.getOrAccess().getENDTerminalRuleCall_2_3()); 
-            match(input,RULE_END,FOLLOW_RULE_END_in_rule__Or__Group_2__3__Impl7333); 
+            match(input,RULE_END,FOLLOW_RULE_END_in_rule__Or__Group_2__3__Impl7459); 
              after(grammarAccess.getOrAccess().getENDTerminalRuleCall_2_3()); 
 
             }
@@ -9891,21 +10051,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or__Group_2_2__0"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3692:1: rule__Or__Group_2_2__0 : rule__Or__Group_2_2__0__Impl rule__Or__Group_2_2__1 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3756:1: rule__Or__Group_2_2__0 : rule__Or__Group_2_2__0__Impl rule__Or__Group_2_2__1 ;
     public final void rule__Or__Group_2_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3696:1: ( rule__Or__Group_2_2__0__Impl rule__Or__Group_2_2__1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3697:2: rule__Or__Group_2_2__0__Impl rule__Or__Group_2_2__1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3760:1: ( rule__Or__Group_2_2__0__Impl rule__Or__Group_2_2__1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3761:2: rule__Or__Group_2_2__0__Impl rule__Or__Group_2_2__1
             {
-            pushFollow(FOLLOW_rule__Or__Group_2_2__0__Impl_in_rule__Or__Group_2_2__07370);
+            pushFollow(FOLLOW_rule__Or__Group_2_2__0__Impl_in_rule__Or__Group_2_2__07496);
             rule__Or__Group_2_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Or__Group_2_2__1_in_rule__Or__Group_2_2__07373);
+            pushFollow(FOLLOW_rule__Or__Group_2_2__1_in_rule__Or__Group_2_2__07499);
             rule__Or__Group_2_2__1();
 
             state._fsp--;
@@ -9929,20 +10089,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or__Group_2_2__0__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3704:1: rule__Or__Group_2_2__0__Impl : ( ( Comma )* ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3768:1: rule__Or__Group_2_2__0__Impl : ( ( Comma )* ) ;
     public final void rule__Or__Group_2_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3708:1: ( ( ( Comma )* ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3709:1: ( ( Comma )* )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3772:1: ( ( ( Comma )* ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3773:1: ( ( Comma )* )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3709:1: ( ( Comma )* )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3710:1: ( Comma )*
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3773:1: ( ( Comma )* )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3774:1: ( Comma )*
             {
              before(grammarAccess.getOrAccess().getCommaKeyword_2_2_0()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3711:1: ( Comma )*
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3775:1: ( Comma )*
             loop32:
             do {
                 int alt32=2;
@@ -9955,9 +10115,9 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
                 switch (alt32) {
             	case 1 :
-            	    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3712:2: Comma
+            	    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3776:2: Comma
             	    {
-            	    match(input,Comma,FOLLOW_Comma_in_rule__Or__Group_2_2__0__Impl7402); 
+            	    match(input,Comma,FOLLOW_Comma_in_rule__Or__Group_2_2__0__Impl7528); 
 
             	    }
             	    break;
@@ -9990,16 +10150,16 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or__Group_2_2__1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3723:1: rule__Or__Group_2_2__1 : rule__Or__Group_2_2__1__Impl ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3787:1: rule__Or__Group_2_2__1 : rule__Or__Group_2_2__1__Impl ;
     public final void rule__Or__Group_2_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3727:1: ( rule__Or__Group_2_2__1__Impl )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3728:2: rule__Or__Group_2_2__1__Impl
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3791:1: ( rule__Or__Group_2_2__1__Impl )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3792:2: rule__Or__Group_2_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__Or__Group_2_2__1__Impl_in_rule__Or__Group_2_2__17435);
+            pushFollow(FOLLOW_rule__Or__Group_2_2__1__Impl_in_rule__Or__Group_2_2__17561);
             rule__Or__Group_2_2__1__Impl();
 
             state._fsp--;
@@ -10023,23 +10183,23 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or__Group_2_2__1__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3734:1: rule__Or__Group_2_2__1__Impl : ( ( rule__Or__GroupedAssignment_2_2_1 ) ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3798:1: rule__Or__Group_2_2__1__Impl : ( ( rule__Or__GroupedAssignment_2_2_1 ) ) ;
     public final void rule__Or__Group_2_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3738:1: ( ( ( rule__Or__GroupedAssignment_2_2_1 ) ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3739:1: ( ( rule__Or__GroupedAssignment_2_2_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3802:1: ( ( ( rule__Or__GroupedAssignment_2_2_1 ) ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3803:1: ( ( rule__Or__GroupedAssignment_2_2_1 ) )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3739:1: ( ( rule__Or__GroupedAssignment_2_2_1 ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3740:1: ( rule__Or__GroupedAssignment_2_2_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3803:1: ( ( rule__Or__GroupedAssignment_2_2_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3804:1: ( rule__Or__GroupedAssignment_2_2_1 )
             {
              before(grammarAccess.getOrAccess().getGroupedAssignment_2_2_1()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3741:1: ( rule__Or__GroupedAssignment_2_2_1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3741:2: rule__Or__GroupedAssignment_2_2_1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3805:1: ( rule__Or__GroupedAssignment_2_2_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3805:2: rule__Or__GroupedAssignment_2_2_1
             {
-            pushFollow(FOLLOW_rule__Or__GroupedAssignment_2_2_1_in_rule__Or__Group_2_2__1__Impl7462);
+            pushFollow(FOLLOW_rule__Or__GroupedAssignment_2_2_1_in_rule__Or__Group_2_2__1__Impl7588);
             rule__Or__GroupedAssignment_2_2_1();
 
             state._fsp--;
@@ -10070,21 +10230,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Xor__Group__0"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3755:1: rule__Xor__Group__0 : rule__Xor__Group__0__Impl rule__Xor__Group__1 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3819:1: rule__Xor__Group__0 : rule__Xor__Group__0__Impl rule__Xor__Group__1 ;
     public final void rule__Xor__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3759:1: ( rule__Xor__Group__0__Impl rule__Xor__Group__1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3760:2: rule__Xor__Group__0__Impl rule__Xor__Group__1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3823:1: ( rule__Xor__Group__0__Impl rule__Xor__Group__1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3824:2: rule__Xor__Group__0__Impl rule__Xor__Group__1
             {
-            pushFollow(FOLLOW_rule__Xor__Group__0__Impl_in_rule__Xor__Group__07496);
+            pushFollow(FOLLOW_rule__Xor__Group__0__Impl_in_rule__Xor__Group__07622);
             rule__Xor__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Xor__Group__1_in_rule__Xor__Group__07499);
+            pushFollow(FOLLOW_rule__Xor__Group__1_in_rule__Xor__Group__07625);
             rule__Xor__Group__1();
 
             state._fsp--;
@@ -10108,20 +10268,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Xor__Group__0__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3767:1: rule__Xor__Group__0__Impl : ( Xor ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3831:1: rule__Xor__Group__0__Impl : ( Xor ) ;
     public final void rule__Xor__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3771:1: ( ( Xor ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3772:1: ( Xor )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3835:1: ( ( Xor ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3836:1: ( Xor )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3772:1: ( Xor )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3773:1: Xor
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3836:1: ( Xor )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3837:1: Xor
             {
              before(grammarAccess.getXorAccess().getXorKeyword_0()); 
-            match(input,Xor,FOLLOW_Xor_in_rule__Xor__Group__0__Impl7527); 
+            match(input,Xor,FOLLOW_Xor_in_rule__Xor__Group__0__Impl7653); 
              after(grammarAccess.getXorAccess().getXorKeyword_0()); 
 
             }
@@ -10145,21 +10305,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Xor__Group__1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3786:1: rule__Xor__Group__1 : rule__Xor__Group__1__Impl rule__Xor__Group__2 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3850:1: rule__Xor__Group__1 : rule__Xor__Group__1__Impl rule__Xor__Group__2 ;
     public final void rule__Xor__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3790:1: ( rule__Xor__Group__1__Impl rule__Xor__Group__2 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3791:2: rule__Xor__Group__1__Impl rule__Xor__Group__2
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3854:1: ( rule__Xor__Group__1__Impl rule__Xor__Group__2 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3855:2: rule__Xor__Group__1__Impl rule__Xor__Group__2
             {
-            pushFollow(FOLLOW_rule__Xor__Group__1__Impl_in_rule__Xor__Group__17558);
+            pushFollow(FOLLOW_rule__Xor__Group__1__Impl_in_rule__Xor__Group__17684);
             rule__Xor__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Xor__Group__2_in_rule__Xor__Group__17561);
+            pushFollow(FOLLOW_rule__Xor__Group__2_in_rule__Xor__Group__17687);
             rule__Xor__Group__2();
 
             state._fsp--;
@@ -10183,23 +10343,23 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Xor__Group__1__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3798:1: rule__Xor__Group__1__Impl : ( ( rule__Xor__NameAssignment_1 ) ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3862:1: rule__Xor__Group__1__Impl : ( ( rule__Xor__NameAssignment_1 ) ) ;
     public final void rule__Xor__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3802:1: ( ( ( rule__Xor__NameAssignment_1 ) ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3803:1: ( ( rule__Xor__NameAssignment_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3866:1: ( ( ( rule__Xor__NameAssignment_1 ) ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3867:1: ( ( rule__Xor__NameAssignment_1 ) )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3803:1: ( ( rule__Xor__NameAssignment_1 ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3804:1: ( rule__Xor__NameAssignment_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3867:1: ( ( rule__Xor__NameAssignment_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3868:1: ( rule__Xor__NameAssignment_1 )
             {
              before(grammarAccess.getXorAccess().getNameAssignment_1()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3805:1: ( rule__Xor__NameAssignment_1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3805:2: rule__Xor__NameAssignment_1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3869:1: ( rule__Xor__NameAssignment_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3869:2: rule__Xor__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Xor__NameAssignment_1_in_rule__Xor__Group__1__Impl7588);
+            pushFollow(FOLLOW_rule__Xor__NameAssignment_1_in_rule__Xor__Group__1__Impl7714);
             rule__Xor__NameAssignment_1();
 
             state._fsp--;
@@ -10230,16 +10390,16 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Xor__Group__2"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3815:1: rule__Xor__Group__2 : rule__Xor__Group__2__Impl ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3879:1: rule__Xor__Group__2 : rule__Xor__Group__2__Impl ;
     public final void rule__Xor__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3819:1: ( rule__Xor__Group__2__Impl )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3820:2: rule__Xor__Group__2__Impl
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3883:1: ( rule__Xor__Group__2__Impl )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3884:2: rule__Xor__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Xor__Group__2__Impl_in_rule__Xor__Group__27618);
+            pushFollow(FOLLOW_rule__Xor__Group__2__Impl_in_rule__Xor__Group__27744);
             rule__Xor__Group__2__Impl();
 
             state._fsp--;
@@ -10263,20 +10423,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Xor__Group__2__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3826:1: rule__Xor__Group__2__Impl : ( ( rule__Xor__Group_2__0 )? ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3890:1: rule__Xor__Group__2__Impl : ( ( rule__Xor__Group_2__0 )? ) ;
     public final void rule__Xor__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3830:1: ( ( ( rule__Xor__Group_2__0 )? ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3831:1: ( ( rule__Xor__Group_2__0 )? )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3894:1: ( ( ( rule__Xor__Group_2__0 )? ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3895:1: ( ( rule__Xor__Group_2__0 )? )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3831:1: ( ( rule__Xor__Group_2__0 )? )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3832:1: ( rule__Xor__Group_2__0 )?
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3895:1: ( ( rule__Xor__Group_2__0 )? )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3896:1: ( rule__Xor__Group_2__0 )?
             {
              before(grammarAccess.getXorAccess().getGroup_2()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3833:1: ( rule__Xor__Group_2__0 )?
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3897:1: ( rule__Xor__Group_2__0 )?
             int alt33=2;
             int LA33_0 = input.LA(1);
 
@@ -10285,9 +10445,9 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
             }
             switch (alt33) {
                 case 1 :
-                    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3833:2: rule__Xor__Group_2__0
+                    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3897:2: rule__Xor__Group_2__0
                     {
-                    pushFollow(FOLLOW_rule__Xor__Group_2__0_in_rule__Xor__Group__2__Impl7645);
+                    pushFollow(FOLLOW_rule__Xor__Group_2__0_in_rule__Xor__Group__2__Impl7771);
                     rule__Xor__Group_2__0();
 
                     state._fsp--;
@@ -10321,21 +10481,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Xor__Group_2__0"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3849:1: rule__Xor__Group_2__0 : rule__Xor__Group_2__0__Impl rule__Xor__Group_2__1 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3913:1: rule__Xor__Group_2__0 : rule__Xor__Group_2__0__Impl rule__Xor__Group_2__1 ;
     public final void rule__Xor__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3853:1: ( rule__Xor__Group_2__0__Impl rule__Xor__Group_2__1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3854:2: rule__Xor__Group_2__0__Impl rule__Xor__Group_2__1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3917:1: ( rule__Xor__Group_2__0__Impl rule__Xor__Group_2__1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3918:2: rule__Xor__Group_2__0__Impl rule__Xor__Group_2__1
             {
-            pushFollow(FOLLOW_rule__Xor__Group_2__0__Impl_in_rule__Xor__Group_2__07682);
+            pushFollow(FOLLOW_rule__Xor__Group_2__0__Impl_in_rule__Xor__Group_2__07808);
             rule__Xor__Group_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Xor__Group_2__1_in_rule__Xor__Group_2__07685);
+            pushFollow(FOLLOW_rule__Xor__Group_2__1_in_rule__Xor__Group_2__07811);
             rule__Xor__Group_2__1();
 
             state._fsp--;
@@ -10359,20 +10519,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Xor__Group_2__0__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3861:1: rule__Xor__Group_2__0__Impl : ( RULE_BEGIN ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3925:1: rule__Xor__Group_2__0__Impl : ( RULE_BEGIN ) ;
     public final void rule__Xor__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3865:1: ( ( RULE_BEGIN ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3866:1: ( RULE_BEGIN )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3929:1: ( ( RULE_BEGIN ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3930:1: ( RULE_BEGIN )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3866:1: ( RULE_BEGIN )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3867:1: RULE_BEGIN
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3930:1: ( RULE_BEGIN )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3931:1: RULE_BEGIN
             {
              before(grammarAccess.getXorAccess().getBEGINTerminalRuleCall_2_0()); 
-            match(input,RULE_BEGIN,FOLLOW_RULE_BEGIN_in_rule__Xor__Group_2__0__Impl7712); 
+            match(input,RULE_BEGIN,FOLLOW_RULE_BEGIN_in_rule__Xor__Group_2__0__Impl7838); 
              after(grammarAccess.getXorAccess().getBEGINTerminalRuleCall_2_0()); 
 
             }
@@ -10396,21 +10556,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Xor__Group_2__1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3878:1: rule__Xor__Group_2__1 : rule__Xor__Group_2__1__Impl rule__Xor__Group_2__2 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3942:1: rule__Xor__Group_2__1 : rule__Xor__Group_2__1__Impl rule__Xor__Group_2__2 ;
     public final void rule__Xor__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3882:1: ( rule__Xor__Group_2__1__Impl rule__Xor__Group_2__2 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3883:2: rule__Xor__Group_2__1__Impl rule__Xor__Group_2__2
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3946:1: ( rule__Xor__Group_2__1__Impl rule__Xor__Group_2__2 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3947:2: rule__Xor__Group_2__1__Impl rule__Xor__Group_2__2
             {
-            pushFollow(FOLLOW_rule__Xor__Group_2__1__Impl_in_rule__Xor__Group_2__17741);
+            pushFollow(FOLLOW_rule__Xor__Group_2__1__Impl_in_rule__Xor__Group_2__17867);
             rule__Xor__Group_2__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Xor__Group_2__2_in_rule__Xor__Group_2__17744);
+            pushFollow(FOLLOW_rule__Xor__Group_2__2_in_rule__Xor__Group_2__17870);
             rule__Xor__Group_2__2();
 
             state._fsp--;
@@ -10434,23 +10594,23 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Xor__Group_2__1__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3890:1: rule__Xor__Group_2__1__Impl : ( ( rule__Xor__GroupedAssignment_2_1 ) ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3954:1: rule__Xor__Group_2__1__Impl : ( ( rule__Xor__GroupedAssignment_2_1 ) ) ;
     public final void rule__Xor__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3894:1: ( ( ( rule__Xor__GroupedAssignment_2_1 ) ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3895:1: ( ( rule__Xor__GroupedAssignment_2_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3958:1: ( ( ( rule__Xor__GroupedAssignment_2_1 ) ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3959:1: ( ( rule__Xor__GroupedAssignment_2_1 ) )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3895:1: ( ( rule__Xor__GroupedAssignment_2_1 ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3896:1: ( rule__Xor__GroupedAssignment_2_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3959:1: ( ( rule__Xor__GroupedAssignment_2_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3960:1: ( rule__Xor__GroupedAssignment_2_1 )
             {
              before(grammarAccess.getXorAccess().getGroupedAssignment_2_1()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3897:1: ( rule__Xor__GroupedAssignment_2_1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3897:2: rule__Xor__GroupedAssignment_2_1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3961:1: ( rule__Xor__GroupedAssignment_2_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3961:2: rule__Xor__GroupedAssignment_2_1
             {
-            pushFollow(FOLLOW_rule__Xor__GroupedAssignment_2_1_in_rule__Xor__Group_2__1__Impl7771);
+            pushFollow(FOLLOW_rule__Xor__GroupedAssignment_2_1_in_rule__Xor__Group_2__1__Impl7897);
             rule__Xor__GroupedAssignment_2_1();
 
             state._fsp--;
@@ -10481,21 +10641,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Xor__Group_2__2"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3907:1: rule__Xor__Group_2__2 : rule__Xor__Group_2__2__Impl rule__Xor__Group_2__3 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3971:1: rule__Xor__Group_2__2 : rule__Xor__Group_2__2__Impl rule__Xor__Group_2__3 ;
     public final void rule__Xor__Group_2__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3911:1: ( rule__Xor__Group_2__2__Impl rule__Xor__Group_2__3 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3912:2: rule__Xor__Group_2__2__Impl rule__Xor__Group_2__3
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3975:1: ( rule__Xor__Group_2__2__Impl rule__Xor__Group_2__3 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3976:2: rule__Xor__Group_2__2__Impl rule__Xor__Group_2__3
             {
-            pushFollow(FOLLOW_rule__Xor__Group_2__2__Impl_in_rule__Xor__Group_2__27801);
+            pushFollow(FOLLOW_rule__Xor__Group_2__2__Impl_in_rule__Xor__Group_2__27927);
             rule__Xor__Group_2__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Xor__Group_2__3_in_rule__Xor__Group_2__27804);
+            pushFollow(FOLLOW_rule__Xor__Group_2__3_in_rule__Xor__Group_2__27930);
             rule__Xor__Group_2__3();
 
             state._fsp--;
@@ -10519,20 +10679,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Xor__Group_2__2__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3919:1: rule__Xor__Group_2__2__Impl : ( ( rule__Xor__Group_2_2__0 )* ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3983:1: rule__Xor__Group_2__2__Impl : ( ( rule__Xor__Group_2_2__0 )* ) ;
     public final void rule__Xor__Group_2__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3923:1: ( ( ( rule__Xor__Group_2_2__0 )* ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3924:1: ( ( rule__Xor__Group_2_2__0 )* )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3987:1: ( ( ( rule__Xor__Group_2_2__0 )* ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3988:1: ( ( rule__Xor__Group_2_2__0 )* )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3924:1: ( ( rule__Xor__Group_2_2__0 )* )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3925:1: ( rule__Xor__Group_2_2__0 )*
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3988:1: ( ( rule__Xor__Group_2_2__0 )* )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3989:1: ( rule__Xor__Group_2_2__0 )*
             {
              before(grammarAccess.getXorAccess().getGroup_2_2()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3926:1: ( rule__Xor__Group_2_2__0 )*
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3990:1: ( rule__Xor__Group_2_2__0 )*
             loop34:
             do {
                 int alt34=2;
@@ -10545,9 +10705,9 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
                 switch (alt34) {
             	case 1 :
-            	    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3926:2: rule__Xor__Group_2_2__0
+            	    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3990:2: rule__Xor__Group_2_2__0
             	    {
-            	    pushFollow(FOLLOW_rule__Xor__Group_2_2__0_in_rule__Xor__Group_2__2__Impl7831);
+            	    pushFollow(FOLLOW_rule__Xor__Group_2_2__0_in_rule__Xor__Group_2__2__Impl7957);
             	    rule__Xor__Group_2_2__0();
 
             	    state._fsp--;
@@ -10584,16 +10744,16 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Xor__Group_2__3"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3936:1: rule__Xor__Group_2__3 : rule__Xor__Group_2__3__Impl ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4000:1: rule__Xor__Group_2__3 : rule__Xor__Group_2__3__Impl ;
     public final void rule__Xor__Group_2__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3940:1: ( rule__Xor__Group_2__3__Impl )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3941:2: rule__Xor__Group_2__3__Impl
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4004:1: ( rule__Xor__Group_2__3__Impl )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4005:2: rule__Xor__Group_2__3__Impl
             {
-            pushFollow(FOLLOW_rule__Xor__Group_2__3__Impl_in_rule__Xor__Group_2__37862);
+            pushFollow(FOLLOW_rule__Xor__Group_2__3__Impl_in_rule__Xor__Group_2__37988);
             rule__Xor__Group_2__3__Impl();
 
             state._fsp--;
@@ -10617,20 +10777,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Xor__Group_2__3__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3947:1: rule__Xor__Group_2__3__Impl : ( RULE_END ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4011:1: rule__Xor__Group_2__3__Impl : ( RULE_END ) ;
     public final void rule__Xor__Group_2__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3951:1: ( ( RULE_END ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3952:1: ( RULE_END )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4015:1: ( ( RULE_END ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4016:1: ( RULE_END )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3952:1: ( RULE_END )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3953:1: RULE_END
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4016:1: ( RULE_END )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4017:1: RULE_END
             {
              before(grammarAccess.getXorAccess().getENDTerminalRuleCall_2_3()); 
-            match(input,RULE_END,FOLLOW_RULE_END_in_rule__Xor__Group_2__3__Impl7889); 
+            match(input,RULE_END,FOLLOW_RULE_END_in_rule__Xor__Group_2__3__Impl8015); 
              after(grammarAccess.getXorAccess().getENDTerminalRuleCall_2_3()); 
 
             }
@@ -10654,21 +10814,21 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Xor__Group_2_2__0"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3972:1: rule__Xor__Group_2_2__0 : rule__Xor__Group_2_2__0__Impl rule__Xor__Group_2_2__1 ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4036:1: rule__Xor__Group_2_2__0 : rule__Xor__Group_2_2__0__Impl rule__Xor__Group_2_2__1 ;
     public final void rule__Xor__Group_2_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3976:1: ( rule__Xor__Group_2_2__0__Impl rule__Xor__Group_2_2__1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3977:2: rule__Xor__Group_2_2__0__Impl rule__Xor__Group_2_2__1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4040:1: ( rule__Xor__Group_2_2__0__Impl rule__Xor__Group_2_2__1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4041:2: rule__Xor__Group_2_2__0__Impl rule__Xor__Group_2_2__1
             {
-            pushFollow(FOLLOW_rule__Xor__Group_2_2__0__Impl_in_rule__Xor__Group_2_2__07926);
+            pushFollow(FOLLOW_rule__Xor__Group_2_2__0__Impl_in_rule__Xor__Group_2_2__08052);
             rule__Xor__Group_2_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Xor__Group_2_2__1_in_rule__Xor__Group_2_2__07929);
+            pushFollow(FOLLOW_rule__Xor__Group_2_2__1_in_rule__Xor__Group_2_2__08055);
             rule__Xor__Group_2_2__1();
 
             state._fsp--;
@@ -10692,20 +10852,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Xor__Group_2_2__0__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3984:1: rule__Xor__Group_2_2__0__Impl : ( ( Comma )* ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4048:1: rule__Xor__Group_2_2__0__Impl : ( ( Comma )* ) ;
     public final void rule__Xor__Group_2_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3988:1: ( ( ( Comma )* ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3989:1: ( ( Comma )* )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4052:1: ( ( ( Comma )* ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4053:1: ( ( Comma )* )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3989:1: ( ( Comma )* )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3990:1: ( Comma )*
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4053:1: ( ( Comma )* )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4054:1: ( Comma )*
             {
              before(grammarAccess.getXorAccess().getCommaKeyword_2_2_0()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3991:1: ( Comma )*
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4055:1: ( Comma )*
             loop35:
             do {
                 int alt35=2;
@@ -10718,9 +10878,9 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
                 switch (alt35) {
             	case 1 :
-            	    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:3992:2: Comma
+            	    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4056:2: Comma
             	    {
-            	    match(input,Comma,FOLLOW_Comma_in_rule__Xor__Group_2_2__0__Impl7958); 
+            	    match(input,Comma,FOLLOW_Comma_in_rule__Xor__Group_2_2__0__Impl8084); 
 
             	    }
             	    break;
@@ -10753,16 +10913,16 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Xor__Group_2_2__1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4003:1: rule__Xor__Group_2_2__1 : rule__Xor__Group_2_2__1__Impl ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4067:1: rule__Xor__Group_2_2__1 : rule__Xor__Group_2_2__1__Impl ;
     public final void rule__Xor__Group_2_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4007:1: ( rule__Xor__Group_2_2__1__Impl )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4008:2: rule__Xor__Group_2_2__1__Impl
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4071:1: ( rule__Xor__Group_2_2__1__Impl )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4072:2: rule__Xor__Group_2_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__Xor__Group_2_2__1__Impl_in_rule__Xor__Group_2_2__17991);
+            pushFollow(FOLLOW_rule__Xor__Group_2_2__1__Impl_in_rule__Xor__Group_2_2__18117);
             rule__Xor__Group_2_2__1__Impl();
 
             state._fsp--;
@@ -10786,23 +10946,23 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Xor__Group_2_2__1__Impl"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4014:1: rule__Xor__Group_2_2__1__Impl : ( ( rule__Xor__GroupedAssignment_2_2_1 ) ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4078:1: rule__Xor__Group_2_2__1__Impl : ( ( rule__Xor__GroupedAssignment_2_2_1 ) ) ;
     public final void rule__Xor__Group_2_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4018:1: ( ( ( rule__Xor__GroupedAssignment_2_2_1 ) ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4019:1: ( ( rule__Xor__GroupedAssignment_2_2_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4082:1: ( ( ( rule__Xor__GroupedAssignment_2_2_1 ) ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4083:1: ( ( rule__Xor__GroupedAssignment_2_2_1 ) )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4019:1: ( ( rule__Xor__GroupedAssignment_2_2_1 ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4020:1: ( rule__Xor__GroupedAssignment_2_2_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4083:1: ( ( rule__Xor__GroupedAssignment_2_2_1 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4084:1: ( rule__Xor__GroupedAssignment_2_2_1 )
             {
              before(grammarAccess.getXorAccess().getGroupedAssignment_2_2_1()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4021:1: ( rule__Xor__GroupedAssignment_2_2_1 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4021:2: rule__Xor__GroupedAssignment_2_2_1
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4085:1: ( rule__Xor__GroupedAssignment_2_2_1 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4085:2: rule__Xor__GroupedAssignment_2_2_1
             {
-            pushFollow(FOLLOW_rule__Xor__GroupedAssignment_2_2_1_in_rule__Xor__Group_2_2__1__Impl8018);
+            pushFollow(FOLLOW_rule__Xor__GroupedAssignment_2_2_1_in_rule__Xor__Group_2_2__1__Impl8144);
             rule__Xor__GroupedAssignment_2_2_1();
 
             state._fsp--;
@@ -10833,20 +10993,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__RootAssignment"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4036:1: rule__Model__RootAssignment : ( ruleFeature_Impl ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4100:1: rule__Model__RootAssignment : ( ruleFeature_Impl ) ;
     public final void rule__Model__RootAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4040:1: ( ( ruleFeature_Impl ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4041:1: ( ruleFeature_Impl )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4104:1: ( ( ruleFeature_Impl ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4105:1: ( ruleFeature_Impl )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4041:1: ( ruleFeature_Impl )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4042:1: ruleFeature_Impl
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4105:1: ( ruleFeature_Impl )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4106:1: ruleFeature_Impl
             {
              before(grammarAccess.getModelAccess().getRootFeature_ImplParserRuleCall_0()); 
-            pushFollow(FOLLOW_ruleFeature_Impl_in_rule__Model__RootAssignment8057);
+            pushFollow(FOLLOW_ruleFeature_Impl_in_rule__Model__RootAssignment8183);
             ruleFeature_Impl();
 
             state._fsp--;
@@ -10874,24 +11034,24 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Constrain__OperatorAssignment_1_1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4051:1: rule__Constrain__OperatorAssignment_1_1 : ( ( VerticalLineVerticalLine ) ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4115:1: rule__Constrain__OperatorAssignment_1_1 : ( ( VerticalLineVerticalLine ) ) ;
     public final void rule__Constrain__OperatorAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4055:1: ( ( ( VerticalLineVerticalLine ) ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4056:1: ( ( VerticalLineVerticalLine ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4119:1: ( ( ( VerticalLineVerticalLine ) ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4120:1: ( ( VerticalLineVerticalLine ) )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4056:1: ( ( VerticalLineVerticalLine ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4057:1: ( VerticalLineVerticalLine )
-            {
-             before(grammarAccess.getConstrainAccess().getOperatorVerticalLineVerticalLineKeyword_1_1_0()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4058:1: ( VerticalLineVerticalLine )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4059:1: VerticalLineVerticalLine
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4120:1: ( ( VerticalLineVerticalLine ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4121:1: ( VerticalLineVerticalLine )
             {
              before(grammarAccess.getConstrainAccess().getOperatorVerticalLineVerticalLineKeyword_1_1_0()); 
-            match(input,VerticalLineVerticalLine,FOLLOW_VerticalLineVerticalLine_in_rule__Constrain__OperatorAssignment_1_18093); 
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4122:1: ( VerticalLineVerticalLine )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4123:1: VerticalLineVerticalLine
+            {
+             before(grammarAccess.getConstrainAccess().getOperatorVerticalLineVerticalLineKeyword_1_1_0()); 
+            match(input,VerticalLineVerticalLine,FOLLOW_VerticalLineVerticalLine_in_rule__Constrain__OperatorAssignment_1_18219); 
              after(grammarAccess.getConstrainAccess().getOperatorVerticalLineVerticalLineKeyword_1_1_0()); 
 
             }
@@ -10919,20 +11079,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Constrain__RightExpAssignment_1_2"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4074:1: rule__Constrain__RightExpAssignment_1_2 : ( ruleConjunction ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4138:1: rule__Constrain__RightExpAssignment_1_2 : ( ruleConjunction ) ;
     public final void rule__Constrain__RightExpAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4078:1: ( ( ruleConjunction ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4079:1: ( ruleConjunction )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4142:1: ( ( ruleConjunction ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4143:1: ( ruleConjunction )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4079:1: ( ruleConjunction )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4080:1: ruleConjunction
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4143:1: ( ruleConjunction )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4144:1: ruleConjunction
             {
              before(grammarAccess.getConstrainAccess().getRightExpConjunctionParserRuleCall_1_2_0()); 
-            pushFollow(FOLLOW_ruleConjunction_in_rule__Constrain__RightExpAssignment_1_28132);
+            pushFollow(FOLLOW_ruleConjunction_in_rule__Constrain__RightExpAssignment_1_28258);
             ruleConjunction();
 
             state._fsp--;
@@ -10960,24 +11120,24 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Conjunction__OperatorAssignment_1_1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4089:1: rule__Conjunction__OperatorAssignment_1_1 : ( ( AmpersandAmpersand ) ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4153:1: rule__Conjunction__OperatorAssignment_1_1 : ( ( AmpersandAmpersand ) ) ;
     public final void rule__Conjunction__OperatorAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4093:1: ( ( ( AmpersandAmpersand ) ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4094:1: ( ( AmpersandAmpersand ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4157:1: ( ( ( AmpersandAmpersand ) ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4158:1: ( ( AmpersandAmpersand ) )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4094:1: ( ( AmpersandAmpersand ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4095:1: ( AmpersandAmpersand )
-            {
-             before(grammarAccess.getConjunctionAccess().getOperatorAmpersandAmpersandKeyword_1_1_0()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4096:1: ( AmpersandAmpersand )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4097:1: AmpersandAmpersand
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4158:1: ( ( AmpersandAmpersand ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4159:1: ( AmpersandAmpersand )
             {
              before(grammarAccess.getConjunctionAccess().getOperatorAmpersandAmpersandKeyword_1_1_0()); 
-            match(input,AmpersandAmpersand,FOLLOW_AmpersandAmpersand_in_rule__Conjunction__OperatorAssignment_1_18168); 
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4160:1: ( AmpersandAmpersand )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4161:1: AmpersandAmpersand
+            {
+             before(grammarAccess.getConjunctionAccess().getOperatorAmpersandAmpersandKeyword_1_1_0()); 
+            match(input,AmpersandAmpersand,FOLLOW_AmpersandAmpersand_in_rule__Conjunction__OperatorAssignment_1_18294); 
              after(grammarAccess.getConjunctionAccess().getOperatorAmpersandAmpersandKeyword_1_1_0()); 
 
             }
@@ -11005,20 +11165,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Conjunction__RightExpAssignment_1_2"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4112:1: rule__Conjunction__RightExpAssignment_1_2 : ( ruleComparison ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4176:1: rule__Conjunction__RightExpAssignment_1_2 : ( ruleComparison ) ;
     public final void rule__Conjunction__RightExpAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4116:1: ( ( ruleComparison ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4117:1: ( ruleComparison )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4180:1: ( ( ruleComparison ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4181:1: ( ruleComparison )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4117:1: ( ruleComparison )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4118:1: ruleComparison
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4181:1: ( ruleComparison )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4182:1: ruleComparison
             {
              before(grammarAccess.getConjunctionAccess().getRightExpComparisonParserRuleCall_1_2_0()); 
-            pushFollow(FOLLOW_ruleComparison_in_rule__Conjunction__RightExpAssignment_1_28207);
+            pushFollow(FOLLOW_ruleComparison_in_rule__Conjunction__RightExpAssignment_1_28333);
             ruleComparison();
 
             state._fsp--;
@@ -11046,23 +11206,23 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Comparison__OperatorAssignment_1_1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4127:1: rule__Comparison__OperatorAssignment_1_1 : ( ( rule__Comparison__OperatorAlternatives_1_1_0 ) ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4191:1: rule__Comparison__OperatorAssignment_1_1 : ( ( rule__Comparison__OperatorAlternatives_1_1_0 ) ) ;
     public final void rule__Comparison__OperatorAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4131:1: ( ( ( rule__Comparison__OperatorAlternatives_1_1_0 ) ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4132:1: ( ( rule__Comparison__OperatorAlternatives_1_1_0 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4195:1: ( ( ( rule__Comparison__OperatorAlternatives_1_1_0 ) ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4196:1: ( ( rule__Comparison__OperatorAlternatives_1_1_0 ) )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4132:1: ( ( rule__Comparison__OperatorAlternatives_1_1_0 ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4133:1: ( rule__Comparison__OperatorAlternatives_1_1_0 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4196:1: ( ( rule__Comparison__OperatorAlternatives_1_1_0 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4197:1: ( rule__Comparison__OperatorAlternatives_1_1_0 )
             {
              before(grammarAccess.getComparisonAccess().getOperatorAlternatives_1_1_0()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4134:1: ( rule__Comparison__OperatorAlternatives_1_1_0 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4134:2: rule__Comparison__OperatorAlternatives_1_1_0
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4198:1: ( rule__Comparison__OperatorAlternatives_1_1_0 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4198:2: rule__Comparison__OperatorAlternatives_1_1_0
             {
-            pushFollow(FOLLOW_rule__Comparison__OperatorAlternatives_1_1_0_in_rule__Comparison__OperatorAssignment_1_18238);
+            pushFollow(FOLLOW_rule__Comparison__OperatorAlternatives_1_1_0_in_rule__Comparison__OperatorAssignment_1_18364);
             rule__Comparison__OperatorAlternatives_1_1_0();
 
             state._fsp--;
@@ -11093,20 +11253,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Comparison__RightExpAssignment_1_2"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4143:1: rule__Comparison__RightExpAssignment_1_2 : ( ruleBinary ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4207:1: rule__Comparison__RightExpAssignment_1_2 : ( ruleBinary ) ;
     public final void rule__Comparison__RightExpAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4147:1: ( ( ruleBinary ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4148:1: ( ruleBinary )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4211:1: ( ( ruleBinary ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4212:1: ( ruleBinary )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4148:1: ( ruleBinary )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4149:1: ruleBinary
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4212:1: ( ruleBinary )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4213:1: ruleBinary
             {
              before(grammarAccess.getComparisonAccess().getRightExpBinaryParserRuleCall_1_2_0()); 
-            pushFollow(FOLLOW_ruleBinary_in_rule__Comparison__RightExpAssignment_1_28271);
+            pushFollow(FOLLOW_ruleBinary_in_rule__Comparison__RightExpAssignment_1_28397);
             ruleBinary();
 
             state._fsp--;
@@ -11134,20 +11294,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Binary__RightExpAssignment_1_1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4158:1: rule__Binary__RightExpAssignment_1_1 : ( rulePrimary ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4222:1: rule__Binary__RightExpAssignment_1_1 : ( rulePrimary ) ;
     public final void rule__Binary__RightExpAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4162:1: ( ( rulePrimary ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4163:1: ( rulePrimary )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4226:1: ( ( rulePrimary ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4227:1: ( rulePrimary )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4163:1: ( rulePrimary )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4164:1: rulePrimary
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4227:1: ( rulePrimary )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4228:1: rulePrimary
             {
              before(grammarAccess.getBinaryAccess().getRightExpPrimaryParserRuleCall_1_1_0()); 
-            pushFollow(FOLLOW_rulePrimary_in_rule__Binary__RightExpAssignment_1_18302);
+            pushFollow(FOLLOW_rulePrimary_in_rule__Binary__RightExpAssignment_1_18428);
             rulePrimary();
 
             state._fsp--;
@@ -11175,33 +11335,33 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Primary__ConstrainFeaturesAssignment_0_0"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4173:1: rule__Primary__ConstrainFeaturesAssignment_0_0 : ( ( ruleEString ) ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4237:1: rule__Primary__ConstrainFeaturesAssignment_0_0 : ( ( ruleEString ) ) ;
     public final void rule__Primary__ConstrainFeaturesAssignment_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4177:1: ( ( ( ruleEString ) ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4178:1: ( ( ruleEString ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4241:1: ( ( ( ruleEString ) ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4242:1: ( ( ruleEString ) )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4178:1: ( ( ruleEString ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4179:1: ( ruleEString )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4242:1: ( ( ruleEString ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4243:1: ( ruleEString )
             {
-             before(grammarAccess.getPrimaryAccess().getConstrainFeaturesFeatureCrossReference_0_0_0()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4180:1: ( ruleEString )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4181:1: ruleEString
+             before(grammarAccess.getPrimaryAccess().getConstrainFeaturesSolitaryCrossReference_0_0_0()); 
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4244:1: ( ruleEString )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4245:1: ruleEString
             {
-             before(grammarAccess.getPrimaryAccess().getConstrainFeaturesFeatureEStringParserRuleCall_0_0_0_1()); 
-            pushFollow(FOLLOW_ruleEString_in_rule__Primary__ConstrainFeaturesAssignment_0_08337);
+             before(grammarAccess.getPrimaryAccess().getConstrainFeaturesSolitaryEStringParserRuleCall_0_0_0_1()); 
+            pushFollow(FOLLOW_ruleEString_in_rule__Primary__ConstrainFeaturesAssignment_0_08463);
             ruleEString();
 
             state._fsp--;
 
-             after(grammarAccess.getPrimaryAccess().getConstrainFeaturesFeatureEStringParserRuleCall_0_0_0_1()); 
+             after(grammarAccess.getPrimaryAccess().getConstrainFeaturesSolitaryEStringParserRuleCall_0_0_0_1()); 
 
             }
 
-             after(grammarAccess.getPrimaryAccess().getConstrainFeaturesFeatureCrossReference_0_0_0()); 
+             after(grammarAccess.getPrimaryAccess().getConstrainFeaturesSolitaryCrossReference_0_0_0()); 
 
             }
 
@@ -11223,34 +11383,34 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Primary__ConstrainFeaturesAssignment_0_0"
 
 
-    // $ANTLR start "rule__Primary__ConstrainFeaturesAssignment_0_1_1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4192:1: rule__Primary__ConstrainFeaturesAssignment_0_1_1 : ( ( ruleEString ) ) ;
-    public final void rule__Primary__ConstrainFeaturesAssignment_0_1_1() throws RecognitionException {
+    // $ANTLR start "rule__Primary__GroupsAssignment_0_2"
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4256:1: rule__Primary__GroupsAssignment_0_2 : ( ( ruleEString ) ) ;
+    public final void rule__Primary__GroupsAssignment_0_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4196:1: ( ( ( ruleEString ) ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4197:1: ( ( ruleEString ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4260:1: ( ( ( ruleEString ) ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4261:1: ( ( ruleEString ) )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4197:1: ( ( ruleEString ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4198:1: ( ruleEString )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4261:1: ( ( ruleEString ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4262:1: ( ruleEString )
             {
-             before(grammarAccess.getPrimaryAccess().getConstrainFeaturesFeatureCrossReference_0_1_1_0()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4199:1: ( ruleEString )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4200:1: ruleEString
+             before(grammarAccess.getPrimaryAccess().getGroupsGroupCrossReference_0_2_0()); 
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4263:1: ( ruleEString )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4264:1: ruleEString
             {
-             before(grammarAccess.getPrimaryAccess().getConstrainFeaturesFeatureEStringParserRuleCall_0_1_1_0_1()); 
-            pushFollow(FOLLOW_ruleEString_in_rule__Primary__ConstrainFeaturesAssignment_0_1_18376);
+             before(grammarAccess.getPrimaryAccess().getGroupsGroupEStringParserRuleCall_0_2_0_1()); 
+            pushFollow(FOLLOW_ruleEString_in_rule__Primary__GroupsAssignment_0_28502);
             ruleEString();
 
             state._fsp--;
 
-             after(grammarAccess.getPrimaryAccess().getConstrainFeaturesFeatureEStringParserRuleCall_0_1_1_0_1()); 
+             after(grammarAccess.getPrimaryAccess().getGroupsGroupEStringParserRuleCall_0_2_0_1()); 
 
             }
 
-             after(grammarAccess.getPrimaryAccess().getConstrainFeaturesFeatureCrossReference_0_1_1_0()); 
+             after(grammarAccess.getPrimaryAccess().getGroupsGroupCrossReference_0_2_0()); 
 
             }
 
@@ -11269,27 +11429,76 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Primary__ConstrainFeaturesAssignment_0_1_1"
+    // $ANTLR end "rule__Primary__GroupsAssignment_0_2"
+
+
+    // $ANTLR start "rule__Primary__ConstrainFeaturesAssignment_0_3_1"
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4275:1: rule__Primary__ConstrainFeaturesAssignment_0_3_1 : ( ( ruleEString ) ) ;
+    public final void rule__Primary__ConstrainFeaturesAssignment_0_3_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4279:1: ( ( ( ruleEString ) ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4280:1: ( ( ruleEString ) )
+            {
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4280:1: ( ( ruleEString ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4281:1: ( ruleEString )
+            {
+             before(grammarAccess.getPrimaryAccess().getConstrainFeaturesFeatureCrossReference_0_3_1_0()); 
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4282:1: ( ruleEString )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4283:1: ruleEString
+            {
+             before(grammarAccess.getPrimaryAccess().getConstrainFeaturesFeatureEStringParserRuleCall_0_3_1_0_1()); 
+            pushFollow(FOLLOW_ruleEString_in_rule__Primary__ConstrainFeaturesAssignment_0_3_18541);
+            ruleEString();
+
+            state._fsp--;
+
+             after(grammarAccess.getPrimaryAccess().getConstrainFeaturesFeatureEStringParserRuleCall_0_3_1_0_1()); 
+
+            }
+
+             after(grammarAccess.getPrimaryAccess().getConstrainFeaturesFeatureCrossReference_0_3_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Primary__ConstrainFeaturesAssignment_0_3_1"
 
 
     // $ANTLR start "rule__Unary__OperatorAssignment_1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4211:1: rule__Unary__OperatorAssignment_1 : ( ( rule__Unary__OperatorAlternatives_1_0 ) ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4294:1: rule__Unary__OperatorAssignment_1 : ( ( rule__Unary__OperatorAlternatives_1_0 ) ) ;
     public final void rule__Unary__OperatorAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4215:1: ( ( ( rule__Unary__OperatorAlternatives_1_0 ) ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4216:1: ( ( rule__Unary__OperatorAlternatives_1_0 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4298:1: ( ( ( rule__Unary__OperatorAlternatives_1_0 ) ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4299:1: ( ( rule__Unary__OperatorAlternatives_1_0 ) )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4216:1: ( ( rule__Unary__OperatorAlternatives_1_0 ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4217:1: ( rule__Unary__OperatorAlternatives_1_0 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4299:1: ( ( rule__Unary__OperatorAlternatives_1_0 ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4300:1: ( rule__Unary__OperatorAlternatives_1_0 )
             {
              before(grammarAccess.getUnaryAccess().getOperatorAlternatives_1_0()); 
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4218:1: ( rule__Unary__OperatorAlternatives_1_0 )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4218:2: rule__Unary__OperatorAlternatives_1_0
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4301:1: ( rule__Unary__OperatorAlternatives_1_0 )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4301:2: rule__Unary__OperatorAlternatives_1_0
             {
-            pushFollow(FOLLOW_rule__Unary__OperatorAlternatives_1_0_in_rule__Unary__OperatorAssignment_18411);
+            pushFollow(FOLLOW_rule__Unary__OperatorAlternatives_1_0_in_rule__Unary__OperatorAssignment_18576);
             rule__Unary__OperatorAlternatives_1_0();
 
             state._fsp--;
@@ -11320,20 +11529,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Unary__ExpAssignment_2"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4227:1: rule__Unary__ExpAssignment_2 : ( rulePrimary ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4310:1: rule__Unary__ExpAssignment_2 : ( rulePrimary ) ;
     public final void rule__Unary__ExpAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4231:1: ( ( rulePrimary ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4232:1: ( rulePrimary )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4314:1: ( ( rulePrimary ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4315:1: ( rulePrimary )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4232:1: ( rulePrimary )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4233:1: rulePrimary
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4315:1: ( rulePrimary )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4316:1: rulePrimary
             {
              before(grammarAccess.getUnaryAccess().getExpPrimaryParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_rulePrimary_in_rule__Unary__ExpAssignment_28444);
+            pushFollow(FOLLOW_rulePrimary_in_rule__Unary__ExpAssignment_28609);
             rulePrimary();
 
             state._fsp--;
@@ -11361,20 +11570,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature_Impl__NameAssignment_1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4242:1: rule__Feature_Impl__NameAssignment_1 : ( ruleEString ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4325:1: rule__Feature_Impl__NameAssignment_1 : ( ruleEString ) ;
     public final void rule__Feature_Impl__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4246:1: ( ( ruleEString ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4247:1: ( ruleEString )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4329:1: ( ( ruleEString ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4330:1: ( ruleEString )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4247:1: ( ruleEString )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4248:1: ruleEString
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4330:1: ( ruleEString )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4331:1: ruleEString
             {
              before(grammarAccess.getFeature_ImplAccess().getNameEStringParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleEString_in_rule__Feature_Impl__NameAssignment_18475);
+            pushFollow(FOLLOW_ruleEString_in_rule__Feature_Impl__NameAssignment_18640);
             ruleEString();
 
             state._fsp--;
@@ -11402,20 +11611,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature_Impl__SubfeatureAssignment_2_1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4257:1: rule__Feature_Impl__SubfeatureAssignment_2_1 : ( ruleSolitary ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4340:1: rule__Feature_Impl__SubfeatureAssignment_2_1 : ( ruleSolitary ) ;
     public final void rule__Feature_Impl__SubfeatureAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4261:1: ( ( ruleSolitary ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4262:1: ( ruleSolitary )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4344:1: ( ( ruleSolitary ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4345:1: ( ruleSolitary )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4262:1: ( ruleSolitary )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4263:1: ruleSolitary
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4345:1: ( ruleSolitary )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4346:1: ruleSolitary
             {
              before(grammarAccess.getFeature_ImplAccess().getSubfeatureSolitaryParserRuleCall_2_1_0()); 
-            pushFollow(FOLLOW_ruleSolitary_in_rule__Feature_Impl__SubfeatureAssignment_2_18506);
+            pushFollow(FOLLOW_ruleSolitary_in_rule__Feature_Impl__SubfeatureAssignment_2_18671);
             ruleSolitary();
 
             state._fsp--;
@@ -11443,20 +11652,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature_Impl__SubfeatureAssignment_2_2"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4272:1: rule__Feature_Impl__SubfeatureAssignment_2_2 : ( ruleSolitary ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4355:1: rule__Feature_Impl__SubfeatureAssignment_2_2 : ( ruleSolitary ) ;
     public final void rule__Feature_Impl__SubfeatureAssignment_2_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4276:1: ( ( ruleSolitary ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4277:1: ( ruleSolitary )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4359:1: ( ( ruleSolitary ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4360:1: ( ruleSolitary )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4277:1: ( ruleSolitary )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4278:1: ruleSolitary
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4360:1: ( ruleSolitary )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4361:1: ruleSolitary
             {
              before(grammarAccess.getFeature_ImplAccess().getSubfeatureSolitaryParserRuleCall_2_2_0()); 
-            pushFollow(FOLLOW_ruleSolitary_in_rule__Feature_Impl__SubfeatureAssignment_2_28537);
+            pushFollow(FOLLOW_ruleSolitary_in_rule__Feature_Impl__SubfeatureAssignment_2_28702);
             ruleSolitary();
 
             state._fsp--;
@@ -11484,20 +11693,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature_Impl__ConstrainsAssignment_3_1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4287:1: rule__Feature_Impl__ConstrainsAssignment_3_1 : ( ruleConstrain ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4370:1: rule__Feature_Impl__ConstrainsAssignment_3_1 : ( ruleConstrain ) ;
     public final void rule__Feature_Impl__ConstrainsAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4291:1: ( ( ruleConstrain ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4292:1: ( ruleConstrain )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4374:1: ( ( ruleConstrain ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4375:1: ( ruleConstrain )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4292:1: ( ruleConstrain )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4293:1: ruleConstrain
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4375:1: ( ruleConstrain )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4376:1: ruleConstrain
             {
              before(grammarAccess.getFeature_ImplAccess().getConstrainsConstrainParserRuleCall_3_1_0()); 
-            pushFollow(FOLLOW_ruleConstrain_in_rule__Feature_Impl__ConstrainsAssignment_3_18568);
+            pushFollow(FOLLOW_ruleConstrain_in_rule__Feature_Impl__ConstrainsAssignment_3_18733);
             ruleConstrain();
 
             state._fsp--;
@@ -11525,20 +11734,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature_Impl__ConstrainsAssignment_3_2_1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4302:1: rule__Feature_Impl__ConstrainsAssignment_3_2_1 : ( ruleConstrain ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4385:1: rule__Feature_Impl__ConstrainsAssignment_3_2_1 : ( ruleConstrain ) ;
     public final void rule__Feature_Impl__ConstrainsAssignment_3_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4306:1: ( ( ruleConstrain ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4307:1: ( ruleConstrain )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4389:1: ( ( ruleConstrain ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4390:1: ( ruleConstrain )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4307:1: ( ruleConstrain )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4308:1: ruleConstrain
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4390:1: ( ruleConstrain )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4391:1: ruleConstrain
             {
              before(grammarAccess.getFeature_ImplAccess().getConstrainsConstrainParserRuleCall_3_2_1_0()); 
-            pushFollow(FOLLOW_ruleConstrain_in_rule__Feature_Impl__ConstrainsAssignment_3_2_18599);
+            pushFollow(FOLLOW_ruleConstrain_in_rule__Feature_Impl__ConstrainsAssignment_3_2_18764);
             ruleConstrain();
 
             state._fsp--;
@@ -11566,20 +11775,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Grouped__NameAssignment_0"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4317:1: rule__Grouped__NameAssignment_0 : ( ruleEString ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4400:1: rule__Grouped__NameAssignment_0 : ( ruleEString ) ;
     public final void rule__Grouped__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4321:1: ( ( ruleEString ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4322:1: ( ruleEString )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4404:1: ( ( ruleEString ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4405:1: ( ruleEString )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4322:1: ( ruleEString )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4323:1: ruleEString
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4405:1: ( ruleEString )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4406:1: ruleEString
             {
              before(grammarAccess.getGroupedAccess().getNameEStringParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleEString_in_rule__Grouped__NameAssignment_08630);
+            pushFollow(FOLLOW_ruleEString_in_rule__Grouped__NameAssignment_08795);
             ruleEString();
 
             state._fsp--;
@@ -11607,20 +11816,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Grouped__ConstrainsAssignment_1_1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4332:1: rule__Grouped__ConstrainsAssignment_1_1 : ( ruleConstrain ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4415:1: rule__Grouped__ConstrainsAssignment_1_1 : ( ruleConstrain ) ;
     public final void rule__Grouped__ConstrainsAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4336:1: ( ( ruleConstrain ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4337:1: ( ruleConstrain )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4419:1: ( ( ruleConstrain ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4420:1: ( ruleConstrain )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4337:1: ( ruleConstrain )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4338:1: ruleConstrain
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4420:1: ( ruleConstrain )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4421:1: ruleConstrain
             {
              before(grammarAccess.getGroupedAccess().getConstrainsConstrainParserRuleCall_1_1_0()); 
-            pushFollow(FOLLOW_ruleConstrain_in_rule__Grouped__ConstrainsAssignment_1_18661);
+            pushFollow(FOLLOW_ruleConstrain_in_rule__Grouped__ConstrainsAssignment_1_18826);
             ruleConstrain();
 
             state._fsp--;
@@ -11648,20 +11857,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Grouped__ConstrainsAssignment_1_2_1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4347:1: rule__Grouped__ConstrainsAssignment_1_2_1 : ( ruleConstrain ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4430:1: rule__Grouped__ConstrainsAssignment_1_2_1 : ( ruleConstrain ) ;
     public final void rule__Grouped__ConstrainsAssignment_1_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4351:1: ( ( ruleConstrain ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4352:1: ( ruleConstrain )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4434:1: ( ( ruleConstrain ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4435:1: ( ruleConstrain )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4352:1: ( ruleConstrain )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4353:1: ruleConstrain
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4435:1: ( ruleConstrain )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4436:1: ruleConstrain
             {
              before(grammarAccess.getGroupedAccess().getConstrainsConstrainParserRuleCall_1_2_1_0()); 
-            pushFollow(FOLLOW_ruleConstrain_in_rule__Grouped__ConstrainsAssignment_1_2_18692);
+            pushFollow(FOLLOW_ruleConstrain_in_rule__Grouped__ConstrainsAssignment_1_2_18857);
             ruleConstrain();
 
             state._fsp--;
@@ -11689,20 +11898,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__NameAssignment_0"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4362:1: rule__Mandatory__NameAssignment_0 : ( ruleEString ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4445:1: rule__Mandatory__NameAssignment_0 : ( ruleEString ) ;
     public final void rule__Mandatory__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4366:1: ( ( ruleEString ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4367:1: ( ruleEString )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4449:1: ( ( ruleEString ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4450:1: ( ruleEString )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4367:1: ( ruleEString )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4368:1: ruleEString
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4450:1: ( ruleEString )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4451:1: ruleEString
             {
              before(grammarAccess.getMandatoryAccess().getNameEStringParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleEString_in_rule__Mandatory__NameAssignment_08723);
+            pushFollow(FOLLOW_ruleEString_in_rule__Mandatory__NameAssignment_08888);
             ruleEString();
 
             state._fsp--;
@@ -11730,20 +11939,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__SubfeatureAssignment_1_1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4377:1: rule__Mandatory__SubfeatureAssignment_1_1 : ( ruleSolitary ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4460:1: rule__Mandatory__SubfeatureAssignment_1_1 : ( ruleSolitary ) ;
     public final void rule__Mandatory__SubfeatureAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4381:1: ( ( ruleSolitary ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4382:1: ( ruleSolitary )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4464:1: ( ( ruleSolitary ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4465:1: ( ruleSolitary )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4382:1: ( ruleSolitary )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4383:1: ruleSolitary
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4465:1: ( ruleSolitary )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4466:1: ruleSolitary
             {
              before(grammarAccess.getMandatoryAccess().getSubfeatureSolitaryParserRuleCall_1_1_0()); 
-            pushFollow(FOLLOW_ruleSolitary_in_rule__Mandatory__SubfeatureAssignment_1_18754);
+            pushFollow(FOLLOW_ruleSolitary_in_rule__Mandatory__SubfeatureAssignment_1_18919);
             ruleSolitary();
 
             state._fsp--;
@@ -11771,20 +11980,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__SubfeatureAssignment_1_2_1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4392:1: rule__Mandatory__SubfeatureAssignment_1_2_1 : ( ruleSolitary ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4475:1: rule__Mandatory__SubfeatureAssignment_1_2_1 : ( ruleSolitary ) ;
     public final void rule__Mandatory__SubfeatureAssignment_1_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4396:1: ( ( ruleSolitary ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4397:1: ( ruleSolitary )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4479:1: ( ( ruleSolitary ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4480:1: ( ruleSolitary )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4397:1: ( ruleSolitary )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4398:1: ruleSolitary
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4480:1: ( ruleSolitary )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4481:1: ruleSolitary
             {
              before(grammarAccess.getMandatoryAccess().getSubfeatureSolitaryParserRuleCall_1_2_1_0()); 
-            pushFollow(FOLLOW_ruleSolitary_in_rule__Mandatory__SubfeatureAssignment_1_2_18785);
+            pushFollow(FOLLOW_ruleSolitary_in_rule__Mandatory__SubfeatureAssignment_1_2_18950);
             ruleSolitary();
 
             state._fsp--;
@@ -11812,20 +12021,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__ConstrainsAssignment_2_1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4407:1: rule__Mandatory__ConstrainsAssignment_2_1 : ( ruleConstrain ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4490:1: rule__Mandatory__ConstrainsAssignment_2_1 : ( ruleConstrain ) ;
     public final void rule__Mandatory__ConstrainsAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4411:1: ( ( ruleConstrain ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4412:1: ( ruleConstrain )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4494:1: ( ( ruleConstrain ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4495:1: ( ruleConstrain )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4412:1: ( ruleConstrain )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4413:1: ruleConstrain
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4495:1: ( ruleConstrain )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4496:1: ruleConstrain
             {
              before(grammarAccess.getMandatoryAccess().getConstrainsConstrainParserRuleCall_2_1_0()); 
-            pushFollow(FOLLOW_ruleConstrain_in_rule__Mandatory__ConstrainsAssignment_2_18816);
+            pushFollow(FOLLOW_ruleConstrain_in_rule__Mandatory__ConstrainsAssignment_2_18981);
             ruleConstrain();
 
             state._fsp--;
@@ -11853,20 +12062,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__ConstrainsAssignment_2_2_1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4422:1: rule__Mandatory__ConstrainsAssignment_2_2_1 : ( ruleConstrain ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4505:1: rule__Mandatory__ConstrainsAssignment_2_2_1 : ( ruleConstrain ) ;
     public final void rule__Mandatory__ConstrainsAssignment_2_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4426:1: ( ( ruleConstrain ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4427:1: ( ruleConstrain )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4509:1: ( ( ruleConstrain ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4510:1: ( ruleConstrain )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4427:1: ( ruleConstrain )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4428:1: ruleConstrain
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4510:1: ( ruleConstrain )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4511:1: ruleConstrain
             {
              before(grammarAccess.getMandatoryAccess().getConstrainsConstrainParserRuleCall_2_2_1_0()); 
-            pushFollow(FOLLOW_ruleConstrain_in_rule__Mandatory__ConstrainsAssignment_2_2_18847);
+            pushFollow(FOLLOW_ruleConstrain_in_rule__Mandatory__ConstrainsAssignment_2_2_19012);
             ruleConstrain();
 
             state._fsp--;
@@ -11894,20 +12103,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__GroupsAssignment_3_0"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4437:1: rule__Mandatory__GroupsAssignment_3_0 : ( ruleGroup ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4520:1: rule__Mandatory__GroupsAssignment_3_0 : ( ruleGroup ) ;
     public final void rule__Mandatory__GroupsAssignment_3_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4441:1: ( ( ruleGroup ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4442:1: ( ruleGroup )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4524:1: ( ( ruleGroup ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4525:1: ( ruleGroup )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4442:1: ( ruleGroup )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4443:1: ruleGroup
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4525:1: ( ruleGroup )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4526:1: ruleGroup
             {
              before(grammarAccess.getMandatoryAccess().getGroupsGroupParserRuleCall_3_0_0()); 
-            pushFollow(FOLLOW_ruleGroup_in_rule__Mandatory__GroupsAssignment_3_08878);
+            pushFollow(FOLLOW_ruleGroup_in_rule__Mandatory__GroupsAssignment_3_09043);
             ruleGroup();
 
             state._fsp--;
@@ -11935,20 +12144,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mandatory__GroupsAssignment_3_1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4452:1: rule__Mandatory__GroupsAssignment_3_1 : ( ruleGroup ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4535:1: rule__Mandatory__GroupsAssignment_3_1 : ( ruleGroup ) ;
     public final void rule__Mandatory__GroupsAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4456:1: ( ( ruleGroup ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4457:1: ( ruleGroup )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4539:1: ( ( ruleGroup ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4540:1: ( ruleGroup )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4457:1: ( ruleGroup )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4458:1: ruleGroup
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4540:1: ( ruleGroup )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4541:1: ruleGroup
             {
              before(grammarAccess.getMandatoryAccess().getGroupsGroupParserRuleCall_3_1_0()); 
-            pushFollow(FOLLOW_ruleGroup_in_rule__Mandatory__GroupsAssignment_3_18909);
+            pushFollow(FOLLOW_ruleGroup_in_rule__Mandatory__GroupsAssignment_3_19074);
             ruleGroup();
 
             state._fsp--;
@@ -11976,20 +12185,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__NameAssignment_1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4467:1: rule__Optional__NameAssignment_1 : ( ruleEString ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4550:1: rule__Optional__NameAssignment_1 : ( ruleEString ) ;
     public final void rule__Optional__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4471:1: ( ( ruleEString ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4472:1: ( ruleEString )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4554:1: ( ( ruleEString ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4555:1: ( ruleEString )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4472:1: ( ruleEString )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4473:1: ruleEString
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4555:1: ( ruleEString )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4556:1: ruleEString
             {
              before(grammarAccess.getOptionalAccess().getNameEStringParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleEString_in_rule__Optional__NameAssignment_18940);
+            pushFollow(FOLLOW_ruleEString_in_rule__Optional__NameAssignment_19105);
             ruleEString();
 
             state._fsp--;
@@ -12017,20 +12226,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__SubfeatureAssignment_2_1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4482:1: rule__Optional__SubfeatureAssignment_2_1 : ( ruleSolitary ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4565:1: rule__Optional__SubfeatureAssignment_2_1 : ( ruleSolitary ) ;
     public final void rule__Optional__SubfeatureAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4486:1: ( ( ruleSolitary ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4487:1: ( ruleSolitary )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4569:1: ( ( ruleSolitary ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4570:1: ( ruleSolitary )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4487:1: ( ruleSolitary )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4488:1: ruleSolitary
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4570:1: ( ruleSolitary )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4571:1: ruleSolitary
             {
              before(grammarAccess.getOptionalAccess().getSubfeatureSolitaryParserRuleCall_2_1_0()); 
-            pushFollow(FOLLOW_ruleSolitary_in_rule__Optional__SubfeatureAssignment_2_18971);
+            pushFollow(FOLLOW_ruleSolitary_in_rule__Optional__SubfeatureAssignment_2_19136);
             ruleSolitary();
 
             state._fsp--;
@@ -12058,20 +12267,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__SubfeatureAssignment_2_2_1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4497:1: rule__Optional__SubfeatureAssignment_2_2_1 : ( ruleSolitary ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4580:1: rule__Optional__SubfeatureAssignment_2_2_1 : ( ruleSolitary ) ;
     public final void rule__Optional__SubfeatureAssignment_2_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4501:1: ( ( ruleSolitary ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4502:1: ( ruleSolitary )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4584:1: ( ( ruleSolitary ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4585:1: ( ruleSolitary )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4502:1: ( ruleSolitary )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4503:1: ruleSolitary
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4585:1: ( ruleSolitary )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4586:1: ruleSolitary
             {
              before(grammarAccess.getOptionalAccess().getSubfeatureSolitaryParserRuleCall_2_2_1_0()); 
-            pushFollow(FOLLOW_ruleSolitary_in_rule__Optional__SubfeatureAssignment_2_2_19002);
+            pushFollow(FOLLOW_ruleSolitary_in_rule__Optional__SubfeatureAssignment_2_2_19167);
             ruleSolitary();
 
             state._fsp--;
@@ -12099,20 +12308,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__ConstrainsAssignment_3_1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4512:1: rule__Optional__ConstrainsAssignment_3_1 : ( ruleConstrain ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4595:1: rule__Optional__ConstrainsAssignment_3_1 : ( ruleConstrain ) ;
     public final void rule__Optional__ConstrainsAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4516:1: ( ( ruleConstrain ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4517:1: ( ruleConstrain )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4599:1: ( ( ruleConstrain ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4600:1: ( ruleConstrain )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4517:1: ( ruleConstrain )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4518:1: ruleConstrain
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4600:1: ( ruleConstrain )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4601:1: ruleConstrain
             {
              before(grammarAccess.getOptionalAccess().getConstrainsConstrainParserRuleCall_3_1_0()); 
-            pushFollow(FOLLOW_ruleConstrain_in_rule__Optional__ConstrainsAssignment_3_19033);
+            pushFollow(FOLLOW_ruleConstrain_in_rule__Optional__ConstrainsAssignment_3_19198);
             ruleConstrain();
 
             state._fsp--;
@@ -12140,20 +12349,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__ConstrainsAssignment_3_2_1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4527:1: rule__Optional__ConstrainsAssignment_3_2_1 : ( ruleConstrain ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4610:1: rule__Optional__ConstrainsAssignment_3_2_1 : ( ruleConstrain ) ;
     public final void rule__Optional__ConstrainsAssignment_3_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4531:1: ( ( ruleConstrain ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4532:1: ( ruleConstrain )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4614:1: ( ( ruleConstrain ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4615:1: ( ruleConstrain )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4532:1: ( ruleConstrain )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4533:1: ruleConstrain
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4615:1: ( ruleConstrain )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4616:1: ruleConstrain
             {
              before(grammarAccess.getOptionalAccess().getConstrainsConstrainParserRuleCall_3_2_1_0()); 
-            pushFollow(FOLLOW_ruleConstrain_in_rule__Optional__ConstrainsAssignment_3_2_19064);
+            pushFollow(FOLLOW_ruleConstrain_in_rule__Optional__ConstrainsAssignment_3_2_19229);
             ruleConstrain();
 
             state._fsp--;
@@ -12181,20 +12390,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__GroupsAssignment_4_0"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4542:1: rule__Optional__GroupsAssignment_4_0 : ( ruleGroup ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4625:1: rule__Optional__GroupsAssignment_4_0 : ( ruleGroup ) ;
     public final void rule__Optional__GroupsAssignment_4_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4546:1: ( ( ruleGroup ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4547:1: ( ruleGroup )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4629:1: ( ( ruleGroup ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4630:1: ( ruleGroup )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4547:1: ( ruleGroup )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4548:1: ruleGroup
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4630:1: ( ruleGroup )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4631:1: ruleGroup
             {
              before(grammarAccess.getOptionalAccess().getGroupsGroupParserRuleCall_4_0_0()); 
-            pushFollow(FOLLOW_ruleGroup_in_rule__Optional__GroupsAssignment_4_09095);
+            pushFollow(FOLLOW_ruleGroup_in_rule__Optional__GroupsAssignment_4_09260);
             ruleGroup();
 
             state._fsp--;
@@ -12222,20 +12431,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Optional__GroupsAssignment_4_1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4557:1: rule__Optional__GroupsAssignment_4_1 : ( ruleGroup ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4640:1: rule__Optional__GroupsAssignment_4_1 : ( ruleGroup ) ;
     public final void rule__Optional__GroupsAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4561:1: ( ( ruleGroup ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4562:1: ( ruleGroup )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4644:1: ( ( ruleGroup ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4645:1: ( ruleGroup )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4562:1: ( ruleGroup )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4563:1: ruleGroup
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4645:1: ( ruleGroup )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4646:1: ruleGroup
             {
              before(grammarAccess.getOptionalAccess().getGroupsGroupParserRuleCall_4_1_0()); 
-            pushFollow(FOLLOW_ruleGroup_in_rule__Optional__GroupsAssignment_4_19126);
+            pushFollow(FOLLOW_ruleGroup_in_rule__Optional__GroupsAssignment_4_19291);
             ruleGroup();
 
             state._fsp--;
@@ -12263,20 +12472,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or__NameAssignment_1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4572:1: rule__Or__NameAssignment_1 : ( ruleEString ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4655:1: rule__Or__NameAssignment_1 : ( ruleEString ) ;
     public final void rule__Or__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4576:1: ( ( ruleEString ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4577:1: ( ruleEString )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4659:1: ( ( ruleEString ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4660:1: ( ruleEString )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4577:1: ( ruleEString )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4578:1: ruleEString
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4660:1: ( ruleEString )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4661:1: ruleEString
             {
              before(grammarAccess.getOrAccess().getNameEStringParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleEString_in_rule__Or__NameAssignment_19157);
+            pushFollow(FOLLOW_ruleEString_in_rule__Or__NameAssignment_19322);
             ruleEString();
 
             state._fsp--;
@@ -12304,20 +12513,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or__GroupedAssignment_2_1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4587:1: rule__Or__GroupedAssignment_2_1 : ( ruleGrouped ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4670:1: rule__Or__GroupedAssignment_2_1 : ( ruleGrouped ) ;
     public final void rule__Or__GroupedAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4591:1: ( ( ruleGrouped ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4592:1: ( ruleGrouped )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4674:1: ( ( ruleGrouped ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4675:1: ( ruleGrouped )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4592:1: ( ruleGrouped )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4593:1: ruleGrouped
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4675:1: ( ruleGrouped )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4676:1: ruleGrouped
             {
              before(grammarAccess.getOrAccess().getGroupedGroupedParserRuleCall_2_1_0()); 
-            pushFollow(FOLLOW_ruleGrouped_in_rule__Or__GroupedAssignment_2_19188);
+            pushFollow(FOLLOW_ruleGrouped_in_rule__Or__GroupedAssignment_2_19353);
             ruleGrouped();
 
             state._fsp--;
@@ -12345,20 +12554,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or__GroupedAssignment_2_2_1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4602:1: rule__Or__GroupedAssignment_2_2_1 : ( ruleGrouped ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4685:1: rule__Or__GroupedAssignment_2_2_1 : ( ruleGrouped ) ;
     public final void rule__Or__GroupedAssignment_2_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4606:1: ( ( ruleGrouped ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4607:1: ( ruleGrouped )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4689:1: ( ( ruleGrouped ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4690:1: ( ruleGrouped )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4607:1: ( ruleGrouped )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4608:1: ruleGrouped
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4690:1: ( ruleGrouped )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4691:1: ruleGrouped
             {
              before(grammarAccess.getOrAccess().getGroupedGroupedParserRuleCall_2_2_1_0()); 
-            pushFollow(FOLLOW_ruleGrouped_in_rule__Or__GroupedAssignment_2_2_19219);
+            pushFollow(FOLLOW_ruleGrouped_in_rule__Or__GroupedAssignment_2_2_19384);
             ruleGrouped();
 
             state._fsp--;
@@ -12386,20 +12595,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Xor__NameAssignment_1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4617:1: rule__Xor__NameAssignment_1 : ( ruleEString ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4700:1: rule__Xor__NameAssignment_1 : ( ruleEString ) ;
     public final void rule__Xor__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4621:1: ( ( ruleEString ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4622:1: ( ruleEString )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4704:1: ( ( ruleEString ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4705:1: ( ruleEString )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4622:1: ( ruleEString )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4623:1: ruleEString
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4705:1: ( ruleEString )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4706:1: ruleEString
             {
              before(grammarAccess.getXorAccess().getNameEStringParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleEString_in_rule__Xor__NameAssignment_19250);
+            pushFollow(FOLLOW_ruleEString_in_rule__Xor__NameAssignment_19415);
             ruleEString();
 
             state._fsp--;
@@ -12427,20 +12636,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Xor__GroupedAssignment_2_1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4632:1: rule__Xor__GroupedAssignment_2_1 : ( ruleGrouped ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4715:1: rule__Xor__GroupedAssignment_2_1 : ( ruleGrouped ) ;
     public final void rule__Xor__GroupedAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4636:1: ( ( ruleGrouped ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4637:1: ( ruleGrouped )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4719:1: ( ( ruleGrouped ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4720:1: ( ruleGrouped )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4637:1: ( ruleGrouped )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4638:1: ruleGrouped
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4720:1: ( ruleGrouped )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4721:1: ruleGrouped
             {
              before(grammarAccess.getXorAccess().getGroupedGroupedParserRuleCall_2_1_0()); 
-            pushFollow(FOLLOW_ruleGrouped_in_rule__Xor__GroupedAssignment_2_19281);
+            pushFollow(FOLLOW_ruleGrouped_in_rule__Xor__GroupedAssignment_2_19446);
             ruleGrouped();
 
             state._fsp--;
@@ -12468,20 +12677,20 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Xor__GroupedAssignment_2_2_1"
-    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4647:1: rule__Xor__GroupedAssignment_2_2_1 : ( ruleGrouped ) ;
+    // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4730:1: rule__Xor__GroupedAssignment_2_2_1 : ( ruleGrouped ) ;
     public final void rule__Xor__GroupedAssignment_2_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4651:1: ( ( ruleGrouped ) )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4652:1: ( ruleGrouped )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4734:1: ( ( ruleGrouped ) )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4735:1: ( ruleGrouped )
             {
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4652:1: ( ruleGrouped )
-            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4653:1: ruleGrouped
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4735:1: ( ruleGrouped )
+            // ../dk.itu.mdd.configurator.Conf.ui/src-gen/dk/itu/mdd/configurator/ui/contentassist/antlr/internal/InternalConfParser.g:4736:1: ruleGrouped
             {
              before(grammarAccess.getXorAccess().getGroupedGroupedParserRuleCall_2_2_1_0()); 
-            pushFollow(FOLLOW_ruleGrouped_in_rule__Xor__GroupedAssignment_2_2_19312);
+            pushFollow(FOLLOW_ruleGrouped_in_rule__Xor__GroupedAssignment_2_2_19477);
             ruleGrouped();
 
             state._fsp--;
@@ -12626,273 +12835,280 @@ public class InternalConfParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_rule__Primary__Group_0__0__Impl_in_rule__Primary__Group_0__02668 = new BitSet(new long[]{0x0000000000040000L});
     public static final BitSet FOLLOW_rule__Primary__Group_0__1_in_rule__Primary__Group_0__02671 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Primary__ConstrainFeaturesAssignment_0_0_in_rule__Primary__Group_0__0__Impl2698 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Primary__Group_0__1__Impl_in_rule__Primary__Group_0__12728 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Primary__Group_0_1__0_in_rule__Primary__Group_0__1__Impl2755 = new BitSet(new long[]{0x0000000000040002L});
-    public static final BitSet FOLLOW_rule__Primary__Group_0_1__0__Impl_in_rule__Primary__Group_0_1__02790 = new BitSet(new long[]{0x00000000A4000000L});
-    public static final BitSet FOLLOW_rule__Primary__Group_0_1__1_in_rule__Primary__Group_0_1__02793 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_FullStop_in_rule__Primary__Group_0_1__0__Impl2821 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Primary__Group_0_1__1__Impl_in_rule__Primary__Group_0_1__12852 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Primary__ConstrainFeaturesAssignment_0_1_1_in_rule__Primary__Group_0_1__1__Impl2879 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Primary__Group_2__0__Impl_in_rule__Primary__Group_2__02913 = new BitSet(new long[]{0x00000000A4026000L});
-    public static final BitSet FOLLOW_rule__Primary__Group_2__1_in_rule__Primary__Group_2__02916 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_LeftParenthesis_in_rule__Primary__Group_2__0__Impl2944 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Primary__Group_2__1__Impl_in_rule__Primary__Group_2__12975 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_rule__Primary__Group_2__2_in_rule__Primary__Group_2__12978 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConstrain_in_rule__Primary__Group_2__1__Impl3005 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Primary__Group_2__2__Impl_in_rule__Primary__Group_2__23034 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RightParenthesis_in_rule__Primary__Group_2__2__Impl3062 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Unary__Group__0__Impl_in_rule__Unary__Group__03099 = new BitSet(new long[]{0x0000000000022000L});
-    public static final BitSet FOLLOW_rule__Unary__Group__1_in_rule__Unary__Group__03102 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Unary__Group__1__Impl_in_rule__Unary__Group__13160 = new BitSet(new long[]{0x00000000A4026000L});
-    public static final BitSet FOLLOW_rule__Unary__Group__2_in_rule__Unary__Group__13163 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Unary__OperatorAssignment_1_in_rule__Unary__Group__1__Impl3190 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Unary__Group__2__Impl_in_rule__Unary__Group__23220 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Unary__ExpAssignment_2_in_rule__Unary__Group__2__Impl3247 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Feature_Impl__Group__0__Impl_in_rule__Feature_Impl__Group__03283 = new BitSet(new long[]{0x00000000A4000000L});
-    public static final BitSet FOLLOW_rule__Feature_Impl__Group__1_in_rule__Feature_Impl__Group__03286 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Feature_in_rule__Feature_Impl__Group__0__Impl3314 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Feature_Impl__Group__1__Impl_in_rule__Feature_Impl__Group__13345 = new BitSet(new long[]{0x0000000008400000L});
-    public static final BitSet FOLLOW_rule__Feature_Impl__Group__2_in_rule__Feature_Impl__Group__13348 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Feature_Impl__NameAssignment_1_in_rule__Feature_Impl__Group__1__Impl3375 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Feature_Impl__Group__2__Impl_in_rule__Feature_Impl__Group__23405 = new BitSet(new long[]{0x0000000008400000L});
-    public static final BitSet FOLLOW_rule__Feature_Impl__Group__3_in_rule__Feature_Impl__Group__23408 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Feature_Impl__Group_2__0_in_rule__Feature_Impl__Group__2__Impl3435 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Feature_Impl__Group__3__Impl_in_rule__Feature_Impl__Group__33466 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Feature_Impl__Group_3__0_in_rule__Feature_Impl__Group__3__Impl3493 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Feature_Impl__Group_2__0__Impl_in_rule__Feature_Impl__Group_2__03532 = new BitSet(new long[]{0x00000000A4200000L});
-    public static final BitSet FOLLOW_rule__Feature_Impl__Group_2__1_in_rule__Feature_Impl__Group_2__03535 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_BEGIN_in_rule__Feature_Impl__Group_2__0__Impl3562 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Feature_Impl__Group_2__1__Impl_in_rule__Feature_Impl__Group_2__13591 = new BitSet(new long[]{0x00000000B4200000L});
-    public static final BitSet FOLLOW_rule__Feature_Impl__Group_2__2_in_rule__Feature_Impl__Group_2__13594 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Feature_Impl__SubfeatureAssignment_2_1_in_rule__Feature_Impl__Group_2__1__Impl3621 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Feature_Impl__Group_2__2__Impl_in_rule__Feature_Impl__Group_2__23651 = new BitSet(new long[]{0x00000000B4200000L});
-    public static final BitSet FOLLOW_rule__Feature_Impl__Group_2__3_in_rule__Feature_Impl__Group_2__23654 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Feature_Impl__SubfeatureAssignment_2_2_in_rule__Feature_Impl__Group_2__2__Impl3681 = new BitSet(new long[]{0x00000000A4200002L});
-    public static final BitSet FOLLOW_rule__Feature_Impl__Group_2__3__Impl_in_rule__Feature_Impl__Group_2__33712 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_END_in_rule__Feature_Impl__Group_2__3__Impl3739 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Feature_Impl__Group_3__0__Impl_in_rule__Feature_Impl__Group_3__03776 = new BitSet(new long[]{0x00000000A4026000L});
-    public static final BitSet FOLLOW_rule__Feature_Impl__Group_3__1_in_rule__Feature_Impl__Group_3__03779 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_LeftSquareBracket_in_rule__Feature_Impl__Group_3__0__Impl3807 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Feature_Impl__Group_3__1__Impl_in_rule__Feature_Impl__Group_3__13838 = new BitSet(new long[]{0x0000000000810000L});
-    public static final BitSet FOLLOW_rule__Feature_Impl__Group_3__2_in_rule__Feature_Impl__Group_3__13841 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Feature_Impl__ConstrainsAssignment_3_1_in_rule__Feature_Impl__Group_3__1__Impl3868 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Feature_Impl__Group_3__2__Impl_in_rule__Feature_Impl__Group_3__23898 = new BitSet(new long[]{0x0000000000810000L});
-    public static final BitSet FOLLOW_rule__Feature_Impl__Group_3__3_in_rule__Feature_Impl__Group_3__23901 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Feature_Impl__Group_3_2__0_in_rule__Feature_Impl__Group_3__2__Impl3928 = new BitSet(new long[]{0x0000000000010002L});
-    public static final BitSet FOLLOW_rule__Feature_Impl__Group_3__3__Impl_in_rule__Feature_Impl__Group_3__33959 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RightSquareBracket_in_rule__Feature_Impl__Group_3__3__Impl3987 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Feature_Impl__Group_3_2__0__Impl_in_rule__Feature_Impl__Group_3_2__04026 = new BitSet(new long[]{0x00000000A4026000L});
-    public static final BitSet FOLLOW_rule__Feature_Impl__Group_3_2__1_in_rule__Feature_Impl__Group_3_2__04029 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Comma_in_rule__Feature_Impl__Group_3_2__0__Impl4057 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Feature_Impl__Group_3_2__1__Impl_in_rule__Feature_Impl__Group_3_2__14088 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Feature_Impl__ConstrainsAssignment_3_2_1_in_rule__Feature_Impl__Group_3_2__1__Impl4115 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Grouped__Group__0__Impl_in_rule__Grouped__Group__04149 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_rule__Grouped__Group__1_in_rule__Grouped__Group__04152 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Grouped__NameAssignment_0_in_rule__Grouped__Group__0__Impl4179 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Grouped__Group__1__Impl_in_rule__Grouped__Group__14209 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Grouped__Group_1__0_in_rule__Grouped__Group__1__Impl4236 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Grouped__Group_1__0__Impl_in_rule__Grouped__Group_1__04271 = new BitSet(new long[]{0x00000000A4026000L});
-    public static final BitSet FOLLOW_rule__Grouped__Group_1__1_in_rule__Grouped__Group_1__04274 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_LeftSquareBracket_in_rule__Grouped__Group_1__0__Impl4302 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Grouped__Group_1__1__Impl_in_rule__Grouped__Group_1__14333 = new BitSet(new long[]{0x0000000000810000L});
-    public static final BitSet FOLLOW_rule__Grouped__Group_1__2_in_rule__Grouped__Group_1__14336 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Grouped__ConstrainsAssignment_1_1_in_rule__Grouped__Group_1__1__Impl4363 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Grouped__Group_1__2__Impl_in_rule__Grouped__Group_1__24393 = new BitSet(new long[]{0x0000000000810000L});
-    public static final BitSet FOLLOW_rule__Grouped__Group_1__3_in_rule__Grouped__Group_1__24396 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Grouped__Group_1_2__0_in_rule__Grouped__Group_1__2__Impl4423 = new BitSet(new long[]{0x0000000000010002L});
-    public static final BitSet FOLLOW_rule__Grouped__Group_1__3__Impl_in_rule__Grouped__Group_1__34454 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RightSquareBracket_in_rule__Grouped__Group_1__3__Impl4482 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Grouped__Group_1_2__0__Impl_in_rule__Grouped__Group_1_2__04521 = new BitSet(new long[]{0x00000000A4026000L});
-    public static final BitSet FOLLOW_rule__Grouped__Group_1_2__1_in_rule__Grouped__Group_1_2__04524 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Comma_in_rule__Grouped__Group_1_2__0__Impl4552 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Grouped__Group_1_2__1__Impl_in_rule__Grouped__Group_1_2__14583 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Grouped__ConstrainsAssignment_1_2_1_in_rule__Grouped__Group_1_2__1__Impl4610 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Mandatory__Group__0__Impl_in_rule__Mandatory__Group__04644 = new BitSet(new long[]{0x0000000001400820L});
-    public static final BitSet FOLLOW_rule__Mandatory__Group__1_in_rule__Mandatory__Group__04647 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Mandatory__NameAssignment_0_in_rule__Mandatory__Group__0__Impl4674 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Mandatory__Group__1__Impl_in_rule__Mandatory__Group__14704 = new BitSet(new long[]{0x0000000001400820L});
-    public static final BitSet FOLLOW_rule__Mandatory__Group__2_in_rule__Mandatory__Group__14707 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Mandatory__Group_1__0_in_rule__Mandatory__Group__1__Impl4734 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Mandatory__Group__2__Impl_in_rule__Mandatory__Group__24765 = new BitSet(new long[]{0x0000000001400820L});
-    public static final BitSet FOLLOW_rule__Mandatory__Group__3_in_rule__Mandatory__Group__24768 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Mandatory__Group_2__0_in_rule__Mandatory__Group__2__Impl4795 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Mandatory__Group__3__Impl_in_rule__Mandatory__Group__34826 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Mandatory__Group_3__0_in_rule__Mandatory__Group__3__Impl4853 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Mandatory__Group_1__0__Impl_in_rule__Mandatory__Group_1__04892 = new BitSet(new long[]{0x00000000A4200000L});
-    public static final BitSet FOLLOW_rule__Mandatory__Group_1__1_in_rule__Mandatory__Group_1__04895 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_LeftCurlyBracket_in_rule__Mandatory__Group_1__0__Impl4923 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Mandatory__Group_1__1__Impl_in_rule__Mandatory__Group_1__14954 = new BitSet(new long[]{0x0000000002010000L});
-    public static final BitSet FOLLOW_rule__Mandatory__Group_1__2_in_rule__Mandatory__Group_1__14957 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Mandatory__SubfeatureAssignment_1_1_in_rule__Mandatory__Group_1__1__Impl4984 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Mandatory__Group_1__2__Impl_in_rule__Mandatory__Group_1__25014 = new BitSet(new long[]{0x0000000002010000L});
-    public static final BitSet FOLLOW_rule__Mandatory__Group_1__3_in_rule__Mandatory__Group_1__25017 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Mandatory__Group_1_2__0_in_rule__Mandatory__Group_1__2__Impl5044 = new BitSet(new long[]{0x0000000000010002L});
-    public static final BitSet FOLLOW_rule__Mandatory__Group_1__3__Impl_in_rule__Mandatory__Group_1__35075 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RightCurlyBracket_in_rule__Mandatory__Group_1__3__Impl5103 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Mandatory__Group_1_2__0__Impl_in_rule__Mandatory__Group_1_2__05142 = new BitSet(new long[]{0x00000000A4200000L});
-    public static final BitSet FOLLOW_rule__Mandatory__Group_1_2__1_in_rule__Mandatory__Group_1_2__05145 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Comma_in_rule__Mandatory__Group_1_2__0__Impl5173 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Mandatory__Group_1_2__1__Impl_in_rule__Mandatory__Group_1_2__15204 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Mandatory__SubfeatureAssignment_1_2_1_in_rule__Mandatory__Group_1_2__1__Impl5231 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Mandatory__Group_2__0__Impl_in_rule__Mandatory__Group_2__05265 = new BitSet(new long[]{0x00000000A4026000L});
-    public static final BitSet FOLLOW_rule__Mandatory__Group_2__1_in_rule__Mandatory__Group_2__05268 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_LeftSquareBracket_in_rule__Mandatory__Group_2__0__Impl5296 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Mandatory__Group_2__1__Impl_in_rule__Mandatory__Group_2__15327 = new BitSet(new long[]{0x0000000000810000L});
-    public static final BitSet FOLLOW_rule__Mandatory__Group_2__2_in_rule__Mandatory__Group_2__15330 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Mandatory__ConstrainsAssignment_2_1_in_rule__Mandatory__Group_2__1__Impl5357 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Mandatory__Group_2__2__Impl_in_rule__Mandatory__Group_2__25387 = new BitSet(new long[]{0x0000000000810000L});
-    public static final BitSet FOLLOW_rule__Mandatory__Group_2__3_in_rule__Mandatory__Group_2__25390 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Mandatory__Group_2_2__0_in_rule__Mandatory__Group_2__2__Impl5417 = new BitSet(new long[]{0x0000000000010002L});
-    public static final BitSet FOLLOW_rule__Mandatory__Group_2__3__Impl_in_rule__Mandatory__Group_2__35448 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RightSquareBracket_in_rule__Mandatory__Group_2__3__Impl5476 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Mandatory__Group_2_2__0__Impl_in_rule__Mandatory__Group_2_2__05515 = new BitSet(new long[]{0x00000000A4026000L});
-    public static final BitSet FOLLOW_rule__Mandatory__Group_2_2__1_in_rule__Mandatory__Group_2_2__05518 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Comma_in_rule__Mandatory__Group_2_2__0__Impl5546 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Mandatory__Group_2_2__1__Impl_in_rule__Mandatory__Group_2_2__15577 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Mandatory__ConstrainsAssignment_2_2_1_in_rule__Mandatory__Group_2_2__1__Impl5604 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Mandatory__Group_3__0__Impl_in_rule__Mandatory__Group_3__05638 = new BitSet(new long[]{0x0000000000000820L});
-    public static final BitSet FOLLOW_rule__Mandatory__Group_3__1_in_rule__Mandatory__Group_3__05641 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Mandatory__GroupsAssignment_3_0_in_rule__Mandatory__Group_3__0__Impl5668 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Mandatory__Group_3__1__Impl_in_rule__Mandatory__Group_3__15698 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Mandatory__GroupsAssignment_3_1_in_rule__Mandatory__Group_3__1__Impl5725 = new BitSet(new long[]{0x0000000000000822L});
-    public static final BitSet FOLLOW_rule__Optional__Group__0__Impl_in_rule__Optional__Group__05760 = new BitSet(new long[]{0x00000000A4000000L});
-    public static final BitSet FOLLOW_rule__Optional__Group__1_in_rule__Optional__Group__05763 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_QuestionMark_in_rule__Optional__Group__0__Impl5791 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Optional__Group__1__Impl_in_rule__Optional__Group__15822 = new BitSet(new long[]{0x0000000001400820L});
-    public static final BitSet FOLLOW_rule__Optional__Group__2_in_rule__Optional__Group__15825 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Optional__NameAssignment_1_in_rule__Optional__Group__1__Impl5852 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Optional__Group__2__Impl_in_rule__Optional__Group__25882 = new BitSet(new long[]{0x0000000001400820L});
-    public static final BitSet FOLLOW_rule__Optional__Group__3_in_rule__Optional__Group__25885 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Optional__Group_2__0_in_rule__Optional__Group__2__Impl5912 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Optional__Group__3__Impl_in_rule__Optional__Group__35943 = new BitSet(new long[]{0x0000000001400820L});
-    public static final BitSet FOLLOW_rule__Optional__Group__4_in_rule__Optional__Group__35946 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Optional__Group_3__0_in_rule__Optional__Group__3__Impl5973 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Optional__Group__4__Impl_in_rule__Optional__Group__46004 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Optional__Group_4__0_in_rule__Optional__Group__4__Impl6031 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Optional__Group_2__0__Impl_in_rule__Optional__Group_2__06072 = new BitSet(new long[]{0x00000000A4200000L});
-    public static final BitSet FOLLOW_rule__Optional__Group_2__1_in_rule__Optional__Group_2__06075 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_LeftCurlyBracket_in_rule__Optional__Group_2__0__Impl6103 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Optional__Group_2__1__Impl_in_rule__Optional__Group_2__16134 = new BitSet(new long[]{0x0000000002010000L});
-    public static final BitSet FOLLOW_rule__Optional__Group_2__2_in_rule__Optional__Group_2__16137 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Optional__SubfeatureAssignment_2_1_in_rule__Optional__Group_2__1__Impl6164 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Optional__Group_2__2__Impl_in_rule__Optional__Group_2__26194 = new BitSet(new long[]{0x0000000002010000L});
-    public static final BitSet FOLLOW_rule__Optional__Group_2__3_in_rule__Optional__Group_2__26197 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Optional__Group_2_2__0_in_rule__Optional__Group_2__2__Impl6224 = new BitSet(new long[]{0x0000000000010002L});
-    public static final BitSet FOLLOW_rule__Optional__Group_2__3__Impl_in_rule__Optional__Group_2__36255 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RightCurlyBracket_in_rule__Optional__Group_2__3__Impl6283 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Optional__Group_2_2__0__Impl_in_rule__Optional__Group_2_2__06322 = new BitSet(new long[]{0x00000000A4200000L});
-    public static final BitSet FOLLOW_rule__Optional__Group_2_2__1_in_rule__Optional__Group_2_2__06325 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Comma_in_rule__Optional__Group_2_2__0__Impl6353 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Optional__Group_2_2__1__Impl_in_rule__Optional__Group_2_2__16384 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Optional__SubfeatureAssignment_2_2_1_in_rule__Optional__Group_2_2__1__Impl6411 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Optional__Group_3__0__Impl_in_rule__Optional__Group_3__06445 = new BitSet(new long[]{0x00000000A4026000L});
-    public static final BitSet FOLLOW_rule__Optional__Group_3__1_in_rule__Optional__Group_3__06448 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_LeftSquareBracket_in_rule__Optional__Group_3__0__Impl6476 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Optional__Group_3__1__Impl_in_rule__Optional__Group_3__16507 = new BitSet(new long[]{0x0000000000810000L});
-    public static final BitSet FOLLOW_rule__Optional__Group_3__2_in_rule__Optional__Group_3__16510 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Optional__ConstrainsAssignment_3_1_in_rule__Optional__Group_3__1__Impl6537 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Optional__Group_3__2__Impl_in_rule__Optional__Group_3__26567 = new BitSet(new long[]{0x0000000000810000L});
-    public static final BitSet FOLLOW_rule__Optional__Group_3__3_in_rule__Optional__Group_3__26570 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Optional__Group_3_2__0_in_rule__Optional__Group_3__2__Impl6597 = new BitSet(new long[]{0x0000000000010002L});
-    public static final BitSet FOLLOW_rule__Optional__Group_3__3__Impl_in_rule__Optional__Group_3__36628 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RightSquareBracket_in_rule__Optional__Group_3__3__Impl6656 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Optional__Group_3_2__0__Impl_in_rule__Optional__Group_3_2__06695 = new BitSet(new long[]{0x00000000A4026000L});
-    public static final BitSet FOLLOW_rule__Optional__Group_3_2__1_in_rule__Optional__Group_3_2__06698 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Comma_in_rule__Optional__Group_3_2__0__Impl6726 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Optional__Group_3_2__1__Impl_in_rule__Optional__Group_3_2__16757 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Optional__ConstrainsAssignment_3_2_1_in_rule__Optional__Group_3_2__1__Impl6784 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Optional__Group_4__0__Impl_in_rule__Optional__Group_4__06818 = new BitSet(new long[]{0x0000000000000820L});
-    public static final BitSet FOLLOW_rule__Optional__Group_4__1_in_rule__Optional__Group_4__06821 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Optional__GroupsAssignment_4_0_in_rule__Optional__Group_4__0__Impl6848 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Optional__Group_4__1__Impl_in_rule__Optional__Group_4__16878 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Optional__GroupsAssignment_4_1_in_rule__Optional__Group_4__1__Impl6905 = new BitSet(new long[]{0x0000000000000822L});
-    public static final BitSet FOLLOW_rule__Or__Group__0__Impl_in_rule__Or__Group__06940 = new BitSet(new long[]{0x00000000A4000000L});
-    public static final BitSet FOLLOW_rule__Or__Group__1_in_rule__Or__Group__06943 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Or_in_rule__Or__Group__0__Impl6971 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Or__Group__1__Impl_in_rule__Or__Group__17002 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_rule__Or__Group__2_in_rule__Or__Group__17005 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Or__NameAssignment_1_in_rule__Or__Group__1__Impl7032 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Or__Group__2__Impl_in_rule__Or__Group__27062 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Or__Group_2__0_in_rule__Or__Group__2__Impl7089 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Or__Group_2__0__Impl_in_rule__Or__Group_2__07126 = new BitSet(new long[]{0x00000000A4000000L});
-    public static final BitSet FOLLOW_rule__Or__Group_2__1_in_rule__Or__Group_2__07129 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_BEGIN_in_rule__Or__Group_2__0__Impl7156 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Or__Group_2__1__Impl_in_rule__Or__Group_2__17185 = new BitSet(new long[]{0x00000000B4010000L});
-    public static final BitSet FOLLOW_rule__Or__Group_2__2_in_rule__Or__Group_2__17188 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Or__GroupedAssignment_2_1_in_rule__Or__Group_2__1__Impl7215 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Or__Group_2__2__Impl_in_rule__Or__Group_2__27245 = new BitSet(new long[]{0x00000000B4010000L});
-    public static final BitSet FOLLOW_rule__Or__Group_2__3_in_rule__Or__Group_2__27248 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Or__Group_2_2__0_in_rule__Or__Group_2__2__Impl7275 = new BitSet(new long[]{0x00000000A4010002L});
-    public static final BitSet FOLLOW_rule__Or__Group_2__3__Impl_in_rule__Or__Group_2__37306 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_END_in_rule__Or__Group_2__3__Impl7333 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Or__Group_2_2__0__Impl_in_rule__Or__Group_2_2__07370 = new BitSet(new long[]{0x00000000A4010000L});
-    public static final BitSet FOLLOW_rule__Or__Group_2_2__1_in_rule__Or__Group_2_2__07373 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Comma_in_rule__Or__Group_2_2__0__Impl7402 = new BitSet(new long[]{0x0000000000010002L});
-    public static final BitSet FOLLOW_rule__Or__Group_2_2__1__Impl_in_rule__Or__Group_2_2__17435 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Or__GroupedAssignment_2_2_1_in_rule__Or__Group_2_2__1__Impl7462 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Xor__Group__0__Impl_in_rule__Xor__Group__07496 = new BitSet(new long[]{0x00000000A4000000L});
-    public static final BitSet FOLLOW_rule__Xor__Group__1_in_rule__Xor__Group__07499 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Xor_in_rule__Xor__Group__0__Impl7527 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Xor__Group__1__Impl_in_rule__Xor__Group__17558 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_rule__Xor__Group__2_in_rule__Xor__Group__17561 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Xor__NameAssignment_1_in_rule__Xor__Group__1__Impl7588 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Xor__Group__2__Impl_in_rule__Xor__Group__27618 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Xor__Group_2__0_in_rule__Xor__Group__2__Impl7645 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Xor__Group_2__0__Impl_in_rule__Xor__Group_2__07682 = new BitSet(new long[]{0x00000000A4000000L});
-    public static final BitSet FOLLOW_rule__Xor__Group_2__1_in_rule__Xor__Group_2__07685 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_BEGIN_in_rule__Xor__Group_2__0__Impl7712 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Xor__Group_2__1__Impl_in_rule__Xor__Group_2__17741 = new BitSet(new long[]{0x00000000B4010000L});
-    public static final BitSet FOLLOW_rule__Xor__Group_2__2_in_rule__Xor__Group_2__17744 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Xor__GroupedAssignment_2_1_in_rule__Xor__Group_2__1__Impl7771 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Xor__Group_2__2__Impl_in_rule__Xor__Group_2__27801 = new BitSet(new long[]{0x00000000B4010000L});
-    public static final BitSet FOLLOW_rule__Xor__Group_2__3_in_rule__Xor__Group_2__27804 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Xor__Group_2_2__0_in_rule__Xor__Group_2__2__Impl7831 = new BitSet(new long[]{0x00000000A4010002L});
-    public static final BitSet FOLLOW_rule__Xor__Group_2__3__Impl_in_rule__Xor__Group_2__37862 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_END_in_rule__Xor__Group_2__3__Impl7889 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Xor__Group_2_2__0__Impl_in_rule__Xor__Group_2_2__07926 = new BitSet(new long[]{0x00000000A4010000L});
-    public static final BitSet FOLLOW_rule__Xor__Group_2_2__1_in_rule__Xor__Group_2_2__07929 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Comma_in_rule__Xor__Group_2_2__0__Impl7958 = new BitSet(new long[]{0x0000000000010002L});
-    public static final BitSet FOLLOW_rule__Xor__Group_2_2__1__Impl_in_rule__Xor__Group_2_2__17991 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Xor__GroupedAssignment_2_2_1_in_rule__Xor__Group_2_2__1__Impl8018 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFeature_Impl_in_rule__Model__RootAssignment8057 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_VerticalLineVerticalLine_in_rule__Constrain__OperatorAssignment_1_18093 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConjunction_in_rule__Constrain__RightExpAssignment_1_28132 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_AmpersandAmpersand_in_rule__Conjunction__OperatorAssignment_1_18168 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleComparison_in_rule__Conjunction__RightExpAssignment_1_28207 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Comparison__OperatorAlternatives_1_1_0_in_rule__Comparison__OperatorAssignment_1_18238 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBinary_in_rule__Comparison__RightExpAssignment_1_28271 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePrimary_in_rule__Binary__RightExpAssignment_1_18302 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEString_in_rule__Primary__ConstrainFeaturesAssignment_0_08337 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEString_in_rule__Primary__ConstrainFeaturesAssignment_0_1_18376 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Unary__OperatorAlternatives_1_0_in_rule__Unary__OperatorAssignment_18411 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePrimary_in_rule__Unary__ExpAssignment_28444 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEString_in_rule__Feature_Impl__NameAssignment_18475 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSolitary_in_rule__Feature_Impl__SubfeatureAssignment_2_18506 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSolitary_in_rule__Feature_Impl__SubfeatureAssignment_2_28537 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConstrain_in_rule__Feature_Impl__ConstrainsAssignment_3_18568 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConstrain_in_rule__Feature_Impl__ConstrainsAssignment_3_2_18599 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEString_in_rule__Grouped__NameAssignment_08630 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConstrain_in_rule__Grouped__ConstrainsAssignment_1_18661 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConstrain_in_rule__Grouped__ConstrainsAssignment_1_2_18692 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEString_in_rule__Mandatory__NameAssignment_08723 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSolitary_in_rule__Mandatory__SubfeatureAssignment_1_18754 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSolitary_in_rule__Mandatory__SubfeatureAssignment_1_2_18785 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConstrain_in_rule__Mandatory__ConstrainsAssignment_2_18816 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConstrain_in_rule__Mandatory__ConstrainsAssignment_2_2_18847 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGroup_in_rule__Mandatory__GroupsAssignment_3_08878 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGroup_in_rule__Mandatory__GroupsAssignment_3_18909 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEString_in_rule__Optional__NameAssignment_18940 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSolitary_in_rule__Optional__SubfeatureAssignment_2_18971 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSolitary_in_rule__Optional__SubfeatureAssignment_2_2_19002 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConstrain_in_rule__Optional__ConstrainsAssignment_3_19033 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConstrain_in_rule__Optional__ConstrainsAssignment_3_2_19064 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGroup_in_rule__Optional__GroupsAssignment_4_09095 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGroup_in_rule__Optional__GroupsAssignment_4_19126 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEString_in_rule__Or__NameAssignment_19157 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGrouped_in_rule__Or__GroupedAssignment_2_19188 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGrouped_in_rule__Or__GroupedAssignment_2_2_19219 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEString_in_rule__Xor__NameAssignment_19250 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGrouped_in_rule__Xor__GroupedAssignment_2_19281 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGrouped_in_rule__Xor__GroupedAssignment_2_2_19312 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Primary__Group_0__1__Impl_in_rule__Primary__Group_0__12728 = new BitSet(new long[]{0x00000000A4000000L});
+    public static final BitSet FOLLOW_rule__Primary__Group_0__2_in_rule__Primary__Group_0__12731 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_FullStop_in_rule__Primary__Group_0__1__Impl2759 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Primary__Group_0__2__Impl_in_rule__Primary__Group_0__22790 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_rule__Primary__Group_0__3_in_rule__Primary__Group_0__22793 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Primary__GroupsAssignment_0_2_in_rule__Primary__Group_0__2__Impl2820 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Primary__Group_0__3__Impl_in_rule__Primary__Group_0__32850 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Primary__Group_0_3__0_in_rule__Primary__Group_0__3__Impl2877 = new BitSet(new long[]{0x0000000000040002L});
+    public static final BitSet FOLLOW_rule__Primary__Group_0_3__0__Impl_in_rule__Primary__Group_0_3__02916 = new BitSet(new long[]{0x00000000A4000000L});
+    public static final BitSet FOLLOW_rule__Primary__Group_0_3__1_in_rule__Primary__Group_0_3__02919 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_FullStop_in_rule__Primary__Group_0_3__0__Impl2947 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Primary__Group_0_3__1__Impl_in_rule__Primary__Group_0_3__12978 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Primary__ConstrainFeaturesAssignment_0_3_1_in_rule__Primary__Group_0_3__1__Impl3005 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Primary__Group_2__0__Impl_in_rule__Primary__Group_2__03039 = new BitSet(new long[]{0x00000000A4026000L});
+    public static final BitSet FOLLOW_rule__Primary__Group_2__1_in_rule__Primary__Group_2__03042 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_LeftParenthesis_in_rule__Primary__Group_2__0__Impl3070 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Primary__Group_2__1__Impl_in_rule__Primary__Group_2__13101 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_rule__Primary__Group_2__2_in_rule__Primary__Group_2__13104 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConstrain_in_rule__Primary__Group_2__1__Impl3131 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Primary__Group_2__2__Impl_in_rule__Primary__Group_2__23160 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RightParenthesis_in_rule__Primary__Group_2__2__Impl3188 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Unary__Group__0__Impl_in_rule__Unary__Group__03225 = new BitSet(new long[]{0x0000000000022000L});
+    public static final BitSet FOLLOW_rule__Unary__Group__1_in_rule__Unary__Group__03228 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Unary__Group__1__Impl_in_rule__Unary__Group__13286 = new BitSet(new long[]{0x00000000A4026000L});
+    public static final BitSet FOLLOW_rule__Unary__Group__2_in_rule__Unary__Group__13289 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Unary__OperatorAssignment_1_in_rule__Unary__Group__1__Impl3316 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Unary__Group__2__Impl_in_rule__Unary__Group__23346 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Unary__ExpAssignment_2_in_rule__Unary__Group__2__Impl3373 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Feature_Impl__Group__0__Impl_in_rule__Feature_Impl__Group__03409 = new BitSet(new long[]{0x00000000A4000000L});
+    public static final BitSet FOLLOW_rule__Feature_Impl__Group__1_in_rule__Feature_Impl__Group__03412 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Feature_in_rule__Feature_Impl__Group__0__Impl3440 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Feature_Impl__Group__1__Impl_in_rule__Feature_Impl__Group__13471 = new BitSet(new long[]{0x0000000008400000L});
+    public static final BitSet FOLLOW_rule__Feature_Impl__Group__2_in_rule__Feature_Impl__Group__13474 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Feature_Impl__NameAssignment_1_in_rule__Feature_Impl__Group__1__Impl3501 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Feature_Impl__Group__2__Impl_in_rule__Feature_Impl__Group__23531 = new BitSet(new long[]{0x0000000008400000L});
+    public static final BitSet FOLLOW_rule__Feature_Impl__Group__3_in_rule__Feature_Impl__Group__23534 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Feature_Impl__Group_2__0_in_rule__Feature_Impl__Group__2__Impl3561 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Feature_Impl__Group__3__Impl_in_rule__Feature_Impl__Group__33592 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Feature_Impl__Group_3__0_in_rule__Feature_Impl__Group__3__Impl3619 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Feature_Impl__Group_2__0__Impl_in_rule__Feature_Impl__Group_2__03658 = new BitSet(new long[]{0x00000000A4200000L});
+    public static final BitSet FOLLOW_rule__Feature_Impl__Group_2__1_in_rule__Feature_Impl__Group_2__03661 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_BEGIN_in_rule__Feature_Impl__Group_2__0__Impl3688 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Feature_Impl__Group_2__1__Impl_in_rule__Feature_Impl__Group_2__13717 = new BitSet(new long[]{0x00000000B4200000L});
+    public static final BitSet FOLLOW_rule__Feature_Impl__Group_2__2_in_rule__Feature_Impl__Group_2__13720 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Feature_Impl__SubfeatureAssignment_2_1_in_rule__Feature_Impl__Group_2__1__Impl3747 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Feature_Impl__Group_2__2__Impl_in_rule__Feature_Impl__Group_2__23777 = new BitSet(new long[]{0x00000000B4200000L});
+    public static final BitSet FOLLOW_rule__Feature_Impl__Group_2__3_in_rule__Feature_Impl__Group_2__23780 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Feature_Impl__SubfeatureAssignment_2_2_in_rule__Feature_Impl__Group_2__2__Impl3807 = new BitSet(new long[]{0x00000000A4200002L});
+    public static final BitSet FOLLOW_rule__Feature_Impl__Group_2__3__Impl_in_rule__Feature_Impl__Group_2__33838 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_END_in_rule__Feature_Impl__Group_2__3__Impl3865 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Feature_Impl__Group_3__0__Impl_in_rule__Feature_Impl__Group_3__03902 = new BitSet(new long[]{0x00000000A4026000L});
+    public static final BitSet FOLLOW_rule__Feature_Impl__Group_3__1_in_rule__Feature_Impl__Group_3__03905 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_LeftSquareBracket_in_rule__Feature_Impl__Group_3__0__Impl3933 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Feature_Impl__Group_3__1__Impl_in_rule__Feature_Impl__Group_3__13964 = new BitSet(new long[]{0x0000000000810000L});
+    public static final BitSet FOLLOW_rule__Feature_Impl__Group_3__2_in_rule__Feature_Impl__Group_3__13967 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Feature_Impl__ConstrainsAssignment_3_1_in_rule__Feature_Impl__Group_3__1__Impl3994 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Feature_Impl__Group_3__2__Impl_in_rule__Feature_Impl__Group_3__24024 = new BitSet(new long[]{0x0000000000810000L});
+    public static final BitSet FOLLOW_rule__Feature_Impl__Group_3__3_in_rule__Feature_Impl__Group_3__24027 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Feature_Impl__Group_3_2__0_in_rule__Feature_Impl__Group_3__2__Impl4054 = new BitSet(new long[]{0x0000000000010002L});
+    public static final BitSet FOLLOW_rule__Feature_Impl__Group_3__3__Impl_in_rule__Feature_Impl__Group_3__34085 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RightSquareBracket_in_rule__Feature_Impl__Group_3__3__Impl4113 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Feature_Impl__Group_3_2__0__Impl_in_rule__Feature_Impl__Group_3_2__04152 = new BitSet(new long[]{0x00000000A4026000L});
+    public static final BitSet FOLLOW_rule__Feature_Impl__Group_3_2__1_in_rule__Feature_Impl__Group_3_2__04155 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Comma_in_rule__Feature_Impl__Group_3_2__0__Impl4183 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Feature_Impl__Group_3_2__1__Impl_in_rule__Feature_Impl__Group_3_2__14214 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Feature_Impl__ConstrainsAssignment_3_2_1_in_rule__Feature_Impl__Group_3_2__1__Impl4241 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Grouped__Group__0__Impl_in_rule__Grouped__Group__04275 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_rule__Grouped__Group__1_in_rule__Grouped__Group__04278 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Grouped__NameAssignment_0_in_rule__Grouped__Group__0__Impl4305 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Grouped__Group__1__Impl_in_rule__Grouped__Group__14335 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Grouped__Group_1__0_in_rule__Grouped__Group__1__Impl4362 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Grouped__Group_1__0__Impl_in_rule__Grouped__Group_1__04397 = new BitSet(new long[]{0x00000000A4026000L});
+    public static final BitSet FOLLOW_rule__Grouped__Group_1__1_in_rule__Grouped__Group_1__04400 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_LeftSquareBracket_in_rule__Grouped__Group_1__0__Impl4428 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Grouped__Group_1__1__Impl_in_rule__Grouped__Group_1__14459 = new BitSet(new long[]{0x0000000000810000L});
+    public static final BitSet FOLLOW_rule__Grouped__Group_1__2_in_rule__Grouped__Group_1__14462 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Grouped__ConstrainsAssignment_1_1_in_rule__Grouped__Group_1__1__Impl4489 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Grouped__Group_1__2__Impl_in_rule__Grouped__Group_1__24519 = new BitSet(new long[]{0x0000000000810000L});
+    public static final BitSet FOLLOW_rule__Grouped__Group_1__3_in_rule__Grouped__Group_1__24522 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Grouped__Group_1_2__0_in_rule__Grouped__Group_1__2__Impl4549 = new BitSet(new long[]{0x0000000000010002L});
+    public static final BitSet FOLLOW_rule__Grouped__Group_1__3__Impl_in_rule__Grouped__Group_1__34580 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RightSquareBracket_in_rule__Grouped__Group_1__3__Impl4608 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Grouped__Group_1_2__0__Impl_in_rule__Grouped__Group_1_2__04647 = new BitSet(new long[]{0x00000000A4026000L});
+    public static final BitSet FOLLOW_rule__Grouped__Group_1_2__1_in_rule__Grouped__Group_1_2__04650 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Comma_in_rule__Grouped__Group_1_2__0__Impl4678 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Grouped__Group_1_2__1__Impl_in_rule__Grouped__Group_1_2__14709 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Grouped__ConstrainsAssignment_1_2_1_in_rule__Grouped__Group_1_2__1__Impl4736 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Mandatory__Group__0__Impl_in_rule__Mandatory__Group__04770 = new BitSet(new long[]{0x0000000001400820L});
+    public static final BitSet FOLLOW_rule__Mandatory__Group__1_in_rule__Mandatory__Group__04773 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Mandatory__NameAssignment_0_in_rule__Mandatory__Group__0__Impl4800 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Mandatory__Group__1__Impl_in_rule__Mandatory__Group__14830 = new BitSet(new long[]{0x0000000001400820L});
+    public static final BitSet FOLLOW_rule__Mandatory__Group__2_in_rule__Mandatory__Group__14833 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Mandatory__Group_1__0_in_rule__Mandatory__Group__1__Impl4860 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Mandatory__Group__2__Impl_in_rule__Mandatory__Group__24891 = new BitSet(new long[]{0x0000000001400820L});
+    public static final BitSet FOLLOW_rule__Mandatory__Group__3_in_rule__Mandatory__Group__24894 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Mandatory__Group_2__0_in_rule__Mandatory__Group__2__Impl4921 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Mandatory__Group__3__Impl_in_rule__Mandatory__Group__34952 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Mandatory__Group_3__0_in_rule__Mandatory__Group__3__Impl4979 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Mandatory__Group_1__0__Impl_in_rule__Mandatory__Group_1__05018 = new BitSet(new long[]{0x00000000A4200000L});
+    public static final BitSet FOLLOW_rule__Mandatory__Group_1__1_in_rule__Mandatory__Group_1__05021 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_LeftCurlyBracket_in_rule__Mandatory__Group_1__0__Impl5049 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Mandatory__Group_1__1__Impl_in_rule__Mandatory__Group_1__15080 = new BitSet(new long[]{0x0000000002010000L});
+    public static final BitSet FOLLOW_rule__Mandatory__Group_1__2_in_rule__Mandatory__Group_1__15083 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Mandatory__SubfeatureAssignment_1_1_in_rule__Mandatory__Group_1__1__Impl5110 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Mandatory__Group_1__2__Impl_in_rule__Mandatory__Group_1__25140 = new BitSet(new long[]{0x0000000002010000L});
+    public static final BitSet FOLLOW_rule__Mandatory__Group_1__3_in_rule__Mandatory__Group_1__25143 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Mandatory__Group_1_2__0_in_rule__Mandatory__Group_1__2__Impl5170 = new BitSet(new long[]{0x0000000000010002L});
+    public static final BitSet FOLLOW_rule__Mandatory__Group_1__3__Impl_in_rule__Mandatory__Group_1__35201 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RightCurlyBracket_in_rule__Mandatory__Group_1__3__Impl5229 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Mandatory__Group_1_2__0__Impl_in_rule__Mandatory__Group_1_2__05268 = new BitSet(new long[]{0x00000000A4200000L});
+    public static final BitSet FOLLOW_rule__Mandatory__Group_1_2__1_in_rule__Mandatory__Group_1_2__05271 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Comma_in_rule__Mandatory__Group_1_2__0__Impl5299 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Mandatory__Group_1_2__1__Impl_in_rule__Mandatory__Group_1_2__15330 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Mandatory__SubfeatureAssignment_1_2_1_in_rule__Mandatory__Group_1_2__1__Impl5357 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Mandatory__Group_2__0__Impl_in_rule__Mandatory__Group_2__05391 = new BitSet(new long[]{0x00000000A4026000L});
+    public static final BitSet FOLLOW_rule__Mandatory__Group_2__1_in_rule__Mandatory__Group_2__05394 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_LeftSquareBracket_in_rule__Mandatory__Group_2__0__Impl5422 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Mandatory__Group_2__1__Impl_in_rule__Mandatory__Group_2__15453 = new BitSet(new long[]{0x0000000000810000L});
+    public static final BitSet FOLLOW_rule__Mandatory__Group_2__2_in_rule__Mandatory__Group_2__15456 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Mandatory__ConstrainsAssignment_2_1_in_rule__Mandatory__Group_2__1__Impl5483 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Mandatory__Group_2__2__Impl_in_rule__Mandatory__Group_2__25513 = new BitSet(new long[]{0x0000000000810000L});
+    public static final BitSet FOLLOW_rule__Mandatory__Group_2__3_in_rule__Mandatory__Group_2__25516 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Mandatory__Group_2_2__0_in_rule__Mandatory__Group_2__2__Impl5543 = new BitSet(new long[]{0x0000000000010002L});
+    public static final BitSet FOLLOW_rule__Mandatory__Group_2__3__Impl_in_rule__Mandatory__Group_2__35574 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RightSquareBracket_in_rule__Mandatory__Group_2__3__Impl5602 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Mandatory__Group_2_2__0__Impl_in_rule__Mandatory__Group_2_2__05641 = new BitSet(new long[]{0x00000000A4026000L});
+    public static final BitSet FOLLOW_rule__Mandatory__Group_2_2__1_in_rule__Mandatory__Group_2_2__05644 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Comma_in_rule__Mandatory__Group_2_2__0__Impl5672 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Mandatory__Group_2_2__1__Impl_in_rule__Mandatory__Group_2_2__15703 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Mandatory__ConstrainsAssignment_2_2_1_in_rule__Mandatory__Group_2_2__1__Impl5730 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Mandatory__Group_3__0__Impl_in_rule__Mandatory__Group_3__05764 = new BitSet(new long[]{0x0000000000000820L});
+    public static final BitSet FOLLOW_rule__Mandatory__Group_3__1_in_rule__Mandatory__Group_3__05767 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Mandatory__GroupsAssignment_3_0_in_rule__Mandatory__Group_3__0__Impl5794 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Mandatory__Group_3__1__Impl_in_rule__Mandatory__Group_3__15824 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Mandatory__GroupsAssignment_3_1_in_rule__Mandatory__Group_3__1__Impl5851 = new BitSet(new long[]{0x0000000000000822L});
+    public static final BitSet FOLLOW_rule__Optional__Group__0__Impl_in_rule__Optional__Group__05886 = new BitSet(new long[]{0x00000000A4000000L});
+    public static final BitSet FOLLOW_rule__Optional__Group__1_in_rule__Optional__Group__05889 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_QuestionMark_in_rule__Optional__Group__0__Impl5917 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Optional__Group__1__Impl_in_rule__Optional__Group__15948 = new BitSet(new long[]{0x0000000001400820L});
+    public static final BitSet FOLLOW_rule__Optional__Group__2_in_rule__Optional__Group__15951 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Optional__NameAssignment_1_in_rule__Optional__Group__1__Impl5978 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Optional__Group__2__Impl_in_rule__Optional__Group__26008 = new BitSet(new long[]{0x0000000001400820L});
+    public static final BitSet FOLLOW_rule__Optional__Group__3_in_rule__Optional__Group__26011 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Optional__Group_2__0_in_rule__Optional__Group__2__Impl6038 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Optional__Group__3__Impl_in_rule__Optional__Group__36069 = new BitSet(new long[]{0x0000000001400820L});
+    public static final BitSet FOLLOW_rule__Optional__Group__4_in_rule__Optional__Group__36072 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Optional__Group_3__0_in_rule__Optional__Group__3__Impl6099 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Optional__Group__4__Impl_in_rule__Optional__Group__46130 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Optional__Group_4__0_in_rule__Optional__Group__4__Impl6157 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Optional__Group_2__0__Impl_in_rule__Optional__Group_2__06198 = new BitSet(new long[]{0x00000000A4200000L});
+    public static final BitSet FOLLOW_rule__Optional__Group_2__1_in_rule__Optional__Group_2__06201 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_LeftCurlyBracket_in_rule__Optional__Group_2__0__Impl6229 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Optional__Group_2__1__Impl_in_rule__Optional__Group_2__16260 = new BitSet(new long[]{0x0000000002010000L});
+    public static final BitSet FOLLOW_rule__Optional__Group_2__2_in_rule__Optional__Group_2__16263 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Optional__SubfeatureAssignment_2_1_in_rule__Optional__Group_2__1__Impl6290 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Optional__Group_2__2__Impl_in_rule__Optional__Group_2__26320 = new BitSet(new long[]{0x0000000002010000L});
+    public static final BitSet FOLLOW_rule__Optional__Group_2__3_in_rule__Optional__Group_2__26323 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Optional__Group_2_2__0_in_rule__Optional__Group_2__2__Impl6350 = new BitSet(new long[]{0x0000000000010002L});
+    public static final BitSet FOLLOW_rule__Optional__Group_2__3__Impl_in_rule__Optional__Group_2__36381 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RightCurlyBracket_in_rule__Optional__Group_2__3__Impl6409 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Optional__Group_2_2__0__Impl_in_rule__Optional__Group_2_2__06448 = new BitSet(new long[]{0x00000000A4200000L});
+    public static final BitSet FOLLOW_rule__Optional__Group_2_2__1_in_rule__Optional__Group_2_2__06451 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Comma_in_rule__Optional__Group_2_2__0__Impl6479 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Optional__Group_2_2__1__Impl_in_rule__Optional__Group_2_2__16510 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Optional__SubfeatureAssignment_2_2_1_in_rule__Optional__Group_2_2__1__Impl6537 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Optional__Group_3__0__Impl_in_rule__Optional__Group_3__06571 = new BitSet(new long[]{0x00000000A4026000L});
+    public static final BitSet FOLLOW_rule__Optional__Group_3__1_in_rule__Optional__Group_3__06574 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_LeftSquareBracket_in_rule__Optional__Group_3__0__Impl6602 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Optional__Group_3__1__Impl_in_rule__Optional__Group_3__16633 = new BitSet(new long[]{0x0000000000810000L});
+    public static final BitSet FOLLOW_rule__Optional__Group_3__2_in_rule__Optional__Group_3__16636 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Optional__ConstrainsAssignment_3_1_in_rule__Optional__Group_3__1__Impl6663 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Optional__Group_3__2__Impl_in_rule__Optional__Group_3__26693 = new BitSet(new long[]{0x0000000000810000L});
+    public static final BitSet FOLLOW_rule__Optional__Group_3__3_in_rule__Optional__Group_3__26696 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Optional__Group_3_2__0_in_rule__Optional__Group_3__2__Impl6723 = new BitSet(new long[]{0x0000000000010002L});
+    public static final BitSet FOLLOW_rule__Optional__Group_3__3__Impl_in_rule__Optional__Group_3__36754 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RightSquareBracket_in_rule__Optional__Group_3__3__Impl6782 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Optional__Group_3_2__0__Impl_in_rule__Optional__Group_3_2__06821 = new BitSet(new long[]{0x00000000A4026000L});
+    public static final BitSet FOLLOW_rule__Optional__Group_3_2__1_in_rule__Optional__Group_3_2__06824 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Comma_in_rule__Optional__Group_3_2__0__Impl6852 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Optional__Group_3_2__1__Impl_in_rule__Optional__Group_3_2__16883 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Optional__ConstrainsAssignment_3_2_1_in_rule__Optional__Group_3_2__1__Impl6910 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Optional__Group_4__0__Impl_in_rule__Optional__Group_4__06944 = new BitSet(new long[]{0x0000000000000820L});
+    public static final BitSet FOLLOW_rule__Optional__Group_4__1_in_rule__Optional__Group_4__06947 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Optional__GroupsAssignment_4_0_in_rule__Optional__Group_4__0__Impl6974 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Optional__Group_4__1__Impl_in_rule__Optional__Group_4__17004 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Optional__GroupsAssignment_4_1_in_rule__Optional__Group_4__1__Impl7031 = new BitSet(new long[]{0x0000000000000822L});
+    public static final BitSet FOLLOW_rule__Or__Group__0__Impl_in_rule__Or__Group__07066 = new BitSet(new long[]{0x00000000A4000000L});
+    public static final BitSet FOLLOW_rule__Or__Group__1_in_rule__Or__Group__07069 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Or_in_rule__Or__Group__0__Impl7097 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Or__Group__1__Impl_in_rule__Or__Group__17128 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_rule__Or__Group__2_in_rule__Or__Group__17131 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Or__NameAssignment_1_in_rule__Or__Group__1__Impl7158 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Or__Group__2__Impl_in_rule__Or__Group__27188 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Or__Group_2__0_in_rule__Or__Group__2__Impl7215 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Or__Group_2__0__Impl_in_rule__Or__Group_2__07252 = new BitSet(new long[]{0x00000000A4000000L});
+    public static final BitSet FOLLOW_rule__Or__Group_2__1_in_rule__Or__Group_2__07255 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_BEGIN_in_rule__Or__Group_2__0__Impl7282 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Or__Group_2__1__Impl_in_rule__Or__Group_2__17311 = new BitSet(new long[]{0x00000000B4010000L});
+    public static final BitSet FOLLOW_rule__Or__Group_2__2_in_rule__Or__Group_2__17314 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Or__GroupedAssignment_2_1_in_rule__Or__Group_2__1__Impl7341 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Or__Group_2__2__Impl_in_rule__Or__Group_2__27371 = new BitSet(new long[]{0x00000000B4010000L});
+    public static final BitSet FOLLOW_rule__Or__Group_2__3_in_rule__Or__Group_2__27374 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Or__Group_2_2__0_in_rule__Or__Group_2__2__Impl7401 = new BitSet(new long[]{0x00000000A4010002L});
+    public static final BitSet FOLLOW_rule__Or__Group_2__3__Impl_in_rule__Or__Group_2__37432 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_END_in_rule__Or__Group_2__3__Impl7459 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Or__Group_2_2__0__Impl_in_rule__Or__Group_2_2__07496 = new BitSet(new long[]{0x00000000A4010000L});
+    public static final BitSet FOLLOW_rule__Or__Group_2_2__1_in_rule__Or__Group_2_2__07499 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Comma_in_rule__Or__Group_2_2__0__Impl7528 = new BitSet(new long[]{0x0000000000010002L});
+    public static final BitSet FOLLOW_rule__Or__Group_2_2__1__Impl_in_rule__Or__Group_2_2__17561 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Or__GroupedAssignment_2_2_1_in_rule__Or__Group_2_2__1__Impl7588 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Xor__Group__0__Impl_in_rule__Xor__Group__07622 = new BitSet(new long[]{0x00000000A4000000L});
+    public static final BitSet FOLLOW_rule__Xor__Group__1_in_rule__Xor__Group__07625 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Xor_in_rule__Xor__Group__0__Impl7653 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Xor__Group__1__Impl_in_rule__Xor__Group__17684 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_rule__Xor__Group__2_in_rule__Xor__Group__17687 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Xor__NameAssignment_1_in_rule__Xor__Group__1__Impl7714 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Xor__Group__2__Impl_in_rule__Xor__Group__27744 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Xor__Group_2__0_in_rule__Xor__Group__2__Impl7771 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Xor__Group_2__0__Impl_in_rule__Xor__Group_2__07808 = new BitSet(new long[]{0x00000000A4000000L});
+    public static final BitSet FOLLOW_rule__Xor__Group_2__1_in_rule__Xor__Group_2__07811 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_BEGIN_in_rule__Xor__Group_2__0__Impl7838 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Xor__Group_2__1__Impl_in_rule__Xor__Group_2__17867 = new BitSet(new long[]{0x00000000B4010000L});
+    public static final BitSet FOLLOW_rule__Xor__Group_2__2_in_rule__Xor__Group_2__17870 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Xor__GroupedAssignment_2_1_in_rule__Xor__Group_2__1__Impl7897 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Xor__Group_2__2__Impl_in_rule__Xor__Group_2__27927 = new BitSet(new long[]{0x00000000B4010000L});
+    public static final BitSet FOLLOW_rule__Xor__Group_2__3_in_rule__Xor__Group_2__27930 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Xor__Group_2_2__0_in_rule__Xor__Group_2__2__Impl7957 = new BitSet(new long[]{0x00000000A4010002L});
+    public static final BitSet FOLLOW_rule__Xor__Group_2__3__Impl_in_rule__Xor__Group_2__37988 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_END_in_rule__Xor__Group_2__3__Impl8015 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Xor__Group_2_2__0__Impl_in_rule__Xor__Group_2_2__08052 = new BitSet(new long[]{0x00000000A4010000L});
+    public static final BitSet FOLLOW_rule__Xor__Group_2_2__1_in_rule__Xor__Group_2_2__08055 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Comma_in_rule__Xor__Group_2_2__0__Impl8084 = new BitSet(new long[]{0x0000000000010002L});
+    public static final BitSet FOLLOW_rule__Xor__Group_2_2__1__Impl_in_rule__Xor__Group_2_2__18117 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Xor__GroupedAssignment_2_2_1_in_rule__Xor__Group_2_2__1__Impl8144 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFeature_Impl_in_rule__Model__RootAssignment8183 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_VerticalLineVerticalLine_in_rule__Constrain__OperatorAssignment_1_18219 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConjunction_in_rule__Constrain__RightExpAssignment_1_28258 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_AmpersandAmpersand_in_rule__Conjunction__OperatorAssignment_1_18294 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleComparison_in_rule__Conjunction__RightExpAssignment_1_28333 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Comparison__OperatorAlternatives_1_1_0_in_rule__Comparison__OperatorAssignment_1_18364 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBinary_in_rule__Comparison__RightExpAssignment_1_28397 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePrimary_in_rule__Binary__RightExpAssignment_1_18428 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEString_in_rule__Primary__ConstrainFeaturesAssignment_0_08463 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEString_in_rule__Primary__GroupsAssignment_0_28502 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEString_in_rule__Primary__ConstrainFeaturesAssignment_0_3_18541 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Unary__OperatorAlternatives_1_0_in_rule__Unary__OperatorAssignment_18576 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePrimary_in_rule__Unary__ExpAssignment_28609 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEString_in_rule__Feature_Impl__NameAssignment_18640 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSolitary_in_rule__Feature_Impl__SubfeatureAssignment_2_18671 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSolitary_in_rule__Feature_Impl__SubfeatureAssignment_2_28702 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConstrain_in_rule__Feature_Impl__ConstrainsAssignment_3_18733 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConstrain_in_rule__Feature_Impl__ConstrainsAssignment_3_2_18764 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEString_in_rule__Grouped__NameAssignment_08795 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConstrain_in_rule__Grouped__ConstrainsAssignment_1_18826 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConstrain_in_rule__Grouped__ConstrainsAssignment_1_2_18857 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEString_in_rule__Mandatory__NameAssignment_08888 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSolitary_in_rule__Mandatory__SubfeatureAssignment_1_18919 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSolitary_in_rule__Mandatory__SubfeatureAssignment_1_2_18950 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConstrain_in_rule__Mandatory__ConstrainsAssignment_2_18981 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConstrain_in_rule__Mandatory__ConstrainsAssignment_2_2_19012 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGroup_in_rule__Mandatory__GroupsAssignment_3_09043 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGroup_in_rule__Mandatory__GroupsAssignment_3_19074 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEString_in_rule__Optional__NameAssignment_19105 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSolitary_in_rule__Optional__SubfeatureAssignment_2_19136 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSolitary_in_rule__Optional__SubfeatureAssignment_2_2_19167 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConstrain_in_rule__Optional__ConstrainsAssignment_3_19198 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConstrain_in_rule__Optional__ConstrainsAssignment_3_2_19229 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGroup_in_rule__Optional__GroupsAssignment_4_09260 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGroup_in_rule__Optional__GroupsAssignment_4_19291 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEString_in_rule__Or__NameAssignment_19322 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGrouped_in_rule__Or__GroupedAssignment_2_19353 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGrouped_in_rule__Or__GroupedAssignment_2_2_19384 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEString_in_rule__Xor__NameAssignment_19415 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGrouped_in_rule__Xor__GroupedAssignment_2_19446 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGrouped_in_rule__Xor__GroupedAssignment_2_2_19477 = new BitSet(new long[]{0x0000000000000002L});
 
 }

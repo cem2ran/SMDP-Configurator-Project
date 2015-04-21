@@ -150,7 +150,7 @@ public class ConfSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (constrainFeatures+=[Feature|EString] constrainFeatures+=[Feature|EString]*)
+	 *     (constrainFeatures+=[Solitary|EString] groups=[Group|EString] constrainFeatures+=[Feature|EString]*)
 	 */
 	protected void sequence_Primary(EObject context, Constrain semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

@@ -297,6 +297,15 @@ public class ModelMDD2PackageImpl extends EPackageImpl implements ModelMDD2Packa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getConstrain_Groups() {
+		return (EReference)constrainEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getBinary() {
 		return binaryEClass;
 	}
@@ -455,6 +464,7 @@ public class ModelMDD2PackageImpl extends EPackageImpl implements ModelMDD2Packa
 
 		constrainEClass = createEClass(CONSTRAIN);
 		createEReference(constrainEClass, CONSTRAIN__CONSTRAIN_FEATURES);
+		createEReference(constrainEClass, CONSTRAIN__GROUPS);
 
 		binaryEClass = createEClass(BINARY);
 		createEReference(binaryEClass, BINARY__RIGHT_EXP);
@@ -536,6 +546,7 @@ public class ModelMDD2PackageImpl extends EPackageImpl implements ModelMDD2Packa
 
 		initEClass(constrainEClass, Constrain.class, "Constrain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getConstrain_ConstrainFeatures(), this.getFeature(), null, "constrainFeatures", null, 0, -1, Constrain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConstrain_Groups(), this.getGroup(), null, "groups", null, 0, 1, Constrain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(binaryEClass, Binary.class, "Binary", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBinary_RightExp(), this.getConstrain(), null, "rightExp", null, 1, 1, Binary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

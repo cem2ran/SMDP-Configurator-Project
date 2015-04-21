@@ -264,13 +264,17 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
 		private final Assignment cConstrainFeaturesAssignment_0_0 = (Assignment)cGroup_0.eContents().get(0);
-		private final CrossReference cConstrainFeaturesFeatureCrossReference_0_0_0 = (CrossReference)cConstrainFeaturesAssignment_0_0.eContents().get(0);
-		private final RuleCall cConstrainFeaturesFeatureEStringParserRuleCall_0_0_0_1 = (RuleCall)cConstrainFeaturesFeatureCrossReference_0_0_0.eContents().get(1);
-		private final Group cGroup_0_1 = (Group)cGroup_0.eContents().get(1);
-		private final Keyword cFullStopKeyword_0_1_0 = (Keyword)cGroup_0_1.eContents().get(0);
-		private final Assignment cConstrainFeaturesAssignment_0_1_1 = (Assignment)cGroup_0_1.eContents().get(1);
-		private final CrossReference cConstrainFeaturesFeatureCrossReference_0_1_1_0 = (CrossReference)cConstrainFeaturesAssignment_0_1_1.eContents().get(0);
-		private final RuleCall cConstrainFeaturesFeatureEStringParserRuleCall_0_1_1_0_1 = (RuleCall)cConstrainFeaturesFeatureCrossReference_0_1_1_0.eContents().get(1);
+		private final CrossReference cConstrainFeaturesSolitaryCrossReference_0_0_0 = (CrossReference)cConstrainFeaturesAssignment_0_0.eContents().get(0);
+		private final RuleCall cConstrainFeaturesSolitaryEStringParserRuleCall_0_0_0_1 = (RuleCall)cConstrainFeaturesSolitaryCrossReference_0_0_0.eContents().get(1);
+		private final Keyword cFullStopKeyword_0_1 = (Keyword)cGroup_0.eContents().get(1);
+		private final Assignment cGroupsAssignment_0_2 = (Assignment)cGroup_0.eContents().get(2);
+		private final CrossReference cGroupsGroupCrossReference_0_2_0 = (CrossReference)cGroupsAssignment_0_2.eContents().get(0);
+		private final RuleCall cGroupsGroupEStringParserRuleCall_0_2_0_1 = (RuleCall)cGroupsGroupCrossReference_0_2_0.eContents().get(1);
+		private final Group cGroup_0_3 = (Group)cGroup_0.eContents().get(3);
+		private final Keyword cFullStopKeyword_0_3_0 = (Keyword)cGroup_0_3.eContents().get(0);
+		private final Assignment cConstrainFeaturesAssignment_0_3_1 = (Assignment)cGroup_0_3.eContents().get(1);
+		private final CrossReference cConstrainFeaturesFeatureCrossReference_0_3_1_0 = (CrossReference)cConstrainFeaturesAssignment_0_3_1.eContents().get(0);
+		private final RuleCall cConstrainFeaturesFeatureEStringParserRuleCall_0_3_1_0_1 = (RuleCall)cConstrainFeaturesFeatureCrossReference_0_3_1_0.eContents().get(1);
 		private final RuleCall cUnaryParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final Group cGroup_2 = (Group)cAlternatives.eContents().get(2);
 		private final Keyword cLeftParenthesisKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
@@ -278,38 +282,52 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightParenthesisKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
 		
 		//Primary returns Constrain:
-		//	constrainFeatures+=[Feature|EString] ("." constrainFeatures+=[Feature|EString])* | Unary | "(" Constrain ")";
+		//	constrainFeatures+=[Solitary|EString] "." groups=[Group|EString] ("." constrainFeatures+=[Feature|EString])* | Unary |
+		//	"(" Constrain ")";
 		@Override public ParserRule getRule() { return rule; }
 
-		//constrainFeatures+=[Feature|EString] ("." constrainFeatures+=[Feature|EString])* | Unary | "(" Constrain ")"
+		//constrainFeatures+=[Solitary|EString] "." groups=[Group|EString] ("." constrainFeatures+=[Feature|EString])* | Unary |
+		//"(" Constrain ")"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//constrainFeatures+=[Feature|EString] ("." constrainFeatures+=[Feature|EString])*
+		//constrainFeatures+=[Solitary|EString] "." groups=[Group|EString] ("." constrainFeatures+=[Feature|EString])*
 		public Group getGroup_0() { return cGroup_0; }
 
-		//constrainFeatures+=[Feature|EString]
+		//constrainFeatures+=[Solitary|EString]
 		public Assignment getConstrainFeaturesAssignment_0_0() { return cConstrainFeaturesAssignment_0_0; }
 
-		//[Feature|EString]
-		public CrossReference getConstrainFeaturesFeatureCrossReference_0_0_0() { return cConstrainFeaturesFeatureCrossReference_0_0_0; }
+		//[Solitary|EString]
+		public CrossReference getConstrainFeaturesSolitaryCrossReference_0_0_0() { return cConstrainFeaturesSolitaryCrossReference_0_0_0; }
 
 		//EString
-		public RuleCall getConstrainFeaturesFeatureEStringParserRuleCall_0_0_0_1() { return cConstrainFeaturesFeatureEStringParserRuleCall_0_0_0_1; }
-
-		//("." constrainFeatures+=[Feature|EString])*
-		public Group getGroup_0_1() { return cGroup_0_1; }
+		public RuleCall getConstrainFeaturesSolitaryEStringParserRuleCall_0_0_0_1() { return cConstrainFeaturesSolitaryEStringParserRuleCall_0_0_0_1; }
 
 		//"."
-		public Keyword getFullStopKeyword_0_1_0() { return cFullStopKeyword_0_1_0; }
+		public Keyword getFullStopKeyword_0_1() { return cFullStopKeyword_0_1; }
 
-		//constrainFeatures+=[Feature|EString]
-		public Assignment getConstrainFeaturesAssignment_0_1_1() { return cConstrainFeaturesAssignment_0_1_1; }
+		//groups=[Group|EString]
+		public Assignment getGroupsAssignment_0_2() { return cGroupsAssignment_0_2; }
 
-		//[Feature|EString]
-		public CrossReference getConstrainFeaturesFeatureCrossReference_0_1_1_0() { return cConstrainFeaturesFeatureCrossReference_0_1_1_0; }
+		//[Group|EString]
+		public CrossReference getGroupsGroupCrossReference_0_2_0() { return cGroupsGroupCrossReference_0_2_0; }
 
 		//EString
-		public RuleCall getConstrainFeaturesFeatureEStringParserRuleCall_0_1_1_0_1() { return cConstrainFeaturesFeatureEStringParserRuleCall_0_1_1_0_1; }
+		public RuleCall getGroupsGroupEStringParserRuleCall_0_2_0_1() { return cGroupsGroupEStringParserRuleCall_0_2_0_1; }
+
+		//("." constrainFeatures+=[Feature|EString])*
+		public Group getGroup_0_3() { return cGroup_0_3; }
+
+		//"."
+		public Keyword getFullStopKeyword_0_3_0() { return cFullStopKeyword_0_3_0; }
+
+		//constrainFeatures+=[Feature|EString]
+		public Assignment getConstrainFeaturesAssignment_0_3_1() { return cConstrainFeaturesAssignment_0_3_1; }
+
+		//[Feature|EString]
+		public CrossReference getConstrainFeaturesFeatureCrossReference_0_3_1_0() { return cConstrainFeaturesFeatureCrossReference_0_3_1_0; }
+
+		//EString
+		public RuleCall getConstrainFeaturesFeatureEStringParserRuleCall_0_3_1_0_1() { return cConstrainFeaturesFeatureEStringParserRuleCall_0_3_1_0_1; }
 
 		//Unary
 		public RuleCall getUnaryParserRuleCall_1() { return cUnaryParserRuleCall_1; }
@@ -1067,7 +1085,8 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Primary returns Constrain:
-	//	constrainFeatures+=[Feature|EString] ("." constrainFeatures+=[Feature|EString])* | Unary | "(" Constrain ")";
+	//	constrainFeatures+=[Solitary|EString] "." groups=[Group|EString] ("." constrainFeatures+=[Feature|EString])* | Unary |
+	//	"(" Constrain ")";
 	public PrimaryElements getPrimaryAccess() {
 		return pPrimary;
 	}

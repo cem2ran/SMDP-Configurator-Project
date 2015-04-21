@@ -470,13 +470,22 @@ public interface ModelMDD2Package extends EPackage {
 	int CONSTRAIN__CONSTRAIN_FEATURES = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Groups</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRAIN__GROUPS = NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Constrain</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTRAIN_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
+	int CONSTRAIN_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Constrain</em>' class.
@@ -514,6 +523,15 @@ public interface ModelMDD2Package extends EPackage {
 	 * @ordered
 	 */
 	int BINARY__CONSTRAIN_FEATURES = CONSTRAIN__CONSTRAIN_FEATURES;
+
+	/**
+	 * The feature id for the '<em><b>Groups</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BINARY__GROUPS = CONSTRAIN__GROUPS;
 
 	/**
 	 * The feature id for the '<em><b>Right Exp</b></em>' containment reference.
@@ -587,6 +605,15 @@ public interface ModelMDD2Package extends EPackage {
 	 * @ordered
 	 */
 	int UNARY__CONSTRAIN_FEATURES = CONSTRAIN__CONSTRAIN_FEATURES;
+
+	/**
+	 * The feature id for the '<em><b>Groups</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNARY__GROUPS = CONSTRAIN__GROUPS;
 
 	/**
 	 * The feature id for the '<em><b>Exp</b></em>' containment reference.
@@ -889,6 +916,17 @@ public interface ModelMDD2Package extends EPackage {
 	EReference getConstrain_ConstrainFeatures();
 
 	/**
+	 * Returns the meta object for the reference '{@link modelMDD2.Constrain#getGroups <em>Groups</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Groups</em>'.
+	 * @see modelMDD2.Constrain#getGroups()
+	 * @see #getConstrain()
+	 * @generated
+	 */
+	EReference getConstrain_Groups();
+
+	/**
 	 * Returns the meta object for class '{@link modelMDD2.Binary <em>Binary</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1157,6 +1195,14 @@ public interface ModelMDD2Package extends EPackage {
 		 * @generated
 		 */
 		EReference CONSTRAIN__CONSTRAIN_FEATURES = eINSTANCE.getConstrain_ConstrainFeatures();
+
+		/**
+		 * The meta object literal for the '<em><b>Groups</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONSTRAIN__GROUPS = eINSTANCE.getConstrain_Groups();
 
 		/**
 		 * The meta object literal for the '{@link modelMDD2.impl.BinaryImpl <em>Binary</em>}' class.

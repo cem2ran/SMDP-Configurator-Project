@@ -21,6 +21,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Constrain" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="constrainFeatures" upperBound="-1"
         eType="#//Feature"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="groups" eType="#//Group"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Binary" eSuperTypes="#//Constrain">
     <eStructuralFeatures xsi:type="ecore:EReference" name="rightExp" lowerBound="1"

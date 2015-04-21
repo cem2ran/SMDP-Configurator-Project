@@ -15,7 +15,7 @@ Feature returns Feature:
 
 Solitary returns Solitary:
 	Mandatory | Optional;
-
+	
 Constrain returns Constrain: //Binary | Unary;
 	Conjunction ( {Binary.leftExp=current} Operator='||' rightExp=Conjunction )* ;
 Conjunction returns Constrain: 
@@ -25,11 +25,11 @@ Comparison returns Constrain:
 Binary returns Constrain:
 	Primary ({Binary.leftExp=current} rightExp=Primary )* ;	
 Primary	returns Constrain: 
-	constrainFeatures+=[Feature|EString] ('.' constrainFeatures+=[Feature|EString])* | Unary | '(' Constrain ')';
+	  constrainFeatures+=[Solitary|EString] '.' groups=[Group|EString] ('.' constrainFeatures+=[Feature|EString])* | Unary | '(' Constrain ')';
 Unary returns Constrain:
-	{Unary} Operator=("!"|"-") exp=Primary 
-;
-
+	{Unary} Operator=("!"|"-") exp=Primary
+	;
+	
 Group returns Group:
 	Or | Xor
 	;

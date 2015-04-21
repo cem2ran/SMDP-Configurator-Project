@@ -13,6 +13,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link modelMDD2.Constrain#getConstrainFeatures <em>Constrain Features</em>}</li>
+ *   <li>{@link modelMDD2.Constrain#getGroups <em>Groups</em>}</li>
  * </ul>
  * </p>
  *
@@ -36,5 +37,31 @@ public interface Constrain extends NamedElement {
 	 * @generated
 	 */
 	EList<Feature> getConstrainFeatures();
+
+	/**
+	 * Returns the value of the '<em><b>Groups</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Groups</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Groups</em>' reference.
+	 * @see #setGroups(Group)
+	 * @see modelMDD2.ModelMDD2Package#getConstrain_Groups()
+	 * @model
+	 * @generated
+	 */
+	Group getGroups();
+
+	/**
+	 * Sets the value of the '{@link modelMDD2.Constrain#getGroups <em>Groups</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Groups</em>' reference.
+	 * @see #getGroups()
+	 * @generated
+	 */
+	void setGroups(Group value);
 
 } // Constrain

@@ -492,17 +492,17 @@ rulePrimary returns [EObject current=null]
 	        }
         }
 		{ 
-	        newCompositeNode(grammarAccess.getPrimaryAccess().getConstrainFeaturesFeatureCrossReference_0_0_0()); 
+	        newCompositeNode(grammarAccess.getPrimaryAccess().getConstrainFeaturesSolitaryCrossReference_0_0_0()); 
 	    }
 		ruleEString		{ 
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)(
+)
 	otherlv_1=FullStop
     {
-    	newLeafNode(otherlv_1, grammarAccess.getPrimaryAccess().getFullStopKeyword_0_1_0());
+    	newLeafNode(otherlv_1, grammarAccess.getPrimaryAccess().getFullStopKeyword_0_1());
     }
 (
 (
@@ -512,7 +512,27 @@ rulePrimary returns [EObject current=null]
 	        }
         }
 		{ 
-	        newCompositeNode(grammarAccess.getPrimaryAccess().getConstrainFeaturesFeatureCrossReference_0_1_1_0()); 
+	        newCompositeNode(grammarAccess.getPrimaryAccess().getGroupsGroupCrossReference_0_2_0()); 
+	    }
+		ruleEString		{ 
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(
+	otherlv_3=FullStop
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getPrimaryAccess().getFullStopKeyword_0_3_0());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPrimaryRule());
+	        }
+        }
+		{ 
+	        newCompositeNode(grammarAccess.getPrimaryAccess().getConstrainFeaturesFeatureCrossReference_0_3_1_0()); 
 	    }
 		ruleEString		{ 
 	        afterParserOrEnumRuleCall();
@@ -524,30 +544,30 @@ rulePrimary returns [EObject current=null]
     { 
         newCompositeNode(grammarAccess.getPrimaryAccess().getUnaryParserRuleCall_1()); 
     }
-    this_Unary_3=ruleUnary
+    this_Unary_5=ruleUnary
     {
-        $current = $this_Unary_3.current;
+        $current = $this_Unary_5.current;
         afterParserOrEnumRuleCall();
     }
 
     |(
-	otherlv_4=LeftParenthesis
+	otherlv_6=LeftParenthesis
     {
-    	newLeafNode(otherlv_4, grammarAccess.getPrimaryAccess().getLeftParenthesisKeyword_2_0());
+    	newLeafNode(otherlv_6, grammarAccess.getPrimaryAccess().getLeftParenthesisKeyword_2_0());
     }
 
     { 
         newCompositeNode(grammarAccess.getPrimaryAccess().getConstrainParserRuleCall_2_1()); 
     }
-    this_Constrain_5=ruleConstrain
+    this_Constrain_7=ruleConstrain
     {
-        $current = $this_Constrain_5.current;
+        $current = $this_Constrain_7.current;
         afterParserOrEnumRuleCall();
     }
 
-	otherlv_6=RightParenthesis
+	otherlv_8=RightParenthesis
     {
-    	newLeafNode(otherlv_6, grammarAccess.getPrimaryAccess().getRightParenthesisKeyword_2_2());
+    	newLeafNode(otherlv_8, grammarAccess.getPrimaryAccess().getRightParenthesisKeyword_2_2());
     }
 ))
 ;

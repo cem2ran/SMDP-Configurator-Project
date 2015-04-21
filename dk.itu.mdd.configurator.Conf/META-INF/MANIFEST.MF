@@ -7,7 +7,7 @@ Bundle-SymbolicName: dk.itu.mdd.configurator.Conf; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.xtext;visibility:=reexport,
  org.eclipse.equinox.common;bundle-version="3.5.0",
- ConfiguratorDSL,
+ asd,
  org.eclipse.xtext.util,
  org.eclipse.emf.ecore,
  org.eclipse.emf.common,
