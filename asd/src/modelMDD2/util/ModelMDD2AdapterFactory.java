@@ -2,13 +2,27 @@
  */
 package modelMDD2.util;
 
-import modelMDD2.*;
-
+import modelMDD2.Attribute;
+import modelMDD2.Binary;
+import modelMDD2.CBoolean;
+import modelMDD2.CString;
+import modelMDD2.Constrain;
+import modelMDD2.Feature;
+import modelMDD2.Group;
+import modelMDD2.Grouped;
+import modelMDD2.Mandatory;
+import modelMDD2.Model;
+import modelMDD2.ModelMDD2Package;
+import modelMDD2.NamedElement;
+import modelMDD2.Optional;
+import modelMDD2.Or;
+import modelMDD2.Range;
+import modelMDD2.Solitary;
+import modelMDD2.Unary;
+import modelMDD2.Xor;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -122,6 +136,22 @@ public class ModelMDD2AdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseRange(Range object) {
 				return createRangeAdapter();
+			}
+			@Override
+			public Adapter caseCBoolean(CBoolean object) {
+				return createCBooleanAdapter();
+			}
+			@Override
+			public Adapter caseCString(CString object) {
+				return createCStringAdapter();
+			}
+			@Override
+			public Adapter caseNumber(modelMDD2.Number object) {
+				return createNumberAdapter();
+			}
+			@Override
+			public Adapter caseAttribute(Attribute object) {
+				return createAttributeAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -336,6 +366,62 @@ public class ModelMDD2AdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createRangeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link modelMDD2.CBoolean <em>CBoolean</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see modelMDD2.CBoolean
+	 * @generated
+	 */
+	public Adapter createCBooleanAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link modelMDD2.CString <em>CString</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see modelMDD2.CString
+	 * @generated
+	 */
+	public Adapter createCStringAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link modelMDD2.Number <em>Number</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see modelMDD2.Number
+	 * @generated
+	 */
+	public Adapter createNumberAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link modelMDD2.Attribute <em>Attribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see modelMDD2.Attribute
+	 * @generated
+	 */
+	public Adapter createAttributeAdapter() {
 		return null;
 	}
 

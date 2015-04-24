@@ -2,6 +2,7 @@ package dk.itu.mdd.configurator;
 
 import com.google.common.base.Objects;
 import java.util.List;
+import modelMDD2.Attribute;
 import modelMDD2.Binary;
 import modelMDD2.Constrain;
 import modelMDD2.Feature;
@@ -9,6 +10,7 @@ import modelMDD2.Group;
 import modelMDD2.Grouped;
 import modelMDD2.Mandatory;
 import modelMDD2.Solitary;
+import modelMDD2.impl.RangeImpl;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.xbase.lib.Conversions;
@@ -98,5 +100,23 @@ public class Constraints {
       _and = _equals_1;
     }
     return _and;
+  }
+  
+  public static boolean checkRangeValidity(final Feature f) {
+    EList<Attribute> _attributes = f.getAttributes();
+    final Function1<Attribute, Boolean> _function = (Attribute it) -> {
+      EList<Attribute> _attributes_1 = f.getAttributes();
+      final Function1<Attribute, Boolean> _function_1 = (Attribute a) -> {
+        return Boolean.valueOf((a instanceof RangeImpl));
+      };
+      return Boolean.valueOf(IterableExtensions.<Attribute>forall(_attributes_1, _function_1));
+    };
+    Iterable<Attribute> _filter = IterableExtensions.<Attribute>filter(_attributes, _function);
+    final Function1<Attribute, Boolean> _function_1 = (Attribute a) -> {
+      int _upper = ((RangeImpl) a).getUpper();
+      int _lower = ((RangeImpl) a).getLower();
+      return Boolean.valueOf((_upper > _lower));
+    };
+    return IterableExtensions.<Attribute>forall(_filter, _function_1);
   }
 }

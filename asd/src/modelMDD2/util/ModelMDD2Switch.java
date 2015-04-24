@@ -2,11 +2,26 @@
  */
 package modelMDD2.util;
 
-import modelMDD2.*;
-
+import modelMDD2.Attribute;
+import modelMDD2.Binary;
+import modelMDD2.CBoolean;
+import modelMDD2.CString;
+import modelMDD2.Constrain;
+import modelMDD2.Feature;
+import modelMDD2.Group;
+import modelMDD2.Grouped;
+import modelMDD2.Mandatory;
+import modelMDD2.Model;
+import modelMDD2.ModelMDD2Package;
+import modelMDD2.NamedElement;
+import modelMDD2.Optional;
+import modelMDD2.Or;
+import modelMDD2.Range;
+import modelMDD2.Solitary;
+import modelMDD2.Unary;
+import modelMDD2.Xor;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.util.Switch;
 
 /**
@@ -141,6 +156,7 @@ public class ModelMDD2Switch<T> extends Switch<T> {
 				Or or = (Or)theEObject;
 				T result = caseOr(or);
 				if (result == null) result = caseGroup(or);
+				if (result == null) result = caseFeature(or);
 				if (result == null) result = caseNamedElement(or);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -149,6 +165,7 @@ public class ModelMDD2Switch<T> extends Switch<T> {
 				Xor xor = (Xor)theEObject;
 				T result = caseXor(xor);
 				if (result == null) result = caseGroup(xor);
+				if (result == null) result = caseFeature(xor);
 				if (result == null) result = caseNamedElement(xor);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -156,6 +173,7 @@ public class ModelMDD2Switch<T> extends Switch<T> {
 			case ModelMDD2Package.GROUP: {
 				Group group = (Group)theEObject;
 				T result = caseGroup(group);
+				if (result == null) result = caseFeature(group);
 				if (result == null) result = caseNamedElement(group);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -169,7 +187,39 @@ public class ModelMDD2Switch<T> extends Switch<T> {
 			case ModelMDD2Package.RANGE: {
 				Range range = (Range)theEObject;
 				T result = caseRange(range);
+				if (result == null) result = caseAttribute(range);
 				if (result == null) result = caseNamedElement(range);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ModelMDD2Package.CBOOLEAN: {
+				CBoolean cBoolean = (CBoolean)theEObject;
+				T result = caseCBoolean(cBoolean);
+				if (result == null) result = caseAttribute(cBoolean);
+				if (result == null) result = caseNamedElement(cBoolean);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ModelMDD2Package.CSTRING: {
+				CString cString = (CString)theEObject;
+				T result = caseCString(cString);
+				if (result == null) result = caseAttribute(cString);
+				if (result == null) result = caseNamedElement(cString);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ModelMDD2Package.NUMBER: {
+				modelMDD2.Number number = (modelMDD2.Number)theEObject;
+				T result = caseNumber(number);
+				if (result == null) result = caseAttribute(number);
+				if (result == null) result = caseNamedElement(number);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ModelMDD2Package.ATTRIBUTE: {
+				Attribute attribute = (Attribute)theEObject;
+				T result = caseAttribute(attribute);
+				if (result == null) result = caseNamedElement(attribute);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -384,6 +434,66 @@ public class ModelMDD2Switch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseRange(Range object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>CBoolean</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>CBoolean</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCBoolean(CBoolean object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>CString</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>CString</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCString(CString object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Number</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Number</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNumber(modelMDD2.Number object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Attribute</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Attribute</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAttribute(Attribute object) {
 		return null;
 	}
 

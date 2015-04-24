@@ -2,6 +2,7 @@
  */
 package modelMDD2.impl;
 
+import java.lang.String;
 import modelMDD2.Binary;
 import modelMDD2.Constrain;
 import modelMDD2.ModelMDD2Package;

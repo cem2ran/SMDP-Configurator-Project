@@ -2,14 +2,26 @@
  */
 package modelMDD2.impl;
 
-import modelMDD2.*;
-
+import modelMDD2.Binary;
+import modelMDD2.CBoolean;
+import modelMDD2.CString;
+import modelMDD2.Constrain;
+import modelMDD2.Feature;
+import modelMDD2.Grouped;
+import modelMDD2.Mandatory;
+import modelMDD2.Model;
+import modelMDD2.ModelMDD2Factory;
+import modelMDD2.ModelMDD2Package;
+import modelMDD2.NamedElement;
+import modelMDD2.Optional;
+import modelMDD2.Or;
+import modelMDD2.Range;
+import modelMDD2.Unary;
+import modelMDD2.Xor;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 /**
@@ -68,6 +80,9 @@ public class ModelMDD2FactoryImpl extends EFactoryImpl implements ModelMDD2Facto
 			case ModelMDD2Package.XOR: return createXor();
 			case ModelMDD2Package.NAMED_ELEMENT: return createNamedElement();
 			case ModelMDD2Package.RANGE: return createRange();
+			case ModelMDD2Package.CBOOLEAN: return createCBoolean();
+			case ModelMDD2Package.CSTRING: return createCString();
+			case ModelMDD2Package.NUMBER: return createNumber();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -191,6 +206,36 @@ public class ModelMDD2FactoryImpl extends EFactoryImpl implements ModelMDD2Facto
 	public Range createRange() {
 		RangeImpl range = new RangeImpl();
 		return range;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CBoolean createCBoolean() {
+		CBooleanImpl cBoolean = new CBooleanImpl();
+		return cBoolean;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CString createCString() {
+		CStringImpl cString = new CStringImpl();
+		return cString;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public modelMDD2.Number createNumber() {
+		NumberImpl number = new NumberImpl();
+		return number;
 	}
 
 	/**

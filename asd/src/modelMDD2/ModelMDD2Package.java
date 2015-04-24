@@ -2,6 +2,7 @@
  */
 package modelMDD2;
 
+import java.lang.String;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -177,13 +178,22 @@ public interface ModelMDD2Package extends EPackage {
 	int FEATURE__CONSTRAINS = NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE__ATTRIBUTES = NAMED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Feature</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int FEATURE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Feature</em>' class.
@@ -230,6 +240,15 @@ public interface ModelMDD2Package extends EPackage {
 	 * @ordered
 	 */
 	int SOLITARY__CONSTRAINS = FEATURE__CONSTRAINS;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLITARY__ATTRIBUTES = FEATURE__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Groups</b></em>' containment reference list.
@@ -296,13 +315,13 @@ public interface ModelMDD2Package extends EPackage {
 	int GROUPED__CONSTRAINS = FEATURE__CONSTRAINS;
 
 	/**
-	 * The feature id for the '<em><b>Range</b></em>' containment reference.
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GROUPED__RANGE = FEATURE_FEATURE_COUNT + 0;
+	int GROUPED__ATTRIBUTES = FEATURE__ATTRIBUTES;
 
 	/**
 	 * The number of structural features of the '<em>Grouped</em>' class.
@@ -311,7 +330,7 @@ public interface ModelMDD2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUPED_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 1;
+	int GROUPED_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Grouped</em>' class.
@@ -358,6 +377,15 @@ public interface ModelMDD2Package extends EPackage {
 	 * @ordered
 	 */
 	int MANDATORY__CONSTRAINS = SOLITARY__CONSTRAINS;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANDATORY__ATTRIBUTES = SOLITARY__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Groups</b></em>' containment reference list.
@@ -422,6 +450,15 @@ public interface ModelMDD2Package extends EPackage {
 	 * @ordered
 	 */
 	int OPTIONAL__CONSTRAINS = SOLITARY__CONSTRAINS;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPTIONAL__ATTRIBUTES = SOLITARY__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Groups</b></em>' containment reference list.
@@ -680,13 +717,40 @@ public interface ModelMDD2Package extends EPackage {
 	int GROUP__NAME = NAMED_ELEMENT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Subfeature</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GROUP__SUBFEATURE = NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Constrains</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GROUP__CONSTRAINS = NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GROUP__ATTRIBUTES = NAMED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
 	 * The feature id for the '<em><b>Grouped</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP__GROUPED = NAMED_ELEMENT_FEATURE_COUNT + 0;
+	int GROUP__GROUPED = NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Group</em>' class.
@@ -695,7 +759,7 @@ public interface ModelMDD2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
+	int GROUP_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Group</em>' class.
@@ -724,6 +788,33 @@ public interface ModelMDD2Package extends EPackage {
 	 * @ordered
 	 */
 	int OR__NAME = GROUP__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Subfeature</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OR__SUBFEATURE = GROUP__SUBFEATURE;
+
+	/**
+	 * The feature id for the '<em><b>Constrains</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OR__CONSTRAINS = GROUP__CONSTRAINS;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OR__ATTRIBUTES = GROUP__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Grouped</b></em>' containment reference list.
@@ -772,6 +863,33 @@ public interface ModelMDD2Package extends EPackage {
 	int XOR__NAME = GROUP__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Subfeature</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int XOR__SUBFEATURE = GROUP__SUBFEATURE;
+
+	/**
+	 * The feature id for the '<em><b>Constrains</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int XOR__CONSTRAINS = GROUP__CONSTRAINS;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int XOR__ATTRIBUTES = GROUP__ATTRIBUTES;
+
+	/**
 	 * The feature id for the '<em><b>Grouped</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -800,6 +918,25 @@ public interface ModelMDD2Package extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link modelMDD2.impl.AttributeImpl <em>Attribute</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see modelMDD2.impl.AttributeImpl
+	 * @see modelMDD2.impl.ModelMDD2PackageImpl#getAttribute()
+	 * @generated
+	 */
+	int ATTRIBUTE = 17;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE__NAME = NAMED_ELEMENT__NAME;
+
+	/**
 	 * The meta object id for the '{@link modelMDD2.impl.RangeImpl <em>Range</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -810,13 +947,59 @@ public interface ModelMDD2Package extends EPackage {
 	int RANGE = 13;
 
 	/**
+	 * The meta object id for the '{@link modelMDD2.impl.NumberImpl <em>Number</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see modelMDD2.impl.NumberImpl
+	 * @see modelMDD2.impl.ModelMDD2PackageImpl#getNumber()
+	 * @generated
+	 */
+	int NUMBER = 16;
+
+	/**
+	 * The number of structural features of the '<em>Attribute</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Attribute</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RANGE__NAME = NAMED_ELEMENT__NAME;
+	int RANGE__NAME = ATTRIBUTE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Lower</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RANGE__LOWER = ATTRIBUTE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Upper</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RANGE__UPPER = ATTRIBUTE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Range</em>' class.
@@ -825,7 +1008,7 @@ public interface ModelMDD2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RANGE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 0;
+	int RANGE_FEATURE_COUNT = ATTRIBUTE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Range</em>' class.
@@ -834,7 +1017,135 @@ public interface ModelMDD2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RANGE_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
+	int RANGE_OPERATION_COUNT = ATTRIBUTE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link modelMDD2.impl.CBooleanImpl <em>CBoolean</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see modelMDD2.impl.CBooleanImpl
+	 * @see modelMDD2.impl.ModelMDD2PackageImpl#getCBoolean()
+	 * @generated
+	 */
+	int CBOOLEAN = 14;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CBOOLEAN__NAME = ATTRIBUTE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CBOOLEAN__VALUE = ATTRIBUTE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>CBoolean</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CBOOLEAN_FEATURE_COUNT = ATTRIBUTE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>CBoolean</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CBOOLEAN_OPERATION_COUNT = ATTRIBUTE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link modelMDD2.impl.CStringImpl <em>CString</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see modelMDD2.impl.CStringImpl
+	 * @see modelMDD2.impl.ModelMDD2PackageImpl#getCString()
+	 * @generated
+	 */
+	int CSTRING = 15;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CSTRING__NAME = ATTRIBUTE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CSTRING__VALUE = ATTRIBUTE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>CString</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CSTRING_FEATURE_COUNT = ATTRIBUTE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>CString</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CSTRING_OPERATION_COUNT = ATTRIBUTE_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NUMBER__NAME = ATTRIBUTE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NUMBER__VALUE = ATTRIBUTE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Number</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NUMBER_FEATURE_COUNT = ATTRIBUTE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Number</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NUMBER_OPERATION_COUNT = ATTRIBUTE_OPERATION_COUNT + 0;
 
 
 	/**
@@ -891,6 +1202,17 @@ public interface ModelMDD2Package extends EPackage {
 	EReference getFeature_Constrains();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link modelMDD2.Feature#getAttributes <em>Attributes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Attributes</em>'.
+	 * @see modelMDD2.Feature#getAttributes()
+	 * @see #getFeature()
+	 * @generated
+	 */
+	EReference getFeature_Attributes();
+
+	/**
 	 * Returns the meta object for class '{@link modelMDD2.Solitary <em>Solitary</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -920,17 +1242,6 @@ public interface ModelMDD2Package extends EPackage {
 	 * @generated
 	 */
 	EClass getGrouped();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link modelMDD2.Grouped#getRange <em>Range</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Range</em>'.
-	 * @see modelMDD2.Grouped#getRange()
-	 * @see #getGrouped()
-	 * @generated
-	 */
-	EReference getGrouped_Range();
 
 	/**
 	 * Returns the meta object for class '{@link modelMDD2.Mandatory <em>Mandatory</em>}'.
@@ -1132,6 +1443,101 @@ public interface ModelMDD2Package extends EPackage {
 	EClass getRange();
 
 	/**
+	 * Returns the meta object for the attribute '{@link modelMDD2.Range#getLower <em>Lower</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Lower</em>'.
+	 * @see modelMDD2.Range#getLower()
+	 * @see #getRange()
+	 * @generated
+	 */
+	EAttribute getRange_Lower();
+
+	/**
+	 * Returns the meta object for the attribute '{@link modelMDD2.Range#getUpper <em>Upper</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Upper</em>'.
+	 * @see modelMDD2.Range#getUpper()
+	 * @see #getRange()
+	 * @generated
+	 */
+	EAttribute getRange_Upper();
+
+	/**
+	 * Returns the meta object for class '{@link modelMDD2.CBoolean <em>CBoolean</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>CBoolean</em>'.
+	 * @see modelMDD2.CBoolean
+	 * @generated
+	 */
+	EClass getCBoolean();
+
+	/**
+	 * Returns the meta object for the attribute '{@link modelMDD2.CBoolean#isValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see modelMDD2.CBoolean#isValue()
+	 * @see #getCBoolean()
+	 * @generated
+	 */
+	EAttribute getCBoolean_Value();
+
+	/**
+	 * Returns the meta object for class '{@link modelMDD2.CString <em>CString</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>CString</em>'.
+	 * @see modelMDD2.CString
+	 * @generated
+	 */
+	EClass getCString();
+
+	/**
+	 * Returns the meta object for the attribute '{@link modelMDD2.CString#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see modelMDD2.CString#getValue()
+	 * @see #getCString()
+	 * @generated
+	 */
+	EAttribute getCString_Value();
+
+	/**
+	 * Returns the meta object for class '{@link modelMDD2.Number <em>Number</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Number</em>'.
+	 * @see modelMDD2.Number
+	 * @generated
+	 */
+	EClass getNumber();
+
+	/**
+	 * Returns the meta object for the attribute '{@link modelMDD2.Number#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see modelMDD2.Number#getValue()
+	 * @see #getNumber()
+	 * @generated
+	 */
+	EAttribute getNumber_Value();
+
+	/**
+	 * Returns the meta object for class '{@link modelMDD2.Attribute <em>Attribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Attribute</em>'.
+	 * @see modelMDD2.Attribute
+	 * @generated
+	 */
+	EClass getAttribute();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1199,6 +1605,14 @@ public interface ModelMDD2Package extends EPackage {
 		EReference FEATURE__CONSTRAINS = eINSTANCE.getFeature_Constrains();
 
 		/**
+		 * The meta object literal for the '<em><b>Attributes</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FEATURE__ATTRIBUTES = eINSTANCE.getFeature_Attributes();
+
+		/**
 		 * The meta object literal for the '{@link modelMDD2.impl.SolitaryImpl <em>Solitary</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1225,14 +1639,6 @@ public interface ModelMDD2Package extends EPackage {
 		 * @generated
 		 */
 		EClass GROUPED = eINSTANCE.getGrouped();
-
-		/**
-		 * The meta object literal for the '<em><b>Range</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GROUPED__RANGE = eINSTANCE.getGrouped_Range();
 
 		/**
 		 * The meta object literal for the '{@link modelMDD2.impl.MandatoryImpl <em>Mandatory</em>}' class.
@@ -1405,6 +1811,86 @@ public interface ModelMDD2Package extends EPackage {
 		 * @generated
 		 */
 		EClass RANGE = eINSTANCE.getRange();
+
+		/**
+		 * The meta object literal for the '<em><b>Lower</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RANGE__LOWER = eINSTANCE.getRange_Lower();
+
+		/**
+		 * The meta object literal for the '<em><b>Upper</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RANGE__UPPER = eINSTANCE.getRange_Upper();
+
+		/**
+		 * The meta object literal for the '{@link modelMDD2.impl.CBooleanImpl <em>CBoolean</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see modelMDD2.impl.CBooleanImpl
+		 * @see modelMDD2.impl.ModelMDD2PackageImpl#getCBoolean()
+		 * @generated
+		 */
+		EClass CBOOLEAN = eINSTANCE.getCBoolean();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CBOOLEAN__VALUE = eINSTANCE.getCBoolean_Value();
+
+		/**
+		 * The meta object literal for the '{@link modelMDD2.impl.CStringImpl <em>CString</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see modelMDD2.impl.CStringImpl
+		 * @see modelMDD2.impl.ModelMDD2PackageImpl#getCString()
+		 * @generated
+		 */
+		EClass CSTRING = eINSTANCE.getCString();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CSTRING__VALUE = eINSTANCE.getCString_Value();
+
+		/**
+		 * The meta object literal for the '{@link modelMDD2.impl.NumberImpl <em>Number</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see modelMDD2.impl.NumberImpl
+		 * @see modelMDD2.impl.ModelMDD2PackageImpl#getNumber()
+		 * @generated
+		 */
+		EClass NUMBER = eINSTANCE.getNumber();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NUMBER__VALUE = eINSTANCE.getNumber_Value();
+
+		/**
+		 * The meta object literal for the '{@link modelMDD2.impl.AttributeImpl <em>Attribute</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see modelMDD2.impl.AttributeImpl
+		 * @see modelMDD2.impl.ModelMDD2PackageImpl#getAttribute()
+		 * @generated
+		 */
+		EClass ATTRIBUTE = eINSTANCE.getAttribute();
 
 	}
 

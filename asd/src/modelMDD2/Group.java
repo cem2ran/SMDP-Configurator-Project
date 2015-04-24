@@ -20,7 +20,7 @@ import org.eclipse.emf.common.util.EList;
  * @model abstract="true"
  * @generated
  */
-public interface Group extends NamedElement {
+public interface Group extends NamedElement, Feature {
 	/**
 	 * Returns the value of the '<em><b>Grouped</b></em>' containment reference list.
 	 * The list contents are of type {@link modelMDD2.Grouped}.

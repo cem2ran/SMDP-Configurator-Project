@@ -2,6 +2,8 @@
  */
 package modelMDD2;
 
+import java.lang.String;
+
 
 /**
  * <!-- begin-user-doc -->

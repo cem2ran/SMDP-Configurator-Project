@@ -130,6 +130,33 @@ public interface ModelMDD2Factory extends EFactory {
 	Range createRange();
 
 	/**
+	 * Returns a new object of class '<em>CBoolean</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>CBoolean</em>'.
+	 * @generated
+	 */
+	CBoolean createCBoolean();
+
+	/**
+	 * Returns a new object of class '<em>CString</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>CString</em>'.
+	 * @generated
+	 */
+	CString createCString();
+
+	/**
+	 * Returns a new object of class '<em>Number</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Number</em>'.
+	 * @generated
+	 */
+	Number createNumber();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

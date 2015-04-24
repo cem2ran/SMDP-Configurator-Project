@@ -5,6 +5,9 @@ import modelMDD2.Group
 import modelMDD2.Binary
 import modelMDD2.Constrain
 import modelMDD2.Mandatory
+import modelMDD2.Grouped
+import modelMDD2.Range
+import modelMDD2.impl.RangeImpl
 
 class Constraints {
 	def static featureStartsWithCapital(Feature feature) {
@@ -34,4 +37,10 @@ class Constraints {
 	def static isEmpty(Mandatory feature){
 		return (feature.subfeature.size == 0) && (feature.groups.size == 0)
 	}
+	
+	def static checkRangeValidity(Feature f){			
+			// First filter all features that are not a RangeImpl. Then check forall, that lower value is less than upper value.
+	 		return f.attributes.filter[f.attributes.forall[a  | a instanceof RangeImpl ]].forall[a | (a as RangeImpl).upper > (a as RangeImpl).lower];	
+	}
+	
 }

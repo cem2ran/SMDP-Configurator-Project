@@ -116,20 +116,20 @@ public class ConfFormatter extends AbstractFormatter2 {
     } else if (mandatory instanceof Optional) {
       _format((Optional)mandatory, document);
       return;
+    } else if (mandatory instanceof Or) {
+      _format((Or)mandatory, document);
+      return;
+    } else if (mandatory instanceof Xor) {
+      _format((Xor)mandatory, document);
+      return;
     } else if (mandatory instanceof Binary) {
       _format((Binary)mandatory, document);
       return;
     } else if (mandatory instanceof Grouped) {
       _format((Grouped)mandatory, document);
       return;
-    } else if (mandatory instanceof Or) {
-      _format((Or)mandatory, document);
-      return;
     } else if (mandatory instanceof Unary) {
       _format((Unary)mandatory, document);
-      return;
-    } else if (mandatory instanceof Xor) {
-      _format((Xor)mandatory, document);
       return;
     } else if (mandatory instanceof XtextResource) {
       _format((XtextResource)mandatory, document);

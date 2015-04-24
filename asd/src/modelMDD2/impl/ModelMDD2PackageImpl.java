@@ -2,7 +2,10 @@
  */
 package modelMDD2.impl;
 
+import modelMDD2.Attribute;
 import modelMDD2.Binary;
+import modelMDD2.CBoolean;
+import modelMDD2.CString;
 import modelMDD2.Constrain;
 import modelMDD2.Feature;
 import modelMDD2.Group;
@@ -18,12 +21,10 @@ import modelMDD2.Range;
 import modelMDD2.Solitary;
 import modelMDD2.Unary;
 import modelMDD2.Xor;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
@@ -130,6 +131,34 @@ public class ModelMDD2PackageImpl extends EPackageImpl implements ModelMDD2Packa
 	 * @generated
 	 */
 	private EClass rangeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass cBooleanEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass cStringEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass numberEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass attributeEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -242,6 +271,15 @@ public class ModelMDD2PackageImpl extends EPackageImpl implements ModelMDD2Packa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getFeature_Attributes() {
+		return (EReference)featureEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getSolitary() {
 		return solitaryEClass;
 	}
@@ -262,15 +300,6 @@ public class ModelMDD2PackageImpl extends EPackageImpl implements ModelMDD2Packa
 	 */
 	public EClass getGrouped() {
 		return groupedEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGrouped_Range() {
-		return (EReference)groupedEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -449,6 +478,87 @@ public class ModelMDD2PackageImpl extends EPackageImpl implements ModelMDD2Packa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getRange_Lower() {
+		return (EAttribute)rangeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRange_Upper() {
+		return (EAttribute)rangeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCBoolean() {
+		return cBooleanEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCBoolean_Value() {
+		return (EAttribute)cBooleanEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCString() {
+		return cStringEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCString_Value() {
+		return (EAttribute)cStringEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getNumber() {
+		return numberEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getNumber_Value() {
+		return (EAttribute)numberEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAttribute() {
+		return attributeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ModelMDD2Factory getModelMDD2Factory() {
 		return (ModelMDD2Factory)getEFactoryInstance();
 	}
@@ -478,12 +588,12 @@ public class ModelMDD2PackageImpl extends EPackageImpl implements ModelMDD2Packa
 		featureEClass = createEClass(FEATURE);
 		createEReference(featureEClass, FEATURE__SUBFEATURE);
 		createEReference(featureEClass, FEATURE__CONSTRAINS);
+		createEReference(featureEClass, FEATURE__ATTRIBUTES);
 
 		solitaryEClass = createEClass(SOLITARY);
 		createEReference(solitaryEClass, SOLITARY__GROUPS);
 
 		groupedEClass = createEClass(GROUPED);
-		createEReference(groupedEClass, GROUPED__RANGE);
 
 		mandatoryEClass = createEClass(MANDATORY);
 
@@ -513,6 +623,19 @@ public class ModelMDD2PackageImpl extends EPackageImpl implements ModelMDD2Packa
 		createEAttribute(namedElementEClass, NAMED_ELEMENT__NAME);
 
 		rangeEClass = createEClass(RANGE);
+		createEAttribute(rangeEClass, RANGE__LOWER);
+		createEAttribute(rangeEClass, RANGE__UPPER);
+
+		cBooleanEClass = createEClass(CBOOLEAN);
+		createEAttribute(cBooleanEClass, CBOOLEAN__VALUE);
+
+		cStringEClass = createEClass(CSTRING);
+		createEAttribute(cStringEClass, CSTRING__VALUE);
+
+		numberEClass = createEClass(NUMBER);
+		createEAttribute(numberEClass, NUMBER__VALUE);
+
+		attributeEClass = createEClass(ATTRIBUTE);
 	}
 
 	/**
@@ -555,7 +678,12 @@ public class ModelMDD2PackageImpl extends EPackageImpl implements ModelMDD2Packa
 		orEClass.getESuperTypes().add(this.getGroup());
 		xorEClass.getESuperTypes().add(this.getGroup());
 		groupEClass.getESuperTypes().add(this.getNamedElement());
-		rangeEClass.getESuperTypes().add(this.getNamedElement());
+		groupEClass.getESuperTypes().add(this.getFeature());
+		rangeEClass.getESuperTypes().add(this.getAttribute());
+		cBooleanEClass.getESuperTypes().add(this.getAttribute());
+		cStringEClass.getESuperTypes().add(this.getAttribute());
+		numberEClass.getESuperTypes().add(this.getAttribute());
+		attributeEClass.getESuperTypes().add(this.getNamedElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -564,12 +692,12 @@ public class ModelMDD2PackageImpl extends EPackageImpl implements ModelMDD2Packa
 		initEClass(featureEClass, Feature.class, "Feature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFeature_Subfeature(), this.getSolitary(), null, "subfeature", null, 0, -1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFeature_Constrains(), this.getConstrain(), null, "constrains", null, 0, -1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFeature_Attributes(), this.getAttribute(), null, "attributes", null, 0, -1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(solitaryEClass, Solitary.class, "Solitary", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSolitary_Groups(), this.getGroup(), null, "groups", null, 0, -1, Solitary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(groupedEClass, Grouped.class, "Grouped", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGrouped_Range(), this.getRange(), null, "range", null, 0, 1, Grouped.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mandatoryEClass, Mandatory.class, "Mandatory", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -599,6 +727,19 @@ public class ModelMDD2PackageImpl extends EPackageImpl implements ModelMDD2Packa
 		initEAttribute(getNamedElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, NamedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(rangeEClass, Range.class, "Range", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getRange_Lower(), ecorePackage.getEInt(), "lower", null, 1, 1, Range.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRange_Upper(), ecorePackage.getEInt(), "upper", null, 1, 1, Range.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(cBooleanEClass, CBoolean.class, "CBoolean", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCBoolean_Value(), ecorePackage.getEBoolean(), "value", null, 1, 1, CBoolean.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(cStringEClass, CString.class, "CString", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCString_Value(), ecorePackage.getEString(), "value", null, 1, 1, CString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(numberEClass, modelMDD2.Number.class, "Number", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getNumber_Value(), ecorePackage.getEInt(), "value", null, 1, 1, modelMDD2.Number.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(attributeEClass, Attribute.class, "Attribute", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
