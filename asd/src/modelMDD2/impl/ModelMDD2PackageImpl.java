@@ -4,9 +4,14 @@ package modelMDD2.impl;
 
 import modelMDD2.Attribute;
 import modelMDD2.Binary;
+import modelMDD2.BinaryOperator;
 import modelMDD2.CBoolean;
 import modelMDD2.CString;
+import modelMDD2.ComparativeOperator;
+import modelMDD2.ConjunctiveOperator;
 import modelMDD2.Constrain;
+import modelMDD2.DisjunctiveOperator;
+import modelMDD2.EqualityOperator;
 import modelMDD2.Feature;
 import modelMDD2.Group;
 import modelMDD2.Grouped;
@@ -23,6 +28,7 @@ import modelMDD2.Unary;
 import modelMDD2.Xor;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
@@ -159,6 +165,41 @@ public class ModelMDD2PackageImpl extends EPackageImpl implements ModelMDD2Packa
 	 * @generated
 	 */
 	private EClass attributeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum comparativeOperatorEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum binaryOperatorEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum equalityOperatorEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum conjunctiveOperatorEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum disjunctiveOperatorEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -334,17 +375,8 @@ public class ModelMDD2PackageImpl extends EPackageImpl implements ModelMDD2Packa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getConstrain_ConstrainFeatures() {
+	public EReference getConstrain_FeatureReference() {
 		return (EReference)constrainEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getConstrain_Groups() {
-		return (EReference)constrainEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -559,6 +591,51 @@ public class ModelMDD2PackageImpl extends EPackageImpl implements ModelMDD2Packa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getComparativeOperator() {
+		return comparativeOperatorEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getBinaryOperator() {
+		return binaryOperatorEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getEqualityOperator() {
+		return equalityOperatorEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getConjunctiveOperator() {
+		return conjunctiveOperatorEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getDisjunctiveOperator() {
+		return disjunctiveOperatorEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ModelMDD2Factory getModelMDD2Factory() {
 		return (ModelMDD2Factory)getEFactoryInstance();
 	}
@@ -600,8 +677,7 @@ public class ModelMDD2PackageImpl extends EPackageImpl implements ModelMDD2Packa
 		optionalEClass = createEClass(OPTIONAL);
 
 		constrainEClass = createEClass(CONSTRAIN);
-		createEReference(constrainEClass, CONSTRAIN__CONSTRAIN_FEATURES);
-		createEReference(constrainEClass, CONSTRAIN__GROUPS);
+		createEReference(constrainEClass, CONSTRAIN__FEATURE_REFERENCE);
 
 		binaryEClass = createEClass(BINARY);
 		createEReference(binaryEClass, BINARY__RIGHT_EXP);
@@ -636,6 +712,13 @@ public class ModelMDD2PackageImpl extends EPackageImpl implements ModelMDD2Packa
 		createEAttribute(numberEClass, NUMBER__VALUE);
 
 		attributeEClass = createEClass(ATTRIBUTE);
+
+		// Create enums
+		comparativeOperatorEEnum = createEEnum(COMPARATIVE_OPERATOR);
+		binaryOperatorEEnum = createEEnum(BINARY_OPERATOR);
+		equalityOperatorEEnum = createEEnum(EQUALITY_OPERATOR);
+		conjunctiveOperatorEEnum = createEEnum(CONJUNCTIVE_OPERATOR);
+		disjunctiveOperatorEEnum = createEEnum(DISJUNCTIVE_OPERATOR);
 	}
 
 	/**
@@ -704,13 +787,12 @@ public class ModelMDD2PackageImpl extends EPackageImpl implements ModelMDD2Packa
 		initEClass(optionalEClass, Optional.class, "Optional", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(constrainEClass, Constrain.class, "Constrain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getConstrain_ConstrainFeatures(), this.getFeature(), null, "constrainFeatures", null, 0, -1, Constrain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConstrain_Groups(), this.getGroup(), null, "groups", null, 0, 1, Constrain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConstrain_FeatureReference(), this.getFeature(), null, "featureReference", null, 0, 1, Constrain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(binaryEClass, Binary.class, "Binary", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBinary_RightExp(), this.getConstrain(), null, "rightExp", null, 1, 1, Binary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBinary_LeftExp(), this.getConstrain(), null, "leftExp", null, 1, 1, Binary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getBinary_Operator(), ecorePackage.getEString(), "Operator", null, 0, 1, Binary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBinary_Operator(), this.getBinaryOperator(), "Operator", null, 0, 1, Binary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(unaryEClass, Unary.class, "Unary", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getUnary_Exp(), this.getConstrain(), null, "exp", null, 1, 1, Unary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -740,6 +822,33 @@ public class ModelMDD2PackageImpl extends EPackageImpl implements ModelMDD2Packa
 		initEAttribute(getNumber_Value(), ecorePackage.getEInt(), "value", null, 1, 1, modelMDD2.Number.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(attributeEClass, Attribute.class, "Attribute", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		// Initialize enums and add enum literals
+		initEEnum(comparativeOperatorEEnum, ComparativeOperator.class, "ComparativeOperator");
+		addEEnumLiteral(comparativeOperatorEEnum, ComparativeOperator.LESS_THAN);
+		addEEnumLiteral(comparativeOperatorEEnum, ComparativeOperator.LESS_OR_EQUALS);
+		addEEnumLiteral(comparativeOperatorEEnum, ComparativeOperator.GREATER_THAN);
+		addEEnumLiteral(comparativeOperatorEEnum, ComparativeOperator.GREATER_OR_EQUALS);
+
+		initEEnum(binaryOperatorEEnum, BinaryOperator.class, "BinaryOperator");
+		addEEnumLiteral(binaryOperatorEEnum, BinaryOperator.LESS_THAN);
+		addEEnumLiteral(binaryOperatorEEnum, BinaryOperator.LESS_OR_EQUALS);
+		addEEnumLiteral(binaryOperatorEEnum, BinaryOperator.GREATER_THAN);
+		addEEnumLiteral(binaryOperatorEEnum, BinaryOperator.GREATER_OR_EQUALS);
+		addEEnumLiteral(binaryOperatorEEnum, BinaryOperator.EQUALS);
+		addEEnumLiteral(binaryOperatorEEnum, BinaryOperator.NOT_EQUALS);
+		addEEnumLiteral(binaryOperatorEEnum, BinaryOperator.DISJUNCTION);
+		addEEnumLiteral(binaryOperatorEEnum, BinaryOperator.CONJUNCTION);
+
+		initEEnum(equalityOperatorEEnum, EqualityOperator.class, "EqualityOperator");
+		addEEnumLiteral(equalityOperatorEEnum, EqualityOperator.EQUALS);
+		addEEnumLiteral(equalityOperatorEEnum, EqualityOperator.NOT_EQUALS);
+
+		initEEnum(conjunctiveOperatorEEnum, ConjunctiveOperator.class, "ConjunctiveOperator");
+		addEEnumLiteral(conjunctiveOperatorEEnum, ConjunctiveOperator.CONJUNCTION);
+
+		initEEnum(disjunctiveOperatorEEnum, DisjunctiveOperator.class, "DisjunctiveOperator");
+		addEEnumLiteral(disjunctiveOperatorEEnum, DisjunctiveOperator.DISJUNCTION);
 
 		// Create resource
 		createResource(eNS_URI);

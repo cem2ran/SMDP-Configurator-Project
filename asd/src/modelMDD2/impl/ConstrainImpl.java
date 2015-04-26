@@ -2,21 +2,13 @@
  */
 package modelMDD2.impl;
 
-import java.util.Collection;
-
 import modelMDD2.Constrain;
 import modelMDD2.Feature;
-import modelMDD2.Group;
 import modelMDD2.ModelMDD2Package;
-
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,8 +17,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link modelMDD2.impl.ConstrainImpl#getConstrainFeatures <em>Constrain Features</em>}</li>
- *   <li>{@link modelMDD2.impl.ConstrainImpl#getGroups <em>Groups</em>}</li>
+ *   <li>{@link modelMDD2.impl.ConstrainImpl#getFeatureReference <em>Feature Reference</em>}</li>
  * </ul>
  * </p>
  *
@@ -34,24 +25,14 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  */
 public class ConstrainImpl extends NamedElementImpl implements Constrain {
 	/**
-	 * The cached value of the '{@link #getConstrainFeatures() <em>Constrain Features</em>}' reference list.
+	 * The cached value of the '{@link #getFeatureReference() <em>Feature Reference</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getConstrainFeatures()
+	 * @see #getFeatureReference()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Feature> constrainFeatures;
-
-	/**
-	 * The cached value of the '{@link #getGroups() <em>Groups</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getGroups()
-	 * @generated
-	 * @ordered
-	 */
-	protected Group groups;
+	protected Feature featureReference;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -77,28 +58,16 @@ public class ConstrainImpl extends NamedElementImpl implements Constrain {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Feature> getConstrainFeatures() {
-		if (constrainFeatures == null) {
-			constrainFeatures = new EObjectResolvingEList<Feature>(Feature.class, this, ModelMDD2Package.CONSTRAIN__CONSTRAIN_FEATURES);
-		}
-		return constrainFeatures;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Group getGroups() {
-		if (groups != null && groups.eIsProxy()) {
-			InternalEObject oldGroups = (InternalEObject)groups;
-			groups = (Group)eResolveProxy(oldGroups);
-			if (groups != oldGroups) {
+	public Feature getFeatureReference() {
+		if (featureReference != null && featureReference.eIsProxy()) {
+			InternalEObject oldFeatureReference = (InternalEObject)featureReference;
+			featureReference = (Feature)eResolveProxy(oldFeatureReference);
+			if (featureReference != oldFeatureReference) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelMDD2Package.CONSTRAIN__GROUPS, oldGroups, groups));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelMDD2Package.CONSTRAIN__FEATURE_REFERENCE, oldFeatureReference, featureReference));
 			}
 		}
-		return groups;
+		return featureReference;
 	}
 
 	/**
@@ -106,8 +75,8 @@ public class ConstrainImpl extends NamedElementImpl implements Constrain {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Group basicGetGroups() {
-		return groups;
+	public Feature basicGetFeatureReference() {
+		return featureReference;
 	}
 
 	/**
@@ -115,11 +84,11 @@ public class ConstrainImpl extends NamedElementImpl implements Constrain {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setGroups(Group newGroups) {
-		Group oldGroups = groups;
-		groups = newGroups;
+	public void setFeatureReference(Feature newFeatureReference) {
+		Feature oldFeatureReference = featureReference;
+		featureReference = newFeatureReference;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelMDD2Package.CONSTRAIN__GROUPS, oldGroups, groups));
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelMDD2Package.CONSTRAIN__FEATURE_REFERENCE, oldFeatureReference, featureReference));
 	}
 
 	/**
@@ -130,11 +99,9 @@ public class ConstrainImpl extends NamedElementImpl implements Constrain {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ModelMDD2Package.CONSTRAIN__CONSTRAIN_FEATURES:
-				return getConstrainFeatures();
-			case ModelMDD2Package.CONSTRAIN__GROUPS:
-				if (resolve) return getGroups();
-				return basicGetGroups();
+			case ModelMDD2Package.CONSTRAIN__FEATURE_REFERENCE:
+				if (resolve) return getFeatureReference();
+				return basicGetFeatureReference();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -148,12 +115,8 @@ public class ConstrainImpl extends NamedElementImpl implements Constrain {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ModelMDD2Package.CONSTRAIN__CONSTRAIN_FEATURES:
-				getConstrainFeatures().clear();
-				getConstrainFeatures().addAll((Collection<? extends Feature>)newValue);
-				return;
-			case ModelMDD2Package.CONSTRAIN__GROUPS:
-				setGroups((Group)newValue);
+			case ModelMDD2Package.CONSTRAIN__FEATURE_REFERENCE:
+				setFeatureReference((Feature)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -167,11 +130,8 @@ public class ConstrainImpl extends NamedElementImpl implements Constrain {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ModelMDD2Package.CONSTRAIN__CONSTRAIN_FEATURES:
-				getConstrainFeatures().clear();
-				return;
-			case ModelMDD2Package.CONSTRAIN__GROUPS:
-				setGroups((Group)null);
+			case ModelMDD2Package.CONSTRAIN__FEATURE_REFERENCE:
+				setFeatureReference((Feature)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -185,10 +145,8 @@ public class ConstrainImpl extends NamedElementImpl implements Constrain {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ModelMDD2Package.CONSTRAIN__CONSTRAIN_FEATURES:
-				return constrainFeatures != null && !constrainFeatures.isEmpty();
-			case ModelMDD2Package.CONSTRAIN__GROUPS:
-				return groups != null;
+			case ModelMDD2Package.CONSTRAIN__FEATURE_REFERENCE:
+				return featureReference != null;
 		}
 		return super.eIsSet(featureID);
 	}

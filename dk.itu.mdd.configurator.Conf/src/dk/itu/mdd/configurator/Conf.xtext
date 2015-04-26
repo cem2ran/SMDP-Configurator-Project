@@ -14,18 +14,38 @@ Solitary returns Solitary:
 	Mandatory | Optional;
 	
 Constrain returns Constrain: //Binary | Unary;
-	Conjunction ( {Binary.leftExp=current} Operator='||' rightExp=Conjunction )* ;
+	Conjunction ( {Binary.leftExp=current} Operator=DisjunctiveOperator rightExp=Conjunction )* ;
 Conjunction returns Constrain: 
-	Comparison ( {Binary.leftExp=current} Operator='&&' rightExp=Comparison )* ;
+	Equality ( {Binary.leftExp=current} Operator=ConjunctiveOperator rightExp=Equality )* ;
+Equality returns Constrain: 
+	Comparison ( {Binary.leftExp=current} Operator=EqualityOperator rightExp=Comparison )* ;
 Comparison returns Constrain: 
-	Binary ( {Binary.leftExp=current} Operator=('=='|'!='|'<='|'<'|'>='|'>') rightExp=Binary )* ;
+	Binary ( {Binary.leftExp=current} Operator=ComparativeOperator rightExp=Binary )* ;
 Binary returns Constrain:
 	Primary ({Binary.leftExp=current} rightExp=Primary )* ;	
 Primary	returns Constrain: 
-	  constrainFeatures+=[Solitary|EString] '.' groups=[Group|EString] '.' constrainFeatures+=[Feature|EString] | Unary | '(' Constrain ')';
+	  featureReference=[Grouped|QualifiedName]  | Unary | '(' Constrain ')';
 Unary returns Constrain:
-	{Unary} Operator=("!"|"-") exp=Primary
-	;
+	{Unary} Operator=("!"|"-") exp=Primary;
+
+QualifiedName:
+    ID ('.' ID)*;
+
+enum DisjunctiveOperator returns BinaryOperator:
+	disjunction = '||'
+;
+
+enum ConjunctiveOperator returns BinaryOperator:
+	conjunction = '&&'
+;
+
+enum EqualityOperator returns BinaryOperator:
+	equals = '==' | notEquals = '!='
+;	
+	
+enum ComparativeOperator returns BinaryOperator:
+	greaterThan = '>' | lessThan = '<' | greaterOrEquals = '>=' | lessOrEquals = '<='
+;	
 	
 Group returns Group:
 	Or | Xor

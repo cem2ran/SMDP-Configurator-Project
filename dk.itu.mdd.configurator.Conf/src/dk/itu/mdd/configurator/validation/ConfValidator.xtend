@@ -3,13 +3,12 @@
  */
 package dk.itu.mdd.configurator.validation
 
-import org.eclipse.xtext.validation.Check
-import modelMDD2.Feature
-import modelMDD2.ModelMDD2Package
-import modelMDD2.Group
 import dk.itu.mdd.configurator.Constraints
 import modelMDD2.Binary
-import modelMDD2.Mandatory
+import modelMDD2.Feature
+import modelMDD2.Group
+import modelMDD2.ModelMDD2Package
+import org.eclipse.xtext.validation.Check
 
 /**
  * This class contains custom validation rules. 

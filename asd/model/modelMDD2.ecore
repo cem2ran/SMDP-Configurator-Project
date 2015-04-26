@@ -21,16 +21,15 @@
   <eClassifiers xsi:type="ecore:EClass" name="Mandatory" eSuperTypes="#//Solitary"/>
   <eClassifiers xsi:type="ecore:EClass" name="Optional" eSuperTypes="#//Solitary"/>
   <eClassifiers xsi:type="ecore:EClass" name="Constrain" eSuperTypes="#//NamedElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="constrainFeatures" upperBound="-1"
-        eType="#//Feature"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="groups" eType="#//Group"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="featureReference" eType="#//Feature"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Binary" eSuperTypes="#//Constrain">
     <eStructuralFeatures xsi:type="ecore:EReference" name="rightExp" lowerBound="1"
         eType="#//Constrain" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="leftExp" lowerBound="1"
         eType="#//Constrain" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Operator" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Operator" eType="#//BinaryOperator"
+        iD="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Unary" eSuperTypes="#//Constrain">
     <eStructuralFeatures xsi:type="ecore:EReference" name="exp" lowerBound="1" eType="#//Constrain"
@@ -60,4 +59,30 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Attribute" abstract="true" eSuperTypes="#//NamedElement"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="ComparativeOperator">
+    <eLiterals name="lessThan" literal="&lt;"/>
+    <eLiterals name="lessOrEquals" value="1" literal="&lt;="/>
+    <eLiterals name="greaterThan" value="2" literal=">"/>
+    <eLiterals name="greaterOrEquals" value="3" literal=">="/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="BinaryOperator">
+    <eLiterals name="lessThan" literal="&lt;"/>
+    <eLiterals name="lessOrEquals" value="1" literal="&lt;="/>
+    <eLiterals name="greaterThan" value="2" literal=">"/>
+    <eLiterals name="greaterOrEquals" value="3" literal=">="/>
+    <eLiterals name="equals" literal="=="/>
+    <eLiterals name="notEquals" literal="!="/>
+    <eLiterals name="disjunction" literal="||"/>
+    <eLiterals name="conjunction" literal="&amp;&amp;"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EqualityOperator">
+    <eLiterals name="equals" literal="=="/>
+    <eLiterals name="notEquals" literal="!="/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ConjunctiveOperator">
+    <eLiterals name="conjunction" literal="&amp;&amp;"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="DisjunctiveOperator">
+    <eLiterals name="disjunction" literal="||"/>
+  </eClassifiers>
 </ecore:EPackage>

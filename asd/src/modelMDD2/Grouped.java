@@ -3,6 +3,7 @@
 package modelMDD2;
 
 
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Grouped</b></em>'.

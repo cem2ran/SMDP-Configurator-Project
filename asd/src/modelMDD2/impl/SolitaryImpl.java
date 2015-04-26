@@ -3,18 +3,13 @@
 package modelMDD2.impl;
 
 import java.util.Collection;
-
 import modelMDD2.Group;
 import modelMDD2.ModelMDD2Package;
 import modelMDD2.Solitary;
-
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 

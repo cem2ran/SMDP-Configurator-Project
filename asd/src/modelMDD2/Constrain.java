@@ -2,7 +2,6 @@
  */
 package modelMDD2;
 
-import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -12,8 +11,7 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link modelMDD2.Constrain#getConstrainFeatures <em>Constrain Features</em>}</li>
- *   <li>{@link modelMDD2.Constrain#getGroups <em>Groups</em>}</li>
+ *   <li>{@link modelMDD2.Constrain#getFeatureReference <em>Feature Reference</em>}</li>
  * </ul>
  * </p>
  *
@@ -23,45 +21,29 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Constrain extends NamedElement {
 	/**
-	 * Returns the value of the '<em><b>Constrain Features</b></em>' reference list.
-	 * The list contents are of type {@link modelMDD2.Feature}.
+	 * Returns the value of the '<em><b>Feature Reference</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Constrain Features</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Feature Reference</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Constrain Features</em>' reference list.
-	 * @see modelMDD2.ModelMDD2Package#getConstrain_ConstrainFeatures()
+	 * @return the value of the '<em>Feature Reference</em>' reference.
+	 * @see #setFeatureReference(Feature)
+	 * @see modelMDD2.ModelMDD2Package#getConstrain_FeatureReference()
 	 * @model
 	 * @generated
 	 */
-	EList<Feature> getConstrainFeatures();
+	Feature getFeatureReference();
 
 	/**
-	 * Returns the value of the '<em><b>Groups</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Groups</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Groups</em>' reference.
-	 * @see #setGroups(Group)
-	 * @see modelMDD2.ModelMDD2Package#getConstrain_Groups()
-	 * @model
-	 * @generated
-	 */
-	Group getGroups();
-
-	/**
-	 * Sets the value of the '{@link modelMDD2.Constrain#getGroups <em>Groups</em>}' reference.
+	 * Sets the value of the '{@link modelMDD2.Constrain#getFeatureReference <em>Feature Reference</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Groups</em>' reference.
-	 * @see #getGroups()
+	 * @param value the new value of the '<em>Feature Reference</em>' reference.
+	 * @see #getFeatureReference()
 	 * @generated
 	 */
-	void setGroups(Group value);
+	void setFeatureReference(Feature value);
 
 } // Constrain

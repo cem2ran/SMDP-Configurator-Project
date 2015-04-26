@@ -5,6 +5,7 @@ package modelMDD2;
 import java.lang.String;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -507,22 +508,13 @@ public interface ModelMDD2Package extends EPackage {
 	int CONSTRAIN__NAME = NAMED_ELEMENT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Constrain Features</b></em>' reference list.
+	 * The feature id for the '<em><b>Feature Reference</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTRAIN__CONSTRAIN_FEATURES = NAMED_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Groups</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRAIN__GROUPS = NAMED_ELEMENT_FEATURE_COUNT + 1;
+	int CONSTRAIN__FEATURE_REFERENCE = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Constrain</em>' class.
@@ -531,7 +523,7 @@ public interface ModelMDD2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTRAIN_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int CONSTRAIN_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Constrain</em>' class.
@@ -562,22 +554,13 @@ public interface ModelMDD2Package extends EPackage {
 	int BINARY__NAME = CONSTRAIN__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Constrain Features</b></em>' reference list.
+	 * The feature id for the '<em><b>Feature Reference</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BINARY__CONSTRAIN_FEATURES = CONSTRAIN__CONSTRAIN_FEATURES;
-
-	/**
-	 * The feature id for the '<em><b>Groups</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BINARY__GROUPS = CONSTRAIN__GROUPS;
+	int BINARY__FEATURE_REFERENCE = CONSTRAIN__FEATURE_REFERENCE;
 
 	/**
 	 * The feature id for the '<em><b>Right Exp</b></em>' containment reference.
@@ -644,22 +627,13 @@ public interface ModelMDD2Package extends EPackage {
 	int UNARY__NAME = CONSTRAIN__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Constrain Features</b></em>' reference list.
+	 * The feature id for the '<em><b>Feature Reference</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNARY__CONSTRAIN_FEATURES = CONSTRAIN__CONSTRAIN_FEATURES;
-
-	/**
-	 * The feature id for the '<em><b>Groups</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNARY__GROUPS = CONSTRAIN__GROUPS;
+	int UNARY__FEATURE_REFERENCE = CONSTRAIN__FEATURE_REFERENCE;
 
 	/**
 	 * The feature id for the '<em><b>Exp</b></em>' containment reference.
@@ -1149,6 +1123,58 @@ public interface ModelMDD2Package extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link modelMDD2.ComparativeOperator <em>Comparative Operator</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see modelMDD2.ComparativeOperator
+	 * @see modelMDD2.impl.ModelMDD2PackageImpl#getComparativeOperator()
+	 * @generated
+	 */
+	int COMPARATIVE_OPERATOR = 18;
+
+	/**
+	 * The meta object id for the '{@link modelMDD2.BinaryOperator <em>Binary Operator</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see modelMDD2.BinaryOperator
+	 * @see modelMDD2.impl.ModelMDD2PackageImpl#getBinaryOperator()
+	 * @generated
+	 */
+	int BINARY_OPERATOR = 19;
+
+
+	/**
+	 * The meta object id for the '{@link modelMDD2.EqualityOperator <em>Equality Operator</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see modelMDD2.EqualityOperator
+	 * @see modelMDD2.impl.ModelMDD2PackageImpl#getEqualityOperator()
+	 * @generated
+	 */
+	int EQUALITY_OPERATOR = 20;
+
+	/**
+	 * The meta object id for the '{@link modelMDD2.ConjunctiveOperator <em>Conjunctive Operator</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see modelMDD2.ConjunctiveOperator
+	 * @see modelMDD2.impl.ModelMDD2PackageImpl#getConjunctiveOperator()
+	 * @generated
+	 */
+	int CONJUNCTIVE_OPERATOR = 21;
+
+	/**
+	 * The meta object id for the '{@link modelMDD2.DisjunctiveOperator <em>Disjunctive Operator</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see modelMDD2.DisjunctiveOperator
+	 * @see modelMDD2.impl.ModelMDD2PackageImpl#getDisjunctiveOperator()
+	 * @generated
+	 */
+	int DISJUNCTIVE_OPERATOR = 22;
+
+
+	/**
 	 * Returns the meta object for class '{@link modelMDD2.Model <em>Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1274,26 +1300,15 @@ public interface ModelMDD2Package extends EPackage {
 	EClass getConstrain();
 
 	/**
-	 * Returns the meta object for the reference list '{@link modelMDD2.Constrain#getConstrainFeatures <em>Constrain Features</em>}'.
+	 * Returns the meta object for the reference '{@link modelMDD2.Constrain#getFeatureReference <em>Feature Reference</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Constrain Features</em>'.
-	 * @see modelMDD2.Constrain#getConstrainFeatures()
+	 * @return the meta object for the reference '<em>Feature Reference</em>'.
+	 * @see modelMDD2.Constrain#getFeatureReference()
 	 * @see #getConstrain()
 	 * @generated
 	 */
-	EReference getConstrain_ConstrainFeatures();
-
-	/**
-	 * Returns the meta object for the reference '{@link modelMDD2.Constrain#getGroups <em>Groups</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Groups</em>'.
-	 * @see modelMDD2.Constrain#getGroups()
-	 * @see #getConstrain()
-	 * @generated
-	 */
-	EReference getConstrain_Groups();
+	EReference getConstrain_FeatureReference();
 
 	/**
 	 * Returns the meta object for class '{@link modelMDD2.Binary <em>Binary</em>}'.
@@ -1538,6 +1553,56 @@ public interface ModelMDD2Package extends EPackage {
 	EClass getAttribute();
 
 	/**
+	 * Returns the meta object for enum '{@link modelMDD2.ComparativeOperator <em>Comparative Operator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Comparative Operator</em>'.
+	 * @see modelMDD2.ComparativeOperator
+	 * @generated
+	 */
+	EEnum getComparativeOperator();
+
+	/**
+	 * Returns the meta object for enum '{@link modelMDD2.BinaryOperator <em>Binary Operator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Binary Operator</em>'.
+	 * @see modelMDD2.BinaryOperator
+	 * @generated
+	 */
+	EEnum getBinaryOperator();
+
+	/**
+	 * Returns the meta object for enum '{@link modelMDD2.EqualityOperator <em>Equality Operator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Equality Operator</em>'.
+	 * @see modelMDD2.EqualityOperator
+	 * @generated
+	 */
+	EEnum getEqualityOperator();
+
+	/**
+	 * Returns the meta object for enum '{@link modelMDD2.ConjunctiveOperator <em>Conjunctive Operator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Conjunctive Operator</em>'.
+	 * @see modelMDD2.ConjunctiveOperator
+	 * @generated
+	 */
+	EEnum getConjunctiveOperator();
+
+	/**
+	 * Returns the meta object for enum '{@link modelMDD2.DisjunctiveOperator <em>Disjunctive Operator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Disjunctive Operator</em>'.
+	 * @see modelMDD2.DisjunctiveOperator
+	 * @generated
+	 */
+	EEnum getDisjunctiveOperator();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1671,20 +1736,12 @@ public interface ModelMDD2Package extends EPackage {
 		EClass CONSTRAIN = eINSTANCE.getConstrain();
 
 		/**
-		 * The meta object literal for the '<em><b>Constrain Features</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Feature Reference</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONSTRAIN__CONSTRAIN_FEATURES = eINSTANCE.getConstrain_ConstrainFeatures();
-
-		/**
-		 * The meta object literal for the '<em><b>Groups</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONSTRAIN__GROUPS = eINSTANCE.getConstrain_Groups();
+		EReference CONSTRAIN__FEATURE_REFERENCE = eINSTANCE.getConstrain_FeatureReference();
 
 		/**
 		 * The meta object literal for the '{@link modelMDD2.impl.BinaryImpl <em>Binary</em>}' class.
@@ -1891,6 +1948,56 @@ public interface ModelMDD2Package extends EPackage {
 		 * @generated
 		 */
 		EClass ATTRIBUTE = eINSTANCE.getAttribute();
+
+		/**
+		 * The meta object literal for the '{@link modelMDD2.ComparativeOperator <em>Comparative Operator</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see modelMDD2.ComparativeOperator
+		 * @see modelMDD2.impl.ModelMDD2PackageImpl#getComparativeOperator()
+		 * @generated
+		 */
+		EEnum COMPARATIVE_OPERATOR = eINSTANCE.getComparativeOperator();
+
+		/**
+		 * The meta object literal for the '{@link modelMDD2.BinaryOperator <em>Binary Operator</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see modelMDD2.BinaryOperator
+		 * @see modelMDD2.impl.ModelMDD2PackageImpl#getBinaryOperator()
+		 * @generated
+		 */
+		EEnum BINARY_OPERATOR = eINSTANCE.getBinaryOperator();
+
+		/**
+		 * The meta object literal for the '{@link modelMDD2.EqualityOperator <em>Equality Operator</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see modelMDD2.EqualityOperator
+		 * @see modelMDD2.impl.ModelMDD2PackageImpl#getEqualityOperator()
+		 * @generated
+		 */
+		EEnum EQUALITY_OPERATOR = eINSTANCE.getEqualityOperator();
+
+		/**
+		 * The meta object literal for the '{@link modelMDD2.ConjunctiveOperator <em>Conjunctive Operator</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see modelMDD2.ConjunctiveOperator
+		 * @see modelMDD2.impl.ModelMDD2PackageImpl#getConjunctiveOperator()
+		 * @generated
+		 */
+		EEnum CONJUNCTIVE_OPERATOR = eINSTANCE.getConjunctiveOperator();
+
+		/**
+		 * The meta object literal for the '{@link modelMDD2.DisjunctiveOperator <em>Disjunctive Operator</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see modelMDD2.DisjunctiveOperator
+		 * @see modelMDD2.impl.ModelMDD2PackageImpl#getDisjunctiveOperator()
+		 * @generated
+		 */
+		EEnum DISJUNCTIVE_OPERATOR = eINSTANCE.getDisjunctiveOperator();
 
 	}
 

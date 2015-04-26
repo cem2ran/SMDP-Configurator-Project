@@ -2,7 +2,6 @@
  */
 package modelMDD2;
 
-import java.lang.String;
 
 
 /**
@@ -78,6 +77,7 @@ public interface Binary extends Constrain {
 
 	/**
 	 * Returns the value of the '<em><b>Operator</b></em>' attribute.
+	 * The literals are from the enumeration {@link modelMDD2.BinaryOperator}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Operator</em>' attribute isn't clear,
@@ -85,21 +85,23 @@ public interface Binary extends Constrain {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Operator</em>' attribute.
-	 * @see #setOperator(String)
+	 * @see modelMDD2.BinaryOperator
+	 * @see #setOperator(BinaryOperator)
 	 * @see modelMDD2.ModelMDD2Package#getBinary_Operator()
-	 * @model
+	 * @model id="true"
 	 * @generated
 	 */
-	String getOperator();
+	BinaryOperator getOperator();
 
 	/**
 	 * Sets the value of the '{@link modelMDD2.Binary#getOperator <em>Operator</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Operator</em>' attribute.
+	 * @see modelMDD2.BinaryOperator
 	 * @see #getOperator()
 	 * @generated
 	 */
-	void setOperator(String value);
+	void setOperator(BinaryOperator value);
 
 } // Binary

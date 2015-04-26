@@ -42,7 +42,7 @@ public class ConfSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	public void createSequence(EObject context, EObject semanticObject) {
 		if(semanticObject.eClass().getEPackage() == ModelMDD2Package.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
 			case ModelMDD2Package.BINARY:
-				sequence_Binary_Comparison_Conjunction_Constrain(context, (Binary) semanticObject); 
+				sequence_Binary_Comparison_Conjunction_Constrain_Equality(context, (Binary) semanticObject); 
 				return; 
 			case ModelMDD2Package.CBOOLEAN:
 				sequence_CBoolean(context, (CBoolean) semanticObject); 
@@ -90,24 +90,14 @@ public class ConfSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	/**
 	 * Constraint:
 	 *     (
-	 *         (
-	 *             leftExp=Comparison_Binary_1_0 
-	 *             (
-	 *                 Operator='==' | 
-	 *                 Operator='!=' | 
-	 *                 Operator='<=' | 
-	 *                 Operator='<' | 
-	 *                 Operator='>=' | 
-	 *                 Operator='>'
-	 *             ) 
-	 *             rightExp=Binary
-	 *         ) | 
+	 *         (leftExp=Comparison_Binary_1_0 Operator=ComparativeOperator rightExp=Binary) | 
 	 *         (leftExp=Binary_Binary_1_0 rightExp=Primary) | 
-	 *         (leftExp=Conjunction_Binary_1_0 Operator='&&' rightExp=Comparison) | 
-	 *         (leftExp=Constrain_Binary_1_0 Operator='||' rightExp=Conjunction)
+	 *         (leftExp=Equality_Binary_1_0 Operator=EqualityOperator rightExp=Comparison) | 
+	 *         (leftExp=Conjunction_Binary_1_0 Operator=ConjunctiveOperator rightExp=Equality) | 
+	 *         (leftExp=Constrain_Binary_1_0 Operator=DisjunctiveOperator rightExp=Conjunction)
 	 *     )
 	 */
-	protected void sequence_Binary_Comparison_Conjunction_Constrain(EObject context, Binary semanticObject) {
+	protected void sequence_Binary_Comparison_Conjunction_Constrain_Equality(EObject context, Binary semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -225,7 +215,7 @@ public class ConfSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (constrainFeatures+=[Solitary|EString] groups=[Group|EString] constrainFeatures+=[Feature|EString])
+	 *     featureReference=[Grouped|QualifiedName]
 	 */
 	protected void sequence_Primary(EObject context, Constrain semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

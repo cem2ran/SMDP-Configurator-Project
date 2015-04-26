@@ -4,6 +4,7 @@ package modelMDD2.impl;
 
 import java.lang.String;
 import modelMDD2.Binary;
+import modelMDD2.BinaryOperator;
 import modelMDD2.Constrain;
 import modelMDD2.ModelMDD2Package;
 
@@ -59,7 +60,7 @@ public class BinaryImpl extends ConstrainImpl implements Binary {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String OPERATOR_EDEFAULT = null;
+	protected static final BinaryOperator OPERATOR_EDEFAULT = BinaryOperator.LESS_THAN;
 
 	/**
 	 * The cached value of the '{@link #getOperator() <em>Operator</em>}' attribute.
@@ -69,7 +70,7 @@ public class BinaryImpl extends ConstrainImpl implements Binary {
 	 * @generated
 	 * @ordered
 	 */
-	protected String operator = OPERATOR_EDEFAULT;
+	protected BinaryOperator operator = OPERATOR_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -181,7 +182,7 @@ public class BinaryImpl extends ConstrainImpl implements Binary {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getOperator() {
+	public BinaryOperator getOperator() {
 		return operator;
 	}
 
@@ -190,9 +191,9 @@ public class BinaryImpl extends ConstrainImpl implements Binary {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOperator(String newOperator) {
-		String oldOperator = operator;
-		operator = newOperator;
+	public void setOperator(BinaryOperator newOperator) {
+		BinaryOperator oldOperator = operator;
+		operator = newOperator == null ? OPERATOR_EDEFAULT : newOperator;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ModelMDD2Package.BINARY__OPERATOR, oldOperator, operator));
 	}
@@ -246,7 +247,7 @@ public class BinaryImpl extends ConstrainImpl implements Binary {
 				setLeftExp((Constrain)newValue);
 				return;
 			case ModelMDD2Package.BINARY__OPERATOR:
-				setOperator((String)newValue);
+				setOperator((BinaryOperator)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -286,7 +287,7 @@ public class BinaryImpl extends ConstrainImpl implements Binary {
 			case ModelMDD2Package.BINARY__LEFT_EXP:
 				return leftExp != null;
 			case ModelMDD2Package.BINARY__OPERATOR:
-				return OPERATOR_EDEFAULT == null ? operator != null : !OPERATOR_EDEFAULT.equals(operator);
+				return operator != OPERATOR_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}

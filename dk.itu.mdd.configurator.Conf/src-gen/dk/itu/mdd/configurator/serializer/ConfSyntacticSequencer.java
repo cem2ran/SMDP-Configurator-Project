@@ -91,7 +91,7 @@ public class ConfSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) (ambiguity) Operator='!'
 	 *     (rule start) (ambiguity) Operator='-'
-	 *     (rule start) (ambiguity) constrainFeatures+=[Solitary|EString]
+	 *     (rule start) (ambiguity) featureReference=[Grouped|QualifiedName]
 	 *     (rule start) (ambiguity) {Binary.leftExp=}
 	 */
 	protected void emit_Primary_LeftParenthesisKeyword_2_0_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {

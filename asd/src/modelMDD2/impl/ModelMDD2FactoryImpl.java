@@ -3,9 +3,14 @@
 package modelMDD2.impl;
 
 import modelMDD2.Binary;
+import modelMDD2.BinaryOperator;
 import modelMDD2.CBoolean;
 import modelMDD2.CString;
+import modelMDD2.ComparativeOperator;
+import modelMDD2.ConjunctiveOperator;
 import modelMDD2.Constrain;
+import modelMDD2.DisjunctiveOperator;
+import modelMDD2.EqualityOperator;
 import modelMDD2.Feature;
 import modelMDD2.Grouped;
 import modelMDD2.Mandatory;
@@ -19,6 +24,7 @@ import modelMDD2.Range;
 import modelMDD2.Unary;
 import modelMDD2.Xor;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
@@ -85,6 +91,52 @@ public class ModelMDD2FactoryImpl extends EFactoryImpl implements ModelMDD2Facto
 			case ModelMDD2Package.NUMBER: return createNumber();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object createFromString(EDataType eDataType, String initialValue) {
+		switch (eDataType.getClassifierID()) {
+			case ModelMDD2Package.COMPARATIVE_OPERATOR:
+				return createComparativeOperatorFromString(eDataType, initialValue);
+			case ModelMDD2Package.BINARY_OPERATOR:
+				return createBinaryOperatorFromString(eDataType, initialValue);
+			case ModelMDD2Package.EQUALITY_OPERATOR:
+				return createEqualityOperatorFromString(eDataType, initialValue);
+			case ModelMDD2Package.CONJUNCTIVE_OPERATOR:
+				return createConjunctiveOperatorFromString(eDataType, initialValue);
+			case ModelMDD2Package.DISJUNCTIVE_OPERATOR:
+				return createDisjunctiveOperatorFromString(eDataType, initialValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue) {
+		switch (eDataType.getClassifierID()) {
+			case ModelMDD2Package.COMPARATIVE_OPERATOR:
+				return convertComparativeOperatorToString(eDataType, instanceValue);
+			case ModelMDD2Package.BINARY_OPERATOR:
+				return convertBinaryOperatorToString(eDataType, instanceValue);
+			case ModelMDD2Package.EQUALITY_OPERATOR:
+				return convertEqualityOperatorToString(eDataType, instanceValue);
+			case ModelMDD2Package.CONJUNCTIVE_OPERATOR:
+				return convertConjunctiveOperatorToString(eDataType, instanceValue);
+			case ModelMDD2Package.DISJUNCTIVE_OPERATOR:
+				return convertDisjunctiveOperatorToString(eDataType, instanceValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -236,6 +288,106 @@ public class ModelMDD2FactoryImpl extends EFactoryImpl implements ModelMDD2Facto
 	public modelMDD2.Number createNumber() {
 		NumberImpl number = new NumberImpl();
 		return number;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ComparativeOperator createComparativeOperatorFromString(EDataType eDataType, String initialValue) {
+		ComparativeOperator result = ComparativeOperator.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertComparativeOperatorToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BinaryOperator createBinaryOperatorFromString(EDataType eDataType, String initialValue) {
+		BinaryOperator result = BinaryOperator.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertBinaryOperatorToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EqualityOperator createEqualityOperatorFromString(EDataType eDataType, String initialValue) {
+		EqualityOperator result = EqualityOperator.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertEqualityOperatorToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ConjunctiveOperator createConjunctiveOperatorFromString(EDataType eDataType, String initialValue) {
+		ConjunctiveOperator result = ConjunctiveOperator.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertConjunctiveOperatorToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DisjunctiveOperator createDisjunctiveOperatorFromString(EDataType eDataType, String initialValue) {
+		DisjunctiveOperator result = DisjunctiveOperator.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertDisjunctiveOperatorToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

@@ -4,6 +4,7 @@ package modelMDD2;
 
 import org.eclipse.emf.common.util.EList;
 
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Solitary</b></em>'.
@@ -21,6 +22,7 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface Solitary extends Feature {
+
 	/**
 	 * Returns the value of the '<em><b>Groups</b></em>' containment reference list.
 	 * The list contents are of type {@link modelMDD2.Group}.
