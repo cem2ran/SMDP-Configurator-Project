@@ -6,6 +6,7 @@ import modelMDD2.Attribute;
 import modelMDD2.ModelMDD2Package;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,7 +17,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public abstract class AttributeImpl extends NamedElementImpl implements Attribute {
+public abstract class AttributeImpl extends MinimalEObjectImpl.Container implements Attribute {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -104,38 +104,32 @@ public class ConfSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=EString value=BOOLEAN)
+	 *     value=BOOLEAN
 	 */
 	protected void sequence_CBoolean(EObject context, CBoolean semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, ModelMDD2Package.Literals.NAMED_ELEMENT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ModelMDD2Package.Literals.NAMED_ELEMENT__NAME));
 			if(transientValues.isValueTransient(semanticObject, ModelMDD2Package.Literals.CBOOLEAN__VALUE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ModelMDD2Package.Literals.CBOOLEAN__VALUE));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getCBooleanAccess().getNameEStringParserRuleCall_0_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getCBooleanAccess().getValueBOOLEANTerminalRuleCall_1_0(), semanticObject.isValue());
+		feeder.accept(grammarAccess.getCBooleanAccess().getValueBOOLEANTerminalRuleCall_0(), semanticObject.isValue());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (name=EString value=EString)
+	 *     value=EString
 	 */
 	protected void sequence_CString(EObject context, CString semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, ModelMDD2Package.Literals.NAMED_ELEMENT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ModelMDD2Package.Literals.NAMED_ELEMENT__NAME));
 			if(transientValues.isValueTransient(semanticObject, ModelMDD2Package.Literals.CSTRING__VALUE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ModelMDD2Package.Literals.CSTRING__VALUE));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getCStringAccess().getNameEStringParserRuleCall_0_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getCStringAccess().getValueEStringParserRuleCall_1_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getCStringAccess().getValueEStringParserRuleCall_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	
@@ -178,19 +172,16 @@ public class ConfSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=EString value=INT)
+	 *     value=INT
 	 */
 	protected void sequence_Number(EObject context, modelMDD2.Number semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, ModelMDD2Package.Literals.NAMED_ELEMENT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ModelMDD2Package.Literals.NAMED_ELEMENT__NAME));
 			if(transientValues.isValueTransient(semanticObject, ModelMDD2Package.Literals.NUMBER__VALUE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ModelMDD2Package.Literals.NUMBER__VALUE));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getNumberAccess().getNameEStringParserRuleCall_0_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getNumberAccess().getValueINTTerminalRuleCall_1_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getNumberAccess().getValueINTTerminalRuleCall_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	
@@ -224,12 +215,10 @@ public class ConfSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=EString lower=INT upper=INT)
+	 *     (lower=INT upper=INT)
 	 */
 	protected void sequence_Range(EObject context, Range semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, ModelMDD2Package.Literals.NAMED_ELEMENT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ModelMDD2Package.Literals.NAMED_ELEMENT__NAME));
 			if(transientValues.isValueTransient(semanticObject, ModelMDD2Package.Literals.RANGE__LOWER) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ModelMDD2Package.Literals.RANGE__LOWER));
 			if(transientValues.isValueTransient(semanticObject, ModelMDD2Package.Literals.RANGE__UPPER) == ValueTransient.YES)
@@ -237,9 +226,8 @@ public class ConfSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getRangeAccess().getNameEStringParserRuleCall_0_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getRangeAccess().getLowerINTTerminalRuleCall_1_0(), semanticObject.getLower());
-		feeder.accept(grammarAccess.getRangeAccess().getUpperINTTerminalRuleCall_2_0(), semanticObject.getUpper());
+		feeder.accept(grammarAccess.getRangeAccess().getLowerINTTerminalRuleCall_0_0(), semanticObject.getLower());
+		feeder.accept(grammarAccess.getRangeAccess().getUpperINTTerminalRuleCall_1_0(), semanticObject.getUpper());
 		feeder.finish();
 	}
 	

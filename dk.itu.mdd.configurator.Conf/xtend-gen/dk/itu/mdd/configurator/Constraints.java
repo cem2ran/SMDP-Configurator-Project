@@ -1,6 +1,7 @@
 package dk.itu.mdd.configurator;
 
 import com.google.common.base.Objects;
+import java.util.Arrays;
 import modelMDD2.Attribute;
 import modelMDD2.Binary;
 import modelMDD2.BinaryOperator;
@@ -130,6 +131,22 @@ public class Constraints {
     return _xifexpression;
   }
   
+  protected static boolean _constraint(final EObject it) {
+    return true;
+  }
+  
+  protected static boolean _constraint(final Group it) {
+    boolean _and = false;
+    boolean _featureNameAreDistinct = Constraints.featureNameAreDistinct(it);
+    if (!_featureNameAreDistinct) {
+      _and = false;
+    } else {
+      boolean _featureNameDifferentFromGroupName = Constraints.featureNameDifferentFromGroupName(it);
+      _and = _featureNameDifferentFromGroupName;
+    }
+    return _and;
+  }
+  
   public static boolean featureNameAreDistinct(final Group it) {
     EList<Grouped> _grouped = it.getGrouped();
     final Function1<Grouped, Boolean> _function = (Grouped f1) -> {
@@ -178,5 +195,16 @@ public class Constraints {
       return Boolean.valueOf((_upper > _lower));
     };
     return IterableExtensions.<Attribute>forall(_filter, _function_1);
+  }
+  
+  public static boolean constraint(final EObject it) {
+    if (it instanceof Group) {
+      return _constraint((Group)it);
+    } else if (it != null) {
+      return _constraint(it);
+    } else {
+      throw new IllegalArgumentException("Unhandled parameter types: " +
+        Arrays.<Object>asList(it).toString());
+    }
   }
 }

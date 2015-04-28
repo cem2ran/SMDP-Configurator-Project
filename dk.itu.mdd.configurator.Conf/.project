@@ -31,4 +31,11 @@
 		<nature>org.eclipse.pde.PluginNature</nature>
 		<nature>org.eclipse.xtext.ui.shared.xtextNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>asd</name>
+			<type>2</type>
+			<location>/Users/cem2ran/Dropbox/UNI/ITU/2nd Semester/ModelDrivenDevelopment/Project/asd</location>
+		</link>
+	</linkedResources>
 </projectDescription>

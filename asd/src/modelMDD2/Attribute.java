@@ -2,6 +2,8 @@
  */
 package modelMDD2;
 
+import org.eclipse.emf.ecore.EObject;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -13,5 +15,5 @@ package modelMDD2;
  * @model abstract="true"
  * @generated
  */
-public interface Attribute extends NamedElement {
+public interface Attribute extends EObject {
 } // Attribute

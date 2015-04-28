@@ -9,6 +9,7 @@ import modelMDD2.Binary;
 import modelMDD2.Feature;
 import modelMDD2.Group;
 import modelMDD2.ModelMDD2Package;
+import modelMDD2.impl.GroupImpl;
 import org.eclipse.xtext.validation.Check;
 
 /**
@@ -43,7 +44,7 @@ public class ConfValidator extends AbstractConfValidator {
   }
   
   @Check
-  public void featureNamesAreDistinct(final Group it) {
+  public void featureNamesAreDistinct(final GroupImpl it) {
     boolean _featureNameAreDistinct = Constraints.featureNameAreDistinct(it);
     boolean _not = (!_featureNameAreDistinct);
     if (_not) {

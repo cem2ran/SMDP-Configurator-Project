@@ -3,12 +3,14 @@
  */
 package dk.itu.mdd.configurator.validation
 
-import dk.itu.mdd.configurator.Constraints
+
 import modelMDD2.Binary
 import modelMDD2.Feature
 import modelMDD2.Group
 import modelMDD2.ModelMDD2Package
 import org.eclipse.xtext.validation.Check
+import dk.itu.mdd.configurator.Constraints
+import modelMDD2.impl.GroupImpl
 
 /**
  * This class contains custom validation rules. 
@@ -37,7 +39,7 @@ class ConfValidator extends AbstractConfValidator {
 	}
 	
 	@Check
-	def featureNamesAreDistinct(Group it){
+	def featureNamesAreDistinct(GroupImpl it){
 		if(!Constraints.featureNameAreDistinct(it))
 		error('Duplicate feature names', 
 					ModelMDD2Package.Literals.NAMED_ELEMENT__NAME,

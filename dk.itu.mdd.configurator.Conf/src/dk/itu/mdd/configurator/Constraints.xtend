@@ -14,8 +14,9 @@ import modelMDD2.impl.OrImpl
 import modelMDD2.impl.RangeImpl
 import modelMDD2.impl.XorImpl
 import org.eclipse.emf.ecore.EObject
+import modelMDD2.Model
 
-class Constraints {
+public class Constraints {
 	def static featureStartsWithCapital(Feature feature) {
 		return Character.isUpperCase(feature.name.charAt(0))
 	}
@@ -52,6 +53,15 @@ class Constraints {
 			default: ''
 		} + "." + path)
 	}
+	
+	def static dispatch constraint(EObject it){
+		true
+	}
+	
+	def static dispatch constraint(Group it){
+		featureNameAreDistinct && featureNameDifferentFromGroupName
+	}
+	
 	
 	def static featureNameAreDistinct(Group it) {
 		return grouped.forall[f1 | grouped.filter[f2 | f1.name.equalsIgnoreCase(f2.name)].length == 1]

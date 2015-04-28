@@ -55,24 +55,19 @@ Attribute returns Attribute:
 ;
 
 Range : //maybe this should return a constrain? just syntactic sugar, desugaring to leftExp > value < rightExp
- name=EString
-
 	lower = INT
 	upper = INT
 ;
 
 CString:
-	name=EString
 	value = EString
 ;
 
 CBoolean:
-	name = EString
 	value = BOOLEAN
 ;
 
 Number:
-	 name=EString
 	value = INT
 ;
 

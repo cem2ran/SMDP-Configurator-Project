@@ -782,27 +782,9 @@ ruleRange returns [EObject current=null]
     @after { leaveRule(); }:
 ((
 (
-		{ 
-	        newCompositeNode(grammarAccess.getRangeAccess().getNameEStringParserRuleCall_0_0()); 
-	    }
-		lv_name_0_0=ruleEString		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getRangeRule());
-	        }
-       		set(
-       			$current, 
-       			"name",
-        		lv_name_0_0, 
-        		"EString");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)(
-(
-		lv_lower_1_0=RULE_INT
+		lv_lower_0_0=RULE_INT
 		{
-			newLeafNode(lv_lower_1_0, grammarAccess.getRangeAccess().getLowerINTTerminalRuleCall_1_0()); 
+			newLeafNode(lv_lower_0_0, grammarAccess.getRangeAccess().getLowerINTTerminalRuleCall_0_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -811,16 +793,16 @@ ruleRange returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"lower",
-        		lv_lower_1_0, 
+        		lv_lower_0_0, 
         		"INT");
 	    }
 
 )
 )(
 (
-		lv_upper_2_0=RULE_INT
+		lv_upper_1_0=RULE_INT
 		{
-			newLeafNode(lv_upper_2_0, grammarAccess.getRangeAccess().getUpperINTTerminalRuleCall_2_0()); 
+			newLeafNode(lv_upper_1_0, grammarAccess.getRangeAccess().getUpperINTTerminalRuleCall_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -829,7 +811,7 @@ ruleRange returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"upper",
-        		lv_upper_2_0, 
+        		lv_upper_1_0, 
         		"INT");
 	    }
 
@@ -855,43 +837,25 @@ ruleCString returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-((
+(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getCStringAccess().getNameEStringParserRuleCall_0_0()); 
+	        newCompositeNode(grammarAccess.getCStringAccess().getValueEStringParserRuleCall_0()); 
 	    }
-		lv_name_0_0=ruleEString		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getCStringRule());
-	        }
-       		set(
-       			$current, 
-       			"name",
-        		lv_name_0_0, 
-        		"EString");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getCStringAccess().getValueEStringParserRuleCall_1_0()); 
-	    }
-		lv_value_1_0=ruleEString		{
+		lv_value_0_0=ruleEString		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getCStringRule());
 	        }
        		set(
        			$current, 
        			"value",
-        		lv_value_1_0, 
+        		lv_value_0_0, 
         		"EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-))
+)
 ;
 
 
@@ -912,29 +876,11 @@ ruleCBoolean returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-((
 (
-		{ 
-	        newCompositeNode(grammarAccess.getCBooleanAccess().getNameEStringParserRuleCall_0_0()); 
-	    }
-		lv_name_0_0=ruleEString		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getCBooleanRule());
-	        }
-       		set(
-       			$current, 
-       			"name",
-        		lv_name_0_0, 
-        		"EString");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)(
 (
-		lv_value_1_0=RULE_BOOLEAN
+		lv_value_0_0=RULE_BOOLEAN
 		{
-			newLeafNode(lv_value_1_0, grammarAccess.getCBooleanAccess().getValueBOOLEANTerminalRuleCall_1_0()); 
+			newLeafNode(lv_value_0_0, grammarAccess.getCBooleanAccess().getValueBOOLEANTerminalRuleCall_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -943,12 +889,12 @@ ruleCBoolean returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"value",
-        		lv_value_1_0, 
+        		lv_value_0_0, 
         		"BOOLEAN");
 	    }
 
 )
-))
+)
 ;
 
 
@@ -969,29 +915,11 @@ ruleNumber returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-((
 (
-		{ 
-	        newCompositeNode(grammarAccess.getNumberAccess().getNameEStringParserRuleCall_0_0()); 
-	    }
-		lv_name_0_0=ruleEString		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getNumberRule());
-	        }
-       		set(
-       			$current, 
-       			"name",
-        		lv_name_0_0, 
-        		"EString");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)(
 (
-		lv_value_1_0=RULE_INT
+		lv_value_0_0=RULE_INT
 		{
-			newLeafNode(lv_value_1_0, grammarAccess.getNumberAccess().getValueINTTerminalRuleCall_1_0()); 
+			newLeafNode(lv_value_0_0, grammarAccess.getNumberAccess().getValueINTTerminalRuleCall_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -1000,12 +928,12 @@ ruleNumber returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"value",
-        		lv_value_1_0, 
+        		lv_value_0_0, 
         		"INT");
 	    }
 
 )
-))
+)
 ;
 
 

@@ -691,40 +691,13 @@ public interface ModelMDD2Package extends EPackage {
 	int GROUP__NAME = NAMED_ELEMENT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subfeature</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GROUP__SUBFEATURE = NAMED_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Constrains</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GROUP__CONSTRAINS = NAMED_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GROUP__ATTRIBUTES = NAMED_ELEMENT_FEATURE_COUNT + 2;
-
-	/**
 	 * The feature id for the '<em><b>Grouped</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP__GROUPED = NAMED_ELEMENT_FEATURE_COUNT + 3;
+	int GROUP__GROUPED = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Group</em>' class.
@@ -733,7 +706,7 @@ public interface ModelMDD2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 4;
+	int GROUP_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Group</em>' class.
@@ -762,33 +735,6 @@ public interface ModelMDD2Package extends EPackage {
 	 * @ordered
 	 */
 	int OR__NAME = GROUP__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Subfeature</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OR__SUBFEATURE = GROUP__SUBFEATURE;
-
-	/**
-	 * The feature id for the '<em><b>Constrains</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OR__CONSTRAINS = GROUP__CONSTRAINS;
-
-	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OR__ATTRIBUTES = GROUP__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Grouped</b></em>' containment reference list.
@@ -837,33 +783,6 @@ public interface ModelMDD2Package extends EPackage {
 	int XOR__NAME = GROUP__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subfeature</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int XOR__SUBFEATURE = GROUP__SUBFEATURE;
-
-	/**
-	 * The feature id for the '<em><b>Constrains</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int XOR__CONSTRAINS = GROUP__CONSTRAINS;
-
-	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int XOR__ATTRIBUTES = GROUP__ATTRIBUTES;
-
-	/**
 	 * The feature id for the '<em><b>Grouped</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -902,15 +821,6 @@ public interface ModelMDD2Package extends EPackage {
 	int ATTRIBUTE = 17;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ATTRIBUTE__NAME = NAMED_ELEMENT__NAME;
-
-	/**
 	 * The meta object id for the '{@link modelMDD2.impl.RangeImpl <em>Range</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -937,7 +847,7 @@ public interface ModelMDD2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 0;
+	int ATTRIBUTE_FEATURE_COUNT = 0;
 
 	/**
 	 * The number of operations of the '<em>Attribute</em>' class.
@@ -946,16 +856,7 @@ public interface ModelMDD2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RANGE__NAME = ATTRIBUTE__NAME;
+	int ATTRIBUTE_OPERATION_COUNT = 0;
 
 	/**
 	 * The feature id for the '<em><b>Lower</b></em>' attribute.
@@ -1004,15 +905,6 @@ public interface ModelMDD2Package extends EPackage {
 	int CBOOLEAN = 14;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CBOOLEAN__NAME = ATTRIBUTE__NAME;
-
-	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1050,15 +942,6 @@ public interface ModelMDD2Package extends EPackage {
 	int CSTRING = 15;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CSTRING__NAME = ATTRIBUTE__NAME;
-
-	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1084,15 +967,6 @@ public interface ModelMDD2Package extends EPackage {
 	 * @ordered
 	 */
 	int CSTRING_OPERATION_COUNT = ATTRIBUTE_OPERATION_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NUMBER__NAME = ATTRIBUTE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.

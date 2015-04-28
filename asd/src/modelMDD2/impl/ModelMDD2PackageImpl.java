@@ -761,12 +761,10 @@ public class ModelMDD2PackageImpl extends EPackageImpl implements ModelMDD2Packa
 		orEClass.getESuperTypes().add(this.getGroup());
 		xorEClass.getESuperTypes().add(this.getGroup());
 		groupEClass.getESuperTypes().add(this.getNamedElement());
-		groupEClass.getESuperTypes().add(this.getFeature());
 		rangeEClass.getESuperTypes().add(this.getAttribute());
 		cBooleanEClass.getESuperTypes().add(this.getAttribute());
 		cStringEClass.getESuperTypes().add(this.getAttribute());
 		numberEClass.getESuperTypes().add(this.getAttribute());
-		attributeEClass.getESuperTypes().add(this.getNamedElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

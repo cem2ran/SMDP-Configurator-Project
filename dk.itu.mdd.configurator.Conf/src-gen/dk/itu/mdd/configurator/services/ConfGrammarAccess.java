@@ -438,122 +438,78 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 	public class RangeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Range");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cNameEStringParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
-		private final Assignment cLowerAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cLowerINTTerminalRuleCall_1_0 = (RuleCall)cLowerAssignment_1.eContents().get(0);
-		private final Assignment cUpperAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cUpperINTTerminalRuleCall_2_0 = (RuleCall)cUpperAssignment_2.eContents().get(0);
+		private final Assignment cLowerAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cLowerINTTerminalRuleCall_0_0 = (RuleCall)cLowerAssignment_0.eContents().get(0);
+		private final Assignment cUpperAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cUpperINTTerminalRuleCall_1_0 = (RuleCall)cUpperAssignment_1.eContents().get(0);
 		
 		////maybe this should return a constrain? just syntactic sugar, desugaring to leftExp > value < rightExp
 		//Range:
-		//	name=EString lower=INT upper=INT;
+		//	lower=INT upper=INT;
 		@Override public ParserRule getRule() { return rule; }
 
-		//name=EString lower=INT upper=INT
+		//lower=INT upper=INT
 		public Group getGroup() { return cGroup; }
 
-		//name=EString
-		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
-
-		//EString
-		public RuleCall getNameEStringParserRuleCall_0_0() { return cNameEStringParserRuleCall_0_0; }
-
 		//lower=INT
-		public Assignment getLowerAssignment_1() { return cLowerAssignment_1; }
+		public Assignment getLowerAssignment_0() { return cLowerAssignment_0; }
 
 		//INT
-		public RuleCall getLowerINTTerminalRuleCall_1_0() { return cLowerINTTerminalRuleCall_1_0; }
+		public RuleCall getLowerINTTerminalRuleCall_0_0() { return cLowerINTTerminalRuleCall_0_0; }
 
 		//upper=INT
-		public Assignment getUpperAssignment_2() { return cUpperAssignment_2; }
+		public Assignment getUpperAssignment_1() { return cUpperAssignment_1; }
 
 		//INT
-		public RuleCall getUpperINTTerminalRuleCall_2_0() { return cUpperINTTerminalRuleCall_2_0; }
+		public RuleCall getUpperINTTerminalRuleCall_1_0() { return cUpperINTTerminalRuleCall_1_0; }
 	}
 
 	public class CStringElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "CString");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cNameEStringParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
-		private final Assignment cValueAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cValueEStringParserRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
+		private final Assignment cValueAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cValueEStringParserRuleCall_0 = (RuleCall)cValueAssignment.eContents().get(0);
 		
 		//CString:
-		//	name=EString value=EString;
+		//	value=EString;
 		@Override public ParserRule getRule() { return rule; }
 
-		//name=EString value=EString
-		public Group getGroup() { return cGroup; }
-
-		//name=EString
-		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
-
-		//EString
-		public RuleCall getNameEStringParserRuleCall_0_0() { return cNameEStringParserRuleCall_0_0; }
-
 		//value=EString
-		public Assignment getValueAssignment_1() { return cValueAssignment_1; }
+		public Assignment getValueAssignment() { return cValueAssignment; }
 
 		//EString
-		public RuleCall getValueEStringParserRuleCall_1_0() { return cValueEStringParserRuleCall_1_0; }
+		public RuleCall getValueEStringParserRuleCall_0() { return cValueEStringParserRuleCall_0; }
 	}
 
 	public class CBooleanElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "CBoolean");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cNameEStringParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
-		private final Assignment cValueAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cValueBOOLEANTerminalRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
+		private final Assignment cValueAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cValueBOOLEANTerminalRuleCall_0 = (RuleCall)cValueAssignment.eContents().get(0);
 		
 		//CBoolean:
-		//	name=EString value=BOOLEAN;
+		//	value=BOOLEAN;
 		@Override public ParserRule getRule() { return rule; }
 
-		//name=EString value=BOOLEAN
-		public Group getGroup() { return cGroup; }
-
-		//name=EString
-		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
-
-		//EString
-		public RuleCall getNameEStringParserRuleCall_0_0() { return cNameEStringParserRuleCall_0_0; }
-
 		//value=BOOLEAN
-		public Assignment getValueAssignment_1() { return cValueAssignment_1; }
+		public Assignment getValueAssignment() { return cValueAssignment; }
 
 		//BOOLEAN
-		public RuleCall getValueBOOLEANTerminalRuleCall_1_0() { return cValueBOOLEANTerminalRuleCall_1_0; }
+		public RuleCall getValueBOOLEANTerminalRuleCall_0() { return cValueBOOLEANTerminalRuleCall_0; }
 	}
 
 	public class NumberElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Number");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cNameEStringParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
-		private final Assignment cValueAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cValueINTTerminalRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
+		private final Assignment cValueAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cValueINTTerminalRuleCall_0 = (RuleCall)cValueAssignment.eContents().get(0);
 		
 		//Number:
-		//	name=EString value=INT;
+		//	value=INT;
 		@Override public ParserRule getRule() { return rule; }
 
-		//name=EString value=INT
-		public Group getGroup() { return cGroup; }
-
-		//name=EString
-		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
-
-		//EString
-		public RuleCall getNameEStringParserRuleCall_0_0() { return cNameEStringParserRuleCall_0_0; }
-
 		//value=INT
-		public Assignment getValueAssignment_1() { return cValueAssignment_1; }
+		public Assignment getValueAssignment() { return cValueAssignment; }
 
 		//INT
-		public RuleCall getValueINTTerminalRuleCall_1_0() { return cValueINTTerminalRuleCall_1_0; }
+		public RuleCall getValueINTTerminalRuleCall_0() { return cValueINTTerminalRuleCall_0; }
 	}
 
 	public class EStringElements extends AbstractParserRuleElementFinder {
@@ -1494,7 +1450,7 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 
 	////maybe this should return a constrain? just syntactic sugar, desugaring to leftExp > value < rightExp
 	//Range:
-	//	name=EString lower=INT upper=INT;
+	//	lower=INT upper=INT;
 	public RangeElements getRangeAccess() {
 		return pRange;
 	}
@@ -1504,7 +1460,7 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//CString:
-	//	name=EString value=EString;
+	//	value=EString;
 	public CStringElements getCStringAccess() {
 		return pCString;
 	}
@@ -1514,7 +1470,7 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//CBoolean:
-	//	name=EString value=BOOLEAN;
+	//	value=BOOLEAN;
 	public CBooleanElements getCBooleanAccess() {
 		return pCBoolean;
 	}
@@ -1524,7 +1480,7 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Number:
-	//	name=EString value=INT;
+	//	value=INT;
 	public NumberElements getNumberAccess() {
 		return pNumber;
 	}

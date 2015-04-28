@@ -156,7 +156,6 @@ public class ModelMDD2Switch<T> extends Switch<T> {
 				Or or = (Or)theEObject;
 				T result = caseOr(or);
 				if (result == null) result = caseGroup(or);
-				if (result == null) result = caseFeature(or);
 				if (result == null) result = caseNamedElement(or);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -165,7 +164,6 @@ public class ModelMDD2Switch<T> extends Switch<T> {
 				Xor xor = (Xor)theEObject;
 				T result = caseXor(xor);
 				if (result == null) result = caseGroup(xor);
-				if (result == null) result = caseFeature(xor);
 				if (result == null) result = caseNamedElement(xor);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -173,7 +171,6 @@ public class ModelMDD2Switch<T> extends Switch<T> {
 			case ModelMDD2Package.GROUP: {
 				Group group = (Group)theEObject;
 				T result = caseGroup(group);
-				if (result == null) result = caseFeature(group);
 				if (result == null) result = caseNamedElement(group);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -188,7 +185,6 @@ public class ModelMDD2Switch<T> extends Switch<T> {
 				Range range = (Range)theEObject;
 				T result = caseRange(range);
 				if (result == null) result = caseAttribute(range);
-				if (result == null) result = caseNamedElement(range);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -196,7 +192,6 @@ public class ModelMDD2Switch<T> extends Switch<T> {
 				CBoolean cBoolean = (CBoolean)theEObject;
 				T result = caseCBoolean(cBoolean);
 				if (result == null) result = caseAttribute(cBoolean);
-				if (result == null) result = caseNamedElement(cBoolean);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -204,7 +199,6 @@ public class ModelMDD2Switch<T> extends Switch<T> {
 				CString cString = (CString)theEObject;
 				T result = caseCString(cString);
 				if (result == null) result = caseAttribute(cString);
-				if (result == null) result = caseNamedElement(cString);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -212,14 +206,12 @@ public class ModelMDD2Switch<T> extends Switch<T> {
 				modelMDD2.Number number = (modelMDD2.Number)theEObject;
 				T result = caseNumber(number);
 				if (result == null) result = caseAttribute(number);
-				if (result == null) result = caseNamedElement(number);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ModelMDD2Package.ATTRIBUTE: {
 				Attribute attribute = (Attribute)theEObject;
 				T result = caseAttribute(attribute);
-				if (result == null) result = caseNamedElement(attribute);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
