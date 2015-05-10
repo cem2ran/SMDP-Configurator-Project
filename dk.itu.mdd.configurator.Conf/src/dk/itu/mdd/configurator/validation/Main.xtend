@@ -10,7 +10,7 @@ import dk.itu.mdd.configurator.Constraints;
 
 public class Main{
 
-	static val filename = "test-files/test-1.xmi"
+	static val filename = "test-files/testEqualsNotEquals.xmi"
 	static val fileExtension = "xmi"
 
 	def static void main(String[] args) {

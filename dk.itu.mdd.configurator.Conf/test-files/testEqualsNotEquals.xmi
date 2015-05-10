@@ -14,19 +14,43 @@
           xsi:type="modelMDD2:Xor"
           name="Horsepower">
         <grouped
-            name="HP120">
-          <attributes
+            name="HP120"
+            selected="true">
+          <attribute
               xsi:type="modelMDD2:Number"
               value="120"/>
         </grouped>
         <grouped
             name="HP150">
-          <attributes
+          <attribute
               xsi:type="modelMDD2:Number"
               value="150"/>
         </grouped>
+      </groups>
+    </subfeature>
+    <subfeature
+        xsi:type="modelMDD2:Mandatory"
+        name="Rims">
+      <groups
+          xsi:type="modelMDD2:Xor"
+          name="Color">
         <grouped
-            name="HP150"/>
+            name="Black"
+            selected="true">
+          <constrains
+              xsi:type="modelMDD2:Binary"
+              name=""
+              Operator="!=">
+            <rightExp>
+              <constrainValue
+                  xsi:type="modelMDD2:Number"
+                  value="120"/>
+            </rightExp>
+            <leftExp
+                name="Hp120"
+                featureReference="//@root/@subfeature.0/@groups.0/@grouped.0"/>
+          </constrains>
+        </grouped>
       </groups>
     </subfeature>
   </root>

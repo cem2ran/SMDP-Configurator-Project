@@ -1156,58 +1156,58 @@ ruleGrouped returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getGroupedAccess().getAttributesAttributeParserRuleCall_1_1_0()); 
+	        newCompositeNode(grammarAccess.getGroupedAccess().getAttributeAttributeParserRuleCall_1_1_0()); 
 	    }
-		lv_attributes_2_0=ruleAttribute		{
+		lv_attribute_2_0=ruleAttribute		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getGroupedRule());
 	        }
-       		add(
+       		set(
        			$current, 
-       			"attributes",
-        		lv_attributes_2_0, 
+       			"attribute",
+        		lv_attribute_2_0, 
         		"Attribute");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)(
-	otherlv_3=Comma
-    {
-    	newLeafNode(otherlv_3, grammarAccess.getGroupedAccess().getCommaKeyword_1_2_0());
-    }
-(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getGroupedAccess().getAttributesAttributeParserRuleCall_1_2_1_0()); 
-	    }
-		lv_attributes_4_0=ruleAttribute		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getGroupedRule());
-	        }
-       		add(
-       			$current, 
-       			"attributes",
-        		lv_attributes_4_0, 
-        		"Attribute");
-	        afterParserOrEnumRuleCall();
-	    }
-
 )
-))*
-	otherlv_5=RightParenthesis
+	otherlv_3=RightParenthesis
     {
-    	newLeafNode(otherlv_5, grammarAccess.getGroupedAccess().getRightParenthesisKeyword_1_3());
+    	newLeafNode(otherlv_3, grammarAccess.getGroupedAccess().getRightParenthesisKeyword_1_2());
     }
 )?(
-	otherlv_6=LeftSquareBracket
+	otherlv_4=LeftSquareBracket
     {
-    	newLeafNode(otherlv_6, grammarAccess.getGroupedAccess().getLeftSquareBracketKeyword_2_0());
+    	newLeafNode(otherlv_4, grammarAccess.getGroupedAccess().getLeftSquareBracketKeyword_2_0());
     }
 (
 (
 		{ 
 	        newCompositeNode(grammarAccess.getGroupedAccess().getConstrainsConstrainParserRuleCall_2_1_0()); 
+	    }
+		lv_constrains_5_0=ruleConstrain		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getGroupedRule());
+	        }
+       		add(
+       			$current, 
+       			"constrains",
+        		lv_constrains_5_0, 
+        		"Constrain");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(
+	otherlv_6=Comma
+    {
+    	newLeafNode(otherlv_6, grammarAccess.getGroupedAccess().getCommaKeyword_2_2_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getGroupedAccess().getConstrainsConstrainParserRuleCall_2_2_1_0()); 
 	    }
 		lv_constrains_7_0=ruleConstrain		{
 	        if ($current==null) {
@@ -1222,33 +1222,10 @@ ruleGrouped returns [EObject current=null]
 	    }
 
 )
-)(
-	otherlv_8=Comma
-    {
-    	newLeafNode(otherlv_8, grammarAccess.getGroupedAccess().getCommaKeyword_2_2_0());
-    }
-(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getGroupedAccess().getConstrainsConstrainParserRuleCall_2_2_1_0()); 
-	    }
-		lv_constrains_9_0=ruleConstrain		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getGroupedRule());
-	        }
-       		add(
-       			$current, 
-       			"constrains",
-        		lv_constrains_9_0, 
-        		"Constrain");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
 ))*
-	otherlv_10=RightSquareBracket
+	otherlv_8=RightSquareBracket
     {
-    	newLeafNode(otherlv_10, grammarAccess.getGroupedAccess().getRightSquareBracketKeyword_2_3());
+    	newLeafNode(otherlv_8, grammarAccess.getGroupedAccess().getRightSquareBracketKeyword_2_3());
     }
 )?)
 ;

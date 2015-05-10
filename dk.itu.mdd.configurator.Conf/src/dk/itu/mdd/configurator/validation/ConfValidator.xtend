@@ -11,6 +11,10 @@ import modelMDD2.ModelMDD2Package
 import org.eclipse.xtext.validation.Check
 import dk.itu.mdd.configurator.Constraints
 import modelMDD2.impl.GroupImpl
+import modelMDD2.Attribute
+import modelMDD2.ComparativeOperator
+import modelMDD2.impl.AttributeImpl
+import modelMDD2.Grouped
 
 /**
  * This class contains custom validation rules. 
@@ -51,7 +55,7 @@ class ConfValidator extends AbstractConfValidator {
 		if(!Constraints.typeCheck(exp))
 		error('Invalid Type comparison', 
 					ModelMDD2Package.Literals.NAMED_ELEMENT__NAME,
-					INVALID_NAME)
+					INVALID_NAME)	
 	}
 	/*
 	@Check

@@ -74,7 +74,6 @@ public class ConfParser extends AbstractContentAssistParser {
 					put(grammarAccess.getFeature_ImplAccess().getGroup_3_2(), "rule__Feature_Impl__Group_3_2__0");
 					put(grammarAccess.getGroupedAccess().getGroup(), "rule__Grouped__Group__0");
 					put(grammarAccess.getGroupedAccess().getGroup_1(), "rule__Grouped__Group_1__0");
-					put(grammarAccess.getGroupedAccess().getGroup_1_2(), "rule__Grouped__Group_1_2__0");
 					put(grammarAccess.getGroupedAccess().getGroup_2(), "rule__Grouped__Group_2__0");
 					put(grammarAccess.getGroupedAccess().getGroup_2_2(), "rule__Grouped__Group_2_2__0");
 					put(grammarAccess.getMandatoryAccess().getGroup(), "rule__Mandatory__Group__0");
@@ -119,8 +118,7 @@ public class ConfParser extends AbstractContentAssistParser {
 					put(grammarAccess.getFeature_ImplAccess().getConstrainsAssignment_3_1(), "rule__Feature_Impl__ConstrainsAssignment_3_1");
 					put(grammarAccess.getFeature_ImplAccess().getConstrainsAssignment_3_2_1(), "rule__Feature_Impl__ConstrainsAssignment_3_2_1");
 					put(grammarAccess.getGroupedAccess().getNameAssignment_0(), "rule__Grouped__NameAssignment_0");
-					put(grammarAccess.getGroupedAccess().getAttributesAssignment_1_1(), "rule__Grouped__AttributesAssignment_1_1");
-					put(grammarAccess.getGroupedAccess().getAttributesAssignment_1_2_1(), "rule__Grouped__AttributesAssignment_1_2_1");
+					put(grammarAccess.getGroupedAccess().getAttributeAssignment_1_1(), "rule__Grouped__AttributeAssignment_1_1");
 					put(grammarAccess.getGroupedAccess().getConstrainsAssignment_2_1(), "rule__Grouped__ConstrainsAssignment_2_1");
 					put(grammarAccess.getGroupedAccess().getConstrainsAssignment_2_2_1(), "rule__Grouped__ConstrainsAssignment_2_2_1");
 					put(grammarAccess.getMandatoryAccess().getNameAssignment_0(), "rule__Mandatory__NameAssignment_0");

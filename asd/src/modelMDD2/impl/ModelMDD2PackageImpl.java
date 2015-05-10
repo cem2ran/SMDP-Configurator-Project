@@ -312,7 +312,7 @@ public class ModelMDD2PackageImpl extends EPackageImpl implements ModelMDD2Packa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getFeature_Attributes() {
+	public EReference getFeature_Attribute() {
 		return (EReference)featureEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -341,6 +341,15 @@ public class ModelMDD2PackageImpl extends EPackageImpl implements ModelMDD2Packa
 	 */
 	public EClass getGrouped() {
 		return groupedEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGrouped_Selected() {
+		return (EAttribute)groupedEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -377,6 +386,15 @@ public class ModelMDD2PackageImpl extends EPackageImpl implements ModelMDD2Packa
 	 */
 	public EReference getConstrain_FeatureReference() {
 		return (EReference)constrainEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getConstrain_ConstrainValue() {
+		return (EReference)constrainEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -665,12 +683,13 @@ public class ModelMDD2PackageImpl extends EPackageImpl implements ModelMDD2Packa
 		featureEClass = createEClass(FEATURE);
 		createEReference(featureEClass, FEATURE__SUBFEATURE);
 		createEReference(featureEClass, FEATURE__CONSTRAINS);
-		createEReference(featureEClass, FEATURE__ATTRIBUTES);
+		createEReference(featureEClass, FEATURE__ATTRIBUTE);
 
 		solitaryEClass = createEClass(SOLITARY);
 		createEReference(solitaryEClass, SOLITARY__GROUPS);
 
 		groupedEClass = createEClass(GROUPED);
+		createEAttribute(groupedEClass, GROUPED__SELECTED);
 
 		mandatoryEClass = createEClass(MANDATORY);
 
@@ -678,6 +697,7 @@ public class ModelMDD2PackageImpl extends EPackageImpl implements ModelMDD2Packa
 
 		constrainEClass = createEClass(CONSTRAIN);
 		createEReference(constrainEClass, CONSTRAIN__FEATURE_REFERENCE);
+		createEReference(constrainEClass, CONSTRAIN__CONSTRAIN_VALUE);
 
 		binaryEClass = createEClass(BINARY);
 		createEReference(binaryEClass, BINARY__RIGHT_EXP);
@@ -773,12 +793,13 @@ public class ModelMDD2PackageImpl extends EPackageImpl implements ModelMDD2Packa
 		initEClass(featureEClass, Feature.class, "Feature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFeature_Subfeature(), this.getSolitary(), null, "subfeature", null, 0, -1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFeature_Constrains(), this.getConstrain(), null, "constrains", null, 0, -1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFeature_Attributes(), this.getAttribute(), null, "attributes", null, 0, -1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFeature_Attribute(), this.getAttribute(), null, "attribute", null, 0, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(solitaryEClass, Solitary.class, "Solitary", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSolitary_Groups(), this.getGroup(), null, "groups", null, 0, -1, Solitary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(groupedEClass, Grouped.class, "Grouped", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getGrouped_Selected(), ecorePackage.getEBoolean(), "selected", null, 0, 1, Grouped.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mandatoryEClass, Mandatory.class, "Mandatory", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -786,6 +807,7 @@ public class ModelMDD2PackageImpl extends EPackageImpl implements ModelMDD2Packa
 
 		initEClass(constrainEClass, Constrain.class, "Constrain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getConstrain_FeatureReference(), this.getFeature(), null, "featureReference", null, 0, 1, Constrain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConstrain_ConstrainValue(), this.getAttribute(), null, "constrainValue", null, 0, 1, Constrain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(binaryEClass, Binary.class, "Binary", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBinary_RightExp(), this.getConstrain(), null, "rightExp", null, 1, 1, Binary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

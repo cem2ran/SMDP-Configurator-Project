@@ -87,7 +87,7 @@ Feature_Impl returns Feature:
 
 Grouped:
 		name=EString
-	    ( '('  attributes+=Attribute ( "," attributes+=Attribute)* ')' )?
+	    ( '('  attribute=Attribute  ')' )?
 		( '['  constrains+=Constrain ( "," constrains+=Constrain)* ']' )? 
 	;
 

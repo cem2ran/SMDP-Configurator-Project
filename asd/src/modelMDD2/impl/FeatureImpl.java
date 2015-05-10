@@ -10,6 +10,7 @@ import modelMDD2.Feature;
 import modelMDD2.ModelMDD2Package;
 import modelMDD2.Solitary;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -17,6 +18,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -29,7 +31,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link modelMDD2.impl.FeatureImpl#getSubfeature <em>Subfeature</em>}</li>
  *   <li>{@link modelMDD2.impl.FeatureImpl#getConstrains <em>Constrains</em>}</li>
- *   <li>{@link modelMDD2.impl.FeatureImpl#getAttributes <em>Attributes</em>}</li>
+ *   <li>{@link modelMDD2.impl.FeatureImpl#getAttribute <em>Attribute</em>}</li>
  * </ul>
  * </p>
  *
@@ -57,14 +59,14 @@ public class FeatureImpl extends NamedElementImpl implements Feature {
 	protected EList<Constrain> constrains;
 
 	/**
-	 * The cached value of the '{@link #getAttributes() <em>Attributes</em>}' containment reference list.
+	 * The cached value of the '{@link #getAttribute() <em>Attribute</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAttributes()
+	 * @see #getAttribute()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Attribute> attributes;
+	protected Attribute attribute;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -114,11 +116,42 @@ public class FeatureImpl extends NamedElementImpl implements Feature {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Attribute> getAttributes() {
-		if (attributes == null) {
-			attributes = new EObjectContainmentEList<Attribute>(Attribute.class, this, ModelMDD2Package.FEATURE__ATTRIBUTES);
+	public Attribute getAttribute() {
+		return attribute;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetAttribute(Attribute newAttribute, NotificationChain msgs) {
+		Attribute oldAttribute = attribute;
+		attribute = newAttribute;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ModelMDD2Package.FEATURE__ATTRIBUTE, oldAttribute, newAttribute);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
-		return attributes;
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAttribute(Attribute newAttribute) {
+		if (newAttribute != attribute) {
+			NotificationChain msgs = null;
+			if (attribute != null)
+				msgs = ((InternalEObject)attribute).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ModelMDD2Package.FEATURE__ATTRIBUTE, null, msgs);
+			if (newAttribute != null)
+				msgs = ((InternalEObject)newAttribute).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ModelMDD2Package.FEATURE__ATTRIBUTE, null, msgs);
+			msgs = basicSetAttribute(newAttribute, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelMDD2Package.FEATURE__ATTRIBUTE, newAttribute, newAttribute));
 	}
 
 	/**
@@ -133,8 +166,8 @@ public class FeatureImpl extends NamedElementImpl implements Feature {
 				return ((InternalEList<?>)getSubfeature()).basicRemove(otherEnd, msgs);
 			case ModelMDD2Package.FEATURE__CONSTRAINS:
 				return ((InternalEList<?>)getConstrains()).basicRemove(otherEnd, msgs);
-			case ModelMDD2Package.FEATURE__ATTRIBUTES:
-				return ((InternalEList<?>)getAttributes()).basicRemove(otherEnd, msgs);
+			case ModelMDD2Package.FEATURE__ATTRIBUTE:
+				return basicSetAttribute(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -151,8 +184,8 @@ public class FeatureImpl extends NamedElementImpl implements Feature {
 				return getSubfeature();
 			case ModelMDD2Package.FEATURE__CONSTRAINS:
 				return getConstrains();
-			case ModelMDD2Package.FEATURE__ATTRIBUTES:
-				return getAttributes();
+			case ModelMDD2Package.FEATURE__ATTRIBUTE:
+				return getAttribute();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -174,9 +207,8 @@ public class FeatureImpl extends NamedElementImpl implements Feature {
 				getConstrains().clear();
 				getConstrains().addAll((Collection<? extends Constrain>)newValue);
 				return;
-			case ModelMDD2Package.FEATURE__ATTRIBUTES:
-				getAttributes().clear();
-				getAttributes().addAll((Collection<? extends Attribute>)newValue);
+			case ModelMDD2Package.FEATURE__ATTRIBUTE:
+				setAttribute((Attribute)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -196,8 +228,8 @@ public class FeatureImpl extends NamedElementImpl implements Feature {
 			case ModelMDD2Package.FEATURE__CONSTRAINS:
 				getConstrains().clear();
 				return;
-			case ModelMDD2Package.FEATURE__ATTRIBUTES:
-				getAttributes().clear();
+			case ModelMDD2Package.FEATURE__ATTRIBUTE:
+				setAttribute((Attribute)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -215,8 +247,8 @@ public class FeatureImpl extends NamedElementImpl implements Feature {
 				return subfeature != null && !subfeature.isEmpty();
 			case ModelMDD2Package.FEATURE__CONSTRAINS:
 				return constrains != null && !constrains.isEmpty();
-			case ModelMDD2Package.FEATURE__ATTRIBUTES:
-				return attributes != null && !attributes.isEmpty();
+			case ModelMDD2Package.FEATURE__ATTRIBUTE:
+				return attribute != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -14,7 +14,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link modelMDD2.Feature#getSubfeature <em>Subfeature</em>}</li>
  *   <li>{@link modelMDD2.Feature#getConstrains <em>Constrains</em>}</li>
- *   <li>{@link modelMDD2.Feature#getAttributes <em>Attributes</em>}</li>
+ *   <li>{@link modelMDD2.Feature#getAttribute <em>Attribute</em>}</li>
  * </ul>
  * </p>
  *
@@ -56,19 +56,29 @@ public interface Feature extends NamedElement {
 	EList<Constrain> getConstrains();
 
 	/**
-	 * Returns the value of the '<em><b>Attributes</b></em>' containment reference list.
-	 * The list contents are of type {@link modelMDD2.Attribute}.
+	 * Returns the value of the '<em><b>Attribute</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Attributes</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Attribute</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Attributes</em>' containment reference list.
-	 * @see modelMDD2.ModelMDD2Package#getFeature_Attributes()
+	 * @return the value of the '<em>Attribute</em>' containment reference.
+	 * @see #setAttribute(Attribute)
+	 * @see modelMDD2.ModelMDD2Package#getFeature_Attribute()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Attribute> getAttributes();
+	Attribute getAttribute();
+
+	/**
+	 * Sets the value of the '{@link modelMDD2.Feature#getAttribute <em>Attribute</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Attribute</em>' containment reference.
+	 * @see #getAttribute()
+	 * @generated
+	 */
+	void setAttribute(Attribute value);
 
 } // Feature

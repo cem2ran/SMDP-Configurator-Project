@@ -12,6 +12,7 @@ package modelMDD2;
  * The following features are supported:
  * <ul>
  *   <li>{@link modelMDD2.Constrain#getFeatureReference <em>Feature Reference</em>}</li>
+ *   <li>{@link modelMDD2.Constrain#getConstrainValue <em>Constrain Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -45,5 +46,31 @@ public interface Constrain extends NamedElement {
 	 * @generated
 	 */
 	void setFeatureReference(Feature value);
+
+	/**
+	 * Returns the value of the '<em><b>Constrain Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Constrain Value</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Constrain Value</em>' containment reference.
+	 * @see #setConstrainValue(Attribute)
+	 * @see modelMDD2.ModelMDD2Package#getConstrain_ConstrainValue()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Attribute getConstrainValue();
+
+	/**
+	 * Sets the value of the '{@link modelMDD2.Constrain#getConstrainValue <em>Constrain Value</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Constrain Value</em>' containment reference.
+	 * @see #getConstrainValue()
+	 * @generated
+	 */
+	void setConstrainValue(Attribute value);
 
 } // Constrain
