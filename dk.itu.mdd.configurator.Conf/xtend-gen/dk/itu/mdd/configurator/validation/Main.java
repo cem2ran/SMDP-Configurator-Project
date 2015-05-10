@@ -16,7 +16,7 @@ import org.eclipse.xtext.xbase.lib.IteratorExtensions;
 
 @SuppressWarnings("all")
 public class Main {
-  private final static String filename = "test-files/testEqualsNotEquals.xmi";
+  private final static String filename = "test-files/testAndOr.xmi";
   
   private final static String fileExtension = "xmi";
   
