@@ -4,6 +4,7 @@ package modelMDD2.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import modelMDD2.Attribute;
 import modelMDD2.Constrain;
 import modelMDD2.Feature;
@@ -90,7 +91,7 @@ public class FeatureImpl extends NamedElementImpl implements Feature {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Solitary> getSubfeature() {
+	public List<Solitary> getSubfeature() {
 		if (subfeature == null) {
 			subfeature = new EObjectContainmentEList<Solitary>(Solitary.class, this, ModelMDD2Package.FEATURE__SUBFEATURE);
 		}
@@ -102,7 +103,7 @@ public class FeatureImpl extends NamedElementImpl implements Feature {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Constrain> getConstrains() {
+	public List<Constrain> getConstrains() {
 		if (constrains == null) {
 			constrains = new EObjectContainmentEList<Constrain>(Constrain.class, this, ModelMDD2Package.FEATURE__CONSTRAINS);
 		}
@@ -114,7 +115,7 @@ public class FeatureImpl extends NamedElementImpl implements Feature {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Attribute> getAttributes() {
+	public List<Attribute> getAttributes() {
 		if (attributes == null) {
 			attributes = new EObjectContainmentEList<Attribute>(Attribute.class, this, ModelMDD2Package.FEATURE__ATTRIBUTES);
 		}

@@ -2,7 +2,7 @@
  */
 package modelMDD2;
 
-import org.eclipse.emf.common.util.EList;
+import java.util.List;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,7 +37,7 @@ public interface Feature extends NamedElement {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Solitary> getSubfeature();
+	List<Solitary> getSubfeature();
 
 	/**
 	 * Returns the value of the '<em><b>Constrains</b></em>' containment reference list.
@@ -53,7 +53,7 @@ public interface Feature extends NamedElement {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Constrain> getConstrains();
+	List<Constrain> getConstrains();
 
 	/**
 	 * Returns the value of the '<em><b>Attributes</b></em>' containment reference list.
@@ -69,6 +69,6 @@ public interface Feature extends NamedElement {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Attribute> getAttributes();
+	List<Attribute> getAttributes();
 
 } // Feature

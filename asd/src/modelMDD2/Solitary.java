@@ -2,7 +2,7 @@
  */
 package modelMDD2;
 
-import org.eclipse.emf.common.util.EList;
+import java.util.List;
 
 
 /**
@@ -37,6 +37,6 @@ public interface Solitary extends Feature {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Group> getGroups();
+	List<Group> getGroups();
 
 } // Solitary

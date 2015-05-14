@@ -9,9 +9,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.CheckedTextView;
+import android.widget.ImageButton;
 import android.widget.FrameLayout;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
 import android.widget.TextView;
@@ -42,10 +45,13 @@ import static dk.itu.configurator.Views.H2;
 import static dk.itu.configurator.Views.H3;
 import static dk.itu.configurator.Views.VList;
 import static trikita.anvil.BaseAttrs.MATCH;
+import static trikita.anvil.BaseAttrs.WRAP;
 import static trikita.anvil.BaseAttrs.padding;
+import static trikita.anvil.BaseAttrs.size;
 import static trikita.anvil.Nodes.v;
 import static trikita.anvil.v15.Attrs.adapter;
 import static trikita.anvil.v15.Attrs.choiceMode;
+import static trikita.anvil.v15.Attrs.layoutParams;
 import static trikita.anvil.v15.Attrs.text;
 
 
@@ -104,7 +110,14 @@ public class ConfiguratorActivityFragment extends Fragment {
                 list.addViews(solitaryView(s));
             }
 
-            return list;
+            RelativeLayout.LayoutParams p = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+
+            p.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+
+            return v(RelativeLayout.class, size(MATCH, MATCH),
+                    v(ScrollView.class, list),
+                    v(ImageButton.class, text("Configure"), layoutParams(p), size(MATCH, WRAP))
+                   );
         }
 
         @Override
@@ -154,9 +167,8 @@ public class ConfiguratorActivityFragment extends Fragment {
                     String id = Constraints.getPath(items.get(position));
                     TextView v = (TextView) super.getView(position, convertView, parent);
                     v.setTag(id);
-                    v.setMinWidth(MATCH);
+                    v.setMinWidth(parent.getWidth());
                     v.setText(items.get(position).getName());
-
                     return v;
                 }
 
@@ -203,7 +215,7 @@ public class ConfiguratorActivityFragment extends Fragment {
                     group instanceof Or
                             ? v(Spinner.class,
                             adapter((SpinnerAdapter) new ConstrainedAdapter(getContext(), android.R.layout.simple_spinner_dropdown_item, group.getGrouped())))
-                            : v(ListView.class, choiceMode(ListView.CHOICE_MODE_MULTIPLE),
+                            : v(ListView.class, choiceMode(ListView.CHOICE_MODE_MULTIPLE), size(WRAP, group.getGrouped().size()* 200),
                             adapter((ListAdapter) new ConstrainedAdapter(getContext(), android.R.layout.simple_list_item_multiple_choice, group.getGrouped())))
             );
         }

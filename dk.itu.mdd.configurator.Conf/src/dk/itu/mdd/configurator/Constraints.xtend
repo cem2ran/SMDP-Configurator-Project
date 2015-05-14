@@ -14,7 +14,6 @@ import modelMDD2.impl.OrImpl
 import modelMDD2.impl.RangeImpl
 import modelMDD2.impl.XorImpl
 import org.eclipse.emf.ecore.EObject
-import modelMDD2.Model
 
 public class Constraints {
 	def static featureStartsWithCapital(Feature feature) {

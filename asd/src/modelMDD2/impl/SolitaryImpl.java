@@ -3,6 +3,7 @@
 package modelMDD2.impl;
 
 import java.util.Collection;
+import java.util.List;
 import modelMDD2.Group;
 import modelMDD2.ModelMDD2Package;
 import modelMDD2.Solitary;
@@ -61,7 +62,7 @@ public abstract class SolitaryImpl extends FeatureImpl implements Solitary {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Group> getGroups() {
+	public List<Group> getGroups() {
 		if (groups == null) {
 			groups = new EObjectContainmentEList<Group>(Group.class, this, ModelMDD2Package.SOLITARY__GROUPS);
 		}

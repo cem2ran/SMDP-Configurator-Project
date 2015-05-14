@@ -2,6 +2,7 @@ package dk.itu.mdd.configurator;
 
 import com.google.common.base.Objects;
 import java.util.Arrays;
+import java.util.List;
 import modelMDD2.Attribute;
 import modelMDD2.Binary;
 import modelMDD2.BinaryOperator;
@@ -19,7 +20,6 @@ import modelMDD2.impl.OptionalImpl;
 import modelMDD2.impl.OrImpl;
 import modelMDD2.impl.RangeImpl;
 import modelMDD2.impl.XorImpl;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.xbase.lib.Conversions;
 import org.eclipse.xtext.xbase.lib.Functions.Function1;
@@ -34,7 +34,7 @@ public class Constraints {
   }
   
   public static boolean featureNameDifferentFromGroupName(final Group it) {
-    EList<Grouped> _grouped = it.getGrouped();
+    List<Grouped> _grouped = it.getGrouped();
     final Function1<Grouped, Boolean> _function = (Grouped t) -> {
       String _name = t.getName();
       String _name_1 = it.getName();
@@ -148,9 +148,9 @@ public class Constraints {
   }
   
   public static boolean featureNameAreDistinct(final Group it) {
-    EList<Grouped> _grouped = it.getGrouped();
+    List<Grouped> _grouped = it.getGrouped();
     final Function1<Grouped, Boolean> _function = (Grouped f1) -> {
-      EList<Grouped> _grouped_1 = it.getGrouped();
+      List<Grouped> _grouped_1 = it.getGrouped();
       final Function1<Grouped, Boolean> _function_1 = (Grouped f2) -> {
         String _name = f1.getName();
         String _name_1 = f2.getName();
@@ -165,13 +165,13 @@ public class Constraints {
   
   public static boolean isEmpty(final Mandatory feature) {
     boolean _and = false;
-    EList<Solitary> _subfeature = feature.getSubfeature();
+    List<Solitary> _subfeature = feature.getSubfeature();
     int _size = _subfeature.size();
     boolean _equals = (_size == 0);
     if (!_equals) {
       _and = false;
     } else {
-      EList<Group> _groups = feature.getGroups();
+      List<Group> _groups = feature.getGroups();
       int _size_1 = _groups.size();
       boolean _equals_1 = (_size_1 == 0);
       _and = _equals_1;
@@ -180,9 +180,9 @@ public class Constraints {
   }
   
   public static boolean checkRangeValidity(final Feature f) {
-    EList<Attribute> _attributes = f.getAttributes();
+    List<Attribute> _attributes = f.getAttributes();
     final Function1<Attribute, Boolean> _function = (Attribute it) -> {
-      EList<Attribute> _attributes_1 = f.getAttributes();
+      List<Attribute> _attributes_1 = f.getAttributes();
       final Function1<Attribute, Boolean> _function_1 = (Attribute a) -> {
         return Boolean.valueOf((a instanceof RangeImpl));
       };

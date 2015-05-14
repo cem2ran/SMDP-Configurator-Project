@@ -23,10 +23,11 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cRootAssignment = (Assignment)rule.eContents().get(1);
 		private final RuleCall cRootFeature_ImplParserRuleCall_0 = (RuleCall)cRootAssignment.eContents().get(0);
 		
-		//Model:
+		//Model: //'Model' name=EString 
 		//	root=Feature_Impl;
 		@Override public ParserRule getRule() { return rule; }
 
+		////'Model' name=EString 
 		//root=Feature_Impl
 		public Assignment getRootAssignment() { return cRootAssignment; }
 
@@ -1277,7 +1278,7 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	
-	//Model:
+	//Model: //'Model' name=EString 
 	//	root=Feature_Impl;
 	public ModelElements getModelAccess() {
 		return pModel;

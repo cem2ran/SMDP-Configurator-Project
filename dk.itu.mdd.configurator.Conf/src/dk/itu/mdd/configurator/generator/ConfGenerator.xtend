@@ -6,6 +6,15 @@ package dk.itu.mdd.configurator.generator
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess
+import modelMDD2.Model
+import modelMDD2.Feature
+import modelMDD2.Solitary
+import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl
+import org.eclipse.emf.common.util.URI
+import org.eclipse.emf.ecore.xmi.XMIResource
+import java.util.HashMap
+import org.eclipse.xtext.resource.XtextResourceSet
+import org.eclipse.emf.ecore.util.EcoreUtil
 
 /**
  * Generates code from your model files on save.
@@ -15,10 +24,35 @@ import org.eclipse.xtext.generator.IFileSystemAccess
 class ConfGenerator implements IGenerator {
 	
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
-//		fsa.generateFile('greetings.txt', 'People to greet: ' + 
-//			resource.allContents
-//				.filter(typeof(Greeting))
-//				.map[name]
-//				.join(', '))
-	}
+		
+		for(e: resource.allContents.toIterable.filter(Model)){
+
+		val resourceSet = new XtextResourceSet()
+		
+		val uri = URI.createURI("personXMI.CM");
+		
+		val xtextResource = resourceSet.getResource(uri, true);
+		
+		EcoreUtil.resolveAll(xtextResource);
+		
+			val xmiResource = resourceSet.createResource(URI.createURI("test.xmi"));
+			xmiResource.getContents().add(xtextResource.getContents().get(0));
+			
+			fsa.generateFile(e.root.name + "Configurator.java", e.root.compile)
+		}
+		
+		}
+		
+	def compile(Feature e) '''
+	
+		public class «e.name» {
+			«FOR f:e.subfeature»
+				«f.compile»
+			«ENDFOR»
+		}
+	'''
+	
+	def compile(Solitary e)'''
+		
+	'''
 }
