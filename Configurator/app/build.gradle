@@ -42,6 +42,9 @@ android {
         exclude 'plugin.properties'
         exclude 'modeling32.png'
         exclude 'plugin.xml'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+
     }
 }
 
@@ -49,6 +52,7 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:22.0.0'
     //compile 'co.trikita:anvil:0.0.6'
+    compile 'org.emfjson:emfjson-jackson:0.10.0'
     compile 'org.eclipse.emf:org.eclipse.emf.ecore:2.11.0-v20150123-0347'
     compile 'org.eclipse.emf:org.eclipse.emf.common:2.11.0-v20150123-0347'
     compile 'org.eclipse.emf:org.eclipse.emf.ecore.xmi:2.11.0-v20150123-0347'

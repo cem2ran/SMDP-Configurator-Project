@@ -6,7 +6,6 @@ package dk.itu.mdd.configurator.formatting2;
 import com.google.inject.Inject;
 import dk.itu.mdd.configurator.services.ConfGrammarAccess;
 import java.util.Arrays;
-import java.util.List;
 import modelMDD2.Binary;
 import modelMDD2.Constrain;
 import modelMDD2.Feature;
@@ -19,6 +18,7 @@ import modelMDD2.Or;
 import modelMDD2.Solitary;
 import modelMDD2.Unary;
 import modelMDD2.Xor;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.xtext.formatting2.AbstractFormatter2;
 import org.eclipse.xtext.formatting2.IFormattableDocument;
 import org.eclipse.xtext.resource.XtextResource;
@@ -48,62 +48,62 @@ public class ConfFormatter extends AbstractFormatter2 {
   }
   
   protected void _format(final Feature feature, @Extension final IFormattableDocument document) {
-    List<Solitary> _subfeature = feature.getSubfeature();
+    EList<Solitary> _subfeature = feature.getSubfeature();
     for (final Solitary subfeature : _subfeature) {
       this.format(subfeature, document);
     }
-    List<Constrain> _constrains = feature.getConstrains();
+    EList<Constrain> _constrains = feature.getConstrains();
     for (final Constrain constrains : _constrains) {
       this.format(constrains, document);
     }
   }
   
   protected void _format(final Grouped grouped, @Extension final IFormattableDocument document) {
-    List<Constrain> _constrains = grouped.getConstrains();
+    EList<Constrain> _constrains = grouped.getConstrains();
     for (final Constrain constrains : _constrains) {
       this.format(constrains, document);
     }
   }
   
   protected void _format(final Mandatory mandatory, @Extension final IFormattableDocument document) {
-    List<Solitary> _subfeature = mandatory.getSubfeature();
+    EList<Solitary> _subfeature = mandatory.getSubfeature();
     for (final Solitary subfeature : _subfeature) {
       this.format(subfeature, document);
     }
-    List<Constrain> _constrains = mandatory.getConstrains();
+    EList<Constrain> _constrains = mandatory.getConstrains();
     for (final Constrain constrains : _constrains) {
       this.format(constrains, document);
     }
-    List<Group> _groups = mandatory.getGroups();
+    EList<Group> _groups = mandatory.getGroups();
     for (final Group groups : _groups) {
       this.format(groups, document);
     }
   }
   
   protected void _format(final Optional optional, @Extension final IFormattableDocument document) {
-    List<Solitary> _subfeature = optional.getSubfeature();
+    EList<Solitary> _subfeature = optional.getSubfeature();
     for (final Solitary subfeature : _subfeature) {
       this.format(subfeature, document);
     }
-    List<Constrain> _constrains = optional.getConstrains();
+    EList<Constrain> _constrains = optional.getConstrains();
     for (final Constrain constrains : _constrains) {
       this.format(constrains, document);
     }
-    List<Group> _groups = optional.getGroups();
+    EList<Group> _groups = optional.getGroups();
     for (final Group groups : _groups) {
       this.format(groups, document);
     }
   }
   
   protected void _format(final Or or, @Extension final IFormattableDocument document) {
-    List<Grouped> _grouped = or.getGrouped();
+    EList<Grouped> _grouped = or.getGrouped();
     for (final Grouped grouped : _grouped) {
       this.format(grouped, document);
     }
   }
   
   protected void _format(final Xor xor, @Extension final IFormattableDocument document) {
-    List<Grouped> _grouped = xor.getGrouped();
+    EList<Grouped> _grouped = xor.getGrouped();
     for (final Grouped grouped : _grouped) {
       this.format(grouped, document);
     }

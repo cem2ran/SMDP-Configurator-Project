@@ -2,7 +2,7 @@
  */
 package modelMDD2;
 
-import java.util.List;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,6 +35,6 @@ public interface Group extends NamedElement {
 	 * @model containment="true"
 	 * @generated
 	 */
-	List<Grouped> getGrouped();
+	EList<Grouped> getGrouped();
 
 } // Group

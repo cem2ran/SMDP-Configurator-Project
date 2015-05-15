@@ -3,22 +3,24 @@
  */
 package dk.itu.mdd.configurator.generator;
 
-import com.google.common.collect.Iterables;
-import java.util.List;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.util.Map;
 import modelMDD2.Feature;
-import modelMDD2.Model;
-import modelMDD2.Solitary;
+import modelMDD2.ModelMDD2Package;
+import modelMDD2.impl.ModelImpl;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.xtend2.lib.StringConcatenation;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.xtext.generator.IFileSystemAccess;
 import org.eclipse.xtext.generator.IGenerator;
-import org.eclipse.xtext.resource.XtextResourceSet;
+import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.eclipse.xtext.xbase.lib.IteratorExtensions;
+import org.emfjson.jackson.resource.JsonResourceFactory;
 
 /**
  * Generates code from your model files on save.
@@ -29,59 +31,33 @@ import org.eclipse.xtext.xbase.lib.IteratorExtensions;
 public class ConfGenerator implements IGenerator {
   @Override
   public void doGenerate(final Resource resource, final IFileSystemAccess fsa) {
-    TreeIterator<EObject> _allContents = resource.getAllContents();
-    Iterable<EObject> _iterable = IteratorExtensions.<EObject>toIterable(_allContents);
-    Iterable<Model> _filter = Iterables.<Model>filter(_iterable, Model.class);
-    for (final Model e : _filter) {
-      {
-        final XtextResourceSet resourceSet = new XtextResourceSet();
-        final URI uri = URI.createURI("personXMI.CM");
-        final Resource xtextResource = resourceSet.getResource(uri, true);
-        EcoreUtil.resolveAll(xtextResource);
-        URI _createURI = URI.createURI("test.xmi");
-        final Resource xmiResource = resourceSet.createResource(_createURI);
-        EList<EObject> _contents = xmiResource.getContents();
-        EList<EObject> _contents_1 = xtextResource.getContents();
-        EObject _get = _contents_1.get(0);
-        _contents.add(_get);
-        Feature _root = e.getRoot();
-        String _name = _root.getName();
-        String _plus = (_name + "Configurator.java");
-        Feature _root_1 = e.getRoot();
-        CharSequence _compile = this.compile(_root_1);
-        fsa.generateFile(_plus, _compile);
-      }
+    try {
+      TreeIterator<EObject> _allContents = resource.getAllContents();
+      EObject _head = IteratorExtensions.<EObject>head(_allContents);
+      final ModelImpl e = ((ModelImpl) _head);
+      Feature _root = e.getRoot();
+      String _plus = ("Resource: " + _root);
+      System.out.println(_plus);
+      final ResourceSetImpl resourceSet = new ResourceSetImpl();
+      Resource.Factory.Registry _resourceFactoryRegistry = resourceSet.getResourceFactoryRegistry();
+      Map<String, Object> _extensionToFactoryMap = _resourceFactoryRegistry.getExtensionToFactoryMap();
+      JsonResourceFactory _jsonResourceFactory = new JsonResourceFactory();
+      _extensionToFactoryMap.put("*", _jsonResourceFactory);
+      EPackage.Registry _packageRegistry = resourceSet.getPackageRegistry();
+      _packageRegistry.put(ModelMDD2Package.eNS_URI, ModelMDD2Package.eINSTANCE);
+      URI _createURI = URI.createURI("Configurator.json");
+      final Resource res = resourceSet.createResource(_createURI);
+      EList<EObject> _contents = res.getContents();
+      _contents.add(e);
+      Feature _root_1 = e.getRoot();
+      String _name = _root_1.getName();
+      String _plus_1 = ("/Users/cem2ran/Dropbox/UNI/ITU/2nd Semester/ModelDrivenDevelopment/runtime-EclipseApplication/TestConf/src-gen/" + _name);
+      String _plus_2 = (_plus_1 + "Configurator.json");
+      File _file = new File(_plus_2);
+      FileOutputStream _fileOutputStream = new FileOutputStream(_file);
+      res.save(_fileOutputStream, null);
+    } catch (Throwable _e) {
+      throw Exceptions.sneakyThrow(_e);
     }
-  }
-  
-  public CharSequence compile(final Feature e) {
-    StringConcatenation _builder = new StringConcatenation();
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("public class ");
-    String _name = e.getName();
-    _builder.append(_name, "\t");
-    _builder.append(" {");
-    _builder.newLineIfNotEmpty();
-    {
-      List<Solitary> _subfeature = e.getSubfeature();
-      for(final Solitary f : _subfeature) {
-        _builder.append("\t\t");
-        CharSequence _compile = this.compile(f);
-        _builder.append(_compile, "\t\t");
-        _builder.newLineIfNotEmpty();
-      }
-    }
-    _builder.append("\t");
-    _builder.append("}");
-    _builder.newLine();
-    return _builder;
-  }
-  
-  public CharSequence compile(final Solitary e) {
-    StringConcatenation _builder = new StringConcatenation();
-    _builder.append("\t\t");
-    _builder.newLine();
-    return _builder;
   }
 }

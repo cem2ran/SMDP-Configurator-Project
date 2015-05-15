@@ -10,18 +10,22 @@
         eType="#//Solitary" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="constrains" upperBound="-1"
         eType="#//Constrain" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
-        eType="#//Attribute" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attribute" eType="#//Attribute"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Solitary" abstract="true" eSuperTypes="#//Feature">
     <eStructuralFeatures xsi:type="ecore:EReference" name="groups" upperBound="-1"
         eType="#//Group" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Grouped" eSuperTypes="#//Feature"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Grouped" eSuperTypes="#//Feature">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="selected" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Mandatory" eSuperTypes="#//Solitary"/>
   <eClassifiers xsi:type="ecore:EClass" name="Optional" eSuperTypes="#//Solitary"/>
   <eClassifiers xsi:type="ecore:EClass" name="Constrain" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="featureReference" eType="#//Feature"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="constrainValue" eType="#//Attribute"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Binary" eSuperTypes="#//Constrain">
     <eStructuralFeatures xsi:type="ecore:EReference" name="rightExp" lowerBound="1"

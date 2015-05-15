@@ -145,7 +145,7 @@ public class ConfSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=EString (attributes+=Attribute attributes+=Attribute*)? (constrains+=Constrain constrains+=Constrain*)?)
+	 *     (name=EString attribute=Attribute? (constrains+=Constrain constrains+=Constrain*)?)
 	 */
 	protected void sequence_Grouped(EObject context, Grouped semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

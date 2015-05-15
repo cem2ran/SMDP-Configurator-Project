@@ -3,7 +3,6 @@
 package modelMDD2.impl;
 
 import java.util.Collection;
-import java.util.List;
 import modelMDD2.Group;
 import modelMDD2.Grouped;
 import modelMDD2.ModelMDD2Package;
@@ -62,7 +61,7 @@ public abstract class GroupImpl extends NamedElementImpl implements Group {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public List<Grouped> getGrouped() {
+	public EList<Grouped> getGrouped() {
 		if (grouped == null) {
 			grouped = new EObjectContainmentEList<Grouped>(Grouped.class, this, ModelMDD2Package.GROUP__GROUPED);
 		}

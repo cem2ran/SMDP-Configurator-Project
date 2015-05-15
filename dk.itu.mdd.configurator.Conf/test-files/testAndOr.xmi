@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ASCII"?>
+<modelMDD2:Model
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:modelMDD2="http://www.example.org/modelMDD2"
+    xsi:schemaLocation="http://www.example.org/modelMDD2 ../../asd/model/modelMDD2.ecore"
+    name="CarConfigurator">
+  <root name="Car">
+    <subfeature
+        xsi:type="modelMDD2:Mandatory"
+        name="Engine">
+      <groups
+          xsi:type="modelMDD2:Xor"
+          name="Horsepower">
+        <grouped
+            name="HP120"
+            selected="true">
+          <attribute
+              xsi:type="modelMDD2:Number"
+              value="120"/>
+        </grouped>
+        <grouped
+            name="HP150">
+          <attribute
+              xsi:type="modelMDD2:Number"
+              value="150"/>
+        </grouped>
+      </groups>
+    </subfeature>
+    <subfeature
+        xsi:type="modelMDD2:Mandatory"
+        name="Rims">
+      <groups
+          xsi:type="modelMDD2:Xor"
+          name="Color">
+        <grouped
+            name="Black"
+            selected="true">
+          <constrains
+              xsi:type="modelMDD2:Binary"
+              Operator="||">
+            <rightExp
+                name="Hp150"
+                featureReference="//@root/@subfeature.0/@groups.0/@grouped.1"/>
+            <leftExp
+                name="Hp120"
+                featureReference="//@root/@subfeature.0/@groups.0/@grouped.0"/>
+          </constrains>
+        </grouped>
+      </groups>
+    </subfeature>
+  </root>
+</modelMDD2:Model>

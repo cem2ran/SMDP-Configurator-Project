@@ -3,18 +3,16 @@
  */
 package dk.itu.mdd.configurator.generator
 
-import org.eclipse.emf.ecore.resource.Resource
-import org.eclipse.xtext.generator.IGenerator
-import org.eclipse.xtext.generator.IFileSystemAccess
-import modelMDD2.Model
-import modelMDD2.Feature
-import modelMDD2.Solitary
-import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl
+import java.io.File
+import java.io.FileOutputStream
+import modelMDD2.ModelMDD2Package
+import modelMDD2.impl.ModelImpl
 import org.eclipse.emf.common.util.URI
-import org.eclipse.emf.ecore.xmi.XMIResource
-import java.util.HashMap
-import org.eclipse.xtext.resource.XtextResourceSet
-import org.eclipse.emf.ecore.util.EcoreUtil
+import org.eclipse.emf.ecore.resource.Resource
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl
+import org.eclipse.xtext.generator.IFileSystemAccess
+import org.eclipse.xtext.generator.IGenerator
+import org.emfjson.jackson.resource.JsonResourceFactory
 
 /**
  * Generates code from your model files on save.
@@ -24,35 +22,15 @@ import org.eclipse.emf.ecore.util.EcoreUtil
 class ConfGenerator implements IGenerator {
 	
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
-		
-		for(e: resource.allContents.toIterable.filter(Model)){
-
-		val resourceSet = new XtextResourceSet()
-		
-		val uri = URI.createURI("personXMI.CM");
-		
-		val xtextResource = resourceSet.getResource(uri, true);
-		
-		EcoreUtil.resolveAll(xtextResource);
-		
-			val xmiResource = resourceSet.createResource(URI.createURI("test.xmi"));
-			xmiResource.getContents().add(xtextResource.getContents().get(0));
+		val e = resource.allContents.head as ModelImpl;
+		System.out.println("Resource: " + e.root);
+		val resourceSet = new ResourceSetImpl();
+			resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("*", new JsonResourceFactory());
+			resourceSet.getPackageRegistry().put(ModelMDD2Package.eNS_URI, ModelMDD2Package.eINSTANCE);
 			
-			fsa.generateFile(e.root.name + "Configurator.java", e.root.compile)
-		}
-		
-		}
-		
-	def compile(Feature e) '''
-	
-		public class «e.name» {
-			«FOR f:e.subfeature»
-				«f.compile»
-			«ENDFOR»
-		}
-	'''
-	
-	def compile(Solitary e)'''
-		
-	'''
+			val res = resourceSet.createResource(URI.createURI("Configurator.json"));
+			res.getContents().add(e);
+			
+			res.save(new FileOutputStream(new File("/Users/cem2ran/Dropbox/UNI/ITU/2nd Semester/ModelDrivenDevelopment/runtime-EclipseApplication/TestConf/src-gen/"+e.root.name+"Configurator.json")), null);
+	}
 }

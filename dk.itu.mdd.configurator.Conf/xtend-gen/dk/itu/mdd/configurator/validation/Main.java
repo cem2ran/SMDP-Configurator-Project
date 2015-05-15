@@ -30,7 +30,7 @@ public class Main {
     final Resource resource = resourceSet.getResource(uri, true);
     TreeIterator<EObject> _allProperContents = EcoreUtil.<EObject>getAllProperContents(resource, false);
     final Function1<EObject, Boolean> _function = (EObject it) -> {
-      return Boolean.valueOf(Constraints.constraint(it));
+      return Constraints.constraint(it);
     };
     boolean _forall = IteratorExtensions.<EObject>forall(_allProperContents, _function);
     if (_forall) {

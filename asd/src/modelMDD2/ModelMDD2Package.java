@@ -179,13 +179,13 @@ public interface ModelMDD2Package extends EPackage {
 	int FEATURE__CONSTRAINS = NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Attribute</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE__ATTRIBUTES = NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int FEATURE__ATTRIBUTE = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Feature</em>' class.
@@ -243,13 +243,13 @@ public interface ModelMDD2Package extends EPackage {
 	int SOLITARY__CONSTRAINS = FEATURE__CONSTRAINS;
 
 	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Attribute</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SOLITARY__ATTRIBUTES = FEATURE__ATTRIBUTES;
+	int SOLITARY__ATTRIBUTE = FEATURE__ATTRIBUTE;
 
 	/**
 	 * The feature id for the '<em><b>Groups</b></em>' containment reference list.
@@ -316,13 +316,22 @@ public interface ModelMDD2Package extends EPackage {
 	int GROUPED__CONSTRAINS = FEATURE__CONSTRAINS;
 
 	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Attribute</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GROUPED__ATTRIBUTES = FEATURE__ATTRIBUTES;
+	int GROUPED__ATTRIBUTE = FEATURE__ATTRIBUTE;
+
+	/**
+	 * The feature id for the '<em><b>Selected</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GROUPED__SELECTED = FEATURE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Grouped</em>' class.
@@ -331,7 +340,7 @@ public interface ModelMDD2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUPED_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 0;
+	int GROUPED_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Grouped</em>' class.
@@ -380,13 +389,13 @@ public interface ModelMDD2Package extends EPackage {
 	int MANDATORY__CONSTRAINS = SOLITARY__CONSTRAINS;
 
 	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Attribute</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MANDATORY__ATTRIBUTES = SOLITARY__ATTRIBUTES;
+	int MANDATORY__ATTRIBUTE = SOLITARY__ATTRIBUTE;
 
 	/**
 	 * The feature id for the '<em><b>Groups</b></em>' containment reference list.
@@ -453,13 +462,13 @@ public interface ModelMDD2Package extends EPackage {
 	int OPTIONAL__CONSTRAINS = SOLITARY__CONSTRAINS;
 
 	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Attribute</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OPTIONAL__ATTRIBUTES = SOLITARY__ATTRIBUTES;
+	int OPTIONAL__ATTRIBUTE = SOLITARY__ATTRIBUTE;
 
 	/**
 	 * The feature id for the '<em><b>Groups</b></em>' containment reference list.
@@ -517,13 +526,22 @@ public interface ModelMDD2Package extends EPackage {
 	int CONSTRAIN__FEATURE_REFERENCE = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Constrain Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRAIN__CONSTRAIN_VALUE = NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Constrain</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTRAIN_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
+	int CONSTRAIN_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Constrain</em>' class.
@@ -561,6 +579,15 @@ public interface ModelMDD2Package extends EPackage {
 	 * @ordered
 	 */
 	int BINARY__FEATURE_REFERENCE = CONSTRAIN__FEATURE_REFERENCE;
+
+	/**
+	 * The feature id for the '<em><b>Constrain Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BINARY__CONSTRAIN_VALUE = CONSTRAIN__CONSTRAIN_VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Right Exp</b></em>' containment reference.
@@ -634,6 +661,15 @@ public interface ModelMDD2Package extends EPackage {
 	 * @ordered
 	 */
 	int UNARY__FEATURE_REFERENCE = CONSTRAIN__FEATURE_REFERENCE;
+
+	/**
+	 * The feature id for the '<em><b>Constrain Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNARY__CONSTRAIN_VALUE = CONSTRAIN__CONSTRAIN_VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Exp</b></em>' containment reference.
@@ -1102,15 +1138,15 @@ public interface ModelMDD2Package extends EPackage {
 	EReference getFeature_Constrains();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link modelMDD2.Feature#getAttributes <em>Attributes</em>}'.
+	 * Returns the meta object for the containment reference '{@link modelMDD2.Feature#getAttribute <em>Attribute</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Attributes</em>'.
-	 * @see modelMDD2.Feature#getAttributes()
+	 * @return the meta object for the containment reference '<em>Attribute</em>'.
+	 * @see modelMDD2.Feature#getAttribute()
 	 * @see #getFeature()
 	 * @generated
 	 */
-	EReference getFeature_Attributes();
+	EReference getFeature_Attribute();
 
 	/**
 	 * Returns the meta object for class '{@link modelMDD2.Solitary <em>Solitary</em>}'.
@@ -1142,6 +1178,17 @@ public interface ModelMDD2Package extends EPackage {
 	 * @generated
 	 */
 	EClass getGrouped();
+
+	/**
+	 * Returns the meta object for the attribute '{@link modelMDD2.Grouped#isSelected <em>Selected</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Selected</em>'.
+	 * @see modelMDD2.Grouped#isSelected()
+	 * @see #getGrouped()
+	 * @generated
+	 */
+	EAttribute getGrouped_Selected();
 
 	/**
 	 * Returns the meta object for class '{@link modelMDD2.Mandatory <em>Mandatory</em>}'.
@@ -1183,6 +1230,17 @@ public interface ModelMDD2Package extends EPackage {
 	 * @generated
 	 */
 	EReference getConstrain_FeatureReference();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link modelMDD2.Constrain#getConstrainValue <em>Constrain Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Constrain Value</em>'.
+	 * @see modelMDD2.Constrain#getConstrainValue()
+	 * @see #getConstrain()
+	 * @generated
+	 */
+	EReference getConstrain_ConstrainValue();
 
 	/**
 	 * Returns the meta object for class '{@link modelMDD2.Binary <em>Binary</em>}'.
@@ -1544,12 +1602,12 @@ public interface ModelMDD2Package extends EPackage {
 		EReference FEATURE__CONSTRAINS = eINSTANCE.getFeature_Constrains();
 
 		/**
-		 * The meta object literal for the '<em><b>Attributes</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Attribute</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FEATURE__ATTRIBUTES = eINSTANCE.getFeature_Attributes();
+		EReference FEATURE__ATTRIBUTE = eINSTANCE.getFeature_Attribute();
 
 		/**
 		 * The meta object literal for the '{@link modelMDD2.impl.SolitaryImpl <em>Solitary</em>}' class.
@@ -1578,6 +1636,14 @@ public interface ModelMDD2Package extends EPackage {
 		 * @generated
 		 */
 		EClass GROUPED = eINSTANCE.getGrouped();
+
+		/**
+		 * The meta object literal for the '<em><b>Selected</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GROUPED__SELECTED = eINSTANCE.getGrouped_Selected();
 
 		/**
 		 * The meta object literal for the '{@link modelMDD2.impl.MandatoryImpl <em>Mandatory</em>}' class.
@@ -1616,6 +1682,14 @@ public interface ModelMDD2Package extends EPackage {
 		 * @generated
 		 */
 		EReference CONSTRAIN__FEATURE_REFERENCE = eINSTANCE.getConstrain_FeatureReference();
+
+		/**
+		 * The meta object literal for the '<em><b>Constrain Value</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONSTRAIN__CONSTRAIN_VALUE = eINSTANCE.getConstrain_ConstrainValue();
 
 		/**
 		 * The meta object literal for the '{@link modelMDD2.impl.BinaryImpl <em>Binary</em>}' class.
