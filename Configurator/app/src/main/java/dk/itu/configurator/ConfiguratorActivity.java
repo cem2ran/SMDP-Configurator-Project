@@ -1,9 +1,14 @@
 package dk.itu.configurator;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 
 
 public class ConfiguratorActivity extends ActionBarActivity {
@@ -11,7 +16,12 @@ public class ConfiguratorActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_configurator);
+        //setContentView(R.layout.activity_configurator);
+
+        String data = getConfigurationResource(R.raw.car_configurator);
+
+        ConfiguratorActivityFragment fragment = new ConfiguratorActivityFragment(data);
+        getSupportFragmentManager().beginTransaction().add(android.R.id.content, fragment).commit();
     }
 
 
@@ -35,5 +45,30 @@ public class ConfiguratorActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private String getConfigurationResource(int id){
+        return convertStreamToString(getResources().openRawResource(id));
+    }
+
+    private String convertStreamToString(InputStream is) {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+        StringBuilder sb = new StringBuilder();
+
+        String line = null;
+        try {
+            while ((line = reader.readLine()) != null) {
+                sb.append(line).append('\n');
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                is.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return sb.toString();
     }
 }

@@ -51,7 +51,7 @@ public class ConfSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				sequence_CString(context, (CString) semanticObject); 
 				return; 
 			case ModelMDD2Package.CONSTRAIN:
-				sequence_Primary(context, (Constrain) semanticObject); 
+				sequence_AttributeConstrain(context, (Constrain) semanticObject); 
 				return; 
 			case ModelMDD2Package.FEATURE:
 				sequence_Feature_Impl(context, (Feature) semanticObject); 
@@ -86,6 +86,15 @@ public class ConfSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			}
 		if (errorAcceptor != null) errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
+	
+	/**
+	 * Constraint:
+	 *     constrainValue=Attribute
+	 */
+	protected void sequence_AttributeConstrain(EObject context, Constrain semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
 	
 	/**
 	 * Constraint:
@@ -200,15 +209,6 @@ public class ConfSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     (name=EString (grouped+=Grouped grouped+=Grouped*)?)
 	 */
 	protected void sequence_Or(EObject context, Or semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     featureReference=[Grouped|QualifiedName]
-	 */
-	protected void sequence_Primary(EObject context, Constrain semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

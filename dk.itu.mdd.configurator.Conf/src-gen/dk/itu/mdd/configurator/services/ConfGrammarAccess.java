@@ -282,17 +282,21 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cFeatureReferenceAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
 		private final CrossReference cFeatureReferenceGroupedCrossReference_0_0 = (CrossReference)cFeatureReferenceAssignment_0.eContents().get(0);
 		private final RuleCall cFeatureReferenceGroupedQualifiedNameParserRuleCall_0_0_1 = (RuleCall)cFeatureReferenceGroupedCrossReference_0_0.eContents().get(1);
-		private final RuleCall cUnaryParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final Group cGroup_2 = (Group)cAlternatives.eContents().get(2);
-		private final Keyword cLeftParenthesisKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final RuleCall cConstrainParserRuleCall_2_1 = (RuleCall)cGroup_2.eContents().get(1);
-		private final Keyword cRightParenthesisKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
+		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
+		private final Keyword cLeftParenthesisKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final RuleCall cAttributeConstrainParserRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
+		private final Keyword cRightParenthesisKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
+		private final RuleCall cUnaryParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final Group cGroup_3 = (Group)cAlternatives.eContents().get(3);
+		private final Keyword cLeftParenthesisKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final RuleCall cConstrainParserRuleCall_3_1 = (RuleCall)cGroup_3.eContents().get(1);
+		private final Keyword cRightParenthesisKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
 		
 		//Primary returns Constrain:
-		//	featureReference=[Grouped|QualifiedName] | Unary | "(" Constrain ")";
+		//	featureReference=[Grouped|QualifiedName] | "(" AttributeConstrain ")" | Unary | "(" Constrain ")";
 		@Override public ParserRule getRule() { return rule; }
 
-		//featureReference=[Grouped|QualifiedName] | Unary | "(" Constrain ")"
+		//featureReference=[Grouped|QualifiedName] | "(" AttributeConstrain ")" | Unary | "(" Constrain ")"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//featureReference=[Grouped|QualifiedName]
@@ -304,20 +308,48 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 		//QualifiedName
 		public RuleCall getFeatureReferenceGroupedQualifiedNameParserRuleCall_0_0_1() { return cFeatureReferenceGroupedQualifiedNameParserRuleCall_0_0_1; }
 
-		//Unary
-		public RuleCall getUnaryParserRuleCall_1() { return cUnaryParserRuleCall_1; }
-
-		//"(" Constrain ")"
-		public Group getGroup_2() { return cGroup_2; }
+		//"(" AttributeConstrain ")"
+		public Group getGroup_1() { return cGroup_1; }
 
 		//"("
-		public Keyword getLeftParenthesisKeyword_2_0() { return cLeftParenthesisKeyword_2_0; }
+		public Keyword getLeftParenthesisKeyword_1_0() { return cLeftParenthesisKeyword_1_0; }
 
-		//Constrain
-		public RuleCall getConstrainParserRuleCall_2_1() { return cConstrainParserRuleCall_2_1; }
+		//AttributeConstrain
+		public RuleCall getAttributeConstrainParserRuleCall_1_1() { return cAttributeConstrainParserRuleCall_1_1; }
 
 		//")"
-		public Keyword getRightParenthesisKeyword_2_2() { return cRightParenthesisKeyword_2_2; }
+		public Keyword getRightParenthesisKeyword_1_2() { return cRightParenthesisKeyword_1_2; }
+
+		//Unary
+		public RuleCall getUnaryParserRuleCall_2() { return cUnaryParserRuleCall_2; }
+
+		//"(" Constrain ")"
+		public Group getGroup_3() { return cGroup_3; }
+
+		//"("
+		public Keyword getLeftParenthesisKeyword_3_0() { return cLeftParenthesisKeyword_3_0; }
+
+		//Constrain
+		public RuleCall getConstrainParserRuleCall_3_1() { return cConstrainParserRuleCall_3_1; }
+
+		//")"
+		public Keyword getRightParenthesisKeyword_3_2() { return cRightParenthesisKeyword_3_2; }
+	}
+
+	public class AttributeConstrainElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "AttributeConstrain");
+		private final Assignment cConstrainValueAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cConstrainValueAttributeParserRuleCall_0 = (RuleCall)cConstrainValueAssignment.eContents().get(0);
+		
+		//AttributeConstrain returns Constrain:
+		//	constrainValue=Attribute;
+		@Override public ParserRule getRule() { return rule; }
+
+		//constrainValue=Attribute
+		public Assignment getConstrainValueAssignment() { return cConstrainValueAssignment; }
+
+		//Attribute
+		public RuleCall getConstrainValueAttributeParserRuleCall_0() { return cConstrainValueAttributeParserRuleCall_0; }
 	}
 
 	public class UnaryElements extends AbstractParserRuleElementFinder {
@@ -1166,6 +1198,7 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 	private final ComparisonElements pComparison;
 	private final BinaryElements pBinary;
 	private final PrimaryElements pPrimary;
+	private final AttributeConstrainElements pAttributeConstrain;
 	private final UnaryElements pUnary;
 	private final QualifiedNameElements pQualifiedName;
 	private final DisjunctiveOperatorElements unknownRuleDisjunctiveOperator;
@@ -1208,6 +1241,7 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 		this.pComparison = new ComparisonElements();
 		this.pBinary = new BinaryElements();
 		this.pPrimary = new PrimaryElements();
+		this.pAttributeConstrain = new AttributeConstrainElements();
 		this.pUnary = new UnaryElements();
 		this.pQualifiedName = new QualifiedNameElements();
 		this.unknownRuleDisjunctiveOperator = new DisjunctiveOperatorElements();
@@ -1342,13 +1376,23 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Primary returns Constrain:
-	//	featureReference=[Grouped|QualifiedName] | Unary | "(" Constrain ")";
+	//	featureReference=[Grouped|QualifiedName] | "(" AttributeConstrain ")" | Unary | "(" Constrain ")";
 	public PrimaryElements getPrimaryAccess() {
 		return pPrimary;
 	}
 	
 	public ParserRule getPrimaryRule() {
 		return getPrimaryAccess().getRule();
+	}
+
+	//AttributeConstrain returns Constrain:
+	//	constrainValue=Attribute;
+	public AttributeConstrainElements getAttributeConstrainAccess() {
+		return pAttributeConstrain;
+	}
+	
+	public ParserRule getAttributeConstrainRule() {
+		return getAttributeConstrainAccess().getRule();
 	}
 
 	//Unary returns Constrain:

@@ -24,8 +24,11 @@ Comparison returns Constrain:
 	Binary ( {Binary.leftExp=current} Operator=ComparativeOperator rightExp=Binary )* ;
 Binary returns Constrain:
 	Primary ({Binary.leftExp=current} rightExp=Primary )* ;	
-Primary	returns Constrain: 
-	  featureReference=[Grouped|QualifiedName]  | Unary | '(' Constrain ')';
+Primary	returns Constrain:
+	  featureReference=[Grouped|QualifiedName] | '('AttributeConstrain')'| Unary | '(' Constrain ')';
+AttributeConstrain returns Constrain:
+	constrainValue=Attribute
+; 
 Unary returns Constrain:
 	{Unary} Operator=("!"|"-") exp=Primary;
 

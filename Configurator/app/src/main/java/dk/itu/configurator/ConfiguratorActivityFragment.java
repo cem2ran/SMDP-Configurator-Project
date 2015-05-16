@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
 import android.widget.CheckedTextView;
 import android.widget.FrameLayout;
 import android.widget.ListAdapter;
@@ -36,18 +37,20 @@ import modelMDD2.Group;
 import modelMDD2.Grouped;
 import modelMDD2.Model;
 import modelMDD2.ModelMDD2Package;
-import modelMDD2.Optional;
 import modelMDD2.Or;
 import modelMDD2.Solitary;
 import modelMDD2.Unary;
 import modelMDD2.impl.MandatoryImpl;
+import modelMDD2.impl.OptionalImpl;
 import trikita.anvil.Anvil;
 import trikita.anvil.Nodes.ViewNode;
 import trikita.anvil.Renderable;
 
+import static dk.itu.configurator.Constraints.getPath;
 import static dk.itu.configurator.Views.H1;
 import static dk.itu.configurator.Views.H2;
 import static dk.itu.configurator.Views.H3;
+import static dk.itu.configurator.Views.HList;
 import static dk.itu.configurator.Views.VList;
 import static trikita.anvil.BaseAttrs.CENTER;
 import static trikita.anvil.BaseAttrs.FILL;
@@ -62,8 +65,11 @@ import static trikita.anvil.v15.Attrs.backgroundColor;
 import static trikita.anvil.v15.Attrs.choiceMode;
 import static trikita.anvil.v15.Attrs.gravity;
 import static trikita.anvil.v15.Attrs.layoutParams;
+import static trikita.anvil.v15.Attrs.onClick;
+import static trikita.anvil.v15.Attrs.tag;
 import static trikita.anvil.v15.Attrs.text;
 import static trikita.anvil.v15.Attrs.textSize;
+import static trikita.anvil.v15.Attrs.visibility;
 
 
 /**
@@ -74,10 +80,7 @@ public class ConfiguratorActivityFragment extends Fragment {
     ConfiguratorView configurator;
     Model configuration;
 
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public ConfiguratorActivityFragment(String data){
         // register our meta-model package
         ModelMDD2Package.eINSTANCE.eClass();
         /*
@@ -94,7 +97,7 @@ public class ConfiguratorActivityFragment extends Fragment {
         ObjectMapper mapper = new ObjectMapper();
         mapper.registerModule(new EMFModule());
 
-        String data = "{\"eClass\" : \"http://www.example.org/modelMDD2#//Model\", \"root\" : {\"eClass\" : \"http://www.example.org/modelMDD2#//Feature\", \"name\" : \"Car\", \"subfeature\" : [ {\"eClass\" : \"http://www.example.org/modelMDD2#//Mandatory\", \"name\" : \"Engine\", \"groups\" : [ {\"eClass\" : \"http://www.example.org/modelMDD2#//Xor\", \"name\" : \"HorsePower\", \"grouped\" : [ {\"eClass\" : \"http://www.example.org/modelMDD2#//Grouped\", \"name\" : \"HP120\"}, {\"eClass\" : \"http://www.example.org/modelMDD2#//Grouped\", \"name\" : \"HP150\"} ] }, {\"eClass\" : \"http://www.example.org/modelMDD2#//Or\", \"name\" : \"Fuel\", \"grouped\" : [ {\"eClass\" : \"http://www.example.org/modelMDD2#//Grouped\", \"name\" : \"Gas\"}, {\"eClass\" : \"http://www.example.org/modelMDD2#//Grouped\", \"name\" : \"Electric\"} ] } ] }, {\"eClass\" : \"http://www.example.org/modelMDD2#//Optional\", \"name\" : \"Rims\", \"groups\" : [ {\"eClass\" : \"http://www.example.org/modelMDD2#//Xor\", \"name\" : \"Color\", \"grouped\" : [ {\"eClass\" : \"http://www.example.org/modelMDD2#//Grouped\", \"name\" : \"Red\"}, {\"eClass\" : \"http://www.example.org/modelMDD2#//Grouped\", \"name\" : \"Black\", \"constrains\" : [ {\"eClass\" : \"http://www.example.org/modelMDD2#//Binary\", \"Operator\" : \"&&\", \"rightExp\" : {\"eClass\" : \"http://www.example.org/modelMDD2#//Constrain\", \"featureReference\" : {\"$ref\" : \"//@root/@subfeature.0/@groups.0/@grouped.1\"} }, \"leftExp\" : {\"eClass\" : \"http://www.example.org/modelMDD2#//Constrain\", \"featureReference\" : {\"$ref\" : \"//@root/@subfeature.1/@groups.1/@grouped.0\"} } } ] } ] }, {\"eClass\" : \"http://www.example.org/modelMDD2#//Xor\", \"name\" : \"Material\", \"grouped\" : [ {\"eClass\" : \"http://www.example.org/modelMDD2#//Grouped\", \"name\" : \"Aluminum\"}, {\"eClass\" : \"http://www.example.org/modelMDD2#//Grouped\", \"name\" : \"CarbonFiber\"} ] } ] }, {\"eClass\" : \"http://www.example.org/modelMDD2#//Mandatory\", \"name\" : \"Transmission\", \"groups\" : [ {\"eClass\" : \"http://www.example.org/modelMDD2#//Or\", \"name\" : \"Type\", \"grouped\" : [ {\"eClass\" : \"http://www.example.org/modelMDD2#//Grouped\", \"name\" : \"Manual\"}, {\"eClass\" : \"http://www.example.org/modelMDD2#//Grouped\", \"name\" : \"Automatic\"} ] } ] } ] } }";
+
         Resource r = null;
         try {
             r = mapper.readValue(data, Resource.class);
@@ -103,7 +106,10 @@ public class ConfiguratorActivityFragment extends Fragment {
         }
         if (r != null)
             configuration = (Model) r.getContents().get(0);
+    }
 
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         configurator = new ConfiguratorView(getActivity(), configuration);
         View root = configurator.getRootView();
         return root;
@@ -170,6 +176,8 @@ public class ConfiguratorActivityFragment extends Fragment {
 
         public ViewNode solitaryView(Solitary solitary) {
 
+            boolean optional = solitary instanceof OptionalImpl;
+
             if (solitary instanceof MandatoryImpl) {
                 Iterator<Group> groups = solitary.getGroups().iterator();
                 while (groups.hasNext()) {
@@ -182,16 +190,21 @@ public class ConfiguratorActivityFragment extends Fragment {
                     }
                 }
             }
-
-            ViewNode list = VList(
-                    H2(text(solitary.getName() + (solitary instanceof Optional ? " (Optional)" : "")))
-            );
+            final String listTag = getPath(solitary) + ".anvil_list";
+            ViewNode list = VList(tag(listTag), visibility(optional ? GONE : VISIBLE));
 
             for (Group child : solitary.getGroups()) {
                 list.addViews(groupView(child));
             }
 
-            return list;
+            return VList(HList(
+                    H2(text(solitary.getName() + (optional ? " (Optional)" : ""))),
+                    v(CheckBox.class, tag(getPath(solitary)), visibility(optional ? VISIBLE : GONE),
+                            onClick(view -> {
+                                boolean optionalChecked = ((CheckBox)findViewWithTag(getPath(solitary))).isChecked();
+                                findViewWithTag(listTag).setVisibility(optionalChecked ? VISIBLE : GONE);
+                    }))
+            ), list);
         }
 
         public ViewNode groupView(Group group) {
@@ -222,7 +235,7 @@ public class ConfiguratorActivityFragment extends Fragment {
 
                 @Override
                 public View getView(int position, View convertView, ViewGroup parent) {
-                    String id = Constraints.getPath(items.get(position));
+                    String id = getPath(items.get(position));
                     TextView v = (TextView) super.getView(position, convertView, parent);
                     v.setTag(id);
                     v.setMinWidth(parent.getWidth());
@@ -259,7 +272,7 @@ public class ConfiguratorActivityFragment extends Fragment {
                 @Override
                 public boolean isEnabled(int position) {
                     if (anyConstraintViolated(items.get(position))) {
-                        String id = Constraints.getPath(items.get(position));
+                        String id = getPath(items.get(position));
                         View v = findViewWithTag(id);
                         if (v != null) ((TextView) v).setTextColor(Color.GRAY);
                         return false;
@@ -302,7 +315,7 @@ public class ConfiguratorActivityFragment extends Fragment {
             if (c instanceof Binary)
                 return constraintViolated(((Binary) c).getLeftExp()) || constraintViolated(((Binary) c).getRightExp());
 
-            String id = Constraints.getPath(c.getFeatureReference());
+            String id = getPath(c.getFeatureReference());
             View v = findViewWithTag(id);
             if (v instanceof CheckedTextView) {
                 if (!((CheckedTextView) v).isChecked()) {

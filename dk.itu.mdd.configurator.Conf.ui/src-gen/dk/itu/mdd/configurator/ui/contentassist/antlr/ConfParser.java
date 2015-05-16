@@ -63,7 +63,8 @@ public class ConfParser extends AbstractContentAssistParser {
 					put(grammarAccess.getComparisonAccess().getGroup_1(), "rule__Comparison__Group_1__0");
 					put(grammarAccess.getBinaryAccess().getGroup(), "rule__Binary__Group__0");
 					put(grammarAccess.getBinaryAccess().getGroup_1(), "rule__Binary__Group_1__0");
-					put(grammarAccess.getPrimaryAccess().getGroup_2(), "rule__Primary__Group_2__0");
+					put(grammarAccess.getPrimaryAccess().getGroup_1(), "rule__Primary__Group_1__0");
+					put(grammarAccess.getPrimaryAccess().getGroup_3(), "rule__Primary__Group_3__0");
 					put(grammarAccess.getUnaryAccess().getGroup(), "rule__Unary__Group__0");
 					put(grammarAccess.getQualifiedNameAccess().getGroup(), "rule__QualifiedName__Group__0");
 					put(grammarAccess.getQualifiedNameAccess().getGroup_1(), "rule__QualifiedName__Group_1__0");
@@ -105,6 +106,7 @@ public class ConfParser extends AbstractContentAssistParser {
 					put(grammarAccess.getComparisonAccess().getRightExpAssignment_1_2(), "rule__Comparison__RightExpAssignment_1_2");
 					put(grammarAccess.getBinaryAccess().getRightExpAssignment_1_1(), "rule__Binary__RightExpAssignment_1_1");
 					put(grammarAccess.getPrimaryAccess().getFeatureReferenceAssignment_0(), "rule__Primary__FeatureReferenceAssignment_0");
+					put(grammarAccess.getAttributeConstrainAccess().getConstrainValueAssignment(), "rule__AttributeConstrain__ConstrainValueAssignment");
 					put(grammarAccess.getUnaryAccess().getOperatorAssignment_1(), "rule__Unary__OperatorAssignment_1");
 					put(grammarAccess.getUnaryAccess().getExpAssignment_2(), "rule__Unary__ExpAssignment_2");
 					put(grammarAccess.getRangeAccess().getLowerAssignment_0(), "rule__Range__LowerAssignment_0");

@@ -511,36 +511,95 @@ rulePrimary returns [EObject current=null]
 
 )
 )
+    |(
+	otherlv_1=LeftParenthesis
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getPrimaryAccess().getLeftParenthesisKeyword_1_0());
+    }
+
+    { 
+        newCompositeNode(grammarAccess.getPrimaryAccess().getAttributeConstrainParserRuleCall_1_1()); 
+    }
+    this_AttributeConstrain_2=ruleAttributeConstrain
+    {
+        $current = $this_AttributeConstrain_2.current;
+        afterParserOrEnumRuleCall();
+    }
+
+	otherlv_3=RightParenthesis
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getPrimaryAccess().getRightParenthesisKeyword_1_2());
+    }
+)
     |
     { 
-        newCompositeNode(grammarAccess.getPrimaryAccess().getUnaryParserRuleCall_1()); 
+        newCompositeNode(grammarAccess.getPrimaryAccess().getUnaryParserRuleCall_2()); 
     }
-    this_Unary_1=ruleUnary
+    this_Unary_4=ruleUnary
     {
-        $current = $this_Unary_1.current;
+        $current = $this_Unary_4.current;
         afterParserOrEnumRuleCall();
     }
 
     |(
-	otherlv_2=LeftParenthesis
+	otherlv_5=LeftParenthesis
     {
-    	newLeafNode(otherlv_2, grammarAccess.getPrimaryAccess().getLeftParenthesisKeyword_2_0());
+    	newLeafNode(otherlv_5, grammarAccess.getPrimaryAccess().getLeftParenthesisKeyword_3_0());
     }
 
     { 
-        newCompositeNode(grammarAccess.getPrimaryAccess().getConstrainParserRuleCall_2_1()); 
+        newCompositeNode(grammarAccess.getPrimaryAccess().getConstrainParserRuleCall_3_1()); 
     }
-    this_Constrain_3=ruleConstrain
+    this_Constrain_6=ruleConstrain
     {
-        $current = $this_Constrain_3.current;
+        $current = $this_Constrain_6.current;
         afterParserOrEnumRuleCall();
     }
 
-	otherlv_4=RightParenthesis
+	otherlv_7=RightParenthesis
     {
-    	newLeafNode(otherlv_4, grammarAccess.getPrimaryAccess().getRightParenthesisKeyword_2_2());
+    	newLeafNode(otherlv_7, grammarAccess.getPrimaryAccess().getRightParenthesisKeyword_3_2());
     }
 ))
+;
+
+
+
+
+
+// Entry rule entryRuleAttributeConstrain
+entryRuleAttributeConstrain returns [EObject current=null]
+	:
+	{ newCompositeNode(grammarAccess.getAttributeConstrainRule()); }
+	 iv_ruleAttributeConstrain=ruleAttributeConstrain 
+	 { $current=$iv_ruleAttributeConstrain.current; } 
+	 EOF 
+;
+
+// Rule AttributeConstrain
+ruleAttributeConstrain returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getAttributeConstrainAccess().getConstrainValueAttributeParserRuleCall_0()); 
+	    }
+		lv_constrainValue_0_0=ruleAttribute		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getAttributeConstrainRule());
+	        }
+       		set(
+       			$current, 
+       			"constrainValue",
+        		lv_constrainValue_0_0, 
+        		"Attribute");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)
 ;
 
 

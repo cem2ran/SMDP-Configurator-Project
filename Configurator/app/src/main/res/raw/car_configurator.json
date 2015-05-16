@@ -1,0 +1,94 @@
+{
+  "eClass" : "http://www.example.org/modelMDD2#//Model",
+  "root" : {
+    "eClass" : "http://www.example.org/modelMDD2#//Feature",
+    "name" : "Car",
+    "subfeature" : [ {
+      "eClass" : "http://www.example.org/modelMDD2#//Mandatory",
+      "name" : "Engine",
+      "groups" : [ {
+        "eClass" : "http://www.example.org/modelMDD2#//Xor",
+        "name" : "Power",
+        "grouped" : [ {
+          "eClass" : "http://www.example.org/modelMDD2#//Grouped",
+          "name" : "HP120",
+          "attribute" : {
+            "eClass" : "http://www.example.org/modelMDD2#//Number",
+            "value" : 120
+          }
+        }, {
+          "eClass" : "http://www.example.org/modelMDD2#//Grouped",
+          "name" : "HP150",
+          "attribute" : {
+            "eClass" : "http://www.example.org/modelMDD2#//Number",
+            "value" : 150
+          }
+        } ]
+      }, {
+        "eClass" : "http://www.example.org/modelMDD2#//Or",
+        "name" : "Fuel",
+        "grouped" : [ {
+          "eClass" : "http://www.example.org/modelMDD2#//Grouped",
+          "name" : "Gas"
+        }, {
+          "eClass" : "http://www.example.org/modelMDD2#//Grouped",
+          "name" : "Electric"
+        } ]
+      } ]
+    }, {
+      "eClass" : "http://www.example.org/modelMDD2#//Optional",
+      "name" : "Rims",
+      "groups" : [ {
+        "eClass" : "http://www.example.org/modelMDD2#//Xor",
+        "name" : "Color",
+        "grouped" : [ {
+          "eClass" : "http://www.example.org/modelMDD2#//Grouped",
+          "name" : "Red"
+        }, {
+          "eClass" : "http://www.example.org/modelMDD2#//Grouped",
+          "name" : "Black",
+          "constrains" : [ {
+            "eClass" : "http://www.example.org/modelMDD2#//Binary",
+            "Operator" : "&&",
+            "rightExp" : {
+              "eClass" : "http://www.example.org/modelMDD2#//Constrain",
+              "featureReference" : {
+                "$ref" : "//@root/@subfeature.1/@groups.1/@grouped.0"
+              }
+            },
+            "leftExp" : {
+              "eClass" : "http://www.example.org/modelMDD2#//Constrain",
+              "featureReference" : {
+                "$ref" : "//@root/@subfeature.0/@groups.0/@grouped.1"
+              }
+            }
+          } ]
+        } ]
+      }, {
+        "eClass" : "http://www.example.org/modelMDD2#//Xor",
+        "name" : "Material",
+        "grouped" : [ {
+          "eClass" : "http://www.example.org/modelMDD2#//Grouped",
+          "name" : "Aluminum"
+        }, {
+          "eClass" : "http://www.example.org/modelMDD2#//Grouped",
+          "name" : "CarbonFiber"
+        } ]
+      } ]
+    }, {
+      "eClass" : "http://www.example.org/modelMDD2#//Mandatory",
+      "name" : "Transmission",
+      "groups" : [ {
+        "eClass" : "http://www.example.org/modelMDD2#//Or",
+        "name" : "Type",
+        "grouped" : [ {
+          "eClass" : "http://www.example.org/modelMDD2#//Grouped",
+          "name" : "Manual"
+        }, {
+          "eClass" : "http://www.example.org/modelMDD2#//Grouped",
+          "name" : "Automatic"
+        } ]
+      } ]
+    } ]
+  }
+}
