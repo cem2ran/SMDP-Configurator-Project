@@ -3,34 +3,190 @@
  */
 package dk.itu.mdd.configurator.generator
 
-import java.io.File
-import java.io.FileOutputStream
-import modelMDD2.ModelMDD2Package
-import modelMDD2.impl.ModelImpl
-import org.eclipse.emf.common.util.URI
 import org.eclipse.emf.ecore.resource.Resource
-import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl
-import org.eclipse.xtext.generator.IFileSystemAccess
 import org.eclipse.xtext.generator.IGenerator
-import org.emfjson.jackson.resource.JsonResourceFactory
+import org.eclipse.xtext.generator.IFileSystemAccess
+import modelMDD2.Model
+import modelMDD2.Number
+import modelMDD2.Attribute
+import modelMDD2.impl.OptionalImpl
+import modelMDD2.impl.OrImpl
+import modelMDD2.impl.XorImpl
+import modelMDD2.Mandatory
+import modelMDD2.impl.BinaryImpl
+import modelMDD2.impl.UnaryImpl
+import modelMDD2.impl.NumberImpl
+import modelMDD2.CString
+import modelMDD2.impl.CStringImpl
+import modelMDD2.Range
+import modelMDD2.CBoolean
 
 /**
  * Generates code from your model files on save.
- * 
+ *
  * See https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#code-generation
  */
 class ConfGenerator implements IGenerator {
-	
-	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
-		val e = resource.allContents.head as ModelImpl;
-		System.out.println("Resource: " + e.root);
-		val resourceSet = new ResourceSetImpl();
-			resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("*", new JsonResourceFactory());
-			resourceSet.getPackageRegistry().put(ModelMDD2Package.eNS_URI, ModelMDD2Package.eINSTANCE);
-			
-			val res = resourceSet.createResource(URI.createURI("Configurator.json"));
-			res.getContents().add(e);
-			
-			res.save(new FileOutputStream(new File("/Users/cem2ran/Dropbox/UNI/ITU/2nd Semester/ModelDrivenDevelopment/runtime-EclipseApplication/TestConf/src-gen/"+e.root.name+"Configurator.json")), null);
-	}
+
+//	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
+//		fsa.generateFile('greetings.txt', 'People to greet: ' +
+//			resource.allContents
+//				.filter(typeof(Greeting))
+//				.map[name]
+//				.join(', '))
+//	}
+
+  def static compileToHtml(Model configurator) {
+
+    '''
+      <html>
+      <head>
+      <style>
+      .selectionArea{margin-left:25px;}
+      h2{margin-left:10px;}
+      h3{margin-left:25px;}
+      </style>
+      </head>
+      <body>
+      <form name=«configurator.root.name» onsubmit="return validateForm()" method="post">
+      <h1>«configurator.root.name»</h1>
+      «FOR feat : configurator.root.subfeature»
+        «IF feat instanceof Mandatory»
+          <h2>«feat.name»</h2>
+            «FOR group : feat.groups»
+              <h3>«group.name»</h3>
+              «FOR groupedFeat : group.grouped»
+                «FOR con : groupedFeat.constrains»
+                  «IF con instanceof BinaryImpl»
+                    BinaryCon
+                  «ENDIF»
+                  «IF con instanceof UnaryImpl»
+                    UnaryCon
+                    «IF con.exp.featureReference.attributes.forall[f |  f instanceof NumberImpl] »
+                        as number: « val n = con.featureReference.attributes.get(0) as Number»
+                        «n.value»
+                    «ENDIF»
+                    «IF con.exp.featureReference.attributes.forall[f |  f instanceof CStringImpl] »
+                      as cString: « val s = con.featureReference.attributes.get(0) as CString»
+                        «s.value»
+                    «ENDIF»
+                  «ENDIF»
+                «ENDFOR»
+                «val g = groupedFeat.attributes.get(0) as Attribute»
+                «IF group instanceof XorImpl»
+                  <input type="radio" class="selectionArea" name="«group.name»" value="«g»">«groupedFeat.name»</br>
+                «ENDIF»
+                «IF group instanceof OrImpl»
+                  <input type="checkbox" class="selectionArea" name="«group.name»" value="«g»">«groupedFeat.name»</br>
+                «ENDIF»
+              «ENDFOR»
+            «ENDFOR»
+        «ENDIF»
+        «IF feat instanceof OptionalImpl»
+          Optional
+          «FOR con : feat.constrains»
+            «IF con instanceof BinaryImpl»
+            «ENDIF»
+            «IF con instanceof UnaryImpl»
+              «IF con.exp.featureReference.attributes.forall[f |  f instanceof NumberImpl] »
+                get(0) as number: « val n = con.featureReference.attributes.get(0) as Number»
+                  «n.value»
+              «ENDIF»
+            «ENDIF»
+          «ENDFOR»
+          <h2>«feat.name»</h2>
+          <input type="checkbox" class="selectionArea" name="«feat.name»" value="«feat.name»">yes (optional)</br>
+        «ENDIF»
+      «ENDFOR»
+      <input type="submit" value="Submit">
+      </form>
+      <script type="text/javascript" src="./configurator.js">
+      </script>
+      </body>
+      </html>
+    '''
+  }
+
+  def static compileToJavascript(Model configurator){
+    '''
+    //check mandatory fields
+      var form = document.forms['«configurator.root.name»'];
+      function validateForm() {
+      «FOR feat : configurator.root.subfeature»
+        «IF feat instanceof Mandatory»
+          «FOR group : feat.groups»
+            «IF group instanceof XorImpl»
+              var «group.name» = form.«group.name».value;
+              if(«group.name» === null || «group.name» === '') {
+                alert('Field «group.name» is mandatory');
+                return false;
+              }
+            «ELSE»
+              var isChecked = false;
+              for (var checkbox in form.«group.name») {
+                if(form.«group.name»[checkbox].checked) {
+                  isChecked = true;
+                  break;
+                }
+              }
+              if (!isChecked) {
+                alert('Field «group.name» is mandatory');
+                return false;
+              }
+            «ENDIF»
+          «ENDFOR»
+        «ENDIF»
+      «ENDFOR»
+
+      //check constraints
+      «FOR feat : configurator.root.subfeature»
+        «FOR group : feat.groups»
+          «FOR grouped : group.grouped»
+            «FOR constraint : grouped.constrains»
+            «var String name = ""»
+            «var String value = ""»
+            «var String op = ""»
+
+              «IF constraint.featureReference.eContainer instanceof XorImpl»
+                «val n = constraint.featureReference.eContainer as XorImpl»
+                «name=n.name»
+              «ENDIF»
+              «IF constraint.featureReference.eContainer instanceof OrImpl»
+                «val n = constraint.featureReference.eContainer as OrImpl»
+                «name=n.name»
+              «ENDIF»
+              «IF constraint.featureReference.eContents.get(0) instanceof NumberImpl»
+                «val c = constraint.featureReference.attributes.get(0) as NumberImpl»
+                «value = c.value.toString»
+              «ENDIF»
+              «IF constraint.featureReference.eContents.get(0) instanceof CString»
+                «val c = constraint.featureReference.attributes.get(0) as CString»
+                «value = c.value»
+              «ENDIF»
+              «IF constraint.featureReference.eContents.get(0) instanceof Range»
+                «val c = constraint.featureReference.attributes.get(0) as Range»
+                «c.lower»«c.upper»
+              «ENDIF»
+              «IF constraint.featureReference.eContents.get(0) instanceof CBoolean»
+                «val c = constraint.featureReference.attributes.get(0) as CBoolean»
+                «c.value»
+              «ENDIF»
+
+              if (form.«name».value !== «value») {
+
+              }
+            «ENDFOR»
+          «ENDFOR»
+        «ENDFOR»
+      «ENDFOR»
+      }
+    '''
+  }
+
+  override void doGenerate(Resource resource, IFileSystemAccess fsa) {
+    resource.allContents.toIterable.filter(typeof(Model)).forEach[
+      it | fsa.generateFile('configurator.html', it.compileToHtml)
+      fsa.generateFile("configurator.js", it.compileToJavascript)
+    ]
+  }
 }
