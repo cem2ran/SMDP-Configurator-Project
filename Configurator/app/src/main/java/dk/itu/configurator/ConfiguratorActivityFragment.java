@@ -4,9 +4,11 @@ import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CheckedTextView;
 import android.widget.FrameLayout;
@@ -99,8 +101,8 @@ public class ConfiguratorActivityFragment extends Fragment {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        if(r != null)
-        configuration = (Model) r.getContents().get(0);
+        if (r != null)
+            configuration = (Model) r.getContents().get(0);
 
         configurator = new ConfiguratorView(getActivity(), configuration);
         View root = configurator.getRootView();
@@ -156,9 +158,9 @@ public class ConfiguratorActivityFragment extends Fragment {
 
 
             return v(RelativeLayout.class, size(MATCH, MATCH),
-                    v(ScrollView.class, list, padding(0,0,0, 70)),
-                    v(TextView.class, text(validConfiguration ? "Configure" : "Constraints not met"), textSize(dip(5)), gravity(CENTER),backgroundColor(Color.LTGRAY), layoutParams(p), padding(18),size(FILL, WRAP))
-                   );
+                    v(ScrollView.class, list, padding(0, 0, 0, 70)),
+                    v(TextView.class, text(validConfiguration ? "Configure" : "Constraints not met"), textSize(dip(5)), gravity(CENTER), backgroundColor(Color.LTGRAY), layoutParams(p), padding(18), size(FILL, WRAP))
+            );
         }
 
         @Override
@@ -168,15 +170,15 @@ public class ConfiguratorActivityFragment extends Fragment {
 
         public ViewNode solitaryView(Solitary solitary) {
 
-            if(solitary instanceof MandatoryImpl){
+            if (solitary instanceof MandatoryImpl) {
                 Iterator<Group> groups = solitary.getGroups().iterator();
-                while(groups.hasNext()){
+                while (groups.hasNext()) {
                     Group group = groups.next();
                     Iterator<Grouped> features = group.getGrouped().iterator();
-                    while(features.hasNext()){
+                    while (features.hasNext()) {
                         Grouped feature = features.next();
                         Iterator<Constrain> constraints = feature.getConstrains().iterator();
-                        
+                        //feature.isSelected()
                     }
                 }
             }
@@ -209,6 +211,8 @@ public class ConfiguratorActivityFragment extends Fragment {
 */
             class ConstrainedAdapter extends ArrayAdapter {
                 List<Grouped> items;
+                Object selectedListener = null;
+
 
                 public ConstrainedAdapter(Context context, int resource, List<Grouped> objects) {
                     super(context, resource, objects);
@@ -223,6 +227,26 @@ public class ConfiguratorActivityFragment extends Fragment {
                     v.setTag(id);
                     v.setMinWidth(parent.getWidth());
                     v.setText(items.get(position).getName());
+                    if (selectedListener == null) {
+                        if (parent instanceof Spinner) {
+                            selectedListener = new AdapterView.OnItemSelectedListener() {
+                                @Override
+                                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                    Grouped feature = items.get(i);
+                                    if(adapterView.isEnabled()) feature.setSelected(!feature.isSelected());
+                                }
+
+                                @Override
+                                public void onNothingSelected(AdapterView<?> adapterView) {}
+                            };
+
+                            ((AdapterView) parent).setOnItemSelectedListener((AdapterView.OnItemSelectedListener) selectedListener);
+
+                        } else {
+                            selectedListener = (AdapterView.OnItemClickListener) (adapterView, view, i, l) -> Log.d("CLICK", "" + i);
+                            ((AdapterView) parent).setOnItemClickListener((AdapterView.OnItemClickListener) selectedListener);
+                        }
+                    }
                     return v;
                 }
 
@@ -234,14 +258,11 @@ public class ConfiguratorActivityFragment extends Fragment {
 
                 @Override
                 public boolean isEnabled(int position) {
-
-                    for (Constrain c : items.get(position).getConstrains()) {
-                        if (constraintViolated(c)) {
-                            String id = Constraints.getPath(items.get(position));
-                            View v = findViewWithTag(id);
-                            if(v != null) ((TextView) v).setTextColor(Color.GRAY);
-                            return false;
-                        }
+                    if (anyConstraintViolated(items.get(position))) {
+                        String id = Constraints.getPath(items.get(position));
+                        View v = findViewWithTag(id);
+                        if (v != null) ((TextView) v).setTextColor(Color.GRAY);
+                        return false;
                     }
                     return true;
                 }
@@ -269,7 +290,7 @@ public class ConfiguratorActivityFragment extends Fragment {
                     group instanceof Or
                             ? v(Spinner.class,
                             adapter((SpinnerAdapter) new ConstrainedAdapter(getContext(), android.R.layout.simple_spinner_dropdown_item, group.getGrouped())))
-                            : v(ListView.class, choiceMode(ListView.CHOICE_MODE_MULTIPLE), size(WRAP, group.getGrouped().size()* 200),
+                            : v(ListView.class, choiceMode(ListView.CHOICE_MODE_MULTIPLE), size(WRAP, group.getGrouped().size() * 200),
                             adapter((ListAdapter) new ConstrainedAdapter(getContext(), android.R.layout.simple_list_item_multiple_choice, group.getGrouped())))
             );
         }
@@ -291,18 +312,13 @@ public class ConfiguratorActivityFragment extends Fragment {
             return false;
         }
 
-        public boolean shouldBeEnabled(Feature feature) {
+        public boolean anyConstraintViolated(Feature feature) {
             for (Constrain c : feature.getConstrains()) {
                 if (constraintViolated(c)) {
-                    /*
-                    String id = Constraints.getPath(feature);
-                    View v = findViewWithTag(id);
-                    ((TextView)v).setTextColor(Color.GRAY);
-                    */
-                    return false;
+                    return true;
                 }
             }
-            return true;
+            return false;
         }
     }
 }

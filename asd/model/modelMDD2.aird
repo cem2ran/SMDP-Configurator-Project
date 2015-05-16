@@ -1581,7 +1581,7 @@
           <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_b_XztPcOEeS2aPNTfH4IfA" red="255" green="252" blue="216"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_YzkmEPcOEeS2aPNTfH4IfA" name="selected : EBoolean = false" tooltipText="&#xA;ERROR : The required feature 'eAttributeType' of 'org.eclipse.emf.ecore.impl.EAttributeImpl@206ce1c5{platform:/resource/asd/model/modelMDD2.ecore#//Grouped/newAttribute}' must be set&#xA;ERROR : The typed element must have a type">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_YzkmEPcOEeS2aPNTfH4IfA" name="selected : EBoolean = false" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="modelMDD2.ecore#//Grouped/selected"/>
           <semanticElements xmi:type="ecore:EAttribute" href="modelMDD2.ecore#//Grouped/selected"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_b_fIcPcOEeS2aPNTfH4IfA" labelAlignment="LEFT">
