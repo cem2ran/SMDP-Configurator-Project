@@ -616,14 +616,19 @@ public class Constraints {
     return _and;
   }
   
-  public static boolean checkRangeValidity(final Feature f) {
-    Attribute _attribute = f.getAttribute();
+  protected static Boolean _constraint(final Grouped it) {
+    return Boolean.valueOf(Constraints.checkRangeValidity(it));
+  }
+  
+  public static boolean checkRangeValidity(final Grouped it) {
+    Attribute _attribute = it.getAttribute();
     if ((_attribute instanceof RangeImpl)) {
-      Attribute _attribute_1 = f.getAttribute();
+      Attribute _attribute_1 = it.getAttribute();
       final RangeImpl atr = ((RangeImpl) _attribute_1);
       int _upper = atr.getUpper();
       int _lower = atr.getLower();
-      return (_upper > _lower);
+      boolean result = (_upper > _lower);
+      return result;
     }
     return false;
   }
@@ -631,6 +636,8 @@ public class Constraints {
   public static Boolean constraint(final EObject exp) {
     if (exp instanceof Binary) {
       return _constraint((Binary)exp);
+    } else if (exp instanceof Grouped) {
+      return _constraint((Grouped)exp);
     } else if (exp instanceof Group) {
       return _constraint((Group)exp);
     } else if (exp != null) {

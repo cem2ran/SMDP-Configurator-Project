@@ -8,6 +8,7 @@ import dk.itu.mdd.configurator.validation.AbstractConfValidator;
 import modelMDD2.Binary;
 import modelMDD2.Feature;
 import modelMDD2.Group;
+import modelMDD2.Grouped;
 import modelMDD2.ModelMDD2Package;
 import modelMDD2.impl.GroupImpl;
 import org.eclipse.xtext.validation.Check;
@@ -60,6 +61,27 @@ public class ConfValidator extends AbstractConfValidator {
     boolean _not = (!_typeCheck);
     if (_not) {
       this.error("Invalid Type comparison", 
+        ModelMDD2Package.Literals.NAMED_ELEMENT__NAME, 
+        ConfValidator.INVALID_NAME);
+    }
+  }
+  
+  @Check
+  public void isEmpty(final Binary exp) {
+    Boolean _constraint = Constraints.constraint(exp);
+    if ((_constraint).booleanValue()) {
+      this.error("Cannot compare these fields", 
+        ModelMDD2Package.Literals.NAMED_ELEMENT__NAME, 
+        ConfValidator.INVALID_NAME);
+    }
+  }
+  
+  @Check
+  public void RangeCheck(final Grouped feat) {
+    boolean _checkRangeValidity = Constraints.checkRangeValidity(feat);
+    boolean _not = (!_checkRangeValidity);
+    if (_not) {
+      this.error("Range is not valid", 
         ModelMDD2Package.Literals.NAMED_ELEMENT__NAME, 
         ConfValidator.INVALID_NAME);
     }

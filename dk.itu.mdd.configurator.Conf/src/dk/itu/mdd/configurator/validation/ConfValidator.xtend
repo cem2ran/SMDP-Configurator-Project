@@ -57,14 +57,22 @@ class ConfValidator extends AbstractConfValidator {
 					ModelMDD2Package.Literals.NAMED_ELEMENT__NAME,
 					INVALID_NAME)	
 	}
-	/*
+	
 	@Check
-	def isEmpty(Mandatory feature){
-		if(Constraints.isEmpty(feature))
-			error('Mandatory feature is incomplete', 
+	def isEmpty(Binary exp){
+		if(Constraints.constraint(exp))
+			error('Cannot compare these fields', 
 					ModelMDD2Package.Literals.NAMED_ELEMENT__NAME,
 					INVALID_NAME)
 	}
-	*/
+	
+	@Check
+	def RangeCheck(Grouped feat){
+		if(!Constraints.checkRangeValidity(feat))
+		error('Range is not valid', 
+					ModelMDD2Package.Literals.NAMED_ELEMENT__NAME,
+					INVALID_NAME)	
+	}
+	
 	
 }

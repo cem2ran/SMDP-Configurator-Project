@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ASCII"?>
+<modelMDD2:Model
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:modelMDD2="http://www.example.org/modelMDD2"
+    xsi:schemaLocation="http://www.example.org/modelMDD2 ../../asd/model/modelMDD2.ecore"
+    name="CarConfigurator">
+  <root name="Car">
+    <subfeature
+        xsi:type="modelMDD2:Mandatory"
+        name="Engine">
+      <groups
+          xsi:type="modelMDD2:Xor"
+          name="Horsepower">
+        <grouped
+            name="HPRange">
+          <attribute
+              xsi:type="modelMDD2:Range"
+              lower="120"
+              upper="140"/>
+        </grouped>
+      </groups>
+    </subfeature>
+  </root>
+</modelMDD2:Model>

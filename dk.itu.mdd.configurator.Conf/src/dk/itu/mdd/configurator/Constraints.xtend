@@ -223,12 +223,17 @@ public class Constraints {
 		return (feature.subfeature.size == 0) && (feature.groups.size == 0)
 	}
 	
-	def static checkRangeValidity(Feature f){			
+	def static dispatch constraint(Grouped it){
+		checkRangeValidity
+	}
+	
+	def static checkRangeValidity(Grouped it){			
 			// First filter all features that are not a RangeImpl. Then check forall, that lower value is less than upper value.
-			//return f.attributes.filter[f.attributes.forall[a  | a instanceof RangeImpl ]].forall[a | (a as RangeImpl).upper > (a as RangeImpl).lower];	
-			if(f.attribute instanceof RangeImpl){
-				val atr = (f.attribute as RangeImpl);
-				return atr.upper > atr.lower
+			//return f.attributes.filter[f.attributes.forall[a  | a instanceof RangeImpl ]].forall[a | (a as RangeImpl).upper > (a as RangeImpl).lower];
+			if(attribute instanceof RangeImpl){
+				val atr = (attribute as RangeImpl);
+				var result = atr.upper > atr.lower
+				return result
 			}
 	}
 	
