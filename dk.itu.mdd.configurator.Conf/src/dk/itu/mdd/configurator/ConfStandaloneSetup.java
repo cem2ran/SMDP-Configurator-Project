@@ -3,6 +3,8 @@
  */
 package dk.itu.mdd.configurator;
 
+import modelMDD2.impl.ModelMDD2PackageImpl;
+
 import com.google.inject.Injector;
 
 /**
@@ -18,7 +20,7 @@ public class ConfStandaloneSetup extends ConfStandaloneSetupGenerated{
 	@Override
 	public Injector createInjectorAndDoEMFRegistration() {
                
-		//dk.itu.mdd.configurator.PackageImpl.init(); 
+		ModelMDD2PackageImpl.init(); 
 		org.eclipse.xtext.common.TerminalsStandaloneSetup.doSetup();
 
 		Injector injector = createInjector();

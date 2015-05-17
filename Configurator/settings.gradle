@@ -1,2 +1,2 @@
-include ':app', ':anvil'
+include ':anvil', ':'
 project(':anvil').projectDir = new File('anvil/library')
