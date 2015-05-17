@@ -20,6 +20,13 @@ import modelMDD2.CString
 import modelMDD2.impl.CStringImpl
 import modelMDD2.Range
 import modelMDD2.CBoolean
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl
+import modelMDD2.ModelMDD2Package
+import org.emfjson.jackson.resource.JsonResourceFactory
+import java.io.FileOutputStream
+import org.eclipse.emf.common.util.URI
+import java.io.File
+import modelMDD2.impl.ModelImpl
 
 /**
  * Generates code from your model files on save.
@@ -35,7 +42,18 @@ class ConfGenerator implements IGenerator {
 //				.map[name]
 //				.join(', '))
 //	}
-
+	
+  def static compileToJson(Model model, String path){
+  		
+		val resourceSet = new ResourceSetImpl();
+			resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("*", new JsonResourceFactory());
+			resourceSet.getPackageRegistry().put(ModelMDD2Package.eNS_URI, ModelMDD2Package.eINSTANCE);
+			
+			val res = resourceSet.createResource(URI.createURI("Configurator.json"));
+			res.getContents().add(model);
+			res.save(new FileOutputStream(new File(path)), null);
+  }	
+	
   def static compileToHtml(Model configurator) {
 
     '''
@@ -62,17 +80,17 @@ class ConfGenerator implements IGenerator {
                   «ENDIF»
                   «IF con instanceof UnaryImpl»
                     UnaryCon
-                    «IF con.exp.featureReference.attributes.forall[f |  f instanceof NumberImpl] »
-                        as number: « val n = con.featureReference.attributes.get(0) as Number»
+                    «IF con.exp.featureReference.attribute instanceof NumberImpl »
+                        as number: « val n = con.featureReference.attribute as Number»
                         «n.value»
                     «ENDIF»
-                    «IF con.exp.featureReference.attributes.forall[f |  f instanceof CStringImpl] »
-                      as cString: « val s = con.featureReference.attributes.get(0) as CString»
+                    «IF con.exp.featureReference.attribute instanceof CStringImpl »
+                      as cString: « val s = con.featureReference.attribute as CString»
                         «s.value»
                     «ENDIF»
                   «ENDIF»
                 «ENDFOR»
-                «val g = groupedFeat.attributes.get(0) as Attribute»
+                «val g = groupedFeat.attribute as Attribute»
                 «IF group instanceof XorImpl»
                   <input type="radio" class="selectionArea" name="«group.name»" value="«g»">«groupedFeat.name»</br>
                 «ENDIF»
@@ -88,8 +106,8 @@ class ConfGenerator implements IGenerator {
             «IF con instanceof BinaryImpl»
             «ENDIF»
             «IF con instanceof UnaryImpl»
-              «IF con.exp.featureReference.attributes.forall[f |  f instanceof NumberImpl] »
-                get(0) as number: « val n = con.featureReference.attributes.get(0) as Number»
+              «IF con.exp.featureReference.attribute instanceof NumberImpl »
+                get(0) as number: « val n = con.featureReference.attribute as Number»
                   «n.value»
               «ENDIF»
             «ENDIF»
@@ -156,19 +174,19 @@ class ConfGenerator implements IGenerator {
                 «name=n.name»
               «ENDIF»
               «IF constraint.featureReference.eContents.get(0) instanceof NumberImpl»
-                «val c = constraint.featureReference.attributes.get(0) as NumberImpl»
+                «val c = constraint.featureReference.attribute as NumberImpl»
                 «value = c.value.toString»
               «ENDIF»
               «IF constraint.featureReference.eContents.get(0) instanceof CString»
-                «val c = constraint.featureReference.attributes.get(0) as CString»
+                «val c = constraint.featureReference.attribute as CString»
                 «value = c.value»
               «ENDIF»
               «IF constraint.featureReference.eContents.get(0) instanceof Range»
-                «val c = constraint.featureReference.attributes.get(0) as Range»
+                «val c = constraint.featureReference.attribute as Range»
                 «c.lower»«c.upper»
               «ENDIF»
               «IF constraint.featureReference.eContents.get(0) instanceof CBoolean»
-                «val c = constraint.featureReference.attributes.get(0) as CBoolean»
+                «val c = constraint.featureReference.attribute as CBoolean»
                 «c.value»
               «ENDIF»
 
@@ -184,9 +202,14 @@ class ConfGenerator implements IGenerator {
   }
 
   override void doGenerate(Resource resource, IFileSystemAccess fsa) {
+  	val model = resource.allContents.head as ModelImpl
+  	compileToJson(model , "/Users/cem2ran/Dropbox/UNI/ITU/2nd Semester/ModelDrivenDevelopment/runtime-EclipseApplication/TestConf/src-gen/"+model.root.name.toLowerCase+"_configurator.json")
+    /* 
     resource.allContents.toIterable.filter(typeof(Model)).forEach[
-      it | fsa.generateFile('configurator.html', it.compileToHtml)
+      fsa.generateFile('configurator.html', it.compileToHtml)
       fsa.generateFile("configurator.js", it.compileToJavascript)
     ]
+    * 
+    */
   }
 }

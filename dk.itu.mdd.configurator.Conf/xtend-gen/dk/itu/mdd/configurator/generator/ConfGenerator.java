@@ -6,9 +6,26 @@ package dk.itu.mdd.configurator.generator;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.util.Map;
+import modelMDD2.Attribute;
+import modelMDD2.CBoolean;
+import modelMDD2.CString;
+import modelMDD2.Constrain;
 import modelMDD2.Feature;
+import modelMDD2.Group;
+import modelMDD2.Grouped;
+import modelMDD2.Mandatory;
+import modelMDD2.Model;
 import modelMDD2.ModelMDD2Package;
+import modelMDD2.Range;
+import modelMDD2.Solitary;
+import modelMDD2.impl.BinaryImpl;
+import modelMDD2.impl.CStringImpl;
 import modelMDD2.impl.ModelImpl;
+import modelMDD2.impl.NumberImpl;
+import modelMDD2.impl.OptionalImpl;
+import modelMDD2.impl.OrImpl;
+import modelMDD2.impl.UnaryImpl;
+import modelMDD2.impl.XorImpl;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.common.util.URI;
@@ -16,6 +33,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.generator.IFileSystemAccess;
 import org.eclipse.xtext.generator.IGenerator;
 import org.eclipse.xtext.xbase.lib.Exceptions;
@@ -29,15 +47,8 @@ import org.emfjson.jackson.resource.JsonResourceFactory;
  */
 @SuppressWarnings("all")
 public class ConfGenerator implements IGenerator {
-  @Override
-  public void doGenerate(final Resource resource, final IFileSystemAccess fsa) {
+  public static void compileToJson(final Model model, final String path) {
     try {
-      TreeIterator<EObject> _allContents = resource.getAllContents();
-      EObject _head = IteratorExtensions.<EObject>head(_allContents);
-      final ModelImpl e = ((ModelImpl) _head);
-      Feature _root = e.getRoot();
-      String _plus = ("Resource: " + _root);
-      System.out.println(_plus);
       final ResourceSetImpl resourceSet = new ResourceSetImpl();
       Resource.Factory.Registry _resourceFactoryRegistry = resourceSet.getResourceFactoryRegistry();
       Map<String, Object> _extensionToFactoryMap = _resourceFactoryRegistry.getExtensionToFactoryMap();
@@ -48,16 +59,517 @@ public class ConfGenerator implements IGenerator {
       URI _createURI = URI.createURI("Configurator.json");
       final Resource res = resourceSet.createResource(_createURI);
       EList<EObject> _contents = res.getContents();
-      _contents.add(e);
-      Feature _root_1 = e.getRoot();
-      String _name = _root_1.getName();
-      String _plus_1 = ("/Users/cem2ran/Dropbox/UNI/ITU/2nd Semester/ModelDrivenDevelopment/runtime-EclipseApplication/TestConf/src-gen/" + _name);
-      String _plus_2 = (_plus_1 + "Configurator.json");
-      File _file = new File(_plus_2);
+      _contents.add(model);
+      File _file = new File(path);
       FileOutputStream _fileOutputStream = new FileOutputStream(_file);
       res.save(_fileOutputStream, null);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
     }
+  }
+  
+  public static CharSequence compileToHtml(final Model configurator) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("<html>");
+    _builder.newLine();
+    _builder.append("<head>");
+    _builder.newLine();
+    _builder.append("<style>");
+    _builder.newLine();
+    _builder.append(".selectionArea{margin-left:25px;}");
+    _builder.newLine();
+    _builder.append("h2{margin-left:10px;}");
+    _builder.newLine();
+    _builder.append("h3{margin-left:25px;}");
+    _builder.newLine();
+    _builder.append("</style>");
+    _builder.newLine();
+    _builder.append("</head>");
+    _builder.newLine();
+    _builder.append("<body>");
+    _builder.newLine();
+    _builder.append("<form name=");
+    Feature _root = configurator.getRoot();
+    String _name = _root.getName();
+    _builder.append(_name, "");
+    _builder.append(" onsubmit=\"return validateForm()\" method=\"post\">");
+    _builder.newLineIfNotEmpty();
+    _builder.append("<h1>");
+    Feature _root_1 = configurator.getRoot();
+    String _name_1 = _root_1.getName();
+    _builder.append(_name_1, "");
+    _builder.append("</h1>");
+    _builder.newLineIfNotEmpty();
+    {
+      Feature _root_2 = configurator.getRoot();
+      EList<Solitary> _subfeature = _root_2.getSubfeature();
+      for(final Solitary feat : _subfeature) {
+        {
+          if ((feat instanceof Mandatory)) {
+            _builder.append("<h2>");
+            String _name_2 = ((Mandatory)feat).getName();
+            _builder.append(_name_2, "");
+            _builder.append("</h2>");
+            _builder.newLineIfNotEmpty();
+            {
+              EList<Group> _groups = ((Mandatory)feat).getGroups();
+              for(final Group group : _groups) {
+                _builder.append("  ");
+                _builder.append("<h3>");
+                String _name_3 = group.getName();
+                _builder.append(_name_3, "  ");
+                _builder.append("</h3>");
+                _builder.newLineIfNotEmpty();
+                {
+                  EList<Grouped> _grouped = group.getGrouped();
+                  for(final Grouped groupedFeat : _grouped) {
+                    {
+                      EList<Constrain> _constrains = groupedFeat.getConstrains();
+                      for(final Constrain con : _constrains) {
+                        {
+                          if ((con instanceof BinaryImpl)) {
+                            _builder.append("  ");
+                            _builder.append("BinaryCon");
+                            _builder.newLine();
+                          }
+                        }
+                        {
+                          if ((con instanceof UnaryImpl)) {
+                            _builder.append("  ");
+                            _builder.append("UnaryCon");
+                            _builder.newLine();
+                            {
+                              Constrain _exp = ((UnaryImpl)con).getExp();
+                              Feature _featureReference = _exp.getFeatureReference();
+                              Attribute _attribute = _featureReference.getAttribute();
+                              if ((_attribute instanceof NumberImpl)) {
+                                _builder.append("  ");
+                                _builder.append("as number: ");
+                                Feature _featureReference_1 = ((UnaryImpl)con).getFeatureReference();
+                                Attribute _attribute_1 = _featureReference_1.getAttribute();
+                                final modelMDD2.Number n = ((modelMDD2.Number) _attribute_1);
+                                _builder.newLineIfNotEmpty();
+                                _builder.append("  ");
+                                int _value = n.getValue();
+                                _builder.append(_value, "  ");
+                                _builder.newLineIfNotEmpty();
+                              }
+                            }
+                            {
+                              Constrain _exp_1 = ((UnaryImpl)con).getExp();
+                              Feature _featureReference_2 = _exp_1.getFeatureReference();
+                              Attribute _attribute_2 = _featureReference_2.getAttribute();
+                              if ((_attribute_2 instanceof CStringImpl)) {
+                                _builder.append("  ");
+                                _builder.append("as cString: ");
+                                Feature _featureReference_3 = ((UnaryImpl)con).getFeatureReference();
+                                Attribute _attribute_3 = _featureReference_3.getAttribute();
+                                final CString s = ((CString) _attribute_3);
+                                _builder.newLineIfNotEmpty();
+                                _builder.append("  ");
+                                _builder.append("  ");
+                                String _value_1 = s.getValue();
+                                _builder.append(_value_1, "    ");
+                                _builder.newLineIfNotEmpty();
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                    _builder.append("  ");
+                    Attribute _attribute_4 = groupedFeat.getAttribute();
+                    final Attribute g = ((Attribute) _attribute_4);
+                    _builder.newLineIfNotEmpty();
+                    {
+                      if ((group instanceof XorImpl)) {
+                        _builder.append("  ");
+                        _builder.append("<input type=\"radio\" class=\"selectionArea\" name=\"");
+                        String _name_4 = ((XorImpl)group).getName();
+                        _builder.append(_name_4, "  ");
+                        _builder.append("\" value=\"");
+                        _builder.append(g, "  ");
+                        _builder.append("\">");
+                        String _name_5 = groupedFeat.getName();
+                        _builder.append(_name_5, "  ");
+                        _builder.append("</br>");
+                        _builder.newLineIfNotEmpty();
+                      }
+                    }
+                    {
+                      if ((group instanceof OrImpl)) {
+                        _builder.append("  ");
+                        _builder.append("<input type=\"checkbox\" class=\"selectionArea\" name=\"");
+                        String _name_6 = ((OrImpl)group).getName();
+                        _builder.append(_name_6, "  ");
+                        _builder.append("\" value=\"");
+                        _builder.append(g, "  ");
+                        _builder.append("\">");
+                        String _name_7 = groupedFeat.getName();
+                        _builder.append(_name_7, "  ");
+                        _builder.append("</br>");
+                        _builder.newLineIfNotEmpty();
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        {
+          if ((feat instanceof OptionalImpl)) {
+            _builder.append("Optional");
+            _builder.newLine();
+            {
+              EList<Constrain> _constrains_1 = ((OptionalImpl)feat).getConstrains();
+              for(final Constrain con_1 : _constrains_1) {
+                {
+                  if ((con_1 instanceof BinaryImpl)) {
+                  }
+                }
+                {
+                  if ((con_1 instanceof UnaryImpl)) {
+                    {
+                      Constrain _exp_2 = ((UnaryImpl)con_1).getExp();
+                      Feature _featureReference_4 = _exp_2.getFeatureReference();
+                      Attribute _attribute_5 = _featureReference_4.getAttribute();
+                      if ((_attribute_5 instanceof NumberImpl)) {
+                        _builder.append("get(0) as number: ");
+                        Feature _featureReference_5 = ((UnaryImpl)con_1).getFeatureReference();
+                        Attribute _attribute_6 = _featureReference_5.getAttribute();
+                        final modelMDD2.Number n_1 = ((modelMDD2.Number) _attribute_6);
+                        _builder.newLineIfNotEmpty();
+                        _builder.append("  ");
+                        int _value_2 = n_1.getValue();
+                        _builder.append(_value_2, "  ");
+                        _builder.newLineIfNotEmpty();
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            _builder.append("<h2>");
+            String _name_8 = ((OptionalImpl)feat).getName();
+            _builder.append(_name_8, "");
+            _builder.append("</h2>");
+            _builder.newLineIfNotEmpty();
+            _builder.append("<input type=\"checkbox\" class=\"selectionArea\" name=\"");
+            String _name_9 = ((OptionalImpl)feat).getName();
+            _builder.append(_name_9, "");
+            _builder.append("\" value=\"");
+            String _name_10 = ((OptionalImpl)feat).getName();
+            _builder.append(_name_10, "");
+            _builder.append("\">yes (optional)</br>");
+            _builder.newLineIfNotEmpty();
+          }
+        }
+      }
+    }
+    _builder.append("<input type=\"submit\" value=\"Submit\">");
+    _builder.newLine();
+    _builder.append("</form>");
+    _builder.newLine();
+    _builder.append("<script type=\"text/javascript\" src=\"./configurator.js\">");
+    _builder.newLine();
+    _builder.append("</script>");
+    _builder.newLine();
+    _builder.append("</body>");
+    _builder.newLine();
+    _builder.append("</html>");
+    _builder.newLine();
+    return _builder;
+  }
+  
+  public static CharSequence compileToJavascript(final Model configurator) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("//check mandatory fields");
+    _builder.newLine();
+    _builder.append("  ");
+    _builder.append("var form = document.forms[\'");
+    Feature _root = configurator.getRoot();
+    String _name = _root.getName();
+    _builder.append(_name, "  ");
+    _builder.append("\'];");
+    _builder.newLineIfNotEmpty();
+    _builder.append("  ");
+    _builder.append("function validateForm() {");
+    _builder.newLine();
+    {
+      Feature _root_1 = configurator.getRoot();
+      EList<Solitary> _subfeature = _root_1.getSubfeature();
+      for(final Solitary feat : _subfeature) {
+        {
+          if ((feat instanceof Mandatory)) {
+            {
+              EList<Group> _groups = ((Mandatory)feat).getGroups();
+              for(final Group group : _groups) {
+                {
+                  if ((group instanceof XorImpl)) {
+                    _builder.append("  ");
+                    _builder.append("var ");
+                    String _name_1 = ((XorImpl)group).getName();
+                    _builder.append(_name_1, "  ");
+                    _builder.append(" = form.");
+                    String _name_2 = ((XorImpl)group).getName();
+                    _builder.append(_name_2, "  ");
+                    _builder.append(".value;");
+                    _builder.newLineIfNotEmpty();
+                    _builder.append("  ");
+                    _builder.append("if(");
+                    String _name_3 = ((XorImpl)group).getName();
+                    _builder.append(_name_3, "  ");
+                    _builder.append(" === null || ");
+                    String _name_4 = ((XorImpl)group).getName();
+                    _builder.append(_name_4, "  ");
+                    _builder.append(" === \'\') {");
+                    _builder.newLineIfNotEmpty();
+                    _builder.append("  ");
+                    _builder.append("  ");
+                    _builder.append("alert(\'Field ");
+                    String _name_5 = ((XorImpl)group).getName();
+                    _builder.append(_name_5, "    ");
+                    _builder.append(" is mandatory\');");
+                    _builder.newLineIfNotEmpty();
+                    _builder.append("  ");
+                    _builder.append("  ");
+                    _builder.append("return false;");
+                    _builder.newLine();
+                    _builder.append("  ");
+                    _builder.append("}");
+                    _builder.newLine();
+                  } else {
+                    _builder.append("  ");
+                    _builder.append("var isChecked = false;");
+                    _builder.newLine();
+                    _builder.append("  ");
+                    _builder.append("for (var checkbox in form.");
+                    String _name_6 = group.getName();
+                    _builder.append(_name_6, "  ");
+                    _builder.append(") {");
+                    _builder.newLineIfNotEmpty();
+                    _builder.append("  ");
+                    _builder.append("  ");
+                    _builder.append("if(form.");
+                    String _name_7 = group.getName();
+                    _builder.append(_name_7, "    ");
+                    _builder.append("[checkbox].checked) {");
+                    _builder.newLineIfNotEmpty();
+                    _builder.append("  ");
+                    _builder.append("    ");
+                    _builder.append("isChecked = true;");
+                    _builder.newLine();
+                    _builder.append("  ");
+                    _builder.append("    ");
+                    _builder.append("break;");
+                    _builder.newLine();
+                    _builder.append("  ");
+                    _builder.append("  ");
+                    _builder.append("}");
+                    _builder.newLine();
+                    _builder.append("  ");
+                    _builder.append("}");
+                    _builder.newLine();
+                    _builder.append("  ");
+                    _builder.append("if (!isChecked) {");
+                    _builder.newLine();
+                    _builder.append("  ");
+                    _builder.append("  ");
+                    _builder.append("alert(\'Field ");
+                    String _name_8 = group.getName();
+                    _builder.append(_name_8, "    ");
+                    _builder.append(" is mandatory\');");
+                    _builder.newLineIfNotEmpty();
+                    _builder.append("  ");
+                    _builder.append("  ");
+                    _builder.append("return false;");
+                    _builder.newLine();
+                    _builder.append("  ");
+                    _builder.append("}");
+                    _builder.newLine();
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    _builder.newLine();
+    _builder.append("  ");
+    _builder.append("//check constraints");
+    _builder.newLine();
+    {
+      Feature _root_2 = configurator.getRoot();
+      EList<Solitary> _subfeature_1 = _root_2.getSubfeature();
+      for(final Solitary feat_1 : _subfeature_1) {
+        {
+          EList<Group> _groups_1 = feat_1.getGroups();
+          for(final Group group_1 : _groups_1) {
+            {
+              EList<Grouped> _grouped = group_1.getGrouped();
+              for(final Grouped grouped : _grouped) {
+                {
+                  EList<Constrain> _constrains = grouped.getConstrains();
+                  for(final Constrain constraint : _constrains) {
+                    _builder.append("  ");
+                    String name = "";
+                    _builder.newLineIfNotEmpty();
+                    _builder.append("  ");
+                    String value = "";
+                    _builder.newLineIfNotEmpty();
+                    _builder.append("  ");
+                    String op = "";
+                    _builder.newLineIfNotEmpty();
+                    _builder.newLine();
+                    {
+                      Feature _featureReference = constraint.getFeatureReference();
+                      EObject _eContainer = _featureReference.eContainer();
+                      if ((_eContainer instanceof XorImpl)) {
+                        _builder.append("  ");
+                        _builder.append("  ");
+                        Feature _featureReference_1 = constraint.getFeatureReference();
+                        EObject _eContainer_1 = _featureReference_1.eContainer();
+                        final XorImpl n = ((XorImpl) _eContainer_1);
+                        _builder.newLineIfNotEmpty();
+                        _builder.append("  ");
+                        _builder.append("  ");
+                        String _name_9 = n.getName();
+                        _builder.append(name = _name_9, "    ");
+                        _builder.newLineIfNotEmpty();
+                      }
+                    }
+                    {
+                      Feature _featureReference_2 = constraint.getFeatureReference();
+                      EObject _eContainer_2 = _featureReference_2.eContainer();
+                      if ((_eContainer_2 instanceof OrImpl)) {
+                        _builder.append("  ");
+                        _builder.append("  ");
+                        Feature _featureReference_3 = constraint.getFeatureReference();
+                        EObject _eContainer_3 = _featureReference_3.eContainer();
+                        final OrImpl n_1 = ((OrImpl) _eContainer_3);
+                        _builder.newLineIfNotEmpty();
+                        _builder.append("  ");
+                        _builder.append("  ");
+                        String _name_10 = n_1.getName();
+                        _builder.append(name = _name_10, "    ");
+                        _builder.newLineIfNotEmpty();
+                      }
+                    }
+                    {
+                      Feature _featureReference_4 = constraint.getFeatureReference();
+                      EList<EObject> _eContents = _featureReference_4.eContents();
+                      EObject _get = _eContents.get(0);
+                      if ((_get instanceof NumberImpl)) {
+                        _builder.append("  ");
+                        _builder.append("  ");
+                        Feature _featureReference_5 = constraint.getFeatureReference();
+                        Attribute _attribute = _featureReference_5.getAttribute();
+                        final NumberImpl c = ((NumberImpl) _attribute);
+                        _builder.newLineIfNotEmpty();
+                        _builder.append("  ");
+                        _builder.append("  ");
+                        int _value = c.getValue();
+                        String _string = Integer.valueOf(_value).toString();
+                        _builder.append(value = _string, "    ");
+                        _builder.newLineIfNotEmpty();
+                      }
+                    }
+                    {
+                      Feature _featureReference_6 = constraint.getFeatureReference();
+                      EList<EObject> _eContents_1 = _featureReference_6.eContents();
+                      EObject _get_1 = _eContents_1.get(0);
+                      if ((_get_1 instanceof CString)) {
+                        _builder.append("  ");
+                        _builder.append("  ");
+                        Feature _featureReference_7 = constraint.getFeatureReference();
+                        Attribute _attribute_1 = _featureReference_7.getAttribute();
+                        final CString c_1 = ((CString) _attribute_1);
+                        _builder.newLineIfNotEmpty();
+                        _builder.append("  ");
+                        _builder.append("  ");
+                        String _value_1 = c_1.getValue();
+                        _builder.append(value = _value_1, "    ");
+                        _builder.newLineIfNotEmpty();
+                      }
+                    }
+                    {
+                      Feature _featureReference_8 = constraint.getFeatureReference();
+                      EList<EObject> _eContents_2 = _featureReference_8.eContents();
+                      EObject _get_2 = _eContents_2.get(0);
+                      if ((_get_2 instanceof Range)) {
+                        _builder.append("  ");
+                        _builder.append("  ");
+                        Feature _featureReference_9 = constraint.getFeatureReference();
+                        Attribute _attribute_2 = _featureReference_9.getAttribute();
+                        final Range c_2 = ((Range) _attribute_2);
+                        _builder.newLineIfNotEmpty();
+                        _builder.append("  ");
+                        _builder.append("  ");
+                        int _lower = c_2.getLower();
+                        _builder.append(_lower, "    ");
+                        int _upper = c_2.getUpper();
+                        _builder.append(_upper, "    ");
+                        _builder.newLineIfNotEmpty();
+                      }
+                    }
+                    {
+                      Feature _featureReference_10 = constraint.getFeatureReference();
+                      EList<EObject> _eContents_3 = _featureReference_10.eContents();
+                      EObject _get_3 = _eContents_3.get(0);
+                      if ((_get_3 instanceof CBoolean)) {
+                        _builder.append("  ");
+                        _builder.append("  ");
+                        Feature _featureReference_11 = constraint.getFeatureReference();
+                        Attribute _attribute_3 = _featureReference_11.getAttribute();
+                        final CBoolean c_3 = ((CBoolean) _attribute_3);
+                        _builder.newLineIfNotEmpty();
+                        _builder.append("  ");
+                        _builder.append("  ");
+                        boolean _isValue = c_3.isValue();
+                        _builder.append(_isValue, "    ");
+                        _builder.newLineIfNotEmpty();
+                      }
+                    }
+                    _builder.newLine();
+                    _builder.append("  ");
+                    _builder.append("  ");
+                    _builder.append("if (form.");
+                    _builder.append(name, "    ");
+                    _builder.append(".value !== ");
+                    _builder.append(value, "    ");
+                    _builder.append(") {");
+                    _builder.newLineIfNotEmpty();
+                    _builder.newLine();
+                    _builder.append("  ");
+                    _builder.append("  ");
+                    _builder.append("}");
+                    _builder.newLine();
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    _builder.append("  ");
+    _builder.append("}");
+    _builder.newLine();
+    return _builder;
+  }
+  
+  @Override
+  public void doGenerate(final Resource resource, final IFileSystemAccess fsa) {
+    TreeIterator<EObject> _allContents = resource.getAllContents();
+    EObject _head = IteratorExtensions.<EObject>head(_allContents);
+    final ModelImpl model = ((ModelImpl) _head);
+    Feature _root = model.getRoot();
+    String _name = _root.getName();
+    String _lowerCase = _name.toLowerCase();
+    String _plus = ("/Users/cem2ran/Dropbox/UNI/ITU/2nd Semester/ModelDrivenDevelopment/runtime-EclipseApplication/TestConf/src-gen/" + _lowerCase);
+    String _plus_1 = (_plus + "_configurator.json");
+    ConfGenerator.compileToJson(model, _plus_1);
   }
 }
