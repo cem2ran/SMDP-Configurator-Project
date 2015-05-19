@@ -4,6 +4,7 @@ buildscript {
     }
     dependencies {
         classpath 'me.tatarka:gradle-retrolambda:3.0.1'
+        classpath 'com.github.jcandksolutions.gradle:android-unit-test:2.1.1'
     }
 }
 
@@ -56,4 +57,5 @@ dependencies {
     compile 'org.eclipse.emf:org.eclipse.emf.ecore:2.11.0-v20150123-0347'
     compile 'org.eclipse.emf:org.eclipse.emf.common:2.11.0-v20150123-0347'
     compile 'org.eclipse.emf:org.eclipse.emf.ecore.xmi:2.11.0-v20150123-0347'
+    testCompile 'junit:junit:4.12'
 }

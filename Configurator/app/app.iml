@@ -88,18 +88,18 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 22 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="model" level="project" />
+    <orderEntry type="library" exported="" name="appcompat-v7-22.0.0" level="project" />
+    <orderEntry type="library" exported="" name="jackson-core-2.4.2" level="project" />
+    <orderEntry type="library" exported="" name="emfjson-core-0.10.0" level="project" />
+    <orderEntry type="library" exported="" name="org.eclipse.emf.ecore-2.11.0-v20150123-0347" level="project" />
+    <orderEntry type="library" exported="" name="org.eclipse.emf.common-2.11.0-v20150123-0347" level="project" />
     <orderEntry type="library" exported="" name="emfjson-jackson-0.10.0" level="project" />
     <orderEntry type="library" exported="" name="support-v4-22.0.0" level="project" />
     <orderEntry type="library" exported="" name="jackson-databind-2.4.2" level="project" />
-    <orderEntry type="library" exported="" name="jackson-core-2.4.2" level="project" />
-    <orderEntry type="library" exported="" name="appcompat-v7-22.0.0" level="project" />
-    <orderEntry type="library" exported="" name="org.eclipse.emf.common-2.11.0-v20150123-0347" level="project" />
-    <orderEntry type="library" exported="" name="jackson-annotations-2.4.0" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-22.0.0" level="project" />
-    <orderEntry type="library" exported="" name="emfjson-core-0.10.0" level="project" />
-    <orderEntry type="library" exported="" name="anvil-0.0.6" level="project" />
+    <orderEntry type="library" exported="" name="jackson-annotations-2.4.0" level="project" />
+    <orderEntry type="library" exported="" name="model" level="project" />
     <orderEntry type="library" exported="" name="org.eclipse.emf.ecore.xmi-2.11.0-v20150123-0347" level="project" />
-    <orderEntry type="library" exported="" name="org.eclipse.emf.ecore-2.11.0-v20150123-0347" level="project" />
+    <orderEntry type="library" exported="" name="anvil-0.0.6" level="project" />
   </component>
 </module>
