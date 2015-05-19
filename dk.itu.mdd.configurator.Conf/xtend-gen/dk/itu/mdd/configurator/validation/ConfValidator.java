@@ -67,10 +67,11 @@ public class ConfValidator extends AbstractConfValidator {
   }
   
   @Check
-  public void isEmpty(final Binary exp) {
+  public void validationCheck(final Binary exp) {
     Boolean _constraint = Constraints.constraint(exp);
-    if ((_constraint).booleanValue()) {
-      this.error("Cannot compare these fields", 
+    boolean _not = (!(_constraint).booleanValue());
+    if (_not) {
+      this.error("Cannot compare those values", 
         ModelMDD2Package.Literals.NAMED_ELEMENT__NAME, 
         ConfValidator.INVALID_NAME);
     }

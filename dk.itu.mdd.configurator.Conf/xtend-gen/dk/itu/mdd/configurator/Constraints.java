@@ -5,12 +5,15 @@ import java.util.Arrays;
 import modelMDD2.Attribute;
 import modelMDD2.Binary;
 import modelMDD2.BinaryOperator;
+import modelMDD2.CBoolean;
+import modelMDD2.CString;
 import modelMDD2.ComparativeOperator;
 import modelMDD2.Constrain;
 import modelMDD2.Feature;
 import modelMDD2.Group;
 import modelMDD2.Grouped;
 import modelMDD2.Mandatory;
+import modelMDD2.Range;
 import modelMDD2.Solitary;
 import modelMDD2.impl.ConstrainImpl;
 import modelMDD2.impl.FeatureImpl;
@@ -66,11 +69,34 @@ public class Constraints {
     return _xifexpression;
   }
   
+  public static Boolean checkAttributesType(final Attribute left, final Attribute right) {
+    if ((((((left instanceof modelMDD2.Number) && (right instanceof modelMDD2.Number)) || ((left instanceof CString) && (right instanceof CString))) || ((left instanceof Range) && (right instanceof Range))) || ((left instanceof CBoolean) && (right instanceof CBoolean)))) {
+      return Boolean.valueOf(true);
+    } else {
+      return Boolean.valueOf(false);
+    }
+  }
+  
   protected static Boolean _constraint(final Binary exp) {
     Boolean _xblockexpression = null;
     {
       final Constrain lexp = exp.getLeftExp();
       final Constrain rexp = exp.getRightExp();
+      boolean _and = false;
+      Feature _featureReference = ((ConstrainImpl) rexp).getFeatureReference();
+      if (!(_featureReference instanceof Feature)) {
+        _and = false;
+      } else {
+        Feature _featureReference_1 = ((ConstrainImpl) lexp).getFeatureReference();
+        _and = (_featureReference_1 instanceof Feature);
+      }
+      if (_and) {
+        Feature _featureReference_2 = ((ConstrainImpl) lexp).getFeatureReference();
+        final Attribute left = ((Feature) ((Grouped) _featureReference_2)).getAttribute();
+        Feature _featureReference_3 = ((ConstrainImpl) rexp).getFeatureReference();
+        final Attribute right = ((Feature) ((Grouped) _featureReference_3)).getAttribute();
+        return Constraints.checkAttributesType(left, right);
+      }
       Boolean _switchResult = null;
       BinaryOperator _operator = exp.getOperator();
       String _name = _operator.getName();
@@ -80,421 +106,489 @@ public class Constraints {
       switch (_string) {
         case "lessThan":
           Boolean _xifexpression = null;
-          boolean _and = false;
+          boolean _and_1 = false;
           Attribute _constrainValue = ((ConstrainImpl) lexp).getConstrainValue();
           if (!(_constrainValue instanceof modelMDD2.Number)) {
-            _and = false;
+            _and_1 = false;
           } else {
-            Feature _featureReference = ((ConstrainImpl) rexp).getFeatureReference();
-            _and = (_featureReference instanceof Feature);
+            Attribute _constrainValue_1 = ((ConstrainImpl) rexp).getConstrainValue();
+            _and_1 = (_constrainValue_1 instanceof modelMDD2.Number);
           }
-          if (_and) {
+          if (_and_1) {
             Boolean _xblockexpression_1 = null;
             {
-              Attribute _constrainValue_1 = ((ConstrainImpl) lexp).getConstrainValue();
-              final int lval = ((modelMDD2.Number) _constrainValue_1).getValue();
-              Feature _featureReference_1 = ((ConstrainImpl) rexp).getFeatureReference();
-              final Grouped rval = ((Grouped) _featureReference_1);
-              boolean _isSelected = rval.isSelected();
-              if (_isSelected) {
-                Attribute _attribute = ((Feature) rval).getAttribute();
-                int _value = ((modelMDD2.Number) _attribute).getValue();
-                boolean _lessThan = (lval < _value);
-                new Boolean(_lessThan);
-              }
-              _xblockexpression_1 = new Boolean(false);
+              Attribute _constrainValue_2 = ((ConstrainImpl) lexp).getConstrainValue();
+              final int lval = ((modelMDD2.Number) _constrainValue_2).getValue();
+              Attribute _constrainValue_3 = ((ConstrainImpl) rexp).getConstrainValue();
+              final int rval = ((modelMDD2.Number) _constrainValue_3).getValue();
+              _xblockexpression_1 = new Boolean((lval < rval));
             }
             _xifexpression = _xblockexpression_1;
           } else {
             Boolean _xifexpression_1 = null;
-            boolean _and_1 = false;
-            Feature _featureReference_1 = ((ConstrainImpl) lexp).getFeatureReference();
-            if (!(_featureReference_1 instanceof Feature)) {
-              _and_1 = false;
-            } else {
-              Attribute _constrainValue_1 = ((ConstrainImpl) rexp).getConstrainValue();
-              _and_1 = (_constrainValue_1 instanceof modelMDD2.Number);
-            }
-            if (_and_1) {
-              Boolean _xblockexpression_2 = null;
-              {
-                Attribute _constrainValue_2 = ((ConstrainImpl) rexp).getConstrainValue();
-                final int rval = ((modelMDD2.Number) _constrainValue_2).getValue();
-                Feature _featureReference_2 = ((ConstrainImpl) lexp).getFeatureReference();
-                final Grouped lval = ((Grouped) _featureReference_2);
-                Boolean _xifexpression_2 = null;
-                boolean _isSelected = lval.isSelected();
-                if (_isSelected) {
-                  Attribute _attribute = ((Feature) lval).getAttribute();
-                  int _value = ((modelMDD2.Number) _attribute).getValue();
-                  boolean _lessThan = (_value < rval);
-                  _xifexpression_2 = new Boolean(_lessThan);
-                } else {
-                  _xifexpression_2 = new Boolean(false);
+            Feature _featureReference_4 = ((ConstrainImpl) rexp).getFeatureReference();
+            if ((_featureReference_4 instanceof Feature)) {
+              Boolean _xifexpression_2 = null;
+              Attribute _constrainValue_2 = ((ConstrainImpl) lexp).getConstrainValue();
+              Feature _featureReference_5 = ((ConstrainImpl) rexp).getFeatureReference();
+              Attribute _attribute = ((Feature) ((Grouped) _featureReference_5)).getAttribute();
+              Boolean _checkAttributesType = Constraints.checkAttributesType(_constrainValue_2, _attribute);
+              boolean _not = (!(_checkAttributesType).booleanValue());
+              if (_not) {
+                _xifexpression_2 = new Boolean(false);
+              } else {
+                Boolean _xblockexpression_2 = null;
+                {
+                  Attribute _constrainValue_3 = ((ConstrainImpl) lexp).getConstrainValue();
+                  final int lval = ((modelMDD2.Number) _constrainValue_3).getValue();
+                  Feature _featureReference_6 = ((ConstrainImpl) rexp).getFeatureReference();
+                  final Grouped rval = ((Grouped) _featureReference_6);
+                  Attribute _attribute_1 = ((Feature) rval).getAttribute();
+                  int _value = ((modelMDD2.Number) _attribute_1).getValue();
+                  boolean _lessThan = (lval < _value);
+                  _xblockexpression_2 = new Boolean(_lessThan);
                 }
-                _xblockexpression_2 = _xifexpression_2;
+                _xifexpression_2 = _xblockexpression_2;
               }
-              _xifexpression_1 = _xblockexpression_2;
+              _xifexpression_1 = _xifexpression_2;
+            } else {
+              Boolean _xifexpression_3 = null;
+              Feature _featureReference_6 = ((ConstrainImpl) lexp).getFeatureReference();
+              if ((_featureReference_6 instanceof Feature)) {
+                Boolean _xifexpression_4 = null;
+                Attribute _constrainValue_3 = ((ConstrainImpl) rexp).getConstrainValue();
+                Feature _featureReference_7 = ((ConstrainImpl) lexp).getFeatureReference();
+                Attribute _attribute_1 = ((Feature) ((Grouped) _featureReference_7)).getAttribute();
+                Boolean _checkAttributesType_1 = Constraints.checkAttributesType(_constrainValue_3, _attribute_1);
+                boolean _not_1 = (!(_checkAttributesType_1).booleanValue());
+                if (_not_1) {
+                  _xifexpression_4 = new Boolean(false);
+                } else {
+                  Boolean _xblockexpression_3 = null;
+                  {
+                    Attribute _constrainValue_4 = ((ConstrainImpl) rexp).getConstrainValue();
+                    final int rval = ((modelMDD2.Number) _constrainValue_4).getValue();
+                    Feature _featureReference_8 = ((ConstrainImpl) lexp).getFeatureReference();
+                    final Grouped lval = ((Grouped) _featureReference_8);
+                    Attribute _attribute_2 = ((Feature) lval).getAttribute();
+                    int _value = ((modelMDD2.Number) _attribute_2).getValue();
+                    boolean _lessThan = (_value < rval);
+                    _xblockexpression_3 = new Boolean(_lessThan);
+                  }
+                  _xifexpression_4 = _xblockexpression_3;
+                }
+                _xifexpression_3 = _xifexpression_4;
+              }
+              _xifexpression_1 = _xifexpression_3;
             }
             _xifexpression = _xifexpression_1;
           }
           _switchResult = _xifexpression;
           break;
         case "greaterThan":
-          Boolean _xifexpression_2 = null;
+          Boolean _xifexpression_5 = null;
           boolean _and_2 = false;
-          Attribute _constrainValue_2 = ((ConstrainImpl) lexp).getConstrainValue();
-          if (!(_constrainValue_2 instanceof modelMDD2.Number)) {
-            _and_2 = false;
-          } else {
-            Feature _featureReference_2 = ((ConstrainImpl) rexp).getFeatureReference();
-            _and_2 = (_featureReference_2 instanceof Feature);
-          }
-          if (_and_2) {
-            Boolean _xblockexpression_3 = null;
-            {
-              Attribute _constrainValue_3 = ((ConstrainImpl) lexp).getConstrainValue();
-              final int lval = ((modelMDD2.Number) _constrainValue_3).getValue();
-              Feature _featureReference_3 = ((ConstrainImpl) rexp).getFeatureReference();
-              final Grouped rval = ((Grouped) _featureReference_3);
-              boolean _isSelected = rval.isSelected();
-              if (_isSelected) {
-                Attribute _attribute = ((Feature) rval).getAttribute();
-                int _value = ((modelMDD2.Number) _attribute).getValue();
-                boolean _greaterThan = (lval > _value);
-                new Boolean(_greaterThan);
-              }
-              _xblockexpression_3 = new Boolean(false);
-            }
-            _xifexpression_2 = _xblockexpression_3;
-          } else {
-            Boolean _xifexpression_3 = null;
-            boolean _and_3 = false;
-            Feature _featureReference_3 = ((ConstrainImpl) lexp).getFeatureReference();
-            if (!(_featureReference_3 instanceof Feature)) {
-              _and_3 = false;
-            } else {
-              Attribute _constrainValue_3 = ((ConstrainImpl) rexp).getConstrainValue();
-              _and_3 = (_constrainValue_3 instanceof modelMDD2.Number);
-            }
-            if (_and_3) {
-              Boolean _xblockexpression_4 = null;
-              {
-                Attribute _constrainValue_4 = ((ConstrainImpl) rexp).getConstrainValue();
-                final int rval = ((modelMDD2.Number) _constrainValue_4).getValue();
-                Feature _featureReference_4 = ((ConstrainImpl) lexp).getFeatureReference();
-                final Grouped lval = ((Grouped) _featureReference_4);
-                Boolean _xifexpression_4 = null;
-                boolean _isSelected = lval.isSelected();
-                if (_isSelected) {
-                  Attribute _attribute = ((Feature) lval).getAttribute();
-                  int _value = ((modelMDD2.Number) _attribute).getValue();
-                  boolean _greaterThan = (_value > rval);
-                  _xifexpression_4 = new Boolean(_greaterThan);
-                } else {
-                  _xifexpression_4 = new Boolean(false);
-                }
-                _xblockexpression_4 = _xifexpression_4;
-              }
-              _xifexpression_3 = _xblockexpression_4;
-            }
-            _xifexpression_2 = _xifexpression_3;
-          }
-          _switchResult = _xifexpression_2;
-          break;
-        case "lessOrEquals":
-          Boolean _xifexpression_4 = null;
-          boolean _and_4 = false;
           Attribute _constrainValue_4 = ((ConstrainImpl) lexp).getConstrainValue();
           if (!(_constrainValue_4 instanceof modelMDD2.Number)) {
-            _and_4 = false;
+            _and_2 = false;
           } else {
-            Feature _featureReference_4 = ((ConstrainImpl) rexp).getFeatureReference();
-            _and_4 = (_featureReference_4 instanceof Feature);
+            Attribute _constrainValue_5 = ((ConstrainImpl) rexp).getConstrainValue();
+            _and_2 = (_constrainValue_5 instanceof modelMDD2.Number);
           }
-          if (_and_4) {
-            Boolean _xblockexpression_5 = null;
+          if (_and_2) {
+            Boolean _xblockexpression_4 = null;
             {
-              Attribute _constrainValue_5 = ((ConstrainImpl) lexp).getConstrainValue();
-              final int lval = ((modelMDD2.Number) _constrainValue_5).getValue();
-              Feature _featureReference_5 = ((ConstrainImpl) rexp).getFeatureReference();
-              final Grouped rval = ((Grouped) _featureReference_5);
-              boolean _isSelected = rval.isSelected();
-              if (_isSelected) {
-                Attribute _attribute = ((Feature) rval).getAttribute();
-                int _value = ((modelMDD2.Number) _attribute).getValue();
-                boolean _lessEqualsThan = (lval <= _value);
-                new Boolean(_lessEqualsThan);
-              }
-              _xblockexpression_5 = new Boolean(false);
-            }
-            _xifexpression_4 = _xblockexpression_5;
-          } else {
-            Boolean _xifexpression_5 = null;
-            boolean _and_5 = false;
-            Feature _featureReference_5 = ((ConstrainImpl) lexp).getFeatureReference();
-            if (!(_featureReference_5 instanceof Feature)) {
-              _and_5 = false;
-            } else {
-              Attribute _constrainValue_5 = ((ConstrainImpl) rexp).getConstrainValue();
-              _and_5 = (_constrainValue_5 instanceof modelMDD2.Number);
-            }
-            if (_and_5) {
-              Boolean _xblockexpression_6 = null;
-              {
-                Attribute _constrainValue_6 = ((ConstrainImpl) rexp).getConstrainValue();
-                final int rval = ((modelMDD2.Number) _constrainValue_6).getValue();
-                Feature _featureReference_6 = ((ConstrainImpl) lexp).getFeatureReference();
-                final Grouped lval = ((Grouped) _featureReference_6);
-                Boolean _xifexpression_6 = null;
-                boolean _isSelected = lval.isSelected();
-                if (_isSelected) {
-                  Attribute _attribute = ((Feature) lval).getAttribute();
-                  int _value = ((modelMDD2.Number) _attribute).getValue();
-                  boolean _lessEqualsThan = (_value <= rval);
-                  _xifexpression_6 = new Boolean(_lessEqualsThan);
-                } else {
-                  _xifexpression_6 = new Boolean(false);
-                }
-                _xblockexpression_6 = _xifexpression_6;
-              }
-              _xifexpression_5 = _xblockexpression_6;
-            }
-            _xifexpression_4 = _xifexpression_5;
-          }
-          _switchResult = _xifexpression_4;
-          break;
-        case "greaterOrEquals":
-          Boolean _xifexpression_6 = null;
-          boolean _and_6 = false;
-          Attribute _constrainValue_6 = ((ConstrainImpl) lexp).getConstrainValue();
-          if (!(_constrainValue_6 instanceof modelMDD2.Number)) {
-            _and_6 = false;
-          } else {
-            Feature _featureReference_6 = ((ConstrainImpl) rexp).getFeatureReference();
-            _and_6 = (_featureReference_6 instanceof Feature);
-          }
-          if (_and_6) {
-            Boolean _xblockexpression_7 = null;
-            {
-              Attribute _constrainValue_7 = ((ConstrainImpl) lexp).getConstrainValue();
-              final int lval = ((modelMDD2.Number) _constrainValue_7).getValue();
-              Feature _featureReference_7 = ((ConstrainImpl) rexp).getFeatureReference();
-              final Grouped rval = ((Grouped) _featureReference_7);
-              boolean _isSelected = rval.isSelected();
-              if (_isSelected) {
-                Attribute _attribute = ((Feature) rval).getAttribute();
-                int _value = ((modelMDD2.Number) _attribute).getValue();
-                boolean _greaterEqualsThan = (lval >= _value);
-                new Boolean(_greaterEqualsThan);
-              }
-              _xblockexpression_7 = new Boolean(false);
-            }
-            _xifexpression_6 = _xblockexpression_7;
-          } else {
-            Boolean _xifexpression_7 = null;
-            boolean _and_7 = false;
-            Feature _featureReference_7 = ((ConstrainImpl) lexp).getFeatureReference();
-            if (!(_featureReference_7 instanceof Feature)) {
-              _and_7 = false;
-            } else {
+              Attribute _constrainValue_6 = ((ConstrainImpl) lexp).getConstrainValue();
+              final int lval = ((modelMDD2.Number) _constrainValue_6).getValue();
               Attribute _constrainValue_7 = ((ConstrainImpl) rexp).getConstrainValue();
-              _and_7 = (_constrainValue_7 instanceof modelMDD2.Number);
+              final int rval = ((modelMDD2.Number) _constrainValue_7).getValue();
+              _xblockexpression_4 = new Boolean((lval > rval));
             }
-            if (_and_7) {
-              Boolean _xblockexpression_8 = null;
-              {
-                Attribute _constrainValue_8 = ((ConstrainImpl) rexp).getConstrainValue();
-                final int rval = ((modelMDD2.Number) _constrainValue_8).getValue();
-                Feature _featureReference_8 = ((ConstrainImpl) lexp).getFeatureReference();
-                final Grouped lval = ((Grouped) _featureReference_8);
-                Boolean _xifexpression_8 = null;
-                boolean _isSelected = lval.isSelected();
-                if (_isSelected) {
-                  Attribute _attribute = ((Feature) lval).getAttribute();
-                  int _value = ((modelMDD2.Number) _attribute).getValue();
-                  boolean _greaterEqualsThan = (_value >= rval);
-                  _xifexpression_8 = new Boolean(_greaterEqualsThan);
-                } else {
-                  _xifexpression_8 = new Boolean(false);
+            _xifexpression_5 = _xblockexpression_4;
+          } else {
+            Boolean _xifexpression_6 = null;
+            Feature _featureReference_8 = ((ConstrainImpl) rexp).getFeatureReference();
+            if ((_featureReference_8 instanceof Feature)) {
+              Boolean _xifexpression_7 = null;
+              Attribute _constrainValue_6 = ((ConstrainImpl) lexp).getConstrainValue();
+              Feature _featureReference_9 = ((ConstrainImpl) rexp).getFeatureReference();
+              Attribute _attribute_2 = ((Feature) ((Grouped) _featureReference_9)).getAttribute();
+              Boolean _checkAttributesType_2 = Constraints.checkAttributesType(_constrainValue_6, _attribute_2);
+              boolean _not_2 = (!(_checkAttributesType_2).booleanValue());
+              if (_not_2) {
+                _xifexpression_7 = new Boolean(false);
+              } else {
+                Boolean _xblockexpression_5 = null;
+                {
+                  Attribute _constrainValue_7 = ((ConstrainImpl) lexp).getConstrainValue();
+                  final int lval = ((modelMDD2.Number) _constrainValue_7).getValue();
+                  Feature _featureReference_10 = ((ConstrainImpl) rexp).getFeatureReference();
+                  final Grouped rval = ((Grouped) _featureReference_10);
+                  Attribute _attribute_3 = ((Feature) rval).getAttribute();
+                  int _value = ((modelMDD2.Number) _attribute_3).getValue();
+                  boolean _greaterThan = (lval > _value);
+                  _xblockexpression_5 = new Boolean(_greaterThan);
                 }
-                _xblockexpression_8 = _xifexpression_8;
+                _xifexpression_7 = _xblockexpression_5;
               }
-              _xifexpression_7 = _xblockexpression_8;
+              _xifexpression_6 = _xifexpression_7;
+            } else {
+              Boolean _xifexpression_8 = null;
+              Feature _featureReference_10 = ((ConstrainImpl) lexp).getFeatureReference();
+              if ((_featureReference_10 instanceof Feature)) {
+                Boolean _xifexpression_9 = null;
+                Attribute _constrainValue_7 = ((ConstrainImpl) rexp).getConstrainValue();
+                Feature _featureReference_11 = ((ConstrainImpl) lexp).getFeatureReference();
+                Attribute _attribute_3 = ((Feature) ((Grouped) _featureReference_11)).getAttribute();
+                Boolean _checkAttributesType_3 = Constraints.checkAttributesType(_constrainValue_7, _attribute_3);
+                boolean _not_3 = (!(_checkAttributesType_3).booleanValue());
+                if (_not_3) {
+                  _xifexpression_9 = new Boolean(false);
+                } else {
+                  Boolean _xblockexpression_6 = null;
+                  {
+                    Attribute _constrainValue_8 = ((ConstrainImpl) rexp).getConstrainValue();
+                    final int rval = ((modelMDD2.Number) _constrainValue_8).getValue();
+                    Feature _featureReference_12 = ((ConstrainImpl) lexp).getFeatureReference();
+                    final Grouped lval = ((Grouped) _featureReference_12);
+                    Attribute _attribute_4 = ((Feature) lval).getAttribute();
+                    int _value = ((modelMDD2.Number) _attribute_4).getValue();
+                    boolean _greaterThan = (_value > rval);
+                    _xblockexpression_6 = new Boolean(_greaterThan);
+                  }
+                  _xifexpression_9 = _xblockexpression_6;
+                }
+                _xifexpression_8 = _xifexpression_9;
+              }
+              _xifexpression_6 = _xifexpression_8;
             }
-            _xifexpression_6 = _xifexpression_7;
+            _xifexpression_5 = _xifexpression_6;
           }
-          _switchResult = _xifexpression_6;
+          _switchResult = _xifexpression_5;
           break;
-        case "equals":
-          Boolean _xifexpression_8 = null;
-          boolean _and_8 = false;
+        case "lessOrEquals":
+          Boolean _xifexpression_10 = null;
+          boolean _and_3 = false;
           Attribute _constrainValue_8 = ((ConstrainImpl) lexp).getConstrainValue();
           if (!(_constrainValue_8 instanceof modelMDD2.Number)) {
-            _and_8 = false;
+            _and_3 = false;
           } else {
-            Feature _featureReference_8 = ((ConstrainImpl) rexp).getFeatureReference();
-            _and_8 = (_featureReference_8 instanceof Feature);
+            Attribute _constrainValue_9 = ((ConstrainImpl) rexp).getConstrainValue();
+            _and_3 = (_constrainValue_9 instanceof modelMDD2.Number);
           }
-          if (_and_8) {
-            Boolean _xblockexpression_9 = null;
+          if (_and_3) {
+            Boolean _xblockexpression_7 = null;
             {
-              Attribute _constrainValue_9 = ((ConstrainImpl) lexp).getConstrainValue();
-              final int lval = ((modelMDD2.Number) _constrainValue_9).getValue();
-              Feature _featureReference_9 = ((ConstrainImpl) rexp).getFeatureReference();
-              final Grouped rval = ((Grouped) _featureReference_9);
-              boolean _isSelected = rval.isSelected();
-              if (_isSelected) {
-                Attribute _attribute = ((Feature) rval).getAttribute();
-                int _value = ((modelMDD2.Number) _attribute).getValue();
-                boolean _equals = (lval == _value);
-                new Boolean(_equals);
-              }
-              _xblockexpression_9 = new Boolean(false);
+              Attribute _constrainValue_10 = ((ConstrainImpl) lexp).getConstrainValue();
+              final int lval = ((modelMDD2.Number) _constrainValue_10).getValue();
+              Attribute _constrainValue_11 = ((ConstrainImpl) rexp).getConstrainValue();
+              final int rval = ((modelMDD2.Number) _constrainValue_11).getValue();
+              _xblockexpression_7 = new Boolean((lval <= rval));
             }
-            _xifexpression_8 = _xblockexpression_9;
-          } else {
-            Boolean _xifexpression_9 = null;
-            boolean _and_9 = false;
-            Feature _featureReference_9 = ((ConstrainImpl) lexp).getFeatureReference();
-            if (!(_featureReference_9 instanceof Feature)) {
-              _and_9 = false;
-            } else {
-              Attribute _constrainValue_9 = ((ConstrainImpl) rexp).getConstrainValue();
-              _and_9 = (_constrainValue_9 instanceof modelMDD2.Number);
-            }
-            if (_and_9) {
-              Boolean _xblockexpression_10 = null;
-              {
-                Attribute _constrainValue_10 = ((ConstrainImpl) rexp).getConstrainValue();
-                final int rval = ((modelMDD2.Number) _constrainValue_10).getValue();
-                Feature _featureReference_10 = ((ConstrainImpl) lexp).getFeatureReference();
-                final Grouped lval = ((Grouped) _featureReference_10);
-                Boolean _xifexpression_10 = null;
-                boolean _isSelected = lval.isSelected();
-                if (_isSelected) {
-                  Attribute _attribute = ((Feature) lval).getAttribute();
-                  int _value = ((modelMDD2.Number) _attribute).getValue();
-                  boolean _equals = (_value == rval);
-                  _xifexpression_10 = new Boolean(_equals);
-                } else {
-                  _xifexpression_10 = new Boolean(false);
-                }
-                _xblockexpression_10 = _xifexpression_10;
-              }
-              _xifexpression_9 = _xblockexpression_10;
-            }
-            _xifexpression_8 = _xifexpression_9;
-          }
-          _switchResult = _xifexpression_8;
-          break;
-        case "notEquals":
-          Boolean _xifexpression_10 = null;
-          boolean _and_10 = false;
-          Attribute _constrainValue_10 = ((ConstrainImpl) lexp).getConstrainValue();
-          if (!(_constrainValue_10 instanceof modelMDD2.Number)) {
-            _and_10 = false;
-          } else {
-            Feature _featureReference_10 = ((ConstrainImpl) rexp).getFeatureReference();
-            _and_10 = (_featureReference_10 instanceof Feature);
-          }
-          if (_and_10) {
-            Boolean _xblockexpression_11 = null;
-            {
-              Attribute _constrainValue_11 = ((ConstrainImpl) lexp).getConstrainValue();
-              final int lval = ((modelMDD2.Number) _constrainValue_11).getValue();
-              Feature _featureReference_11 = ((ConstrainImpl) rexp).getFeatureReference();
-              final Grouped rval = ((Grouped) _featureReference_11);
-              boolean _isSelected = rval.isSelected();
-              if (_isSelected) {
-                Attribute _attribute = ((Feature) rval).getAttribute();
-                int _value = ((modelMDD2.Number) _attribute).getValue();
-                boolean _notEquals = (lval != _value);
-                new Boolean(_notEquals);
-              }
-              _xblockexpression_11 = new Boolean(false);
-            }
-            _xifexpression_10 = _xblockexpression_11;
+            _xifexpression_10 = _xblockexpression_7;
           } else {
             Boolean _xifexpression_11 = null;
-            boolean _and_11 = false;
-            Feature _featureReference_11 = ((ConstrainImpl) lexp).getFeatureReference();
-            if (!(_featureReference_11 instanceof Feature)) {
-              _and_11 = false;
-            } else {
-              Attribute _constrainValue_11 = ((ConstrainImpl) rexp).getConstrainValue();
-              _and_11 = (_constrainValue_11 instanceof modelMDD2.Number);
-            }
-            if (_and_11) {
-              Boolean _xblockexpression_12 = null;
-              {
-                Attribute _constrainValue_12 = ((ConstrainImpl) rexp).getConstrainValue();
-                final int rval = ((modelMDD2.Number) _constrainValue_12).getValue();
-                Feature _featureReference_12 = ((ConstrainImpl) lexp).getFeatureReference();
-                final Grouped lval = ((Grouped) _featureReference_12);
-                Boolean _xifexpression_12 = null;
-                boolean _isSelected = lval.isSelected();
-                if (_isSelected) {
-                  Attribute _attribute = ((Feature) lval).getAttribute();
-                  int _value = ((modelMDD2.Number) _attribute).getValue();
-                  boolean _notEquals = (_value != rval);
-                  _xifexpression_12 = new Boolean(_notEquals);
-                } else {
-                  _xifexpression_12 = new Boolean(false);
+            Feature _featureReference_12 = ((ConstrainImpl) rexp).getFeatureReference();
+            if ((_featureReference_12 instanceof Feature)) {
+              Boolean _xifexpression_12 = null;
+              Attribute _constrainValue_10 = ((ConstrainImpl) lexp).getConstrainValue();
+              Feature _featureReference_13 = ((ConstrainImpl) rexp).getFeatureReference();
+              Attribute _attribute_4 = ((Feature) ((Grouped) _featureReference_13)).getAttribute();
+              Boolean _checkAttributesType_4 = Constraints.checkAttributesType(_constrainValue_10, _attribute_4);
+              boolean _not_4 = (!(_checkAttributesType_4).booleanValue());
+              if (_not_4) {
+                _xifexpression_12 = new Boolean(false);
+              } else {
+                Boolean _xblockexpression_8 = null;
+                {
+                  Attribute _constrainValue_11 = ((ConstrainImpl) lexp).getConstrainValue();
+                  final int lval = ((modelMDD2.Number) _constrainValue_11).getValue();
+                  Feature _featureReference_14 = ((ConstrainImpl) rexp).getFeatureReference();
+                  final Grouped rval = ((Grouped) _featureReference_14);
+                  Attribute _attribute_5 = ((Feature) rval).getAttribute();
+                  int _value = ((modelMDD2.Number) _attribute_5).getValue();
+                  boolean _lessEqualsThan = (lval <= _value);
+                  _xblockexpression_8 = new Boolean(_lessEqualsThan);
                 }
-                _xblockexpression_12 = _xifexpression_12;
+                _xifexpression_12 = _xblockexpression_8;
               }
-              _xifexpression_11 = _xblockexpression_12;
+              _xifexpression_11 = _xifexpression_12;
+            } else {
+              Boolean _xifexpression_13 = null;
+              Feature _featureReference_14 = ((ConstrainImpl) lexp).getFeatureReference();
+              if ((_featureReference_14 instanceof Feature)) {
+                Boolean _xifexpression_14 = null;
+                Attribute _constrainValue_11 = ((ConstrainImpl) rexp).getConstrainValue();
+                Feature _featureReference_15 = ((ConstrainImpl) lexp).getFeatureReference();
+                Attribute _attribute_5 = ((Feature) ((Grouped) _featureReference_15)).getAttribute();
+                Boolean _checkAttributesType_5 = Constraints.checkAttributesType(_constrainValue_11, _attribute_5);
+                boolean _not_5 = (!(_checkAttributesType_5).booleanValue());
+                if (_not_5) {
+                  _xifexpression_14 = new Boolean(false);
+                } else {
+                  Boolean _xblockexpression_9 = null;
+                  {
+                    Attribute _constrainValue_12 = ((ConstrainImpl) rexp).getConstrainValue();
+                    final int rval = ((modelMDD2.Number) _constrainValue_12).getValue();
+                    Feature _featureReference_16 = ((ConstrainImpl) lexp).getFeatureReference();
+                    final Grouped lval = ((Grouped) _featureReference_16);
+                    Attribute _attribute_6 = ((Feature) lval).getAttribute();
+                    int _value = ((modelMDD2.Number) _attribute_6).getValue();
+                    boolean _lessEqualsThan = (_value <= rval);
+                    _xblockexpression_9 = new Boolean(_lessEqualsThan);
+                  }
+                  _xifexpression_14 = _xblockexpression_9;
+                }
+                _xifexpression_13 = _xifexpression_14;
+              }
+              _xifexpression_11 = _xifexpression_13;
             }
             _xifexpression_10 = _xifexpression_11;
           }
           _switchResult = _xifexpression_10;
           break;
-        case "disjunction":
-          Boolean _xifexpression_12 = null;
-          boolean _and_12 = false;
-          Feature _featureReference_12 = ((ConstrainImpl) lexp).getFeatureReference();
-          if (!(_featureReference_12 instanceof Feature)) {
-            _and_12 = false;
+        case "greaterOrEquals":
+          Boolean _xifexpression_15 = null;
+          boolean _and_4 = false;
+          Attribute _constrainValue_12 = ((ConstrainImpl) lexp).getConstrainValue();
+          if (!(_constrainValue_12 instanceof modelMDD2.Number)) {
+            _and_4 = false;
           } else {
-            Feature _featureReference_13 = ((ConstrainImpl) rexp).getFeatureReference();
-            _and_12 = (_featureReference_13 instanceof Feature);
+            Attribute _constrainValue_13 = ((ConstrainImpl) rexp).getConstrainValue();
+            _and_4 = (_constrainValue_13 instanceof modelMDD2.Number);
           }
-          if (_and_12) {
+          if (_and_4) {
+            Boolean _xblockexpression_10 = null;
+            {
+              Attribute _constrainValue_14 = ((ConstrainImpl) lexp).getConstrainValue();
+              final int lval = ((modelMDD2.Number) _constrainValue_14).getValue();
+              Attribute _constrainValue_15 = ((ConstrainImpl) rexp).getConstrainValue();
+              final int rval = ((modelMDD2.Number) _constrainValue_15).getValue();
+              _xblockexpression_10 = new Boolean((lval >= rval));
+            }
+            _xifexpression_15 = _xblockexpression_10;
+          } else {
+            Boolean _xifexpression_16 = null;
+            Feature _featureReference_16 = ((ConstrainImpl) rexp).getFeatureReference();
+            if ((_featureReference_16 instanceof Feature)) {
+              Boolean _xifexpression_17 = null;
+              Attribute _constrainValue_14 = ((ConstrainImpl) lexp).getConstrainValue();
+              Feature _featureReference_17 = ((ConstrainImpl) rexp).getFeatureReference();
+              Attribute _attribute_6 = ((Feature) ((Grouped) _featureReference_17)).getAttribute();
+              Boolean _checkAttributesType_6 = Constraints.checkAttributesType(_constrainValue_14, _attribute_6);
+              boolean _not_6 = (!(_checkAttributesType_6).booleanValue());
+              if (_not_6) {
+                _xifexpression_17 = new Boolean(false);
+              } else {
+                Boolean _xblockexpression_11 = null;
+                {
+                  Attribute _constrainValue_15 = ((ConstrainImpl) lexp).getConstrainValue();
+                  final int lval = ((modelMDD2.Number) _constrainValue_15).getValue();
+                  Feature _featureReference_18 = ((ConstrainImpl) rexp).getFeatureReference();
+                  final Grouped rval = ((Grouped) _featureReference_18);
+                  Attribute _attribute_7 = ((Feature) rval).getAttribute();
+                  int _value = ((modelMDD2.Number) _attribute_7).getValue();
+                  boolean _greaterEqualsThan = (lval >= _value);
+                  _xblockexpression_11 = new Boolean(_greaterEqualsThan);
+                }
+                _xifexpression_17 = _xblockexpression_11;
+              }
+              _xifexpression_16 = _xifexpression_17;
+            } else {
+              Boolean _xifexpression_18 = null;
+              Feature _featureReference_18 = ((ConstrainImpl) lexp).getFeatureReference();
+              if ((_featureReference_18 instanceof Feature)) {
+                Boolean _xifexpression_19 = null;
+                Attribute _constrainValue_15 = ((ConstrainImpl) rexp).getConstrainValue();
+                Feature _featureReference_19 = ((ConstrainImpl) lexp).getFeatureReference();
+                Attribute _attribute_7 = ((Feature) ((Grouped) _featureReference_19)).getAttribute();
+                Boolean _checkAttributesType_7 = Constraints.checkAttributesType(_constrainValue_15, _attribute_7);
+                boolean _not_7 = (!(_checkAttributesType_7).booleanValue());
+                if (_not_7) {
+                  _xifexpression_19 = new Boolean(false);
+                } else {
+                  Boolean _xblockexpression_12 = null;
+                  {
+                    Attribute _constrainValue_16 = ((ConstrainImpl) rexp).getConstrainValue();
+                    final int rval = ((modelMDD2.Number) _constrainValue_16).getValue();
+                    Feature _featureReference_20 = ((ConstrainImpl) lexp).getFeatureReference();
+                    final Grouped lval = ((Grouped) _featureReference_20);
+                    Attribute _attribute_8 = ((Feature) lval).getAttribute();
+                    int _value = ((modelMDD2.Number) _attribute_8).getValue();
+                    boolean _greaterEqualsThan = (_value >= rval);
+                    _xblockexpression_12 = new Boolean(_greaterEqualsThan);
+                  }
+                  _xifexpression_19 = _xblockexpression_12;
+                }
+                _xifexpression_18 = _xifexpression_19;
+              }
+              _xifexpression_16 = _xifexpression_18;
+            }
+            _xifexpression_15 = _xifexpression_16;
+          }
+          _switchResult = _xifexpression_15;
+          break;
+        case "equals":
+          Boolean _xifexpression_20 = null;
+          boolean _and_5 = false;
+          Attribute _constrainValue_16 = ((ConstrainImpl) lexp).getConstrainValue();
+          if (!(_constrainValue_16 instanceof modelMDD2.Number)) {
+            _and_5 = false;
+          } else {
+            Attribute _constrainValue_17 = ((ConstrainImpl) rexp).getConstrainValue();
+            _and_5 = (_constrainValue_17 instanceof modelMDD2.Number);
+          }
+          if (_and_5) {
             Boolean _xblockexpression_13 = null;
             {
-              Feature _featureReference_14 = ((ConstrainImpl) lexp).getFeatureReference();
-              final boolean lval = ((Grouped) _featureReference_14).isSelected();
-              Feature _featureReference_15 = ((ConstrainImpl) rexp).getFeatureReference();
-              final boolean rval = ((Grouped) _featureReference_15).isSelected();
-              _xblockexpression_13 = new Boolean((lval || rval));
+              Attribute _constrainValue_18 = ((ConstrainImpl) lexp).getConstrainValue();
+              final int lval = ((modelMDD2.Number) _constrainValue_18).getValue();
+              Attribute _constrainValue_19 = ((ConstrainImpl) rexp).getConstrainValue();
+              final int rval = ((modelMDD2.Number) _constrainValue_19).getValue();
+              _xblockexpression_13 = new Boolean((lval == rval));
             }
-            _xifexpression_12 = _xblockexpression_13;
-          }
-          _switchResult = _xifexpression_12;
-          break;
-        case "conjunction":
-          Boolean _xifexpression_13 = null;
-          boolean _and_13 = false;
-          Feature _featureReference_14 = ((ConstrainImpl) lexp).getFeatureReference();
-          if (!(_featureReference_14 instanceof Feature)) {
-            _and_13 = false;
+            _xifexpression_20 = _xblockexpression_13;
           } else {
-            Feature _featureReference_15 = ((ConstrainImpl) rexp).getFeatureReference();
-            _and_13 = (_featureReference_15 instanceof Feature);
-          }
-          if (_and_13) {
-            Boolean _xblockexpression_14 = null;
-            {
-              Feature _featureReference_16 = ((ConstrainImpl) lexp).getFeatureReference();
-              final boolean lval = ((Grouped) _featureReference_16).isSelected();
-              Feature _featureReference_17 = ((ConstrainImpl) rexp).getFeatureReference();
-              final boolean rval = ((Grouped) _featureReference_17).isSelected();
-              _xblockexpression_14 = new Boolean((lval && rval));
+            Boolean _xifexpression_21 = null;
+            Feature _featureReference_20 = ((ConstrainImpl) rexp).getFeatureReference();
+            if ((_featureReference_20 instanceof Feature)) {
+              Boolean _xifexpression_22 = null;
+              Attribute _constrainValue_18 = ((ConstrainImpl) lexp).getConstrainValue();
+              Feature _featureReference_21 = ((ConstrainImpl) rexp).getFeatureReference();
+              Attribute _attribute_8 = ((Feature) ((Grouped) _featureReference_21)).getAttribute();
+              Boolean _checkAttributesType_8 = Constraints.checkAttributesType(_constrainValue_18, _attribute_8);
+              boolean _not_8 = (!(_checkAttributesType_8).booleanValue());
+              if (_not_8) {
+                _xifexpression_22 = new Boolean(false);
+              } else {
+                Boolean _xblockexpression_14 = null;
+                {
+                  Attribute _constrainValue_19 = ((ConstrainImpl) lexp).getConstrainValue();
+                  final int lval = ((modelMDD2.Number) _constrainValue_19).getValue();
+                  Feature _featureReference_22 = ((ConstrainImpl) rexp).getFeatureReference();
+                  final Grouped rval = ((Grouped) _featureReference_22);
+                  Attribute _attribute_9 = ((Feature) rval).getAttribute();
+                  int _value = ((modelMDD2.Number) _attribute_9).getValue();
+                  boolean _equals = (lval == _value);
+                  _xblockexpression_14 = new Boolean(_equals);
+                }
+                _xifexpression_22 = _xblockexpression_14;
+              }
+              _xifexpression_21 = _xifexpression_22;
+            } else {
+              Boolean _xifexpression_23 = null;
+              Feature _featureReference_22 = ((ConstrainImpl) lexp).getFeatureReference();
+              if ((_featureReference_22 instanceof Feature)) {
+                Boolean _xifexpression_24 = null;
+                Attribute _constrainValue_19 = ((ConstrainImpl) rexp).getConstrainValue();
+                Feature _featureReference_23 = ((ConstrainImpl) lexp).getFeatureReference();
+                Attribute _attribute_9 = ((Feature) ((Grouped) _featureReference_23)).getAttribute();
+                Boolean _checkAttributesType_9 = Constraints.checkAttributesType(_constrainValue_19, _attribute_9);
+                boolean _not_9 = (!(_checkAttributesType_9).booleanValue());
+                if (_not_9) {
+                  _xifexpression_24 = new Boolean(false);
+                } else {
+                  Boolean _xblockexpression_15 = null;
+                  {
+                    Attribute _constrainValue_20 = ((ConstrainImpl) rexp).getConstrainValue();
+                    final int rval = ((modelMDD2.Number) _constrainValue_20).getValue();
+                    Feature _featureReference_24 = ((ConstrainImpl) lexp).getFeatureReference();
+                    final Grouped lval = ((Grouped) _featureReference_24);
+                    Attribute _attribute_10 = ((Feature) lval).getAttribute();
+                    int _value = ((modelMDD2.Number) _attribute_10).getValue();
+                    boolean _equals = (_value == rval);
+                    _xblockexpression_15 = new Boolean(_equals);
+                  }
+                  _xifexpression_24 = _xblockexpression_15;
+                }
+                _xifexpression_23 = _xifexpression_24;
+              }
+              _xifexpression_21 = _xifexpression_23;
             }
-            _xifexpression_13 = _xblockexpression_14;
+            _xifexpression_20 = _xifexpression_21;
           }
-          _switchResult = _xifexpression_13;
+          _switchResult = _xifexpression_20;
+          break;
+        case "notEquals":
+          Boolean _xifexpression_25 = null;
+          boolean _and_6 = false;
+          Attribute _constrainValue_20 = ((ConstrainImpl) lexp).getConstrainValue();
+          if (!(_constrainValue_20 instanceof modelMDD2.Number)) {
+            _and_6 = false;
+          } else {
+            Attribute _constrainValue_21 = ((ConstrainImpl) rexp).getConstrainValue();
+            _and_6 = (_constrainValue_21 instanceof modelMDD2.Number);
+          }
+          if (_and_6) {
+            Boolean _xblockexpression_16 = null;
+            {
+              Attribute _constrainValue_22 = ((ConstrainImpl) lexp).getConstrainValue();
+              final int lval = ((modelMDD2.Number) _constrainValue_22).getValue();
+              Attribute _constrainValue_23 = ((ConstrainImpl) rexp).getConstrainValue();
+              final int rval = ((modelMDD2.Number) _constrainValue_23).getValue();
+              _xblockexpression_16 = new Boolean((lval != rval));
+            }
+            _xifexpression_25 = _xblockexpression_16;
+          } else {
+            Boolean _xifexpression_26 = null;
+            Feature _featureReference_24 = ((ConstrainImpl) rexp).getFeatureReference();
+            if ((_featureReference_24 instanceof Feature)) {
+              Boolean _xifexpression_27 = null;
+              Attribute _constrainValue_22 = ((ConstrainImpl) lexp).getConstrainValue();
+              Feature _featureReference_25 = ((ConstrainImpl) rexp).getFeatureReference();
+              Attribute _attribute_10 = ((Feature) ((Grouped) _featureReference_25)).getAttribute();
+              Boolean _checkAttributesType_10 = Constraints.checkAttributesType(_constrainValue_22, _attribute_10);
+              boolean _not_10 = (!(_checkAttributesType_10).booleanValue());
+              if (_not_10) {
+                _xifexpression_27 = new Boolean(false);
+              } else {
+                Boolean _xblockexpression_17 = null;
+                {
+                  Attribute _constrainValue_23 = ((ConstrainImpl) lexp).getConstrainValue();
+                  final int lval = ((modelMDD2.Number) _constrainValue_23).getValue();
+                  Feature _featureReference_26 = ((ConstrainImpl) rexp).getFeatureReference();
+                  final Grouped rval = ((Grouped) _featureReference_26);
+                  Attribute _attribute_11 = ((Feature) rval).getAttribute();
+                  int _value = ((modelMDD2.Number) _attribute_11).getValue();
+                  boolean _notEquals = (lval != _value);
+                  _xblockexpression_17 = new Boolean(_notEquals);
+                }
+                _xifexpression_27 = _xblockexpression_17;
+              }
+              _xifexpression_26 = _xifexpression_27;
+            } else {
+              Boolean _xifexpression_28 = null;
+              Feature _featureReference_26 = ((ConstrainImpl) lexp).getFeatureReference();
+              if ((_featureReference_26 instanceof Feature)) {
+                Boolean _xifexpression_29 = null;
+                Attribute _constrainValue_23 = ((ConstrainImpl) rexp).getConstrainValue();
+                Feature _featureReference_27 = ((ConstrainImpl) lexp).getFeatureReference();
+                Attribute _attribute_11 = ((Feature) ((Grouped) _featureReference_27)).getAttribute();
+                Boolean _checkAttributesType_11 = Constraints.checkAttributesType(_constrainValue_23, _attribute_11);
+                boolean _not_11 = (!(_checkAttributesType_11).booleanValue());
+                if (_not_11) {
+                  _xifexpression_29 = new Boolean(false);
+                } else {
+                  Boolean _xblockexpression_18 = null;
+                  {
+                    Attribute _constrainValue_24 = ((ConstrainImpl) rexp).getConstrainValue();
+                    final int rval = ((modelMDD2.Number) _constrainValue_24).getValue();
+                    Feature _featureReference_28 = ((ConstrainImpl) lexp).getFeatureReference();
+                    final Grouped lval = ((Grouped) _featureReference_28);
+                    Attribute _attribute_12 = ((Feature) lval).getAttribute();
+                    int _value = ((modelMDD2.Number) _attribute_12).getValue();
+                    boolean _notEquals = (_value != rval);
+                    _xblockexpression_18 = new Boolean(_notEquals);
+                  }
+                  _xifexpression_29 = _xblockexpression_18;
+                }
+                _xifexpression_28 = _xifexpression_29;
+              }
+              _xifexpression_26 = _xifexpression_28;
+            }
+            _xifexpression_25 = _xifexpression_26;
+          }
+          _switchResult = _xifexpression_25;
           break;
       }
       _xblockexpression = _switchResult;

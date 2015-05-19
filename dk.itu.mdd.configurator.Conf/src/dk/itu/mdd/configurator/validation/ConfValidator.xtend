@@ -59,12 +59,12 @@ class ConfValidator extends AbstractConfValidator {
 	}
 	
 	@Check
-	def isEmpty(Binary exp){
-		if(Constraints.constraint(exp))
-			error('Cannot compare these fields', 
+  	def validationCheck(Binary exp) {
+    if(!Constraints.constraint(exp))
+    error('Cannot compare those values', 
 					ModelMDD2Package.Literals.NAMED_ELEMENT__NAME,
 					INVALID_NAME)
-	}
+    }
 	
 	@Check
 	def RangeCheck(Grouped feat){

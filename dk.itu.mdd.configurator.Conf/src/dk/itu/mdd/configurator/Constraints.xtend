@@ -18,6 +18,7 @@ import modelMDD2.Model
 import modelMDD2.impl.ConstrainImpl
 import modelMDD2.Grouped
 import modelMDD2.BinaryOperator
+import modelMDD2.Attribute
 
 public class Constraints {
 	def static featureStartsWithCapital(Feature feature) {
@@ -36,154 +37,197 @@ public class Constraints {
 		}else true
 	}
 	
+def static Boolean checkAttributesType(Attribute left, Attribute right){
+		if((left instanceof modelMDD2.Number && right instanceof modelMDD2.Number) ||
+				(left instanceof modelMDD2.CString && right instanceof modelMDD2.CString) ||
+				(left instanceof modelMDD2.Range && right instanceof modelMDD2.Range) ||
+				(left instanceof modelMDD2.CBoolean && right instanceof modelMDD2.CBoolean) )
+				return true
+			else return false
+	}
+	
 	def static dispatch Boolean constraint(Binary exp)
 	{
 		val lexp=exp.leftExp;
 		val rexp=exp.rightExp;
-									
-			switch(BinaryOperator.getByName(exp.operator.getName()).getName.toString){
-				case "lessThan" :
-				 if ((lexp as ConstrainImpl).constrainValue instanceof modelMDD2.Number && (rexp as ConstrainImpl).featureReference instanceof Feature){
-				 	val lval = ((lexp as ConstrainImpl).constrainValue as modelMDD2.Number).value;
-				 	val rval = ((rexp as ConstrainImpl).featureReference as Grouped);				 	 
-				 	if(rval.selected)
-				 	{
-				 		new Boolean(lval < ((rval as Feature).attribute as modelMDD2.Number).value);
-				 	}
-				 	new Boolean(false)
-				 }
-				 else if ((lexp as ConstrainImpl).featureReference instanceof Feature && (rexp as ConstrainImpl).constrainValue instanceof modelMDD2.Number){
-				 	val rval = ((rexp as ConstrainImpl).constrainValue as modelMDD2.Number).value;
-				 	val lval = ((lexp as ConstrainImpl).featureReference as Grouped);				 	 
-				 	if(lval.selected)
-				 	{
-				 		new Boolean(((lval as Feature).attribute as modelMDD2.Number).value < rval);
-				 	}
-				 	else{
-				 		new Boolean(false);
-				 	}
-				 }
-				 case "greaterThan" :
-				 if ((lexp as ConstrainImpl).constrainValue instanceof modelMDD2.Number && (rexp as ConstrainImpl).featureReference instanceof Feature){
-				 	val lval = ((lexp as ConstrainImpl).constrainValue as modelMDD2.Number).value;
-				 	val rval = ((rexp as ConstrainImpl).featureReference as Grouped);				 	 
-				 	if(rval.selected)
-				 	{
-				 		new Boolean(lval > ((rval as Feature).attribute as modelMDD2.Number).value);
-				 	}
-				 	new Boolean(false)
-				 }
-				 else if ((lexp as ConstrainImpl).featureReference instanceof Feature && (rexp as ConstrainImpl).constrainValue instanceof modelMDD2.Number){
-				 	val rval = ((rexp as ConstrainImpl).constrainValue as modelMDD2.Number).value;
-				 	val lval = ((lexp as ConstrainImpl).featureReference as Grouped);				 	 
-				 	if(lval.selected)
-				 	{
-				 		new Boolean(((lval as Feature).attribute as modelMDD2.Number).value > rval);
-				 	}
-				 	else{
-				 		new Boolean(false);
-				 	}
-				 }
-				 case "lessOrEquals" :
-				 if ((lexp as ConstrainImpl).constrainValue instanceof modelMDD2.Number && (rexp as ConstrainImpl).featureReference instanceof Feature){
-				 	val lval = ((lexp as ConstrainImpl).constrainValue as modelMDD2.Number).value;
-				 	val rval = ((rexp as ConstrainImpl).featureReference as Grouped);				 	 
-				 	if(rval.selected)
-				 	{
-				 		new Boolean(lval <= ((rval as Feature).attribute as modelMDD2.Number).value);
-				 	}
-				 	new Boolean(false)
-				 }
-				 else if ((lexp as ConstrainImpl).featureReference instanceof Feature && (rexp as ConstrainImpl).constrainValue instanceof modelMDD2.Number){
-				 	val rval = ((rexp as ConstrainImpl).constrainValue as modelMDD2.Number).value;
-				 	val lval = ((lexp as ConstrainImpl).featureReference as Grouped);				 	 
-				 	if(lval.selected)
-				 	{
-				 		new Boolean(((lval as Feature).attribute as modelMDD2.Number).value <= rval);
-				 	}
-				 	else{
-				 		new Boolean(false);
-				 	}
-				 }
-				 case "greaterOrEquals" :
-				 if ((lexp as ConstrainImpl).constrainValue instanceof modelMDD2.Number && (rexp as ConstrainImpl).featureReference instanceof Feature){
-				 	val lval = ((lexp as ConstrainImpl).constrainValue as modelMDD2.Number).value;
-				 	val rval = ((rexp as ConstrainImpl).featureReference as Grouped);				 	 
-				 	if(rval.selected)
-				 	{
-				 		new Boolean(lval >= ((rval as Feature).attribute as modelMDD2.Number).value);
-				 	}
-				 	new Boolean(false)
-				 }
-				 else if ((lexp as ConstrainImpl).featureReference instanceof Feature && (rexp as ConstrainImpl).constrainValue instanceof modelMDD2.Number){
-				 	val rval = ((rexp as ConstrainImpl).constrainValue as modelMDD2.Number).value;
-				 	val lval = ((lexp as ConstrainImpl).featureReference as Grouped);				 	 
-				 	if(lval.selected)
-				 	{
-				 		new Boolean(((lval as Feature).attribute as modelMDD2.Number).value >= rval);
-				 	}
-				 	else{
-				 		new Boolean(false);
-				 	}
-				 }
-				 case "equals" :
-				 if ((lexp as ConstrainImpl).constrainValue instanceof modelMDD2.Number && (rexp as ConstrainImpl).featureReference instanceof Feature){
-				 	val lval = ((lexp as ConstrainImpl).constrainValue as modelMDD2.Number).value;
-				 	val rval = ((rexp as ConstrainImpl).featureReference as Grouped);				 	 
-				 	if(rval.selected)
-				 	{
-				 		new Boolean(lval == ((rval as Feature).attribute as modelMDD2.Number).value);
-				 	}
-				 	new Boolean(false)
-				 }
-				 else if ((lexp as ConstrainImpl).featureReference instanceof Feature && (rexp as ConstrainImpl).constrainValue instanceof modelMDD2.Number){
-				 	val rval = ((rexp as ConstrainImpl).constrainValue as modelMDD2.Number).value;
-				 	val lval = ((lexp as ConstrainImpl).featureReference as Grouped);				 	 
-				 	if(lval.selected)
-				 	{
-				 		new Boolean(((lval as Feature).attribute as modelMDD2.Number).value == rval);
-				 	}
-				 	else{
-				 		new Boolean(false);
-				 	}
-				}
-				 case "notEquals" :
-				 if ((lexp as ConstrainImpl).constrainValue instanceof modelMDD2.Number && (rexp as ConstrainImpl).featureReference instanceof Feature){
-				 	val lval = ((lexp as ConstrainImpl).constrainValue as modelMDD2.Number).value;
-				 	val rval = ((rexp as ConstrainImpl).featureReference as Grouped);				 	 
-				 	if(rval.selected)
-				 	{
-				 		new Boolean(lval != ((rval as Feature).attribute as modelMDD2.Number).value);
-				 	}
-				 	new Boolean(false)
-				 }
-				 else if ((lexp as ConstrainImpl).featureReference instanceof Feature && (rexp as ConstrainImpl).constrainValue instanceof modelMDD2.Number){
-				 	val rval = ((rexp as ConstrainImpl).constrainValue as modelMDD2.Number).value;
-				 	val lval = ((lexp as ConstrainImpl).featureReference as Grouped);				 	 
-				 	if(lval.selected)
-				 	{
-				 		new Boolean(((lval as Feature).attribute as modelMDD2.Number).value != rval);
-				 	}
-				 	else{
-				 		new Boolean(false);
-				 	}
-				 }
-				 case "disjunction":
-				 if ((lexp as ConstrainImpl).featureReference instanceof Feature && (rexp as ConstrainImpl).featureReference instanceof Feature){
-				 	val lval = ((lexp as ConstrainImpl).featureReference as Grouped).selected;
-				 	val rval = ((rexp as ConstrainImpl).featureReference as Grouped).selected;				 	 
-				 	new Boolean(lval || rval);
-				 }
-				 case "conjunction" :
-				 if ((lexp as ConstrainImpl).featureReference instanceof Feature && (rexp as ConstrainImpl).featureReference instanceof Feature){
-				 	val lval = ((lexp as ConstrainImpl).featureReference as Grouped).selected;
-				 	val rval = ((rexp as ConstrainImpl).featureReference as Grouped).selected;				 	 
-				 	new Boolean(lval && rval);				 	
-				 }
-			}
+		
+		if((rexp as ConstrainImpl).featureReference instanceof Feature && (lexp as ConstrainImpl).featureReference instanceof Feature)
+		{
+		 	val left = (((lexp as ConstrainImpl).featureReference as Grouped) as Feature).attribute;
+			val right = (((rexp as ConstrainImpl).featureReference as Grouped) as Feature).attribute;
 			
+			//we must typecheck when binary expression is composed by to "references" (out of time)
+			return checkAttributesType(left, right) 
 		}
-	
+		switch(BinaryOperator.getByName(exp.operator.getName()).getName.toString){
+				case "lessThan" :
+				if((lexp as ConstrainImpl).constrainValue instanceof modelMDD2.Number && (rexp as ConstrainImpl).constrainValue instanceof modelMDD2.Number)
+				{	val lval = ((lexp as ConstrainImpl).constrainValue as modelMDD2.Number).value;
+					val rval = ((rexp as ConstrainImpl).constrainValue as modelMDD2.Number).value;
+					new Boolean(lval < rval);
+				}
+				else if ((rexp as ConstrainImpl).featureReference instanceof Feature){			 	
+				 	if(!checkAttributesType((lexp as ConstrainImpl).constrainValue, (((rexp as ConstrainImpl).featureReference as Grouped) as Feature).attribute)){
+				 	new Boolean(false);
+				 	}
+				 	else{
+				 	val lval = ((lexp as ConstrainImpl).constrainValue as modelMDD2.Number).value;
+				 	val rval = ((rexp as ConstrainImpl).featureReference as Grouped);				 	 
+				 	new Boolean(lval < ((rval as Feature).attribute as modelMDD2.Number).value);
+					}
+					}
+					else if ((lexp as ConstrainImpl).featureReference instanceof Feature){
+				 	if(!checkAttributesType((rexp as ConstrainImpl).constrainValue, (((lexp as ConstrainImpl).featureReference as Grouped) as Feature).attribute)){
+				 	new Boolean(false);
+				 	}
+				 	else{
+					val rval = ((rexp as ConstrainImpl).constrainValue as modelMDD2.Number).value;
+				 	val lval = ((lexp as ConstrainImpl).featureReference as Grouped);				 	 
+				 		new Boolean(((lval as Feature).attribute as modelMDD2.Number).value < rval);	
+				 		}
+				 }
+				 
+				 case "greaterThan" :
+				 if((lexp as ConstrainImpl).constrainValue instanceof modelMDD2.Number && (rexp as ConstrainImpl).constrainValue instanceof modelMDD2.Number)
+				{
+					val lval = ((lexp as ConstrainImpl).constrainValue as modelMDD2.Number).value;
+					val rval = ((rexp as ConstrainImpl).constrainValue as modelMDD2.Number).value;
+					new Boolean(lval > rval);
+				}
+				else if ((rexp as ConstrainImpl).featureReference instanceof Feature){			 	
+				 	if(!checkAttributesType((lexp as ConstrainImpl).constrainValue, (((rexp as ConstrainImpl).featureReference as Grouped) as Feature).attribute)){
+				 	new Boolean(false);
+				 	}
+				 	else{
+				 	val lval = ((lexp as ConstrainImpl).constrainValue as modelMDD2.Number).value;
+				 	val rval = ((rexp as ConstrainImpl).featureReference as Grouped);				 	 
+				 	new Boolean(lval > ((rval as Feature).attribute as modelMDD2.Number).value);
+				 	}
+					}
+					else if ((lexp as ConstrainImpl).featureReference instanceof Feature){
+				 	if(!checkAttributesType((rexp as ConstrainImpl).constrainValue, (((lexp as ConstrainImpl).featureReference as Grouped) as Feature).attribute)){
+				 	new Boolean(false);
+				 	}
+				 	else{
+					val rval = ((rexp as ConstrainImpl).constrainValue as modelMDD2.Number).value;
+				 	val lval = ((lexp as ConstrainImpl).featureReference as Grouped);				 	 
+				 		new Boolean(((lval as Feature).attribute as modelMDD2.Number).value > rval);	
+				 		}
+				 }
+				 
+				 case "lessOrEquals" :
+				 if((lexp as ConstrainImpl).constrainValue instanceof modelMDD2.Number && (rexp as ConstrainImpl).constrainValue instanceof modelMDD2.Number)
+				{
+					val lval = ((lexp as ConstrainImpl).constrainValue as modelMDD2.Number).value;
+					val rval = ((rexp as ConstrainImpl).constrainValue as modelMDD2.Number).value;
+					new Boolean(lval <= rval);
+				}
+				else if ((rexp as ConstrainImpl).featureReference instanceof Feature){			 	
+				 	if(!checkAttributesType((lexp as ConstrainImpl).constrainValue, (((rexp as ConstrainImpl).featureReference as Grouped) as Feature).attribute)){
+				 	new Boolean(false);
+				 	}
+				 	else{
+				 	val lval = ((lexp as ConstrainImpl).constrainValue as modelMDD2.Number).value;
+				 	val rval = ((rexp as ConstrainImpl).featureReference as Grouped);				 	 
+				 	new Boolean(lval <= ((rval as Feature).attribute as modelMDD2.Number).value);
+				 	}
+					}
+					else if ((lexp as ConstrainImpl).featureReference instanceof Feature){
+				 	if(!checkAttributesType((rexp as ConstrainImpl).constrainValue, (((lexp as ConstrainImpl).featureReference as Grouped) as Feature).attribute)){
+				 	new Boolean(false);
+				 	}
+				 	else{
+					val rval = ((rexp as ConstrainImpl).constrainValue as modelMDD2.Number).value;
+				 	val lval = ((lexp as ConstrainImpl).featureReference as Grouped);				 	 
+				 		new Boolean(((lval as Feature).attribute as modelMDD2.Number).value <= rval);	
+				 		}
+				 }
+				 
+				 case "greaterOrEquals" :
+				  if((lexp as ConstrainImpl).constrainValue instanceof modelMDD2.Number && (rexp as ConstrainImpl).constrainValue instanceof modelMDD2.Number)
+				{
+					val lval = ((lexp as ConstrainImpl).constrainValue as modelMDD2.Number).value;
+					val rval = ((rexp as ConstrainImpl).constrainValue as modelMDD2.Number).value;
+					new Boolean(lval >= rval);
+				}
+				else if ((rexp as ConstrainImpl).featureReference instanceof Feature){			 	
+				 	if(!checkAttributesType((lexp as ConstrainImpl).constrainValue, (((rexp as ConstrainImpl).featureReference as Grouped) as Feature).attribute)){
+				 	new Boolean(false);
+				 	}
+				 	else{
+				 	val lval = ((lexp as ConstrainImpl).constrainValue as modelMDD2.Number).value;
+				 	val rval = ((rexp as ConstrainImpl).featureReference as Grouped);				 	 
+				 	new Boolean(lval >= ((rval as Feature).attribute as modelMDD2.Number).value);
+				 	}
+					}
+					else if ((lexp as ConstrainImpl).featureReference instanceof Feature){
+				 	if(!checkAttributesType((rexp as ConstrainImpl).constrainValue, (((lexp as ConstrainImpl).featureReference as Grouped) as Feature).attribute)){
+				 	new Boolean(false);
+				 	}
+				 	else{
+					val rval = ((rexp as ConstrainImpl).constrainValue as modelMDD2.Number).value;
+				 	val lval = ((lexp as ConstrainImpl).featureReference as Grouped);				 	 
+				 		new Boolean(((lval as Feature).attribute as modelMDD2.Number).value >= rval);	
+				 		}
+				 }
+				 
+				 case "equals" :
+				 if((lexp as ConstrainImpl).constrainValue instanceof modelMDD2.Number && (rexp as ConstrainImpl).constrainValue instanceof modelMDD2.Number)
+				{
+					val lval = ((lexp as ConstrainImpl).constrainValue as modelMDD2.Number).value;
+					val rval = ((rexp as ConstrainImpl).constrainValue as modelMDD2.Number).value;
+					new Boolean(lval == rval);
+				}
+				else if ((rexp as ConstrainImpl).featureReference instanceof Feature){			 	
+				 	if(!checkAttributesType((lexp as ConstrainImpl).constrainValue, (((rexp as ConstrainImpl).featureReference as Grouped) as Feature).attribute)){
+				 	new Boolean(false);
+				 	}
+				 	else{
+				 	val lval = ((lexp as ConstrainImpl).constrainValue as modelMDD2.Number).value;
+				 	val rval = ((rexp as ConstrainImpl).featureReference as Grouped);				 	 
+					new Boolean(lval == ((rval as Feature).attribute as modelMDD2.Number).value);
+				 	}
+					}
+					else if ((lexp as ConstrainImpl).featureReference instanceof Feature){
+				 	if(!checkAttributesType((rexp as ConstrainImpl).constrainValue, (((lexp as ConstrainImpl).featureReference as Grouped) as Feature).attribute)){
+				 	new Boolean(false);
+				 	}
+				 	else{
+				 	val rval = ((rexp as ConstrainImpl).constrainValue as modelMDD2.Number).value;
+				 	val lval = ((lexp as ConstrainImpl).featureReference as Grouped);				 	 
+				 	new Boolean(((lval as Feature).attribute as modelMDD2.Number).value == rval);	
+				 		}
+				 }
+				 
+				 case "notEquals" :
+				 if((lexp as ConstrainImpl).constrainValue instanceof modelMDD2.Number && (rexp as ConstrainImpl).constrainValue instanceof modelMDD2.Number)
+				{
+					val lval = ((lexp as ConstrainImpl).constrainValue as modelMDD2.Number).value;
+					val rval = ((rexp as ConstrainImpl).constrainValue as modelMDD2.Number).value;
+					new Boolean(lval != rval);
+				}
+				else if ((rexp as ConstrainImpl).featureReference instanceof Feature){			 	
+				 	if(!checkAttributesType((lexp as ConstrainImpl).constrainValue, (((rexp as ConstrainImpl).featureReference as Grouped) as Feature).attribute)){
+				 	new Boolean(false);
+				 	}
+				 	else{
+				 		val lval = ((lexp as ConstrainImpl).constrainValue as modelMDD2.Number).value;
+				 	val rval = ((rexp as ConstrainImpl).featureReference as Grouped);				 	 
+				 	new Boolean(lval != ((rval as Feature).attribute as modelMDD2.Number).value);
+				 	}
+					}
+					 else if ((lexp as ConstrainImpl).featureReference instanceof Feature){
+				 	if(!checkAttributesType((rexp as ConstrainImpl).constrainValue, (((lexp as ConstrainImpl).featureReference as Grouped) as Feature).attribute)){
+				 	new Boolean(false);
+				 	}
+				 	else{
+					val rval = ((rexp as ConstrainImpl).constrainValue as modelMDD2.Number).value;
+				 	val lval = ((lexp as ConstrainImpl).featureReference as Grouped);				 	 
+				 		new Boolean(((lval as Feature).attribute as modelMDD2.Number).value != rval);	
+				 		}
+				 }
+				 }
+				 }
 	
 	def static getPath(Constrain exp){
 		var feature = exp.featureReference;
