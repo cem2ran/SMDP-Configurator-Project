@@ -26,7 +26,7 @@ public enum DisjunctiveOperator implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	DISJUNCTION(0, "disjunction", "||");
+	DISJUNCTION(0, "disjunction", "or");
 
 	/**
 	 * The '<em><b>Disjunction</b></em>' literal value.
@@ -37,7 +37,7 @@ public enum DisjunctiveOperator implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #DISJUNCTION
-	 * @model name="disjunction" literal="||"
+	 * @model name="disjunction" literal="or"
 	 * @generated
 	 * @ordered
 	 */

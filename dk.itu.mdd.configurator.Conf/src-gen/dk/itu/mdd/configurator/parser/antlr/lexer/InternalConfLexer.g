@@ -18,11 +18,13 @@ import org.eclipse.xtext.parser.antlr.Lexer;
 
 Feature : 'Feature';
 
+Model : 'Model';
+
 Xor : 'Xor';
 
-ExclamationMarkEqualsSign : '!=';
+And : 'and';
 
-AmpersandAmpersand : '&&';
+ExclamationMarkEqualsSign : '!=';
 
 LessThanSignEqualsSign : '<=';
 
@@ -32,7 +34,7 @@ GreaterThanSignEqualsSign : '>=';
 
 Or : 'Or';
 
-VerticalLineVerticalLine : '||';
+Or_1 : 'or';
 
 ExclamationMark : '!';
 
@@ -61,8 +63,6 @@ LeftCurlyBracket : '{';
 RightCurlyBracket : '}';
 
 
-
-RULE_NULL : 'null';
 
 RULE_BOOLEAN : ('true'|'false');
 

@@ -3,18 +3,16 @@ grammar dk.itu.mdd.configurator.Conf with org.eclipse.xtext.common.Terminals
 
 import "platform:/resource/asd/model/modelMDD2.ecore" 
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
-Model returns Model:
-	//'Model' name=EString 
+Model:
+	'Model' name=EString 
 		 root=Feature_Impl
 	;
 	
-Feature returns Feature:
-	Feature_Impl | Grouped | Mandatory | Optional;
-
-Solitary returns Solitary:
+Solitary:
 	Mandatory | Optional;
 	
-Constrain returns Constrain: //Binary | Unary;
+Constrain : Disjunction;
+Disjunction returns Constrain:
 	Conjunction ( {Binary.leftExp=current} Operator=DisjunctiveOperator rightExp=Conjunction )* ;
 Conjunction returns Constrain: 
 	Equality ( {Binary.leftExp=current} Operator=ConjunctiveOperator rightExp=Equality )* ;
@@ -24,23 +22,22 @@ Comparison returns Constrain:
 	Binary ( {Binary.leftExp=current} Operator=ComparativeOperator rightExp=Binary )* ;
 Binary returns Constrain:
 	Primary ({Binary.leftExp=current} rightExp=Primary )* ;	
+Unary returns Constrain:
+	{Unary} Operator=("!"|"-") exp=Primary;
 Primary	returns Constrain:
 	  featureReference=[Grouped|QualifiedName] | '('AttributeConstrain')'| Unary | '(' Constrain ')';
 AttributeConstrain returns Constrain:
-	constrainValue=Attribute
-; 
-Unary returns Constrain:
-	{Unary} Operator=("!"|"-") exp=Primary;
+	constrainValue=Attribute;
 
 QualifiedName:
     ID ('.' ID)*;
 
 enum DisjunctiveOperator returns BinaryOperator:
-	disjunction = '||'
+	disjunction = 'or'
 ;
 
 enum ConjunctiveOperator returns BinaryOperator:
-	conjunction = '&&'
+	conjunction = 'and'
 ;
 
 enum EqualityOperator returns BinaryOperator:
@@ -51,14 +48,14 @@ enum ComparativeOperator returns BinaryOperator:
 	greaterThan = '>' | lessThan = '<' | greaterOrEquals = '>=' | lessOrEquals = '<='
 ;	
 	
-Group returns Group:
+Group:
 	Or | Xor
-	;
-Attribute returns Attribute:
+;
+Attribute:
 	CString | Number  | Range | CBoolean
 ;
 
-Range : //maybe this should return a constrain? just syntactic sugar, desugaring to leftExp > value < rightExp
+Range: //maybe this should return a constrain? just syntactic sugar, desugaring to leftExp > value < rightExp
 	lower = INT
 	upper = INT
 ;
@@ -76,10 +73,10 @@ Number:
 ;
 
 EString returns ecore::EString:
- ID | NULL;
+ ID 
+ //| NULL
+ ;
  
- 
-
 
 Feature_Impl returns Feature:
 	'Feature'
@@ -87,42 +84,43 @@ Feature_Impl returns Feature:
 		( BEGIN subfeature+=Solitary ( subfeature+=Solitary)* END)?
 		( '[' constrains+=Constrain ( "," constrains+=Constrain)* ']' )?
 		//('att' attributes+=Attribute ( "," attributes+=Attribute)* )?
-		;
+;
 
 Grouped:
-		name=EString
+	name=EString
 	    ( '('  attribute=Attribute  ')' )?
 		( '['  constrains+=Constrain ( "," constrains+=Constrain)* ']' )? 
-	;
+;
 
 Mandatory:
 	name=EString
 		('{' subfeature+=Solitary ( "," subfeature+=Solitary)* '}' )?
+		( '('  attribute=Attribute  ')' )?
 		( '[' constrains+=Constrain ( "," constrains+=Constrain)* ']' )?
 		( groups+=Group ( groups+=Group)* )?
-	;
+;
 
 Optional:
 	'?'
 	name=EString
 		('{' subfeature+=Solitary ( "," subfeature+=Solitary)* '}' )?
+		( '('  attribute=Attribute  ')' )?
 		('[' constrains+=Constrain ( "," constrains+=Constrain)* ']' )?
 		( groups+=Group ( groups+=Group)* )?
-	;
-
+;
 
 
 Or:
  	'Or' name=EString
 		(BEGIN grouped+=Grouped ((',')* grouped+=Grouped)* END)?
-	;
+;
 
 Xor:
 	'Xor' name=EString
 		(BEGIN grouped+=Grouped ((',')* grouped+=Grouped)* END)?
-		;
+;
 	
-terminal NULL: 'null';	
+//terminal NULL: 'null';	
 terminal BOOLEAN returns ecore::EBoolean: "true" | "false";
 	
 // The following synthetic tokens are used for the indentation-aware blocks

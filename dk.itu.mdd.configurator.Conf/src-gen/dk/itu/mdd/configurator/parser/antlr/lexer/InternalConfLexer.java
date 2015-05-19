@@ -13,39 +13,39 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalConfLexer extends Lexer {
     public static final int RULE_END=29;
-    public static final int Or=11;
+    public static final int Or=12;
     public static final int RULE_BEGIN=28;
-    public static final int VerticalLineVerticalLine=12;
     public static final int RULE_BOOLEAN=27;
     public static final int RULE_STRING=32;
-    public static final int RULE_NULL=26;
     public static final int Feature=4;
-    public static final int LessThanSign=19;
+    public static final int LessThanSign=20;
     public static final int RULE_SL_COMMENT=34;
-    public static final int Comma=16;
-    public static final int HyphenMinus=17;
-    public static final int LeftParenthesis=14;
-    public static final int AmpersandAmpersand=7;
-    public static final int LessThanSignEqualsSign=8;
-    public static final int RightCurlyBracket=25;
+    public static final int Or_1=13;
+    public static final int Comma=17;
+    public static final int HyphenMinus=18;
+    public static final int LeftParenthesis=15;
+    public static final int LessThanSignEqualsSign=9;
+    public static final int RightCurlyBracket=26;
     public static final int EOF=-1;
-    public static final int RightSquareBracket=23;
-    public static final int ExclamationMark=13;
-    public static final int FullStop=18;
-    public static final int GreaterThanSign=20;
+    public static final int RightSquareBracket=24;
+    public static final int ExclamationMark=14;
+    public static final int FullStop=19;
+    public static final int GreaterThanSign=21;
     public static final int RULE_ID=30;
     public static final int RULE_WS=35;
-    public static final int RightParenthesis=15;
-    public static final int LeftCurlyBracket=24;
+    public static final int RightParenthesis=16;
+    public static final int LeftCurlyBracket=25;
     public static final int RULE_ANY_OTHER=36;
-    public static final int GreaterThanSignEqualsSign=10;
-    public static final int EqualsSignEqualsSign=9;
-    public static final int QuestionMark=21;
+    public static final int GreaterThanSignEqualsSign=11;
+    public static final int EqualsSignEqualsSign=10;
+    public static final int And=7;
+    public static final int QuestionMark=22;
     public static final int RULE_INT=31;
+    public static final int Model=5;
     public static final int RULE_ML_COMMENT=33;
-    public static final int Xor=5;
-    public static final int LeftSquareBracket=22;
-    public static final int ExclamationMarkEqualsSign=6;
+    public static final int Xor=6;
+    public static final int LeftSquareBracket=23;
+    public static final int ExclamationMarkEqualsSign=8;
 
     // delegates
     // delegators
@@ -81,13 +81,34 @@ public class InternalConfLexer extends Lexer {
     }
     // $ANTLR end "Feature"
 
+    // $ANTLR start "Model"
+    public final void mModel() throws RecognitionException {
+        try {
+            int _type = Model;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:21:7: ( 'Model' )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:21:9: 'Model'
+            {
+            match("Model"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "Model"
+
     // $ANTLR start "Xor"
     public final void mXor() throws RecognitionException {
         try {
             int _type = Xor;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:21:5: ( 'Xor' )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:21:7: 'Xor'
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:23:5: ( 'Xor' )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:23:7: 'Xor'
             {
             match("Xor"); 
 
@@ -102,13 +123,34 @@ public class InternalConfLexer extends Lexer {
     }
     // $ANTLR end "Xor"
 
+    // $ANTLR start "And"
+    public final void mAnd() throws RecognitionException {
+        try {
+            int _type = And;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:25:5: ( 'and' )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:25:7: 'and'
+            {
+            match("and"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "And"
+
     // $ANTLR start "ExclamationMarkEqualsSign"
     public final void mExclamationMarkEqualsSign() throws RecognitionException {
         try {
             int _type = ExclamationMarkEqualsSign;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:23:27: ( '!=' )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:23:29: '!='
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:27:27: ( '!=' )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:27:29: '!='
             {
             match("!="); 
 
@@ -123,34 +165,13 @@ public class InternalConfLexer extends Lexer {
     }
     // $ANTLR end "ExclamationMarkEqualsSign"
 
-    // $ANTLR start "AmpersandAmpersand"
-    public final void mAmpersandAmpersand() throws RecognitionException {
-        try {
-            int _type = AmpersandAmpersand;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:25:20: ( '&&' )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:25:22: '&&'
-            {
-            match("&&"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "AmpersandAmpersand"
-
     // $ANTLR start "LessThanSignEqualsSign"
     public final void mLessThanSignEqualsSign() throws RecognitionException {
         try {
             int _type = LessThanSignEqualsSign;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:27:24: ( '<=' )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:27:26: '<='
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:29:24: ( '<=' )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:29:26: '<='
             {
             match("<="); 
 
@@ -170,8 +191,8 @@ public class InternalConfLexer extends Lexer {
         try {
             int _type = EqualsSignEqualsSign;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:29:22: ( '==' )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:29:24: '=='
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:31:22: ( '==' )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:31:24: '=='
             {
             match("=="); 
 
@@ -191,8 +212,8 @@ public class InternalConfLexer extends Lexer {
         try {
             int _type = GreaterThanSignEqualsSign;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:31:27: ( '>=' )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:31:29: '>='
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:33:27: ( '>=' )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:33:29: '>='
             {
             match(">="); 
 
@@ -212,8 +233,8 @@ public class InternalConfLexer extends Lexer {
         try {
             int _type = Or;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:33:4: ( 'Or' )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:33:6: 'Or'
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:35:4: ( 'Or' )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:35:6: 'Or'
             {
             match("Or"); 
 
@@ -228,15 +249,15 @@ public class InternalConfLexer extends Lexer {
     }
     // $ANTLR end "Or"
 
-    // $ANTLR start "VerticalLineVerticalLine"
-    public final void mVerticalLineVerticalLine() throws RecognitionException {
+    // $ANTLR start "Or_1"
+    public final void mOr_1() throws RecognitionException {
         try {
-            int _type = VerticalLineVerticalLine;
+            int _type = Or_1;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:35:26: ( '||' )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:35:28: '||'
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:37:6: ( 'or' )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:37:8: 'or'
             {
-            match("||"); 
+            match("or"); 
 
 
             }
@@ -247,15 +268,15 @@ public class InternalConfLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "VerticalLineVerticalLine"
+    // $ANTLR end "Or_1"
 
     // $ANTLR start "ExclamationMark"
     public final void mExclamationMark() throws RecognitionException {
         try {
             int _type = ExclamationMark;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:37:17: ( '!' )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:37:19: '!'
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:39:17: ( '!' )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:39:19: '!'
             {
             match('!'); 
 
@@ -274,8 +295,8 @@ public class InternalConfLexer extends Lexer {
         try {
             int _type = LeftParenthesis;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:39:17: ( '(' )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:39:19: '('
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:41:17: ( '(' )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:41:19: '('
             {
             match('('); 
 
@@ -294,8 +315,8 @@ public class InternalConfLexer extends Lexer {
         try {
             int _type = RightParenthesis;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:41:18: ( ')' )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:41:20: ')'
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:43:18: ( ')' )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:43:20: ')'
             {
             match(')'); 
 
@@ -314,8 +335,8 @@ public class InternalConfLexer extends Lexer {
         try {
             int _type = Comma;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:43:7: ( ',' )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:43:9: ','
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:45:7: ( ',' )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:45:9: ','
             {
             match(','); 
 
@@ -334,8 +355,8 @@ public class InternalConfLexer extends Lexer {
         try {
             int _type = HyphenMinus;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:45:13: ( '-' )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:45:15: '-'
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:47:13: ( '-' )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:47:15: '-'
             {
             match('-'); 
 
@@ -354,8 +375,8 @@ public class InternalConfLexer extends Lexer {
         try {
             int _type = FullStop;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:47:10: ( '.' )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:47:12: '.'
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:49:10: ( '.' )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:49:12: '.'
             {
             match('.'); 
 
@@ -374,8 +395,8 @@ public class InternalConfLexer extends Lexer {
         try {
             int _type = LessThanSign;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:49:14: ( '<' )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:49:16: '<'
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:51:14: ( '<' )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:51:16: '<'
             {
             match('<'); 
 
@@ -394,8 +415,8 @@ public class InternalConfLexer extends Lexer {
         try {
             int _type = GreaterThanSign;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:51:17: ( '>' )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:51:19: '>'
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:53:17: ( '>' )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:53:19: '>'
             {
             match('>'); 
 
@@ -414,8 +435,8 @@ public class InternalConfLexer extends Lexer {
         try {
             int _type = QuestionMark;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:53:14: ( '?' )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:53:16: '?'
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:55:14: ( '?' )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:55:16: '?'
             {
             match('?'); 
 
@@ -434,8 +455,8 @@ public class InternalConfLexer extends Lexer {
         try {
             int _type = LeftSquareBracket;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:55:19: ( '[' )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:55:21: '['
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:57:19: ( '[' )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:57:21: '['
             {
             match('['); 
 
@@ -454,8 +475,8 @@ public class InternalConfLexer extends Lexer {
         try {
             int _type = RightSquareBracket;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:57:20: ( ']' )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:57:22: ']'
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:59:20: ( ']' )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:59:22: ']'
             {
             match(']'); 
 
@@ -474,8 +495,8 @@ public class InternalConfLexer extends Lexer {
         try {
             int _type = LeftCurlyBracket;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:59:18: ( '{' )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:59:20: '{'
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:61:18: ( '{' )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:61:20: '{'
             {
             match('{'); 
 
@@ -494,8 +515,8 @@ public class InternalConfLexer extends Lexer {
         try {
             int _type = RightCurlyBracket;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:61:19: ( '}' )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:61:21: '}'
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:63:19: ( '}' )
+            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:63:21: '}'
             {
             match('}'); 
 
@@ -508,27 +529,6 @@ public class InternalConfLexer extends Lexer {
         }
     }
     // $ANTLR end "RightCurlyBracket"
-
-    // $ANTLR start "RULE_NULL"
-    public final void mRULE_NULL() throws RecognitionException {
-        try {
-            int _type = RULE_NULL;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:65:11: ( 'null' )
-            // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:65:13: 'null'
-            {
-            match("null"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "RULE_NULL"
 
     // $ANTLR start "RULE_BOOLEAN"
     public final void mRULE_BOOLEAN() throws RecognitionException {
@@ -1112,7 +1112,7 @@ public class InternalConfLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:8: ( Feature | Xor | ExclamationMarkEqualsSign | AmpersandAmpersand | LessThanSignEqualsSign | EqualsSignEqualsSign | GreaterThanSignEqualsSign | Or | VerticalLineVerticalLine | ExclamationMark | LeftParenthesis | RightParenthesis | Comma | HyphenMinus | FullStop | LessThanSign | GreaterThanSign | QuestionMark | LeftSquareBracket | RightSquareBracket | LeftCurlyBracket | RightCurlyBracket | RULE_NULL | RULE_BOOLEAN | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:8: ( Feature | Model | Xor | And | ExclamationMarkEqualsSign | LessThanSignEqualsSign | EqualsSignEqualsSign | GreaterThanSignEqualsSign | Or | Or_1 | ExclamationMark | LeftParenthesis | RightParenthesis | Comma | HyphenMinus | FullStop | LessThanSign | GreaterThanSign | QuestionMark | LeftSquareBracket | RightSquareBracket | LeftCurlyBracket | RightCurlyBracket | RULE_BOOLEAN | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
         int alt13=31;
         alt13 = dfa13.predict(input);
         switch (alt13) {
@@ -1124,210 +1124,210 @@ public class InternalConfLexer extends Lexer {
                 }
                 break;
             case 2 :
-                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:18: Xor
+                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:18: Model
+                {
+                mModel(); 
+
+                }
+                break;
+            case 3 :
+                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:24: Xor
                 {
                 mXor(); 
 
                 }
                 break;
-            case 3 :
-                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:22: ExclamationMarkEqualsSign
+            case 4 :
+                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:28: And
+                {
+                mAnd(); 
+
+                }
+                break;
+            case 5 :
+                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:32: ExclamationMarkEqualsSign
                 {
                 mExclamationMarkEqualsSign(); 
 
                 }
                 break;
-            case 4 :
-                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:48: AmpersandAmpersand
-                {
-                mAmpersandAmpersand(); 
-
-                }
-                break;
-            case 5 :
-                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:67: LessThanSignEqualsSign
+            case 6 :
+                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:58: LessThanSignEqualsSign
                 {
                 mLessThanSignEqualsSign(); 
 
                 }
                 break;
-            case 6 :
-                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:90: EqualsSignEqualsSign
+            case 7 :
+                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:81: EqualsSignEqualsSign
                 {
                 mEqualsSignEqualsSign(); 
 
                 }
                 break;
-            case 7 :
-                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:111: GreaterThanSignEqualsSign
+            case 8 :
+                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:102: GreaterThanSignEqualsSign
                 {
                 mGreaterThanSignEqualsSign(); 
 
                 }
                 break;
-            case 8 :
-                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:137: Or
+            case 9 :
+                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:128: Or
                 {
                 mOr(); 
 
                 }
                 break;
-            case 9 :
-                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:140: VerticalLineVerticalLine
+            case 10 :
+                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:131: Or_1
                 {
-                mVerticalLineVerticalLine(); 
+                mOr_1(); 
 
                 }
                 break;
-            case 10 :
-                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:165: ExclamationMark
+            case 11 :
+                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:136: ExclamationMark
                 {
                 mExclamationMark(); 
 
                 }
                 break;
-            case 11 :
-                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:181: LeftParenthesis
+            case 12 :
+                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:152: LeftParenthesis
                 {
                 mLeftParenthesis(); 
 
                 }
                 break;
-            case 12 :
-                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:197: RightParenthesis
+            case 13 :
+                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:168: RightParenthesis
                 {
                 mRightParenthesis(); 
 
                 }
                 break;
-            case 13 :
-                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:214: Comma
+            case 14 :
+                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:185: Comma
                 {
                 mComma(); 
 
                 }
                 break;
-            case 14 :
-                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:220: HyphenMinus
+            case 15 :
+                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:191: HyphenMinus
                 {
                 mHyphenMinus(); 
 
                 }
                 break;
-            case 15 :
-                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:232: FullStop
+            case 16 :
+                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:203: FullStop
                 {
                 mFullStop(); 
 
                 }
                 break;
-            case 16 :
-                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:241: LessThanSign
+            case 17 :
+                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:212: LessThanSign
                 {
                 mLessThanSign(); 
 
                 }
                 break;
-            case 17 :
-                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:254: GreaterThanSign
+            case 18 :
+                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:225: GreaterThanSign
                 {
                 mGreaterThanSign(); 
 
                 }
                 break;
-            case 18 :
-                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:270: QuestionMark
+            case 19 :
+                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:241: QuestionMark
                 {
                 mQuestionMark(); 
 
                 }
                 break;
-            case 19 :
-                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:283: LeftSquareBracket
+            case 20 :
+                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:254: LeftSquareBracket
                 {
                 mLeftSquareBracket(); 
 
                 }
                 break;
-            case 20 :
-                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:301: RightSquareBracket
+            case 21 :
+                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:272: RightSquareBracket
                 {
                 mRightSquareBracket(); 
 
                 }
                 break;
-            case 21 :
-                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:320: LeftCurlyBracket
+            case 22 :
+                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:291: LeftCurlyBracket
                 {
                 mLeftCurlyBracket(); 
 
                 }
                 break;
-            case 22 :
-                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:337: RightCurlyBracket
+            case 23 :
+                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:308: RightCurlyBracket
                 {
                 mRightCurlyBracket(); 
 
                 }
                 break;
-            case 23 :
-                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:355: RULE_NULL
-                {
-                mRULE_NULL(); 
-
-                }
-                break;
             case 24 :
-                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:365: RULE_BOOLEAN
+                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:326: RULE_BOOLEAN
                 {
                 mRULE_BOOLEAN(); 
 
                 }
                 break;
             case 25 :
-                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:378: RULE_ID
+                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:339: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
             case 26 :
-                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:386: RULE_INT
+                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:347: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
             case 27 :
-                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:395: RULE_STRING
+                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:356: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
             case 28 :
-                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:407: RULE_ML_COMMENT
+                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:368: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
             case 29 :
-                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:423: RULE_SL_COMMENT
+                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:384: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
             case 30 :
-                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:439: RULE_WS
+                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:400: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
             case 31 :
-                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:447: RULE_ANY_OTHER
+                // ../dk.itu.mdd.configurator.Conf/src-gen/dk/itu/mdd/configurator/parser/antlr/lexer/InternalConfLexer.g:1:408: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -1341,28 +1341,29 @@ public class InternalConfLexer extends Lexer {
 
     protected DFA13 dfa13 = new DFA13(this);
     static final String DFA13_eotS =
-        "\1\uffff\2\40\1\43\1\36\1\46\1\36\1\51\1\40\1\36\12\uffff\3\40\1\36\2\uffff\3\36\2\uffff\1\40\1\uffff\1\40\10\uffff\1\100\13\uffff\3\40\5\uffff\1\40\1\105\1\uffff\4\40\1\uffff\1\112\1\113\2\40\2\uffff\1\113\1\40\1\117\1\uffff";
+        "\1\uffff\4\40\1\45\1\47\1\36\1\52\2\40\12\uffff\2\40\1\36\2\uffff\3\36\2\uffff\1\40\1\uffff\3\40\7\uffff\1\102\1\103\12\uffff\2\40\5\uffff\2\40\1\110\1\111\2\uffff\4\40\2\uffff\1\116\2\40\1\121\1\uffff\1\116\1\40\1\uffff\1\123\1\uffff";
     static final String DFA13_eofS =
-        "\120\uffff";
+        "\124\uffff";
     static final String DFA13_minS =
-        "\1\0\1\145\1\157\1\75\1\46\3\75\1\162\1\174\12\uffff\1\165\1\162\1\141\1\101\2\uffff\2\0\1\52\2\uffff\1\141\1\uffff\1\162\10\uffff\1\60\13\uffff\1\154\1\165\1\154\5\uffff\1\164\1\60\1\uffff\1\154\1\145\1\163\1\165\1\uffff\2\60\1\145\1\162\2\uffff\1\60\1\145\1\60\1\uffff";
+        "\1\0\1\145\2\157\1\156\4\75\2\162\12\uffff\1\162\1\141\1\101\2\uffff\2\0\1\52\2\uffff\1\141\1\uffff\1\144\1\162\1\144\7\uffff\2\60\12\uffff\1\165\1\154\5\uffff\1\164\1\145\2\60\2\uffff\1\145\1\163\1\165\1\154\2\uffff\1\60\1\145\1\162\1\60\1\uffff\1\60\1\145\1\uffff\1\60\1\uffff";
     static final String DFA13_maxS =
-        "\1\uffff\1\145\1\157\1\75\1\46\3\75\1\162\1\174\12\uffff\1\165\1\162\1\141\1\172\2\uffff\2\uffff\1\57\2\uffff\1\141\1\uffff\1\162\10\uffff\1\172\13\uffff\1\154\1\165\1\154\5\uffff\1\164\1\172\1\uffff\1\154\1\145\1\163\1\165\1\uffff\2\172\1\145\1\162\2\uffff\1\172\1\145\1\172\1\uffff";
+        "\1\uffff\1\145\2\157\1\156\4\75\2\162\12\uffff\1\162\1\141\1\172\2\uffff\2\uffff\1\57\2\uffff\1\141\1\uffff\1\144\1\162\1\144\7\uffff\2\172\12\uffff\1\165\1\154\5\uffff\1\164\1\145\2\172\2\uffff\1\145\1\163\1\165\1\154\2\uffff\1\172\1\145\1\162\1\172\1\uffff\1\172\1\145\1\uffff\1\172\1\uffff";
     static final String DFA13_acceptS =
-        "\12\uffff\1\13\1\14\1\15\1\16\1\17\1\22\1\23\1\24\1\25\1\26\4\uffff\1\31\1\32\3\uffff\1\36\1\37\1\uffff\1\31\1\uffff\1\3\1\12\1\4\1\5\1\20\1\6\1\7\1\21\1\uffff\1\11\1\13\1\14\1\15\1\16\1\17\1\22\1\23\1\24\1\25\1\26\3\uffff\1\32\1\33\1\34\1\35\1\36\2\uffff\1\10\4\uffff\1\2\4\uffff\1\27\1\30\3\uffff\1\1";
+        "\13\uffff\1\14\1\15\1\16\1\17\1\20\1\23\1\24\1\25\1\26\1\27\3\uffff\1\31\1\32\3\uffff\1\36\1\37\1\uffff\1\31\3\uffff\1\5\1\13\1\6\1\21\1\7\1\10\1\22\2\uffff\1\14\1\15\1\16\1\17\1\20\1\23\1\24\1\25\1\26\1\27\2\uffff\1\32\1\33\1\34\1\35\1\36\4\uffff\1\11\1\12\4\uffff\1\3\1\4\4\uffff\1\30\2\uffff\1\2\1\uffff\1\1";
     static final String DFA13_specialS =
-        "\1\2\31\uffff\1\0\1\1\64\uffff}>";
+        "\1\0\31\uffff\1\1\1\2\70\uffff}>";
     static final String[] DFA13_transitionS = {
-            "\11\36\2\35\2\36\1\35\22\36\1\35\1\3\1\32\3\36\1\4\1\33\1\12\1\13\2\36\1\14\1\15\1\16\1\34\12\31\2\36\1\5\1\6\1\7\1\17\1\36\5\30\1\1\10\30\1\10\10\30\1\2\2\30\1\20\1\36\1\21\1\27\1\30\1\36\5\30\1\26\7\30\1\24\5\30\1\25\6\30\1\22\1\11\1\23\uff82\36",
+            "\11\36\2\35\2\36\1\35\22\36\1\35\1\5\1\32\4\36\1\33\1\13\1\14\2\36\1\15\1\16\1\17\1\34\12\31\2\36\1\6\1\7\1\10\1\20\1\36\5\30\1\1\6\30\1\2\1\30\1\11\10\30\1\3\2\30\1\21\1\36\1\22\1\27\1\30\1\36\1\4\4\30\1\26\10\30\1\12\4\30\1\25\6\30\1\23\1\36\1\24\uff82\36",
             "\1\37",
             "\1\41",
             "\1\42",
+            "\1\43",
             "\1\44",
-            "\1\45",
-            "\1\47",
+            "\1\46",
             "\1\50",
-            "\1\52",
+            "\1\51",
             "\1\53",
+            "\1\54",
             "",
             "",
             "",
@@ -1373,7 +1374,6 @@ public class InternalConfLexer extends Lexer {
             "",
             "",
             "",
-            "\1\66",
             "\1\67",
             "\1\70",
             "\32\40\4\uffff\1\40\1\uffff\32\40",
@@ -1387,7 +1387,8 @@ public class InternalConfLexer extends Lexer {
             "\1\76",
             "",
             "\1\77",
-            "",
+            "\1\100",
+            "\1\101",
             "",
             "",
             "",
@@ -1396,41 +1397,44 @@ public class InternalConfLexer extends Lexer {
             "",
             "",
             "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "",
             "",
             "",
             "",
             "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\101",
-            "\1\102",
-            "\1\103",
             "",
             "",
             "",
             "",
             "",
             "\1\104",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\105",
+            "",
+            "",
+            "",
+            "",
             "",
             "\1\106",
             "\1\107",
-            "\1\110",
-            "\1\111",
+            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "",
+            "\1\112",
+            "\1\113",
             "\1\114",
             "\1\115",
             "",
             "",
             "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\1\116",
+            "\1\117",
+            "\1\120",
+            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "",
+            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\122",
+            "",
             "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             ""
     };
@@ -1465,75 +1469,55 @@ public class InternalConfLexer extends Lexer {
             this.transition = DFA13_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( Feature | Xor | ExclamationMarkEqualsSign | AmpersandAmpersand | LessThanSignEqualsSign | EqualsSignEqualsSign | GreaterThanSignEqualsSign | Or | VerticalLineVerticalLine | ExclamationMark | LeftParenthesis | RightParenthesis | Comma | HyphenMinus | FullStop | LessThanSign | GreaterThanSign | QuestionMark | LeftSquareBracket | RightSquareBracket | LeftCurlyBracket | RightCurlyBracket | RULE_NULL | RULE_BOOLEAN | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( Feature | Model | Xor | And | ExclamationMarkEqualsSign | LessThanSignEqualsSign | EqualsSignEqualsSign | GreaterThanSignEqualsSign | Or | Or_1 | ExclamationMark | LeftParenthesis | RightParenthesis | Comma | HyphenMinus | FullStop | LessThanSign | GreaterThanSign | QuestionMark | LeftSquareBracket | RightSquareBracket | LeftCurlyBracket | RightCurlyBracket | RULE_BOOLEAN | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA13_26 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA13_26>='\u0000' && LA13_26<='\uFFFF')) ) {s = 58;}
-
-                        else s = 30;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
-                        int LA13_27 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA13_27>='\u0000' && LA13_27<='\uFFFF')) ) {s = 58;}
-
-                        else s = 30;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
                         int LA13_0 = input.LA(1);
 
                         s = -1;
                         if ( (LA13_0=='F') ) {s = 1;}
 
-                        else if ( (LA13_0=='X') ) {s = 2;}
+                        else if ( (LA13_0=='M') ) {s = 2;}
 
-                        else if ( (LA13_0=='!') ) {s = 3;}
+                        else if ( (LA13_0=='X') ) {s = 3;}
 
-                        else if ( (LA13_0=='&') ) {s = 4;}
+                        else if ( (LA13_0=='a') ) {s = 4;}
 
-                        else if ( (LA13_0=='<') ) {s = 5;}
+                        else if ( (LA13_0=='!') ) {s = 5;}
 
-                        else if ( (LA13_0=='=') ) {s = 6;}
+                        else if ( (LA13_0=='<') ) {s = 6;}
 
-                        else if ( (LA13_0=='>') ) {s = 7;}
+                        else if ( (LA13_0=='=') ) {s = 7;}
 
-                        else if ( (LA13_0=='O') ) {s = 8;}
+                        else if ( (LA13_0=='>') ) {s = 8;}
 
-                        else if ( (LA13_0=='|') ) {s = 9;}
+                        else if ( (LA13_0=='O') ) {s = 9;}
 
-                        else if ( (LA13_0=='(') ) {s = 10;}
+                        else if ( (LA13_0=='o') ) {s = 10;}
 
-                        else if ( (LA13_0==')') ) {s = 11;}
+                        else if ( (LA13_0=='(') ) {s = 11;}
 
-                        else if ( (LA13_0==',') ) {s = 12;}
+                        else if ( (LA13_0==')') ) {s = 12;}
 
-                        else if ( (LA13_0=='-') ) {s = 13;}
+                        else if ( (LA13_0==',') ) {s = 13;}
 
-                        else if ( (LA13_0=='.') ) {s = 14;}
+                        else if ( (LA13_0=='-') ) {s = 14;}
 
-                        else if ( (LA13_0=='?') ) {s = 15;}
+                        else if ( (LA13_0=='.') ) {s = 15;}
 
-                        else if ( (LA13_0=='[') ) {s = 16;}
+                        else if ( (LA13_0=='?') ) {s = 16;}
 
-                        else if ( (LA13_0==']') ) {s = 17;}
+                        else if ( (LA13_0=='[') ) {s = 17;}
 
-                        else if ( (LA13_0=='{') ) {s = 18;}
+                        else if ( (LA13_0==']') ) {s = 18;}
 
-                        else if ( (LA13_0=='}') ) {s = 19;}
+                        else if ( (LA13_0=='{') ) {s = 19;}
 
-                        else if ( (LA13_0=='n') ) {s = 20;}
+                        else if ( (LA13_0=='}') ) {s = 20;}
 
                         else if ( (LA13_0=='t') ) {s = 21;}
 
@@ -1541,7 +1525,7 @@ public class InternalConfLexer extends Lexer {
 
                         else if ( (LA13_0=='^') ) {s = 23;}
 
-                        else if ( ((LA13_0>='A' && LA13_0<='E')||(LA13_0>='G' && LA13_0<='N')||(LA13_0>='P' && LA13_0<='W')||(LA13_0>='Y' && LA13_0<='Z')||LA13_0=='_'||(LA13_0>='a' && LA13_0<='e')||(LA13_0>='g' && LA13_0<='m')||(LA13_0>='o' && LA13_0<='s')||(LA13_0>='u' && LA13_0<='z')) ) {s = 24;}
+                        else if ( ((LA13_0>='A' && LA13_0<='E')||(LA13_0>='G' && LA13_0<='L')||LA13_0=='N'||(LA13_0>='P' && LA13_0<='W')||(LA13_0>='Y' && LA13_0<='Z')||LA13_0=='_'||(LA13_0>='b' && LA13_0<='e')||(LA13_0>='g' && LA13_0<='n')||(LA13_0>='p' && LA13_0<='s')||(LA13_0>='u' && LA13_0<='z')) ) {s = 24;}
 
                         else if ( ((LA13_0>='0' && LA13_0<='9')) ) {s = 25;}
 
@@ -1553,7 +1537,27 @@ public class InternalConfLexer extends Lexer {
 
                         else if ( ((LA13_0>='\t' && LA13_0<='\n')||LA13_0=='\r'||LA13_0==' ') ) {s = 29;}
 
-                        else if ( ((LA13_0>='\u0000' && LA13_0<='\b')||(LA13_0>='\u000B' && LA13_0<='\f')||(LA13_0>='\u000E' && LA13_0<='\u001F')||(LA13_0>='#' && LA13_0<='%')||(LA13_0>='*' && LA13_0<='+')||(LA13_0>=':' && LA13_0<=';')||LA13_0=='@'||LA13_0=='\\'||LA13_0=='`'||(LA13_0>='~' && LA13_0<='\uFFFF')) ) {s = 30;}
+                        else if ( ((LA13_0>='\u0000' && LA13_0<='\b')||(LA13_0>='\u000B' && LA13_0<='\f')||(LA13_0>='\u000E' && LA13_0<='\u001F')||(LA13_0>='#' && LA13_0<='&')||(LA13_0>='*' && LA13_0<='+')||(LA13_0>=':' && LA13_0<=';')||LA13_0=='@'||LA13_0=='\\'||LA13_0=='`'||LA13_0=='|'||(LA13_0>='~' && LA13_0<='\uFFFF')) ) {s = 30;}
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
+                        int LA13_26 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA13_26>='\u0000' && LA13_26<='\uFFFF')) ) {s = 58;}
+
+                        else s = 30;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
+                        int LA13_27 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA13_27>='\u0000' && LA13_27<='\uFFFF')) ) {s = 58;}
+
+                        else s = 30;
 
                         if ( s>=0 ) return s;
                         break;

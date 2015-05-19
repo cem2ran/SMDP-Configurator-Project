@@ -26,7 +26,7 @@ public enum ConjunctiveOperator implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	CONJUNCTION(0, "conjunction", "&&");
+	CONJUNCTION(0, "conjunction", "and");
 
 	/**
 	 * The '<em><b>Conjunction</b></em>' literal value.
@@ -37,7 +37,7 @@ public enum ConjunctiveOperator implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #CONJUNCTION
-	 * @model name="conjunction" literal="&&"
+	 * @model name="conjunction" literal="and"
 	 * @generated
 	 * @ordered
 	 */

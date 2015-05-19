@@ -17,8 +17,6 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
-import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -37,9 +35,9 @@ import modelMDD2.Group;
 import modelMDD2.Grouped;
 import modelMDD2.Model;
 import modelMDD2.ModelMDD2Package;
-import modelMDD2.Or;
 import modelMDD2.Solitary;
 import modelMDD2.Unary;
+import modelMDD2.Xor;
 import modelMDD2.impl.MandatoryImpl;
 import modelMDD2.impl.OptionalImpl;
 import trikita.anvil.Anvil;
@@ -224,7 +222,7 @@ public class ConfiguratorActivityFragment extends Fragment {
 */
             class ConstrainedAdapter extends ArrayAdapter {
                 List<Grouped> items;
-                Object selectedListener = null;
+                AdapterView.OnItemClickListener selectedListener = null;
 
 
                 public ConstrainedAdapter(Context context, int resource, List<Grouped> objects) {
@@ -241,24 +239,8 @@ public class ConfiguratorActivityFragment extends Fragment {
                     v.setMinWidth(parent.getWidth());
                     v.setText(items.get(position).getName());
                     if (selectedListener == null) {
-                        if (parent instanceof Spinner) {
-                            selectedListener = new AdapterView.OnItemSelectedListener() {
-                                @Override
-                                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                                    Grouped feature = items.get(i);
-                                    if(adapterView.isEnabled()) feature.setSelected(!feature.isSelected());
-                                }
-
-                                @Override
-                                public void onNothingSelected(AdapterView<?> adapterView) {}
-                            };
-
-                            ((AdapterView) parent).setOnItemSelectedListener((AdapterView.OnItemSelectedListener) selectedListener);
-
-                        } else {
-                            selectedListener = (AdapterView.OnItemClickListener) (adapterView, view, i, l) -> Log.d("CLICK", "" + i);
-                            ((AdapterView) parent).setOnItemClickListener((AdapterView.OnItemClickListener) selectedListener);
-                        }
+                        selectedListener = (adapterView, view, i, l) -> Log.d("CLICK", "" + i);
+                        ((AdapterView) parent).setOnItemClickListener(selectedListener);
                     }
                     return v;
                 }
@@ -297,13 +279,10 @@ public class ConfiguratorActivityFragment extends Fragment {
                 }
                 */
             }
-
+            boolean XorGroup = group instanceof Xor;
             return VList(
-                    H3(text(group.getName())),
-                    group instanceof Or
-                            ? v(Spinner.class,
-                            adapter((SpinnerAdapter) new ConstrainedAdapter(getContext(), android.R.layout.simple_spinner_dropdown_item, group.getGrouped())))
-                            : v(ListView.class, choiceMode(ListView.CHOICE_MODE_MULTIPLE), size(WRAP, group.getGrouped().size() * 200),
+                    H3(text(group.getName() + (XorGroup ? " (Pick one)" : ""))),
+                    v(ListView.class, choiceMode(XorGroup ? ListView.CHOICE_MODE_SINGLE : ListView.CHOICE_MODE_MULTIPLE), size(WRAP, group.getGrouped().size() * 200),
                             adapter((ListAdapter) new ConstrainedAdapter(getContext(), android.R.layout.simple_list_item_multiple_choice, group.getGrouped())))
             );
         }

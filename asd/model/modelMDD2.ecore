@@ -76,17 +76,17 @@
     <eLiterals name="greaterOrEquals" value="3" literal=">="/>
     <eLiterals name="equals" literal="=="/>
     <eLiterals name="notEquals" literal="!="/>
-    <eLiterals name="disjunction" literal="||"/>
-    <eLiterals name="conjunction" literal="&amp;&amp;"/>
+    <eLiterals name="disjunction" literal="or"/>
+    <eLiterals name="conjunction" literal="and"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="EqualityOperator">
     <eLiterals name="equals" literal="=="/>
     <eLiterals name="notEquals" literal="!="/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ConjunctiveOperator">
-    <eLiterals name="conjunction" literal="&amp;&amp;"/>
+    <eLiterals name="conjunction" literal="and"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="DisjunctiveOperator">
-    <eLiterals name="disjunction" literal="||"/>
+    <eLiterals name="disjunction" literal="or"/>
   </eClassifiers>
 </ecore:EPackage>

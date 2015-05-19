@@ -42,7 +42,7 @@ public class ConfSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	public void createSequence(EObject context, EObject semanticObject) {
 		if(semanticObject.eClass().getEPackage() == ModelMDD2Package.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
 			case ModelMDD2Package.BINARY:
-				sequence_Binary_Comparison_Conjunction_Constrain_Equality(context, (Binary) semanticObject); 
+				sequence_Binary_Comparison_Conjunction_Disjunction_Equality(context, (Binary) semanticObject); 
 				return; 
 			case ModelMDD2Package.CBOOLEAN:
 				sequence_CBoolean(context, (CBoolean) semanticObject); 
@@ -103,10 +103,10 @@ public class ConfSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         (leftExp=Binary_Binary_1_0 rightExp=Primary) | 
 	 *         (leftExp=Equality_Binary_1_0 Operator=EqualityOperator rightExp=Comparison) | 
 	 *         (leftExp=Conjunction_Binary_1_0 Operator=ConjunctiveOperator rightExp=Equality) | 
-	 *         (leftExp=Constrain_Binary_1_0 Operator=DisjunctiveOperator rightExp=Conjunction)
+	 *         (leftExp=Disjunction_Binary_1_0 Operator=DisjunctiveOperator rightExp=Conjunction)
 	 *     )
 	 */
-	protected void sequence_Binary_Comparison_Conjunction_Constrain_Equality(EObject context, Binary semanticObject) {
+	protected void sequence_Binary_Comparison_Conjunction_Disjunction_Equality(EObject context, Binary semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -163,7 +163,13 @@ public class ConfSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=EString (subfeature+=Solitary subfeature+=Solitary*)? (constrains+=Constrain constrains+=Constrain*)? (groups+=Group groups+=Group*)?)
+	 *     (
+	 *         name=EString 
+	 *         (subfeature+=Solitary subfeature+=Solitary*)? 
+	 *         attribute=Attribute? 
+	 *         (constrains+=Constrain constrains+=Constrain*)? 
+	 *         (groups+=Group groups+=Group*)?
+	 *     )
 	 */
 	protected void sequence_Mandatory(EObject context, Mandatory semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -172,10 +178,20 @@ public class ConfSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     root=Feature_Impl
+	 *     (name=EString root=Feature_Impl)
 	 */
 	protected void sequence_Model(EObject context, Model semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, ModelMDD2Package.Literals.NAMED_ELEMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ModelMDD2Package.Literals.NAMED_ELEMENT__NAME));
+			if(transientValues.isValueTransient(semanticObject, ModelMDD2Package.Literals.MODEL__ROOT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ModelMDD2Package.Literals.MODEL__ROOT));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getModelAccess().getNameEStringParserRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getModelAccess().getRootFeature_ImplParserRuleCall_2_0(), semanticObject.getRoot());
+		feeder.finish();
 	}
 	
 	
@@ -197,7 +213,13 @@ public class ConfSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=EString (subfeature+=Solitary subfeature+=Solitary*)? (constrains+=Constrain constrains+=Constrain*)? (groups+=Group groups+=Group*)?)
+	 *     (
+	 *         name=EString 
+	 *         (subfeature+=Solitary subfeature+=Solitary*)? 
+	 *         attribute=Attribute? 
+	 *         (constrains+=Constrain constrains+=Constrain*)? 
+	 *         (groups+=Group groups+=Group*)?
+	 *     )
 	 */
 	protected void sequence_Optional(EObject context, Optional semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
