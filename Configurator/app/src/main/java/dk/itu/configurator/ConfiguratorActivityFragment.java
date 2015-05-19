@@ -293,7 +293,7 @@ public class ConfiguratorActivityFragment extends Fragment {
                 return constraintViolated(((Unary) c).getExp());
             if (c instanceof Binary)
                 return constraintViolated(((Binary) c).getLeftExp()) || constraintViolated(((Binary) c).getRightExp());
-
+            
             String id = getPath(c.getFeatureReference());
             View v = findViewWithTag(id);
             if (v instanceof CheckedTextView) {

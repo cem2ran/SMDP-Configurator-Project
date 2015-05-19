@@ -20,19 +20,34 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public class ModelElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Model");
-		private final Assignment cRootAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cRootFeature_ImplParserRuleCall_0 = (RuleCall)cRootAssignment.eContents().get(0);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cModelKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameEStringParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Assignment cRootAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cRootFeature_ImplParserRuleCall_2_0 = (RuleCall)cRootAssignment_2.eContents().get(0);
 		
-		//Model: //'Model' name=EString 
-		//	root=Feature_Impl;
+		//Model:
+		//	"Model" name=EString root=Feature_Impl;
 		@Override public ParserRule getRule() { return rule; }
 
-		////'Model' name=EString 
+		//"Model" name=EString root=Feature_Impl
+		public Group getGroup() { return cGroup; }
+
+		//"Model"
+		public Keyword getModelKeyword_0() { return cModelKeyword_0; }
+
+		//name=EString
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//EString
+		public RuleCall getNameEStringParserRuleCall_1_0() { return cNameEStringParserRuleCall_1_0; }
+
 		//root=Feature_Impl
-		public Assignment getRootAssignment() { return cRootAssignment; }
+		public Assignment getRootAssignment_2() { return cRootAssignment_2; }
 
 		//Feature_Impl
-		public RuleCall getRootFeature_ImplParserRuleCall_0() { return cRootFeature_ImplParserRuleCall_0; }
+		public RuleCall getRootFeature_ImplParserRuleCall_2_0() { return cRootFeature_ImplParserRuleCall_2_0; }
 	}
 
 	public class FeatureElements extends AbstractParserRuleElementFinder {
@@ -85,6 +100,19 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class ConstrainElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Constrain");
+		private final RuleCall cDisjunctionParserRuleCall = (RuleCall)rule.eContents().get(1);
+		
+		////Binary | Unary;
+		//Constrain:
+		//	Disjunction;
+		@Override public ParserRule getRule() { return rule; }
+
+		//Disjunction
+		public RuleCall getDisjunctionParserRuleCall() { return cDisjunctionParserRuleCall; }
+	}
+
+	public class DisjunctionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Disjunction");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final RuleCall cConjunctionParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
@@ -94,8 +122,7 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cRightExpAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
 		private final RuleCall cRightExpConjunctionParserRuleCall_1_2_0 = (RuleCall)cRightExpAssignment_1_2.eContents().get(0);
 		
-		////Binary | Unary;
-		//Constrain:
+		//Disjunction returns Constrain:
 		//	Conjunction ({Binary.leftExp=current} Operator=DisjunctiveOperator rightExp=Conjunction)*;
 		@Override public ParserRule getRule() { return rule; }
 
@@ -1233,6 +1260,7 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 	private final FeatureElements pFeature;
 	private final SolitaryElements pSolitary;
 	private final ConstrainElements pConstrain;
+	private final DisjunctionElements pDisjunction;
 	private final ConjunctionElements pConjunction;
 	private final EqualityElements pEquality;
 	private final ComparisonElements pComparison;
@@ -1276,6 +1304,7 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 		this.pFeature = new FeatureElements();
 		this.pSolitary = new SolitaryElements();
 		this.pConstrain = new ConstrainElements();
+		this.pDisjunction = new DisjunctionElements();
 		this.pConjunction = new ConjunctionElements();
 		this.pEquality = new EqualityElements();
 		this.pComparison = new ComparisonElements();
@@ -1334,8 +1363,8 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	
-	//Model: //'Model' name=EString 
-	//	root=Feature_Impl;
+	//Model:
+	//	"Model" name=EString root=Feature_Impl;
 	public ModelElements getModelAccess() {
 		return pModel;
 	}
@@ -1366,13 +1395,23 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 
 	////Binary | Unary;
 	//Constrain:
-	//	Conjunction ({Binary.leftExp=current} Operator=DisjunctiveOperator rightExp=Conjunction)*;
+	//	Disjunction;
 	public ConstrainElements getConstrainAccess() {
 		return pConstrain;
 	}
 	
 	public ParserRule getConstrainRule() {
 		return getConstrainAccess().getRule();
+	}
+
+	//Disjunction returns Constrain:
+	//	Conjunction ({Binary.leftExp=current} Operator=DisjunctiveOperator rightExp=Conjunction)*;
+	public DisjunctionElements getDisjunctionAccess() {
+		return pDisjunction;
+	}
+	
+	public ParserRule getDisjunctionRule() {
+		return getDisjunctionAccess().getRule();
 	}
 
 	//Conjunction returns Constrain:

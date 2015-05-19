@@ -53,8 +53,9 @@ public class ConfParser extends AbstractContentAssistParser {
 					put(grammarAccess.getEStringAccess().getAlternatives(), "rule__EString__Alternatives");
 					put(grammarAccess.getEqualityOperatorAccess().getAlternatives(), "rule__EqualityOperator__Alternatives");
 					put(grammarAccess.getComparativeOperatorAccess().getAlternatives(), "rule__ComparativeOperator__Alternatives");
-					put(grammarAccess.getConstrainAccess().getGroup(), "rule__Constrain__Group__0");
-					put(grammarAccess.getConstrainAccess().getGroup_1(), "rule__Constrain__Group_1__0");
+					put(grammarAccess.getModelAccess().getGroup(), "rule__Model__Group__0");
+					put(grammarAccess.getDisjunctionAccess().getGroup(), "rule__Disjunction__Group__0");
+					put(grammarAccess.getDisjunctionAccess().getGroup_1(), "rule__Disjunction__Group_1__0");
 					put(grammarAccess.getConjunctionAccess().getGroup(), "rule__Conjunction__Group__0");
 					put(grammarAccess.getConjunctionAccess().getGroup_1(), "rule__Conjunction__Group_1__0");
 					put(grammarAccess.getEqualityAccess().getGroup(), "rule__Equality__Group__0");
@@ -97,9 +98,10 @@ public class ConfParser extends AbstractContentAssistParser {
 					put(grammarAccess.getXorAccess().getGroup(), "rule__Xor__Group__0");
 					put(grammarAccess.getXorAccess().getGroup_2(), "rule__Xor__Group_2__0");
 					put(grammarAccess.getXorAccess().getGroup_2_2(), "rule__Xor__Group_2_2__0");
-					put(grammarAccess.getModelAccess().getRootAssignment(), "rule__Model__RootAssignment");
-					put(grammarAccess.getConstrainAccess().getOperatorAssignment_1_1(), "rule__Constrain__OperatorAssignment_1_1");
-					put(grammarAccess.getConstrainAccess().getRightExpAssignment_1_2(), "rule__Constrain__RightExpAssignment_1_2");
+					put(grammarAccess.getModelAccess().getNameAssignment_1(), "rule__Model__NameAssignment_1");
+					put(grammarAccess.getModelAccess().getRootAssignment_2(), "rule__Model__RootAssignment_2");
+					put(grammarAccess.getDisjunctionAccess().getOperatorAssignment_1_1(), "rule__Disjunction__OperatorAssignment_1_1");
+					put(grammarAccess.getDisjunctionAccess().getRightExpAssignment_1_2(), "rule__Disjunction__RightExpAssignment_1_2");
 					put(grammarAccess.getConjunctionAccess().getOperatorAssignment_1_1(), "rule__Conjunction__OperatorAssignment_1_1");
 					put(grammarAccess.getConjunctionAccess().getRightExpAssignment_1_2(), "rule__Conjunction__RightExpAssignment_1_2");
 					put(grammarAccess.getEqualityAccess().getOperatorAssignment_1_1(), "rule__Equality__OperatorAssignment_1_1");

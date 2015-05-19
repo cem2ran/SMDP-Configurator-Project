@@ -73,24 +73,47 @@ ruleModel returns [EObject current=null]
     }
     @after { leaveRule(); }:
 (
+	otherlv_0=Model
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getModelAccess().getModelKeyword_0());
+    }
+(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getModelAccess().getRootFeature_ImplParserRuleCall_0()); 
+	        newCompositeNode(grammarAccess.getModelAccess().getNameEStringParserRuleCall_1_0()); 
 	    }
-		lv_root_0_0=ruleFeature_Impl		{
+		lv_name_1_0=ruleEString		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getModelRule());
+	        }
+       		set(
+       			$current, 
+       			"name",
+        		lv_name_1_0, 
+        		"EString");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getModelAccess().getRootFeature_ImplParserRuleCall_2_0()); 
+	    }
+		lv_root_2_0=ruleFeature_Impl		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getModelRule());
 	        }
        		set(
        			$current, 
        			"root",
-        		lv_root_0_0, 
+        		lv_root_2_0, 
         		"Feature_Impl");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)
+))
 ;
 
 
@@ -153,9 +176,39 @@ ruleConstrain returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
+
+    { 
+        newCompositeNode(grammarAccess.getConstrainAccess().getDisjunctionParserRuleCall()); 
+    }
+    this_Disjunction_0=ruleDisjunction
+    {
+        $current = $this_Disjunction_0.current;
+        afterParserOrEnumRuleCall();
+    }
+
+;
+
+
+
+
+
+// Entry rule entryRuleDisjunction
+entryRuleDisjunction returns [EObject current=null]
+	:
+	{ newCompositeNode(grammarAccess.getDisjunctionRule()); }
+	 iv_ruleDisjunction=ruleDisjunction 
+	 { $current=$iv_ruleDisjunction.current; } 
+	 EOF 
+;
+
+// Rule Disjunction
+ruleDisjunction returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
 (
     { 
-        newCompositeNode(grammarAccess.getConstrainAccess().getConjunctionParserRuleCall_0()); 
+        newCompositeNode(grammarAccess.getDisjunctionAccess().getConjunctionParserRuleCall_0()); 
     }
     this_Conjunction_0=ruleConjunction
     {
@@ -165,17 +218,17 @@ ruleConstrain returns [EObject current=null]
 ((
     {
         $current = forceCreateModelElementAndSet(
-            grammarAccess.getConstrainAccess().getBinaryLeftExpAction_1_0(),
+            grammarAccess.getDisjunctionAccess().getBinaryLeftExpAction_1_0(),
             $current);
     }
 )(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getConstrainAccess().getOperatorDisjunctiveOperatorEnumRuleCall_1_1_0()); 
+	        newCompositeNode(grammarAccess.getDisjunctionAccess().getOperatorDisjunctiveOperatorEnumRuleCall_1_1_0()); 
 	    }
 		lv_Operator_2_0=ruleDisjunctiveOperator		{
 	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getConstrainRule());
+	            $current = createModelElementForParent(grammarAccess.getDisjunctionRule());
 	        }
        		set(
        			$current, 
@@ -189,11 +242,11 @@ ruleConstrain returns [EObject current=null]
 )(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getConstrainAccess().getRightExpConjunctionParserRuleCall_1_2_0()); 
+	        newCompositeNode(grammarAccess.getDisjunctionAccess().getRightExpConjunctionParserRuleCall_1_2_0()); 
 	    }
 		lv_rightExp_3_0=ruleConjunction		{
 	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getConstrainRule());
+	            $current = createModelElementForParent(grammarAccess.getDisjunctionRule());
 	        }
        		set(
        			$current, 

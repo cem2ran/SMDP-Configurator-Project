@@ -18,6 +18,8 @@ import org.eclipse.xtext.parser.antlr.Lexer;
 
 Feature : 'Feature';
 
+Model : 'Model';
+
 Xor : 'Xor';
 
 ExclamationMarkEqualsSign : '!=';
