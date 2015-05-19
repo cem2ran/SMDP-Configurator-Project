@@ -1065,22 +1065,14 @@ ruleEString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()
     }
     @after { leaveRule();
     }:
-(    this_ID_0=RULE_ID    {
+    this_ID_0=RULE_ID    {
 		$current.merge(this_ID_0);
     }
 
     { 
-    newLeafNode(this_ID_0, grammarAccess.getEStringAccess().getIDTerminalRuleCall_0()); 
+    newLeafNode(this_ID_0, grammarAccess.getEStringAccess().getIDTerminalRuleCall()); 
     }
 
-    |    this_NULL_1=RULE_NULL    {
-		$current.merge(this_NULL_1);
-    }
-
-    { 
-    newLeafNode(this_NULL_1, grammarAccess.getEStringAccess().getNULLTerminalRuleCall_1()); 
-    }
-)
     ;
 
 

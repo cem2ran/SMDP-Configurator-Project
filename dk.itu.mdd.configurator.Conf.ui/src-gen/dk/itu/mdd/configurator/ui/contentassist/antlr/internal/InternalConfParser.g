@@ -602,9 +602,9 @@ ruleEString
     }
     :
 (
-{ before(grammarAccess.getEStringAccess().getAlternatives()); }
-(rule__EString__Alternatives)
-{ after(grammarAccess.getEStringAccess().getAlternatives()); }
+{ before(grammarAccess.getEStringAccess().getIDTerminalRuleCall()); }
+	RULE_ID
+{ after(grammarAccess.getEStringAccess().getIDTerminalRuleCall()); }
 )
 
 ;
@@ -992,28 +992,6 @@ rule__Attribute__Alternatives
 { before(grammarAccess.getAttributeAccess().getCBooleanParserRuleCall_3()); }
 	ruleCBoolean
 { after(grammarAccess.getAttributeAccess().getCBooleanParserRuleCall_3()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__EString__Alternatives
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getEStringAccess().getIDTerminalRuleCall_0()); }
-	RULE_ID
-{ after(grammarAccess.getEStringAccess().getIDTerminalRuleCall_0()); }
-)
-
-    |(
-{ before(grammarAccess.getEStringAccess().getNULLTerminalRuleCall_1()); }
-	RULE_NULL
-{ after(grammarAccess.getEStringAccess().getNULLTerminalRuleCall_1()); }
 )
 
 ;

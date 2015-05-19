@@ -545,22 +545,15 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class EStringElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "EString");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cIDTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cNULLTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cIDTerminalRuleCall = (RuleCall)rule.eContents().get(1);
 		
+		////| NULL
 		//EString returns ecore::EString:
-		//	ID | NULL;
+		//	ID;
 		@Override public ParserRule getRule() { return rule; }
 
-		//ID | NULL
-		public Alternatives getAlternatives() { return cAlternatives; }
-
 		//ID
-		public RuleCall getIDTerminalRuleCall_0() { return cIDTerminalRuleCall_0; }
-
-		//NULL
-		public RuleCall getNULLTerminalRuleCall_1() { return cNULLTerminalRuleCall_1; }
+		public RuleCall getIDTerminalRuleCall() { return cIDTerminalRuleCall; }
 	}
 
 	public class Feature_ImplElements extends AbstractParserRuleElementFinder {
@@ -1256,7 +1249,6 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 	private final OptionalElements pOptional;
 	private final OrElements pOr;
 	private final XorElements pXor;
-	private final TerminalRule tNULL;
 	private final TerminalRule tBOOLEAN;
 	private final TerminalRule tBEGIN;
 	private final TerminalRule tEND;
@@ -1299,7 +1291,6 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 		this.pOptional = new OptionalElements();
 		this.pOr = new OrElements();
 		this.pXor = new XorElements();
-		this.tNULL = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "NULL");
 		this.tBOOLEAN = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "BOOLEAN");
 		this.tBEGIN = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "BEGIN");
 		this.tEND = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "END");
@@ -1553,8 +1544,9 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 		return getNumberAccess().getRule();
 	}
 
+	////| NULL
 	//EString returns ecore::EString:
-	//	ID | NULL;
+	//	ID;
 	public EStringElements getEStringAccess() {
 		return pEString;
 	}
@@ -1627,12 +1619,7 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 		return getXorAccess().getRule();
 	}
 
-	//terminal NULL:
-	//	"null";
-	public TerminalRule getNULLRule() {
-		return tNULL;
-	} 
-
+	////terminal NULL: 'null';	
 	//terminal BOOLEAN returns ecore::EBoolean:
 	//	"true" | "false";
 	public TerminalRule getBOOLEANRule() {

@@ -49,7 +49,6 @@ public class ConfParser extends AbstractContentAssistParser {
 					put(grammarAccess.getUnaryAccess().getOperatorAlternatives_1_0(), "rule__Unary__OperatorAlternatives_1_0");
 					put(grammarAccess.getGroupAccess().getAlternatives(), "rule__Group__Alternatives");
 					put(grammarAccess.getAttributeAccess().getAlternatives(), "rule__Attribute__Alternatives");
-					put(grammarAccess.getEStringAccess().getAlternatives(), "rule__EString__Alternatives");
 					put(grammarAccess.getEqualityOperatorAccess().getAlternatives(), "rule__EqualityOperator__Alternatives");
 					put(grammarAccess.getComparativeOperatorAccess().getAlternatives(), "rule__ComparativeOperator__Alternatives");
 					put(grammarAccess.getModelAccess().getGroup(), "rule__Model__Group__0");

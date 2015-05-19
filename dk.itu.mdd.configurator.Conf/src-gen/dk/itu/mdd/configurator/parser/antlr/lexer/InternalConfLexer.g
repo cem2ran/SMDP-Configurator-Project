@@ -64,8 +64,6 @@ RightCurlyBracket : '}';
 
 
 
-RULE_NULL : 'null';
-
 RULE_BOOLEAN : ('true'|'false');
 
 fragment RULE_BEGIN : ;

@@ -3,12 +3,12 @@ grammar dk.itu.mdd.configurator.Conf with org.eclipse.xtext.common.Terminals
 
 import "platform:/resource/asd/model/modelMDD2.ecore" 
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
-Model returns Model:
+Model:
 	'Model' name=EString 
 		 root=Feature_Impl
 	;
 	
-Solitary returns Solitary:
+Solitary:
 	Mandatory | Optional;
 	
 Constrain : Disjunction;
@@ -22,13 +22,12 @@ Comparison returns Constrain:
 	Binary ( {Binary.leftExp=current} Operator=ComparativeOperator rightExp=Binary )* ;
 Binary returns Constrain:
 	Primary ({Binary.leftExp=current} rightExp=Primary )* ;	
+Unary returns Constrain:
+	{Unary} Operator=("!"|"-") exp=Primary;
 Primary	returns Constrain:
 	  featureReference=[Grouped|QualifiedName] | '('AttributeConstrain')'| Unary | '(' Constrain ')';
 AttributeConstrain returns Constrain:
 	constrainValue=Attribute;
-	 
-Unary returns Constrain:
-	{Unary} Operator=("!"|"-") exp=Primary;
 
 QualifiedName:
     ID ('.' ID)*;
@@ -49,14 +48,14 @@ enum ComparativeOperator returns BinaryOperator:
 	greaterThan = '>' | lessThan = '<' | greaterOrEquals = '>=' | lessOrEquals = '<='
 ;	
 	
-Group returns Group:
+Group:
 	Or | Xor
 ;
-Attribute returns Attribute:
+Attribute:
 	CString | Number  | Range | CBoolean
 ;
 
-Range : //maybe this should return a constrain? just syntactic sugar, desugaring to leftExp > value < rightExp
+Range: //maybe this should return a constrain? just syntactic sugar, desugaring to leftExp > value < rightExp
 	lower = INT
 	upper = INT
 ;
@@ -74,7 +73,9 @@ Number:
 ;
 
 EString returns ecore::EString:
- ID | NULL;
+ ID 
+ //| NULL
+ ;
  
 
 Feature_Impl returns Feature:
@@ -109,7 +110,6 @@ Optional:
 ;
 
 
-
 Or:
  	'Or' name=EString
 		(BEGIN grouped+=Grouped ((',')* grouped+=Grouped)* END)?
@@ -120,7 +120,7 @@ Xor:
 		(BEGIN grouped+=Grouped ((',')* grouped+=Grouped)* END)?
 ;
 	
-terminal NULL: 'null';	
+//terminal NULL: 'null';	
 terminal BOOLEAN returns ecore::EBoolean: "true" | "false";
 	
 // The following synthetic tokens are used for the indentation-aware blocks
