@@ -44,7 +44,6 @@ public class ConfParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
-					put(grammarAccess.getFeatureAccess().getAlternatives(), "rule__Feature__Alternatives");
 					put(grammarAccess.getSolitaryAccess().getAlternatives(), "rule__Solitary__Alternatives");
 					put(grammarAccess.getPrimaryAccess().getAlternatives(), "rule__Primary__Alternatives");
 					put(grammarAccess.getUnaryAccess().getOperatorAlternatives_1_0(), "rule__Unary__OperatorAlternatives_1_0");

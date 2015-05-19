@@ -75,7 +75,7 @@ public enum BinaryOperator implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	DISJUNCTION(0, "disjunction", "||"), /**
+	DISJUNCTION(0, "disjunction", "or"), /**
 	 * The '<em><b>Conjunction</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -83,7 +83,7 @@ public enum BinaryOperator implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	CONJUNCTION(0, "conjunction", "&&");
+	CONJUNCTION(0, "conjunction", "and");
 
 	/**
 	 * The '<em><b>Less Than</b></em>' literal value.
@@ -184,7 +184,7 @@ public enum BinaryOperator implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #DISJUNCTION
-	 * @model name="disjunction" literal="||"
+	 * @model name="disjunction" literal="or"
 	 * @generated
 	 * @ordered
 	 */
@@ -199,7 +199,7 @@ public enum BinaryOperator implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #CONJUNCTION
-	 * @model name="conjunction" literal="&&"
+	 * @model name="conjunction" literal="and"
 	 * @generated
 	 * @ordered
 	 */

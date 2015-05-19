@@ -50,13 +50,13 @@ import dk.itu.mdd.configurator.services.ConfGrammarAccess;
 		tokenNameToValue.put("LeftCurlyBracket", "'{'");
 		tokenNameToValue.put("RightCurlyBracket", "'}'");
 		tokenNameToValue.put("ExclamationMarkEqualsSign", "'!='");
-		tokenNameToValue.put("AmpersandAmpersand", "'&&'");
 		tokenNameToValue.put("LessThanSignEqualsSign", "'<='");
 		tokenNameToValue.put("EqualsSignEqualsSign", "'=='");
 		tokenNameToValue.put("GreaterThanSignEqualsSign", "'>='");
 		tokenNameToValue.put("Or", "'Or'");
-		tokenNameToValue.put("VerticalLineVerticalLine", "'||'");
+		tokenNameToValue.put("Or_1", "'or'");
 		tokenNameToValue.put("Xor", "'Xor'");
+		tokenNameToValue.put("And", "'and'");
 		tokenNameToValue.put("Model", "'Model'");
 		tokenNameToValue.put("Feature", "'Feature'");
  	}
@@ -107,8 +107,6 @@ ruleModel
 finally {
 	restoreStackSize(stackSize);
 }
-
-
 
 
 
@@ -793,7 +791,7 @@ ruleDisjunctiveOperator
 :
 (
 { before(grammarAccess.getDisjunctiveOperatorAccess().getDisjunctionEnumLiteralDeclaration()); }
-(	VerticalLineVerticalLine
+(	Or_1
 )
 { after(grammarAccess.getDisjunctiveOperatorAccess().getDisjunctionEnumLiteralDeclaration()); }
 )
@@ -813,7 +811,7 @@ ruleConjunctiveOperator
 :
 (
 { before(grammarAccess.getConjunctiveOperatorAccess().getConjunctionEnumLiteralDeclaration()); }
-(	AmpersandAmpersand
+(	And
 )
 { after(grammarAccess.getConjunctiveOperatorAccess().getConjunctionEnumLiteralDeclaration()); }
 )
@@ -860,7 +858,6 @@ ruleComparativeOperator
 finally {
 	restoreStackSize(stackSize);
 }
-
 
 
 

@@ -50,34 +50,6 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getRootFeature_ImplParserRuleCall_2_0() { return cRootFeature_ImplParserRuleCall_2_0; }
 	}
 
-	public class FeatureElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Feature");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cFeature_ImplParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cGroupedParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cMandatoryParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cOptionalParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
-		
-		//Feature:
-		//	Feature_Impl | Grouped | Mandatory | Optional;
-		@Override public ParserRule getRule() { return rule; }
-
-		//Feature_Impl | Grouped | Mandatory | Optional
-		public Alternatives getAlternatives() { return cAlternatives; }
-
-		//Feature_Impl
-		public RuleCall getFeature_ImplParserRuleCall_0() { return cFeature_ImplParserRuleCall_0; }
-
-		//Grouped
-		public RuleCall getGroupedParserRuleCall_1() { return cGroupedParserRuleCall_1; }
-
-		//Mandatory
-		public RuleCall getMandatoryParserRuleCall_2() { return cMandatoryParserRuleCall_2; }
-
-		//Optional
-		public RuleCall getOptionalParserRuleCall_3() { return cOptionalParserRuleCall_3; }
-	}
-
 	public class SolitaryElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Solitary");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
@@ -102,7 +74,6 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Constrain");
 		private final RuleCall cDisjunctionParserRuleCall = (RuleCall)rule.eContents().get(1);
 		
-		////Binary | Unary;
 		//Constrain:
 		//	Disjunction;
 		@Override public ParserRule getRule() { return rule; }
@@ -1155,33 +1126,33 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 	public class DisjunctiveOperatorElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "DisjunctiveOperator");
 		private final EnumLiteralDeclaration cDisjunctionEnumLiteralDeclaration = (EnumLiteralDeclaration)rule.eContents().get(1);
-		private final Keyword cDisjunctionVerticalLineVerticalLineKeyword_0 = (Keyword)cDisjunctionEnumLiteralDeclaration.eContents().get(0);
+		private final Keyword cDisjunctionOrKeyword_0 = (Keyword)cDisjunctionEnumLiteralDeclaration.eContents().get(0);
 		
 		//enum DisjunctiveOperator returns BinaryOperator:
-		//	disjunction="||";
+		//	disjunction="or";
 		public EnumRule getRule() { return rule; }
 
-		//disjunction="||"
+		//disjunction="or"
 		public EnumLiteralDeclaration getDisjunctionEnumLiteralDeclaration() { return cDisjunctionEnumLiteralDeclaration; }
 
-		//"||"
-		public Keyword getDisjunctionVerticalLineVerticalLineKeyword_0() { return cDisjunctionVerticalLineVerticalLineKeyword_0; }
+		//"or"
+		public Keyword getDisjunctionOrKeyword_0() { return cDisjunctionOrKeyword_0; }
 	}
 
 	public class ConjunctiveOperatorElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "ConjunctiveOperator");
 		private final EnumLiteralDeclaration cConjunctionEnumLiteralDeclaration = (EnumLiteralDeclaration)rule.eContents().get(1);
-		private final Keyword cConjunctionAmpersandAmpersandKeyword_0 = (Keyword)cConjunctionEnumLiteralDeclaration.eContents().get(0);
+		private final Keyword cConjunctionAndKeyword_0 = (Keyword)cConjunctionEnumLiteralDeclaration.eContents().get(0);
 		
 		//enum ConjunctiveOperator returns BinaryOperator:
-		//	conjunction="&&";
+		//	conjunction="and";
 		public EnumRule getRule() { return rule; }
 
-		//conjunction="&&"
+		//conjunction="and"
 		public EnumLiteralDeclaration getConjunctionEnumLiteralDeclaration() { return cConjunctionEnumLiteralDeclaration; }
 
-		//"&&"
-		public Keyword getConjunctionAmpersandAmpersandKeyword_0() { return cConjunctionAmpersandAmpersandKeyword_0; }
+		//"and"
+		public Keyword getConjunctionAndKeyword_0() { return cConjunctionAndKeyword_0; }
 	}
 
 	public class EqualityOperatorElements extends AbstractEnumRuleElementFinder {
@@ -1257,7 +1228,6 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	private final ModelElements pModel;
-	private final FeatureElements pFeature;
 	private final SolitaryElements pSolitary;
 	private final ConstrainElements pConstrain;
 	private final DisjunctionElements pDisjunction;
@@ -1301,7 +1271,6 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
 		this.pModel = new ModelElements();
-		this.pFeature = new FeatureElements();
 		this.pSolitary = new SolitaryElements();
 		this.pConstrain = new ConstrainElements();
 		this.pDisjunction = new DisjunctionElements();
@@ -1373,16 +1342,6 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 		return getModelAccess().getRule();
 	}
 
-	//Feature:
-	//	Feature_Impl | Grouped | Mandatory | Optional;
-	public FeatureElements getFeatureAccess() {
-		return pFeature;
-	}
-	
-	public ParserRule getFeatureRule() {
-		return getFeatureAccess().getRule();
-	}
-
 	//Solitary:
 	//	Mandatory | Optional;
 	public SolitaryElements getSolitaryAccess() {
@@ -1393,7 +1352,6 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 		return getSolitaryAccess().getRule();
 	}
 
-	////Binary | Unary;
 	//Constrain:
 	//	Disjunction;
 	public ConstrainElements getConstrainAccess() {
@@ -1495,7 +1453,7 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//enum DisjunctiveOperator returns BinaryOperator:
-	//	disjunction="||";
+	//	disjunction="or";
 	public DisjunctiveOperatorElements getDisjunctiveOperatorAccess() {
 		return unknownRuleDisjunctiveOperator;
 	}
@@ -1505,7 +1463,7 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//enum ConjunctiveOperator returns BinaryOperator:
-	//	conjunction="&&";
+	//	conjunction="and";
 	public ConjunctiveOperatorElements getConjunctiveOperatorAccess() {
 		return unknownRuleConjunctiveOperator;
 	}

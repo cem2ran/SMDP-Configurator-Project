@@ -120,8 +120,6 @@ ruleModel returns [EObject current=null]
 
 
 
-
-
 // Entry rule entryRuleSolitary
 entryRuleSolitary returns [EObject current=null]
 	:
@@ -1951,7 +1949,7 @@ ruleXor returns [EObject current=null]
 ruleDisjunctiveOperator returns [Enumerator current=null] 
     @init { enterRule(); }
     @after { leaveRule(); }:
-(    enumLiteral_0=VerticalLineVerticalLine
+(    enumLiteral_0=Or_1
     {
         $current = grammarAccess.getDisjunctiveOperatorAccess().getDisjunctionEnumLiteralDeclaration().getEnumLiteral().getInstance();
         newLeafNode(enumLiteral_0, grammarAccess.getDisjunctiveOperatorAccess().getDisjunctionEnumLiteralDeclaration()); 
@@ -1964,7 +1962,7 @@ ruleDisjunctiveOperator returns [Enumerator current=null]
 ruleConjunctiveOperator returns [Enumerator current=null] 
     @init { enterRule(); }
     @after { leaveRule(); }:
-(    enumLiteral_0=AmpersandAmpersand
+(    enumLiteral_0=And
     {
         $current = grammarAccess.getConjunctiveOperatorAccess().getConjunctionEnumLiteralDeclaration().getEnumLiteral().getInstance();
         newLeafNode(enumLiteral_0, grammarAccess.getConjunctiveOperatorAccess().getConjunctionEnumLiteralDeclaration()); 

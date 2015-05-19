@@ -22,9 +22,9 @@ Model : 'Model';
 
 Xor : 'Xor';
 
-ExclamationMarkEqualsSign : '!=';
+And : 'and';
 
-AmpersandAmpersand : '&&';
+ExclamationMarkEqualsSign : '!=';
 
 LessThanSignEqualsSign : '<=';
 
@@ -34,7 +34,7 @@ GreaterThanSignEqualsSign : '>=';
 
 Or : 'Or';
 
-VerticalLineVerticalLine : '||';
+Or_1 : 'or';
 
 ExclamationMark : '!';
 

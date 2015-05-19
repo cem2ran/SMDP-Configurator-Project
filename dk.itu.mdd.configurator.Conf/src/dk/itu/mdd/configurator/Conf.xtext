@@ -8,14 +8,10 @@ Model returns Model:
 		 root=Feature_Impl
 	;
 	
-Feature returns Feature:
-	Feature_Impl | Grouped | Mandatory | Optional;
-
 Solitary returns Solitary:
 	Mandatory | Optional;
 	
-Constrain returns Constrain: //Binary | Unary;
-	Disjunction;
+Constrain : Disjunction;
 Disjunction returns Constrain:
 	Conjunction ( {Binary.leftExp=current} Operator=DisjunctiveOperator rightExp=Conjunction )* ;
 Conjunction returns Constrain: 
@@ -29,8 +25,8 @@ Binary returns Constrain:
 Primary	returns Constrain:
 	  featureReference=[Grouped|QualifiedName] | '('AttributeConstrain')'| Unary | '(' Constrain ')';
 AttributeConstrain returns Constrain:
-	constrainValue=Attribute
-; 
+	constrainValue=Attribute;
+	 
 Unary returns Constrain:
 	{Unary} Operator=("!"|"-") exp=Primary;
 
@@ -38,11 +34,11 @@ QualifiedName:
     ID ('.' ID)*;
 
 enum DisjunctiveOperator returns BinaryOperator:
-	disjunction = '||'
+	disjunction = 'or'
 ;
 
 enum ConjunctiveOperator returns BinaryOperator:
-	conjunction = '&&'
+	conjunction = 'and'
 ;
 
 enum EqualityOperator returns BinaryOperator:
@@ -55,7 +51,7 @@ enum ComparativeOperator returns BinaryOperator:
 	
 Group returns Group:
 	Or | Xor
-	;
+;
 Attribute returns Attribute:
 	CString | Number  | Range | CBoolean
 ;
@@ -80,8 +76,6 @@ Number:
 EString returns ecore::EString:
  ID | NULL;
  
- 
-
 
 Feature_Impl returns Feature:
 	'Feature'
@@ -89,13 +83,13 @@ Feature_Impl returns Feature:
 		( BEGIN subfeature+=Solitary ( subfeature+=Solitary)* END)?
 		( '[' constrains+=Constrain ( "," constrains+=Constrain)* ']' )?
 		//('att' attributes+=Attribute ( "," attributes+=Attribute)* )?
-		;
+;
 
 Grouped:
-		name=EString
+	name=EString
 	    ( '('  attribute=Attribute  ')' )?
 		( '['  constrains+=Constrain ( "," constrains+=Constrain)* ']' )? 
-	;
+;
 
 Mandatory:
 	name=EString
@@ -103,7 +97,7 @@ Mandatory:
 		( '('  attribute=Attribute  ')' )?
 		( '[' constrains+=Constrain ( "," constrains+=Constrain)* ']' )?
 		( groups+=Group ( groups+=Group)* )?
-	;
+;
 
 Optional:
 	'?'
@@ -112,19 +106,19 @@ Optional:
 		( '('  attribute=Attribute  ')' )?
 		('[' constrains+=Constrain ( "," constrains+=Constrain)* ']' )?
 		( groups+=Group ( groups+=Group)* )?
-	;
+;
 
 
 
 Or:
  	'Or' name=EString
 		(BEGIN grouped+=Grouped ((',')* grouped+=Grouped)* END)?
-	;
+;
 
 Xor:
 	'Xor' name=EString
 		(BEGIN grouped+=Grouped ((',')* grouped+=Grouped)* END)?
-		;
+;
 	
 terminal NULL: 'null';	
 terminal BOOLEAN returns ecore::EBoolean: "true" | "false";
