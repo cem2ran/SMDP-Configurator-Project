@@ -98,6 +98,7 @@ Grouped:
 Mandatory:
 	name=EString
 		('{' subfeature+=Solitary ( "," subfeature+=Solitary)* '}' )?
+		( '('  attribute=Attribute  ')' )?
 		( '[' constrains+=Constrain ( "," constrains+=Constrain)* ']' )?
 		( groups+=Group ( groups+=Group)* )?
 	;
@@ -106,6 +107,7 @@ Optional:
 	'?'
 	name=EString
 		('{' subfeature+=Solitary ( "," subfeature+=Solitary)* '}' )?
+		( '('  attribute=Attribute  ')' )?
 		('[' constrains+=Constrain ( "," constrains+=Constrain)* ']' )?
 		( groups+=Group ( groups+=Group)* )?
 	;

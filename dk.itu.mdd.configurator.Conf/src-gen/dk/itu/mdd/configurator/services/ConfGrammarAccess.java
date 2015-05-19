@@ -747,27 +747,32 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cSubfeatureSolitaryParserRuleCall_1_2_1_0 = (RuleCall)cSubfeatureAssignment_1_2_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_1_3 = (Keyword)cGroup_1.eContents().get(3);
 		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cLeftSquareBracketKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cConstrainsAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cConstrainsConstrainParserRuleCall_2_1_0 = (RuleCall)cConstrainsAssignment_2_1.eContents().get(0);
-		private final Group cGroup_2_2 = (Group)cGroup_2.eContents().get(2);
-		private final Keyword cCommaKeyword_2_2_0 = (Keyword)cGroup_2_2.eContents().get(0);
-		private final Assignment cConstrainsAssignment_2_2_1 = (Assignment)cGroup_2_2.eContents().get(1);
-		private final RuleCall cConstrainsConstrainParserRuleCall_2_2_1_0 = (RuleCall)cConstrainsAssignment_2_2_1.eContents().get(0);
-		private final Keyword cRightSquareBracketKeyword_2_3 = (Keyword)cGroup_2.eContents().get(3);
+		private final Keyword cLeftParenthesisKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cAttributeAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cAttributeAttributeParserRuleCall_2_1_0 = (RuleCall)cAttributeAssignment_2_1.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Assignment cGroupsAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
-		private final RuleCall cGroupsGroupParserRuleCall_3_0_0 = (RuleCall)cGroupsAssignment_3_0.eContents().get(0);
-		private final Assignment cGroupsAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cGroupsGroupParserRuleCall_3_1_0 = (RuleCall)cGroupsAssignment_3_1.eContents().get(0);
+		private final Keyword cLeftSquareBracketKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cConstrainsAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cConstrainsConstrainParserRuleCall_3_1_0 = (RuleCall)cConstrainsAssignment_3_1.eContents().get(0);
+		private final Group cGroup_3_2 = (Group)cGroup_3.eContents().get(2);
+		private final Keyword cCommaKeyword_3_2_0 = (Keyword)cGroup_3_2.eContents().get(0);
+		private final Assignment cConstrainsAssignment_3_2_1 = (Assignment)cGroup_3_2.eContents().get(1);
+		private final RuleCall cConstrainsConstrainParserRuleCall_3_2_1_0 = (RuleCall)cConstrainsAssignment_3_2_1.eContents().get(0);
+		private final Keyword cRightSquareBracketKeyword_3_3 = (Keyword)cGroup_3.eContents().get(3);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Assignment cGroupsAssignment_4_0 = (Assignment)cGroup_4.eContents().get(0);
+		private final RuleCall cGroupsGroupParserRuleCall_4_0_0 = (RuleCall)cGroupsAssignment_4_0.eContents().get(0);
+		private final Assignment cGroupsAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cGroupsGroupParserRuleCall_4_1_0 = (RuleCall)cGroupsAssignment_4_1.eContents().get(0);
 		
 		//Mandatory:
-		//	name=EString ("{" subfeature+=Solitary ("," subfeature+=Solitary)* "}")? ("[" constrains+=Constrain (","
-		//	constrains+=Constrain)* "]")? (groups+=Group groups+=Group*)?;
+		//	name=EString ("{" subfeature+=Solitary ("," subfeature+=Solitary)* "}")? ("(" attribute=Attribute ")")? ("["
+		//	constrains+=Constrain ("," constrains+=Constrain)* "]")? (groups+=Group groups+=Group*)?;
 		@Override public ParserRule getRule() { return rule; }
 
-		//name=EString ("{" subfeature+=Solitary ("," subfeature+=Solitary)* "}")? ("[" constrains+=Constrain (","
-		//constrains+=Constrain)* "]")? (groups+=Group groups+=Group*)?
+		//name=EString ("{" subfeature+=Solitary ("," subfeature+=Solitary)* "}")? ("(" attribute=Attribute ")")? ("["
+		//constrains+=Constrain ("," constrains+=Constrain)* "]")? (groups+=Group groups+=Group*)?
 		public Group getGroup() { return cGroup; }
 
 		//name=EString
@@ -803,123 +808,20 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_1_3() { return cRightCurlyBracketKeyword_1_3; }
 
-		//("[" constrains+=Constrain ("," constrains+=Constrain)* "]")?
+		//("(" attribute=Attribute ")")?
 		public Group getGroup_2() { return cGroup_2; }
 
-		//"["
-		public Keyword getLeftSquareBracketKeyword_2_0() { return cLeftSquareBracketKeyword_2_0; }
+		//"("
+		public Keyword getLeftParenthesisKeyword_2_0() { return cLeftParenthesisKeyword_2_0; }
 
-		//constrains+=Constrain
-		public Assignment getConstrainsAssignment_2_1() { return cConstrainsAssignment_2_1; }
+		//attribute=Attribute
+		public Assignment getAttributeAssignment_2_1() { return cAttributeAssignment_2_1; }
 
-		//Constrain
-		public RuleCall getConstrainsConstrainParserRuleCall_2_1_0() { return cConstrainsConstrainParserRuleCall_2_1_0; }
+		//Attribute
+		public RuleCall getAttributeAttributeParserRuleCall_2_1_0() { return cAttributeAttributeParserRuleCall_2_1_0; }
 
-		//("," constrains+=Constrain)*
-		public Group getGroup_2_2() { return cGroup_2_2; }
-
-		//","
-		public Keyword getCommaKeyword_2_2_0() { return cCommaKeyword_2_2_0; }
-
-		//constrains+=Constrain
-		public Assignment getConstrainsAssignment_2_2_1() { return cConstrainsAssignment_2_2_1; }
-
-		//Constrain
-		public RuleCall getConstrainsConstrainParserRuleCall_2_2_1_0() { return cConstrainsConstrainParserRuleCall_2_2_1_0; }
-
-		//"]"
-		public Keyword getRightSquareBracketKeyword_2_3() { return cRightSquareBracketKeyword_2_3; }
-
-		//(groups+=Group groups+=Group*)?
-		public Group getGroup_3() { return cGroup_3; }
-
-		//groups+=Group
-		public Assignment getGroupsAssignment_3_0() { return cGroupsAssignment_3_0; }
-
-		//Group
-		public RuleCall getGroupsGroupParserRuleCall_3_0_0() { return cGroupsGroupParserRuleCall_3_0_0; }
-
-		//groups+=Group*
-		public Assignment getGroupsAssignment_3_1() { return cGroupsAssignment_3_1; }
-
-		//Group
-		public RuleCall getGroupsGroupParserRuleCall_3_1_0() { return cGroupsGroupParserRuleCall_3_1_0; }
-	}
-
-	public class OptionalElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Optional");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cQuestionMarkKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameEStringParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cLeftCurlyBracketKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cSubfeatureAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cSubfeatureSolitaryParserRuleCall_2_1_0 = (RuleCall)cSubfeatureAssignment_2_1.eContents().get(0);
-		private final Group cGroup_2_2 = (Group)cGroup_2.eContents().get(2);
-		private final Keyword cCommaKeyword_2_2_0 = (Keyword)cGroup_2_2.eContents().get(0);
-		private final Assignment cSubfeatureAssignment_2_2_1 = (Assignment)cGroup_2_2.eContents().get(1);
-		private final RuleCall cSubfeatureSolitaryParserRuleCall_2_2_1_0 = (RuleCall)cSubfeatureAssignment_2_2_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_2_3 = (Keyword)cGroup_2.eContents().get(3);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cLeftSquareBracketKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cConstrainsAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cConstrainsConstrainParserRuleCall_3_1_0 = (RuleCall)cConstrainsAssignment_3_1.eContents().get(0);
-		private final Group cGroup_3_2 = (Group)cGroup_3.eContents().get(2);
-		private final Keyword cCommaKeyword_3_2_0 = (Keyword)cGroup_3_2.eContents().get(0);
-		private final Assignment cConstrainsAssignment_3_2_1 = (Assignment)cGroup_3_2.eContents().get(1);
-		private final RuleCall cConstrainsConstrainParserRuleCall_3_2_1_0 = (RuleCall)cConstrainsAssignment_3_2_1.eContents().get(0);
-		private final Keyword cRightSquareBracketKeyword_3_3 = (Keyword)cGroup_3.eContents().get(3);
-		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Assignment cGroupsAssignment_4_0 = (Assignment)cGroup_4.eContents().get(0);
-		private final RuleCall cGroupsGroupParserRuleCall_4_0_0 = (RuleCall)cGroupsAssignment_4_0.eContents().get(0);
-		private final Assignment cGroupsAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final RuleCall cGroupsGroupParserRuleCall_4_1_0 = (RuleCall)cGroupsAssignment_4_1.eContents().get(0);
-		
-		//Optional:
-		//	"?" name=EString ("{" subfeature+=Solitary ("," subfeature+=Solitary)* "}")? ("[" constrains+=Constrain (","
-		//	constrains+=Constrain)* "]")? (groups+=Group groups+=Group*)?;
-		@Override public ParserRule getRule() { return rule; }
-
-		//"?" name=EString ("{" subfeature+=Solitary ("," subfeature+=Solitary)* "}")? ("[" constrains+=Constrain (","
-		//constrains+=Constrain)* "]")? (groups+=Group groups+=Group*)?
-		public Group getGroup() { return cGroup; }
-
-		//"?"
-		public Keyword getQuestionMarkKeyword_0() { return cQuestionMarkKeyword_0; }
-
-		//name=EString
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
-
-		//EString
-		public RuleCall getNameEStringParserRuleCall_1_0() { return cNameEStringParserRuleCall_1_0; }
-
-		//("{" subfeature+=Solitary ("," subfeature+=Solitary)* "}")?
-		public Group getGroup_2() { return cGroup_2; }
-
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_2_0() { return cLeftCurlyBracketKeyword_2_0; }
-
-		//subfeature+=Solitary
-		public Assignment getSubfeatureAssignment_2_1() { return cSubfeatureAssignment_2_1; }
-
-		//Solitary
-		public RuleCall getSubfeatureSolitaryParserRuleCall_2_1_0() { return cSubfeatureSolitaryParserRuleCall_2_1_0; }
-
-		//("," subfeature+=Solitary)*
-		public Group getGroup_2_2() { return cGroup_2_2; }
-
-		//","
-		public Keyword getCommaKeyword_2_2_0() { return cCommaKeyword_2_2_0; }
-
-		//subfeature+=Solitary
-		public Assignment getSubfeatureAssignment_2_2_1() { return cSubfeatureAssignment_2_2_1; }
-
-		//Solitary
-		public RuleCall getSubfeatureSolitaryParserRuleCall_2_2_1_0() { return cSubfeatureSolitaryParserRuleCall_2_2_1_0; }
-
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_2_3() { return cRightCurlyBracketKeyword_2_3; }
+		//")"
+		public Keyword getRightParenthesisKeyword_2_2() { return cRightParenthesisKeyword_2_2; }
 
 		//("[" constrains+=Constrain ("," constrains+=Constrain)* "]")?
 		public Group getGroup_3() { return cGroup_3; }
@@ -962,6 +864,144 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 
 		//Group
 		public RuleCall getGroupsGroupParserRuleCall_4_1_0() { return cGroupsGroupParserRuleCall_4_1_0; }
+	}
+
+	public class OptionalElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Optional");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cQuestionMarkKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameEStringParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cLeftCurlyBracketKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cSubfeatureAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cSubfeatureSolitaryParserRuleCall_2_1_0 = (RuleCall)cSubfeatureAssignment_2_1.eContents().get(0);
+		private final Group cGroup_2_2 = (Group)cGroup_2.eContents().get(2);
+		private final Keyword cCommaKeyword_2_2_0 = (Keyword)cGroup_2_2.eContents().get(0);
+		private final Assignment cSubfeatureAssignment_2_2_1 = (Assignment)cGroup_2_2.eContents().get(1);
+		private final RuleCall cSubfeatureSolitaryParserRuleCall_2_2_1_0 = (RuleCall)cSubfeatureAssignment_2_2_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_2_3 = (Keyword)cGroup_2.eContents().get(3);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cLeftParenthesisKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cAttributeAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cAttributeAttributeParserRuleCall_3_1_0 = (RuleCall)cAttributeAssignment_3_1.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cLeftSquareBracketKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cConstrainsAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cConstrainsConstrainParserRuleCall_4_1_0 = (RuleCall)cConstrainsAssignment_4_1.eContents().get(0);
+		private final Group cGroup_4_2 = (Group)cGroup_4.eContents().get(2);
+		private final Keyword cCommaKeyword_4_2_0 = (Keyword)cGroup_4_2.eContents().get(0);
+		private final Assignment cConstrainsAssignment_4_2_1 = (Assignment)cGroup_4_2.eContents().get(1);
+		private final RuleCall cConstrainsConstrainParserRuleCall_4_2_1_0 = (RuleCall)cConstrainsAssignment_4_2_1.eContents().get(0);
+		private final Keyword cRightSquareBracketKeyword_4_3 = (Keyword)cGroup_4.eContents().get(3);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final Assignment cGroupsAssignment_5_0 = (Assignment)cGroup_5.eContents().get(0);
+		private final RuleCall cGroupsGroupParserRuleCall_5_0_0 = (RuleCall)cGroupsAssignment_5_0.eContents().get(0);
+		private final Assignment cGroupsAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final RuleCall cGroupsGroupParserRuleCall_5_1_0 = (RuleCall)cGroupsAssignment_5_1.eContents().get(0);
+		
+		//Optional:
+		//	"?" name=EString ("{" subfeature+=Solitary ("," subfeature+=Solitary)* "}")? ("(" attribute=Attribute ")")? ("["
+		//	constrains+=Constrain ("," constrains+=Constrain)* "]")? (groups+=Group groups+=Group*)?;
+		@Override public ParserRule getRule() { return rule; }
+
+		//"?" name=EString ("{" subfeature+=Solitary ("," subfeature+=Solitary)* "}")? ("(" attribute=Attribute ")")? ("["
+		//constrains+=Constrain ("," constrains+=Constrain)* "]")? (groups+=Group groups+=Group*)?
+		public Group getGroup() { return cGroup; }
+
+		//"?"
+		public Keyword getQuestionMarkKeyword_0() { return cQuestionMarkKeyword_0; }
+
+		//name=EString
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//EString
+		public RuleCall getNameEStringParserRuleCall_1_0() { return cNameEStringParserRuleCall_1_0; }
+
+		//("{" subfeature+=Solitary ("," subfeature+=Solitary)* "}")?
+		public Group getGroup_2() { return cGroup_2; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_2_0() { return cLeftCurlyBracketKeyword_2_0; }
+
+		//subfeature+=Solitary
+		public Assignment getSubfeatureAssignment_2_1() { return cSubfeatureAssignment_2_1; }
+
+		//Solitary
+		public RuleCall getSubfeatureSolitaryParserRuleCall_2_1_0() { return cSubfeatureSolitaryParserRuleCall_2_1_0; }
+
+		//("," subfeature+=Solitary)*
+		public Group getGroup_2_2() { return cGroup_2_2; }
+
+		//","
+		public Keyword getCommaKeyword_2_2_0() { return cCommaKeyword_2_2_0; }
+
+		//subfeature+=Solitary
+		public Assignment getSubfeatureAssignment_2_2_1() { return cSubfeatureAssignment_2_2_1; }
+
+		//Solitary
+		public RuleCall getSubfeatureSolitaryParserRuleCall_2_2_1_0() { return cSubfeatureSolitaryParserRuleCall_2_2_1_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_2_3() { return cRightCurlyBracketKeyword_2_3; }
+
+		//("(" attribute=Attribute ")")?
+		public Group getGroup_3() { return cGroup_3; }
+
+		//"("
+		public Keyword getLeftParenthesisKeyword_3_0() { return cLeftParenthesisKeyword_3_0; }
+
+		//attribute=Attribute
+		public Assignment getAttributeAssignment_3_1() { return cAttributeAssignment_3_1; }
+
+		//Attribute
+		public RuleCall getAttributeAttributeParserRuleCall_3_1_0() { return cAttributeAttributeParserRuleCall_3_1_0; }
+
+		//")"
+		public Keyword getRightParenthesisKeyword_3_2() { return cRightParenthesisKeyword_3_2; }
+
+		//("[" constrains+=Constrain ("," constrains+=Constrain)* "]")?
+		public Group getGroup_4() { return cGroup_4; }
+
+		//"["
+		public Keyword getLeftSquareBracketKeyword_4_0() { return cLeftSquareBracketKeyword_4_0; }
+
+		//constrains+=Constrain
+		public Assignment getConstrainsAssignment_4_1() { return cConstrainsAssignment_4_1; }
+
+		//Constrain
+		public RuleCall getConstrainsConstrainParserRuleCall_4_1_0() { return cConstrainsConstrainParserRuleCall_4_1_0; }
+
+		//("," constrains+=Constrain)*
+		public Group getGroup_4_2() { return cGroup_4_2; }
+
+		//","
+		public Keyword getCommaKeyword_4_2_0() { return cCommaKeyword_4_2_0; }
+
+		//constrains+=Constrain
+		public Assignment getConstrainsAssignment_4_2_1() { return cConstrainsAssignment_4_2_1; }
+
+		//Constrain
+		public RuleCall getConstrainsConstrainParserRuleCall_4_2_1_0() { return cConstrainsConstrainParserRuleCall_4_2_1_0; }
+
+		//"]"
+		public Keyword getRightSquareBracketKeyword_4_3() { return cRightSquareBracketKeyword_4_3; }
+
+		//(groups+=Group groups+=Group*)?
+		public Group getGroup_5() { return cGroup_5; }
+
+		//groups+=Group
+		public Assignment getGroupsAssignment_5_0() { return cGroupsAssignment_5_0; }
+
+		//Group
+		public RuleCall getGroupsGroupParserRuleCall_5_0_0() { return cGroupsGroupParserRuleCall_5_0_0; }
+
+		//groups+=Group*
+		public Assignment getGroupsAssignment_5_1() { return cGroupsAssignment_5_1; }
+
+		//Group
+		public RuleCall getGroupsGroupParserRuleCall_5_1_0() { return cGroupsGroupParserRuleCall_5_1_0; }
 	}
 
 	public class OrElements extends AbstractParserRuleElementFinder {
@@ -1549,8 +1589,8 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Mandatory:
-	//	name=EString ("{" subfeature+=Solitary ("," subfeature+=Solitary)* "}")? ("[" constrains+=Constrain (","
-	//	constrains+=Constrain)* "]")? (groups+=Group groups+=Group*)?;
+	//	name=EString ("{" subfeature+=Solitary ("," subfeature+=Solitary)* "}")? ("(" attribute=Attribute ")")? ("["
+	//	constrains+=Constrain ("," constrains+=Constrain)* "]")? (groups+=Group groups+=Group*)?;
 	public MandatoryElements getMandatoryAccess() {
 		return pMandatory;
 	}
@@ -1560,8 +1600,8 @@ public class ConfGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Optional:
-	//	"?" name=EString ("{" subfeature+=Solitary ("," subfeature+=Solitary)* "}")? ("[" constrains+=Constrain (","
-	//	constrains+=Constrain)* "]")? (groups+=Group groups+=Group*)?;
+	//	"?" name=EString ("{" subfeature+=Solitary ("," subfeature+=Solitary)* "}")? ("(" attribute=Attribute ")")? ("["
+	//	constrains+=Constrain ("," constrains+=Constrain)* "]")? (groups+=Group groups+=Group*)?;
 	public OptionalElements getOptionalAccess() {
 		return pOptional;
 	}

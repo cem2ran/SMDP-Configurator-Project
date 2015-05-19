@@ -163,7 +163,13 @@ public class ConfSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=EString (subfeature+=Solitary subfeature+=Solitary*)? (constrains+=Constrain constrains+=Constrain*)? (groups+=Group groups+=Group*)?)
+	 *     (
+	 *         name=EString 
+	 *         (subfeature+=Solitary subfeature+=Solitary*)? 
+	 *         attribute=Attribute? 
+	 *         (constrains+=Constrain constrains+=Constrain*)? 
+	 *         (groups+=Group groups+=Group*)?
+	 *     )
 	 */
 	protected void sequence_Mandatory(EObject context, Mandatory semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -197,7 +203,13 @@ public class ConfSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=EString (subfeature+=Solitary subfeature+=Solitary*)? (constrains+=Constrain constrains+=Constrain*)? (groups+=Group groups+=Group*)?)
+	 *     (
+	 *         name=EString 
+	 *         (subfeature+=Solitary subfeature+=Solitary*)? 
+	 *         attribute=Attribute? 
+	 *         (constrains+=Constrain constrains+=Constrain*)? 
+	 *         (groups+=Group groups+=Group*)?
+	 *     )
 	 */
 	protected void sequence_Optional(EObject context, Optional semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

@@ -3,6 +3,10 @@
  */
 package dk.itu.mdd.configurator;
 
+import modelMDD2.impl.ModelMDD2PackageImpl;
+
+import com.google.inject.Injector;
+
 /**
  * Initialization support for running Xtext languages 
  * without equinox extension registry
@@ -11,6 +15,17 @@ public class ConfStandaloneSetup extends ConfStandaloneSetupGenerated{
 
 	public static void doSetup() {
 		new ConfStandaloneSetup().createInjectorAndDoEMFRegistration();
+	}
+	
+	@Override
+	public Injector createInjectorAndDoEMFRegistration() {
+               
+		ModelMDD2PackageImpl.init(); 
+		org.eclipse.xtext.common.TerminalsStandaloneSetup.doSetup();
+
+		Injector injector = createInjector();
+		register(injector);
+		return injector;
 	}
 }
 
