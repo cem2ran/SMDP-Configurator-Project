@@ -4,11 +4,9 @@ import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.CheckedTextView;
@@ -25,7 +23,6 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.emfjson.jackson.module.EMFModule;
 
 import java.io.IOException;
-import java.util.Iterator;
 import java.util.List;
 
 import modelMDD2.Binary;
@@ -38,36 +35,16 @@ import modelMDD2.ModelMDD2Package;
 import modelMDD2.Solitary;
 import modelMDD2.Unary;
 import modelMDD2.Xor;
-import modelMDD2.impl.MandatoryImpl;
 import modelMDD2.impl.OptionalImpl;
 import trikita.anvil.Anvil;
 import trikita.anvil.Nodes.ViewNode;
 import trikita.anvil.Renderable;
 
 import static dk.itu.configurator.Constraints.getPath;
-import static dk.itu.configurator.Views.H1;
-import static dk.itu.configurator.Views.H2;
-import static dk.itu.configurator.Views.H3;
-import static dk.itu.configurator.Views.HList;
-import static dk.itu.configurator.Views.VList;
-import static trikita.anvil.BaseAttrs.CENTER;
-import static trikita.anvil.BaseAttrs.FILL;
-import static trikita.anvil.BaseAttrs.MATCH;
-import static trikita.anvil.BaseAttrs.WRAP;
-import static trikita.anvil.BaseAttrs.dip;
-import static trikita.anvil.BaseAttrs.padding;
-import static trikita.anvil.BaseAttrs.size;
+import static dk.itu.configurator.Views.*;
+import static trikita.anvil.BaseAttrs.*;
 import static trikita.anvil.Nodes.v;
-import static trikita.anvil.v15.Attrs.adapter;
-import static trikita.anvil.v15.Attrs.backgroundColor;
-import static trikita.anvil.v15.Attrs.choiceMode;
-import static trikita.anvil.v15.Attrs.gravity;
-import static trikita.anvil.v15.Attrs.layoutParams;
-import static trikita.anvil.v15.Attrs.onClick;
-import static trikita.anvil.v15.Attrs.tag;
-import static trikita.anvil.v15.Attrs.text;
-import static trikita.anvil.v15.Attrs.textSize;
-import static trikita.anvil.v15.Attrs.visibility;
+import static trikita.anvil.v15.Attrs.*;
 
 
 /**
@@ -75,26 +52,14 @@ import static trikita.anvil.v15.Attrs.visibility;
  */
 public class ConfiguratorActivityFragment extends Fragment {
 
-    ConfiguratorView configurator;
     Model configuration;
 
     public ConfiguratorActivityFragment(String data){
         // register our meta-model package
         ModelMDD2Package.eINSTANCE.eClass();
-        /*
-        Resource resource = new XMIResourceImpl();
-
-        try {
-            resource.load(getResources().openRawResource(R.raw.test1), null);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        configuration = (Model) resource.getContents().get(0);
-        */
 
         ObjectMapper mapper = new ObjectMapper();
         mapper.registerModule(new EMFModule());
-
 
         Resource r = null;
         try {
@@ -108,9 +73,7 @@ public class ConfiguratorActivityFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        configurator = new ConfiguratorView(getActivity(), configuration);
-        View root = configurator.getRootView();
-        return root;
+        return new ConfiguratorView(getActivity(), configuration).getRootView();
     }
 
     class ConfiguratorView extends FrameLayout implements Renderable {
@@ -129,9 +92,8 @@ public class ConfiguratorActivityFragment extends Fragment {
 
         @Override
         public ViewNode view() {
-            ViewNode list = VList(
-                    H1(text(m.getName())),
-                    padding(12)
+            ViewNode list = VList(padding(12),
+                    H1(text(m.getName()))
             );
 
             for (Solitary s : m.getRoot().getSubfeature()) {
@@ -143,27 +105,14 @@ public class ConfiguratorActivityFragment extends Fragment {
             p.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
 
             boolean validConfiguration = true;
-            /*
-            TreeIterator<EObject> contents = m.eAllContents();
-            //List<ConstrainImpl> constraints = new ArrayList();
-            while(contents.hasNext()){
-                EObject obj = contents.next();
-                if(obj instanceof MandatoryImpl){
-                    MandatoryImpl feature = (MandatoryImpl) obj;
-                    Iterator<Group> groups = feature.getGroups().iterator();
-                    while(groups.hasNext()){
-
-                    }
-                    validConfiguration = false;
-                    break;
-                }
-            }
-            */
-
 
             return v(RelativeLayout.class, size(MATCH, MATCH),
-                    v(ScrollView.class, list, padding(0, 0, 0, 70)),
-                    v(TextView.class, text(validConfiguration ? "Configure" : "Constraints not met"), textSize(dip(5)), gravity(CENTER), backgroundColor(Color.LTGRAY), layoutParams(p), padding(18), size(FILL, WRAP))
+                    v(ScrollView.class, padding(0, 0, 0, 70),
+                        list
+                    ),
+                    v(TextView.class, text(validConfiguration ? "Configure" : "Constraints not met"),
+                            textSize(dip(5)), gravity(CENTER), backgroundColor(Color.LTGRAY),
+                            layoutParams(p), padding(18), size(FILL, WRAP))
             );
         }
 
@@ -173,21 +122,8 @@ public class ConfiguratorActivityFragment extends Fragment {
         }
 
         public ViewNode solitaryView(Solitary solitary) {
-
             boolean optional = solitary instanceof OptionalImpl;
 
-            if (solitary instanceof MandatoryImpl) {
-                Iterator<Group> groups = solitary.getGroups().iterator();
-                while (groups.hasNext()) {
-                    Group group = groups.next();
-                    Iterator<Grouped> features = group.getGrouped().iterator();
-                    while (features.hasNext()) {
-                        Grouped feature = features.next();
-                        Iterator<Constrain> constraints = feature.getConstrains().iterator();
-                        //feature.isSelected()
-                    }
-                }
-            }
             final String listTag = getPath(solitary) + ".anvil_list";
             ViewNode list = VList(tag(listTag), visibility(optional ? GONE : VISIBLE));
 
@@ -207,23 +143,8 @@ public class ConfiguratorActivityFragment extends Fragment {
 
         public ViewNode groupView(Group group) {
 
-/*
-            AdapterViewCompat.OnItemSelectedListener onSelect = new AdapterViewCompat.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterViewCompat<?> adapterViewCompat, View view, int i, long l) {
-
-                }
-
-                @Override
-                public void onNothingSelected(AdapterViewCompat<?> adapterViewCompat) {
-
-                }
-            };
-*/
             class ConstrainedAdapter extends ArrayAdapter {
                 List<Grouped> items;
-                AdapterView.OnItemClickListener selectedListener = null;
-
 
                 public ConstrainedAdapter(Context context, int resource, List<Grouped> objects) {
                     super(context, resource, objects);
@@ -233,15 +154,12 @@ public class ConfiguratorActivityFragment extends Fragment {
 
                 @Override
                 public View getView(int position, View convertView, ViewGroup parent) {
-                    String id = getPath(items.get(position));
-                    TextView v = (TextView) super.getView(position, convertView, parent);
+                    Grouped feature = items.get(position);
+                    String id = getPath(feature);
+                    CheckedTextView v = (CheckedTextView) super.getView(position, convertView, parent);
                     v.setTag(id);
                     v.setMinWidth(parent.getWidth());
-                    v.setText(items.get(position).getName());
-                    if (selectedListener == null) {
-                        selectedListener = (adapterView, view, i, l) -> Log.d("CLICK", "" + i);
-                        ((AdapterView) parent).setOnItemClickListener(selectedListener);
-                    }
+                    v.setText(feature.getName());
                     return v;
                 }
 
@@ -253,36 +171,19 @@ public class ConfiguratorActivityFragment extends Fragment {
 
                 @Override
                 public boolean isEnabled(int position) {
-                    if (anyConstraintViolated(items.get(position))) {
-                        String id = getPath(items.get(position));
-                        View v = findViewWithTag(id);
-                        if (v != null) ((TextView) v).setTextColor(Color.GRAY);
-                        return false;
-                    }
-                    return true;
+                    String id = getPath(items.get(position));
+                    View v = findViewWithTag(id);
+                    boolean violated = anyConstraintViolated(items.get(position));
+                    if (v != null) ((TextView) v).setTextColor(violated ? Color.GRAY : Color.BLACK);
+                    return !violated;
                 }
-
-                /*
-                @Override
-                public ViewNode itemView(int pos, Object value) {
-                    Feature grouped = (Grouped) value;
-                    boolean visible = shouldBeEnabled(grouped);
-
-                    return v(CheckedTextView.class,
-                            checkMarkDrawable(android.R.attr.listChoiceIndicatorMultiple),
-                            text(grouped.getName()),
-                            size(MATCH, WRAP),
-                            tag(Constraints.getPath(grouped)),
-                            enabled(visible),
-                            textColor(visible ? Color.BLACK : Color.GRAY)
-                    );
-                }
-                */
             }
             boolean XorGroup = group instanceof Xor;
             return VList(
                     H3(text(group.getName() + (XorGroup ? " (Pick one)" : ""))),
-                    v(ListView.class, choiceMode(XorGroup ? ListView.CHOICE_MODE_SINGLE : ListView.CHOICE_MODE_MULTIPLE), size(WRAP, group.getGrouped().size() * 200),
+                    v(ListView.class,
+                            choiceMode(XorGroup ? ListView.CHOICE_MODE_SINGLE : ListView.CHOICE_MODE_MULTIPLE),
+                            size(WRAP, group.getGrouped().size() * 200),
                             adapter((ListAdapter) new ConstrainedAdapter(getContext(), android.R.layout.simple_list_item_multiple_choice, group.getGrouped())))
             );
         }
@@ -295,13 +196,7 @@ public class ConfiguratorActivityFragment extends Fragment {
                 return constraintViolated(((Binary) c).getLeftExp()) || constraintViolated(((Binary) c).getRightExp());
 
             String id = getPath(c.getFeatureReference());
-            View v = findViewWithTag(id);
-            if (v instanceof CheckedTextView) {
-                if (!((CheckedTextView) v).isChecked()) {
-                    return true;
-                }
-            }
-            return false;
+            return (!((CheckedTextView) findViewWithTag(id)).isChecked());
         }
 
         public boolean anyConstraintViolated(Feature feature) {
