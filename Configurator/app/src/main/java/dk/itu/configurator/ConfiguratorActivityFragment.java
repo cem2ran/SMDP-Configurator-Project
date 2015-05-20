@@ -45,29 +45,10 @@ import trikita.anvil.Nodes.ViewNode;
 import trikita.anvil.Renderable;
 
 import static dk.itu.configurator.Constraints.getPath;
-import static dk.itu.configurator.Views.H1;
-import static dk.itu.configurator.Views.H2;
-import static dk.itu.configurator.Views.H3;
-import static dk.itu.configurator.Views.HList;
-import static dk.itu.configurator.Views.VList;
-import static trikita.anvil.BaseAttrs.CENTER;
-import static trikita.anvil.BaseAttrs.FILL;
-import static trikita.anvil.BaseAttrs.MATCH;
-import static trikita.anvil.BaseAttrs.WRAP;
-import static trikita.anvil.BaseAttrs.dip;
-import static trikita.anvil.BaseAttrs.padding;
-import static trikita.anvil.BaseAttrs.size;
+import static dk.itu.configurator.Views.*;
+import static trikita.anvil.BaseAttrs.*;
 import static trikita.anvil.Nodes.v;
-import static trikita.anvil.v15.Attrs.adapter;
-import static trikita.anvil.v15.Attrs.backgroundColor;
-import static trikita.anvil.v15.Attrs.choiceMode;
-import static trikita.anvil.v15.Attrs.gravity;
-import static trikita.anvil.v15.Attrs.layoutParams;
-import static trikita.anvil.v15.Attrs.onClick;
-import static trikita.anvil.v15.Attrs.tag;
-import static trikita.anvil.v15.Attrs.text;
-import static trikita.anvil.v15.Attrs.textSize;
-import static trikita.anvil.v15.Attrs.visibility;
+import static trikita.anvil.v15.Attrs.*;
 
 
 /**
@@ -75,26 +56,14 @@ import static trikita.anvil.v15.Attrs.visibility;
  */
 public class ConfiguratorActivityFragment extends Fragment {
 
-    ConfiguratorView configurator;
     Model configuration;
 
     public ConfiguratorActivityFragment(String data){
         // register our meta-model package
         ModelMDD2Package.eINSTANCE.eClass();
-        /*
-        Resource resource = new XMIResourceImpl();
-
-        try {
-            resource.load(getResources().openRawResource(R.raw.test1), null);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        configuration = (Model) resource.getContents().get(0);
-        */
 
         ObjectMapper mapper = new ObjectMapper();
         mapper.registerModule(new EMFModule());
-
 
         Resource r = null;
         try {
@@ -108,9 +77,7 @@ public class ConfiguratorActivityFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        configurator = new ConfiguratorView(getActivity(), configuration);
-        View root = configurator.getRootView();
-        return root;
+        return new ConfiguratorView(getActivity(), configuration).getRootView();
     }
 
     class ConfiguratorView extends FrameLayout implements Renderable {
@@ -129,9 +96,8 @@ public class ConfiguratorActivityFragment extends Fragment {
 
         @Override
         public ViewNode view() {
-            ViewNode list = VList(
-                    H1(text(m.getName())),
-                    padding(12)
+            ViewNode list = VList(padding(12),
+                    H1(text(m.getName()))
             );
 
             for (Solitary s : m.getRoot().getSubfeature()) {
@@ -143,26 +109,11 @@ public class ConfiguratorActivityFragment extends Fragment {
             p.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
 
             boolean validConfiguration = true;
-            /*
-            TreeIterator<EObject> contents = m.eAllContents();
-            //List<ConstrainImpl> constraints = new ArrayList();
-            while(contents.hasNext()){
-                EObject obj = contents.next();
-                if(obj instanceof MandatoryImpl){
-                    MandatoryImpl feature = (MandatoryImpl) obj;
-                    Iterator<Group> groups = feature.getGroups().iterator();
-                    while(groups.hasNext()){
-
-                    }
-                    validConfiguration = false;
-                    break;
-                }
-            }
-            */
-
 
             return v(RelativeLayout.class, size(MATCH, MATCH),
-                    v(ScrollView.class, list, padding(0, 0, 0, 70)),
+                    v(ScrollView.class, padding(0, 0, 0, 70),
+                        list
+                    ),
                     v(TextView.class, text(validConfiguration ? "Configure" : "Constraints not met"), textSize(dip(5)), gravity(CENTER), backgroundColor(Color.LTGRAY), layoutParams(p), padding(18), size(FILL, WRAP))
             );
         }
@@ -176,7 +127,7 @@ public class ConfiguratorActivityFragment extends Fragment {
 
             boolean optional = solitary instanceof OptionalImpl;
 
-            if (solitary instanceof MandatoryImpl) {
+            if (solitary instanceof MandatoryImpl /*|| ((CheckBox)findViewWithTag(getPath(solitary))).isChecked()*/) {
                 Iterator<Group> groups = solitary.getGroups().iterator();
                 while (groups.hasNext()) {
                     Group group = groups.next();
@@ -207,19 +158,6 @@ public class ConfiguratorActivityFragment extends Fragment {
 
         public ViewNode groupView(Group group) {
 
-/*
-            AdapterViewCompat.OnItemSelectedListener onSelect = new AdapterViewCompat.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterViewCompat<?> adapterViewCompat, View view, int i, long l) {
-
-                }
-
-                @Override
-                public void onNothingSelected(AdapterViewCompat<?> adapterViewCompat) {
-
-                }
-            };
-*/
             class ConstrainedAdapter extends ArrayAdapter {
                 List<Grouped> items;
                 AdapterView.OnItemClickListener selectedListener = null;
@@ -261,23 +199,6 @@ public class ConfiguratorActivityFragment extends Fragment {
                     }
                     return true;
                 }
-
-                /*
-                @Override
-                public ViewNode itemView(int pos, Object value) {
-                    Feature grouped = (Grouped) value;
-                    boolean visible = shouldBeEnabled(grouped);
-
-                    return v(CheckedTextView.class,
-                            checkMarkDrawable(android.R.attr.listChoiceIndicatorMultiple),
-                            text(grouped.getName()),
-                            size(MATCH, WRAP),
-                            tag(Constraints.getPath(grouped)),
-                            enabled(visible),
-                            textColor(visible ? Color.BLACK : Color.GRAY)
-                    );
-                }
-                */
             }
             boolean XorGroup = group instanceof Xor;
             return VList(
