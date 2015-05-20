@@ -238,8 +238,6 @@ class ConfGenerator implements IGenerator {
 				fsa.generateFile(it.root.name.toLowerCase + "_configurator.js", it.compileToJavascript)
 				fsa.generateFile(it.root.name.toLowerCase + "_configurator.json", it.compileToJson)
 			]
-		} catch (ConcurrentModificationException ignored) {
-			print("FISSE")
-		}
+		} catch (ConcurrentModificationException ignored) {}
 	}
 }

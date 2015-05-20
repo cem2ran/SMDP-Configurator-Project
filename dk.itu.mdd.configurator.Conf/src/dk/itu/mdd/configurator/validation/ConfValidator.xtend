@@ -11,6 +11,7 @@ import modelMDD2.ModelMDD2Package
 import org.eclipse.xtext.validation.Check
 import dk.itu.mdd.configurator.Constraints
 import modelMDD2.impl.GroupImpl
+import modelMDD2.Grouped
 
 /**
  * This class contains custom validation rules. 
@@ -51,16 +52,24 @@ class ConfValidator extends AbstractConfValidator {
 		if(!Constraints.typeCheck(exp))
 		error('Invalid Type comparison', 
 					ModelMDD2Package.Literals.NAMED_ELEMENT__NAME,
-					INVALID_NAME)
+					INVALID_NAME)	
 	}
-	/*
+	
 	@Check
-	def isEmpty(Mandatory feature){
-		if(Constraints.isEmpty(feature))
-			error('Mandatory feature is incomplete', 
+  	def validationCheck(Binary exp) {
+    if(!Constraints.constraint(exp))
+    error('Cannot compare those values', 
 					ModelMDD2Package.Literals.NAMED_ELEMENT__NAME,
 					INVALID_NAME)
+    }
+	
+	@Check
+	def RangeCheck(Grouped feat){
+		if(!Constraints.checkRangeValidity(feat))
+		error('Range is not valid', 
+					ModelMDD2Package.Literals.NAMED_ELEMENT__NAME,
+					INVALID_NAME)	
 	}
-	*/
+	
 	
 }
