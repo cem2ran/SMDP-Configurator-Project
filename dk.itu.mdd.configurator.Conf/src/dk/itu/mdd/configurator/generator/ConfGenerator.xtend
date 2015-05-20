@@ -22,6 +22,12 @@ import modelMDD2.impl.CBooleanImpl
 import modelMDD2.Range
 import modelMDD2.impl.RangeImpl
 import org.eclipse.emf.ecore.EObject
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl
+import modelMDD2.ModelMDD2Package
+import org.emfjson.jackson.resource.JsonResourceFactory
+import org.eclipse.emf.common.util.URI
+import java.io.ByteArrayOutputStream
+import java.util.ConcurrentModificationException
 
 /**
  * Generates code from your model files on save.
@@ -29,6 +35,22 @@ import org.eclipse.emf.ecore.EObject
  * See https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#code-generation
  */
 class ConfGenerator implements IGenerator {
+
+	def static compileToJson(Model configurator) {
+		
+		val resourceSet = new ResourceSetImpl()
+		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("*", new JsonResourceFactory())
+		resourceSet.getPackageRegistry().put(ModelMDD2Package.eNS_URI, ModelMDD2Package.eINSTANCE)
+
+		val res = resourceSet.createResource(URI.createURI("Configurator.json"))
+		
+		res.getContents().add(configurator)
+		
+		val os = new ByteArrayOutputStream()
+		res.save(os, null)
+		return os.toString
+		
+	}
 
 	def static compileToHtml(Model configurator) {
 
@@ -82,7 +104,7 @@ class ConfGenerator implements IGenerator {
 			«ENDFOR»
 			<input type="submit" value="Submit">
 			</form>
-			<script type="text/javascript" src="./configurator.js">
+			<script type="text/javascript" src="./«configurator.root.name.toLowerCase»_configurator.js">
 			</script>
 			</body>
 			</html>
@@ -94,77 +116,76 @@ class ConfGenerator implements IGenerator {
 			var form = document.forms['«configurator.root.name»'];
 			  function validateForm() {
 			 
-				
+			 
 			 //check constraints
-				«FOR feat : configurator.root.subfeature»
-					«FOR group : feat.groups»
-						«IF group instanceof XorImpl»
-							«FOR groupedFeat : group.grouped»
-								document.getElementById('«group.name»«groupedFeat.name»').disabled = false;
-								«FOR constraint : groupedFeat.constrains»
-									«IF constraint  instanceof UnaryImpl»
-									if (!(«getExpressionString(constraint)»)) {
-										document.getElementById('«group.name»«groupedFeat.name»').disabled = true;
-									}
-									«ELSEIF constraint instanceof BinaryImpl»
-										«val con = constraint as BinaryImpl»
-										if (!(«getExpressionString(con.leftExp)» «getOperator(con.operator.literal)» «getExpressionString(con.rightExp)»)) {
-											document.getElementById('«group.name»«groupedFeat.name»').disabled = true;
-										}
-									«ELSE»
-									if (!(«getExpressionString(constraint)»)) {
-										document.getElementById('«group.name»«groupedFeat.name»').disabled = true;
-									}
-									«ENDIF»
-								«ENDFOR»
-							«ENDFOR»
-						«ENDIF»
-						«IF group instanceof OrImpl»
-							«FOR groupedFeat : group.grouped»
-							form.«group.name»«groupedFeat.name».disabled = false;
-								«FOR constraint : groupedFeat.constrains»
-									«IF constraint instanceof UnaryImpl»
-										if (!(«getExpressionString(constraint)»)) {
-											form.«group.name»«groupedFeat.name».disabled = true;
-										}
-									«ELSEIF constraint instanceof BinaryImpl»
-										«val con = constraint as BinaryImpl»
-										if (!(«getExpressionString(con.leftExp)» «getOperator(con.operator.literal)» «getExpressionString(con.rightExp)»)) {
-											form.«group.name»«groupedFeat.name».disabled = true;
-										}
-									«ELSE»
-										if (!(«getExpressionString(constraint)»)){
-											form.«group.name»«groupedFeat.name».disabled = true;
-										}
-									«ENDIF»
-								«ENDFOR»
-							«ENDFOR»
-						«ENDIF»
-					«ENDFOR»
-				«ENDFOR»
+			 «FOR feat : configurator.root.subfeature»
+			 	«FOR group : feat.groups»
+			 		«IF group instanceof XorImpl»
+			 			«FOR groupedFeat : group.grouped»
+			 				document.getElementById('«group.name»«groupedFeat.name»').disabled = false;
+			 				«FOR constraint : groupedFeat.constrains»
+			 					«IF constraint  instanceof UnaryImpl»
+			 						if (!(«getExpressionString(constraint)»)) {
+			 							document.getElementById('«group.name»«groupedFeat.name»').disabled = true;
+			 						}
+			 					«ELSEIF constraint instanceof BinaryImpl»
+			 						«val con = constraint as BinaryImpl»
+			 						if (!(«getExpressionString(con.leftExp)» «getOperator(con.operator.literal)» «getExpressionString(con.rightExp)»)) {
+			 							document.getElementById('«group.name»«groupedFeat.name»').disabled = true;
+			 						}
+			 					«ELSE»
+			 						if (!(«getExpressionString(constraint)»)) {
+			 							document.getElementById('«group.name»«groupedFeat.name»').disabled = true;
+			 						}
+			 					«ENDIF»
+			 				«ENDFOR»
+			 			«ENDFOR»
+			 		«ENDIF»
+			 		«IF group instanceof OrImpl»
+			 			«FOR groupedFeat : group.grouped»
+			 				form.«group.name»«groupedFeat.name».disabled = false;
+			 					«FOR constraint : groupedFeat.constrains»
+			 						«IF constraint instanceof UnaryImpl»
+			 							if (!(«getExpressionString(constraint)»)) {
+			 								form.«group.name»«groupedFeat.name».disabled = true;
+			 							}
+			 						«ELSEIF constraint instanceof BinaryImpl»
+			 							«val con = constraint as BinaryImpl»
+			 							if (!(«getExpressionString(con.leftExp)» «getOperator(con.operator.literal)» «getExpressionString(con.rightExp)»)) {
+			 								form.«group.name»«groupedFeat.name».disabled = true;
+			 							}
+			 						«ELSE»
+			 							if (!(«getExpressionString(constraint)»)){
+			 								form.«group.name»«groupedFeat.name».disabled = true;
+			 							}
+			 						«ENDIF»
+			 					«ENDFOR»
+			 			«ENDFOR»
+			 		«ENDIF»
+			 	«ENDFOR»
+			 «ENDFOR»
 			}
 		'''
 	}
-	
-	def static String getExpressionString(Constrain exp){
-		if(exp instanceof BinaryImpl) {
+
+	def static String getExpressionString(Constrain exp) {
+		if (exp instanceof BinaryImpl) {
 			return '''(«getExpressionString(exp.leftExp)» «getOperator(exp.operator.literal)» «getExpressionString(exp.rightExp)»)'''
-		} else if(exp instanceof UnaryImpl) {
+		} else if (exp instanceof UnaryImpl) {
 			if (exp.exp.featureReference.eContainer instanceof XorImpl) {
-			return '''form.«getTypeOfGroup(exp.featureReference.eContainer).name».value != '«getAttributeValue(exp.exp.featureReference.attribute)»' '''	
+				return '''form.«getTypeOfGroup(exp.featureReference.eContainer).name».value != '«getAttributeValue(exp.exp.featureReference.attribute)»' '''
 			} else {
 				return '''!(form.«getTypeOfGroup(exp.exp.featureReference.eContainer).name»«getAttributeValue(exp.exp.featureReference.attribute)».checked) '''
 			}
-		} else if(exp.constrainValue.attributeValue != null) {
+		} else if (exp.constrainValue.attributeValue != null) {
 			return '''«exp.constraintValue»''';
-		} 
-		else {
+		} else {
 			if (exp.featureReference.eContainer instanceof XorImpl) {
-				return '''form.«getTypeOfGroup(exp.featureReference.eContainer).name».value == '«getAttributeValue(exp.featureReference.attribute)»' '''	
+				return '''form.«getTypeOfGroup(exp.featureReference.eContainer).name».value == '«getAttributeValue(exp.featureReference.attribute)»' '''
 			} else {
 				return '''form.«getTypeOfGroup(exp.featureReference.eContainer).name»«getAttributeValue(exp.featureReference.attribute)».checked '''
 			}
-			
+
 		}
 	}
 
@@ -173,7 +194,7 @@ class ConfGenerator implements IGenerator {
 			return '&&';
 		} else if (operator == 'or') {
 			return '||';
-		} 
+		}
 		return operator;
 	}
 
@@ -185,7 +206,7 @@ class ConfGenerator implements IGenerator {
 		}
 	}
 
-		def static String getAttributeValue(Attribute attr) {
+	def static String getAttributeValue(Attribute attr) {
 
 		if (attr instanceof NumberImpl) {
 			return (attr as NumberImpl).value.toString;
@@ -211,9 +232,14 @@ class ConfGenerator implements IGenerator {
 	}
 
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
-		resource.allContents.toIterable.filter(typeof(Model)).forEach [ it |
-			fsa.generateFile('configurator.html', it.compileToHtml)
-			fsa.generateFile("configurator.js", it.compileToJavascript)
-		]
+		try {
+			resource.allContents.filter(typeof(Model)).forEach [ it |
+				fsa.generateFile(it.root.name.toLowerCase + "_configurator.html", it.compileToHtml)
+				fsa.generateFile(it.root.name.toLowerCase + "_configurator.js", it.compileToJavascript)
+				fsa.generateFile(it.root.name.toLowerCase + "_configurator.json", it.compileToJson)
+			]
+		} catch (ConcurrentModificationException ignored) {
+			print("FISSE")
+		}
 	}
 }
